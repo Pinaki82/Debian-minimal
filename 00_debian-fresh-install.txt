@@ -288,3 +288,25 @@ sudo reboot now
 Install MS Windows layer translator, Bottle from Flatpak:
 flatpak install flathub com.usebottles.bottles
 flatpak run com.usebottles.bottles
+
+Install a Firewall:
+yes | sudo apt install gufw
+
+Install an Antivirus:
+sudo apt install chkrootkit
+
+sudo nano /etc/chkrootkit.conf
+
+RUN_DAILY="true"
+USERNAME=$(whoami)
+
+Usage (you do not have to scan immediately): sudo chkrootkit >> "/home/$USERNAME/chkrootkit-report.txt"
+
+Install a RootKit Buster:
+
+sudo apt install rkhunter
+sudo rkhunter --propupd
+sudo rkhunter --update
+
+Usage (you do not have to scan immediately): sudo rkhunter --check --sk --report-warnings-only >> "/home/$USERNAME/rkhunter-report.txt"
+
