@@ -310,3 +310,29 @@ sudo rkhunter --update
 
 Usage (you do not have to scan immediately): sudo rkhunter --check --sk --report-warnings-only >> "/home/$USERNAME/rkhunter-report.txt"
 
+Install System Restore/Maintenance Tools:
+# Network Time Protocol daemon/utilities
+sudo apt install ntp
+# tool for selecting tasks
+sudo apt install tasksel
+# Partition Manager
+sudo apt install gparted
+sudo apt install gnome-disk-utility
+# File Sync
+sudo apt install rsync
+sudo apt install grsync
+# System Restore
+sudo apt install timeshift
+# Load Program Faster while launching for the second time
+sudo apt install preload
+# seahorse: GUI Keyring Manager
+# https://mexpolk.wordpress.com/2008/02/06/ubuntu-change-default-keyring-password/
+sudo apt install seahorse
+# Reduce Eyestrain
+sudo apt install redshift-gtk
+# Preven Screen from falling asleep
+sudo apt install caffeine
+# Command-line system info tool
+sudo apt install hardinfo
+# The Fish Shell
+sudo apt install fish
