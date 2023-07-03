@@ -147,3 +147,39 @@ yes | sudo apt install vlc
 yes | sudo apt install libavcodec-extra
 yes | sudo apt install libdvdread4 libdvdcss2
 yes | sudo dpkg-reconfigure libdvd-pkg
+
+MS Core Fonts:
+https://www.linuxcapable.com/how-to-install-microsoft-fonts-on-debian-linux/
+
+yes | sudo apt update && sudo apt upgrade
+yes | sudo apt-add-repository contrib non-free
+
+If the command fails,
+
+yes | sudo apt install software-properties-common
+
+Install MS Fonts,
+
+yes | sudo apt install ttf-mscorefonts-installer
+
+sudo fc-cache
+
+Themes and Icons:
+Search the web version of the Debian repository for the package.
+search the apt repo from the command line.
+Gray Bird:
+apt search greybird-gtk-theme
+yes | sudo apt install greybird-gtk-theme
+Papyrus:
+apt search papirus-icon-theme
+yes | sudo apt install papirus-icon-theme
+PRO-dark-XFCE-4.14
+https://www.xfce-look.org/p/1207818/
+Extract to: /usr/share/themes
+sudo thunar /usr/share/themes
+
+tar -xvf PRO-dark-XFCE-4.14.tar.xz
+sudo cp -r PRO-dark-XFCE-4.14/ /usr/share/themes/PRO-dark-XFCE-4.14
+sudo thunar /usr/share/themes
+sudo chmod -R 755 /usr/share/themes/PRO-dark-XFCE-4.14
+
