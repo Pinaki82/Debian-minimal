@@ -1,0 +1,24 @@
+Brave Search: stitching two videos in windows with ffmpeg
+https://stackoverflow.com/questions/7333232/how-to-concatenate-two-mp4-files-using-ffmpeg
+
+Note:
+All the files must be of the same resolution and encoded with the same CODEC parameters.
+
+MS Windows:
+
+(echo file 'first_file.mp4' & echo file 'second_file.mp4') > list.txt
+ffmpeg -safe 0 -f concat -i list.txt -c copy output.mp4
+
+(echo file '0000.mp4' & echo file '0002.mp4' )>list.txt
+ffmpeg -safe 0 -f concat -i list.txt -c copy output.mp4
+
+--------------------------------------------
+
+Linux:
+
+cat mylist.txt
+file '/path/to/file1'
+file '/path/to/file2'
+file '/path/to/file3'
+
+ffmpeg -safe 0 -f concat -i list.txt -c copy output.mp4

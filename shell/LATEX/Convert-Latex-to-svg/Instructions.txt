@@ -1,0 +1,42 @@
+latex Sample.tex
+dvisvgm --no-fonts Sample.dvi Sample.svg
+
+
+NOTE: Remove the \[ and \] part while typing directly on an equation editor
+like EqualX or Laeqed.
+
+For example:
+
+\[ \left[ \begin{matrix}
+a_{11} & a_{12} \\ 
+a_{21} & a_{22}
+\end{matrix} \right] \]
+
+Will be:
+
+\left[ \begin{matrix}
+a_{11} & a_{12} \\ 
+a_{21} & a_{22}
+\end{matrix} \right]
+
+In EqualX.
+
+
+Similarly, in EqualX, write
+\int_{0}^{\infty} {(x^2+2x)dx}
+instead of
+\[\int_{0}^{\infty} {(x^2+2x)dx}\].
+
+Remove the \[ and \] part and type one by one in EqualX
+\[\sum_{x=0}^{y} x_i y_j\]
+\[\int_{0}^{\infty} x^2 x dx\]
+\[\prod_{x=0}^{n} x_{i}\]
+As
+\sum_{x=0}^{y} x_i y_j
+\int_{0}^{\infty} x^2 x dx
+\prod_{x=0}^{n} x_{i}
+
+The converse also applies to *.tex files.
+Guard the equation with \[ and \]
+before you paste an equation to a *.tex file after copying it from EqualX.
+

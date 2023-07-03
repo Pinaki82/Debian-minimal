@@ -1,0 +1,8 @@
+https://wezfurlong.org/wezterm/install/linux.html#installing-on-ubuntu-and-debian-based-systems
+
+Distro 	Stable 	Nightly
+Choose Ubuntu
+Copy the download link.
+
+cd ~/Downloads
+sudo dpkg -i wezterm-202xxxx-xxxxx-xxxxxxx.Debianxx.deb

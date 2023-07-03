@@ -1,0 +1,28 @@
+------------------------------
+Duplicati: Incremental Backup Software.
+------------------------------
+https://www.duplicati.com/
+
+*-Ubuntu:
+Download Duplicati first.
+https://duplicati.readthedocs.io/en/latest/02-installation/
+
+Ubuntu 20.04 / 20.10:
+
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+echo "deb https://download.mono-project.com/repo/ubuntu stable-focal main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
+sudo apt update
+sudo apt install mono-devel gtk-sharp2 libappindicator0.1-cil libmono-2.0-1
+cd Downloads/
+sudo dpkg -i duplicati_2.0.6.3-1_all.deb 
+cd ~/
+
+Find Duplicati in the System Tray.
+
+MS Windows:
+choco install duplicati -y 
+
+
+Quickstart & Usage:
+https://duplicati.readthedocs.io/en/latest/03-using-the-graphical-user-interface/
+https://duplicati.readthedocs.io/en/latest/04-using-duplicati-from-the-command-line/

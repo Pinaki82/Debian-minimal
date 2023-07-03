@@ -1,0 +1,22 @@
+Turn XFCE into a Tiling Window Manager.
+
+NOTE: There are some limitations.
+XFCE can achieve tiling WM emulation to a certain degree.
+The built-in window tiling in XFCE also works fine.
+A full-blown tiling WM is a better option.
+
+Ecosia: make xfce a tiling window manager
+https://www.reddit.com/r/xfce/comments/r5zff1/shinglify_tiling_window_manager_within_xfce/
+https://gitlab.com/corthbandt/shinglify
+
+cd ~/Downloads/
+curl "https://gitlab.com/corthbandt/shinglify-bin/-/raw/latest/shinglify_linux_amd64" --output shinglify_linux_amd64
+sudo install -m 755 shinglify_linux_amd64 /usr/bin/shinglify
+Settings -> Session and Startup -> Application Shortcut -> + ->
+
+Name: shinglify
+Description: Tiling WM Emulator
+Command: /usr/bin/shinglify
+Trigger: on login
+
+Log out or reboot.

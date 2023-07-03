@@ -1,0 +1,836 @@
+Trigonometry
+
+A.2.3.(ii)
+\text{If } \theta \; \text{is a positive acute angle and } n \; \text{is an \textrm{\textit{\textbf{even}}} integer, then,}
+
+A.2.3.(ii).(a)
+\sin \left( n.90^\circ \pm \theta \right) = \sin \theta \text{ or, } \left( - \sin \theta \right)
+A.2.3.(ii).(b)
+\cos \left( n.90^\circ \pm \theta \right) = \cos \theta \text{ or, } \left( - \cos \theta \right)
+A.2.3.(ii).(c)
+\tan \left( n.90^\circ \pm \theta \right) = \tan \theta \text{ or, } \left( - \tan \theta \right)
+
+A.2.3.(iii)
+\text{If } \theta \; \text{is a positive acute angle and } n \; \text{is an \textrm{\textit{\textbf{odd}}} integer, then,}
+
+A.2.3.(iii).(a)
+\sin \left( n.90^\circ \pm \theta \right) = \cos \theta \text{ or, } \left( - \cos \theta \right)
+A.2.3.(iii).(b)
+\cos \left( n.90^\circ \pm \theta \right) = \sin \theta \text{ or, } \left( - \sin \theta \right)
+A.2.3.(iii).(c)
+\tan \left( n.90^\circ \pm \theta \right) = \cot \theta \text{ or, } \left( - \cot \theta \right)
+
+
+4. Compound Angles
+
+A.2.4.(i)
+\sin (A+B)=\sin A \cos B + \cos A \sin B
+
+A.2.4.(ii)
+\sin (A-B)=\sin A \cos B - \cos A \sin B
+
+A.2.4.(iii)
+\cos (A+B)=\cos A \cos B - \sin A \sin B
+
+A.2.4.(iv)
+\cos (A-B)=\cos A \cos B + \sin A \sin B
+
+A.2.4.(v)
+\sin (A+B) \sin(A-B)=\sin^{2} A - \sin^{2} B =\cos^{2} B - \cos^2 A
+
+A.2.4.(vi)
+\cos (A+B) \cos (A-B)=\cos^{2} A - \sin^{2} B =\cos^{2} B - \sin^2 A
+
+A.2.4.(vii)
+\tan (A+B) = \frac{ \tan A + \tan B }{1 - \tan A \tan B}
+
+A.2.4.(viii)
+\tan (A-B) = \frac{ \tan A - \tan B }{1 + \tan A \tan B}
+
+A.2.4.(ix)
+\cot (A+B) = \frac{ \cot B \cot A - 1  }{ \cot B + \cot A }
+
+A.2.4.(x)
+\cot (A-B) = \frac{ \cot B \cot A + 1  }{ \cot B - \cot A }
+
+A.2.4.(xi)
+\tan (A+B+C) = \frac{ \tan A + \tan B +\tan C - \tan A \: \tan B \: \tan C }{ 1 - \tan A \: \tan B - \tan B \: \tan C - \tan C \: \tan A }
+
+A.2.4.(xii)
+2 \sin A \cos B = \sin (A+B) \: + \: \sin (A-B)
+
+A.2.4.(xiii)
+2 \cos A \sin B = \sin (A+B) \: - \: \sin (A-B)
+
+A.2.4.(xiv)
+2 \cos A \cos B = \cos (A+B) \: + \: \cos (A-B)
+
+A.2.4.(xv)
+2 \sin A \sin B = \cos (A-B) \: - \: \cos (A+B)
+
+A.2.4.(xvi)
+\sin C + \sin D = 2 \sin \frac{C+D}{2} \cos \frac{C-D}{2}
+
+A.2.4.(xvii)
+\sin C - \sin D = 2 \cos \frac{C+D}{2} \sin \frac{C-D}{2}
+
+A.2.4.(xviii)
+\cos C + \cos D = 2 \cos \frac{C+D}{2} \cos \frac{C-D}{2}
+
+A.2.4.(xix)
+\cos C - \cos D = 2 \sin \frac{D+C}{2} \sin \frac{D-C}{2}
+
+
+5. Multiple Angles
+
+A.2.5.(i)
+\sin 2 \theta = 2 \sin \theta \cos \theta
+
+A.2.5.(ii)
+\cos 2 \theta = \cos^{2} \theta - \sin^{2} \theta
+
+A.2.5.(iii)
+\cos 2 \theta = 2 \cos^{2} \theta - 1
+
+A.2.5.(iv)
+\cos 2 \theta = 1 - 2 \sin^{2} \theta
+
+A.2.5.(v)
+1 + \cos 2 \theta = 2 \cos^{2} \theta
+
+A.2.5.(vi)
+1 - \cos 2 \theta = 2 \sin^{2} \theta
+
+A.2.5.(vii)
+\tan^{2} \theta = \frac{1 - \cos 2 \theta}{1 + \cos 2 \theta}
+
+A.2.5.(viii)
+\sin 2 \theta = \frac{ 2 \tan \theta}{1 + \tan^{2} \theta}
+
+A.2.5.(ix)
+\cos 2 \theta = \frac{ 1 - \tan^{2} \theta}{1 + \tan^{2} \theta}
+
+A.2.5.(x)
+\tan 2 \theta = \frac{ 2 \tan \theta}{1 - \tan^{2} \theta}
+
+A.2.5.(xi)
+\sin 3 \theta = 3 \sin \theta - 4 \sin^{3} \theta
+
+A.2.5.(xii)
+\cos 3 \theta = 4 \cos^{3} \theta - 3 \cos \theta
+
+A.2.5.(xiii)
+\tan 3 \theta = \frac{3 \tan \theta - \tan^{3} \theta }{1 - 3 \tan^{2} \theta }
+
+
+6. Submultiple Angles
+
+A.2.6.(i)
+\sin \theta = 2 \sin \frac{\theta}{2} \cos \frac{\theta}{2}
+
+A.2.6.(ii)
+\cos \theta  = \cos^{2} \frac{ \theta}{2} - \sin^{2} \frac{ \theta}{2}
+
+A.2.6.(iii)
+\cos  \theta = 2 \cos^{2} \frac{\theta}{2} - 1
+
+A.2.6.(iv)
+\cos  \theta = 1 - 2 \sin^{2} \frac{\theta}{2}
+
+A.2.6.(v)
+1 + \cos  \theta = 2 \cos^{2} \frac{\theta}{2}
+
+A.2.6.(vi)
+1 - \cos  \theta = 2 \sin^{2} \frac{\theta}{2}
+
+A.2.6.(vii)
+\tan^{2}  \frac{\theta}{2} = \frac{1 - \cos  \theta}{1 + \cos  \theta}
+
+A.2.6.(viii)
+\sin  \theta = \frac{ 2 \tan  \frac{\theta}{2}}{1 + \tan^{2} \frac{\theta}{2}}
+
+A.2.6.(ix)
+\cos  \theta = \frac{ 1 - \tan^{2} \frac{\theta}{2}}{1 + \tan^{2} \frac{\theta}{2}}
+
+A.2.6.(x)
+\tan  \theta = \frac{ 2 \tan \frac{\theta}{2}}{1 - \tan^{2} \frac{\theta}{2}}
+
+A.2.6.(xi)
+\sin \theta = 3 \sin \frac{\theta}{3} - 4 \sin^{3} \frac{\theta}{3}
+
+A.2.6.(xii)
+\cos  \theta = 4 \cos^{3} \frac{\theta}{3} - 3 \cos \frac{\theta}{3}
+
+A.2.6.(xiii)
+\tan  \theta = \frac{3 \tan \frac{\theta}{3} - \tan^{3} \frac{\theta}{3} }{1 - 3 \tan^{2} \frac{\theta}{3} }
+
+
+7. General Solution
+
+A.2.7.(i).(a)
+\text{If \;} \sin \theta = 0 \text{\; then, \;} \theta =n \pi
+
+A.2.7.(i).(b)
+\text{If \;} \sin \theta = 1 \text{\; then, \;} \theta =(4 n + 1) \frac{\pi}{2}
+
+A.2.7.(i).(c)
+\text{If \;} \sin \theta = -1 \text{\; then, \;} \theta =(4 n - 1) \frac{\pi}{2}
+
+A.2.7.(i).(d)
+\text{If \;} \sin \theta = \sin \alpha \text{\; then, \;} \theta =n \pi + (- 1)^n \alpha
+
+A.2.7.(ii).(a)
+\text{If \;} \cos \theta =0 \text{\; then, \;} \theta = (2 n + 1) \frac{\pi}{2}
+
+A.2.7.(ii).(b)
+\text{If \;} \cos \theta =1 \text{\; then, \;} \theta = 2 n \pi
+
+A.2.7.(ii).(c)
+\text{If \;} \cos \theta = -1 \text{\; then, \;} \theta = ( 2 n + 1 ) \pi
+
+A.2.7.(ii).(d)
+\text{If \;} \cos \theta = \cos \alpha \text{\; then, \;} \theta =  2 n \pi \pm \alpha
+
+A.2.7.(iii).(a)
+\text{If \;} \tan \theta = 0 \text{\; then, \;} \theta =   n \pi
+
+A.2.7.(iii).(b)
+\text{If \;} \tan \theta = \tan \alpha \text{\; then, \;} \theta =   n \pi + \alpha \text{\; where, \;} n=0 \text{\; or any integer \;}
+
+
+8. Inverse Circular Functions
+
+A.2.8.(i).(a)
+\sin \: ( \sin^{-1} x) =x
+
+A.2.8.(i).(b)
+\cos \: ( \cos^{-1} x) =x
+
+A.2.8.(i).(c)
+\tan \: ( \tan^{-1} x) =x
+
+A.2.8.(ii).(a)
+\sin^{-1} \: (\sin \theta) = \theta
+
+A.2.8.(ii).(b)
+\cos^{-1} \: (\cos \theta) = \theta
+
+A.2.8.(ii).(c)
+\tan^{-1} \: (\tan \theta) = \theta
+
+A.2.8.(iii)
+\sin^{-1} x = \mathrm{cosec}^{-1} \: \frac{1}{x} = \cos^{-1} \sqrt{1-x^2} = \sec^{-1} \frac{1}{\sqrt{1-x^2}}= \tan^{-1} \frac{x}{\sqrt{1-x^2}} = \cot^{-1} \frac{\sqrt{1-x^2}}{x}
+
+
+A.2.8.(iv)
+\sin^{-1} x + \cos^{-1} x = \frac {\pi}{2} \: ; \; \sec^{-1} x + \mathrm{cosec}^{-1} x = \frac {\pi}{2} \: ; \; \tan^{-1} x + \cot^{-1} x = \frac {\pi}{2}
+
+
+A.2.8.(v) (a)
+\tan^{-1} x + \tan^{-1} y = \tan^{-1} \frac {x+y}{1-xy}
+
+A.2.8.(v) (b)
+\tan^{-1} x - \tan^{-1} y = \tan^{-1} \frac {x-y}{1+xy}
+
+
+A.2.8.(vi) (a)
+\sin^{-1} x + \sin^{-1} y = \sin^{-1} (x\sqrt{1-y^2} + y\sqrt{1-x^2})
+
+A.2.8.(vi) (b)
+\sin^{-1} x - \sin^{-1} y = \sin^{-1} (x\sqrt{1-y^2} - y\sqrt{1-x^2})
+
+
+A.2.8.(vii) (a)
+\cos^{-1} x + \cos^{-1} y = \cos^{-1} [xy - \sqrt{(1-x^2)(1-y^2)}]
+
+
+A.2.8.(vii) (b)
+\cos^{-1} x - \cos^{-1} y = \cos^{-1} [xy + \sqrt{(1-x^2)(1-y^2)}]
+
+
+
+A.2.8.(viii)
+2\tan^{-1} x = \sin^{-1} \frac {2x}{1+x^2} = \cos^{-1} \frac {1-x^2}{1+x^2} = \tan^{-1} \frac{2x}{1-x^2}
+
+
+A.2.8.(ix)
+\tan^{-1} x + \tan^{-1} y + \tan^{-1} z = \tan^{-1} \frac {x+y+z-xyz}{1 - xy -yz -zx}
+
+A.2.8.(x)
+\sin^{-1} x \text{\; and \;} \cos^{-1} x \text{ are defined when, } -1\leq x\leq 1 ; \;
+\sec^{-1} x \text{\; and \;} \mathrm{cosec}^{-1} x \text{ are defined when, } \left| x \right| \geq 1 ; \;
+\tan^{-1} x \text{\; and \;} \cot^{-1} x \text{ are defined when, } - \infty<x<\infty
+
+A.2.8.(xi)
+\text{If principal values of } \sin^{-1} x \: , \; \cos^{-1} x \text{ and } \tan^{-1} x \text{ be } \alpha, \: \beta \: \text{ and } \gamma \text{ respectively, then   } - \frac{\pi}{2} \leq \alpha \leq \frac{\pi}{2}, \text{ } 0 \leq \beta \leq \pi \text{ and } - \frac{\pi}{2} < \gamma < \frac{\pi}{2}
+
+
+9. Properties of Triangle
+
+A.2.9.(i)
+\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R
+
+A.2.9.(ii)
+a = b \cos C + c \cos B ; \; b = c \cos A + a \cos C ; \; c = a \cos B + b \cos A
+
+A.2.9.(iii)
+\begin[subequation]
+\begin[allign]
+
+\\[lex]
+\cos A = \frac{b^2+c^2-a^2}{2bc}; \\
+
+
+\\[lex]
+\cos B = \frac{c^2+a^2-b^2}{2ca};
+
+\\[lex]
+\cos C = \frac{a^2+b^2-c^2}{2ab};
+
+\end[allign]
+\end[subequation]
+
+
+A.2.9.(iv)
+\begin[subequation]
+\begin[allign]
+
+\\[lex]
+\tan A = \frac{abc}{R} \cdot \frac{1}{b^2+c^2-a^2};
+
+\\[lex]
+\tan B = \frac{abc}{R} \cdot \frac{1}{c^2+a^2-b^2};
+
+\\[lex]
+\tan C = \frac{abc}{R} \cdot \frac{1}{a^2+b^2-c^2};
+
+\end[allign]
+\end[subequation]
+
+
+
+A.2.9.(v)
+\begin[subequation]
+\begin[allign]
+
+\\[lex]
+\sin \frac{A}{2} = \sqrt{\frac{(s-b)(s-c)}{bc}}; \; \; \sin \frac{B}{2} = \sqrt{\frac{(s-c)(s-a)}{ca}};
+
+\\[lex]
+\sin \frac{C}{2} = \sqrt{\frac{(s-a)(s-b)}{ab}}; \; \; \cos \frac{A}{2} = \sqrt{\frac{s(s-a)}{bc}};
+
+\\[lex]
+\cos \frac{B}{2} = \sqrt{\frac{s(s-b)}{ca}}; \; \; \cos \frac{C}{2} = \sqrt{\frac{s(s-c)}{ab}};
+
+\\[lex]
+\tan \frac{A}{2} = \sqrt{\frac{(s-b)(s-c)}{s(s-a)}}; \; \; \tan \frac{B}{2} = \sqrt{\frac{(s-c)(s-a)}{s(s-b)}};
+
+\\[lex]
+\tan \frac{C}{2} = \sqrt{\frac{(s-a)(s-b)}{s(s-c)}};
+
+\end[allign]
+\end[subequation]
+
+
+
+
+A.2.9.(vi)
+\begin[subequation]
+\begin[allign]
+
+\\[lex]
+\tan \frac{B-C}{2} = \left( \frac{b-c}{b+c} \right) \cdot \cot \frac{A}{2}; \; \; \tan \frac{C-A}{2} = \left( \frac{c-a}{c+a} \right) \cdot \cot \frac{B}{2};
+
+\\[lex]
+\tan \frac{A-B}{2} = \left( \frac{a-b}{a+b} \right) \cdot \cot \frac{C}{2};
+
+\end[allign]
+\end[subequation]
+
+
+A.2.9.(vii)
+\Delta = \frac{1}{2} \: bc \: \sin A \: = \frac{1}{2} \: ca \: \sin B \: = \frac{1}{2} \: ab \: \sin C
+
+A.2.9.(viii)
+\Delta = \sqrt{s(s-a)(s-b)(s-c)}
+
+A.2.9.(ix)
+R = \frac{abc}{4 \cdot \Delta}
+
+A.2.9.(x)
+\begin[subequation]
+\begin[allign]
+
+\\[lex]
+\tan \frac{A}{2} = \frac{(s-b)(s-c)}{\Delta} ; \\
+\tan \frac{B}{2} = \frac{(s-c)(s-a)}{\Delta}; \\
+\tan \frac{C}{2} = \frac{(s-a)(s-b)}{\Delta}
+
+\end[allign]
+\end[subequation]
+
+
+A.2.9.(xi)
+\begin[subequation]
+\begin[allign]
+
+\\[lex]
+\cot \frac{A}{2} = \frac{s(s-b)}{\Delta} ; \\
+\cot \frac{B}{2} = \frac{s(s-b)}{\Delta}; \\
+\cot \frac{C}{2} = \frac{s(s-c)}{\Delta}
+
+\end[allign]
+\end[subequation]
+
+
+A.2.9.(xii)
+\begin[subequation]
+\begin[allign]
+
+\\[lex]
+\sin A = \frac{2 \Delta}{bc}; \\
+
+\sin B = \frac{2 \Delta}{ca}; \\
+
+\sin C = \frac{2 \Delta}{ab};
+
+\end[allign]
+\end[subequation]
+
+A.2.9.(xiii)
+r = \frac{\Delta}{s};
+
+A.2.9.(xiv)
+r = 4R \: \sin \frac{A}{2} \sin \frac{B}{2} \sin \frac{C}{2};
+
+A.2.9.(xv)
+r \: = (s-a) \tan \frac{A}{2} \: = (s-b) \tan \frac{B}{2} \: = (s-c) \tan \frac{C}{2};
+
+A.2.9.(xvi)
+\begin[subequation]
+\begin[allign]
+
+\\[lex]
+r_1 = \frac{\Delta}{s-a}; \\
+
+\\[lex]
+r_2 = \frac{\Delta}{s-b}; \\
+
+\\[lex]
+r_3 = \frac{\Delta}{s-c};
+
+\end[allign]
+\end[subequation]
+
+A.2.9.(xvii)
+r_1 = 4R \: \sin \frac{A}{2} \cos \frac{B}{2} \cos \frac{C}{2}
+
+A.2.9.(xviii)
+r_2 = 4R \: \sin \frac{B}{2} \cos \frac{C}{2} \cos \frac{A}{2}
+
+A.2.9.(xix)
+r_3 = 4R \: \sin \frac{C}{2} \cos \frac{A}{2} \cos \frac{B}{2}
+
+A.2.9.(xx)
+r_1 = s \: \tan \frac{A}{2}; \; \; \; r_2 = s \: \tan \frac{B}{2}; \; \; \; r_3 = s \: \tan \frac{C}{2};
+
+
+
+
+
+
+
+
+
+Diff Calc
+
+
+\frac{d}{dx}[u \pm v \pm w \pm ........  \text{to $n \; \text{terms}$} ]=\frac{du}{dx} \pm \frac{dv}{dx} \pm \frac{dw}{dx}\pm  \text{........ \; to $n \; \text{terms}$}
+
+\frac{d}{dx}\left( uv \right)=u \; \frac{dv}{dx} + v\; \frac{du}{dx}
+
+\frac{d}{dx}(cu)=c \frac{du}{dx}
+
+\frac{d}{dx} \left( \frac{u}{v} \right)=\frac{v \; \frac{du}{dx} - u \; \frac{dv}{dx}}{v^2}
+
+\frac{dy}{dx} =\frac{dy}{dz} \cdot \frac{dz}{dx} \; \; [\text{Where $x=f(z) \; \text{and}$ \; $z=\phi (x)$}]
+
+
+
+
+
+
+
+
+
+\frac{d}{dx}\left( c  \right) = \text{?} = 0; \text{Where \;} c \; \; \text{is a constant}
+
+\frac{d}{dx}\left(x^n  \right)=\text{?}=n.x^{n-1}
+
+\frac{d}{dx}\left( \frac{1}{x^n}  \right)=\text{?}=-\frac{n}{x^{n+1}}
+
+\frac{d}{dx}\left( a^x  \right) = \text{?}= a^x.\log_{e}a
+
+\frac{d}{dx}\left( e^x  \right) = \text{?}=e^x
+
+\frac{d}{dx}{\left( \log_{a}x  \right)}=\text{?}=\frac{1}{x}\log_{a}e
+
+\frac{d}{dx}{\left( \log_{e}x  \right)}=\text{?}=\frac{1}{x}
+
+\frac{d}{dx}\left( \sin x \right) = \text{?}= \cos x
+
+\frac{d}{dx}\left( \cos x \right) = \text{?}= - \sin x
+
+\frac{d}{dx}\left( \tan x \right) = \text{?}= \sec^{2} x
+
+\frac{d}{dx}\left( \cot x \right) = \text{?}= -\mathrm{cosec}^{2} x
+
+\frac{d}{dx}\left( \mathrm{cosec \:} x \right) = \text{?}= -\mathrm{cosec \:} x \cot x
+
+\frac{d}{dx}\left( \sec x \right) = \text{?}= \sec x \tan x
+
+\frac{d}{dx}\left( \sin^{-1} x \right) = \text{?}  \; \; [\text{Where $(-1<x<1)$}] \; \; \text{?} = \frac{1}{\sqrt{(1-x^2)}} \; \; [\text{Where $(-1<x<1)$}]
+
+\frac{d}{dx}\left( \cos^{-1} x \right) = \text{?}  \; \; [\text{Where $(-1<x<1)$}] \; \; \text{?} = - \frac{1}{\sqrt{(1-x^2)}} \; \; [\text{Where $(-1<x<1)$}]
+
+A.3.1.II.(xvi)
+\frac{d}{dx}\left( \tan^{-1} x \right) = \text{?} = \frac{1}{1+x^2}
+
+A.3.1.II.(xvii)
+\frac{d}{dx}\left( \cot^{-1} x \right) = \text{?} = - \frac{1}{1+x^2}
+
+A.3.1.II.(xviii)
+\frac{d}{dx}\left( \mathrm{cosec}^{-1} x \right) = \text{?} \; \; [\text{Where ${\left| x \right|>1}$}] \; \;  \text{?} = -  \frac{1}{x \sqrt{(x^2-1)}} \; \; [\text{Where ${\left| x \right|>1}$}] 
+
+A.3.1.II.(xix)
+\frac{d}{dx}\left(\sec}^{-1} x \right) = \text{?} \; \; [\text{Where ${\left| x \right|>1}$}] \; \;  \text{?} =  \frac{1}{x \sqrt{(x^2-1)}} \; \; [\text{Where ${\left| x \right|>1}$}] 
+
+A.3.1.II.(xx)
+\frac{d}{dx}\left(\sinh x \right) = \text{?} = \cosh x
+
+A.3.1.II.(xxi)
+\frac{d}{dx}\left(\cosh x \right) = \text{?} = \sinh x
+
+A.3.1.II.(xxii)
+\frac{d}{dx}\left(\tanh x \right) = \text{?} = \mathrm{sech}^{2} x
+
+A.3.1.II.(xxiii)
+\frac{d}{dx}\left(\coth x \right) = \text{?} = - \mathrm{cosech}^{2} x
+
+A.3.1.II.(xxiv)
+\frac{d}{dx}\left(\mathrm{sech \:} x \right) = \text{?} = - \mathrm{sech \:} x \tanh x
+
+A.3.1.II.(xxv)
+\frac{d}{dx}\left(\mathrm{cosech \:} x \right) = \text{?} = - \mathrm{cosech \:} x \coth x
+
+A.3.1.II.(xxvi)
+\frac{d}{dx}\left(\sinh^{-1} x \right) = \text{?} = \frac{1}{\sqrt{(1+x^2)}}
+
+A.3.1.II.(xxvii)
+\frac{d}{dx}\left(\cosh^{-1} x \right) = \text{?}  \; \; \text{Where \:} (x>1) \; \; \text{?}= \frac{1}{\sqrt{(x^2-1)}} \; \; \text{Where \:} (x>1)
+
+A.3.1.II.(xxviii)
+\frac{d}{dx}\left(\tanh^{-1} x \right) = \text{?}  \; \; \text{Where \:} (x<1) \; \; \text{?}= \frac{1}{1-x^2} \; \; \text{Where \:} (x<1)
+
+A.3.1.II.(xxix)
+\frac{d}{dx}\left(\coth^{-1} x \right) = \text{?}  \; \; \text{Where \:} (x>1) \; \; \text{?}= - \frac{1}{x^2-1} \; \; \text{Where \:} (x>1)
+
+A.3.1.II.(xxx)
+\frac{d}{dx}\left(\mathrm{cosech}^{-1} x \right) = \text{?} = - \frac{1}{x \sqrt{(x^2+1)}}
+
+A.3.1.II.(xxxi)
+\frac{d}{dx}\left(\mathrm{sech}^{-1} x \right) =\text{?}  \; \; \text{Where \:} (x<1) \; \; \text{?}= - \frac{1}{x \sqrt{(1-x^2)}} \; \; \text{Where \:} (x<1)
+
+A.3.1.III.(i)
+\text{Cartesian Subtangent} = \frac{y}{y_{1}}
+
+A.3.1.III.(ii)
+\text{Cartesian Subnormal} =y \: .  \: y__{1}
+
+A.3.1.III.(iii)
+\text{Cartesian Normal} =y \: . \sqrt{(1+{y__{1}}^2)}
+
+A.3.1.III.(iv)
+\text{Cartesian Tangent} ={\frac{y}{y__{1}}} \: . \sqrt{(1+{y__{1}}^2)}
+
+A.3.1.III.(v)
+\text{Polar Subangent} =\text{?} ; \; \; (u=\frac{1}{r}) \; \; \text{?}=r^2\frac{d\theta}{dr}=-\frac{d\theta}{du}; \; \; (u=\frac{1}{r})
+
+A.3.1.III.(vi)
+\text{Polar Subnormal} =\text{?} ; \; \; (u=\frac{1}{r}) \; \; \text{?}=\frac{dr}{d\theta}=-{\frac{1}{u^{2}}}\frac{du}{d\theta}; \; \; (u=\frac{1}{r})
+
+A.3.1.III.(vii)
+\tan \psi =\frac{dy}{dx}; \; \cos \psi = \frac{dx}{ds}; \; \sin \psi = \frac{dy}{ds}
+
+A.3.1.III.(viii)
+\tan \phi =r\frac{d\theta}{dr}; \; \cos \phi = \frac{dr}{ds}; \; \sin \phi = r\frac{d\theta}{ds}
+
+(\sin/\cos/\tan/etc)? \; 
+
+
+
+A.3.1.III.(ix)
+\begin{subequations}
+\begin{align}
+\\[1ex]
+ds^2=dx^2+dy^2=dr^2+r^2d\theta^{2}
+\\[1ex]
+\left( \frac{ds}{dx} \right)^2=1+\left( \frac{dy}{dx} \right)^2; \; \; \; \left( \frac{ds}{dy} \right)^2=1+\left( \frac{dx}{dy} \right)^2
+\\[1ex]
+\left( \frac{ds}{dr} \right)^2=1+r^2\left( \frac{d\theta}{dr} \right)^2; \; \; \; \left( \frac{ds}{d\theta} \right)^2=r^2+\left( \frac{dr}{d\theta} \right)^2
+\end{align}
+\end{subequations}
+
+
+A.3.1.III.(x)
+p=r\sin \phi ; \; \;  \frac{1}{p^2}=\frac{1}{r^2}+\frac{1}{r^4}; \; \; \left( \frac{dr}{d\theta} \right)^2=u^2+ \left( \frac{du}{d\theta} \right)^2
+
+A.3.1.III.(xi)
+\rho=\frac{ds}{d\psi}={\frac{{(1+{y__{1}}^2)}^{\frac{3}{2}}}{y__{2}}}={\frac{{(r^2+{r_{1}}^2)}^{\frac{3}{2}}}{r^2+2{r_{1}}^2-rr_{2}}}=r\frac{dr}{dp}=p+\frac{d^2 p}{d \psi^2}
+
+
+
+Int Calc
+
+A.4.1.I.(i)
+\int[f_{1}(x) \pm f_{2}(x) \pm f_{3}(x) \ldots \text{to \;} n \; \text{terms} \;]dx
+=\int f_{1}(x) \: dx \; \pm \int f_{2}(x) \: dx \; \pm \int f_{3}(x) \: dx \; \pm \; \ldots \; \text{to \;} n \; \text{terms}
+
+
+A.4.1.I.(ii)
+\int cf(x) \: dx=c\int f(x) \: dx \; [\text{Where \;} c \; \; \text{is a constant}]
+
+
+
+
+
+A.4.2.II.(i)
+\int x^ndx=\frac{x^{n+1}}{n+1} \; \; \text{Here \;} (n \neq -1)
+
+A.4.2.II.(ii)
+\int \frac{1}{x^n}dx=- \frac{1}{(n-1)x^{n-1}}  \; \; \text{Here \;} (n \neq 1)
+
+A.4.2.II.(iii)
+\int dx=x
+
+A.4.2.II.(iv)
+\int \frac{1}{\sqrt{x}}dx=2\sqrt{x}
+
+A.4.2.II.(v)
+\int \frac{1}{x}dx=\log \left| x \right|
+
+A.4.2.II.(vi)
+\int e^{mx}dx=\frac{1}{m}e^{mx}
+
+A.4.2.II.(vii)
+\int e^xdx=e^x
+
+A.4.2.II.(viii)
+\int a^x dx=\frac{a^x}{\log_{e}{a}} \; \; \text{Here \;} (a>0)
+
+A.4.2.II.(ix)
+\int \sin mx \: dx=-\frac{1}{m}\cos mx
+
+A.4.2.II.(x)
+\int \sin x \: dx=- \cos x
+
+A.4.2.II.(xi)
+\int \cos mx \: dx=\frac{1}{m}\sin mx
+
+A.4.2.II.(xii)
+\int \cos x \: dx= \sin x
+
+A.4.2.II.(xiii)
+\int \sec^2 x \: dx= \tan x
+
+A.4.2.II.(xiv)
+\int \mathrm{cosec}^{2} x \: dx= - \cot x
+
+A.4.2.II.(xv)
+\int \sec x \tan x \: dx= \sec x
+
+A.4.2.II.(xvi)
+\int \mathrm{cosec \:} x \cot x \: dx = - \mathrm{cosec \:} x
+
+A.4.2.II.(xvii)
+\int \sinh x \: dx=\cosh x
+
+A.4.2.II.(xviii)
+\int \cosh x \: dx=\sinh x
+
+A.4.2.II.(xix)
+\int \tanh x \: dx=\log \left| (\cosh x) \right|
+
+A.4.2.II.(xx)
+\int \coth x \: dx=\log \left| (\sinh x) \right|
+
+A.4.2.II.(xxi)
+\int \mathrm{cosech \:} x \: dx=\log \left| (\tanh \: \frac{1}{2}x) \right|
+
+A.4.2.II.(xxii)
+\int \mathrm{sech \:} x \: dx=2 \tan^{-1}(e^x)
+
+A.4.2.II.(xxiii)
+\int \mathrm{sech}^2 \: x \: dx=\tanh \: x
+
+A.4.2.II.(xxiv)
+\int \mathrm{cosech}^2 \: x \: dx= - \coth \: x
+
+
+
+
+
+A.4.3.III.(i)
+\int \frac{f^{'}(x)}{f(x)}dx=\log \left| f(x) \right|
+
+A.4.3.III.(ii)
+\int \tan x \: dx=\log \left| \sec x \right|
+
+A.4.3.III.(iii)
+\int \cot x \: dx=\log \left| \sin x \right|
+
+A.4.3.III.(iv)
+\int \frac{1}{x^2+a^2}  \: dx= \frac{1}{a} \tan^{-1} \frac{x}{a}  \; \; \text{Where \:} (a \neq 0)
+
+A.4.3.III.(v)
+\int \frac{1}{x^2-a^2}  \: dx= \frac{1}{2a} \log \left| \frac{x-a}{x+a}  \right|  \; \; \text{Where \:} (\left| x \right| > \left| a \right|)
+
+A.4.3.III.(vi)
+\int \frac{1}{a^2-x^2}  \: dx= \frac{1}{2a} \log \left| \frac{a+x}{a-x}  \right|  \; \; \text{Where \:} (\left| x \right| < \left| a \right|)
+
+A.4.3.III.(vii)
+\int \frac{1}{\sqrt{(x^2+a^2)}}  \: dx= \log \left| x+ \sqrt{(x^2+a^2)} \right| = \sinh^{-1} \frac{x}{a}
+
+A.4.3.III.(viii)
+\int \frac{1}{\sqrt{(x^2-a^2)}}  \: dx= \log \left| x+ \sqrt{(x^2-a^2)} \right| = \cosh^{-1} \frac{x}{a}
+
+A.4.3.III.(ix)
+\int \frac{1}{\sqrt{(a^2-x^2)}}  \: dx= \sin^{-1} \frac{x}{a}  \; \; \text{Where \:} (\left| x \right| < \left| a \right|)
+
+A.4.3.III.(x)
+\int \frac{1}{x \sqrt{(x^2-a^2)}}  \: dx= \frac{1}{a} \sec^{-1}\left( \frac{x}{a}  \right)
+
+A.4.3.III.(xi)
+\int \frac{1}{x \sqrt{(x^2-1)}}  \: dx=  \sec^{-1}x
+
+
+
+A.4.3.III.(xii)
+\begin{subequations}
+\begin{align}
+\\[1ex]
+\left \int (uv) \: dx=u\int v \: dx \:  - \int \left( \frac{du}{dx} \cdot \int v \: dx \right)dx \\
+\text{Integral of the product of two functions} \\
+= 1^{st} \;  \text{function} \times \text{integral of} \;  2^{nd} \; - \; \text{integral of [Differential co-efficient of} \; 1^{st} \times \text{integral of } 2^{nd} \; ]
+\end{align}
+\end{subequations}
+
+
+A.4.3.III.(xiii)
+\int e^{ax} \cos bx \: dx= \frac{e^{ax}(a \cos bx \: + \: b \sin bx)}{a^2+b^2}= \frac{e^{ax}}{ \sqrt{(a^2+b^2)}} \: \cos \left( bx - \tan^{-1} \frac{b}{a} \right)
+
+A.4.3.III.(xiv)
+\int e^{ax} \sin bx \: dx= \frac{e^{ax}(a \sin bx \: - \: b \cos bx)}{a^2+b^2}= \frac{e^{ax}}{ \sqrt{(a^2+b^2)}} \: \sin \left( bx - \tan^{-1} \frac{b}{a} \right)
+
+A.4.3.III.(xv)
+\int \sqrt{x^2+a^2} \: dx=\frac{x \sqrt{x^2+a^2}}{2} \: + \: \frac{a^2}{2}\log \left| \left( x+\sqrt{x^2+a^2} \right)  \right|=\frac{x \sqrt{x^2+a^2}}{2} \: + \:  \frac{a^2}{2} \: \sinh^{-1} \frac{x}{a}
+
+A.4.3.III.(xvi)
+\int \sqrt{x^2-a^2} \: dx=\frac{x \sqrt{x^2-a^2}}{2} \; - \; \frac{a^2}{2}\log \left| \left( x+\sqrt{x^2-a^2} \right)  \right|=\frac{x \sqrt{x^2-a^2}}{2} \; - \;  \frac{a^2}{2} \: \cosh^{-1} \frac{x}{a}
+
+A.4.3.III.(xvii)
+\int \sqrt{a^2-x^2} \; dx=\frac{a \sqrt{a^2-x^2}}{2} \: + \: \frac{a^2}{2} \sin^{-1} \frac{x}{a}
+
+A.4.3.III.(xviii)
+\int \mathrm{cosec \: }x \: dx =\log \left| \tan \frac{1}{2}x \right|=\log \left| \: \left(\mathrm{cosec \:} x - \cot x\right) \: \right|
+
+A.4.3.III.(xix)
+\int \sec x \: dx =\log \left| \tan \left( \frac{1}{4}\pi \: + \: \frac{1}{2}x \right) \right|=\log \left| \: \left(\sec x + \tan x\right) \: \right|
+
+
+
+
+================================================================================
+cancel neumerator and denominator in latex:
+------------------------------
+google: 5 /5 cancel in latex
+http://tex.stackexchange.com/questions/107668/how-to-use-cancel-command
+http://tex.stackexchange.com/questions/105902/cancel-with-different-colors
+------------------------------
+\usepackage{cancel}
+\usepackage{xcolor}
+\newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
+----------------
+Then, For Example:
+\Ccancel{x+1} \qquad \Ccancel[blue]{x-1}
+                  or,
+\frac{a\bcancel{b}}{\bcancel{b}}=a
+================================================================================
+Other Preambles:
+Maths:
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage[T1]{fontenc}
+\usepackage{amsthm}
+\usepackage{xfrac}
+\usepackage{eucal}
+
+\usepackage{subfig}
+\usepackage{stmaryrd}
+\usepackage{empheq}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{boxedminipage}
+
+\usepackage{mathtools}
+
+Others:
+\usepackage[a4paper]{geometry}
+\RequirePackage[l2tabu, orthodox]{nag}
+\usepackage{microtype}
+\usepackage{siunitx}
+\usepackage{cleveref}
+\usepackage[colorlinks=false, pdfborder={0 0 0}]{hyperref}
+\usepackage{booktabs}
+\usepackage{rotating}
+\usepackage{textcomp}
+\usepackage{subfigure}
+\usepackage{url}
+\usepackage{hyperref}
+http://blog.rtwilson.com/my-latex-preamble/
+
+================================================================================
+My Preambles for EqualX:
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage[T1]{fontenc}
+\usepackage{amsthm}
+\usepackage{xfrac}
+\usepackage{eucal}
+\usepackage{cancel}
+\usepackage{xcolor}
+\newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
+================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

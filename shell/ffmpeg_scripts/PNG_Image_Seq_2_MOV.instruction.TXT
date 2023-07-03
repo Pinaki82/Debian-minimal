@@ -1,0 +1,50 @@
+=======================================================
+Brave: ffmpeg image sequence to video
+https://en.wikibooks.org/wiki/FFMPEG_An_Intermediate_Guide/image_sequence
+
+Create PNG encoded MOV (Transparent) video files from PNG/TIFF/TGA (Transparent) image sequences.
+
+imgseq1.png to imgseq126.png
+imgseq%d.png
+
+--------------
+ imgseq1.png
+ imgseq2.png
+ ...
+ imgseq9.png
+ imgseq10.png
+ imgseq11.png
+ ...
+ imgseq99.png
+ imgseq100.png
+ ...
+ imgseq126.png
+--------------
+Numbered without leading zeroes
+
+--------------
+image-000.png to image-999.png
+image-%03d.png
+
+--------------
+ image-000.png
+ image-001.png
+ image-002.png
+ ...
+ image-999.png
+--------------
+Numbered with leading zeroes
+
+=======================================================
+
+set path="C:\Program Files\ffmpeg-2021-10-14-git-c336c7a9d7-full_build\bin"; %path%;
+
+CD "L:\Adobe\2021.12.21-TestPNGseq"
+
+ffmpeg -r 25 -f image2 -i imgseq%d.png -c:v png -q:v 0 movie.MOV
+
+
+Or, for RLE Video:
+
+ffmpeg -r 25 -f image2 -i imgseq%d.png -c:v qtrle -q:v 0 rle_movie.MOV
+

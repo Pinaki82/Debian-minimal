@@ -1,0 +1,101 @@
+Syncthing: Continuous File Synchronization Program.
+https://syncthing.net/
+-------------------------------
+Sync your files between your Android phone and Windows/Linux/macOS PC.
+Syncthing is a continuous file synchronization program
+that works over the local networks (Wireless LAN, Wi-Fi).
+-------------------------------
+
+Android:
+https://play.google.com/store/apps/details?id=com.github.catfriend1.syncthingandroid
+Syncthing-Fork
+Catfriend1
+
+(Worked like a Charm!!! *****)
+
+F-Droid: https://f-droid.org/en/packages/com.github.catfriend1.syncthingandroid/
+
+Or,
+
+https://play.google.com/store/apps/details?id=com.nutomic.syncthingandroid
+Syncthing
+Syncthing Community
+
+(It has minor glitches. ****)
+
+F-Droid: https://f-droid.org/en/packages/com.nutomic.syncthingandroid/
+
+*-Ubuntu:
+https://apt.syncthing.net/
+
+sudo apt update
+sudo curl -o /usr/share/keyrings/syncthing-archive-keyring.gpg https://syncthing.net/release-key.gpg
+echo "deb [signed-by=/usr/share/keyrings/syncthing-archive-keyring.gpg] https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list
+echo "deb [signed-by=/usr/share/keyrings/syncthing-archive-keyring.gpg] https://apt.syncthing.net/ syncthing candidate" | sudo tee /etc/apt/sources.list.d/syncthing.list
+sudo apt-get update
+sudo apt-get install syncthing
+
+Start Syncthing:
+CTRL+ALT+T (to open the default terminal emulator). Type:
+syncthing
+Hit Enter.
+
+Quickstart:
+https://docs.syncthing.net/intro/getting-started.html
+Full docs:
+https://docs.syncthing.net/
+
+See the 'Troubleshooting' section if the steps above do not work for you.
+
+
+
+MS Windows:
+choco install -y syncthing
+Or,
+https://syncthing.net/downloads/
+
+--------------
+Windows
+64-bit (x86-64) · 32-bit (x86-32) · ARM · ARM64
+--------------
+
+Add "%USERPROFILE%\syncthing-windows-amd64-v1.22.2" to %PATH%.
+
+
+WINDOWS + r -> systempropertiesadvanced ->
+-> Environment Variables ->
+-> System Variables -> Path -> Edit -> New
+Add
+C:\Users\YOUR_USERNAME\syncthing-windows-amd64-v1.22.2
+
+Alternative Method:
+
+Open CMD in Admin mode:
+1. Windows Key + r (Run Prompt)
+2. Type cmd
+3. CTRL+SHIFT+ENTER
+rundll32.exe sysdm.cpl,EditEnvironmentVariables
+Or,
+rundll32.exe shell32.dll,Control_RunDLL sysdm.cpl,,3
+
+Environment Variables ->
+-> System Variables -> Path -> Edit -> New
+Add
+C:\Users\YOUR_USERNAME\syncthing-windows-amd64-v1.22.2
+
+
+Start Syncthing:
+Open the Command Prompt (CMD.EXE) or the Power Shell. Type:
+syncthing
+Hit Enter.
+
+Look closely for the following line in the Terminal
+Emulator (CMD.EXE/PowerShell/XFCE-Terminal/Kitty/Sakura/WezTerm/Alacritty):
+
+--------------------------
+Access the GUI via the following URL: http://127.x.x.y:gfth/
+--------------------------
+
+Copy the URL to the clipboard from the terminal
+emulator and paste it into any browser you wish.
+The Web-GUI will readily be accessible.

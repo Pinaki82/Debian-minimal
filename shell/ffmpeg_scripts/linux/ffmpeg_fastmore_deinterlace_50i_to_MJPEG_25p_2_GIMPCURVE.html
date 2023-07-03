@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+  @font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #24292e;
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b31d28;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2 {
+  background-color: #d73a49;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2:before {
+  content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #22863a;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ml {
+  color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #005cc5;
+  font-weight: 700;
+}
+
+.markdown-body .pl-mi {
+  color: #24292e;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #24292e;
+  font-weight: 700;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffeef0;
+  color: #b31d28;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #f0fff4;
+  color: #22863a;
+}
+
+.markdown-body .pl-mc {
+  background-color: #ffebda;
+  color: #e36209;
+}
+
+.markdown-body .pl-mi2 {
+  background-color: #005cc5;
+  color: #f6f8fa;
+}
+
+.markdown-body .pl-mdr {
+  color: #6f42c1;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ba {
+  color: #586069;
+}
+
+.markdown-body .pl-sg {
+  color: #959da5;
+}
+
+.markdown-body .pl-corl {
+  color: #032f62;
+  text-decoration: underline;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.markdown-body hr:before {
+  content: "";
+  display: table;
+}
+
+.markdown-body hr:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.markdown-body .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .border-0 {
+  border: 0!important;
+}
+
+.markdown-body .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .rounded-1 {
+  border-radius: 3px!important;
+}
+
+.markdown-body .bg-white {
+  background-color: #fff!important;
+}
+
+.markdown-body .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+.markdown-body .text-gray-light {
+  color: #6a737d!important;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-bottom: 8px!important;
+  margin-top: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-bottom: 0!important;
+  padding-top: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-bottom: 8px!important;
+  padding-top: 8px!important;
+}
+
+.markdown-body .pl-3,
+.markdown-body .px-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .px-3 {
+  padding-right: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .f6 {
+  font-size: 12px!important;
+}
+
+.markdown-body .lh-condensed {
+  line-height: 1.25!important;
+}
+
+.markdown-body .text-bold {
+  font-weight: 600!important;
+}
+
+.markdown-body:before {
+  content: "";
+  display: table;
+}
+
+.markdown-body:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.markdown-body hr {
+  background-color: #e1e4e8;
+  border: 0;
+  height: .25em;
+  margin: 24px 0;
+  padding: 0;
+}
+
+.markdown-body blockquote {
+  border-left: .25em solid #dfe2e5;
+  color: #6a737d;
+  padding: 0 1em;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #c6cbd1;
+  border-bottom-color: #959da5;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #959da5;
+  color: #444d56;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  margin-top: 24px;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: .3em;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  color: #6a737d;
+  font-size: .85em;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 16px;
+  padding: 0;
+}
+
+.markdown-body dl dd {
+  margin-bottom: 16px;
+  padding: 0 16px;
+}
+
+.markdown-body table {
+  display: block;
+  overflow: auto;
+  width: 100%;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  border: 1px solid #dfe2e5;
+  padding: 6px 13px;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body img {
+  background-color: #fff;
+  box-sizing: content-box;
+  max-width: 100%;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  padding: .2em .4em;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  word-break: normal;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  font-size: 85%;
+  line-height: 1.45;
+  overflow: auto;
+  padding: 16px;
+}
+
+.markdown-body pre code {
+  background-color: transparent;
+  border: 0;
+  display: inline;
+  line-height: inherit;
+  margin: 0;
+  max-width: auto;
+  overflow: visible;
+  padding: 0;
+  word-wrap: normal;
+}
+
+.markdown-body .commit-tease-sha {
+  color: #444d56;
+  display: inline-block;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 90%;
+}
+
+.markdown-body .blob-wrapper {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-body .blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.markdown-body .blob-num {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  color: rgba(27,31,35,.3);
+  cursor: pointer;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+  line-height: 20px;
+  min-width: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: right;
+  user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 1%;
+}
+
+.markdown-body .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+.markdown-body .blob-num:before {
+  content: attr(data-line-number);
+}
+
+.markdown-body .blob-code {
+  line-height: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  vertical-align: top;
+}
+
+.markdown-body .blob-code-inner {
+  color: #24292e;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+  overflow: visible;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+.markdown-body .pl-token.active,
+.markdown-body .pl-token:hover {
+  background: #ffea7f;
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-bottom-color: #c6cbd1;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #c6cbd1;
+  color: #444d56;
+  display: inline-block;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+.markdown-body :checked+.radio-label {
+  border-color: #0366d6;
+  position: relative;
+  z-index: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="1"] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="2"] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+.markdown-body .tab-size[data-tab-size="3"] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+.markdown-body .tab-size[data-tab-size="4"] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.markdown-body .tab-size[data-tab-size="5"] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+.markdown-body .tab-size[data-tab-size="6"] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+.markdown-body .tab-size[data-tab-size="7"] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+.markdown-body .tab-size[data-tab-size="8"] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+.markdown-body .tab-size[data-tab-size="9"] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+.markdown-body .tab-size[data-tab-size="10"] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+.markdown-body .tab-size[data-tab-size="11"] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+.markdown-body .tab-size[data-tab-size="12"] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body hr {
+  border-bottom-color: #eee;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .pl-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .pl-7 {
+  padding-left: 48px!important;
+}
+
+.markdown-body .pl-8 {
+  padding-left: 64px!important;
+}
+
+.markdown-body .pl-9 {
+  padding-left: 80px!important;
+}
+
+.markdown-body .pl-10 {
+  padding-left: 96px!important;
+}
+
+.markdown-body .pl-11 {
+  padding-left: 112px!important;
+}
+
+.markdown-body .pl-12 {
+  padding-left: 128px!important;
+}
+
+/*# sourceURL=webpack://./node_modules/github-markdown-css/github-markdown.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL25vZGVfbW9kdWxlcy9naXRodWItbWFya2Rvd24tY3NzL2dpdGh1Yi1tYXJrZG93bi5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSwwQkFBMEI7RUFDMUIsMkRBQXF0RTtBQUN2dEU7O0FBRUE7RUFDRSxxQkFBcUI7RUFDckIsa0JBQWtCO0VBQ2xCLDJCQUEyQjtBQUM3Qjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxjQUFjO0VBQ2Qsa0JBQWtCO0VBQ2xCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGFBQWE7QUFDZjs7QUFFQTs7Ozs7O0VBTUUsY0FBYztFQUNkLHNCQUFzQjtFQUN0QixrQkFBa0I7QUFDcEI7O0FBRUE7Ozs7OztFQU1FLHFCQUFxQjtBQUN2Qjs7QUFFQTs7Ozs7O0VBTUUsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UsMEJBQTBCO0VBQzFCLDhCQUE4QjtFQUM5QixjQUFjO0VBQ2QsZ0JBQWdCO0VBQ2hCLGtJQUFrSTtFQUNsSSxlQUFlO0VBQ2YsZ0JBQWdCO0VBQ2hCLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7O0VBRUUsY0FBYztBQUNoQjs7QUFFQTs7RUFFRSxjQUFjO0FBQ2hCOztBQUVBOztFQUVFLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSxjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTs7Ozs7OztFQU9FLGNBQWM7QUFDaEI7O0FBRUE7O0VBRUUsY0FBYztBQUNoQjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSx5QkFBeUI7RUFDekIsY0FBYztBQUNoQjs7QUFFQTtFQUNFLHlCQUF5QjtFQUN6QixjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsYUFBYTtBQUNmOztBQUVBO0VBQ0UsY0FBYztFQUNkLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7OztFQUdFLGNBQWM7RUFDZCxnQkFBZ0I7QUFDbEI7O0FBRUE7RUFD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 */
+  </style>
+  <style>
+  /**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #9a6e3a;
+	/* This background color was intended by the author of this theme. */
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function,
+.token.class-name {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+/*# sourceURL=webpack://./node_modules/prismjs/themes/prism.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL25vZGVfbW9kdWxlcy9wcmlzbWpzL3RoZW1lcy9wcmlzbS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7RUFJRTs7QUFFRjs7Q0FFQyxZQUFZO0NBQ1osZ0JBQWdCO0NBQ2hCLHdCQUF3QjtDQUN4QixzRUFBc0U7Q0FDdEUsY0FBYztDQUNkLGdCQUFnQjtDQUNoQixnQkFBZ0I7Q0FDaEIsb0JBQW9CO0NBQ3BCLGtCQUFrQjtDQUNsQixpQkFBaUI7Q0FDakIsZ0JBQWdCOztDQUVoQixnQkFBZ0I7Q0FDaEIsY0FBYztDQUNkLFdBQVc7O0NBRVgscUJBQXFCO0NBQ3JCLGtCQUFrQjtDQUNsQixpQkFBaUI7Q0FDakIsYUFBYTtBQUNkOztBQUVBOztDQUVDLGlCQUFpQjtDQUNqQixtQkFBbUI7QUFDcEI7O0FBRUE7O0NBRUMsaUJBQWlCO0NBQ2pCLG1CQUFtQjtBQUNwQjs7QUFFQTtDQUNDOztFQUVDLGlCQUFpQjtDQUNsQjtBQUNEOztBQUVBLGdCQUFnQjtBQUNoQjtDQUNDLFlBQVk7Q0FDWixjQUFjO0NBQ2QsY0FBYztBQUNmOztBQUVBOztDQUVDLG1CQUFtQjtBQUNwQjs7QUFFQSxnQkFBZ0I7QUFDaEI7Q0FDQyxhQUFhO0NBQ2IsbUJBQW1CO0NBQ25CLG1CQUFtQjtBQUNwQjs7QUFFQTs7OztDQUlDLGdCQUFnQjtBQUNqQjs7QUFFQTtDQUNDLFdBQVc7QUFDWjs7QUFFQTtDQUNDLFdBQVc7QUFDWjs7QUFFQTs7Ozs7OztDQU9DLFdBQVc7QUFDWjs7QUFFQTs7Ozs7O0NBTUMsV0FBVztBQUNaOztBQUVBOzs7OztDQUtDLGNBQWM7Q0FDZCxvRUFBb0U7Q0FDcEUsaUNBQWlDO0FBQ2xDOztBQUVBOzs7Q0FHQyxXQUFXO0FBQ1o7O0FBRUE7O0NBRUMsY0FBYztBQUNmOztBQUVBOzs7Q0FHQyxXQUFXO0FBQ1o7O0FBRUE7O0NBRUMsaUJBQWlCO0FBQ2xCO0FBQ0E7Q0FDQyxrQkFBa0I7QUFDbkI7O0FBRUE7Q0FDQyxZQUFZO0FBQ2IiLCJzb3VyY2VSb290IjoiIn0= */
+  </style>
+  <style>
+  
+  </style>
+  <style>
+    .markdown-body {
+      font-family: -apple-system,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+
+    @media not print {
+      .markdown-body {
+        padding: 45px;
+      }
+
+      @media (max-width: 767px) {
+        .markdown-body {
+          padding: 15px;
+        }
+      }
+    }
+
+    .hf-container {
+      color: #24292e;
+      line-height: 1.3;
+    }
+
+    .markdown-body .highlight pre,
+    .markdown-body pre {
+      white-space: pre-wrap;
+    }
+    .markdown-body table {
+      display: table;
+    }
+    .markdown-body img[data-align="center"] {
+      display: block;
+      margin: 0 auto;
+    }
+    .markdown-body img[data-align="right"] {
+      display: block;
+      margin: 0 0 0 auto;
+    }
+    .markdown-body li.task-list-item {
+      list-style-type: none;
+    }
+    .markdown-body li > [type=checkbox] {
+      margin: 0 0 0 -1.3em;
+    }
+    .markdown-body input[type="checkbox"] ~ p {
+      margin-top: 0;
+      display: inline-block;
+    }
+    .markdown-body ol ol,
+    .markdown-body ul ol {
+      list-style-type: decimal;
+    }
+    .markdown-body ol ol ol,
+    .markdown-body ol ul ol,
+    .markdown-body ul ol ol,
+    .markdown-body ul ul ol {
+      list-style-type: decimal;
+    }
+  </style>
+  <style>.markdown-body a.footnote-ref {
+  text-decoration: none;
+}
+
+.footnotes {
+  font-size: .85em;
+  opacity: .8;
+}
+
+.footnotes li[role="doc-endnote"] {
+  position: relative;
+}
+
+.footnotes .footnote-back {
+  position: absolute;
+  font-family: initial;
+  top: .2em;
+  right: 1em;
+  text-decoration: none;
+}
+
+.inline-math.invalid,
+.multiple-math.invalid {
+  color: rgb(255, 105, 105);
+}
+
+.toc-container {
+  width: 100%;
+}
+
+.toc-container .toc-title {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+
+.toc-container li,
+.toc-container ul,
+.toc-container ul li {
+  list-style: none !important;
+}
+
+.toc-container > ul {
+  padding-left: 0;
+}
+
+.toc-container ul li span {
+  display : flex;
+}
+
+.toc-container ul li span a {
+  color: inherit;
+  text-decoration: none;
+}
+.toc-container ul li span a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.toc-container ul li span span.dots {
+  flex: 1;
+  height: 0.65em;
+  margin: 0 10px;
+  border-bottom: 2px dotted black;
+}
+
+/*# sourceURL=webpack://./src/muya/lib/assets/styles/exportStyle.css */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9tdXlhL2xpYi9hc3NldHMvc3R5bGVzL2V4cG9ydFN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsb0JBQW9CO0VBQ3BCLFNBQVM7RUFDVCxVQUFVO0VBQ1YscUJBQXFCO0FBQ3ZCOztBQUVBOztFQUVFLHlCQUF5QjtBQUMzQjs7QUFFQTtFQUNFLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixnQkFBZ0I7RUFDaEIsZ0JBQWdCO0FBQ2xCOztBQUVBOzs7RUFHRSwyQkFBMkI7QUFDN0I7O0FBRUE7RUFDRSxlQUFlO0FBQ2pCOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTtFQUNFLGNBQWM7RUFDZCxxQkFBcUI7QUFDdkI7QUFDQTtFQUNFLGNBQWM7RUFDZCxxQkFBcUI7QUFDdkI7O0FBRUE7RUFDRSxPQUFPO0VBQ1AsY0FBYztFQUNkLGNBQWM7RUFDZCwrQkFBK0I7QUFDakMiLCJzb3VyY2VSb290IjoiIn0= */</style>
+  <style>.markdown-body{}pre.front-matter{display:none!important;}</style>
+</head>
+<body>
+  <article class="markdown-body"><p>Ref:</p>
+<p><a href="https://github.com/sinf/gimp-curves-to-ffmpeg">https://github.com/sinf/gimp-curves-to-ffmpeg</a></p>
+<p>Download the code:</p>
+<p><a href="https://github.com/sinf/gimp-curves-to-ffmpeg/blob/main/gimp-to-ffmpeg.py">https://github.com/sinf/gimp-curves-to-ffmpeg/blob/main/gimp-to-ffmpeg.py</a></p>
+<p><a href="https://video.stackexchange.com/questions/16352/converting-gimp-curves-files-to-photoshop-acv-for-ffmpeg">https://video.stackexchange.com/questions/16352/converting-gimp-curves-files-to-photoshop-acv-for-ffmpeg</a></p>
+<p><a href="https://video.stackexchange.com/questions/20962/ffmpeg-color-correction-gamma-brightness-and-saturation">https://video.stackexchange.com/questions/20962/ffmpeg-color-correction-gamma-brightness-and-saturation</a></p>
+<pre><code class="fenced-code-block">python gimp-to-ffmpeg.py input.exportedGIMPcurve.txt &gt; output.ffmpegCurveNameOrNumber.txt</code></pre>
+<p>Copy contents of <code>output.ffmpegCurveNameOrNumber.txt</code> to the clipboard.</p>
+<p><strong>FFMPEG:</strong> (Windows Batch File Example)</p>
+<pre><code class="fenced-code-block language-batch"><span class="token operator">@</span><span class="token command"><span class="token keyword">ECHO</span> OFF</span>
+<span class="token command"><span class="token keyword">set</span> <span class="token variable">path</span><span class="token operator">=</span><span class="token string">"C:\Program Files\ffmpeg-20160522-git-566be4f-win64-shared\bin"</span>; <span class="token variable">%path%</span>;</span>
+<span class="token operator">@</span><span class="token command"><span class="token keyword">ECHO</span> ON</span>
+
+<span class="token command"><span class="token keyword">for</span> <span class="token variable">%%A</span> <span class="token keyword">in</span> <span class="token punctuation">(</span><span class="token string">"*.*"</span><span class="token punctuation">)</span> <span class="token keyword">DO</span></span> <span class="token command"><span class="token keyword">ffmpeg</span> -hwaccel dxva2 <span class="token parameter attr-name">-i</span> <span class="token string">"%%A"</span>  <span class="token parameter attr-name">-c</span><span class="token label property">:v</span> mjpeg <span class="token parameter attr-name">-q</span><span class="token label property">:v</span> <span class="token number">0</span> -crf <span class="token number">0</span> -preset ultrafast -filter:v <span class="token string">"yadif=0:-1:1, scale=trunc(iw/2)*2:trunc(ih/2)*2, curves=m=0.0/0.0 0.15315315315315314/0.03515625 0.3363363363363363/0.16015625 0.5285285285285286/0.4609375 0.6816816816816818/0.69140625 0.7837837837837838/0.8125 1.0/1.0:r=0.0/0.0 1.0/1.0:g=0.0/0.0 1.0/1.0:b=0.0/0.0 1.0/1.0"</span> <span class="token parameter attr-name">-c</span><span class="token label property">:a</span> pcm_s16le <span class="token parameter attr-name">-r</span> <span class="token number">25</span> <span class="token string">"%%A.MJPEG.AVI"</span></span>
+<span class="token command"><span class="token keyword">cmd</span></span></code></pre>
+<p>Bash SHELL script:</p>
+<pre><code class="fenced-code-block language-bash"><span class="token shebang important">#!/bin/bash</span>
+
+<span class="token comment"># Color Grading with Photoshop Curve Preset (*.acv) files</span>
+<span class="token comment"># https://askubuntu.com/questions/1011550/how-can-i-convert-all-video-files-in-nested-folders-batch-conversion</span>
+<span class="token comment"># Change the directories and quality level (lower=better):</span>
+<span class="token assign-left variable">inputfolder</span><span class="token operator">=</span><span class="token string">"/media/sf_ffmpeg_linux_tst"</span>
+<span class="token assign-left variable">outputfolder</span><span class="token operator">=</span><span class="token string">"/media/sf_ffmpeg_linux_tst"</span>
+<span class="token assign-left variable">codecoption</span><span class="token operator">=</span>mjpeg
+<span class="token assign-left variable">audiocodec</span><span class="token operator">=</span>pcm_s16le
+<span class="token assign-left variable">audiosamplerate</span><span class="token operator">=</span><span class="token number">48000</span>
+<span class="token assign-left variable">audiochannel</span><span class="token operator">=</span><span class="token number">2</span>
+<span class="token assign-left variable">audiobitrate</span><span class="token operator">=</span>384k
+<span class="token assign-left variable">videoquality</span><span class="token operator">=</span><span class="token number">0</span>
+<span class="token assign-left variable">constantratefactor</span><span class="token operator">=</span><span class="token number">0</span> <span class="token comment">#The range of the CRF scale is 0–51, where 0 is lossless, 23 is the default, and 51 is worst quality possible. A lower value generally leads to higher quality, and a subjectively sane range is 17–28.</span>
+<span class="token assign-left variable">framerateconversionratio_at_output</span><span class="token operator">=</span><span class="token number">25</span>
+<span class="token assign-left variable">SPEED</span><span class="token operator">=</span>ultrafast <span class="token comment">#superfast, veryfast, faster, fast, medium, slow, slower, veryslow</span>
+<span class="token comment"># https://superuser.com/questions/714804/converting-video-from-1080p-to-720p-with-smallest-quality-loss-using-ffmpeg</span>
+<span class="token comment"># https://www.macxdvd.com/mac-dvd-video-converter-how-to/ffmpeg-avi-to-mp4-free.htm</span>
+<span class="token comment"># https://superuser.com/questions/1556953/why-does-preset-veryfast-in-ffmpeg-generate-the-most-compressed-file-compared</span>
+
+<span class="token keyword">for</span> <span class="token for-or-select variable">inputfile</span> <span class="token keyword">in</span> <span class="token string">"<span class="token variable">$inputfolder</span>"</span>/*.* <span class="token punctuation">;</span> <span class="token keyword">do</span>
+    <span class="token assign-left variable">outputfile</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$outputfolder</span>/<span class="token variable"><span class="token variable">$(</span><span class="token function">basename</span> <span class="token string">"<span class="token variable">${inputfile<span class="token operator">%</span>}</span>"</span><span class="token variable">)</span></span>.AVI"</span>
+    ffmpeg -i <span class="token string">"<span class="token variable">$inputfile</span>"</span> -c:v <span class="token variable">$codecoption</span> -c:a <span class="token variable">$audiocodec</span> -ar <span class="token variable">$audiosamplerate</span> <span class="token punctuation">\</span>
+    -ac <span class="token variable">$audiochannel</span> -ab <span class="token variable">$audiobitrate</span> <span class="token punctuation">\</span>
+    -q:v <span class="token variable">$videoquality</span> -preset <span class="token variable">$SPEED</span> -crf <span class="token variable">$constantratefactor</span> <span class="token punctuation">\</span>
+    -filter:v <span class="token string">"yadif=0:-1:1, scale=trunc(iw/2)*2:trunc(ih/2)*2, curves=m=0.0/0.0 0.15915915915915912/0.08203125 0.3243243243243243/0.25390625 0.4924924924924926/0.4765625 0.6486486486486487/0.671875 0.7747747747747747/0.81640625 1.0/1.0:r=0.0/0.0 1.0/1.0:g=0.0/0.0 1.0/1.0:b=0.0/0.0 1.0/1.0"</span> <span class="token punctuation">\</span>
+    -r <span class="token variable">$framerateconversionratio_at_output</span> <span class="token string">"<span class="token variable">$outputfile</span>"</span>
+<span class="token keyword">done</span></code></pre>
+<p>NOTE: Paste the filter curve's parameters from the clipboard to the BATCH FILE as shown above:</p>
+<pre><code class="fenced-code-block">curves=m=0.0/0.0 0.15315315315315314/0.03515625 0.3363363363363363/0.16015625 0.5285285285285286/0.4609375 0.6816816816816818/0.69140625 0.7837837837837838/0.8125 1.0/1.0:r=0.0/0.0 1.0/1.0:g=0.0/0.0 1.0/1.0:b=0.0/0.0 1.0/1.0</code></pre>
+<p>GIMP Side:</p>
+<p>Open the video file with a media player. Export a frame from the video file as an image. Open the image file in GIMP.</p>
+<p>Menu Bar -&gt; Colors -&gt; Curves... -&gt; (Adjust only the value channel curve) -&gt; Presets _ Manage Presets -&gt; Export Current Settings to File... -&gt; Choose a different location (folder) on your drive (not the GIMP\2.10\curves) and save as a text file.</p>
+<p>The GIMP exported curve should look like this:</p>
+<pre><code class="fenced-code-block"># GIMP 'Curves' settings
+
+(time 0)
+(linear no)
+(channel value)
+(curve
+    (curve-type smooth)
+    (points 14 0 0 0.15915915915915912 0.08203125 0.32432432432432429 0.25390625 0.49249249249249261 0.4765625 0.64864864864864868 0.671875 0.77477477477477474 0.81640625 1 1)
+    (point-types 7 smooth smooth smooth smooth smooth smooth smooth)
+    (n-samples 256)
+    (samples 256 0 0.0014970518670727837 0.0029960141087983241 0.0044987970998293771 0.0060073112148186988 0.0075234668284190464 0.0090491743152831747 0.010586344050063839 0.0121368864074138 0.013702711761985812 0.015285730488432632 0.016887852961407015 0.01851098955556172 0.020157050645549495 0.021827946606023101 0.023525587811635308 0.025251884637038844 0.02700874745688649 0.028798086645830993 0.030621812578525111 0.032481835629621592 0.034380066173773212 0.036318414585632709 0.038298791239852845 0.040323106511086379 0.042393270773986053 0.044511194403204654 0.046678787773394903 0.048897961259209574 0.051170625235301442 0.053498690076323227 0.055884066156927703 0.058328663851767625 0.060834393535495745 0.063403165582764834 0.066036890368227644 0.068737478266536908 0.071506839652345416 0.074346884900305901 0.07725952438507111 0.080246668481293831 0.08203125 0.085135790790657348 0.088308181664988245 0.091546900131432921 0.094850423698431677 0.098217229874424744 0.10164579616785231 0.10513460008715468 0.10868211914077212 0.11228683083714486 0.1159472126847131 0.11966174219191714 0.12342889686719724 0.12724715421899363 0.13111499175574651 0.13503088698589619 0.13899331741788293 0.14300076056014693 0.14705169392112849 0.15114459500926777 0.15527794133300515 0.15945021040078078 0.16365987972103491 0.1679054268022078 0.17218532915273976 0.17649806428107101 0.18084210969564171 0.18521594290489227 0.18961804141726277 0.19404688274119358 0.19850094438512486 0.20297870385749694 0.20747863866675004 0.2119992263213244 0.21653894432966023 0.2210962702001979 0.2256696814413775 0.23025765556163938 0.23485867006942374 0.23947120247317094 0.24409373028132109 0.24872473100231449 0.25390625 0.25857632664559999 0.26330196971661257 0.26808093126729682 0.27291096335191267 0.27778981802471941 0.28271524733997655 0.28768500335194364 0.29269683811488012 0.29774850368304573 0.30283775211069958 0.30796233545210167 0.31312000576151117 0.31830851509318769 0.32352561550139081 0.32876905904037995 0.33403659776441469 0.33932598372775435 0.34463496898465873 0.34996130558938726 0.35530274559619934 0.36065704105935448 0.36602194403311239 0.37139520657173236 0.37677458072947401 0.38215781856059694 0.3875426721193605 0.39292689346002418 0.39830823463684772 0.40368444770409034 0.40905328471601177 0.4144124977268715 0.41975983879092893 0.42509305996244373 0.43040991329567524 0.43570815084488307 0.44098552466432672 0.4462397868082657 0.45146868933095963 0.45666998428666783 0.46184142372964981 0.46698075971416531 0.47208574429447364 0.4765625 0.48161347932766346 0.48665858873735607 0.49169769688873916 0.49673067244147379 0.50175738405522119 0.50677770038964243 0.51179149010439906 0.5167986218591516 0.52179896431356187 0.52679238612729051 0.53177875595999924 0.536757942471349 0.54172981432100098 0.54669424016861623 0.55165108867385615 0.55660022849638202 0.56154152829585458 0.56647485673193554 0.57140008246428542 0.57631707415256617 0.58122570045643851 0.58612583003556373 0.59101733154960301 0.59590007365821751 0.60077392502106841 0.60563875429781688 0.61049443014812421 0.61534082123165157 0.62017779620806013 0.62500522373701084 0.62982297247816521 0.6346309110911843 0.6394289082357294 0.64421683257146145 0.64899455275804174 0.65376193745513156 0.65851885532239207 0.66326517501948423 0.671875 0.67660736174722125 0.68135964383725878 0.68612834226232289 0.69090995301462521 0.69570097208637527 0.70049789546978414 0.70529721915706245 0.71009543914042073 0.71488905141206938 0.71967455196421903 0.72444843678908111 0.72920720187886479 0.73394734322578192 0.73866535682204237 0.74335773865985699 0.74802098473143641 0.75265159102899104 0.75724605354473173 0.76180086827086901 0.76631253119961351 0.77077753832317564 0.77519238563376613 0.77955356912359552 0.78385758478487444 0.78810092860981362 0.79228009659062348 0.79639158471951466 0.80043188898869799 0.80439750539038368 0.80828492991678269 0.81209065856010532 0.8158111873125623 0.81640625 0.82005648950182408 0.8236828297090294 0.82728569412444219 0.83086550625088862 0.83442268959119448 0.83795766764818613 0.84147086392468962 0.84496270192353096 0.84843360514753641 0.85188399709953178 0.85531430128234354 0.85872494119879761 0.86211634035172002 0.86548892224393692 0.86884311037827411 0.87217932825755862 0.87549799938461526 0.87879954726227116 0.88208439539335193 0.88535296728068391 0.88860568642709292 0.89184297633540544 0.89506526050844681 0.89827296244904431 0.90146650566002273 0.90464631364420933 0.90781280990442914 0.91096641794350952 0.91410756126427528 0.91723666336955334 0.92035414776216928 0.92346043794494981 0.9265559574207205 0.92964112969230772 0.93271637826253739 0.93578212663423566 0.93883879831022865 0.94188681679334252 0.9449266055864034 0.94795858819223722 0.95098318811367011 0.95400082885352822 0.95701193391463768 0.96001692679982453 0.96301623101191502 0.96601027005373497 0.96899946742811061 0.9719842466378682 0.97496503118583355 0.97794224457483292 0.98091631030769233 0.98388765188723792 0.98685669281629584 0.98982385659769212 0.99278956673425289 0.9957542467288043 1))
+(channel red)
+(curve
+    (curve-type smooth)
+    (points 4 0 0 1 1)
+    (point-types 2 smooth smooth)
+    (n-samples 256)
+    (samples 256 0 0.0039215686274509803 0.0078431372549019607 0.011764705882352943 0.015686274509803921 0.019607843137254898 0.023529411764705879 0.027450980392156859 0.031372549019607843 0.035294117647058816 0.039215686274509803 0.043137254901960791 0.047058823529411764 0.050980392156862737 0.054901960784313725 0.058823529411764712 0.062745098039215685 0.066666666666666666 0.07058823529411766 0.07450980392156864 0.078431372549019621 0.082352941176470587 0.086274509803921567 0.090196078431372534 0.094117647058823528 0.098039215686274508 0.10196078431372547 0.10588235294117647 0.10980392156862745 0.11372549019607843 0.11764705882352938 0.1215686274509804 0.12549019607843137 0.12941176470588237 0.13333333333333336 0.13725490196078433 0.14117647058823532 0.14509803921568629 0.14901960784313723 0.15294117647058825 0.15686274509803921 0.16078431372549021 0.1647058823529412 0.16862745098039217 0.17254901960784311 0.17647058823529413 0.18039215686274507 0.18431372549019609 0.18823529411764706 0.19215686274509805 0.19607843137254902 0.20000000000000007 0.20392156862745101 0.20784313725490197 0.21176470588235291 0.21568627450980393 0.21960784313725493 0.22352941176470589 0.22745098039215686 0.23137254901960783 0.23529411764705882 0.23921568627450979 0.24313725490196075 0.24705882352941175 0.25098039215686274 0.25490196078431371 0.25882352941176473 0.26274509803921575 0.26666666666666672 0.27058823529411768 0.27450980392156865 0.27843137254901962 0.28235294117647064 0.2862745098039215 0.29019607843137252 0.29411764705882348 0.29803921568627445 0.30196078431372542 0.30588235294117649 0.30980392156862746 0.31372549019607843 0.31764705882352934 0.32156862745098053 0.32549019607843144 0.3294117647058824 0.33333333333333331 0.33725490196078434 0.3411764705882353 0.34509803921568633 0.34901960784313729 0.35294117647058826 0.35686274509803917 0.36078431372549019 0.3647058823529411 0.36862745098039224 0.37254901960784315 0.37647058823529411 0.38039215686274508 0.3843137254901961 0.38823529411764712 0.39215686274509809 0.39607843137254906 0.39999999999999997 0.40392156862745099 0.40784313725490196 0.41176470588235292 0.41568627450980383 0.41960784313725485 0.42352941176470582 0.42745098039215684 0.43137254901960786 0.43529411764705883 0.4392156862745098 0.44313725490196076 0.44705882352941184 0.45098039215686281 0.45490196078431377 0.45882352941176474 0.46274509803921571 0.46666666666666667 0.47058823529411764 0.47450980392156861 0.47843137254901957 0.48235294117647054 0.48627450980392145 0.49019607843137247 0.49411764705882355 0.49803921568627452 0.50196078431372548 0.50588235294117645 0.50980392156862742 0.51372549019607838 0.51764705882352946 0.52156862745098043 0.52549019607843139 0.52941176470588236 0.53333333333333333 0.53725490196078429 0.54117647058823526 0.54509803921568634 0.5490196078431373 0.55294117647058827 0.55686274509803924 0.5607843137254902 0.56470588235294117 0.56862745098039214 0.5725490196078431 0.57647058823529407 0.58039215686274515 0.58431372549019611 0.58823529411764708 0.59215686274509804 0.59607843137254901 0.59999999999999998 0.60392156862745094 0.60784313725490191 0.61176470588235299 0.61568627450980395 0.61960784313725492 0.62352941176470589 0.62745098039215685 0.63137254901960782 0.63529411764705879 0.63921568627450975 0.64313725490196083 0.6470588235294118 0.65098039215686287 0.65490196078431384 0.65882352941176481 0.66274509803921577 0.66666666666666663 0.6705882352941176 0.67450980392156867 0.67843137254901964 0.68235294117647061 0.68627450980392157 0.69019607843137254 0.69411764705882351 0.69803921568627447 0.70196078431372544 0.70588235294117663 0.70980392156862759 0.71372549019607845 0.71764705882352942 0.72156862745098038 0.72549019607843135 0.7294117647058822 0.73333333333333328 0.73725490196078436 0.74117647058823533 0.74509803921568629 0.74901960784313726 0.75294117647058822 0.75686274509803919 0.76078431372549016 0.76470588235294112 0.76862745098039231 0.77254901960784317 0.77647058823529425 0.78039215686274521 0.78431372549019607 0.78823529411764703 0.79215686274509811 0.79607843137254897 0.80000000000000004 0.80392156862745101 0.80784313725490198 0.81176470588235294 0.81568627450980391 0.81960784313725488 0.82352941176470584 0.82745098039215681 0.83137254901960789 0.83529411764705874 0.83921568627450982 0.84313725490196068 0.84705882352941175 0.85098039215686272 0.8549019607843138 0.85882352941176465 0.86274509803921573 0.8666666666666667 0.87058823529411766 0.87450980392156863 0.8784313725490196 0.88235294117647056 0.88627450980392164 0.8901960784313725 0.89411764705882357 0.89803921568627443 0.90196078431372551 0.90588235294117636 0.90980392156862755 0.91372549019607852 0.91764705882352937 0.92156862745098023 0.92549019607843142 0.92941176470588238 0.93333333333333335 0.93725490196078431 0.94117647058823528 0.94509803921568625 0.94901960784313721 0.95294117647058818 0.95686274509803926 0.96078431372549011 0.96470588235294119 0.96862745098039216 0.97254901960784312 0.97647058823529409 0.98039215686274506 0.98431372549019591 0.98823529411764721 0.99215686274509807 0.99607843137254914 1))
+(channel green)
+(curve
+    (curve-type smooth)
+    (points 4 0 0 1 1)
+    (point-types 2 smooth smooth)
+    (n-samples 256)
+    (samples 256 0 0.0039215686274509803 0.0078431372549019607 0.011764705882352943 0.015686274509803921 0.019607843137254898 0.023529411764705879 0.027450980392156859 0.031372549019607843 0.035294117647058816 0.039215686274509803 0.043137254901960791 0.047058823529411764 0.050980392156862737 0.054901960784313725 0.058823529411764712 0.062745098039215685 0.066666666666666666 0.07058823529411766 0.07450980392156864 0.078431372549019621 0.082352941176470587 0.086274509803921567 0.090196078431372534 0.094117647058823528 0.098039215686274508 0.10196078431372547 0.10588235294117647 0.10980392156862745 0.11372549019607843 0.11764705882352938 0.1215686274509804 0.12549019607843137 0.12941176470588237 0.13333333333333336 0.13725490196078433 0.14117647058823532 0.14509803921568629 0.14901960784313723 0.15294117647058825 0.15686274509803921 0.16078431372549021 0.1647058823529412 0.16862745098039217 0.17254901960784311 0.17647058823529413 0.18039215686274507 0.18431372549019609 0.18823529411764706 0.19215686274509805 0.19607843137254902 0.20000000000000007 0.20392156862745101 0.20784313725490197 0.21176470588235291 0.21568627450980393 0.21960784313725493 0.22352941176470589 0.22745098039215686 0.23137254901960783 0.23529411764705882 0.23921568627450979 0.24313725490196075 0.24705882352941175 0.25098039215686274 0.25490196078431371 0.25882352941176473 0.26274509803921575 0.26666666666666672 0.27058823529411768 0.27450980392156865 0.27843137254901962 0.28235294117647064 0.2862745098039215 0.29019607843137252 0.29411764705882348 0.29803921568627445 0.30196078431372542 0.30588235294117649 0.30980392156862746 0.31372549019607843 0.31764705882352934 0.32156862745098053 0.32549019607843144 0.3294117647058824 0.33333333333333331 0.33725490196078434 0.3411764705882353 0.34509803921568633 0.34901960784313729 0.35294117647058826 0.35686274509803917 0.36078431372549019 0.3647058823529411 0.36862745098039224 0.37254901960784315 0.37647058823529411 0.38039215686274508 0.3843137254901961 0.38823529411764712 0.39215686274509809 0.39607843137254906 0.39999999999999997 0.40392156862745099 0.40784313725490196 0.41176470588235292 0.41568627450980383 0.41960784313725485 0.42352941176470582 0.42745098039215684 0.43137254901960786 0.43529411764705883 0.4392156862745098 0.44313725490196076 0.44705882352941184 0.45098039215686281 0.45490196078431377 0.45882352941176474 0.46274509803921571 0.46666666666666667 0.47058823529411764 0.47450980392156861 0.47843137254901957 0.48235294117647054 0.48627450980392145 0.49019607843137247 0.49411764705882355 0.49803921568627452 0.50196078431372548 0.50588235294117645 0.50980392156862742 0.51372549019607838 0.51764705882352946 0.52156862745098043 0.52549019607843139 0.52941176470588236 0.53333333333333333 0.53725490196078429 0.54117647058823526 0.54509803921568634 0.5490196078431373 0.55294117647058827 0.55686274509803924 0.5607843137254902 0.56470588235294117 0.56862745098039214 0.5725490196078431 0.57647058823529407 0.58039215686274515 0.58431372549019611 0.58823529411764708 0.59215686274509804 0.59607843137254901 0.59999999999999998 0.60392156862745094 0.60784313725490191 0.61176470588235299 0.61568627450980395 0.61960784313725492 0.62352941176470589 0.62745098039215685 0.63137254901960782 0.63529411764705879 0.63921568627450975 0.64313725490196083 0.6470588235294118 0.65098039215686287 0.65490196078431384 0.65882352941176481 0.66274509803921577 0.66666666666666663 0.6705882352941176 0.67450980392156867 0.67843137254901964 0.68235294117647061 0.68627450980392157 0.69019607843137254 0.69411764705882351 0.69803921568627447 0.70196078431372544 0.70588235294117663 0.70980392156862759 0.71372549019607845 0.71764705882352942 0.72156862745098038 0.72549019607843135 0.7294117647058822 0.73333333333333328 0.73725490196078436 0.74117647058823533 0.74509803921568629 0.74901960784313726 0.75294117647058822 0.75686274509803919 0.76078431372549016 0.76470588235294112 0.76862745098039231 0.77254901960784317 0.77647058823529425 0.78039215686274521 0.78431372549019607 0.78823529411764703 0.79215686274509811 0.79607843137254897 0.80000000000000004 0.80392156862745101 0.80784313725490198 0.81176470588235294 0.81568627450980391 0.81960784313725488 0.82352941176470584 0.82745098039215681 0.83137254901960789 0.83529411764705874 0.83921568627450982 0.84313725490196068 0.84705882352941175 0.85098039215686272 0.8549019607843138 0.85882352941176465 0.86274509803921573 0.8666666666666667 0.87058823529411766 0.87450980392156863 0.8784313725490196 0.88235294117647056 0.88627450980392164 0.8901960784313725 0.89411764705882357 0.89803921568627443 0.90196078431372551 0.90588235294117636 0.90980392156862755 0.91372549019607852 0.91764705882352937 0.92156862745098023 0.92549019607843142 0.92941176470588238 0.93333333333333335 0.93725490196078431 0.94117647058823528 0.94509803921568625 0.94901960784313721 0.95294117647058818 0.95686274509803926 0.96078431372549011 0.96470588235294119 0.96862745098039216 0.97254901960784312 0.97647058823529409 0.98039215686274506 0.98431372549019591 0.98823529411764721 0.99215686274509807 0.99607843137254914 1))
+(channel blue)
+(curve
+    (curve-type smooth)
+    (points 4 0 0 1 1)
+    (point-types 2 smooth smooth)
+    (n-samples 256)
+    (samples 256 0 0.0039215686274509803 0.0078431372549019607 0.011764705882352943 0.015686274509803921 0.019607843137254898 0.023529411764705879 0.027450980392156859 0.031372549019607843 0.035294117647058816 0.039215686274509803 0.043137254901960791 0.047058823529411764 0.050980392156862737 0.054901960784313725 0.058823529411764712 0.062745098039215685 0.066666666666666666 0.07058823529411766 0.07450980392156864 0.078431372549019621 0.082352941176470587 0.086274509803921567 0.090196078431372534 0.094117647058823528 0.098039215686274508 0.10196078431372547 0.10588235294117647 0.10980392156862745 0.11372549019607843 0.11764705882352938 0.1215686274509804 0.12549019607843137 0.12941176470588237 0.13333333333333336 0.13725490196078433 0.14117647058823532 0.14509803921568629 0.14901960784313723 0.15294117647058825 0.15686274509803921 0.16078431372549021 0.1647058823529412 0.16862745098039217 0.17254901960784311 0.17647058823529413 0.18039215686274507 0.18431372549019609 0.18823529411764706 0.19215686274509805 0.19607843137254902 0.20000000000000007 0.20392156862745101 0.20784313725490197 0.21176470588235291 0.21568627450980393 0.21960784313725493 0.22352941176470589 0.22745098039215686 0.23137254901960783 0.23529411764705882 0.23921568627450979 0.24313725490196075 0.24705882352941175 0.25098039215686274 0.25490196078431371 0.25882352941176473 0.26274509803921575 0.26666666666666672 0.27058823529411768 0.27450980392156865 0.27843137254901962 0.28235294117647064 0.2862745098039215 0.29019607843137252 0.29411764705882348 0.29803921568627445 0.30196078431372542 0.30588235294117649 0.30980392156862746 0.31372549019607843 0.31764705882352934 0.32156862745098053 0.32549019607843144 0.3294117647058824 0.33333333333333331 0.33725490196078434 0.3411764705882353 0.34509803921568633 0.34901960784313729 0.35294117647058826 0.35686274509803917 0.36078431372549019 0.3647058823529411 0.36862745098039224 0.37254901960784315 0.37647058823529411 0.38039215686274508 0.3843137254901961 0.38823529411764712 0.39215686274509809 0.39607843137254906 0.39999999999999997 0.40392156862745099 0.40784313725490196 0.41176470588235292 0.41568627450980383 0.41960784313725485 0.42352941176470582 0.42745098039215684 0.43137254901960786 0.43529411764705883 0.4392156862745098 0.44313725490196076 0.44705882352941184 0.45098039215686281 0.45490196078431377 0.45882352941176474 0.46274509803921571 0.46666666666666667 0.47058823529411764 0.47450980392156861 0.47843137254901957 0.48235294117647054 0.48627450980392145 0.49019607843137247 0.49411764705882355 0.49803921568627452 0.50196078431372548 0.50588235294117645 0.50980392156862742 0.51372549019607838 0.51764705882352946 0.52156862745098043 0.52549019607843139 0.52941176470588236 0.53333333333333333 0.53725490196078429 0.54117647058823526 0.54509803921568634 0.5490196078431373 0.55294117647058827 0.55686274509803924 0.5607843137254902 0.56470588235294117 0.56862745098039214 0.5725490196078431 0.57647058823529407 0.58039215686274515 0.58431372549019611 0.58823529411764708 0.59215686274509804 0.59607843137254901 0.59999999999999998 0.60392156862745094 0.60784313725490191 0.61176470588235299 0.61568627450980395 0.61960784313725492 0.62352941176470589 0.62745098039215685 0.63137254901960782 0.63529411764705879 0.63921568627450975 0.64313725490196083 0.6470588235294118 0.65098039215686287 0.65490196078431384 0.65882352941176481 0.66274509803921577 0.66666666666666663 0.6705882352941176 0.67450980392156867 0.67843137254901964 0.68235294117647061 0.68627450980392157 0.69019607843137254 0.69411764705882351 0.69803921568627447 0.70196078431372544 0.70588235294117663 0.70980392156862759 0.71372549019607845 0.71764705882352942 0.72156862745098038 0.72549019607843135 0.7294117647058822 0.73333333333333328 0.73725490196078436 0.74117647058823533 0.74509803921568629 0.74901960784313726 0.75294117647058822 0.75686274509803919 0.76078431372549016 0.76470588235294112 0.76862745098039231 0.77254901960784317 0.77647058823529425 0.78039215686274521 0.78431372549019607 0.78823529411764703 0.79215686274509811 0.79607843137254897 0.80000000000000004 0.80392156862745101 0.80784313725490198 0.81176470588235294 0.81568627450980391 0.81960784313725488 0.82352941176470584 0.82745098039215681 0.83137254901960789 0.83529411764705874 0.83921568627450982 0.84313725490196068 0.84705882352941175 0.85098039215686272 0.8549019607843138 0.85882352941176465 0.86274509803921573 0.8666666666666667 0.87058823529411766 0.87450980392156863 0.8784313725490196 0.88235294117647056 0.88627450980392164 0.8901960784313725 0.89411764705882357 0.89803921568627443 0.90196078431372551 0.90588235294117636 0.90980392156862755 0.91372549019607852 0.91764705882352937 0.92156862745098023 0.92549019607843142 0.92941176470588238 0.93333333333333335 0.93725490196078431 0.94117647058823528 0.94509803921568625 0.94901960784313721 0.95294117647058818 0.95686274509803926 0.96078431372549011 0.96470588235294119 0.96862745098039216 0.97254901960784312 0.97647058823529409 0.98039215686274506 0.98431372549019591 0.98823529411764721 0.99215686274509807 0.99607843137254914 1))
+(channel alpha)
+(curve
+    (curve-type smooth)
+    (points 4 0 0 1 1)
+    (point-types 2 smooth smooth)
+    (n-samples 256)
+    (samples 256 0 0.0039215686274509803 0.0078431372549019607 0.011764705882352943 0.015686274509803921 0.019607843137254898 0.023529411764705879 0.027450980392156859 0.031372549019607843 0.035294117647058816 0.039215686274509803 0.043137254901960791 0.047058823529411764 0.050980392156862737 0.054901960784313725 0.058823529411764712 0.062745098039215685 0.066666666666666666 0.07058823529411766 0.07450980392156864 0.078431372549019621 0.082352941176470587 0.086274509803921567 0.090196078431372534 0.094117647058823528 0.098039215686274508 0.10196078431372547 0.10588235294117647 0.10980392156862745 0.11372549019607843 0.11764705882352938 0.1215686274509804 0.12549019607843137 0.12941176470588237 0.13333333333333336 0.13725490196078433 0.14117647058823532 0.14509803921568629 0.14901960784313723 0.15294117647058825 0.15686274509803921 0.16078431372549021 0.1647058823529412 0.16862745098039217 0.17254901960784311 0.17647058823529413 0.18039215686274507 0.18431372549019609 0.18823529411764706 0.19215686274509805 0.19607843137254902 0.20000000000000007 0.20392156862745101 0.20784313725490197 0.21176470588235291 0.21568627450980393 0.21960784313725493 0.22352941176470589 0.22745098039215686 0.23137254901960783 0.23529411764705882 0.23921568627450979 0.24313725490196075 0.24705882352941175 0.25098039215686274 0.25490196078431371 0.25882352941176473 0.26274509803921575 0.26666666666666672 0.27058823529411768 0.27450980392156865 0.27843137254901962 0.28235294117647064 0.2862745098039215 0.29019607843137252 0.29411764705882348 0.29803921568627445 0.30196078431372542 0.30588235294117649 0.30980392156862746 0.31372549019607843 0.31764705882352934 0.32156862745098053 0.32549019607843144 0.3294117647058824 0.33333333333333331 0.33725490196078434 0.3411764705882353 0.34509803921568633 0.34901960784313729 0.35294117647058826 0.35686274509803917 0.36078431372549019 0.3647058823529411 0.36862745098039224 0.37254901960784315 0.37647058823529411 0.38039215686274508 0.3843137254901961 0.38823529411764712 0.39215686274509809 0.39607843137254906 0.39999999999999997 0.40392156862745099 0.40784313725490196 0.41176470588235292 0.41568627450980383 0.41960784313725485 0.42352941176470582 0.42745098039215684 0.43137254901960786 0.43529411764705883 0.4392156862745098 0.44313725490196076 0.44705882352941184 0.45098039215686281 0.45490196078431377 0.45882352941176474 0.46274509803921571 0.46666666666666667 0.47058823529411764 0.47450980392156861 0.47843137254901957 0.48235294117647054 0.48627450980392145 0.49019607843137247 0.49411764705882355 0.49803921568627452 0.50196078431372548 0.50588235294117645 0.50980392156862742 0.51372549019607838 0.51764705882352946 0.52156862745098043 0.52549019607843139 0.52941176470588236 0.53333333333333333 0.53725490196078429 0.54117647058823526 0.54509803921568634 0.5490196078431373 0.55294117647058827 0.55686274509803924 0.5607843137254902 0.56470588235294117 0.56862745098039214 0.5725490196078431 0.57647058823529407 0.58039215686274515 0.58431372549019611 0.58823529411764708 0.59215686274509804 0.59607843137254901 0.59999999999999998 0.60392156862745094 0.60784313725490191 0.61176470588235299 0.61568627450980395 0.61960784313725492 0.62352941176470589 0.62745098039215685 0.63137254901960782 0.63529411764705879 0.63921568627450975 0.64313725490196083 0.6470588235294118 0.65098039215686287 0.65490196078431384 0.65882352941176481 0.66274509803921577 0.66666666666666663 0.6705882352941176 0.67450980392156867 0.67843137254901964 0.68235294117647061 0.68627450980392157 0.69019607843137254 0.69411764705882351 0.69803921568627447 0.70196078431372544 0.70588235294117663 0.70980392156862759 0.71372549019607845 0.71764705882352942 0.72156862745098038 0.72549019607843135 0.7294117647058822 0.73333333333333328 0.73725490196078436 0.74117647058823533 0.74509803921568629 0.74901960784313726 0.75294117647058822 0.75686274509803919 0.76078431372549016 0.76470588235294112 0.76862745098039231 0.77254901960784317 0.77647058823529425 0.78039215686274521 0.78431372549019607 0.78823529411764703 0.79215686274509811 0.79607843137254897 0.80000000000000004 0.80392156862745101 0.80784313725490198 0.81176470588235294 0.81568627450980391 0.81960784313725488 0.82352941176470584 0.82745098039215681 0.83137254901960789 0.83529411764705874 0.83921568627450982 0.84313725490196068 0.84705882352941175 0.85098039215686272 0.8549019607843138 0.85882352941176465 0.86274509803921573 0.8666666666666667 0.87058823529411766 0.87450980392156863 0.8784313725490196 0.88235294117647056 0.88627450980392164 0.8901960784313725 0.89411764705882357 0.89803921568627443 0.90196078431372551 0.90588235294117636 0.90980392156862755 0.91372549019607852 0.91764705882352937 0.92156862745098023 0.92549019607843142 0.92941176470588238 0.93333333333333335 0.93725490196078431 0.94117647058823528 0.94509803921568625 0.94901960784313721 0.95294117647058818 0.95686274509803926 0.96078431372549011 0.96470588235294119 0.96862745098039216 0.97254901960784312 0.97647058823529409 0.98039215686274506 0.98431372549019591 0.98823529411764721 0.99215686274509807 0.99607843137254914 1))
+
+# end of 'Curves' settings</code></pre>
+<hr>
+<p>Python code (from <a href="https://github.com/sinf/gimp-curves-to-ffmpeg/blob/main/gimp-to-ffmpeg.py">https://github.com/sinf/gimp-curves-to-ffmpeg/blob/main/gimp-to-ffmpeg.py</a>):</p>
+<pre><code class="fenced-code-block language-python"><span class="token keyword">import</span> re
+<span class="token keyword">from</span> argparse <span class="token keyword">import</span> ArgumentParser
+
+<span class="token keyword">def</span> <span class="token function">read_curves</span><span class="token punctuation">(</span>f<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    points <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword">for</span> line <span class="token keyword">in</span> f<span class="token punctuation">.</span>readlines<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        line<span class="token operator">=</span>line<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> line<span class="token punctuation">.</span>startswith<span class="token punctuation">(</span><span class="token string">"(channel "</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            ch<span class="token operator">=</span>re<span class="token punctuation">.</span><span class="token keyword">match</span><span class="token punctuation">(</span><span class="token string">r'\(channel (\w+)\)'</span><span class="token punctuation">,</span> line<span class="token punctuation">)</span><span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token keyword">elif</span> line<span class="token punctuation">.</span>startswith<span class="token punctuation">(</span><span class="token string">"(points "</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            co <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token builtin">float</span><span class="token punctuation">(</span>m<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">for</span> m <span class="token keyword">in</span> re<span class="token punctuation">.</span>finditer<span class="token punctuation">(</span><span class="token string">r'\b([0-9.]+)\b'</span><span class="token punctuation">,</span> line<span class="token punctuation">)</span><span class="token punctuation">]</span>
+            co <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">zip</span><span class="token punctuation">(</span>co<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> co<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            points<span class="token punctuation">[</span>ch<span class="token punctuation">]</span> <span class="token operator">=</span> co
+    <span class="token keyword">return</span> points
+
+<span class="token keyword">def</span> <span class="token function">ffmpeg_points</span><span class="token punctuation">(</span>points<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token string">' '</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token string">'{0}/{1}'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">)</span> <span class="token keyword">for</span> x<span class="token punctuation">,</span>y <span class="token keyword">in</span> points<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    ap <span class="token operator">=</span> ArgumentParser<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    ap<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"input"</span><span class="token punctuation">)</span>
+    ap<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"-q"</span><span class="token punctuation">,</span> <span class="token string">"--quote"</span><span class="token punctuation">,</span> action<span class="token operator">=</span><span class="token string">'store_true'</span><span class="token punctuation">)</span>
+    a <span class="token operator">=</span> ap<span class="token punctuation">.</span>parse_args<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span><span class="token builtin">input</span><span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+        points <span class="token operator">=</span> read_curves<span class="token punctuation">(</span>f<span class="token punctuation">)</span>
+    ffp<span class="token operator">=</span><span class="token punctuation">[</span>
+        ffmpeg_points<span class="token punctuation">(</span>points<span class="token punctuation">[</span><span class="token string">'value'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        ffmpeg_points<span class="token punctuation">(</span>points<span class="token punctuation">[</span><span class="token string">'red'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        ffmpeg_points<span class="token punctuation">(</span>points<span class="token punctuation">[</span><span class="token string">'green'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        ffmpeg_points<span class="token punctuation">(</span>points<span class="token punctuation">[</span><span class="token string">'blue'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">]</span>
+    <span class="token keyword">if</span> a<span class="token punctuation">.</span>quote<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"curves=m='{0}':r='{1}':g='{2}':b='{3}'"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token operator">*</span>ffp<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"curves=m={0}:r={1}:g={2}:b={3}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token operator">*</span>ffp<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+main<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<hr>
+</article>
+</body>
+</html>

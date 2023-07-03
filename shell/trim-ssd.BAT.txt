@@ -1,0 +1,13 @@
+@ECHO OFF
+REM BRAVE: manually trim ssd windows 10
+REM https://www.tenforums.com/tutorials/8933-optimize-defrag-drives-windows-10-a.html
+REM You can also drop this file into a folder and add that folder
+REM to the system PATH for convenience. E.g., C:\trim
+REM WINDOWS+r -> systempropertiesadvanced -> Environment Variables ->
+REM -> System Variables -> Path -> Edit -> New
+@ECHO ON
+REM Substitute C: in the command with the specific drive letter
+REM according to your requirement.
+defrag C: /O
+REM Or (for all drives)
+REM defrag /C /O

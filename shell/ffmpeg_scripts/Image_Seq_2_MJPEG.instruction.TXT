@@ -1,0 +1,21 @@
+=======================================================
+ffmpeg image sequence to movie
+http://hamelot.io/visualization/using-ffmpeg-to-convert-a-set-of-images-into-a-video/
+
+--------------
+Title15583.bmp
+Title%05d.bmp
+Up to 5 decimal places after 'Title'.
+--------------
+
+adding audio to a movie ffmpeg
+https://stackoverflow.com/questions/11779490/how-to-add-a-new-audio-not-mixing-into-a-video-using-ffmpeg
+=======================================================
+
+set path="C:\Program Files\ffmpeg-20160522-git-566be4f-win64-shared\bin"; %path%;
+
+CD "M:\Adobe\2018.01.09-SCI\Rendered\Title"
+
+ffmpeg -r 50 -f image2 -i Title%05d.bmp -c:v mjpeg -q:v 0 -crf 0 -s 1024x576 -aspect 16:9 movie.AVI
+
+ffmpeg -i movie.AVI -i Title.aac -c:v copy -c:a pcm_s16le -shortest output.AVI

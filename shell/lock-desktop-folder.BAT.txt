@@ -1,0 +1,26 @@
+@ECHO OFF
+REM *****************************************
+REM Put this WINBAT file in a location where you have the proper write permission,
+REM for example, a pen drive.
+REM Change 'YOUR_USERNAME' & 'REGISTERED_USER_S_EMAIL_ADDRESS' to
+REM the actual user account name and the Outlook email address used for registering
+REM the computer with Microsoft.
+REM *****************************************
+REM https://stackoverflow.com/questions/45410090/windows-command-line-change-folder-permission
+REM https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753525(v=ws.10)?redirectedfrom=MSDN
+REM Examples:
+REM cd Desktop\
+REM mkdir permission
+REM icacls permission\
+REM icacls %USERPROFILE%\Desktop\permission\ /save permission.aclfile /t
+REM icacls %USERPROFILE%\Desktop\permission\ /restore permission.aclfile
+REM icacls permission\ /deny YOUR_USERNAME:(RC,WDAC,WO,AS,MA,WD,AD,REA,WEA,RA,WA)
+REM icacls permission\ /deny Administrators:(RC,WDAC,WO,AS,MA,WD,AD,REA,WEA,RA,WA)
+REM icacls permission\ /deny REGISTERED_USER_S_EMAIL_ADDRESS@outlook.com:(RC,WDAC,WO,AS,MA,WD,AD,REA,WEA,RA,WA)
+@ECHO ON
+
+icacls %USERPROFILE%\Desktop\ /save desktop.permission.aclfile /t
+icacls %USERPROFILE%\Desktop\ /deny YOUR_USERNAME:(RC,WDAC,WO,AS,MA,WD,AD,REA,WEA,RA,WA)
+icacls %USERPROFILE%\Desktop\ /deny REGISTERED_USER_S_EMAIL_ADDRESS@outlook.com:(RC,WDAC,WO,AS,MA,WD,AD,REA,WEA,RA,WA)
+
+cmd

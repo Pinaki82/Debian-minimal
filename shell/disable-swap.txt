@@ -1,0 +1,2 @@
+Disable Swap Permanently.
+Ref: https://www.tecmint.com/disable-swap-partition-in-centos-ubuntu/

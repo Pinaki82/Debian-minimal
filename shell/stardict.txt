@@ -1,0 +1,117 @@
+StarDict Dictionary Reader Installation:
+NOTE: You will have to disable some Chinese dictionaries bundled into the application.
+
+-----------------------------------------------------------
+*-Ubuntu:
+Install StarDict.
+sudo apt install stardict
+
+Go to the 'Downloads' directory.
+cd Downloads/
+
+List all folders and files in 'Downloads'.
+ls
+
+StarDict Dictionary Database Archives as examples:
+GNU Collaborative International Dictionary of English: http://tovotu.de/data/stardict/gcide.zip
+CIA World Factbook 2014: http://tovotu.de/data/stardict/factbook.zip
+
+Download dictionary DB files using curl.
+curl -o gcide.zip http://tovotu.de/data/stardict/gcide.zip
+curl -o factbook.zip http://tovotu.de/data/stardict/factbook.zip
+
+Unzip the archives.
+unzip gcide.zip 
+unzip factbook.zip 
+
+List all folders and files again.
+ls
+
+At startup, StarDict looks for dictionary database
+files in /usr/share/stardict/dic/ on Linux.
+On MS Windows, the folder is "%ProgramFiles(x86)%\StarDict\dic".
+
+So, move all the extracted archives to /usr/share/stardict/dic/,
+the mv command will move the extracted folders to /usr/share/stardict/dic/, and
+the -v flag means the move (mv) command will produce
+a detailed report after completion.
+
+sudo mv -v gcide/ /usr/share/stardict/dic/
+sudo mv -v factbook/ /usr/share/stardict/dic/
+
+See the contents of the 'dic' folder visually from your GUI file manager.
+Here, namely, 'thunar' (in XFCE).
+sudo thunar /usr/share/stardict/dic
+
+Enter /usr/share/stardict/dic from the terminal emulator.
+cd /usr/share/stardict/dic
+
+Go to gcide/ and factbook/ to change permission parameters.
+cd gcide/
+chmod +x *
+cd ../
+cd factbook/
+chmod +x *
+cd Downloads/
+
+List files and folders in 'Downloads', if needed.
+ls
+Go to your HOME directory if needed, and then type 'exit'.
+cd ~/
+exit
+
+
+Uninstall StarDict:
+
+sudo apt purge --auto-remove stardict
+sudo rm -rf /usr/share/stardict
+rm -rf ~/.config/stardict
+
+Ref: https://www.ubuntubuzz.com/2018/05/ubuntu-1804-install-stardict-and-add-dictionary-files.html
+
+'dictconv' is a dictionary DB conversion tool.
+Install dictconv.
+sudo apt install dictconv
+Usage (Babylon BGL to StarDict IFO):
+dictconv -o output.ifo input.BGL
+Uninstall dictconv.
+sudo apt purge --auto-remove dictconv
+
+Remember that the converted dictionaries will
+be of inferior quality, cumbersome and difficult to read.
+
+-----------------------------------------------------------
+MS Windows:
+Download the installer.
+curl -o stardict-3.0.1.2.exe https://udomain.dl.sourceforge.net/project/stardict-4/3.0.1.2/stardict-3.0.1.2.exe
+
+StarDict Official Website: http://www.huzheng.org/stardict/
+
+Run CMD with Admin Privilege.
+WINDOWS + r -> cmd -> CTRL + SHIFT + ENTER
+
+--------------------------
+mklink /Option Link Target
+Or,
+mklink /Option Virtual Actual
+
+Options:
+/J -> hard link pointing to a directory (directory junction)
+--------------------------
+
+Backup everything in "%ProgramFiles(x86)%\StarDict\dic"
+Delete the folder "%ProgramFiles(x86)%\StarDict\dic"
+
+Create the symlink.
+mklink /J "%ProgramFiles(x86)%\StarDict\dic" "Q:\stardict_files"
+
+Place extracted dictionary DB archives in "Q:\stardict_files".
+
+Dictionary DB files as examples:
+GNU Collaborative International Dictionary of English: http://tovotu.de/data/stardict/gcide.zip
+CIA World Factbook 2014: http://tovotu.de/data/stardict/factbook.zip
+
+Download dictionary DB files using curl.
+curl -o gcide.zip http://tovotu.de/data/stardict/gcide.zip
+curl -o factbook.zip http://tovotu.de/data/stardict/factbook.zip
+Extract using 7-Zip.

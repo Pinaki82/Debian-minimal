@@ -1,0 +1,160 @@
+Algebra
+
+Tenth
+
+1)
+\left( a+b \right)^{2}=a^2+2ab+b^2
+
+2)
+\left( a-b \right)^{2}=a^2-2ab+b^2
+
+3)
+a^{2}+b^2=\left( a+b \right)^{2}-2ab
+
+4)
+a^{2}+b^2=\left( a-b \right)^{2}+2ab
+
+5)
+2\left( a^{2}+b^2 \right)=\left( a+b \right)^{2}+\left( a-b \right)^{2}
+
+6)
+4ab=\left( a+b \right)^{2}-\left( a-b \right)^{2}
+
+7)
+ab=\left( \frac{ a+b}{2} \right)^{2}-\left( \frac{ a-b}{2} \right)^{2}
+
+8)
+\left( a + b \right)^{2}=\left( a - b \right)^{2}+4ab
+
+9)
+\left( a - b \right)^{2}=\left( a + b \right)^{2}-4ab
+
+10)
+a^2-b^2=\left( a+b \right)\left( a-b \right)
+
+11)(i)
+\left( a+b+c \right)^2=a^2+b^2+c^2+2ab+2bc+2ca
+
+11)(ii)
+a^2+b^2+c^2=\left( a+b+c \right)^2-2\left( ab+bc+ca \right)
+
+12)
+\begin{align*} 
+\left(a+b\right)^3 &  =a^3+b^3+3ab\left( a+b \right) \\
+  & \text{ General+Determination of Value } \\
+  & =a^3+3a^2b+3ab^2+b^3 \\
+  & \text{ General } \\
+\end{align*}
+
+13)
+\begin{align*} 
+\left(a-b\right)^3 &  =a^3-b^3-3ab\left( a-b \right) \\
+  & \text{ General+Determination of Value } \\
+  & =a^3-3a^2b-3ab^2-b^3 \\
+  & \text{ General } \\
+\end{align*}
+
+14)
+\begin{align*} 
+a^3+b^3 &  =\left( a+b \right)^3-3ab\left( a+b \right) \\
+  & \text{ General+Determination of Value } \\
+  & =\left( a+b \right)\left( a^2-ab+b^2 \right) \\
+  & \text{ General } \\
+\end{align*}
+
+15)
+\begin{align*} 
+a^3-b^3 &  =\left( a-b \right)^3+3ab\left( a-b \right) \\
+  & \text{ General+Determination of Value } \\
+  & =\left( a-b \right)\left( a^2+ab+b^2 \right) \\
+  & \text{ General } \\
+\end{align*}
+
+16)
+\begin{*align} 
+a^3+b^3+c^3-3abc \\
+  &  =(a+b+c)\left( a^2+b^2+c^2-ab-bc-ca \right) \\
+  & =\frac{1}{2}\left( a+b+c \right)\left\{ \left( a-b \right)^2+\left( b-c \right)^2+\left( c-a \right)^2 \right\}
+\end{*align}
+
+
+17)
+\begin{*align} 
+\left( a+b+c \right)^3 \\
+  &  =a^{3}+b^{3}+c^{3}+3\left( a+b \right)\left( b+c \right)\left( c+a \right)
+\end{*align}
+
+18)
+\begin{*align}
+2b^2c^2+2c^2a^2+2a^2b^2-a^4-b^4-c^4 \\
+  &  =\left( a+b+c \right)\left( b+c-a \right)\left( c+a-b \right)\left( a+b-c \right)
+\end{*align}
+
+
+19)
+\begin{*align}
+a^2\left( b-c \right)+b^2\left( c-a \right)+c^2\left( a-b \right) \\
+  & =-\left( b-c \right)\left( c-a \right)\left( a-b \right)
+\end{*align}
+
+
+20)
+\begin{*align}
+ab\left( a-b \right)+bc\left( b-c \right)+ca\left( c-a \right) \\
+  & =-\left( a-b \right)\left( b-c \right)\left( c-a \right)
+\end{*align}
+
+21)
+\begin{*align}
+bc\left( b+c \right)+ca\left( c+a \right)+ab\left( a+b \right)+3abc \\
+  & =\left( a+b+c \right)\left( ab+bc+ca \right)
+\end{*align}
+
+22)
+\begin{*align}
+a^2\left( b+c \right)+b^2\left( c+a \right)+c^2\left( a+b \right)+3abc \\
+  & =\left( a+b+c \right)\left( ab+bc+ca \right)
+\end{*align}
+
+23)
+\begin{*align}
+a^2\left( b+c \right)+b^2\left( c+a \right)+c^2\left( a+b \right)+2abc \\
+  & =\left( b+c \right)\left( c+a \right)\left( a+b \right)
+\end{*align}
+
+
+24)
+\begin{*align}
+bc\left( b+c \right)+ca\left( c+a \right)+ab\left( a+b \right)+2abc \\
+  & =\left( b+c \right)\left( c+a \right)\left( a+b \right)
+\end{*align}
+
+
+25)
+\begin{*align}
+\left( b-c \right)^3+\left( c-a \right)^3+\left( a-b \right)^3 \\
+  & =3\left( b-c \right)\left( c-a \right)\left( a-b \right)
+\end{*align}
+
+
+26)
+\left( x+a \right)\left( x+b \right)=x^2+\left( a+b \right)x+ab
+
+
+
+
+
+
+
+
+
+
+
+================================================================================
+align right latex equation
+https://www.sharelatex.com/learn/Aligning_equations_with_amsmath
+================================================================================
+
+
+
+

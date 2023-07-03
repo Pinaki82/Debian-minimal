@@ -1,0 +1,56 @@
+@ECHO OFF
+REM Clean up the System Installation Drive, usually the C:\ Drive.
+REM https://www.nextofwindows.com/running-disk-cleanup-tool-in-command-line-in-windows-10
+REM -----------------------
+REM /AUTOCLEAN -> Start the clean-up operation immediately.
+REM ------------------------
+REM /VERYLOWDISK -> Instruct the disc cleanup utility (cleanmgr.exe) to perform
+REM additional cleanup as if the drive was running low on disk space.
+REM Plus, launch the operation immediately,
+REM unlike what it does with the command /LOWDISK.
+REM When the /VERYLOWDISK or the /LOWDISK flag is used,
+REM the Disk Cleanup tool ticks all checkboxes.
+REM ------------------------
+REM /D -> Specify the drive to be cleaned.  In  theis case, the C: Drive. c
+REM You can perform disc cleanup by R-Clicking on the drive.
+REM Double-clicking on a DOSBATCH file that involves
+REM minimum user interactions is a time saver.
+REM
+REM Run c-cleanup.BAT
+REM Find it in the folder shell/c-cleanup.BAT.txt
+REM Rename the file before using it.
+REM Optionally, you can create a folder somewhere
+REM on your system drive and add that folder
+REM to the System Path for ease of access.
+REM E.g., C:\system_cleanup
+REM
+REM WINDOWS + r -> systempropertiesadvanced ->
+REM -> Environment Variables ->
+REM -> System Variables -> Path -> Edit -> New
+REM Add
+REM C:\system_cleanup
+REM
+REM Alternative Method:
+REM
+REM Open CMD in Admin mode:
+REM 1. Windows Key + r (Run Prompt)
+REM 2. Type cmd
+REM 3. CTRL+SHIFT+ENTER
+REM rundll32.exe sysdm.cpl,EditEnvironmentVariables
+REM Or,
+REM rundll32.exe shell32.dll,Control_RunDLL sysdm.cpl,,3
+REM
+REM https://appuals.com/how-to-edit-environment-variables-in-windows-10/
+REM https://www.autohotkey.com/board/topic/68086-open-the-environment-variable-editing-window/
+REM
+REM Environment Variables ->
+REM -> System Variables -> Path -> Edit -> New
+REM Add
+REM C:\system_cleanup
+REM
+REM Run,
+REM c-cleanup.BAT
+REM
+@ECHO ON
+
+cleanmgr.exe /VERYLOWDISK /AUTOCLEAN /D c

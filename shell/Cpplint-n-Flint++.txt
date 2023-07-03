@@ -1,0 +1,14 @@
+https://github.com/JossWhittle/FlintPlusPlus
+
+Xubuntu:
+pipx install cpplint
+
+Windows:
+pip install cpplint
+
+https://pypi.org/project/cpplint/
+
+Create a symbolic link:
+sudo ln -s /home/xxxxxxxx/FlintPlusPlus-master/bin/deb64/flint++ /usr/bin/flint++
+
+Ref: https://github.com/mcandre/linters
