@@ -183,3 +183,82 @@ sudo cp -r PRO-dark-XFCE-4.14/ /usr/share/themes/PRO-dark-XFCE-4.14
 sudo thunar /usr/share/themes
 sudo chmod -R 755 /usr/share/themes/PRO-dark-XFCE-4.14
 
+Add Wisker Menu and delete 'Applications Menu' (from the extreme left):
+
+Right-click on the Panel (found on the top of the screen),
+Panel Preferences -> Items -> Add -> Whisker Menu
+                           -> Delete -> Window Buttons
+                           -> Add -> Weather Update
+
+Set the SUPER (WINDOWS) Key to open Whisker Menu:
+
+Settings -> Keyboard -> Application Shortcuts - Add
+/usr/bin/xfce4-popup-whiskermenu
+
+Right-click on the Clock -> Properties -> Select a Clock/Date Format
+
+Open Thunar File Manager.
+Edit -> Configure custom actions...-> Add (+)
+
+Name: Kitty Here
+Description: Kitty Terminal Emulator in this Directory Tree
+Submenu:
+Command: kitty --directory %f
+Appearance Conditions TAB:
+File Pattern: *
+Range (min-max):
+Appears if selection contains:
+Directories ** (CHECK)
+
+Edit -> Configure custom actions...-> Add (+)
+
+Name: Sakura TE Here
+Description: Open Sakura Terminal Emulator Here
+Submenu:
+Command: sakura %f
+Appearance Conditions TAB:
+File Pattern: *
+Range (min-max):
+Appears if selection contains:
+Directories ** (CHECK)
+
+Edit -> Configure custom actions...-> Add (+)
+
+Name: GITK
+Description: Open GITK in this folder
+Submenu:
+Command: gitk %f
+Appearance Conditions TAB:
+File Pattern: *
+Range (min-max):
+Appears if selection contains:
+Directories ** (CHECK)
+
+Find the XFCE Dock at the bottom of the screen.
+Display TAB -> Measurements -> Automatically increase the length (CHECK)
+Items TAB -> Add (+) -> Window Buttons
+Configure Window Buttons -> Appearance -> UNCHECK 'Show button labels'
+              -> Behaviour -> CHECK 'Group windows by application'
+
+Settings -> Appearance -> Style -> PRO-dark-XFCE-4.14
+                          Turn on 'Set matching Xfwm4 theme if there is one'
+                       -> Icons -> Papirus-Dark
+
+Window Manager -> Style - > PRO-dark-XFCE-4.14
+
+Settings -> Settings Editor -> xfwm4 -> button_layout -> CMHS|O [Close, Maximise, Minimise, in that order]
+                            -> xsettings -> FontName -> Sans 9
+
+Add an 'App Finder' using Rofi:
+
+yes | sudo apt install rofi
+# Settings -> Keyboard -> Application Shortcut -> Add
+# rofi -combi-modi window,drun,ssh -theme solarized -font "hack 10" -show combi -icon -theme "papyrus" -show-icons
+# SUPER (WINDOWS) + SPACE
+
+Your desktop should get an exquisite look at this point.
+
+Install some Command-line tools.
+
+yes | sudo apt install neofetch
+yes | sudo apt install htop
