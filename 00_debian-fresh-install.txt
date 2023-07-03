@@ -1,0 +1,88 @@
+Programs to Create Bootable USB Drives:
+https://rufus.ie/en/ (Recommended for Windows users)
+https://etcher.balena.io/
+
+Debian: https://www.debian.org/
+
+Firmware:
+
+https://cdimage.debian.org/images/unofficial/non-free/firmware/
+
+Download (Recommended):
+https://www.debian.org/download
+debian-xx.x.x-amd64-netinst.iso
+
+Debian Live Images:
+https://unix.stackexchange.com/questions/307251/is-there-a-try-debian-without-install-option
+https://www.debian.org/CD/live/
+
+Debian-12-bookworm firmware:
+https://cdimage.debian.org/images/unofficial/non-free/firmware/bookworm/12.0.0/
+File: firmware.zip
+
+A Basic Guide:
+https://phoenixnap.com/kb/how-to-install-debian-10-buster
+
+Troubleshoot Blank Screen after crossing the GRUB Menu section:
+https://forums.debian.net/viewtopic.php?t=63844
+
+Press 'e' when the GRUB appears.
+Find the line containing 'ro quiet'.
+Add the following commands to the end of the line,
+splash nomodeset
+CTRL+x [NOTE: On VirtualBox, use the Soft Keyboard from the menu bar.]
+
+Once you enter the desktop:
+Add the current user to sudoers:
+
+su
+sudo su root
+sudo nano /etc/sudoers
+
+Find the section:
+#User privilege specification
+root  ALL=(ALL:ALL) ALL
+Then, add your username there as described below.
+
+-------------------------------------
+#User privilege specification
+root  ALL=(ALL:ALL) ALL
+yourusername ALL=(ALL: ALL) ALL
+-------------------------------------
+
+Reboot the system.
+
+sudo reboot now
+
+Add the current user to sudoers again by doing:
+
+sudo usermod -aG sudo $(whoami)
+
+Edit the GRUB Bootloader:
+https://unix.stackexchange.com/questions/538562/how-do-i-edit-grub-cfg-and-save-it
+
+sudo nano /etc/default/grub
+
+Find the line containing 'ro quiet'
+Add the following in the same line
+splash nomodeset
+
+sudo update-grub
+sudo update-grub2
+
+Hint: You are currently not seeing messages from other users and the system.
+      Users in groups 'adm', 'systemd-journal' can see all messages.
+      Pass -q to turn off this notice.
+https://serverfault.com/questions/717725/journalctl-access-for-non-root-users
+
+sudo usermod -a -G systemd-journal $(whoami)
+sudo reboot now
+
+Update the system:
+
+yes | sudo apt update && sudo apt upgrade
+
+
+Install basic packages:
+
+Run the BASH Script 'debian_essential.sh' first.
