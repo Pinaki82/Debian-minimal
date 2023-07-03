@@ -1,0 +1,93 @@
+# custom entry
+export PATH="$HOME/.local/bin/:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # #
+# https://linuxize.com/post/how-to-create-bash-aliases/
+# Aliases
+# alias alias_name="command_to_run"
+
+# Update #NOTE: uncomment the line below in .bashrc
+# Update using 'apt'.
+alias upda="sh ~/shell/000update-n-clean-automated.sh"
+# Update using 'nala'.
+alias updn="sh ~/shell/000update-n-clean-automated-nala.sh"
+# Print my public IP #NOTE: uncomment the line below in .bashrc
+alias myip='curl ipinfo.io/ip'
+
+# save and close the file. Make the aliases available
+# in your current session by typing:
+# source ~/.bashrc
+# in the terminal
+
+# From now on, you will be able to update the system by typing
+# 'upd' (of course, without the quotes) in the terminal
+# # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+# SSD TRIM
+alias trim="sh ~/shell/ssd_trim.sh"
+# # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+# Stop 'appimagelaunche' background service.
+alias appimg='pkill appimagelaunche'
+# # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+# iBus
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+
+# Bitwarden Password Manager to the search path
+# mkdir $HOME/.bw
+# Put 'bw' in that folder
+# chmod +x bw
+# source ~/.bash_aliases
+export PATH="$HOME/.bw/:$PATH"
+
+# Weather: Type 'weather' to
+#    see the weather report in a
+#    terminal emulator.
+alias weather='curl wttr.in'
+
+# Arduino-CLI
+export PATH="$HOME/bin/:$PATH"
+# arduino-cli completion bash > arduino-cli.sh
+#source ~/bin/arduino-cli.sh
+# avrdude (for uploading HEX files to boards)
+# ln -s ~/.arduino15/packages/arduino/tools/avrdude/6.3.0-arduino17/bin/avrdude ~/.local/bin/avrdude
+export PATH="$HOME/.arduino15/packages/arduino/tools/avrdude/6.3.0-arduino17/bin/:$PATH"
+
+# PlatformIO Core CLI
+# ln -s ~/.platformio/penv/bin/platformio ~/.local/bin/platformio
+# ln -s ~/.platformio/penv/bin/pio ~/.local/bin/pio
+# ln -s ~/.platformio/penv/bin/piodebuggdb ~/.local/bin/piodebuggdb
+export PATH="$HOME/.platformio/penv/bin/:$PATH"
+alias py-chatgpt='python3 $HOME/.local/bin/py-chatgpt.py'
+
+# --------------------- Type SSH Passphrase only once per boot session ---------
+env=~/.ssh/agent.env
+
+agent_load_env () { test -f "$env" && . "$env" >| /dev/null ; }
+
+agent_start () {
+    (umask 077; ssh-agent >| "$env")
+    . "$env" >| /dev/null ; }
+
+agent_load_env
+
+# agent_run_state: 0=agent running w/ key; 1=agent w/o key; 2= agent not running
+agent_run_state=$(ssh-add -l >| /dev/null 2>&1; echo $?)
+
+if [ ! "$SSH_AUTH_SOCK" ] || [ $agent_run_state = 2 ]; then
+    agent_start
+    ssh-add
+elif [ "$SSH_AUTH_SOCK" ] && [ $agent_run_state = 1 ]; then
+    ssh-add
+fi
+
+unset env
+# ------------------------------------------------------------------------------
+
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus

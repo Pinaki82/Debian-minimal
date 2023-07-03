@@ -1,0 +1,6 @@
+export PATH="$HOME/.local/bin/:$PATH"
+export GPG_TTY=$(tty)
+. "$HOME/.cargo/env"
+~/shell/ssd_trim.sh
+
+export GPG_TTY=$(tty)

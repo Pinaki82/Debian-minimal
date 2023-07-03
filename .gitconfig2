@@ -1,0 +1,26 @@
+[user]
+	signingkey = 73xxxxxxxxxxxxxB
+	name = YOURNAME
+	email = youremail@gmail.com
+[commit]
+	gpgsign = true
+[core]
+	editor = nano
+[color]
+	ui = true
+	status = auto
+	branch = auto
+[diff]
+	tool = meld
+[merge]
+	tool = meld
+[difftool]
+	prompt = false
+	trustExitCode = true
+	keepBackup = false
+[mergetool]
+	prompt = false
+	trustExitCode = true
+	keepBackup = false
+[init]
+	defaultBranch = main

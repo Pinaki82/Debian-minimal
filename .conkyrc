@@ -1,0 +1,109 @@
+## no compositor
+#own_window_type conky
+#own_window_argb_visual yes
+
+## xcompmgr
+own_window_type conky
+own_window_argb_visual yes
+
+## cairo-compmgr
+#own_window_type conky
+#own_window_argb_visual no
+
+background yes
+font Ubuntu:normal:size=8
+use_xft yes
+xftalpha 0.9
+update_interval 3.0
+total_run_times 0
+own_window yes
+own_window_type normal
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+minimum_size 180 5
+maximum_width 180
+draw_shades yes
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+default_color cccccc
+default_shade_color black
+default_outline_color green
+alignment top_right
+gap_x 12
+gap_y 35
+no_buffers yes
+uppercase no
+cpu_avg_samples 4
+override_utf8_locale no
+uppercase no
+
+TEXT
+# https://lightlinux.blogspot.com/2014/03/minimalist-config-file-for-conky-with.html
+${font Open Sans Light:pixelsize=34}${time %A}${font}
+${font Open Sans Light:pixelsize=14}${time %d/%m(%B)/%Y}${font}
+                          ${hr 3}
+${font Open Sans Light:pixelsize=38}${time %l:%M %p}${font}
+${hr 5}
+
+$color
+SYSTEM ${hr 2}
+$sysname $kernel on $machine
+${font Open Sans Light:pixelsize=16}${uptime %d/%m(%A)/%Y}${font}
+# Uptime: ${uptime}
+
+CPU: ${alignr}${freq} MHz
+
+Total CPU: ${cpu cpu0}%
+${cpubar cpu0 10 2}
+
+Core 1 ${alignr}${cpu cpu1}%
+${cpubar 2 cpu1}
+Core 2 ${alignr}${cpu cpu2}%
+${cpubar 2 cpu2}
+${top name 1}$alignr${top cpu 1}
+${top name 2}$alignr${top cpu 2}
+
+# https://forum.mxlinux.org/viewtopic.php?t=43937
+#CPU Total: ${exec sensors | grep 'Core 0' | cut -b 16-19} deg C 
+
+CPU Total: ${execi 30 sensors | grep "Package id 0" | cut -d "+" -f2 | cut -c1-7}
+#Core 0 Temp: ${execi 31 sensors | grep "Core 0" | cut -d "+" -f2 | cut -c1-7}
+#Core 1 Temp: ${execi 32 sensors | grep "Core 1" | cut -d "+" -f2 | cut -c1-7}
+ACPI Temp: ${acpitemp} deg C
+
+RAM: ${alignr}$memmax
+
+Active: ${alignr}$mem ($memperc%)
+${membar 4}
+${top_mem name 1}$alignr${top_mem mem 1}
+${top_mem name 2}$alignr${top_mem mem 2}
+${top_mem name 3}$alignr${top_mem mem 3}
+${top_mem name 4}$alignr${top_mem mem 4}
+${top_mem name 5}$alignr${top_mem mem 5}
+
+Filesystem
+
+Root: ${alignr}${fs_used /} / ${fs_size /}
+${fs_bar 4 /}
+Home: ${alignr}${fs_used /home} / ${fs_size /home}
+${fs_bar 4 /home}
+# Amp: ${alignr}${fs_used /Ampersand} / ${fs_size /Ampersand}
+# ${fs_bar 4 /Ampersand}
+Swap: $swapperc% ${swapbar 6}
+# https://lonelymachines.org/2012/08/16/simple-conky-config/
+# https://lonelymachines.org/uploads/conkyrc
+# https://askubuntu.com/questions/1013924/how-to-make-conky-true-transparent
+# https://mylinuxramblings.wordpress.com/2010/03/23/how-to-configure-the-conky-system-monitor/
+# https://bbs.archlinux.org/viewtopic.php?id=63974
+# lunch_box
+# Member
+# Registered: 2008-10-21
+# Posts: 16
+# You could use the execi variable to read the output from sensors:
+# ${execi 30 sensors | grep "Core 0" | cut -d "+" -f2 | cut -c1-6}
+# The above should display 45.0°C from your sensors output and update it every 30 seconds. You can change the "Core 0" bit for different lines. Probably not the most elegant solution but it works for me.
+# Last edited by lunch_box (2009-01-28 01:30:25)
+# http://conky.sourceforge.net/variables.html
+#

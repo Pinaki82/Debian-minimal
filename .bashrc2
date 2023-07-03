@@ -1,0 +1,35 @@
+# OSH_THEME="powerline-plain"
+# OSH_THEME="powerline"
+## OSH_THEME="brunton"
+## OSH_THEME="kitsune"
+# OSH_THEME="mairan"
+# OSH_THEME="rr"
+#
+# Example aliases
+# alias bashconfig="mate ~/.bashrc"
+# alias ohmybash="mate ~/.oh-my-bash"
+source /etc/profile.d/bash_completion.sh
+eval "$(thefuck --alias luck)"
+
+# Custom
+export PATH="$HOME/.local/bin/:$PATH"
+
+. /usr/share/autojump/autojump.sh
+
+# pnpm
+export PNPM_HOME="/home/YOURUSERNAME/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm endsource /etc/profile.d/bash_completion.sh
+. /usr/share/autojump/autojump.sh
+eval "$(thefuck --alias luck)"
+. "$HOME/.cargo/env"
+
+# Custom Entries:
+export PATH="$HOME/.local/bin/:$PATH"
+eval "$(thefuck --alias luck)"
+. /usr/share/autojump/autojump.sh
+. "$HOME/.cargo/env"
+source /etc/profile.d/bash_completion.sh
