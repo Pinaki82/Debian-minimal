@@ -86,3 +86,64 @@ yes | sudo apt update && sudo apt upgrade
 Install basic packages:
 
 Run the BASH Script 'debian_essential.sh' first.
+
+
+Disable Swap if you have SSDs and more than 3GB of RAM:
+https://www.tecmint.com/disable-swap-partition-in-centos-ubuntu/
+
+
+Install the most essential core build tool:
+
+sudo apt install build-essential dkms module-assistant linux-headers-$(uname -r)
+
+Install the common properties package (will be needed later):
+
+yes | sudo apt install software-properties-common
+
+Enable Backports (not recommended):
+https://backports.debian.org/Instructions/
+https://linuxconfig.org/how-to-install-and-use-debian-backports
+
+sudo nano/vim/mousepad /etc/apt/sources.list
+
+Add these two lines:
+
+deb http://ftp.debian.org/debian trixie-backports main
+deb-src http://ftp.debian.org/debian trixie-backports main
+
+*** NOTE: Always check for the appropriate VERSIONS.
+VERSIONS should not mismatch even in the future. ***
+
+bookworm(stable) < trixie(testing)
+More info: https://www.debian.org/releases/
+
+yes | sudo apt update
+
+yes | sudo apt install -t trixie-backports <package>
+Or,
+yes | sudo aptitude install <package>/trixie-backports
+
+However, Debian Trixie has not been released yet.
+
+Install GVim+Vim:
+
+apt search vim-gtk
+sudo apt install vim-gtk3
+
+If you're on a VM, see the text file 'virtualbox-ms-win.txt'.
+
+Partitioning Drives:
+https://techencyclopedia.wordpress.com/2020/04/21/debian-10-manual-partition-for-boot-swap-root-home-tmp-srv-var-var-mail-var-log/
+
+Codecs:
+https://www.sys-hint.com/1075-Installing-Multimedia-Codecs-on-Debian-10
+https://phoenixnap.com/kb/add-apt-repository-command-not-found-ubuntu
+
+yes | sudo apt install software-properties-common
+yes | sudo apt-add-repository non-free
+yes | sudo apt-add-repository contrib
+yes | sudo apt update && sudo apt upgrade
+yes | sudo apt install vlc
+yes | sudo apt install libavcodec-extra
+yes | sudo apt install libdvdread4 libdvdcss2
+yes | sudo dpkg-reconfigure libdvd-pkg
