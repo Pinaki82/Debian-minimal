@@ -262,3 +262,29 @@ Install some Command-line tools.
 
 yes | sudo apt install neofetch
 yes | sudo apt install htop
+
+Snap and Flatpak:
+Synaptic Package Manager:
+yes | sudo apt install synaptic
+Install GNOME Software:
+yes | sudo apt install gnome-software
+
+Snap:
+yes | sudo apt update && sudo apt upgrade
+yes | sudo apt install snapd
+yes | sudo snap install core
+yes | sudo snap install snap-store
+
+Flatpak:
+*** Install Flatpak as root: ***
+sudo su root
+yes | sudo apt install flatpak
+yes | sudo apt install gnome-software-plugin-flatpak
+yes | flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+Exit su:
+exit
+sudo reboot now
+
+Install MS Windows layer translator, Bottle from Flatpak:
+flatpak install flathub com.usebottles.bottles
+flatpak run com.usebottles.bottles
