@@ -1,10 +1,147 @@
-# OSH_THEME="powerline-plain"
+
+
+
+
+
+
+# Path to your oh-my-bash installation.
+export OSH='/home/YOURUSERNAME/.oh-my-bash'
+
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-bash is loaded.
+# OSH_THEME="font"
+OSH_THEME="powerline-plain"
 # OSH_THEME="powerline"
 ## OSH_THEME="brunton"
 ## OSH_THEME="kitsune"
 # OSH_THEME="mairan"
 # OSH_THEME="rr"
-#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Example aliases
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
