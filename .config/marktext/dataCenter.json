@@ -1,0 +1,14 @@
+{
+	"imageFolderPath": "/home/YOURUSERNAME/.config/marktext/images",
+	"screenshotFolderPath": "/home/YOURUSERNAME/.config/marktext/screenshot",
+	"webImages": [],
+	"cloudImages": [],
+	"currentUploader": "none",
+	"imageBed": {
+		"github": {
+			"owner": "",
+			"repo": "",
+			"branch": ""
+		}
+	}
+}

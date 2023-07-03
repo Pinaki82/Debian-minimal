@@ -1,0 +1,4 @@
+Backup:
+bookmarks.txt
+conf.txt
+conf-lastgood.txt

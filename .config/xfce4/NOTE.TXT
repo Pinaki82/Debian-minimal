@@ -1,0 +1,4 @@
+Backup:
+panel/
+terminal/
+xfwm4/

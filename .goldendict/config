@@ -1,0 +1,221 @@
+<config>
+ <paths/>
+ <sounddirs/>
+ <dictionaryOrder id="0" name="">
+  <dictionary name="English Wiktionary">affcf9678e7bfe701c9b071f97eccba3</dictionary>
+  <dictionary name="Oxford Learner's">cd3b088a8afa94a6db99081436149233</dictionary>
+  <dictionary name="Merriam-Webster">bcbee352a9ce26666000546f0088c2b2</dictionary>
+  <dictionary name="Merriam-Webster Thesaurus">413ddad0264a5dd69821f1a0f1e2af37</dictionary>
+  <dictionary name="THESAURUS.COM">72d6e25ff976701e440b8a8a0e76570b</dictionary>
+  <dictionary name="DICTIONARY.COM">d981dbca8329f416e4c4be840a4ff1e4</dictionary>
+  <dictionary name="E2B">d7150828f3d9e4aff907068a39eb1662</dictionary>
+  <dictionary name="Cambridge Dictionary">f54fdd784a3db18502ae78f35a03e7b6</dictionary>
+  <dictionary name="Cambridge Thesaurus">8224c6f719ab79e0315c4a19844f25eb</dictionary>
+  <dictionary name="English Wikipedia">ae6f89aac7151829681b85f035d54e48</dictionary>
+  <dictionary name="Urban Dictionary">f376365a0de651fd7505e7e5e683aa45</dictionary>
+  <dictionary name="YourDictionary Sentences">9448acb430badba527b06196463503b6</dictionary>
+  <mutedDictionaries/>
+ </dictionaryOrder>
+ <inactiveDictionaries id="0" name="">
+  <mutedDictionaries/>
+ </inactiveDictionaries>
+ <groups nextId="5">
+  <group id="1" name="Wikipedia">
+   <dictionary name="English Wikipedia">ae6f89aac7151829681b85f035d54e48</dictionary>
+   <dictionary name="English Wiktionary">affcf9678e7bfe701c9b071f97eccba3</dictionary>
+   <mutedDictionaries/>
+  </group>
+  <group id="4" name="Essential">
+   <dictionary name="English Wiktionary">affcf9678e7bfe701c9b071f97eccba3</dictionary>
+   <dictionary name="DICTIONARY.COM">d981dbca8329f416e4c4be840a4ff1e4</dictionary>
+   <dictionary name="Merriam-Webster">bcbee352a9ce26666000546f0088c2b2</dictionary>
+   <dictionary name="Oxford Learner's">cd3b088a8afa94a6db99081436149233</dictionary>
+   <dictionary name="E2B">d7150828f3d9e4aff907068a39eb1662</dictionary>
+   <mutedDictionaries/>
+  </group>
+  <group id="2" name="Dictionary">
+   <dictionary name="Merriam-Webster">bcbee352a9ce26666000546f0088c2b2</dictionary>
+   <dictionary name="Oxford Learner's">cd3b088a8afa94a6db99081436149233</dictionary>
+   <dictionary name="E2B">d7150828f3d9e4aff907068a39eb1662</dictionary>
+   <dictionary name="Cambridge Dictionary">f54fdd784a3db18502ae78f35a03e7b6</dictionary>
+   <dictionary name="DICTIONARY.COM">d981dbca8329f416e4c4be840a4ff1e4</dictionary>
+   <dictionary name="Urban Dictionary">f376365a0de651fd7505e7e5e683aa45</dictionary>
+   <dictionary name="YourDictionary Sentences">9448acb430badba527b06196463503b6</dictionary>
+   <mutedDictionaries/>
+  </group>
+  <group id="3" name="Thesaurus">
+   <dictionary name="Merriam-Webster Thesaurus">413ddad0264a5dd69821f1a0f1e2af37</dictionary>
+   <dictionary name="THESAURUS.COM">72d6e25ff976701e440b8a8a0e76570b</dictionary>
+   <dictionary name="Cambridge Thesaurus">8224c6f719ab79e0315c4a19844f25eb</dictionary>
+   <mutedDictionaries/>
+  </group>
+ </groups>
+ <hunspell dictionariesPath=""/>
+ <transliteration>
+  <enableRussianTransliteration>0</enableRussianTransliteration>
+  <enableGermanTransliteration>0</enableGermanTransliteration>
+  <enableGreekTransliteration>0</enableGreekTransliteration>
+  <enableBelarusianTransliteration>0</enableBelarusianTransliteration>
+  <romaji>
+   <enable>0</enable>
+   <enableHepburn>1</enableHepburn>
+   <enableNihonShiki>0</enableNihonShiki>
+   <enableKunreiShiki>0</enableKunreiShiki>
+   <enableHiragana>1</enableHiragana>
+   <enableKatakana>1</enableKatakana>
+  </romaji>
+ </transliteration>
+ <forvo>
+  <enable>0</enable>
+  <apiKey></apiKey>
+  <languageCodes></languageCodes>
+ </forvo>
+ <mediawikis>
+  <mediawiki enabled="1" url="https://en.wikipedia.org/w" icon="" id="ae6f89aac7151829681b85f035d54e48" name="English Wikipedia"/>
+  <mediawiki enabled="1" url="https://en.wiktionary.org/w" icon="" id="affcf9678e7bfe701c9b071f97eccba3" name="English Wiktionary"/>
+  <mediawiki enabled="0" url="https://ru.wikipedia.org/w" icon="" id="8e0c1c2b6821dab8bdba8eb869ca7176" name="Russian Wikipedia"/>
+  <mediawiki enabled="0" url="https://ru.wiktionary.org/w" icon="" id="b09947600ae3902654f8ad4567ae8567" name="Russian Wiktionary"/>
+  <mediawiki enabled="0" url="https://de.wikipedia.org/w" icon="" id="a8a66331a1242ca2aeb0b4aed361c41d" name="German Wikipedia"/>
+  <mediawiki enabled="0" url="https://de.wiktionary.org/w" icon="" id="21c64bca5ec10ba17ff19f3066bc962a" name="German Wiktionary"/>
+  <mediawiki enabled="0" url="https://pt.wikipedia.org/w" icon="" id="96957cb2ad73a20c7a1d561fc83c253a" name="Portuguese Wikipedia"/>
+  <mediawiki enabled="0" url="https://pt.wiktionary.org/w" icon="" id="ed4c3929196afdd93cc08b9a903aad6a" name="Portuguese Wiktionary"/>
+  <mediawiki enabled="0" url="https://el.wikipedia.org/w" icon="" id="f3b4ec8531e52ddf5b10d21e4577a7a2" name="Greek Wikipedia"/>
+  <mediawiki enabled="0" url="https://el.wiktionary.org/w" icon="" id="5d45232075d06e002dea72fe3e137da1" name="Greek Wiktionary"/>
+ </mediawikis>
+ <websites>
+  <website enabled="0" inside_iframe="0" url="https://www.google.com/dictionary?aq=f&amp;langpair=en|en&amp;q=%GDWORD%&amp;hl=en" icon="" id="b88cb2898e634c6638df618528284c2d" name="Google En-En (Oxford)"/>
+  <website enabled="1" inside_iframe="1" url="https://www.urbandictionary.com/define.php?term=%GDWORD%" icon="" id="f376365a0de651fd7505e7e5e683aa45" name="Urban Dictionary"/>
+  <website enabled="0" inside_iframe="0" url="https://multitran.ru/c/m.exe?CL=1&amp;l1=1&amp;s=%GD1251%" icon="" id="324ca0306187df7511b26d3847f4b07c" name="Multitran (En)"/>
+  <website enabled="0" inside_iframe="0" url="http://lingvopro.abbyyonline.com/en/Search/en-ru/%GDWORD%" icon="" id="924db471b105299c82892067c0f10787" name="Lingvo (En-Ru)"/>
+  <website enabled="0" inside_iframe="0" url="http://michaelis.uol.com.br/moderno/ingles/index.php?lingua=portugues-ingles&amp;palavra=%GDISO1%" icon="" id="087a6d65615fb047f4c80eef0a9465db" name="Michaelis (Pt-En)"/>
+  <website enabled="1" inside_iframe="1" url="https://www.oxfordlearnersdictionaries.com/definition/english/%GDWORD%" icon="" id="cd3b088a8afa94a6db99081436149233" name="Oxford Learner's"/>
+  <website enabled="1" inside_iframe="1" url="https://dictionary.cambridge.org/dictionary/english/%GDWORD%" icon="" id="f54fdd784a3db18502ae78f35a03e7b6" name="Cambridge Dictionary"/>
+  <website enabled="1" inside_iframe="1" url="https://www.merriam-webster.com/dictionary/%GDWORD%" icon="" id="bcbee352a9ce26666000546f0088c2b2" name="Merriam-Webster"/>
+  <website enabled="1" inside_iframe="1" url="https://www.merriam-webster.com/thesaurus/%GDWORD%" icon="" id="413ddad0264a5dd69821f1a0f1e2af37" name="Merriam-Webster Thesaurus"/>
+  <website enabled="1" inside_iframe="1" url="https://sentence.yourdictionary.com/%GDWORD%" icon="" id="9448acb430badba527b06196463503b6" name="YourDictionary Sentences"/>
+  <website enabled="1" inside_iframe="1" url="https://www.english-bangla.com/dictionary/%GDWORD%" icon="" id="d7150828f3d9e4aff907068a39eb1662" name="E2B"/>
+  <website enabled="1" inside_iframe="1" url="https://www.thesaurus.com/browse/%GDWORD%" icon="" id="72d6e25ff976701e440b8a8a0e76570b" name="THESAURUS.COM"/>
+  <website enabled="1" inside_iframe="1" url="https://www.dictionary.com/browse/%GDWORD%" icon="" id="d981dbca8329f416e4c4be840a4ff1e4" name="DICTIONARY.COM"/>
+ </websites>
+ <dictservers/>
+ <programs/>
+ <voiceEngines/>
+ <mutedDictionaries/>
+ <popupMutedDictionaries/>
+ <preferences>
+  <interfaceLanguage></interfaceLanguage>
+  <helpLanguage></helpLanguage>
+  <displayStyle></displayStyle>
+  <newTabsOpenAfterCurrentOne>0</newTabsOpenAfterCurrentOne>
+  <newTabsOpenInBackground>1</newTabsOpenInBackground>
+  <hideSingleTab>0</hideSingleTab>
+  <mruTabOrder>0</mruTabOrder>
+  <hideMenubar>0</hideMenubar>
+  <enableTrayIcon>1</enableTrayIcon>
+  <startToTray>0</startToTray>
+  <closeToTray>1</closeToTray>
+  <autoStart>0</autoStart>
+  <doubleClickTranslates>1</doubleClickTranslates>
+  <selectWordBySingleClick>0</selectWordBySingleClick>
+  <escKeyHidesMainWindow>0</escKeyHidesMainWindow>
+  <zoomFactor>1</zoomFactor>
+  <helpZoomFactor>1</helpZoomFactor>
+  <wordsZoomLevel>0</wordsZoomLevel>
+  <enableMainWindowHotkey>1</enableMainWindowHotkey>
+  <mainWindowHotkey>Ctrl+F11, Ctrl+F11</mainWindowHotkey>
+  <enableClipboardHotkey>1</enableClipboardHotkey>
+  <clipboardHotkey>Ctrl+C, Ctrl+C</clipboardHotkey>
+  <enableScanPopup>1</enableScanPopup>
+  <startWithScanPopupOn>0</startWithScanPopupOn>
+  <enableScanPopupModifiers>0</enableScanPopupModifiers>
+  <scanPopupModifiers>0</scanPopupModifiers>
+  <scanPopupAltMode>0</scanPopupAltMode>
+  <scanPopupAltModeSecs>3</scanPopupAltModeSecs>
+  <ignoreOwnClipboardChanges>0</ignoreOwnClipboardChanges>
+  <scanToMainWindow>0</scanToMainWindow>
+  <ignoreDiacritics>0</ignoreDiacritics>
+  <showScanFlag>0</showScanFlag>
+  <scanPopupUseUIAutomation>1</scanPopupUseUIAutomation>
+  <scanPopupUseIAccessibleEx>1</scanPopupUseIAccessibleEx>
+  <scanPopupUseGDMessage>1</scanPopupUseGDMessage>
+  <scanPopupUnpinnedWindowFlags>0</scanPopupUnpinnedWindowFlags>
+  <scanPopupUnpinnedBypassWMHint>0</scanPopupUnpinnedBypassWMHint>
+  <pronounceOnLoadMain>0</pronounceOnLoadMain>
+  <pronounceOnLoadPopup>0</pronounceOnLoadPopup>
+  <useInternalPlayer>1</useInternalPlayer>
+  <internalPlayerBackend>FFmpeg+libao</internalPlayerBackend>
+  <audioPlaybackProgram>mplayer</audioPlaybackProgram>
+  <alwaysOnTop>0</alwaysOnTop>
+  <searchInDock>0</searchInDock>
+  <historyStoreInterval>0</historyStoreInterval>
+  <favoritesStoreInterval>0</favoritesStoreInterval>
+  <confirmFavoritesDeletion>1</confirmFavoritesDeletion>
+  <proxyserver enabled="0" useSystemProxy="0">
+   <type>0</type>
+   <host></host>
+   <port>3128</port>
+   <user></user>
+   <password></password>
+   <systemProxyUser></systemProxyUser>
+   <systemProxyPassword></systemProxyPassword>
+  </proxyserver>
+  <checkForNewReleases>1</checkForNewReleases>
+  <disallowContentFromOtherSites>0</disallowContentFromOtherSites>
+  <enableWebPlugins>0</enableWebPlugins>
+  <hideGoldenDictHeader>0</hideGoldenDictHeader>
+  <maxNetworkCacheSize>50</maxNetworkCacheSize>
+  <clearNetworkCacheOnExit>1</clearNetworkCacheOnExit>
+  <maxStringsInHistory>500</maxStringsInHistory>
+  <storeHistory>1</storeHistory>
+  <alwaysExpandOptionalParts>0</alwaysExpandOptionalParts>
+  <addonStyle></addonStyle>
+  <collapseBigArticles>0</collapseBigArticles>
+  <articleSizeLimit>2000</articleSizeLimit>
+  <limitInputPhraseLength>0</limitInputPhraseLength>
+  <inputPhraseLengthLimit>1000</inputPhraseLengthLimit>
+  <maxDictionaryRefsInContextMenu>20</maxDictionaryRefsInContextMenu>
+  <synonymSearchEnabled>1</synonymSearchEnabled>
+  <fullTextSearch>
+   <searchMode>0</searchMode>
+   <matchCase>0</matchCase>
+   <maxArticlesPerDictionary>100</maxArticlesPerDictionary>
+   <maxDistanceBetweenWords>2</maxDistanceBetweenWords>
+   <useMaxArticlesPerDictionary>0</useMaxArticlesPerDictionary>
+   <useMaxDistanceBetweenWords>1</useMaxDistanceBetweenWords>
+   <dialogGeometry></dialogGeometry>
+   <disabledTypes></disabledTypes>
+   <enabled>1</enabled>
+   <ignoreWordsOrder>0</ignoreWordsOrder>
+   <ignoreDiacritics>0</ignoreDiacritics>
+   <maxDictionarySize>0</maxDictionarySize>
+  </fullTextSearch>
+ </preferences>
+ <lastMainGroupId>4294967294</lastMainGroupId>
+ <lastPopupGroupId>0</lastPopupGroupId>
+ <popupWindowState>AAAA/wAAAAH9AAAAAAAAAg0AAAGTAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAQAAAAEAAAAaAGQAaQBjAHQAaQBvAG4AYQByAHkAQgBhAHIDAAAAAP////8AAAAAAAAAAA==</popupWindowState>
+ <popupWindowGeometry>AdnQywABAAAAAAFlAAAAhwAAA5EAAAIZAAABZQAAAIcAAAORAAACGQAAAAAAAA==</popupWindowGeometry>
+ <pinPopupWindow>0</pinPopupWindow>
+ <popupWindowAlwaysOnTop>0</popupWindowAlwaysOnTop>
+ <mainWindowState>AAAA/wAAAAH9AAAAAgAAAAAAAAAAAAAAAPwCAAAAAfsAAAAUAHMAZQBhAHIAYwBoAFAAYQBuAGUAAAAAAP////8AAAB2AP///wAAAAEAAADMAAACN/wCAAAAA/sAAAASAGQAaQBjAHQAcwBQAGEAbgBlAQAAADQAAAC8AAAAVgD////7AAAAFgBoAGkAcwB0AG8AcgB5AFAAYQBuAGUBAAAA9gAAALoAAABWAP////sAAAAaAGYAYQB2AG8AcgBpAHQAZQBzAFAAYQBuAGUBAAABtgAAALUAAABWAP///wAAAiQAAAI3AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAUAG4AYQB2AFQAbwBvAGwAYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABoAZABpAGMAdABpAG8AbgBhAHIAeQBCAGEAcgEAAAJT/////wAAAAAAAAAA</mainWindowState>
+ <mainWindowGeometry>AdnQywABAAAAAAE6AAAAcAAABC8AAALaAAABOgAAAHAAAAQvAAAC2gAAAAAAAA==</mainWindowGeometry>
+ <helpWindowGeometry></helpWindowGeometry>
+ <helpSplitterState></helpSplitterState>
+ <dictInfoGeometry></dictInfoGeometry>
+ <inspectorGeometry></inspectorGeometry>
+ <dictionariesDialogGeometry>AdnQywABAAAAAAC0AAAAVwAABE8AAAJqAAAAtAAAAFcAAARPAAACagAAAAAAAA==</dictionariesDialogGeometry>
+ <timeForNewReleaseCheck>2020-11-01T16:25:30</timeForNewReleaseCheck>
+ <skippedRelease></skippedRelease>
+ <showingDictBarNames>0</showingDictBarNames>
+ <usingSmallIconsInToolbars>0</usingSmallIconsInToolbars>
+ <editDictionaryCommandLine></editDictionaryCommandLine>
+ <maxPictureWidth>0</maxPictureWidth>
+ <maxHeadwordSize>256</maxHeadwordSize>
+ <maxHeadwordsToExpand>0</maxHeadwordsToExpand>
+ <headwordsDialog>
+  <searchMode>0</searchMode>
+  <matchCase>0</matchCase>
+  <autoApply>0</autoApply>
+  <headwordsExportPath></headwordsExportPath>
+  <headwordsDialogGeometry></headwordsDialogGeometry>
+ </headwordsDialog>
+</config>

@@ -9,6 +9,7 @@ Name=Laeqed-LATEX-Equation-Editor
 GenericName=Equation-Editor
 Comment=WYSIWYG LATEX Equation Editor written in JAVA
 
+# Keep 'laeqed.sh' and 'Laeqed.jar' in the same directory.
 
 # To launch Laeqed from the system launcher, replace the relative path
 # with the absolute path (where you've stored the JAVA binary Laeqed.jar),
@@ -19,18 +20,15 @@ Comment=WYSIWYG LATEX Equation Editor written in JAVA
 # the desktop entry 'Laeqed.desktop' in
 # ~/.local/share/applications.
 
-
-# To launch Laeqed from the system launcher,
-# place a copy of
-# the desktop entry 'Laeqed.desktop' in
-# ~/.local/share/applications
-
-TryExec=/home/YOUR_USERNAME/.laeqed.sh
-Exec=/home/YOUR_USERNAME/.laeqed.sh
+# TryExec=/bin/bash -c 'cd "$(dirname "$0")"; ./laeqed.sh -windowed' %k
+# Exec=/bin/bash -c 'cd "$(dirname "$0")"; ./laeqed.sh -windowed' %k
+TryExec=/bin/bash -c 'cd "$(dirname "$0")"; /home/YOURUSERNAME/PortablePrograms/laeqed.sh -windowed' %k
+Exec=/bin/bash -c 'cd "$(dirname "$0")"; /home/YOURUSERNAME/PortablePrograms/laeqed.sh -windowed' %k
 Terminal=false
 Type=Application
-Icon=/usr/share/icons/gnome/scalable/apps/libreoffice-math.svg
-Categories=Education;Office;
+# Icon=/bin/bash -c 'cd "$(dirname "$0")"; laeqed.png %k
+Icon=libreoffice-math
+Categories=Accessories;Education;Office;
 StartupNotify=false
 MimeType=.tex;
 

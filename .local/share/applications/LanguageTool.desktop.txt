@@ -17,11 +17,11 @@ Comment=A free and open-source grammar checker
 # and the icon 'LanguageTool.png' in
 # ~/.local/share/icons.
 
-TryExec=/home/YOUR_USERNAME/.languagetool.sh
-Exec=/home/YOUR_USERNAME/.languagetool.sh
+TryExec=/home/YOURUSERNAME/.languagetool.sh
+Exec=/home/YOURUSERNAME/.languagetool.sh
 Terminal=false
 Type=Application
-Icon=/home/YOUR_USERNAME/.local/share/icons/LanguageTool.png
+Icon=/home/YOURUSERNAME/.local/share/icons/LanguageTool.png
 Categories=Education;Office;
 StartupNotify=false
 MimeType=;

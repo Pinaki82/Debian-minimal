@@ -1,0 +1,3 @@
+Backup:
+data/dictionaries/
+data/fonts/

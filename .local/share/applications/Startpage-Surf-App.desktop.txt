@@ -27,7 +27,7 @@ Comment=Search Engine
 Exec=firejail surf startpage.com
 
 # The name of the icon that will be used to display this entry
-Icon=/home/YOUR_USERNAME/.local/share/icons/Startpage.com_logo.svg
+Icon=/home/YOURUSERNAME/.local/share/icons/Startpage.com_logo.svg
 
 # Describes whether this application needs to be run in a terminal or not
 Terminal=false

@@ -1,0 +1,6 @@
+Backup:
+runtime/
+themes/
+config.toml
+
+See https://github.com/Pinaki82/Tulu-C-IDE

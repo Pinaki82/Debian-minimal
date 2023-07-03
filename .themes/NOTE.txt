@@ -1,0 +1,61 @@
+------------------------------------------------------------
+Themes:
+
+theme big sur
+https://www.xfce-look.org/p/1405530/
+
+Desert-XFCE-4.16 Edition
+https://www.xfce-look.org/p/1482698/
+
+Sweet
+https://www.xfce-look.org/p/1253385/
+
+Mayu-Dark
+https://www.xfce-look.org/s/XFCE/p/1408765/
+
+PRO-Dark-XFCE-Edition
+https://www.xfce-look.org/p/1207818/
+
+Prof-XFCE-theme
+https://www.xfce-look.org/p/1334420/
+(Use the latest version only.
+There are two variants, the light theme & the dark one.)
+
+Mc-OS CTLina XFCE
+https://www.xfce-look.org/p/1326265/
+
+Greybird-Pro
+https://www.xfce-look.org/s/XFCE/p/1246103/
+
+
+------------------------------------------------------------
+Wallpapers:
+
+https://www.pling.com/p/1413279/
+
+https://www.xfce-look.org/s/XFCE/p/1483702/
+
+https://www.xfce-look.org/s/XFCE/p/1483700/
+
+https://www.xfce-look.org/s/XFCE/p/1483683/
+
+https://www.xfce-look.org/s/XFCE/p/1483184/
+
+https://www.xfce-look.org/s/XFCE/p/1482727/
+
+https://www.xfce-look.org/s/XFCE/p/1406556/
+
+https://www.xfce-look.org/s/XFCE/p/1368402/
+
+https://www.xfce-look.org/s/XFCE/p/1381425/
+
+https://www.xfce-look.org/s/XFCE/p/1347205/
+
+https://www.xfce-look.org/s/XFCE/p/1361063/
+
+https://www.xfce-look.org/s/XFCE/p/1334579/
+
+https://www.xfce-look.org/s/XFCE/p/1361060/
+
+https://www.xfce-look.org/s/XFCE/p/1306939/
+

@@ -1,0 +1,4 @@
+Backup:
+data/dict/
+data/tessdata/
+settings.reader.lua

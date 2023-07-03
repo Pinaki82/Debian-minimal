@@ -1,0 +1,3 @@
+Backup:
+geany.conf
+keybindings.conf

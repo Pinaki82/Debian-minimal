@@ -1,0 +1,15 @@
+intra=1
+f=mpeg
+acodec=mp2
+ar=48000
+ab=256k
+vcodec=mpeg2video
+vb=70M
+g=1
+bf=0
+progressive=0
+top_field_first=1
+deinterlace_method=yadif
+rescale=bilinear
+r=25
+threads=0
