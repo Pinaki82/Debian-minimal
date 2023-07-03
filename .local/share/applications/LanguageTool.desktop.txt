@@ -1,0 +1,34 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+X-AppInstall-Package=LanguageTool
+X-AppInstall-Popcon=1253
+X-AppInstall-Section=main
+
+Name=LanguageTool
+GenericName=LanguageTool
+Comment=A free and open-source grammar checker
+
+
+# To launch LanguageTool from the system launcher,
+# place a copy of
+# the desktop entry 'LanguageTool.desktop' in
+# ~/.local/share/applications
+# and the icon 'LanguageTool.png' in
+# ~/.local/share/icons.
+
+TryExec=/home/YOUR_USERNAME/.languagetool.sh
+Exec=/home/YOUR_USERNAME/.languagetool.sh
+Terminal=false
+Type=Application
+Icon=/home/YOUR_USERNAME/.local/share/icons/LanguageTool.png
+Categories=Education;Office;
+StartupNotify=false
+MimeType=;
+
+X-Ubuntu-Gettext-Domain=app-install-data
+Path=bash -c 'cd $(dirname %0)';
+GenericName=LanguageTool
+Name[en_IN]=LanguageTool
+
+

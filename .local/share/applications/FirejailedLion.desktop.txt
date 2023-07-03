@@ -1,0 +1,34 @@
+[Desktop Entry]
+
+# Copyright Reserved by ArchWiki
+# https://wiki.archlinux.org/title/Desktop_entries
+
+# Source: https://wiki.archlinux.org/index.php/Desktop_entries
+# An example of a desktop entry published by ArchWiki has been used here as
+# a template. Copyright goes to the respective publisher which was originally
+# published under GNU Free Documentation License 1.3.
+# For more information, see https://www.gnu.org/copyleft/fdl.html.
+# GNU Free Documentation License mandates the inclusion of the terms of the
+# license to be visible to the end-user.
+
+Type=Application
+
+Name=FirejailedLion
+
+Comment=Firejailed Brave Browser
+
+# The executable of the application, possibly with arguments.
+# Firejailed Firefox: https://firejail.wordpress.com/documentation-2/firefox-guide/
+# Web Search: running firefox in firejail
+Exec=/usr/bin/firejail --x11 --private --dns=1.1.1.1 --dns=9.9.9.9 /usr/bin/brave-browser-stable %U -no-remote
+
+# The name of the icon that will be used to display this entry
+Icon=/home/YOUR_USERNAME/.local/share/icons/Brave.png
+
+# Describes whether this application needs to be run in a terminal or not
+Terminal=false
+
+# Describes the categories in which this entry should be shown
+Categories=;
+
+GenericName=Firejailed Firefox

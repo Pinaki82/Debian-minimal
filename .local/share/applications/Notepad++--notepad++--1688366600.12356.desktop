@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=notepad++
+Exec=flatpak run --command=bottles-cli com.usebottles.bottles run -p notepad++ -b 'Notepad++' -- %u
+Type=Application
+Terminal=false
+Categories=Application;
+Icon=/home/YOURUSERNAME/.var/app/com.usebottles.bottles/data/bottles/bottles/Notepad++/icons/notepad++.png
+Comment=Launch notepad++ using Bottles.
+StartupWMClass=notepad++
+Actions=Configure;
+[Desktop Action Configure]
+Name=Configure in Bottles
+Exec=flatpak run com.usebottles.bottles -b 'Notepad++'

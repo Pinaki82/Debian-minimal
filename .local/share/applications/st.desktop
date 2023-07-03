@@ -1,0 +1,22 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+X-AppInstall-Package=st
+X-AppInstall-Popcon=1158
+X-AppInstall-Section=main
+
+Name=Suckless ST Terminal
+GenericName=Terminal Emulator
+Comment=Terminal Emulator that sucks less
+
+TryExec=/usr/bin/st
+Exec=/usr/bin/st
+Terminal=false
+Type=Application
+Icon=utilities-terminal
+Categories=System;
+StartupNotify=false
+
+Path=bash -c 'cd $(dirname %0)';
+GenericName=st
+Name[en_IN]=st

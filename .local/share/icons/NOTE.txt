@@ -1,0 +1,28 @@
+------------------------------------------------------------
+Icons:
+
+BeautyLine
+https://www.xfce-look.org/s/XFCE/p/1425426
+
+Moka
+https://snwh.org/moka
+sudo add-apt-repository -u ppa:snwh/ppa
+sudo apt install moka-icon-theme
+
+Papirus icon theme for Linux
+https://github.com/PapirusDevelopmentTeam/papirus-icon-theme#installation
+sudo add-apt-repository ppa:papirus/papirus
+sudo apt update
+sudo apt install papirus-icon-theme
+
+vimix-icon-theme
+https://github.com/vinceliuice/vimix-icon-theme
+
+Flat Remix ICON theme
+https://www.xfce-look.org/p/1012430/
+
+Paper
+https://snwh.org/paper/download
+sudo add-apt-repository -u ppa:snwh/ppa
+sudo apt install paper-icon-theme
+

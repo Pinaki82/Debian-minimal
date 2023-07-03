@@ -1,0 +1,16 @@
+[Desktop Entry]
+Version=1.0
+Name=FreeCAD Weekly (AppImage)
+Exec=/home/YOURUSERNAME/PortablePrograms/FreeCAD_0.20.2-2022-12-27-conda-Linux-x86_64-py310.AppImage %U
+Icon=FreeCAD
+Type=Application
+Categories=Engineering;
+Comment=Feature based Parametric Modeler
+Terminal=false
+StartupNotify=true
+NoDisplay=false
+MimeType=application/x-extension-fcstd;
+X-AppImage-Integrate=
+X-Zap-Id=FreeCAD
+TryExec=/home/YOURUSERNAME/PortablePrograms/FreeCAD_0.20.2-2022-12-27-conda-Linux-x86_64-py310.AppImage
+

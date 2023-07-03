@@ -1,0 +1,34 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+X-AppInstall-Package=EqualX
+X-AppInstall-Popcon=1252
+X-AppInstall-Section=main
+
+Name=EqualX-LATEX-Equation-Editor
+GenericName=Equation-Editor
+Comment=WYSIWYG LATEX Equation Editor written using QT C++ GUI library
+
+
+# To launch EqualX from the system launcher,
+# place a copy of
+# the desktop entry 'EqualX.desktop' in
+# ~/.local/share/applications.
+# and the icon 'equalx_logo.png' in
+# ~/.local/share/icons.
+
+TryExec=/usr/bin/equalx
+Exec=/usr/bin/equalx
+Terminal=false
+Type=Application
+Icon=/home/YOUR_USERNAME/.local/share/icons/equalx_logo.png
+Categories=Education;Office;
+StartupNotify=false
+MimeType=;
+
+X-Ubuntu-Gettext-Domain=app-install-data
+Path=bash -c 'cd $(dirname %0)';
+GenericName=EqualX
+Name[en_IN]=EqualX
+
+

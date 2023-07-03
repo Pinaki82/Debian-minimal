@@ -1,0 +1,37 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+X-AppInstall-Package=Arduino-IDE
+X-AppInstall-Popcon=1054
+X-AppInstall-Section=main
+
+Name=Arduino-IDE
+GenericName=Microcontroller-IDE-for-Arduino-boards
+Comment=A cross-platform IDE which is used to write and upload programs to Arduino compatible boards
+
+
+# To launch Arduino-IDE from the system launcher, place a copy of
+# the desktop entry 'Arduino.desktop' in
+# ~/.local/share/applications
+# and 'Arduino-Fixed.svg'
+# in
+# ~/.local/share/icons
+# Icon: https://openclipart.org/detail/278039/arduino-fixed
+
+TryExec=/home/YOUR_USERNAME/PortablePrograms/arduino-ide_2.0.0-beta.3_Linux_64bit/arduino-ide
+Exec=/home/YOUR_USERNAME/PortablePrograms/arduino-ide_2.0.0-beta.3_Linux_64bit/arduino-ide
+Terminal=false
+Type=Application
+Icon=/home/YOUR_USERNAME/.local/share/icons/Arduino-Fixed.svg
+Categories=Development;
+StartupNotify=false
+MimeType=*.ino; *.pde;
+
+X-Ubuntu-Gettext-Domain=app-install-data
+Path=bash -c 'cd $(dirname %0)';
+GenericName=Laeqed
+Name[en_IN]=Arduino
+
+# Installation:
+# Arduino IDE 2.0 beta (2.0.0-beta3)
+# https://www.arduino.cc/en/software

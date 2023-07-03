@@ -1,0 +1,11 @@
+[Desktop Entry]
+X-SnapInstanceName=teams-for-linux
+Name=Teams for Linux
+Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/teams-for-linux_teams-for-linux.desktop /snap/bin/teams-for-linux %U
+Terminal=false
+Type=Application
+Icon=/snap/teams-for-linux/403/meta/gui/icon.png
+StartupWMClass=teams-for-linux
+Comment=Unofficial Microsoft Teams client for Linux using Electron. It uses the Web App and wraps it as a standalone application using Electron.
+MimeType=x-scheme-handler/msteams;
+Categories=Chat;Network;Office;

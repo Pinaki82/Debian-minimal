@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=WinMergeU
+Exec=flatpak run --command=bottles-cli com.usebottles.bottles run -p WinMergeU -b 'WinmergeU' -- %u
+Type=Application
+Terminal=false
+Categories=Application;
+Icon=/home/YOURUSERNAME/.var/app/com.usebottles.bottles/data/bottles/bottles/WinmergeU/icons/WinMergeU.png
+Comment=Launch WinMergeU using Bottles.
+StartupWMClass=WinMergeU
+Actions=Configure;
+[Desktop Action Configure]
+Name=Configure in Bottles
+Exec=flatpak run com.usebottles.bottles -b 'WinmergeU'
