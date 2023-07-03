@@ -269,7 +269,7 @@ yes | sudo apt install cutils && \
 yes | sudo apt install cppcheck && \
 yes | sudo apt install cppcheck-gui && \
 yes | sudo apt install splint && \
-yes | sudo apt install cmake-gui && \
+#yes | sudo apt install cmake-gui && \
 yes | sudo apt install cmake && \
 # Debuggers, code profilers, memory leak testers, build tools,
 # code formatting applications and more

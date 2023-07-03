@@ -206,7 +206,7 @@ sudo apt install kate -y && \
 sudo apt install cppcheck -y && \
 sudo apt install cppcheck-gui -y && \
 sudo apt install splint -y && \
-sudo apt install cmake-gui -y && \
+#sudo apt install cmake-gui -y && \
 sudo apt install cmake -y && \
 sudo apt install wget -y && \
 sudo apt install unzip -y && \
