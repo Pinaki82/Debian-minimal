@@ -336,3 +336,105 @@ sudo apt install caffeine
 sudo apt install hardinfo
 # The Fish Shell
 sudo apt install fish
+
+You might be interested in the following:
+(You'll install these utilities for convenience anyway)
+
+# ---------
+# 9 AMAZING COMMAND LINE TOOLS for Linux
+# https://youtu.be/kFh1acsQ8DQ
+
+# Install OH-MY-BASH:
+sudo apt install curl git git-lfs fish -y
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+
+# Change the theme: .bashrc -> Uncomment:
+
+# OSH_THEME="powerline-plain"
+# OSH_THEME="powerline"
+## OSH_THEME="brunton"
+## OSH_THEME="kitsune"
+# OSH_THEME="mairan"
+# OSH_THEME="rr"
+
+source ~/.bashrc
+
+# git clone https://github.com/wting/autojump.git
+# cd autojump
+# python3 install.py
+# cd ~/
+# echo "[[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh" >> ~/.bashrc
+# https://www.cyberciti.biz/faq/add-bash-auto-completion-in-ubuntu-linux/
+sudo apt install bash-completion -y
+echo "source /etc/profile.d/bash_completion.sh" >> ~/.bashrc
+
+# autojump
+# https://github.com/wting/autojump.git
+sudo apt install autojump
+sudo apt install fzf
+echo '. /usr/share/autojump/autojump.sh' >> ~/.bashrc
+source ~/.bashrc
+# https://www.tecmint.com/autojump-a-quickest-way-to-navigate-linux-filesystem/1/
+# =======================================================
+# Install OH-MY-FISH (instructions): ====================
+# git clone https://github.com/oh-my-fish/oh-my-fish
+# Install manually:
+# cd oh-my-fish
+# bin/install --offline
+
+
+# Or, (OMF:- OH-MY-FISH)
+# https://github.com/oh-my-fish/oh-my-fish
+sudo apt install curl git fish -y
+curl -L https://get.oh-my.fish | fish
+# fish
+# Theming:
+# omf list
+# omf theme
+# omf install bobthefish
+# omf install agnoster
+# omf reload
+
+
+# tldr
+# https://github.com/tldr-pages/tldr.git
+sudo apt install python3-pip -y
+pipx install tldr
+# ---------
+sudo apt install libfuse2
+sudo apt install psensor
+sudo apt install transmission
+sudo apt install surf
+sudo apt install stardict
+# See shell/stardict.txt for details.
+sudo apt install artha
+sudo apt install bzip2
+sudo apt install tar
+sudo apt install unrar
+sudo apt install rar
+sudo apt install xz-utils
+sudo apt install lrzip
+sudo apt install pixz
+sudo apt install wmctrl
+sudo apt install nscd
+sudo apt install xclip
+sudo apt install uget
+sudo apt install aria2
+sudo apt install xarchiver
+sudo apt install thunar-archive-plugin
+sudo apt install wavemon
+# Monitor the status of an 802.11 wireless ethernet link.
+sudo apt install wmwave
+# Description: WiFi Share and Connect with QR.
+sudo apt install wifi-qr
+# Launcher.
+sudo apt install rofi
+# Description: graphical wireless scanner.
+sudo apt install linssid
+# Screenshot Utility.
+sudo apt install flameshot
+# Defrag NTFS Volumes.
+sudo apt install ntfs-3g
+
+# Download Manager programs
+sudo apt install uget

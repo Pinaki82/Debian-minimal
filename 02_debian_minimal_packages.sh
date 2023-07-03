@@ -432,6 +432,12 @@ sudo apt install curl git git-lfs fish -y && \
 
 source ~/.bashrc && \
 
+# ------------------------------------------------------------------------------
+# tldr
+# https://github.com/tldr-pages/tldr.git
+pipx install tldr
+# ------------------------------------------------------------------------------
+
 # git clone https://github.com/wting/autojump.git && \
 # cd autojump && \
 # python3 install.py && \

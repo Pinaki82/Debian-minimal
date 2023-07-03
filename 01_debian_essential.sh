@@ -74,6 +74,10 @@ yes | sudo apt install python3-pip && \
 # Install GVim+Vim:
 yes | sudo apt install vim vim-gtk3 && \
 # ------------------------------------------------------------------------------
+# tldr
+# https://github.com/tldr-pages/tldr.git
+pipx install tldr
+# ------------------------------------------------------------------------------
 # The Fish Shell:
 # OH-MY-FISH:
 curl -L https://get.oh-my.fish | fish && \
