@@ -1,0 +1,7 @@
+Alternative Software Search:
+
+https://switching.software/
+
+Git repo link to switching.software:
+
+https://codeberg.org/swiso/website

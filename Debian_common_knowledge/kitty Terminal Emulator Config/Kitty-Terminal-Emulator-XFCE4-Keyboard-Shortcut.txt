@@ -1,0 +1,36 @@
+Menu -> Settings -> Settings Editor
+Or,
+Terminal Emulator (Ctrl+Alt+T) -> Type:
+xfce4-settings-editor
+
+Panel (on the Left Side):
+xfce4-keyboard-shortcuts
+
+Select "Commands -> Custom"
+
+Create New (Entry) ->
+
+---------------------
+Property: /commands/custom/<primary><Shift>k
+Type: String
+Value: kitty
+
+Property: /commands/custom/<super>k
+Type: String
+Value: kitty
+
+=================
+=================
+
+Select "Commands -> Default"
+
+Create New (Entry) ->
+
+---------------------
+Property: /commands/default/<primary><Shift>k
+Type: String
+Value: kitty
+
+Property: /commands/default/<super>k
+Type: String
+Value: kitty

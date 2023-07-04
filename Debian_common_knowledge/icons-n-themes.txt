@@ -1,0 +1,212 @@
+------------------------------------------------------------
+XFCE ships a few pleasant and visually appealing themes out of the box with
+neat aesthetics. Regardless of the choice of the distribution and the desktop
+environment (DE), Linux always offers the freedom of customisation.
+X-L-K-*-Ubuntu and XFCE are not exceptions. We can customise the XFCE DE
+at any time. The default Greybird theme in the XFCE Desktop
+Environment is gorgeous. It's very close to Mac OS UI, and it's hard to
+beat in terms of pleasant aesthetics. However, the options are there to avoid
+any possible monotony after days of work in front of the computer.
+Here is how to do that:
+
+
+------------------------------------------------------------
+Download the themes and icons form https://www.xfce-look.org.
+Even if you have downloaded a theme or an icon pack from GitHub,
+always keep a note of the URL to the original content from xfce-look.org.
+Create two temporary folders called 'Themes' and 'Icons'.
+Move a 'theme-file.tar.xz' file to 'Themes'.
+If you've downloaded an icon pack, move it to 'Icons'.
+Icons should be extracted to '~/.local/share/icons/',
+and the themes to '~/.themes/'.
+Create those directories if required.
+Now follow the short notes. I did not write every step in detail since the
+procedure is simple and self-explanatory.
+
+
+------------------------------------------------------------
+Icons:
+mkdir ~/.local/share/icons/
+~/.local/share/icons/
+
+Protect the following folders:
+default
+hicolor
+
+Themes:
+mkdir ~/.themes/
+~/.themes/
+
+1. Appearance -> Style
+2. Window-Manager -> Style
+3. Appearance -> Icons
+4. LOG OUT/RESTART & LOG IN again.
+
+
+------------------------------------------------------------
+Extraction:
+https://linuxhandbook.com/extract-tar-xz/
+tar -xf file.tar.xz
+https://www.interserver.net/tips/kb/extract-tar-gz-files-using-linux-command-line/
+tar xzf file.tar.gz
+Extract all compressed archives
+https://www.cyberciti.biz/faq/how-to-extract-multiple-tar-ball-tar-gz-files-in-directory-on-linux-or-unix/
+cat *.tar.gz | tar xzf - -i
+cat *.tgz | tar xzf - -i
+cat *.tar.xz | tar Jxf - -i
+cat *.tar.bz2 | tar jxf - -i
+
+NOTE: Extract the .tar.xz and .tar.gz files after copying them to respective folders.
+I mean, ~/.themes/ (for themes) and ~/.local/share/icons/ (for icons).
+If a theme is grouped into one theme folder under subfolders, move all the subfolders
+to the root of ~/.themes/ as well.
+
+
+------------------------------------------------------------
+Backup your themes:
+------------------------------------------------------------
+https://unix.stackexchange.com/questions/78262/which-file-compression-software-for-linux-offers-the-highest-size-reduction
+https://wiki.archlinux.org/index.php/Lrzip
+
+sudo apt install xz-utils
+sudo apt install lrzip
+sudo apt install pixz
+tar -Ipixz -cf foo.tpxz foo/
+pixz -d foo.tpxz foo.tar
+lrzip -z file
+For folders, just change lrzip for lrztar
+
+
+------------------------------------------------------------
+Compress and backup '~/.local/share/icons/' and '~/.themes/':
+(lrztar+lrzip is recommended over other compressors)
+https://wiki.archlinux.org/index.php/Lrzip
+lrztar -z ~/.local/share/icons/
+lrztar -z ~/.themes/
+
+Optional (notes only):
+Decompress:
+lrzip -d file.tar.lzr
+lrztar -d file.lzr
+lrzip -d file.tar.lrz
+lrztar -d file.lrz
+
+tar -Ipixz -cf .themes.tpxz ~/.themes/
+pixz -d .themes.tpxz .themes.tar
+(The note to decompress ends here)
+
+
+------------------------------------------------------------
+Download Resources from:
+https://www.xfce-look.org
+
+
+------------------------------------------------------------
+Below are the details of the packages I personally use:
+
+
+------------------------------------------------------------
+Themes:
+
+theme big sur
+https://www.xfce-look.org/p/1405530/
+
+Desert-XFCE-4.16 Edition
+https://www.xfce-look.org/p/1482698/
+
+Sweet
+https://www.xfce-look.org/p/1253385/
+
+Mayu-Dark
+https://www.xfce-look.org/s/XFCE/p/1408765/
+
+PRO-Dark-XFCE-Edition
+https://www.xfce-look.org/p/1207818/
+
+Prof-XFCE-theme
+https://www.xfce-look.org/p/1334420/
+(Use the latest version only.
+There are two variants, the light theme & the dark one.)
+
+Mc-OS CTLina XFCE
+https://www.xfce-look.org/p/1326265/
+
+
+Pop Xfwm
+https://www.xfce-look.org/p/1299758/
+
+Forest GTK Themes
+https://github.com/i-mint/forest.git
+
+Snowblind
+https://www.opencode.net/ju1464/Snowblind
+
+
+------------------------------------------------------------
+Icons:
+
+BeautyLine
+https://www.xfce-look.org/s/XFCE/p/1425426
+
+Moka
+https://snwh.org/moka
+sudo add-apt-repository -u ppa:snwh/ppa
+sudo apt install moka-icon-theme
+
+Papirus icon theme for Linux
+https://github.com/PapirusDevelopmentTeam/papirus-icon-theme#installation
+sudo add-apt-repository ppa:papirus/papirus
+sudo apt update
+sudo apt install papirus-icon-theme
+
+vimix-icon-theme
+https://github.com/vinceliuice/vimix-icon-theme
+
+Paper
+https://snwh.org/paper/download
+sudo add-apt-repository -u ppa:snwh/ppa
+sudo apt install paper-icon-theme
+
+
+------------------------------------------------------------
+Wallpapers:
+
+https://www.pling.com/p/1413279/
+
+https://www.xfce-look.org/s/XFCE/p/1483702/
+
+https://www.xfce-look.org/s/XFCE/p/1483700/
+
+https://www.xfce-look.org/s/XFCE/p/1483683/
+
+https://www.xfce-look.org/s/XFCE/p/1483184/
+
+https://www.xfce-look.org/s/XFCE/p/1482727/
+
+https://www.xfce-look.org/s/XFCE/p/1406556/
+
+https://www.xfce-look.org/s/XFCE/p/1368402/
+
+https://www.xfce-look.org/s/XFCE/p/1381425/
+
+https://www.xfce-look.org/s/XFCE/p/1347205/
+
+https://www.xfce-look.org/s/XFCE/p/1361063/
+
+https://www.xfce-look.org/s/XFCE/p/1334579/
+
+https://www.xfce-look.org/s/XFCE/p/1361060/
+
+https://www.xfce-look.org/s/XFCE/p/1306939/
+
+
+------------------------------------------------------------
+References:
+https://www.ubuntupit.com/best-xfce-themes-for-linux/
+
+https://itsfoss.com/customize-xfce/
+
+https://linuxhint.com/icon_packs_linux/
+
+https://meterpreter.org/top-5-best-icon-packs-for-linux-2019/
+

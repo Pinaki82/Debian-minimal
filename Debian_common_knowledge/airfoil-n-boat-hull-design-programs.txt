@@ -1,0 +1,11 @@
+Boat Hull Design Programs:
+https://github.com/markmal/freeship-plus-in-lazarus
+http://www.panix.com/~brosen/
+http://www.jsdn.es/jSDN/en/mainframe.html
+https://web.archive.org/web/20130103082216/http://www.hullform.com/
+http://www.yachtdesign.info/Software/Free_or_Low_Cost/page2.htm
+
+Airfoil and Wing Design Programs:
+https://web.mit.edu/drela/Public/web/xfoil/
+sudo apt install xfoil
+http://www.mh-aerotools.de/airfoils/javafoil.htm

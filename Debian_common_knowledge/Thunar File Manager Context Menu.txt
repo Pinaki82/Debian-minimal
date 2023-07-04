@@ -1,0 +1,75 @@
+Thunar File Manager Context Menu Options:
+=========================================================================
+Thunar File Manager - > Edit - > Configure custom actions...
+Plus button (Add a new custom action).
+
+1)
+
+Basic - > Name - > Open kitty Here
+          Description - > kitty Terminal in this Directory Tree
+          Command - > kitty --directory %f
+          Icon - > kittens
+Appearance Conditions - > File Pattern - > *
+Appears if the selection contains:
+Directories (Check only this option and leave other options blank)
+
+2)
+
+Basic - > Name - > Open kitty Here
+          Description - > kitty Terminal in the Selected Sub-Directory Tree
+          Command - > kitty --directory %d
+          Icon - > kittens
+Appearance Conditions - > File Pattern - > *
+Appears if the selection contains:
+Check all options and only leave 'Directories' unchecked.
+=========================================================================
+Sakura Terminal Emulator to the R-Click Context Menu.
+
+Thunar File Manager - > Edit - > Configure custom actions...
+Plus button (Add a new custom action).
+
+1)
+
+Basic - > Name - > Open Sakura Here
+          Description - > Sakura Terminal in this Directory Tree
+          Command - > sakura -d %f
+          Icon - > utilities-terminal
+Appearance Conditions - > File Pattern - > *
+Appears if the selection contains:
+Directories (Check only this option and leave other options blank)
+
+2)
+
+Basic - > Name - > Open Sakura Here
+          Description - > Sakura Terminal in the Selected Sub-Directory Tree
+          Command - > sakura -d %d
+          Icon - > utilities-terminal
+Appearance Conditions - > File Pattern - > *
+Appears if the selection contains:
+Check all options and only leave 'Directories' unchecked.
+=========================================================================
+gitk to the R-Click Context Menu.
+
+Thunar File Manager - > Edit - > Configure custom actions...
+Plus button (Add a new custom action).
+
+Basic - > Name - > gitk
+          Description - > gitk in this Directory Tree
+          Command - > gitk %f
+          Icon - > github
+Appearance Conditions - > File Pattern - > *
+Appears if the selection contains:
+Directories (Check only this option and leave other options blank)
+=========================================================================
+Giggle to the R-Click Context Menu.
+
+Thunar File Manager - > Edit - > Configure custom actions...
+Plus button (Add a new custom action).
+
+Basic - > Name - > Giggle
+          Description - > Giggle in this Directory Tree
+          Command - > giggle %f
+          Icon - > giggle-scm-git
+Appearance Conditions - > File Pattern - > *
+Appears if the selection contains:
+Directories (Check only this option and leave other options blank)

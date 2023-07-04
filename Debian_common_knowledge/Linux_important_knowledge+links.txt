@@ -1,0 +1,113 @@
+https://www.itzgeek.com/post/how-to-update-ubuntu-20-04-lts/
+sudo apt update
+sudo apt list --upgradable
+sudo apt upgrade
+sudo reboot
+sudo apt list --upgradable
+sudo apt update
+https://vitux.com/get-linux-system-and-hardware-details-on-the-command-line/
+sudo lshw -html > hardwareinfo.html
+uname -a
+Inkscape extensions:
+~/.config/inkscape/extensions/
+Install Arial and other Windows fonts
+sudo apt-get install ttf-mscorefonts-installer
+sudo fc-cache
+fc-match Arial
+https://techwiser.com/uninstall-applications-ubuntu/
+https://www.csestack.org/auto-remove-all-unused-packages-ubuntu-linux/
+sudo apt remove app
+sudo apt autoremove app
+sudo apt purge --auto-remove app
+sudo apt autoremove
+sudo snap remove --purge snappackage
+https://itsfoss.com/apt-search-command/
+apt search package_name
+XFCE Xubuntu Desktop Keyboard Shortcuts:
+Ctrl+Alt+T -> Opens Terminal Window
+Alt+F1 -> Context Menu
+Alt+F2 -> Application Finder with a single Search Box
+Alt+F3 -> Full-blown Application Finder
+Alt+F4 -> Close Window, Shutdown/Log Out/Restart Buttons
+Ctrl+W -> Close Tabs
+Ctrl+Q -> Close Window, Close Application
+F4 -> Terminal
+https://linuxpip.org/install-appimage
+Create panel -> Add Launcher Item -> Create Blank Item -> insert ./executableAppImage
+First go to the AppImage directory.
+Open terminal from there.
+Type ./executableName then type TAB to autocomplete and copy the result.
+You'll get the full command.
+Some useful applications (not needed on a lightly configured system):
+Kazam Screen Recorder
+https://www.geeksforgeeks.org/shred-command-in-linux-with-examples
+Don't shred files on SSDs.
+It will reduce the life of the drive, or worse,
+may damage it permanently.
+
+Bangla Support on Xubuntu:
+Avro Phonetic.
+Snap Store -> Avro -> Install
+Add to
+.bashrc
+
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+
+System Settings -> Startup and Shutdown -> AutoStart -> Add Program ->
+Type /usr/bin/ibus-daemon and click OK ->
+In the properties window for the newly added entry ->
+Application -> Command: /usr/bin/ibus-daemon -dr
+(Notice the -dr. If I only use -d,
+it works at the startup but not at the login after logout) -> OK ->
+Close -> Logout and Login.
+Open Terminal & type: im-config -n ibus
+Logout.
+
+Format Pen Drives:
+https://recoverit.wondershare.com/flashdrive-recovery/linux-format-usb.html
+
+Change the Drive Label and Read/Write Permission:
+ 1. Drive Label:
+https://www.tecmint.com/change-modify-linux-disk-partition-label-names/
+sudo fdisk -l
+df
+(for NTFS File Systems (Pen Drives etc.) only)
+sudo ntfslabel /dev/partition new_label
+sudo ntfslabel /dev/mspblk0 SONY_1GB
+
+ 2. R/W Permission:
+sudo chmod ugo+wx /media/YOUR_USERNAME/DRIVE
+
+Dump .bash_history to text files:
+history > bash_hist.txt
+
+Virtual Box Shared Folder Issue:
+Mount the VBox Guest Addon CD.
+Open terminal there.
+Type
+sh autorun.sh
+
+DuckDuckGo: shared folder not mounted. permission denied. virtual box
+https://innovativebeast.com/shared-folder-permission-denied-issue-in-virtualbox
+sudo adduser $USER vboxsf
+
+Detect GPU information on older devices:
+lspci | grep VGA
+
+Detect the type of shell is in use
+https://askubuntu.com/questions/590899/how-do-i-check-which-shell-i-am-using
+echo $0
+
+UnTar Files:
+https://www.thegeekdiary.com/how-to-tar-untar-files-and-view-contents-of-tar-file-under-linux/
+tar xf test.tar
+
+DocFetcher -> An open source desktop search application.
+Search text files, code snippets, texts in PDF documents, texts in filenames, text corpus etc. stored on local drives. DocFetcher can search from UTF-8 formatted Unicode texts written in the Bengali language.
+Java Runtime Environment required.
+http://docfetcher.sourceforge.net/en/index.html
+
+5 Open Source 3D Modelling & Rendering Apps For Linux
+https://www.techdrivein.com/2011/08/5-open-source-3d-modelling-rendering.html

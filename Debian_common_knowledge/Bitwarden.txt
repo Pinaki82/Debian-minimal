@@ -1,0 +1,23 @@
+bw login
+
+export BW_SESSION="xxxXXXxxx=="
+
+nano -w ~/.bashrc
+alias bw-unlock='export BW_SESSION="YOUR_SESSION_KEY_HERE"'
+
+bw unlock
+bw lock
+bw sync
+
+bw get password example.com
+bw get username example.com
+
+bw list items --search facebook --pretty
+bw --help
+bw sub-command --help
+bw list --help
+bw get --help
+bw items --help
+
+https://lowendbox.com/blog/getting-nerdy-with-your-passwords-the-bitwarden-command-line-interface/
+https://www.drumm.sh/blog/2021/08/25/bw-cli/

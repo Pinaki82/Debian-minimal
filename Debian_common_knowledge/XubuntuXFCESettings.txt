@@ -1,0 +1,7 @@
+Shift the Close, Maximize, Minimize buttons to the left side:
+Whisker Menu -> Settings Editor -> xfwm -> general -> button_layout -> Value Tab
+
+CMHS|O
+
+Clock Format:
+R-Click on the Clock -> Properties -> Clock Options

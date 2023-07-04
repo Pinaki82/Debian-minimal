@@ -1,0 +1,25 @@
+Thunar File Mnager -> Edit -> Configure custom actions
+-> Plus Button
+
+Basic Tab:
+---------------------------
+Name: Open kitty Here
+Description: kitty Terminal in this Directory Tree
+Command: kitty --directory %f
+Keyboard Shortcut: None
+Appearance Conditions Tab:
+File Pattern: *
+Appear if selection contains: Directories
+
+New Entry:
+-> Plus Button
+---------------------------
+Basic Tab:
+Name: Open kitty Here
+Description: kitty Terminal in the Selected Sub-Directory Tree
+Command: kitty --directory %d
+Keyboard Shortcut: None
+Appearance Conditions Tab:
+File Pattern: *
+Appear if selection contains: Check everything except "Directories".
+(Leave "Directories" unchecked.)
