@@ -1,0 +1,380 @@
+{
+  "default": [
+    {
+      "expression": "*.accounts.google.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "8QZ4Rzb-t"
+    },
+    {
+      "expression": "*.amazon.in",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "8HXfNzMQoB"
+    },
+    {
+      "expression": "*.app.grammarly.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "pVmh8KA_oJ"
+    },
+    {
+      "expression": "*.atavi.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "jbOCKenBw"
+    },
+    {
+      "expression": "*.dropbox.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "6-CB2jvMU"
+    },
+    {
+      "expression": "*.ecosia.org",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "S-zgGax4L"
+    },
+    {
+      "expression": "*.facebook.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "9uVaiQs5N"
+    },
+    {
+      "expression": "*.flipkart.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "C87IsSxGk"
+    },
+    {
+      "expression": "*.getpocket.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "qlk31p6z_"
+    },
+    {
+      "expression": "*.gingersoftware.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "6oLzoQysn"
+    },
+    {
+      "expression": "*.github.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "PgpfrmpMQJ"
+    },
+    {
+      "expression": "*.google.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "Cog_97JGO"
+    },
+    {
+      "expression": "*.grammarly.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "iymKM4UDU"
+    },
+    {
+      "expression": "*.languagetool.org",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "SKSdWXrm5"
+    },
+    {
+      "expression": "*.linguix.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "UNH1bYo_0O"
+    },
+    {
+      "expression": "*.live.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "R5H2--xd0"
+    },
+    {
+      "expression": "*.login.live.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "rg5tHU1D1"
+    },
+    {
+      "expression": "*.microsoft.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "U7XKXAOxt"
+    },
+    {
+      "expression": "*.office.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "66gyQl0Qv"
+    },
+    {
+      "expression": "*.open.spotify.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "5xKy-APK_"
+    },
+    {
+      "expression": "*.outlook.live.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "_POGGDDyK"
+    },
+    {
+      "expression": "*.papaly.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "Zhn6JRBg8"
+    },
+    {
+      "expression": "*.spotify.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "2QoZQyaRB"
+    },
+    {
+      "expression": "*.virustotal.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "73zTD7CXlE"
+    },
+    {
+      "expression": "*.youtube.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "iL-pyAvAHq"
+    },
+    {
+      "expression": "accounts.google.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "P_RswIk65"
+    },
+    {
+      "expression": "amazon.in",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "pSuohhEs7"
+    },
+    {
+      "expression": "app.grammarly.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "DTbO5RJvn"
+    },
+    {
+      "expression": "atavi.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "GDZ-N2obh"
+    },
+    {
+      "expression": "dropbox.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "CZ6o7hb3K"
+    },
+    {
+      "expression": "ecosia.org",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "dBx2NbmqX"
+    },
+    {
+      "expression": "facebook.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "WzJa1p2YA"
+    },
+    {
+      "expression": "flipkart.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "3j5r75O9I"
+    },
+    {
+      "expression": "getpocket.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "1swT81YNs"
+    },
+    {
+      "expression": "gingersoftware.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "c31UVleOt"
+    },
+    {
+      "expression": "github.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "ZGdelIfOy"
+    },
+    {
+      "expression": "google.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "vn46UOwjK"
+    },
+    {
+      "expression": "languagetool.org",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "cNdsMutoi"
+    },
+    {
+      "expression": "linguix.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "Y3XuhtOcO"
+    },
+    {
+      "expression": "login.live.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "C7Ci8j-df"
+    },
+    {
+      "expression": "microsoft.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "oMRIh9mCO"
+    },
+    {
+      "expression": "office.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "MLq_TtydO"
+    },
+    {
+      "expression": "open.spotify.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "YmSbXoAqu9"
+    },
+    {
+      "expression": "outlook.live.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "k0CAMdasT"
+    },
+    {
+      "expression": "papaly.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "EbtvBT1KD"
+    },
+    {
+      "expression": "virustotal.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "yQjM5N5hG"
+    },
+    {
+      "expression": "youtube.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "lJDUwB60c"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+app.grammarly.com
+linguix.com
+m.atavi.com
+myaccount.google.com
+papaly.com
+www.facebook.com
+www.google.com
+www.virustotal.com
+

@@ -1,0 +1,20 @@
+Brave:
+----------------
+Ecosia
+uBlock Origin
+Privacy Badger
+Bitwarden
+Grammarly
+Privacy Pass
+Cookie AutoDelete (CAD Team)
+Floccus Bookmark Manager: https://floccus.org/
+Google Play: https://play.google.com/store/apps/details?id=org.handmadeideas.floccus
+F-Droid: https://f-droid.org/en/packages/org.handmadeideas.floccus/
+(NOTE on Floccus: Always grab a copy of the
+existing *.xbel files
+from the Google Drive/Nextcloud/WebDAV instance
+before adding/removing devices.
+You'll have an emergency offline
+backup of your existing
+bookmark files if something goes wrong
+in the process of adding/removing devices.)

@@ -1,0 +1,504 @@
+{
+  "auto_actualize_checkbox": true,
+  "delete_all_on_restart": true,
+  "protected_cookies": {
+    ".account.microsoft.com": [
+      "MSFPC",
+      "ANON",
+      "NAP"
+    ],
+    "accounts.google.com": [
+      "SMSV",
+      "ACCOUNT_CHOOSER",
+      "__Host-GAPS",
+      "LSID",
+      "__Host-1PLSID",
+      "__Host-3PLSID"
+    ],
+    "myaccount.google.com": [
+      "OSID",
+      "__Secure-OSID",
+      "OTZ"
+    ],
+    "mail.google.com": [
+      "GMAIL_STAT_c6ce",
+      "GMAIL_STAT_24a6",
+      "GMAIL_STAT_a935",
+      "GMAIL_STAT_f728",
+      "GMAIL_STAT_3fc0",
+      "GMAIL_STAT_e1ea",
+      "GMAIL_STAT_a34e",
+      "GMAIL_STAT_4e71",
+      "OSID",
+      "__Secure-OSID",
+      "__Host-GMAIL_SCH_GMN",
+      "__Host-GMAIL_SCH_GMS",
+      "__Host-GMAIL_SCH_GML",
+      "COMPASS",
+      "GMAIL_STAT_7f8f",
+      "GMAIL_IMP"
+    ],
+    ".google.com": [
+      "NID",
+      "SEARCH_SAMESITE",
+      "SID",
+      "__Secure-1PSID",
+      "__Secure-3PSID",
+      "HSID",
+      "SSID",
+      "APISID",
+      "SAPISID",
+      "__Secure-1PAPISID",
+      "__Secure-3PAPISID",
+      "CONSISTENCY",
+      "OGPC",
+      "OGP",
+      "AEC",
+      "1P_JAR",
+      "SIDCC",
+      "__Secure-1PSIDCC",
+      "__Secure-3PSIDCC"
+    ],
+    ".docs.google.com": [
+      "S",
+      "COMPASS"
+    ],
+    "contacts.google.com": [
+      "OTZ"
+    ],
+    "ogs.google.com": [
+      "OTZ"
+    ],
+    "www.google.com": [
+      "OTZ",
+      "DV"
+    ],
+    "myactivity.google.com": [
+      "OSID",
+      "__Secure-OSID",
+      "OTZ"
+    ],
+    "drive.google.com": [
+      "OSID",
+      "__Secure-OSID",
+      "COMPASS"
+    ],
+    "chat-dl.google.com": [
+      "OSID",
+      "__Secure-OSID",
+      "OTZ",
+      "COMPASS"
+    ],
+    "play.google.com": [
+      "OSID",
+      "__Secure-OSID",
+      "OTZ"
+    ],
+    "calendar.google.com": [
+      "OSID",
+      "__Secure-OSID",
+      "COMPASS"
+    ],
+    "calendar-pa.clients6.google.com": [
+      "COMPASS"
+    ],
+    "tasks-pa.clients6.google.com": [
+      "COMPASS"
+    ],
+    ".google.co.in": [
+      "AEC",
+      "OGPC",
+      "SID",
+      "__Secure-1PSID",
+      "__Secure-3PSID",
+      "HSID",
+      "SSID",
+      "APISID",
+      "SAPISID",
+      "__Secure-1PAPISID",
+      "__Secure-3PAPISID",
+      "1P_JAR",
+      "SEARCH_SAMESITE",
+      "NID"
+    ],
+    "ogs.google.co.in": [
+      "OTZ"
+    ],
+    ".live.com": [
+      "mkt",
+      "wlfonts",
+      "wlidperf",
+      "wla42",
+      "MSPAuth",
+      "MSPProf",
+      "WLSSC",
+      "MH",
+      "ANON",
+      "NAP",
+      "PPLState"
+    ],
+    "outlook.live.com": [
+      "ClientId",
+      "OptInH",
+      "RoutingKeyCookie",
+      "X-OWA-RedirectHistory"
+    ],
+    ".login.live.com": [
+      "MSPPre",
+      "MSCC",
+      "SDIDC",
+      "MSPSoftVis",
+      "MSPCID",
+      "JSHP"
+    ],
+    "office.live.com": [
+      "s_id"
+    ],
+    "onedrive.live.com": [
+      "MicrosoftApplicationsTelemetryDeviceId",
+      "MicrosoftApplicationsTelemetryFirstLaunchTime",
+      "msa_auth%3A-38344522869487528018079679341273570222"
+    ],
+    "login.live.com": [
+      "__Host-MSAAUTHP"
+    ],
+    ".quoracdn.net": [
+      "__cf_bm"
+    ],
+    "teejeetech.com": [
+      "wmc_ip_info",
+      "wmc_current_currency",
+      "wmc_current_currency_old"
+    ],
+    ".grammarly.com": [
+      "gnar_containerId",
+      "ga_clientId",
+      "tdi",
+      "isGrammarlyUser",
+      "funnel_firstTouchUtmSource",
+      "grauth",
+      "csrf-token",
+      "redirect_location",
+      "funnelType",
+      "browser_info",
+      "experiment_groups"
+    ],
+    "capi.grammarly.com": [
+      "sticky",
+      "AWSALBAPP-0",
+      "AWSALBAPP-1",
+      "AWSALBAPP-2",
+      "AWSALBAPP-3"
+    ],
+    "en.wikipedia.org": [
+      "PHP_ENGINE",
+      "WMF-Last-Access",
+      "enwikiwmE-sessionTickLastTickTime",
+      "enwikiwmE-sessionTickTickCount"
+    ],
+    ".wikipedia.org": [
+      "WMF-Last-Access-Global"
+    ],
+    "commons.wikimedia.org": [
+      "WMF-Last-Access",
+      "commonswikiwmE-sessionTickLastTickTime",
+      "commonswikiwmE-sessionTickTickCount"
+    ],
+    "login.wikimedia.org": [
+      "WMF-Last-Access"
+    ],
+    "meta.wikimedia.org": [
+      "WMF-Last-Access"
+    ],
+    ".microsoft.com": [
+      "MC1",
+      "mbox",
+      "AMCV_EA76ADE95776D2EC7F000101%40AdobeOrg",
+      "ak_bmsc",
+      "MSCC",
+      "display-culture",
+      "bm_sv"
+    ],
+    "www.microsoft.com": [
+      "akacd_OneRF",
+      "MicrosoftApplicationsTelemetryDeviceId",
+      "ai_session"
+    ],
+    "account.microsoft.com": [
+      "AMCSecAuthJWT",
+      "authBounced",
+      "AMC-MS-CV",
+      "MicrosoftApplicationsTelemetryDeviceId",
+      "ai_session"
+    ],
+    ".geeksforgeeks.org": [
+      "gfg_theme",
+      "gfg_nluid",
+      "AKA_A2"
+    ],
+    "www.geeksforgeeks.org": [
+      "guest"
+    ],
+    "ladyfreethinker.org": [
+      "pum_alm_pages_viewed",
+      "pum_alm_first_activity",
+      "pum_alm_last_activity"
+    ],
+    ".spotify.com": [
+      "sp_m",
+      "sp_new",
+      "sp_landing",
+      "sp_landingref",
+      "OptanonAlertBoxClosed",
+      "eupubconsent-v2",
+      "sp_dc",
+      "sp_key",
+      "sp_t",
+      "OptanonConsent"
+    ],
+    "open.spotify.com": [
+      "sp_pfhp"
+    ],
+    "community.spotify.com": [
+      "LithiumCookiesAccepted",
+      "VISITOR_BEACON",
+      "AWSALB",
+      "AWSALBCORS",
+      "LithiumVisitor"
+    ],
+    "accounts.spotify.com": [
+      "__Host-device_id",
+      "__Host-sp_csrf_sid"
+    ],
+    "support.mozilla.org": [
+      "csrftoken",
+      "session_id"
+    ],
+    "addons.mozilla.org": [
+      "taarId"
+    ],
+    ".youtube.com": [
+      "VISITOR_INFO1_LIVE",
+      "LOGIN_INFO",
+      "ST-3i2xoq",
+      "ST-cyc47d",
+      "ST-11pw7rd",
+      "ST-cyc7wu",
+      "ST-h7kuex",
+      "ST-10z52df",
+      "ST-10bezhc",
+      "ST-1xi1w6u",
+      "ST-k7y7md",
+      "ST-1vrezg4",
+      "ST-2tlw80",
+      "ST-y8tf2x",
+      "ST-x1yurw",
+      "ST-1r7hq8p",
+      "ST-528w8o",
+      "ST-otd72n",
+      "ST-u70qjt",
+      "ST-hv1k6i",
+      "ST-150jkj6",
+      "ST-1cr7iyv",
+      "ST-fyiboq",
+      "ST-tu4880",
+      "ST-4c99a0",
+      "ST-liz5vd",
+      "ST-1926h2a",
+      "ST-a5xttv",
+      "ST-1ra9thx",
+      "ST-vhfbvf",
+      "ST-8lgcqq",
+      "ST-1ydmra1",
+      "ST-1ysjztn",
+      "ST-y2fhgi",
+      "ST-1iv2pa2",
+      "ST-8e4qrh",
+      "ST-wolp4y",
+      "ST-kx5tr9",
+      "ST-m3a19z",
+      "ST-bmqcxd",
+      "ST-1mtk6o3",
+      "ST-5dqcp7",
+      "ST-fhismq",
+      "ST-1bsk050",
+      "ST-dcie9h",
+      "ST-pi6l7c",
+      "SID",
+      "__Secure-1PSID",
+      "__Secure-3PSID",
+      "HSID",
+      "SSID",
+      "APISID",
+      "SAPISID",
+      "__Secure-1PAPISID",
+      "__Secure-3PAPISID",
+      "ST-9djc5v",
+      "ST-1tftj34",
+      "ST-ho7qo8",
+      "CONSISTENCY",
+      "ST-83n2dg",
+      "PREF",
+      "ST-1b",
+      "SIDCC",
+      "__Secure-1PSIDCC",
+      "__Secure-3PSIDCC"
+    ],
+    ".microsoft.github.io": [
+      "MSCC"
+    ],
+    ".papaly.com": [
+      "remember_user_token"
+    ],
+    "papaly.com": [
+      "ab_test_i18n_en_landing"
+    ],
+    "login.microsoftonline.com": [
+      "buid",
+      "fpc",
+      "clrc"
+    ],
+    ".login.microsoftonline.com": [
+      "brcap"
+    ],
+    "www.ecosia.org": [
+      "ECEI"
+    ],
+    ".ecosia.org": [
+      "__cf_bm",
+      "ECCC",
+      "ECFG",
+      "lastReadNotificationTimestamp",
+      "ECSAI"
+    ],
+    "c.happycodings.com": [
+      "ezds",
+      "ezohw",
+      "ezux_lpl_284026"
+    ],
+    ".amazon.in": [
+      "session-id",
+      "session-id-time",
+      "i18n-prefs",
+      "ubid-acbin",
+      "session-token"
+    ],
+    "www.amazon.in": [
+      "csm-hit"
+    ],
+    "www.office.com": [
+      "OH.FLID",
+      "OhpToken",
+      "UserIndex",
+      "OhpAuth",
+      "AjaxSessionKey",
+      "userid",
+      "p.DisplayCulture",
+      "OH.DCAffinity",
+      "PersonalizationCookie"
+    ],
+    ".office.com": [
+      "MUID"
+    ],
+    ".wikia.com": [
+      "wikia_beacon_id",
+      "_b2",
+      "wikia_session_id"
+    ],
+    "www.dropbox.com": [
+      "gvc",
+      "__Host-js_csrf",
+      "__Host-ss"
+    ],
+    ".dropbox.com": [
+      "locale",
+      "_iidt",
+      "t",
+      "bjar",
+      "blid",
+      "db-help-center-uid",
+      "last_active_role"
+    ],
+    ".www.dropbox.com": [
+      "jar",
+      "lid",
+      "trusted_1267886400"
+    ],
+    "en.wiktionary.org": [
+      "WMF-Last-Access",
+      "enwiktionarywmE-sessionTickLastTickTime",
+      "enwiktionarywmE-sessionTickTickCount",
+      "preferencesEditorJs"
+    ],
+    ".wiktionary.org": [
+      "WMF-Last-Access-Global"
+    ],
+    "www.virustotal.com": [
+      "VT_SESSION_ID",
+      "VT_SESSION_HASH",
+      "VT_AUGMENT"
+    ],
+    ".github.com": [
+      "_octo",
+      "logged_in"
+    ],
+    "gitlab.com": [
+      "_gitlab_session",
+      "sidebar_collapsed"
+    ],
+    ".flipkart.com": [
+      "T",
+      "gpv_pn",
+      "gpv_pn_t",
+      "AMCV_17EB401053DAF4840A490D4C%40AdobeOrg",
+      "S",
+      "SN"
+    ],
+    "github.com": [
+      "_device_id",
+      "has_recent_activity"
+    ],
+    "www.gingersoftware.com": [
+      "gtmInitFired",
+      "countCategory",
+      "_pbjs_userid_consent_data"
+    ],
+    ".gingersoftware.com": [
+      "experiment_ginger_132H2W59d",
+      "_ramjsShID",
+      "authToken",
+      "dbTable"
+    ],
+    ".www.ecosia.org": [
+      "ECHA",
+      "ECBT"
+    ],
+    ".facebook.com": [
+      "sb",
+      "datr",
+      "locale",
+      "fr",
+      "wd"
+    ],
+    ".linguix.com": [
+      "user_uuid",
+      "XSRF-TOKEN",
+      "remember_web_7bc939b80bdc95dcf67a1c0034cacee9e23a00c9",
+      "acut",
+      "_linguix_com",
+      "amp_050aec"
+    ],
+    "languagetool.org": [
+      "remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d",
+      "XSRF-TOKEN",
+      "laravel_session"
+    ],
+    ".atavi.com": [
+      "PHPSESSID",
+      "toppage-locale",
+      "toppage-locale-tmp",
+      "referrer-real"
+    ]
+  },
+  "skin": "default"
+}
