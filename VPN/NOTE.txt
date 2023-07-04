@@ -1,0 +1,18 @@
+Create a text file called 'pass.txt'. Fill it with the
+credentials you received from the VPN Provider.
+Write the username in the first line and the password
+in the second line. Don't leave any blank lines.
+
+pass.txt
+
+username
+password
+
+Add a blank line to the *.ovpn config file.
+Write the following line at the end of the
+OpenVPN config file.
+
+auth-user-pass pass.txt
+
+You'll have to type only your admin (sudo) password
+each time you connect to the VPN server.
