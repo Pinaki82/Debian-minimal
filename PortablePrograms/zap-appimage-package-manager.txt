@@ -1,0 +1,181 @@
+Zap:
+
+An AppImage package manager.
+
+Homepage: https://zap.srev.in/
+GitHub: https://github.com/srevinsaju/zap
+
+Installation (use any Terminal Emulator):
+-------------------------------------------------------------------------
+wget https://github.com/srevinsaju/zap/releases/download/v2-continuous/zap -O ~/.local/bin/zap chmod +x ~/.local/bin/zap zap init
+-------------------------------------------------------------------------
+
+Configure Zap interactively:
+
+-------------------------------------------------------------------------
+zap init
+-------------------------------------------------------------------------
+
+Run the daemon (zapd) that checks for updates in the background.
+
+-------------------------------------------------------------------------
+zap daemon --install
+-------------------------------------------------------------------------
+
+Search AppImage packages from Zap's database:
+
+-------------------------------------------------------------------------
+zap search
+-------------------------------------------------------------------------
+
+Install apps packaged in AppImage containers using Zap:
+
+-------------------------------------------------------------------------
+zap install firefox
+-------------------------------------------------------------------------
+
+Update an AppImage package with Zap:
+
+-------------------------------------------------------------------------
+zap update firefox
+-------------------------------------------------------------------------
+
+Uninstall an AppImage installed by Zap:
+
+-------------------------------------------------------------------------
+zap remove firefox
+-------------------------------------------------------------------------
+zap remove FreeCAD
+-------------------------------------------------------------------------
+
+Update all AppImage apps installed with Zap in one go:
+
+-------------------------------------------------------------------------
+zap upgrade
+-------------------------------------------------------------------------
+
+Getting Help:
+
+-------------------------------------------------------------------------
+zap --help
+-------------------------------------------------------------------------
+
+Search online for AppImages:
+
+https://g.srev.in/get-appimage/
+https://appimage.github.io/
+
+By default, Zap installs packages into
+
+-------------------------------------------------------------------------
+$HOME/.local/share/zap/v2/
+-------------------------------------------------------------------------
+
+and, creates a symbolic link to the apps in
+
+-------------------------------------------------------------------------
+$HOME/.local/bin/
+-------------------------------------------------------------------------
+
+Backing up AppImage files:
+
+You can keep a backup of the installed AppImage files using
+software suits like FreeFileSync (file synchronisation utility)
+https://freefilesync.org/
+or Grsync (another one in this niche).
+Remember that these two suits
+are not incremental file backup server utilities
+with git history support.
+I knew about FreeFileSync much before I needed to
+install it on Linux. And the same goes for
+Grsync's Cygwin port, a copy of an older version
+can be found on Sourceforge.
+https://sourceforge.net/projects/grsync-win/
+I'm glad that these two are
+also available here in the Linux world.
+It's not that I didn't use Linux before.
+I didn't need these two apps
+since I didn't try to use Linux as a daily driver
+on a bare-metal physical hardware after
+the Ubuntu 9.04/10.04/14.04 era.
+
+-------------------------------------------------------------------------
+/home/YOUR_USERNAME/.local/bin/
+<==>
+/media/YOUR_USERNAME/LINUX_BAK/XubuntuRunningBackup/home/.local/bin/
+-------------------------------------------------------------------------
+
+And,
+
+-------------------------------------------------------------------------
+/home/YOUR_USERNAME/.local/share/zap/v2/
+<==>
+/media/YOUR_USERNAME/LINUX_BAK/XubuntuRunningBackup/home/.local/share/zap/v2/
+-------------------------------------------------------------------------
+
+If the AppImage container of an application can
+be downloaded from the
+release section of its GitHub repository, the task of
+installing it will be much easier.
+
+-------------------------------------------------------------------------
+zap install  --github   --from=repository_owner/repository_name    app_name
+-------------------------------------------------------------------------
+
+Examples:
+
+Brave Browser AppImage: https://github.com/srevinsaju/Brave-AppImage
+Here,
+repository_owner -> srevinsaju
+repository_name -> Brave-AppImage
+app_name -> Brave
+
+-------------------------------------------------------------------------
+zap install --github --from=srevinsaju/Brave-AppImage Brave
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+zap install --github --from=srevinsaju/Firefox-AppImage Firefox
+-------------------------------------------------------------------------
+
+Optionally, you may want to skip the 'app_name'
+
+Example:
+
+-------------------------------------------------------------------------
+zap install --github --from=FreeCAD/FreeCAD
+-------------------------------------------------------------------------
+
+Instaling directly from the download link:
+
+-------------------------------------------------------------------------
+zap install  --from https://link-to-the-appimage-file    app_name
+-------------------------------------------------------------------------
+
+Examples:
+
+-------------------------------------------------------------------------
+zap install --from https://gitlab.com/api/v4/projects/24386000/packages/generic/librewolf/105.0.3-1/LibreWolf.x86_64.AppImage LibreWolf
+-------------------------------------------------------------------------
+zap install --from https://github.com/FreeCAD/FreeCAD/releases/download/0.20.1/FreeCAD_0.20-1-2022-08-20-conda-Linux-x86_64-py310.AppImage FreeCAD
+-------------------------------------------------------------------------
+
+Installing from the local storage:
+
+-------------------------------------------------------------------------
+zap install   app_name    app_location_on_your_hdd/appimage_file
+-------------------------------------------------------------------------
+
+Example:
+
+-------------------------------------------------------------------------
+zap install FreeCAD ~/PortablePrograms/FreeCAD_weekly-builds-28993-2022-06-02-conda-Linux-x86_64-py39.AppImage
+-------------------------------------------------------------------------
+
+
+
+
+
+Another AppImage package manager that I'll have to try.
+
+https://github.com/ivan-hc/AppMan

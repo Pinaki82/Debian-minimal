@@ -1,0 +1,46 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+X-AppInstall-Package=Laeqed
+X-AppInstall-Popcon=1158
+X-AppInstall-Section=main
+
+Name=Laeqed-LATEX-Equation-Editor
+GenericName=Equation-Editor
+Comment=WYSIWYG LATEX Equation Editor written in JAVA
+
+# Keep 'laeqed.sh' and 'Laeqed.jar' in the same directory.
+
+# To launch Laeqed from the system launcher, replace the relative path
+# with the absolute path (where you've stored the JAVA binary Laeqed.jar),
+# e.g.,
+# /bin/bash -c 'cd "$(dirname "$0")"; ./laeqed.sh -windowed' %k
+# with
+# /home/your_username/PortableApps/laeqed.sh, then place a copy of
+# the desktop entry 'Laeqed.desktop' in
+# ~/.local/share/applications.
+
+TryExec=/bin/bash -c 'cd "$(dirname "$0")"; ./laeqed.sh -windowed' %k
+Exec=/bin/bash -c 'cd "$(dirname "$0")"; ./laeqed.sh -windowed' %k
+Terminal=false
+Type=Application
+# Icon=/bin/bash -c 'cd "$(dirname "$0")"; laeqed.png %k
+Icon=/usr/share/icons/gnome/scalable/apps/libreoffice-math.svg
+Categories=Accessories;Education;Office;
+StartupNotify=false
+MimeType=.tex;
+
+X-Ubuntu-Gettext-Domain=app-install-data
+Path=bash -c 'cd $(dirname %0)';
+GenericName=Laeqed
+Name[en_IN]=Laeqed
+
+# Installation:
+# https://www.thrysoee.dk/laeqed/
+# sudo apt install texlive-base
+# sudo apt install dvipng
+# sudo apt install dvisvgm
+# sudo apt install ghostscript
+# JVM Runtime is required by Laeqed
+# sudo apt install default-jre
+

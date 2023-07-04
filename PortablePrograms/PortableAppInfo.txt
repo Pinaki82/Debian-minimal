@@ -1,0 +1,136 @@
+https://appimage.github.io/apps
+
+https://www.appimagehub.com
+
+https://www.appimagehub.com/browse/
+
+https://bintray.com/probono/AppImages
+===================================
+
+FreeFileSync (Portable but not available in AppImage format) -> Synchronize Files and Folders. https://freefilesync.org
+See 'shell/syncthing-file-sync.txt' for synchronising files
+between devices over the local network.
+
+Areca Backup (Incremental/Differential Backup Solution. Now Windows Only.
+Tested on MS Windows 10) -> https://www.areca-backup.org/
+[* For a well-maintained cross-platform solution,
+use Duplicati (https://www.duplicati.com/).
+See 'shell/incremental-backup-duplicati.txt' for details.]
+On MS Windows, Areca provides an installer.
+Areca Backup requires Java Runtime Environment.
+Create an encrypted VeraCrypt volume to keep
+your incremental backup there for more safety.
+See the tutorials   https://www.areca-backup.org/tutorial.php   to learn
+more about Areca Backup.
+FreeFileSync is a "File Synchronisation" solution, whereas Areca Backup is
+an "Incremental/Differential File Backup" Solution (somewhat
+similar to version control systems like GIT).
+Ref: https://www.opensourceforu.com/2021/03/10-best-free-and-open-source-backup-software/    and      https://opensource.com/article/19/3/backup-solutions
+
+App Outlet-1.3.2.AppImage -> An Universal linux app store. https://app-outlet.github.io/
+PeaZip file archiver. Open/extract RAR TAR ZIP files -> Available in DEB, RPM, and TarBall formats -> https://peazip.github.io/
+FontBase Font manager/viewer (MS Windows, Linux, Mac) -> https://fontba.se/ -> Available in AppImage format.
+Archipelago-3.11.0.AppImage -> Archipelago is a terminal emulator built on open web technologies.
+balenaEtcher-1.5.110-x64.AppImage -> Burn images to SD cards & USB drives, safely and easily. https://github.com/balena-io/etcher/releases
+cinelerra-5.1-ub20.04-20201031.x86_64-static.txz (Portable but not available in AppImage format) -> Cinelerra-GG Infinity. Professional Video Editing Software.
+CPU-X-v4.0.1-x86_64.AppImage -> CPU-X is a Free software that gathers information on CPU, motherboard and more. CPU-X is similar to CPU-Z (Windows).
+Flameshot-0.8.5.x86_64.AppImage -> Powerful yet simple to use screenshot software. https://github.com/flameshot-org/flameshot
+GVim-v8.2.1145.glibc2.15-x86_64.AppImage -> Portable version of GVim text editor. https://github.com/vim/vim-appimage/releases/
+KeePassXC-2.6.2-x86_64.AppImage -> Password Manager. https://github.com/keepassxreboot/keepassxc
+LikeTaskManager-x86_64.AppImage -> Tool that mimics the permformance monitoring of windows task manager under linux
+Midori Next Generation-1.1.4.AppImage -> Midori Browser. A lightweight, fast and free web browser. https://astian.org/en/midori-browser 
+MYKI-latest.AppImage -> Password Manager. https://myki.com
+Nextcloud AppImage -> Nextcloud desktop synchronization client for NextCloud-based Cloud Service providers. https://appimage.github.io/Nextcloud or, https://nextcloud.com/install/#install-clients
+pCloud AppImage (official package) -> https://www.pcloud.com/download-free-online-cloud-file-storage.html
+QuickHash-GUI-Linux-v3.2.0.zip (Portable but not available in AppImage format) -> QuickHash GUI is an open-source data hashing tool for Linux, Windows, and Apple Mac OSX with graphical user interface (GUI). https://www.quickhash-gui.org
+ScreenCloud-v1.5.3-x86_64.AppImage -> Screenshot. https://appimage.github.io/ScreenCloud
+Joplin (AppImage) -> Note-taking/(TODO Management) app -> https://joplinapp.org/
+"Joplin is a free, open source note taking and to-do application, which can handle a large number of notes organised into notebooks." "The notes can be synchronised with various cloud services..."
+Standard Notes AppImage -> A free, open-source, and completely encrypted notes app. https://standardnotes.org/extensions?downloaded=linux
+tusk-0.23.0-x86_64.AppImage -> Refined Evernote desktop app (Unofficial/Open-Source). https://appimage.github.io/Tusk
+Unofficial-desktop-client-for-ProtonMail-1.2.1.AppImage -> Unofficial Electron wrapper for ProtonMail. https://appimage.github.io/protonmail-desktop
+Xtreme Download Manager (Portable but available as JAVA Jar application): https://github.com/subhra74/xdm
+LanguageTool -> Proofreading tool. Grammar checker. Alternative to Grammarly. https://languagetool.org
+https://languagetool.org/download/
+https://languagetool.org/download/word2vec/
+jitsi-meet -> Videoconferencing. https://appimage.github.io/jitsi-meet/
+DeaDBeeF Audio Player -> (Portable but not availble in an AppImage package) https://deadbeef.sourceforge.io/download.html
+Mozilla Firefox AppImages -> https://github.com/srevinsaju/Firefox-Appimage
+Tor Browser (TAR Archive)-> https://www.torproject.org/download/
+The Invisible Internet Project i2pdbrowser (Script driven) -> https://github.com/PurpleI2P/i2pdbrowser
+---
+First, make a backup of your existing '/etc/hosts' file.
+sudo cp /etc/hosts /etc/hosts2.backup
+
+Then,
+sudo apt install screen
+cd I2PdBrowserPortable_1.3.3-linux/build/
+chmod +x build
+./build
+cd ../
+cd I2PdBrowserPortable_1.3.3-linux/i2pd/
+chmod +x i2pd
+./i2pd
+cd ../
+./start-i2pd-browser.desktop
+
+If you change your '/etc/hosts', the I2PD browser may refuse to connect to the I2P network.
+In that case, run ./i2pd again.
+If needed, restore the old '/etc/hosts' from the backup:
+sudo mv /etc/hosts2.backup /etc/hosts
+service nscd restart
+To re-download Firefox-I2PD, run ./build
+---
+LibreWolf, the community-maintained fork of Librefox: a privacy and security-focused browser -> https://librewolf.net/
+LibreWolf AppImage -> https://librewolf.net/installation/linux/
+ungoogled-chromium AppImages -> https://github.com/Eloston/ungoogled-chromium
+[Chrome Web Store cannot be put directly in use on Ungoogled Chromium. Install Chrome extensions manually. Download the latest 'chromium-web-store' from https://github.com/NeverDecaf/chromium-web-store and follow the instructions provided here: https://avoidthehack.com/manually-install-extensions-ungoogled-chromium]
+Brave Browser -> https://www.appimagehub.com/p/1411550/
+                 https://github.com/srevinsaju/Brave-AppImage
+Microsoft Edge Chromium AppImage -> https://gitlab.com/linuxappimage/microsoft_edge   | Or, see `shell/ms-edge-ubuntu.txt`
+Vieb (Vim Inspired Electron Browser) AppImage -> https://github.com/Jelmerro/Vieb
+Fast and secure web browser.
+TerminusDB -> Open source, model driven, revision controlled RDF graph database for distributed collaboration -> https://www.appimagehub.com/p/1460811
+Owatron -> Electron based Linux desktop app for Microsoft Outlook and Office 365 -> https://www.appimagehub.com/p/1460805
+QAddApp -> QAddApp is a little GUI Application that helps you integrate AppImages and binaries into your Linux desktop environment -> https://www.appimagehub.com/p/1460804
+Shutter Encoder -> Video, audio and image converter based on FFmpeg -> https://www.appimagehub.com/p/1386376
+Qtractor is an audio/MIDI multi-track sequencer application written in C++ with the Qt framework -> https://www.appimagehub.com/p/1126633
+XnConvert -> A fast, powerful and free cross-platform batch image converter -> https://www.xnview.com/en/xnconvert/#downloads
+XnView MP -> Image Viewer, Image resizer, batch image converter and more -> https://www.xnview.com/en/xnviewmp/#downloads
+SoftMaker FreeOffice (Not open source. Available in Deb package only.) -> https://www.freeoffice.com/en/
+Uninstall SoftMaker FreeOffice:
+--------------------------------------------------------------------------
+https://askubuntu.com/questions/1245114/how-to-uninstall-softmakers-freeoffice-2018
+
+sudo apt purge $(dpkg --list | grep softmaker | awk '{print $2}') --dry-run
+dpkg --list | grep softmaker
+dpkg --list | grep softmaker | awk '{print $2}'
+sudo apt purge --auto-remove $(dpkg --list | grep softmaker | awk '{print $2}')
+--------------------------------------------------------------------------
+
+Glimpse Image Editor -> A fork of GNU Image Manipulation Program (GIMP) -> https://glimpse-editor.org/downloads/
+Mark Text (Offline Markdown Editor) -> "Simple and Elegant Markdown Editor" -> https://github.com/marktext/marktext
+Mark Text Site: https://marktext.app/
+Mark Text Auxiliary ref: https://stackedit.io/
+MeshLab -> (3D Model Viewer) Open source system for processing and editing 3D triangular meshes. -> https://www.meshlab.net/#description
+LibrePCB EDA Software (Circuit/Schematic Designing) -> https://librepcb.org/
+FreeCAD (Parametric 3D CAD Modeler) -> https://www.freecadweb.org/
+OpenSCAD (Script file based graphical CAD environment) -> http://openscad.org/downloads.html#linux
+vidcutter -> A modern yet simple multi-platform video cutter and joiner. -> https://github.com/ozmartian/vidcutter/releases
+Audacity audio editor -> https://www.audacityteam.org/download/linux/
+Krita (2D painting application) -> https://krita.org/en/download/krita-desktop/
+LMMS (audio production software) -> https://lmms.io/download#linux
+KOReader (ebook reader for EPUB, FB2, PDF, azw3 etc.) -> https://github.com/koreader/koreader/releases
+ONLYOFFICE (MS Office compatible alternative
+office productivity
+app) (AppImage available) -> https://www.onlyoffice.com/
+GoldenDict -> https://appimage.github.io/GoldenDict/
+Bitwarden Password Manager -> https://bitwarden.com/download/
+
+
+
+
+
+Find extra AppImage Download Links:
+https://github.com/AppImage/appimage.github.io/tree/master/data
+https://github.com/appimage-packages
