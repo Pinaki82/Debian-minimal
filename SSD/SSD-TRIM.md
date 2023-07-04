@@ -2,7 +2,11 @@
 
 DuckDuckGo: optimize ssd linux
 
-Reference: https://easylinuxtipsproject.blogspot.com/p/ssd.html
+References:
+
+https://easylinuxtipsproject.blogspot.com/p/ssd.html
+
+[ssd - Is TRIM enabled on my Ubuntu 18.04 installation? - Ask Ubuntu](https://askubuntu.com/questions/1034169/is-trim-enabled-on-my-ubuntu-18-04-installation)
 
 ### BIOS and UEFI: Make sure it's set to AHCI
 
@@ -77,9 +81,25 @@ journalctl | grep fstrim.service
 ```
 
 ```
+systemctl status fstrim.service
+```
+
+```
 Jun 21 18:32:11 yourusername-H81M-WW systemd[1]: fstrim.service: Succeeded.
 Sep 15 10:54:10 yourusername-H81M-WW systemd[1]: fstrim.service: Succeeded.
 Sep 16 15:44:44 yourusername-H81M-WW systemd[1]: fstrim.service: Succeeded.
+```
+
+```
+sudo systemctl enable fstrim.service
+```
+
+```
+sudo systemctl start fstrim
+```
+
+```
+journalctl -u fstrim.service
 ```
 
 **C.**
