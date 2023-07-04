@@ -1,0 +1,30 @@
+#**********************************************************#
+# P. S. Gupta's blocklist (START)
+#**********************************************************#
+
+#0.0.0.0 fikfok.com
+#0.0.0.0 web.wh@t$a$$.com
+#0.0.0.0 www.bull$h!tbr0adc@$tc0rp0ration.com
+#0.0.0.0 www.@lljaljeera.com
+#0.0.0.0 www.nationalhatetoday.in
+#0.0.0.0 www.thereligiouspious.com
+#0.0.0.0 www.theantinationalherald.com
+#0.0.0.0 www.foolx.in
+#0.0.0.0 www.fuikr.com
+#0.0.0.0 www.saleyoursoul.in
+#0.0.0.0 twitwister.com
+#0.0.0.0 www.facelock.com
+#0.0.0.0 www.99.com
+#0.0.0.0 www.babysalersandbuyershaven.com
+#0.0.0.0 www.buyliveanimalsandivoryandelephanttusks.com
+#0.0.0.0 www.marketplaceforbuyings(-xslaves.com
+#0.0.0.0 www.b0dysp@bytrainedf(-m@les.com
+
+
+#**********************************************************#
+# P. S. Gupta's blocklist (END)
+#**********************************************************#
+
+# Desclaimer: The listed hostnames are fictional.
+# Any resemblance should be
+# treated as a mere unintentional coincidence.
