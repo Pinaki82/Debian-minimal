@@ -213,6 +213,9 @@ yes | sudo apt install gnome-software && \
 # Install a Firewall:
 yes | sudo apt install gufw && \
 # ------------------------------------------------------------------------------
+# HDD tools
+sudo apt install smartmontools && \
+sudo apt install gsmartcontrol && \
 # Install an Antivirus:
 yes | sudo apt install chkrootkit && \
 # sudo nano /etc/chkrootkit.conf
