@@ -8,6 +8,8 @@ https://easylinuxtipsproject.blogspot.com/p/ssd.html
 
 [ssd - Is TRIM enabled on my Ubuntu 18.04 installation? - Ask Ubuntu](https://askubuntu.com/questions/1034169/is-trim-enabled-on-my-ubuntu-18-04-installation)
 
+[filesystem - Error message enabling fstrim.service - Ask Ubuntu](https://askubuntu.com/questions/1424869/error-message-enabling-fstrim-service)
+
 ### BIOS and UEFI: Make sure it's set to AHCI
 
 Create **EXT4** partition/s during the OS installation.
@@ -38,6 +40,20 @@ Paste the following lines:
 [Timer]
 OnCalendar=
 OnCalendar=daily
+```
+
+Check for the output:
+
+```
+sudo systemctl enable fstrim.service
+```
+
+```
+sudo systemctl start fstrim
+```
+
+```
+journalctl -u fstrim.service
 ```
 
 **Reboot.**
@@ -91,15 +107,31 @@ Sep 16 15:44:44 yourusername-H81M-WW systemd[1]: fstrim.service: Succeeded.
 ```
 
 ```
-sudo systemctl enable fstrim.service
+systemctl status fstrim.timer
 ```
 
-```
-sudo systemctl start fstrim
-```
+Output:
 
 ```
-journalctl -u fstrim.service
+● fstrim.timer - Discard unused blocks once a week
+     Loaded: loaded (/lib/systemd/system/fstrim.timer; enabled; preset: enabled)
+    Drop-In: /etc/systemd/system/fstrim.timer.d
+             └─override.conf
+     Active: active (waiting) since Tue 2023-07-04 15:40:18 IST; 20min ago
+      Until: Tue 2023-07-04 15:40:18 IST; 20min ago
+    Trigger: Wed 2023-07-05 01:02:34 IST; 9h left
+   Triggers: ● fstrim.service
+       Docs: man:fstrim
+
+Jul 04 15:40:18 debian-myusername systemd[1]: Started fstrim.timer - Discard unused b>
+```
+
+Is it working?
+
+Test with one (unrelated) command:
+
+```
+xterm -ls -xrm 'XTerm*selectToClipboard: true'&
 ```
 
 **C.**
