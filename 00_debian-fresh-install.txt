@@ -506,6 +506,350 @@ sudo apt install clangd
 sudo apt install clang-tidy
 sudo apt install clang-tools
 sudo apt install lld
-pip install flawfinder
+pipx install flawfinder
 # https://github.com/friendlyanon/cmake-init
-pip install cmake-init
+pipx install cmake-init
+
+# Description: blackbox testing of Unix command line programs
+# cmdtest black box tests Unix command line tools. Roughly, it is given a
+# script, its input files, and its expected output files. cmdtest runs
+# the script, and checks the output is as expected.
+sudo apt install cmdtest
+# pnpm package manager
+# https://pnpm.io/installation
+curl -fsSL https://get.pnpm.io/install.sh | sh -  
+# other essential development utilities
+sudo apt install cdecl
+sudo apt install cutils
+sudo apt install kitty
+sudo apt install sakura
+# sudo apt install gnome-terminal
+sudo apt install tree
+sudo apt install mc
+sudo apt install xclip
+sudo apt install vim-gtk3
+sudo apt install kate
+sudo apt install cppcheck
+sudo apt install cppcheck-gui
+sudo apt install splint
+sudo apt install cmake cmake-gui
+sudo apt install wget
+sudo apt install unzip
+sudo apt install git
+sudo apt install git-lfs
+
+# https://softwarerecs.stackexchange.com/questions/30351/visualizing-git-diff-linux#30352
+# gitk & git-gui
+# Both can show results graphically when launched from the directory
+# containing .git folder. These are the simplest alternatives
+# to dealing with the command-line diff/merge/commit/stage/push tools.
+# Can be supplementary utilities even when a CUI is preferred over the GUI.
+
+sudo apt install gitk
+sudo apt install git-gui
+sudo apt install giggle
+
+# GUI frontends for Git Version Control System:
+# Gitg is pretty barebone at the moment. Git Cola comes packed with all the
+# bells and whistles needed to control Git from a Graphical User Interface,
+# however, it's a little slower. There are many Git GUI frontends out there,
+# of them, Git Cola holds nothing back from anyone,
+# from a more freedom-friendly perspective.
+# For example, there's a free version of a Git GUI client that doesn't allow
+# free users to deal with private repositories. Git Cola is neatly comparable to
+# advanced GUI clients of the Git VCS like Sourcetree, GitKraken, SmartGit,
+# GitHub Desktop, Gitbox, Tower and others.
+# --------
+# 'qgit' is another excellent Git GUI frontend. In some aspects, it's
+# more flexible than Git Cola.
+# --------
+# I wouldn't recommend any of the GUI frontends of Git since they all come with
+# some inadequacies, thus, all those Git frontends are not yet ready to fully
+# replace Git's terminal interface.
+# GUI Git programs can be used for viewing code history etc.
+# They can quickly draw an overview of a repository and track the history of
+# changed files at a glance.
+# Install any of the following if you are in absolute need of a GUI Git frontend.
+
+# sudo apt install gitg
+# sudo apt install qgit
+# sudo apt install git-cola
+
+# Flowchart diagram designing program
+# https://wiki.gnome.org/Apps/Dia
+# (Windows) http://dia-installer.de/index.html.en
+# sudo apt install dia
+# Dia2Code is a small utility used to generate code from a Dia diagram
+# http://dia2code.sourceforge.net/index.html
+# sudo apt install dia2code
+
+# Below are some (terminal-based) utilities for adding more
+# functionalities to the existing Git installation
+
+sudo apt install git-extras
+sudo apt install git-flow
+sudo apt install diffutils
+sudo apt install diffstat
+
+# Debuggers, code profilers, memory leak testers, build tools,
+# code formatting, code/directory compare applications and more
+
+sudo apt install ddd
+sudo apt install valgrind
+sudo apt install cgdb
+sudo apt install astyle
+sudo apt install universal-ctags
+sudo apt install autoconf
+sudo apt install pkg-config
+sudo apt install libx11-dev
+sudo apt install libglib2.0-doc
+sudo apt install libtool
+sudo apt install autoproject
+sudo apt install autogen
+sudo apt install autotools-dev
+sudo apt install automake
+sudo apt install m4
+sudo apt install make
+sudo apt install ninja-build
+sudo apt install meld
+# sudo apt install kdiff3 (use the latest flatpak version)
+flatpak install org.kde.kdiff3
+
+# 'fldiff' cannot perform merge operations
+# sudo apt install fldiff
+
+# "kdiff3" and "kompare" both are efficient Diff Tools with advanced features.
+# While "meld" is way too slow and lags most of the time on larger files,
+# it has a rich set of features and it's very easy to use.
+# So, "meld" cannot be discarded easily.
+# And, "fldiff" doesn't allow merging. With "fldiff",
+# you can see the differences, not merge them.
+# "meld" is fine for comparing small files side-by-side,
+# also it has a relatively smaller footprint.
+# Among "kdiff3" and "kompare", "kdiff3" is still a preferred choice of many.
+# "kdiff3" and "kompare" occupy mostly the same amount of storage space.
+# "kompare" is around 110 MB, and "kdiff3" is 96 MB (approx).
+# 'kompare' is slightly clumsy.
+# Only install what you need.
+
+# sudo apt install kdiff3 (use the latest flatpak version)
+flatpak install org.kde.kdiff3
+# sudo apt install kompare
+
+# Markdown to HTML etc.
+sudo apt install markdown
+
+# Text search utilities
+sudo apt install regexxer
+# sudo apt install vizigrep
+sudo apt install searchmonkey
+
+# PlatformIO ===========================================================
+# CuteCOM: GUI Serial Monitor
+# https://www.pragmaticlinux.com/2021/11/how-to-monitor-the-serial-port-in-linux/
+sudo apt install cutecom
+
+# Req. by PlatformIO CORE CLI
+
+# yes | sudo apt autoremove brltty
+# or,
+sudo apt purge --auto-remove brltty
+
+yes | sudo apt update
+# https://www.pragmaticlinux.com/2021/11/how-to-monitor-the-serial-port-in-linux/
+sudo apt install -y cutecom
+# https://askubuntu.com/questions/786367/setting-up-arduino-uno-ide-on-ubuntu
+# https://askubuntu.com/questions/781571/how-to-identify-devices-connected-to-serial-port
+# https://unix.stackexchange.com/questions/390184/dmesg-read-kernel-buffer-failed-permission-denied
+# https://0xsuk.github.io/posts/2022-07-19-how-to-install-ch340-on-ubuntu-22.04/
+sudo apt install -y hwinfo
+sudo apt install -y setserial
+pipx install esptool
+
+# Be the root user if needed,
+# sudo su root and then exit root
+# when you've completed the taks as exit
+# sudo usermod -a -G plugdev $USER
+# sudo usermod -a -G dialout $USER
+# https://docs.platformio.org/en/latest/core/userguide/device/cmd_monitor.html#cmd-device-monitor
+# https://docs.platformio.org/en/latest/core/installation/udev-rules.html
+# curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/system/99-platformio-udev.rules | sudo tee /etc/udev/rules.d/99-platformio-udev.rules  && \
+# sudo service udev restart
+# sudo udevadm control --reload-rules
+# sudo udevadm trigger
+# sudo usermod -a -G dialout $USER
+# sudo usermod -a -G plugdev $USER
+# sudo reboot
+# sudo chmod a+rw /dev/ttyUSB0
+# sudo chmod a+rw /dev/ttyS0
+# setserial -g /dev/ttyS0
+# setserial -g /dev/ttyS[0123]
+# sudo sysctl kernel.dmesg_restrict=0
+# sudo reboot
+# echo "ls -l /dev/ttyUSB* /dev/ttyACM* ..."
+# ls -l /dev/ttyUSB* /dev/ttyACM*
+# ls -l /dev/ttyUSB* /dev/ttyACM*
+# ls: cannot access '/dev/ttyACM*': No such file or directory
+# crw-rw-rw- 1 root dialout 188, 0 Mar 20 01:08  /dev/ttyUSB0
+# hwinfo --short
+#
+#                        Serial controller
+#   /dev/ttyUSB0         QinHeng Electronics HL-340 USB-Serial adapter
+# echo "dmesg | egrep --color 'serial|ttyS' ..."
+# dmesg | egrep --color 'serial|ttyS'
+# echo "dmesg | grep tty ..."
+# dmesg | grep tty
+# echo "dmesg | tail -f ..."
+# dmesg | tail -f
+# echo "hwinfo --short ..."
+# hwinfo --short
+# echo "lsusb ..."
+# lsusb
+# echo "ls -l /dev/tty* ..."
+# ls -l /dev/tty*
+# echo "dmesg | grep tty ..."
+# dmesg | grep tty
+######################################################## For PlaltformIO
+
+# GIMP Essentials:
+yes | sudo apt install abr2gbr
+yes | sudo apt install gimp-data-extras
+yes | sudo apt install gimp-gmic
+yes | sudo apt install gimp-gutenprint
+yes | sudo apt install gimp-help-common
+yes | sudo apt install gimp-help-en-gb
+yes | sudo apt install gimp-lensfun
+yes | sudo apt install gimp-plugin-registry
+yes | sudo apt install gimp-texturize
+yes | sudo apt install gtkam-gimp
+yes | sudo apt install icc-profiles
+yes | sudo apt install icc-profiles-free
+
+Fix Snap-installed packages if you find the launchers missing:
+(Snap app icon doesn't appear in menu)
+https://forums.linuxmint.com/viewtopic.php?t=319827
+sudo snap install inkscape
+snap list
+snap run inkscape
+echo $XDG_DATA_DIRS
+ls -l /var/lib/snapd/desktop/applications
+mkdir ~/.local/share/applications/
+cp /var/lib/snapd/desktop/applications/inkscape_inkscape.desktop ~/.local/share/applications/
+chmod 755 ~/.local/share/applications/inkscape_inkscape.desktop 
+
+# Snap Packages:
+sudo snap install gimp
+sudo snap install inkscape
+sudo snap install keepassxc
+sudo snap install vlc
+sudo snap install mediainfo-gui
+sudo snap install vidcutter
+# sudo snap install kompare
+# usage snap run kompare .bashrc .bashrc2
+
+Uninstall a snap package:
+https://askubuntu.com/questions/1130791/how-to-uninstall-a-package-installed-from-snapcraft
+sudo snap remove --purge snapname
+Ex: sudo snap remove --purge kompare
+
+# Flatpak packages
+flatpak install flathub com.github.micahflee.torbrowser-launcher
+flatpak install flathub com.github.Eloston.UngoogledChromium
+Choose a search engine from the setting in Chromium.
+Bookmark:
+https://www.google.com/
+https://www.reddit.com/
+Get the latest LibreOffice:
+Uninstall the old LibreOffice that comes with the OS.
+sudo apt purge --auto-remove libreoffice*
+Install the latest flatpak version:
+flatpak install flathub org.libreoffice.LibreOffice
+# A GUI Flatpak App Permission Manager
+# https://www.makeuseof.com/manage-flatpak-permissions-with-flatseal-linux/
+flatpak install flathub com.github.tchx84.Flatseal
+
+The Suckless ST Terminal Emulator basic package:
+sudo apt install stterm
+
+Terminal Fonts (MUST):
+* Without these fonts, you'll miss the proper console characters and see boxes everywhere.
+sudo apt install fonts-terminus fonts-terminus-otb xfonts-terminus
+sudo apt install xfonts-terminus-dos xfonts-terminus-oblique
+sudo apt install xfonts-mona fonts-firacode fonts-league-mono fonts-agave
+sudo apt install fonts-inconsolata fonts-ricty-diminished
+sudo apt install fonts-jetbrains-mono fonts-anonymous-pro
+sudo apt install fonts-monoid fonts-monoid-halfloose
+sudo apt install fonts-monoid-halftight fonts-monoid-loose fonts-monoid-tight
+sudo apt install fonts-fantasque-sans fonts-hermit
+
+# Bangla/Hindi Support
+apt search bengali
+apt search beng
+apt search hin
+apt search hindi
+https://packages.debian.org/en/stable/fonts-indic
+https://medium.com/the-blog-of-ehsan-nazim/write-bangla-easily-on-debian-9xfce-4470019d6272
+https://askubuntu.com/questions/769391/how-to-fix-bangla-fonts-problem-in-firefox
+https://www.quora.com/How-can-I-install-Hindi-and-other-Indian-language-fonts-on-Kali-Linux
+sudo apt install fonts-indic
+sudo apt install ibus ibus-m17n m17n-db ibus-gtk
+sudo apt install fonts-beng fonts-beng-extra fonts-lohit-beng-bengali firefox-esr-l10n-bn
+Hindi:
+sudo apt install fonts-indic firefox-esr-l10n-hi-in fonts-deva-extra fonts-gargi fonts-lohit-deva
+
+Dictionary support for gnu-aspell (if req.):
+sudo apt install aspell-bn
+sudo apt install aspell-hi
+
+/usr/bin/ibus-daemon -d
+Add these lines to either '.bashrc' or '.bash_aliases'
+----------------------------
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+----------------------------
+IBus Preferences -> Keyboard Shortcuts -> Next Input Method
+<Control><Super>F1
+Bangla Probhat India
+Session and Startup -> Application Autostart -> Add -> Command:
+/usr/bin/ibus-daemon -d
+----------------------------
+Name: IBus daemon
+Description: Start the IBus daemon when Xfce starts
+Command: /usr/bin/ibus-daemon -d
+----------------------------
+Install Fonts in Debian:
+https://vitux.com/how-to-install-custom-fonts-in-debian/
+sudo apt update && sudo apt -y install font-manager
+If you prefer Avro:
+sudo apt install ibus-avro
+Restart the machine.
+
+# Zoom and MS-Teams #
+Zoom.AppImage (if you need it for work):
+https://github.com/probonopd/Zoom.AppImage/releases (it's what I prefer)
+https://flathub.org/apps/us.zoom.Zoom (official)
+flatpak install flathub us.zoom.Zoom
+https://snapcraft.io/zoom-client
+
+Teams App (if you need it for work):
+https://snapcraft.io/teams-for-linux
+sudo snap install teams-for-linux
+https://flathub.org/apps/com.github.IsmaelMartinez.teams_for_linux
+flatpak install flathub com.github.IsmaelMartinez.teams_for_linux
+#                                                    # Zoom and MS-Teams
+
+########################################################################
+Tips and Tricks:
+
+How to List Installed Packages on Debian:
+https://linuxize.com/post/how-to-list-installed-packages-on-debian/
+
+sudo dpkg-query -f '${binary:Package}\n' -W > packages_list.txt
+
+Now that you have the list,
+you can install the same packages
+on your new server with:
+
+sudo xargs -a packages_list.txt apt install
+########################################################################
