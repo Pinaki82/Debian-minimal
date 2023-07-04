@@ -82,11 +82,18 @@ Update the system:
 
 yes | sudo apt update && sudo apt upgrade
 
-
+================================================================================
+===================================== IMPORTANT ================================
 Install basic packages:
+This install script contains the most essential
+packages that you'll end up installing anyway.
 
-Run the BASH Script 'debian_essential.sh' first.
+Run the BASH Script '01_debian_essential.sh' first.
 
+chmod +x 01_debian_essential.sh
+./01_debian_essential.sh
+
+================================================================================
 
 Disable Swap if you have SSDs and more than 3GB of RAM:
 https://www.tecmint.com/disable-swap-partition-in-centos-ubuntu/
@@ -845,6 +852,29 @@ sudo snap install teams-for-linux
 https://flathub.org/apps/com.github.IsmaelMartinez.teams_for_linux
 flatpak install flathub com.github.IsmaelMartinez.teams_for_linux
 #                                                    # Zoom and MS-Teams
+
+
+================================================================================
+===================================== IMPORTANT ================================
+For more packages:
+
+Open the file '02_debian_minimal_packages.sh'.
+
+Comment out/delete the lines listing packages you
+don't need and write your preferred list of packages.
+
+Run the BASH Script '02_debian_minimal_packages.sh'.
+
+chmod +x 02_debian_minimal_packages.sh
+./02_debian_minimal_packages.sh
+
+
+Keep a backup of the modified file since you'll
+need it at the time of reformatting your system.
+
+================================================================================
+
+
 
 ########################################################################
 Tips and Tricks:
