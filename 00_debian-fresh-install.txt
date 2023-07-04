@@ -234,6 +234,18 @@ Range (min-max):
 Appears if selection contains:
 Directories ** (CHECK)
 
+Edit -> Configure custom actions...-> Add (+)
+
+Name: Giggle
+Description: GUI GIT Client
+Submenu:
+Command: giggle %f
+Appearance Conditions TAB:
+File Pattern: *
+Range (min-max):
+Appears if selection contains:
+Directories ** (CHECK)
+
 Find the XFCE Dock at the bottom of the screen.
 Display TAB -> Measurements -> Automatically increase the length (CHECK)
 Items TAB -> Add (+) -> Window Buttons
@@ -438,3 +450,62 @@ sudo apt install ntfs-3g
 
 # Download Manager programs
 sudo apt install uget
+
+Basic build tools you'll need:
+
+sudo apt install build-essential
+sudo apt install patch
+sudo apt install make
+sudo apt install cmake
+sudo apt install diffutils
+
+sudo apt install libomp-dev
+sudo apt install curl
+sudo apt install python3-pip
+python -m pip install --upgrade pip
+sudo apt install pipx
+
+sudo apt install git git-lfs gitk git-gui
+sudo apt install unzip
+sudo apt install wget curl
+
+sudo apt install notepadqq
+
+sudo apt update
+sudo apt list --upgradable
+sudo apt upgrade
+sudo apt update
+sudo apt install -f
+sudo apt install nodejs
+sudo apt install jq
+# Description: package manager for Node.js
+# (npm: Unmet dependencies)
+
+sudo apt install npm
+
+# Update Node.js with NPM (Node Package Manager)
+# https://phoenixnap.com/kb/update-node-js-version
+
+sudo apt install npm
+npm cache clean -f
+sudo npm install -g n
+sudo n stable
+
+How To Compare Two Directories on Linux:
+https://www.baeldung.com/linux/compare-two-directories
+
+sudo apt install meld
+flatpak install org.kde.kdiff3
+sudo apt install mc
+
+You might be interested in the following also:
+
+sudo apt install llvm
+sudo apt install clang
+sudo apt install clangd
+sudo apt install clang-tidy
+sudo apt install clang-tools
+sudo apt install lld
+pip install flawfinder
+# https://github.com/friendlyanon/cmake-init
+pip install cmake-init
