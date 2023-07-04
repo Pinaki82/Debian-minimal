@@ -1,0 +1,84 @@
+MS Windows 10:
+
+Move Essential Directories (Documents, Pictures,
+Music, Downloads, Videos) from %USERPROFILE% to
+a separate partition of another physical hard drive
+for data safety.
+
+Keep your essential data away from the boot drive.
+
+Ref: https://www.howtogeek.com/howto/16226/complete-guide-to-symbolic-links-symlinks-on-windows-or-linux/
+
+You'll have to open MS Windows Command Prompt
+with Administrator Privilege.
+
+WINDOWS + r -> cmd -> CTRL + SHIFT + ENTER
+
+mklink /Option Link Target
+Or,
+mklink /Option Virtual Actual
+
+Options:
+/D -> soft link
+/H -> hard link
+/J -> hard link pointing to a directory (directory junction)
+
+---------------------------------------------------
+Downloads:
+1. Copy contents of "%USERPROFILE%\Downloads" to "R:\Downloads"
+2. Delete "%USERPROFILE%\Downloads"
+3. Create a symlink
+
+mklink /J "C:\Users\YOUR_USERNAME\Downloads" "R:\Downloads"
+
+4. Change the icon
+Icons: https://www.digitalcitizen.life/where-find-most-windows-10s-native-icons/
+%systemroot%\system32\imageres.dll
+
+---------------------------------------------------
+Documents:
+1. Copy contents of "%USERPROFILE%\Documents" to "R:\Documents"
+2. Delete "%USERPROFILE%\Documents"
+3. Create a symlink
+
+mklink /J "C:\Users\YOUR_USERNAME\Documents" "R:\Documents"
+
+4. Change the icon
+Icons: https://www.digitalcitizen.life/where-find-most-windows-10s-native-icons/
+Icon: Documents
+
+---------------------------------------------------
+Pictures:
+1. Copy contents of "%USERPROFILE%\Pictures" to "R:\Pictures"
+2. Delete "%USERPROFILE%\Pictures"
+3. Create a symlink
+
+mklink /J "C:\Users\YOUR_USERNAME\Pictures" "R:\Pictures"
+
+4. Change the icon
+Icons: https://www.digitalcitizen.life/where-find-most-windows-10s-native-icons/
+Icon: Pictures
+
+---------------------------------------------------
+Videos:
+1. Copy contents of "%USERPROFILE%\Videos" to "R:\Videos"
+2. Delete "%USERPROFILE%\Videos"
+3. Create a symlink
+
+mklink /J "C:\Users\YOUR_USERNAME\Videos" "R:\Videos"
+
+4. Change the icon
+Icons: https://www.digitalcitizen.life/where-find-most-windows-10s-native-icons/
+Icon: Videos
+
+---------------------------------------------------
+Music:
+1. Copy contents of "%USERPROFILE%\Music" to "R:\Music"
+2. Delete "%USERPROFILE%\Music"
+3. Create a symlink
+
+mklink /J "C:\Users\YOUR_USERNAME\Music" "R:\Music"
+
+4. Change the icon
+Icons: https://www.digitalcitizen.life/where-find-most-windows-10s-native-icons/
+Icon: Music
