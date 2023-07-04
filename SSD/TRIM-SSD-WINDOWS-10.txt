@@ -1,0 +1,45 @@
+Open CMD in Admin mode:
+1. Windows Key + r (Run Prompt)
+2. Type cmd
+3. CTRL+SHIFT+ENTER
+
+Check:
+
+fsutil behavior query DisableDeleteNotify
+
+Apply:
+
+fsutil behavior set DisableDeleteNotify 0
+
+Ref: https://www.windowscentral.com/how-ensure-trim-enabled-windows-10-speed-ssd-performance
+
+Disable Auto-Defrag on SSDs:
+____________________________
+Windows 10 doesn't perform traditional defragmentation
+when the OS finds an SSD drive.
+Instead, it sends 'TRIM' hints for the entire volume.
+A traditional defrag is not performed on SSDs in Windows 11/10/8.
+However, if you want to take complete control over
+your system in regards to defragmentation,
+open up a Command-Prompt (CMD.EXE)
+with Administrator Privilege (WINDOWS+R -> cmd -> CTRL+SHIFT+ENTER),
+then type,
+
+
+schtasks /Change /DISABLE /TN "\Microsoft\Windows\Defrag\ScheduledDefrag"
+
+
+Then hit ENTER.
+
+Look here (https://superuser.com/questions/1210453/windows-10-disable-automatic-defragmentation)
+for more details.
+
+You'll have to manually TRIM your SSDs and
+manually defrag your Mechanical Hard Drives.
+
+Run trim-ssd.BAT
+Find it in the folder shell/trim-ssd.BAT.txt
+Rename the file before using it.
+Another option to TRIM SSDs from the GUI:
+Start Menu -> Settings -> Storage (on the left panel) -> Optimize Drives ->
+-> Select the drive -> Optimize
