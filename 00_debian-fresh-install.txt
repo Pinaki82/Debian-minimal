@@ -297,9 +297,16 @@ Exit su:
 exit
 sudo reboot now
 
+Flatpak Example:
 Install MS Windows layer translator, Bottle from Flatpak:
 flatpak install flathub com.usebottles.bottles
 flatpak run com.usebottles.bottles
+
+Uninstall a flatpak app:
+https://ubuntuhandbook.org/index.php/2021/06/manage-flatpak-apps-ubuntu/
+flatpak list --app
+flatpak uninstall --delete-data app-id
+Ex: flatpak uninstall --delete-data com.github.dail8859.NotepadNext
 
 Install a Firewall:
 yes | sudo apt install gufw
@@ -853,3 +860,4 @@ on your new server with:
 
 sudo xargs -a packages_list.txt apt install
 ########################################################################
+
