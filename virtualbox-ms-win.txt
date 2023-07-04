@@ -1,0 +1,107 @@
+If you're on a VM (Host -MS-Windows, Guest - Debian),
+you should see this instruction.
+
+Virtualbox Guest Addition:
+================= NOT NEEDED
+https://linuxize.com/post/how-to-install-virtualbox-guest-additions-on-debian-10/
+
+sudo apt update
+sudo apt install build-essential dkms module-assistant linux-headers-$(uname -r)
+sudo sh ./VBoxLinuxAdditions.run --nox11
+sudo shutdown -r now
+================= NOT NEEDED
+
+Mount the Guest Addition CD:
+How To Install Debian 12 in VirtualBox | Debian Linux 2023: Ksk Royal:
+https://youtu.be/MxIAyAELqu4
+Create a folder 'guestaddition' in the 'Downloads' folder.
+mkdir ~/Downloads/guestaddition
+Copy everything into the folder 'guestaddition'.
+Enter ~/Downloads/guestaddition.
+Open a Terminal Emulator there.
+
+sudo nano /etc/apt/sources.list
+deb cdrom:[Debian GNU/Linux 12.0.0 _Bookworm_ -of
+Comment out the line (# is used for comments in BASH):
+#deb cdrom:[Debian GNU/Linux 12.0.0 _Bookworm_ -of
+
+yes | sudo apt update && sudo apt upgrade
+yes | sudo apt install build-essential dkms module-assistant linux-headers-$(uname -r)
+
+sudo mkdir -p /lib/modules/$(uname -r)/build/include/drm
+sudo touch /lib/modules/$(uname -r)/build/include/drm/drm_rect.h
+
+sudo chmod 777 VBoxLinuxAdditions.run
+sudo ./VBoxLinuxAdditions.run
+
+If fails,
+
+sudo su root
+
+Then run,
+
+sudo ./VBoxLinuxAdditions.run
+
+Exit su:
+exit
+
+
+
+Display Resolution:
+https://stackoverflow.com/questions/47391669/xrandr-displaying-failed-to-get-size-of-gamma-for-output-default
+https://superuser.com/questions/923313/increase-resolution-for-debian-guest-in-virtualbox
+https://stackoverflow.com/questions/47391669/xrandr-displaying-failed-to-get-size-of-gamma-for-output-default
+https://askubuntu.com/questions/441040/failed-to-get-size-of-gamma-for-output-default-when-trying-to-add-new-screen-res
+
+sudo nano /etc/default/grub
+Add,
+GRUB_GFXMODE=1024x576
+
+sudo update-grub
+sudo update-grub2
+
+xrandr -s 1024x576
+
+
+xrandr
+
+cvt 1300 670 60
+
+Modeline "1304x670_60.00"   70.25  1304 1368 1496 1688  670 673 683 696 -hsync +vsync
+
+xrandr --newmode "1304x670_60.00"   70.25  1304 1368 1496 1688  670 673 683 696 -hsync +vsync
+
+
+xrandr --newmode "1920x1080_60.00"  172.80  1920 2040 2248 2576  1080 1081 1084 1118  -HSync +Vsync
+
+xrandr --newmode "[target_resolution]_60.00" -hsync +vsync
+
+xrandr --newmode "1024x576_60.00" -hsync +vsync
+
+
+xrandr --addmode VBOX0 "1920x1080_60.00"
+xrandr --output VBOX0 --mode 1920x1080_60.00
+
+
+https://superuser.com/questions/923313/increase-resolution-for-debian-guest-in-virtualbox
+
+sudo mkdir -p /lib/modules/$(uname -r)/build/include/drm
+sudo touch /lib/modules/$(uname -r)/build/include/drm/drm_rect.h
+
+https://itnixpro.com/quickly-install-virtualbox-guest-additions-on-debian-12-vm/
+sudo apt update
+sudo apt install build-essential dkms module-assistant linux-headers-$(uname -r)
+systemctl reboot -i
+uname -r
+sudo dpkg -l | grep linux-headers
+
+ii  linux-headers-6.1.0-9-amd64           6.1.27-1                        amd64        Header files for Linux 6.1.0-9-amd64
+ii  linux-headers-6.1.0-9-common          6.1.27-1                        all          Common header files for Linux 6.1.0-9
+ii  linux-headers-amd64                   6.1.27-1                        amd64        Header files for Linux amd64 configuration (meta-package)
+
+apt-cache policy virtualbox-guest-additions-iso
+yes | sudo apt install virtualbox-guest-additions-iso
+
+
+Virtualbox Shared Folder Permission:
+sudo usermod -aG vboxsf $(whoami)
