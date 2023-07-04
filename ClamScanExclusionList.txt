@@ -1,17 +1,17 @@
-/ home / YOURUSERNAME / Arduino /
+/home/YOURUSERNAME/Arduino/
 "/home/YOURUSERNAME/Browser Settings/"
 "/home/YOURUSERNAME/cinelerra-5.1-ub20.04-20201031.x86_64-static/"
-/ home / YOURUSERNAME / Desktop /
-/ home / YOURUSERNAME / Documents /
+/home/YOURUSERNAME/Desktop/
+/home/YOURUSERNAME/Documents/
 "/home/YOURUSERNAME/.themes/"
-/ home / YOURUSERNAME / Music /
-/ home / YOURUSERNAME / Pictures /
-/ home / YOURUSERNAME / Pictures /
-/ home / YOURUSERNAME / PortablePrograms /
-/ home / YOURUSERNAME / Public /
-/ home / YOURUSERNAME / Templates /
-/ home / YOURUSERNAME / Videos /
-/ home / YOURUSERNAME / Xubuntu_General /
+/home/YOURUSERNAME/Music/
+/home/YOURUSERNAME/Pictures/
+/home/YOURUSERNAME/Pictures/
+/home/YOURUSERNAME/PortablePrograms/
+/home/YOURUSERNAME/Public/
+/home/YOURUSERNAME/Templates/
+/home/YOURUSERNAME/Videos/
+/home/YOURUSERNAME/Xubuntu_General/
 "/home/YOURUSERNAME/.arduino15/"
 "/home/YOURUSERNAME/.arduinoIDE/"
 "/home/YOURUSERNAME/.config/"

@@ -1,0 +1,622 @@
+ARM-GCC, Dr. Memory, and others.
+
+
+Add applications stored in non-standard locations to
+the system search path.
+
+
+ARM:
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+NOTE: If you have followed an older version of this instruction,
+please delete the lines below from your .bashrc
+
+------------------------------------------------------------------
+mousepad ~/.bashrc
+------------------------------------------------------------------
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # #
+# GNU Toolchains for ARM compiler
+# # # # # # # # # # # # # # # # # # # # # # # # # # #
+PATH=$PATH:"~/gcc-arm-none-eabi-10-2020-q4-major/bin/"
+# # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+Don't forget to create a new blank line and
+leave it intact as before.
+Save changes and quit the editor. Reload .bashrc,
+------------------------------------------------------------------
+source ~/.bashrc
+mousepad ~/.config/fish/config.fish
+------------------------------------------------------------------
+Paste the following lines (delete the path to ARM-GCC we added
+previously)
+
+------------------------------------------------------------------
+set PATH $PATH /usr/local/bin
+export PATH
+function ll
+    ls -lh $argv
+end
+------------------------------------------------------------------
+Don't forget to create a new blank line.
+Reload the file "config.fish" as usual.
+------------------------------------------------------------------
+source ~/.config/fish/config.fish
+------------------------------------------------------------------
+
+We don't need ARM-GCC in .bashrc and config.fish to clutter up
+the terminal's search list, because we will create symbolic links
+to the ARM compiler binary executables in /usr/bin/
+to achieve guaranteed success without any trouble.
+Although 'sudo chmod -R 755 *' will give permission to the required
+executable files, the compiler should work from the terminal
+even if the path to the compiler is not on the system's
+search path, but I noticed that a lot of executable files
+added to the search list of the BASH/FISH shell was slowing down
+my old test laptop. I use old machines to test and benchmark
+performance. As a rule of thumb, if something can work under
+low resources, it will run on any high-end new hardware where
+resources are plenty. What we need are four or five symlinks
+to a few core compiler executables in the system search path.
+
+
+Ref: https://askubuntu.com/questions/1243252/how-to-install-arm-none-eabi-gdb-on-ubuntu-20-04-lts-focal-fossa
+DuckDuckGo search: gcc-arm-none-eabi-10-2020-q4-major-x86_64-linux.tar.bz2 install on ubuntu
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+Installation of GNU Toolchain for ARM compiler
+to cross-compile codes that are written for
+the STM32 family MCU targets,
+e.g., STM32 powered development boards and boards
+with similar microcontrollers
+(e.g. STM32 Nucleo boards, STM32 Blue Pill, etc.):
+
+
+Download the Compiler first.
+
+
+Although we will avoid any GUI IDEs before the onset of any
+little bafflement that can be posed by those
+decorative artefacts (not the makers' tools), an IDE which we
+will refer to is 'Embedded IDE' because it is
+fairly straightforward and provides some assistance
+with some useful download links.
+Unlike other super-bloated extremely infuriating ARM IDEs
+that are super-efficient in adding more to the confusion of
+an already confused user, 'Embedded IDE' takes a rather
+simplistic approach.
+
+
+Nevertheless, command-line tools are much easier
+to use and provide way more flexibility than
+their graphical counterparts. We will be using the command-line
+interfaces of our compiler/burner/debugger.
+
+Visit Embedded IDE's GitHub repository.
+
+https://github.com/martinribelotta/embedded-ide
+https://github.com/ciaa/EmbeddedIDE-templates
+
+Find the download link to ARM-GCC.
+Navigate to the link that follows the latest
+releases found on developer.arm.com.
+
+https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm
+
+Download the tar archive
+'gcc-arm-none-eabi-10-2020-q4-major-x86_64-linux.tar.bz2'
+(or later versions of ARM-GCC)
+(assuming you are on a 64-bit Xubuntu
+on an x86 CPU equipped machine, desktop/laptop).
+Copy the downloaded tar file to your $HOME directory (~/).
+Right-click inside the GUI file manager and select
+'Open Terminal Here'.
+Type:
+------------------------------------------------------------------
+mkdir ~/ARMGCC
+sudo tar xjf gcc-arm-none-eabi-10-2020-q4-major-x86_64-linux.tar.bz2 -C ~/ARMGCC
+------------------------------------------------------------------
+Wait till the archive gets extracted.
+Enter the 'bin' directory (via the terminal emulator),
+------------------------------------------------------------------
+cd ~/ARMGCC/gcc-arm-none-eabi-10-2020-q4-major/
+sudo touch install-script.sh
+sudo mousepad install-script.sh
+------------------------------------------------------------------
+GEdit or any GUI plaintext editor can be used.
+Mousepad comes with XFCE.
+Now paste the following lines.
+Adjust the paths if you use a later version of ARM-GCC.
+------------------------------------------------------------------
+#!/bin/bash
+
+sudo ln -s ~/ARMGCC/gcc-arm-none-eabi-10-2020-q4-major/bin/arm-none-eabi-gcc /usr/bin/arm-none-eabi-gcc
+sudo ln -s ~/ARMGCC/gcc-arm-none-eabi-10-2020-q4-major/bin/arm-none-eabi-g++ /usr/bin/arm-none-eabi-g++
+sudo ln -s ~/ARMGCC/gcc-arm-none-eabi-10-2020-q4-major/bin/arm-none-eabi-gdb /usr/bin/arm-none-eabi-gdb
+sudo ln -s ~/ARMGCC/gcc-arm-none-eabi-10-2020-q4-major/bin/arm-none-eabi-size /usr/bin/arm-none-eabi-size
+sudo ln -s ~/ARMGCC/gcc-arm-none-eabi-10-2020-q4-major/bin/arm-none-eabi-objcopy /usr/bin/arm-none-eabi-objcopy
+
+------------------------------------------------------------------
+You can use any other editor of your choice.
+Mousepad has already been integrated
+into XFCE, so I used it.
+Change the permission parameters so that
+the script can execute.
+------------------------------------------------------------------
+sudo chmod -R 755 install-script.sh
+------------------------------------------------------------------
+Run the script to create symbolic links
+in the system directory /usr/bin/
+------------------------------------------------------------------
+./install-script.sh
+------------------------------------------------------------------
+Authorise the compiler binaries to read/write
+by changing the permission parameters,
+(Ref: https://phoenixnap.com/kb/chmod-recursive)
+------------------------------------------------------------------
+cd bin/
+chmod -R 755 *
+------------------------------------------------------------------
+The star (*) indicates all files, -R implies recursively.
+Install dependencies:
+------------------------------------------------------------------
+sudo apt install libncurses-dev
+whereis libtinfo.so
+whereis libcurses.so
+sudo ln -s /usr/lib/x86_64-linux-gnu/libcurses.so /usr/lib/x86_64-linux-gnu/libncurses.so.5
+sudo ln -s /usr/lib/x86_64-linux-gnu/libtinfo.so /usr/lib/x86_64-linux-gnu/libtinfo.so.5
+------------------------------------------------------------------
+Also, create an uninstallation script:
+------------------------------------------------------------------
+sudo touch uninstall-script.sh
+sudo chmod -R 755 uninstall-script.sh
+------------------------------------------------------------------
+sudo mousepad uninstall-script.sh
+------------------------------------------------------------------
+Paste the contents:
+------------------------------------------------------------------
+#!/bin/bash
+
+sudo rm /usr/bin/arm-none-eabi-gcc
+sudo rm /usr/bin/arm-none-eabi-g++
+sudo rm /usr/bin/arm-none-eabi-gdb
+sudo rm /usr/bin/arm-none-eabi-size
+sudo rm /usr/bin/arm-none-eabi-objcopy
+
+------------------------------------------------------------------
+You will only need the uninstallation script
+if you ever update your compiler.
+
+See whether the new setup finds
+the ARM-GCC compiler in the path,
+------------------------------------------------------------------
+arm-none-eabi-gcc --version
+arm-none-eabi-g++ --version
+arm-none-eabi-gdb --version
+arm-none-eabi-size --version
+arm-none-eabi-objcopy --version
+------------------------------------------------------------------
+
+
+Install additional utilities to upload
+compiled codes (*.bin) to the target boards:
+
+
+------------------------------------------------------------------
+apt search libusb-1.0
+------------------------------------------------------------------
+sudo apt install libusb-1.0-0
+sudo apt install libusb-1.0-doc
+------------------------------------------------------------------
+apt search stlink
+------------------------------------------------------------------
+sudo apt install libstlink1
+sudo apt install stlink-tools
+sudo apt install stlink-gui
+------------------------------------------------------------------
+
+
+The link below came as a boon when
+I first attempted installing ARM-GCC.
+However, I didn't have a chance to test
+any ARM board until now.
+
+https://blog.gypsyengineer.com/en/diy-electronics/a-template-project-for-stm32f103-on-linux.html
+
+I'll buy a ST-LINK/V2 clone with a Blue Pill clone development board
+within a few months if I can garner a little fund for ARM MCU development,
+then I'll update the outcome along with the necessary changes
+that might be needed to reflect here as well.
+I own two Arduino UNO Rev-3 boards though, one of which I built
+five years ago without the USB functionality.
+The original one is used as the ISP.
+
+Associated links:
+https://github.com/artem-smotrakov/stm32f103-template
+
+Other useful links:
+https://github.com/stlink-org/stlink
+DuckDuckGo search: how to install arm gcc for stm32 blue pill on ubuntu
+https://unix.stackexchange.com/questions/3809/how-can-i-make-a-program-executable-from-everywhere
+https://www.howtogeek.com/658904/how-to-add-a-directory-to-your-path-in-linux/
+DuckDuckGo search: Add programs to the path in Linux
+
+
+Test your setup:
+
+Create a folder 'code' in $HOME (i.e., ~/code).
+------------------------------------------------------------------
+mkdir ~/code
+------------------------------------------------------------------
+Download https://github.com/artem-smotrakov/stm32f103-template
+and extract the ARM template makefile project
+into ~/code
+The directrory should look like ~/code/stm32f103-template-master/
+
+However, you need STM32 Standard Peripheral Libraries.
+Namely, 'en.stsw-stm32054.zip' or,
+the library folder
+'STM32F10x_StdPeriph_Lib_V3.5.0' when extracted.
+Silicon Technologies will allow you to download the library
+only if you submit your email address.
+They will send you the download link to your inbox. I'm a registered
+user.
+The library is huge, at least 21.1 MB when zipped,
+around 30.7 MB when extracted.
+You are (possibly) not allowed
+to redistribute the library along with
+your own code. You can merely refer to it.
+Add that STM's proprietary library folder to '.gitignore'
+if you are planning to keep your project
+in a remote Git repository.
+
+Now it's time to compile a simple makefile project.
+Extract 'en.stsw-stm32054.zip' and copy the extracted folder
+'STM32F10x_StdPeriph_Lib_V3.5.0' to ~/code/stm32f103-template-master/
+'STM32F10x_StdPeriph_Lib_V3.5.0' will appear as a subdirectory under
+~/code/stm32f103-template-master/
+
+Navigate to ~/code/stm32f103-template-master/ using your
+graphical file manager and r-click -> select 'Open Terminal Here'.
+Below are the commands to
+clean, compile, and upload/burn/in-circuit-program consecutively:
+
+------------------------------------------------------------------
+STD_PERIPH_LIBS=~/code/stm32f103-template-master/STM32F10x_StdPeriph_Lib_V3.5.0/ make clean
+STD_PERIPH_LIBS=~/code/stm32f103-template-master/STM32F10x_StdPeriph_Lib_V3.5.0/ make all
+STD_PERIPH_LIBS=~/code/stm32f103-template-master/STM32F10x_StdPeriph_Lib_V3.5.0/ make burn
+------------------------------------------------------------------
+
+Tip: Clean the project first, then try to compile.
+After a successful compilation, one xyzw.bin file will be generated
+along with one xyzw.hex, and a xyzw.elf file.
+'make burn' will upload the *.bin file to the target board.
+(Superuser password will be asked by the STLlink utility since we
+are dealing with the host machine's USB connection).
+
+I could successfully compile the code, but until I get an
+in-circuit programmer like a ST-Link/V2 (also a target board),
+I'll have to remain satisfied with the message that appears
+immediately before the ICSP starts burning
+the xyzw.bin to the MCU on the target board.
+
+
+I redirected the compiler log to a text file (instead of the
+console output).
+Look at it (Compilation was successful).
+
+------------------------------------------------------------------
+STD_PERIPH_LIBS=~/code/stm32f103-template-master/STM32F10x_StdPeriph_Lib_V3.5.0/ make all > log.txt
+------------------------------------------------------------------
+
+------------------------------------------------------------------
+arm-none-eabi-gcc -g -O2 -Wall -T/home/YOUR_USERNAME/code/stm32f103-
+template-master/STM32F10x_StdPeriph_Lib_V3.5.0//Project/
+STM32F10x_StdPeriph_Template/TrueSTUDIO/STM3210B-EVAL/stm32_flash.ld -
+mlittle-endian -mthumb -mcpu=cortex-m4 -mthumb-interwork -mfloat-abi=hard -
+mfpu=fpv4-sp-d16 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -Wl,--gc-sections -
+I. -I/home/YOUR_USERNAME/code/stm32f103-template-master/
+STM32F10x_StdPeriph_Lib_V3.5.0//Libraries/CMSIS/CM3/DeviceSupport/ST/
+STM32F10x/ -I/home/YOUR_USERNAME/code/stm32f103-template-master/
+STM32F10x_StdPeriph_Lib_V3.5.0//Libraries/CMSIS/CM3/CoreSupport -I/home/
+YOUR_USERNAME/code/stm32f103-template-master/
+STM32F10x_StdPeriph_Lib_V3.5.0//Libraries/STM32F10x_StdPeriph_Driver/inc 
+main.c /home/YOUR_USERNAME/code/stm32f103-template-master/
+STM32F10x_StdPeriph_Lib_V3.5.0//Libraries/CMSIS/CM3/DeviceSupport/ST/
+STM32F10x/system_stm32f10x.c /home/YOUR_USERNAME/code/stm32f103-template-
+master/STM32F10x_StdPeriph_Lib_V3.5.0//Libraries/STM32F10x_StdPeriph_Driver/
+src/stm32f10x_rcc.c /home/YOUR_USERNAME/code/stm32f103-template-master/
+STM32F10x_StdPeriph_Lib_V3.5.0//Libraries/STM32F10x_StdPeriph_Driver/src/
+stm32f10x_gpio.c /home/YOUR_USERNAME/code/stm32f103-template-master/
+STM32F10x_StdPeriph_Lib_V3.5.0//Libraries/CMSIS/CM3/DeviceSupport/ST/
+STM32F10x/startup/TrueSTUDIO/startup_stm32f10x_md.s -o led.elf
+arm-none-eabi-objcopy -O ihex led.elf led.hex
+arm-none-eabi-objcopy -O binary led.elf led.bin
+------------------------------------------------------------------
+
+
+------------------------------------------------------------------
+STD_PERIPH_LIBS=~/code/stm32f103-template-master/STM32F10x_StdPeriph_Lib_V3.5.0/ make burn
+------------------------------------------------------------------
+
+------------------------------------------------------------------
+[sudo] password for YOUR_USERNAME:
+st-flash 1.6.0
+2021-04-16T14:08:00 WARN usb.c: Couldn't find any ST-Link/V2 devices
+make: *** [Makefile:49: burn] Error 255
+------------------------------------------------------------------
+
+
+
+D - E - B - U - G
+
+O - P - E - N     O - C - D
+
+Do you debug your programs?
+You can debug your ARM programs with OpenOCD.
+http://openocd.org/
+https://elinux.org/OpenOCD_Ubuntu_Package
+
+
+------------------------------------------------------------------
+apt search openocd
+sudo apt install openocd
+cd /usr/local/share
+sudo ln -s /usr/share/openocd .
+------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+------------------------------------------------------------------
+
+
+
+Dr. Memory:
+
+Method 1:
+
+
+Let's download and set up Dr. Memory.
+
+https://drmemory.org/
+https://github.com/DynamoRIO/drmemory/releases
+
+Download the tar archive 'DrMemory-Linux-2.3.18722.tar.gz'.
+Copy the downloaded tar file to your $HOME directory (~/).
+Right-click inside the graphical file manager and select
+'Open Terminal Here'.
+Type:
+------------------------------------------------------------------
+sudo tar xzf DrMemory-Linux-2.3.18722.tar.gz
+cd DrMemory-Linux-2.3.18722/
+sudo chmod -R 755 *
+------------------------------------------------------------------
+
+
+We will add it to the bash shell's (as well as the fish shell's)
+search path.
+Dr. Memory is an application that checks for memory leaks in
+running applications compiled with debugging symbols.
+Dr. Memory is kinda like Valgrind.
+
+Edit ~/.bashrc to export the bin directory of the Dr. Memory
+to the shells' search path and make it permanent.
+
+mousepad ~/.bashrc
+Add the following lines to .bashrc,
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Dr. Memory memory debugger
+# # # # # # # # # # # # # # # # # # # # # # # # # # #
+PATH=$PATH:"~/DrMemory-Linux-2.3.18722/bin64/"
+# # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+Leave a new line.
+Reload .bashrc,
+------------------------------------------------------------------
+source ~/.bashrc
+echo $PATH
+------------------------------------------------------------------
+
+
+
+
+------------------------------------------------------------------
+Would you like to use the fish shell to deal with
+the programs you keep as portable apps in
+a flash drive or in your $HOME folder?
+Fish shell still doesn't have a clue of the
+BASH shell's path,
+so you need to add the same folders to ".fishrc" you added
+to '.bashrc' as well.
+Oh!!! ".fishrc" doesn't exist.
+Fish doesn't create such a file by default
+in the $HOME folder, neither the fish shell recognises
+anything such as ".fishrc".
+It's exactly known as "config.fish".
+Fish will look for this file in ~/.config/fish/
+i.e., ~/.config/fish/config.fish
+
+Ref: https://jeffmcneill.com/path-bash-shell-fish-shell/
+
+Create the file and add your custom folders
+to the search path of fish.
+------------------------------------------------------------------
+
+Now invoke the fish shell and type,
+------------------------------------------------------------------
+touch ~/.config/fish/config.fish
+mousepad ~/.config/fish/config.fish
+------------------------------------------------------------------
+Add Dr. Memory to the search path of the fish shell.
+Now your "config.fish" should look something like:
+------------------------------------------------------------------
+set PATH $PATH /usr/local/bin ~/DrMemory-Linux-2.3.18722/bin64/
+export PATH
+function ll
+    ls -lh $argv
+end
+------------------------------------------------------------------
+Reload "config.fish",
+------------------------------------------------------------------
+source ~/.config/fish/config.fish
+echo #PATH
+------------------------------------------------------------------
+
+------------------------------------------------------------------
+You can add as many applications to the system path you like.
+Follow the example below:
+------------------------------------------------------------------
+set PATH $PATH /usr/local/bin /path/to/application/binary /path/to/another/application/binary
+export PATH
+function ll
+    ls -lh $argv
+end
+------------------------------------------------------------------
+Reload "config.fish" as usual after changing it,
+------------------------------------------------------------------
+source ~/.config/fish/config.fish
+------------------------------------------------------------------
+
+
+Open any terminal emulator in combination with any shell and type,
+------------------------------------------------------------------
+drmemory --help
+------------------------------------------------------------------
+
+Usage:
+drmemory -- ./example007
+
+
+Method 2:
+
+Although Dr. Memory has three binary executable files so it was
+not slowing down my test laptop, I wanted to reduce loads further
+from the shell applications.
+As before, we will create symlinks to Dr. Memory's executables in
+/usr/bin
+then delete Dr. Memory's bin64 folder from the
+shell applications' search list.
+The shell application will find Dr. Memory
+from the system search path when it will be invoked.
+
+Open ~/.bashrc with a text editor and delete the lines below:
+
+------------------------------------------------------------------
+mousepad ~/.bashrc
+------------------------------------------------------------------
+
+Delete the following lines:
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Dr. Memory memory debugger
+# # # # # # # # # # # # # # # # # # # # # # # # # # #
+PATH=$PATH:"~/DrMemory-Linux-2.3.18722/bin64/"
+# # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+------------------------------------------------------------------
+source ~/.bashrc
+------------------------------------------------------------------
+
+
+Delete Dr. Memory's bin64 folder from fish shell's search list also.
+Edit config.fish
+
+------------------------------------------------------------------
+mousepad ~/.config/fish/config.fish
+------------------------------------------------------------------
+
+Now it should look something like:
+
+
+------------------------------------------------------------------
+set PATH $PATH /usr/local/bin
+export PATH
+function ll
+    ls -lh $argv
+end
+
+------------------------------------------------------------------
+
+
+Reload "config.fish" as usual,
+
+------------------------------------------------------------------
+source ~/.config/fish/config.fish
+------------------------------------------------------------------
+
+
+Now create two files in ~/DrMemory-Linux-2.3.18722/bin64/
+install-script.sh and uninstall-script.sh
+Fill the files with the contents written as follows:
+
+install-script.sh
+
+------------------------------------------------------------------
+#!/bin/bash
+
+sudo ln -s ~/DrMemory-Linux-2.3.18722/bin64/drmemory /usr/bin/drmemory
+sudo ln -s ~/DrMemory-Linux-2.3.18722/bin64/drltrace /usr/bin/drltrace
+sudo ln -s ~/DrMemory-Linux-2.3.18722/bin64/symquery /usr/bin/symquery
+
+------------------------------------------------------------------
+
+uninstall-script.sh
+
+------------------------------------------------------------------
+#!/bin/bash
+
+sudo rm /usr/bin/drmemory
+sudo rm /usr/bin/drltrace
+sudo rm /usr/bin/symquery
+
+------------------------------------------------------------------
+
+Change the permission parameters of those files:
+------------------------------------------------------------------
+sudo chmod -R 755 install-script.sh
+sudo chmod -R 755 uninstall-script.sh
+------------------------------------------------------------------
+
+Run:
+./install-script.sh
+
+Dr. Memory has been installed by now.
+
+The uninstallation script will be needed
+when we will update Dr. Memory with a newer version.
+The older version must be deleted
+from the system directory /usr/bin
+
+You can choose either of the methods.
+I'd go for the 2nd method since it is
+less stressful to a resource-constrained system.
+
+
+
+
+We are all set up.
+Try adding AVR-GCC and SDCC cross-compilers
+if you need Atmel (now acquired by Microchip) AVR and
+Intel (now manufactured by Microchip, Philips and so many) 8051
+microcontrollers.
+
+
+
+I tried my best to explain. Let the ST-Link/V2 come.
+I will also check the upload step.
+
