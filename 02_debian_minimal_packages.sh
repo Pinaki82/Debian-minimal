@@ -154,6 +154,7 @@ sudo apt install clang-tools -y && \
 sudo apt install lld -y && \
 sudo apt install libomp-dev -y && \
 sudo apt install curl -y && \
+sudo apt install wget -y && \
 sudo apt install python3-pip -y && \
 #python3 -m pip install --upgrade pip && \
 # https://stackoverflow.com/questions/75608323/how-do-i-solve-error-externally-managed-environment-everytime-i-use-pip3
@@ -203,6 +204,7 @@ sudo apt install mc -y && \
 sudo apt install xclip -y && \
 sudo apt install vim-gtk3 -y && \
 sudo apt install kate -y && \
+sudo apt install notepadqq -y && \
 sudo apt install cppcheck -y && \
 sudo apt install cppcheck-gui -y && \
 sudo apt install splint -y && \
@@ -253,6 +255,21 @@ sudo apt install m4 -y && \
 sudo apt install make -y && \
 sudo apt install ninja-build -y && \
 sudo apt install meld -y && \
+
+# Terminal Fonts (MUST):
+# * Without these fonts, you'll miss the proper console characters and see boxes everywhere.
+sudo apt install fonts-terminus fonts-terminus-otb xfonts-terminus
+sudo apt install xfonts-terminus-dos xfonts-terminus-oblique
+sudo apt install xfonts-mona fonts-firacode fonts-league-mono fonts-agave
+sudo apt install fonts-inconsolata fonts-ricty-diminished
+sudo apt install fonts-jetbrains-mono fonts-anonymous-pro
+sudo apt install fonts-monoid fonts-monoid-halfloose
+sudo apt install fonts-monoid-halftight fonts-monoid-loose fonts-monoid-tight
+sudo apt install fonts-fantasque-sans fonts-hermit
+
+# Install Fonts in Debian:
+# https://vitux.com/how-to-install-custom-fonts-in-debian/
+sudo apt update && sudo apt -y install font-manager
 
 # Markdown to HTML etc.
 
@@ -409,6 +426,8 @@ sudo apt install neofetch -y && \
 # to configure fish shell (e.g. aliases)
 sudo apt install fish -y && \
 sudo apt install kitty -y && \
+# The Suckless ST Terminal Emulator basic package:
+sudo apt install stterm && \
 # Midnight Commander command-line file manager
 #sudo apt install mc -y && \
 sudo apt install simplescreenrecorder -y && \
@@ -528,7 +547,7 @@ yes | sudo apt install gnome-software && \
 # Install MS Windows layer translator, Bottle from Flatpak:
 # flatpak install flathub com.usebottles.bottles
 # flatpak run com.usebottles.bottles
-# [BluffTitler 15.0.0.1 worked in Bottles.]
+#
 # ------------------------------------------------------------------------------
 
 # AppImage support
@@ -688,6 +707,21 @@ sudo apt install slop -y && \
 # Open a terminal emulator, then select a region to display keystrokes by issuing the command:
 # screenkey -p fixed -g $(slop -n -f '%g') --persist -s small --font-size small
 sudo apt install default-jre -y && \
+
+
+# GIMP Essentials:
+yes | sudo apt install abr2gbr && \
+yes | sudo apt install gimp-data-extras && \
+yes | sudo apt install gimp-gmic && \
+yes | sudo apt install gimp-gutenprint && \
+yes | sudo apt install gimp-help-common && \
+yes | sudo apt install gimp-help-en-gb && \
+yes | sudo apt install gimp-lensfun && \
+yes | sudo apt install gimp-plugin-registry && \
+yes | sudo apt install gimp-texturize && \
+yes | sudo apt install gtkam-gimp && \
+yes | sudo apt install icc-profiles-free && \
+yes | sudo apt install icc-profiles \
 
 sudo apt install gimp-plugin-registry -y && \
 sudo apt install gmic -y && \

@@ -18,7 +18,7 @@ yes | sudo apt install software-properties-common && \
 # ------------------------------------------------------------------------------
 # Install the most essential core build tool:
 yes | sudo apt install build-essential dkms module-assistant linux-headers-$(uname -r) && \
-yes | sudo apt install curl git git-lfs gitk git-gui patch make diffutils git-extras git-flow diffstat bash fish && \
+yes | sudo apt install curl git git-lfs gitk git-gui patch make cmake diffutils git-extras git-flow diffstat bash fish && \
 yes | sudo apt install llvm clang clangd clang-tidy clang-tools lld && \
 yes | sudo apt install libomp-dev && \
 yes | sudo apt install wget curl git git-lfs && \
@@ -102,6 +102,7 @@ yes | sudo apt install bzip2 && \
 yes | sudo apt install tar && \
 yes | sudo apt install xz-utils && \
 yes | sudo apt install lrzip && \
+sudo apt install unrar -y && \
 yes | sudo apt install xarchiver && \
 yes | sudo apt install thunar-archive-plugin && \
 yes | sudo apt install pixz && \
@@ -179,6 +180,10 @@ yes | sudo apt install htop && \
 yes | sudo apt install rofi && \
 # Settings -> Keyboard -> Application Shortcut -> Add
 # rofi -combi-modi window,drun,ssh -theme solarized -font "hack 10" -show combi -icon -theme "papyrus" -show-icons
+# SUPER (WINDOWS) + SPACE
+# Install some Command-line tools.
+yes | sudo apt install neofetch && \
+yes | sudo apt install htop && \
 # ------------------------------------------------------------------------------
 # Snap and Flatpak:
 # Synaptic Package Manager:
@@ -205,10 +210,11 @@ yes | sudo apt install gnome-software && \
 #   exit
 #   sudo reboot now
 #
+# Flatpak Example:
 # Install MS Windows layer translator, Bottle from Flatpak:
 # flatpak install flathub com.usebottles.bottles
 # flatpak run com.usebottles.bottles
-# [BluffTitler 15.0.0.1 worked in Bottles.]
+#
 # ------------------------------------------------------------------------------
 # Install a Firewall:
 yes | sudo apt install gufw && \
@@ -221,28 +227,43 @@ yes | sudo apt install chkrootkit && \
 # sudo nano /etc/chkrootkit.conf
 # RUN_DAILY="true"
 # USERNAME=$(whoami)
+# Usage (you do not have to scan immediately):
 # sudo chkrootkit >> "/home/$USERNAME/chkrootkit-report.txt"
 yes | sudo apt install rkhunter && \
 sudo rkhunter --propupd && \
 # sudo rkhunter --update
+# Usage (you do not have to scan immediately):
 # sudo rkhunter --check --sk --report-warnings-only >> "/home/$USERNAME/rkhunter-report.txt"
 # ------------------------------------------------------------------------------
-# Install a System Restore Tool:
-yes | sudo apt install rsync && \
-yes | sudo apt install timeshift && \
-yes | sudo apt install grsync && \
+# Install System Restore/Maintenance Tools:
+# Network Time Protocol daemon/utilities
+sudo apt install ntp && \
+# tool for selecting tasks
+sudo apt install tasksel && \
+# Partition Manager
+sudo apt install gparted && \
+sudo apt install gnome-disk-utility && \
+# File Sync
+sudo apt install rsync && \
+sudo apt install grsync && \
+# System Restore
+sudo apt install timeshift && \
+# Load Program Faster while launching for the second time
+sudo apt install preload && \
+# seahorse: GUI Keyring Manager
+# https://mexpolk.wordpress.com/2008/02/06/ubuntu-change-default-keyring-password/
+sudo apt install seahorse && \
+# Reduce Eyestrain # Yellow filter for the screen
+sudo apt install redshift-gtk && \
+# Preven Screen from falling asleep # Keep the screen from turning off
+sudo apt install caffeine && \
+# Command-line system info tool # Hardware info from the console
+sudo apt install hardinfo && \
+# The Fish Shell
+sudo apt install fish && \
 # ------------------------------------------------------------------------------
 # Other utilities:
 #
-# seahorse: GUI Keyring Manager
-# https://mexpolk.wordpress.com/2008/02/06/ubuntu-change-default-keyring-password/
-yes | sudo apt install seahorse && \
-# Yellow filter for the screen
-yes | sudo apt install redshift-gtk && \
-# Keep the screen from turning off
-yes | sudo apt install caffeine && \
-# Hardware info from the console
-yes | sudo apt install hardinfo && \
 # Bittorrent client
 yes | sudo apt install transmission && \
 # simple browser #ex: firejail surf google.com
@@ -259,6 +280,8 @@ yes | sudo apt install ntfs-3g && \
 # Terminal Emulator
 yes | sudo apt install kitty && \
 yes | sudo apt install sakura && \
+# The Suckless ST Terminal Emulator basic package:
+# sudo apt install stterm
 #
 yes | sudo apt install tree && \
 # Midnight commander command-line file manager
@@ -294,6 +317,22 @@ yes | sudo apt install m4 && \
 yes | sudo apt install make && \
 yes | sudo apt install ninja-build && \
 yes | sudo apt install meld && \
+
+# Terminal Fonts (MUST):
+# * Without these fonts, you'll miss the proper console characters and see boxes everywhere.
+sudo apt install fonts-terminus fonts-terminus-otb xfonts-terminus
+sudo apt install xfonts-terminus-dos xfonts-terminus-oblique
+sudo apt install xfonts-mona fonts-firacode fonts-league-mono fonts-agave
+sudo apt install fonts-inconsolata fonts-ricty-diminished
+sudo apt install fonts-jetbrains-mono fonts-anonymous-pro
+sudo apt install fonts-monoid fonts-monoid-halfloose
+sudo apt install fonts-monoid-halftight fonts-monoid-loose fonts-monoid-tight
+sudo apt install fonts-fantasque-sans fonts-hermit
+
+# Install Fonts in Debian:
+# https://vitux.com/how-to-install-custom-fonts-in-debian/
+sudo apt update && sudo apt -y install font-manager
+
 # ------------------------------------------------------------------------------
 # Markdown to HTML etc.
 
@@ -335,3 +374,8 @@ yes | sudo apt install gimp-texturize && \
 yes | sudo apt install gtkam-gimp && \
 yes | sudo apt install icc-profiles-free && \
 yes | sudo apt install icc-profiles \
+
+sudo apt install gimp-plugin-registry -y && \
+sudo apt install gmic -y && \
+sudo apt install gimp-gmic -y && \
+
