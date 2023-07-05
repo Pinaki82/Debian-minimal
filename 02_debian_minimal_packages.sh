@@ -266,6 +266,7 @@ sudo apt install fonts-jetbrains-mono fonts-anonymous-pro
 sudo apt install fonts-monoid fonts-monoid-halfloose
 sudo apt install fonts-monoid-halftight fonts-monoid-loose fonts-monoid-tight
 sudo apt install fonts-fantasque-sans fonts-hermit fonts-powerline
+# https://github.com/ryanoasis/nerd-fonts
 
 # Install Fonts in Debian:
 # https://vitux.com/how-to-install-custom-fonts-in-debian/
