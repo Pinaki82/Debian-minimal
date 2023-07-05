@@ -141,21 +141,23 @@ yes | sudo chmod 0444 ~/Desktop/ && \
 # developer utilities
 # =================================================================
 
-sudo apt install build-essential -y && \
-# sudo apt install tcc -y && \
-sudo apt install patch -y && \
-sudo apt install make -y && \
-sudo apt install diffutils -y && \
-sudo apt install llvm -y && \
-sudo apt install clang -y && \
-sudo apt install clangd -y && \
-sudo apt install clang-tidy -y && \
-sudo apt install clang-tools -y && \
-sudo apt install lld -y && \
-sudo apt install libomp-dev -y && \
-sudo apt install curl -y && \
-sudo apt install wget -y && \
-sudo apt install python3-pip -y && \
+yes | sudo apt install build-essential && \
+
+# yes | sudo apt install tcc && \
+
+yes | sudo apt install patch && \
+yes | sudo apt install make && \
+yes | sudo apt install diffutils && \
+yes | sudo apt install llvm && \
+yes | sudo apt install clang && \
+yes | sudo apt install clangd && \
+yes | sudo apt install clang-tidy && \
+yes | sudo apt install clang-tools && \
+yes | sudo apt install lld && \
+yes | sudo apt install libomp-dev && \
+yes | sudo apt install curl && \
+yes | sudo apt install wget && \
+yes | sudo apt install python3-pip && \
 #python3 -m pip install --upgrade pip && \
 # https://stackoverflow.com/questions/75608323/how-do-i-solve-error-externally-managed-environment-everytime-i-use-pip3
 yes | sudo apt install pipx && \
@@ -169,17 +171,17 @@ yes | sudo apt update && \
 yes | sudo apt install -f && \
 yes | sudo apt update && \
 
-sudo apt install nodejs -y && \
-sudo apt install jq -y && \
+yes | sudo apt install nodejs && \
+yes | sudo apt install jq && \
 # Description: package manager for Node.js
 # (npm: Unmet dependencies)
 
-sudo apt install npm -y && \
+yes | sudo apt install npm && \
 
 # Update Node.js with NPM (Node Package Manager)
 # https://phoenixnap.com/kb/update-node-js-version
 
-#   sudo apt install npm -y && \
+#   yes | sudo apt install npm && \
 
 #   npm cache clean -f && \
 #   sudo npm install -g n -y && \
@@ -190,30 +192,34 @@ sudo apt install npm -y && \
 # script, its input files, and its expected output files. cmdtest runs
 # the script, and checks the output is as expected.
 
-sudo apt install cmdtest -y && \
-sudo apt install yarn -y && \
+yes | sudo apt install cmdtest && \
+yes | sudo apt install yarn && \
 # https://pnpm.io/installation
 curl -fsSL https://get.pnpm.io/install.sh | sh -  && \
-sudo apt install cdecl -y && \
-sudo apt install cutils -y && \
-sudo apt install kitty -y && \
-sudo apt install sakura -y && \
-# sudo apt install gnome-terminal -y && \
-sudo apt install tree -y && \
-sudo apt install mc -y && \
-sudo apt install xclip -y && \
-sudo apt install vim-gtk3 -y && \
-sudo apt install kate -y && \
-sudo apt install notepadqq -y && \
-sudo apt install cppcheck -y && \
-sudo apt install cppcheck-gui -y && \
-sudo apt install splint -y && \
-#sudo apt install cmake-gui -y && \
-sudo apt install cmake -y && \
-sudo apt install wget -y && \
-sudo apt install unzip -y && \
-sudo apt install git -y && \
-sudo apt install git-lfs -y && \
+yes | sudo apt install cdecl && \
+yes | sudo apt install cutils && \
+yes | sudo apt install kitty && \
+yes | sudo apt install sakura && \
+
+# yes | sudo apt install gnome-terminal && \
+
+yes | sudo apt install tree && \
+yes | sudo apt install mc && \
+yes | sudo apt install xclip && \
+yes | sudo apt install vim vim-gtk3 && \
+yes | sudo apt install kate && \
+yes | sudo apt install notepadqq && \
+yes | sudo apt install cppcheck && \
+yes | sudo apt install cppcheck-gui && \
+yes | sudo apt install splint && \
+
+# yes | sudo apt install cmake-gui && \
+
+yes | sudo apt install cmake && \
+yes | sudo apt install wget && \
+yes | sudo apt install unzip && \
+yes | sudo apt install git && \
+yes | sudo apt install git-lfs && \
 
 # https://softwarerecs.stackexchange.com/questions/30351/visualizing-git-diff-linux#30352
 # gitk & git-gui added to the installation script.
@@ -222,67 +228,67 @@ sudo apt install git-lfs -y && \
 # to dealing with the command-line diff/merge/commit/stage/push tools.
 # Can be supplementary utilities even when a CUI is preferred over the GUI.
 
-sudo apt install gitk -y && \
-sudo apt install git-gui -y && \
-# sudo apt install giggle -y && \
+yes | sudo apt install gitk && \
+yes | sudo apt install git-gui && \
+yes | sudo apt install giggle && \
 
 # Below are some (terminal-based) utilities for adding more
 # functionalities to the existing Git installation
 
-sudo apt install git-extras -y && \
-sudo apt install git-flow -y && \
-sudo apt install diffutils -y && \
-sudo apt install diffstat -y && \
+yes | sudo apt install git-extras && \
+yes | sudo apt install git-flow && \
+yes | sudo apt install diffutils && \
+yes | sudo apt install diffstat && \
 
 # Debuggers, code profilers, memory leak testers, build tools,
 # code formatting applications and more
 
-sudo apt install ddd -y && \
-sudo apt install valgrind -y && \
-sudo apt install cgdb -y && \
-sudo apt install astyle -y && \
-sudo apt install universal-ctags -y && \
-sudo apt install autoconf -y && \
-sudo apt install pkg-config -y && \
-sudo apt install libx11-dev -y && \
-sudo apt install libglib2.0-doc -y && \
-sudo apt install libtool -y && \
-sudo apt install autoproject -y && \
-sudo apt install autogen -y && \
-sudo apt install autotools-dev -y && \
-sudo apt install automake -y && \
-sudo apt install m4 -y && \
-sudo apt install make -y && \
-sudo apt install ninja-build -y && \
-sudo apt install meld -y && \
+yes | sudo apt install ddd && \
+yes | sudo apt install valgrind && \
+yes | sudo apt install cgdb && \
+yes | sudo apt install astyle && \
+yes | sudo apt install universal-ctags && \
+yes | sudo apt install autoconf && \
+yes | sudo apt install pkg-config && \
+yes | sudo apt install libx11-dev && \
+yes | sudo apt install libglib2.0-doc && \
+yes | sudo apt install libtool && \
+yes | sudo apt install autoproject && \
+yes | sudo apt install autogen && \
+yes | sudo apt install autotools-dev && \
+yes | sudo apt install automake && \
+yes | sudo apt install m4 && \
+yes | sudo apt install make && \
+yes | sudo apt install ninja-build && \
+yes | sudo apt install meld && \
 
 # Terminal Fonts (MUST):
 # * Without these fonts, you'll miss the proper console characters and see boxes everywhere.
-sudo apt install fonts-terminus fonts-terminus-otb xfonts-terminus
-sudo apt install xfonts-terminus-dos xfonts-terminus-oblique
-sudo apt install xfonts-mona fonts-firacode fonts-league-mono fonts-agave
-sudo apt install fonts-inconsolata fonts-ricty-diminished
-sudo apt install fonts-jetbrains-mono fonts-anonymous-pro
-sudo apt install fonts-monoid fonts-monoid-halfloose
-sudo apt install fonts-monoid-halftight fonts-monoid-loose fonts-monoid-tight
-sudo apt install fonts-fantasque-sans fonts-hermit fonts-powerline
+yes | sudo apt install fonts-terminus fonts-terminus-otb xfonts-terminus && \
+yes | sudo apt install xfonts-terminus-dos xfonts-terminus-oblique && \
+yes | sudo apt install xfonts-mona fonts-firacode fonts-league-mono fonts-agave && \
+yes | sudo apt install fonts-inconsolata fonts-ricty-diminished && \
+yes | sudo apt install fonts-jetbrains-mono fonts-anonymous-pro && \
+yes | sudo apt install fonts-monoid fonts-monoid-halfloose && \
+yes | sudo apt install fonts-monoid-halftight fonts-monoid-loose fonts-monoid-tight && \
+yes | sudo apt install fonts-fantasque-sans fonts-hermit fonts-powerline && \
 # https://github.com/ryanoasis/nerd-fonts
 
 # Install Fonts in Debian:
 # https://vitux.com/how-to-install-custom-fonts-in-debian/
-sudo apt update && sudo apt -y install font-manager
+yes | sudo apt update && sudo apt install font-manager && \
 
 # Markdown to HTML etc.
 
-sudo apt install markdown -y && \
+yes | sudo apt install markdown && \
 
 # Text search utilities
 
-sudo apt install regexxer -y && \
-sudo apt install searchmonkey -y && \
+yes | sudo apt install regexxer && \
+yes | sudo apt install searchmonkey && \
 # CuteCOM: GUI Serial Monitor
 # https://www.pragmaticlinux.com/2021/11/how-to-monitor-the-serial-port-in-linux/
-sudo apt install cutecom -y && \
+yes | sudo apt install cutecom && \
 
 # Req. by PlatformIO CORE CLI
 
@@ -292,14 +298,15 @@ yes | sudo apt autoremove brltty && \
 
 yes | sudo apt update && \
 # https://www.pragmaticlinux.com/2021/11/how-to-monitor-the-serial-port-in-linux/
-sudo apt install -y cutecom && \
+yes | sudo apt install cutecom && \
 # https://askubuntu.com/questions/786367/setting-up-arduino-uno-ide-on-ubuntu
 # https://askubuntu.com/questions/781571/how-to-identify-devices-connected-to-serial-port
 # https://unix.stackexchange.com/questions/390184/dmesg-read-kernel-buffer-failed-permission-denied
 # https://0xsuk.github.io/posts/2022-07-19-how-to-install-ch340-on-ubuntu-22.04/
-sudo apt install -y hwinfo && \
-sudo apt install -y setserial && \
+yes | sudo apt install hwinfo && \
+yes | sudo apt install setserial && \
 pipx install esptool && \
+
 # sudo usermod -a -G plugdev $USER  && \
 # sudo usermod -a -G dialout $USER && \
 # https://docs.platformio.org/en/latest/core/userguide/device/cmd_monitor.html#cmd-device-monitor
@@ -351,95 +358,101 @@ pipx install esptool && \
 # essential packages
 # =================================================================
 
-sudo apt install gufw -y && \
-sudo apt install resolvconf -y && \
-sudo apt install clamtk-gnome -y && \
-sudo apt install chkrootkit -y && \
-sudo apt install rkhunter -y && \
-sudo apt install firejail -y && \
+yes | sudo apt install gufw && \
+yes | sudo apt install resolvconf && \
+yes | sudo apt install clamtk-gnome && \
+yes | sudo apt install chkrootkit && \
+yes | sudo apt install rkhunter && \
+yes | sudo apt install firejail && \
 # screen: req. by i2pdbrowser
-sudo apt install screen -y && \
-sudo apt install network-manager -y && \
-sudo apt install openvpn -y && \
-sudo apt install network-manager-openvpn -y && \
-sudo apt install smartmontools -y && \
-sudo apt install gsmartcontrol -y && \
+yes | sudo apt install screen && \
+yes | sudo apt install network-manager && \
+yes | sudo apt install openvpn && \
+yes | sudo apt install network-manager-openvpn && \
+yes | sudo apt install smartmontools && \
+yes | sudo apt install gsmartcontrol && \
 # X display manager
-sudo apt install xdm -y && \
+yes | sudo apt install xdm && \
 # Description: a tool for selecting tasks for installation on Debian systems
 # This package provides 'tasksel', a simple interface for users who
 # want to configure their system to perform a specific task.
-sudo apt install tasksel -y && \
-# sudo apt install firetools -y && \
-sudo apt install ntp -y && \
-sudo apt install gparted -y && \
-sudo apt install gnome-disk-utility -y && \
-sudo apt install rsync -y && \
-sudo apt install timeshift -y && \
-sudo apt install grsync -y && \
-sudo apt install synaptic -y && \
-sudo apt install preload -y && \
+yes | sudo apt install tasksel && \
+
+# yes | sudo apt install firetools && \
+
+yes | sudo apt install ntp && \
+yes | sudo apt install gparted && \
+yes | sudo apt install gnome-disk-utility && \
+yes | sudo apt install rsync && \
+yes | sudo apt install timeshift && \
+yes | sudo apt install grsync && \
+yes | sudo apt install synaptic && \
+yes | sudo apt install preload && \
 # seahorse: GUI Keyring Manager
 # https://mexpolk.wordpress.com/2008/02/06/ubuntu-change-default-keyring-password/
-sudo apt install seahorse -y && \
+yes | sudo apt install seahorse && \
 
 # #################################################
 
 # Power management utility for laptops.
 
-sudo apt install tlp -y && \
-sudo apt install tlp-rdw -y && \
+yes | sudo apt install tlp && \
+yes | sudo apt install tlp-rdw && \
 
 # #################################################
 # DVTM. A Tiling Window Manager in the Console.
 
-sudo apt install dvtm -y && \
+yes | sudo apt install dvtm && \
 
 # #################################################
-sudo apt install redshift-gtk -y && \
-sudo apt install caffeine -y && \
-sudo apt install hardinfo -y && \
-sudo apt install htop -y && \
+yes | sudo apt install redshift-gtk && \
+yes | sudo apt install caffeine && \
+yes | sudo apt install hardinfo && \
+yes | sudo apt install htop && \
 # btop++: Modern and colourful command-line resource monitor that shows
 # usage and stats for the processor, memory, disks, network and processes.
-#sudo apt install btop -y && \
+# yes | sudo apt install btop && \
 # Usage:
 # btop --utf-force
 # q
 # ranger: Console File Manager with VI Key Bindings
-sudo apt install ranger -y && \
+yes | sudo apt install ranger && \
 # nnn: Free, fast, friendly file manager
-#sudo apt install nnn -y && \
+# yes | sudo apt install nnn && \
 # Usage:
 # nnn
 # Arrow-keys
 # q
 # zoxide: Faster way to navigate your filesystem
-sudo apt install zoxide -y && \
+yes | sudo apt install zoxide && \
 # trash-cli: Send files to trash from the terminal instead of permanently deleting them
-sudo apt install trash-cli -y && \
+yes | sudo apt install trash-cli && \
 # ncdu: ncurses disk usage viewer
-sudo apt install ncdu -y && \
+yes | sudo apt install ncdu && \
 # Pfetch/Neofetch: Shows Linux System Information with Distribution Logo
-sudo apt install neofetch -y && \
+yes | sudo apt install neofetch && \
+# The FISH Shell
 # Open a terminal emulator and type
 # fish_config
 # to configure fish shell (e.g. aliases)
-sudo apt install fish -y && \
-sudo apt install kitty -y && \
+yes | sudo apt install fish && \
+yes | sudo apt install kitty && \
 # The Suckless ST Terminal Emulator basic package:
-sudo apt install stterm && \
+# yes | sudo apt install stterm  && \
+# Build it from the source
+# https://github.com/bakkeby/st-flexipatch.git
+#
 # Midnight Commander command-line file manager
-#sudo apt install mc -y && \
-sudo apt install simplescreenrecorder -y && \
+yes | sudo apt install mc && \
+yes | sudo apt install simplescreenrecorder && \
 
 # ---------
 # 9 AMAZING COMMAND LINE TOOLS for Linux
 # https://youtu.be/kFh1acsQ8DQ
 
 # Install OH-MY-BASH:
-sudo apt install curl git git-lfs fish -y && \
-#bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)" && \
+yes | sudo apt install curl git git-lfs fish && \
+# bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)" && \
 
 # Change the theme: .bashrc -> Uncomment:
 
@@ -464,19 +477,19 @@ pipx install tldr
 # cd ~/ && \
 # echo "[[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh" >> ~/.bashrc && \
 # https://www.cyberciti.biz/faq/add-bash-auto-completion-in-ubuntu-linux/
-sudo apt install bash-completion -y && \
+yes | sudo apt install bash-completion && \
 echo "source /etc/profile.d/bash_completion.sh" >> ~/.bashrc && \
 
 # autojump
 # https://github.com/wting/autojump.git
-sudo apt install autojump -y && \
-sudo apt install fzf -y && \
+yes | sudo apt install autojump && \
+yes | sudo apt install fzf && \
 echo '. /usr/share/autojump/autojump.sh' >> ~/.bashrc && \
 source ~/.bashrc && \
 # https://www.tecmint.com/autojump-a-quickest-way-to-navigate-linux-filesystem/1/
 
 # thef**k
-sudo apt install thefuck -y && \
+yes | sudo apt install thefuck && \
 # https://github.com/nvbn/thefuck/#requirements
 # Just type luck instead of typing f__k in an office or in front of clients.
 echo 'eval "$(thefuck --alias luck)"' >> ~/.bashrc && \
@@ -487,7 +500,7 @@ echo 'eval "$(thefuck --alias luck)"' >> ~/.bashrc && \
 # thef__k for the FISH SHELL:
 # https://github.com/oh-my-fish/plugin-thefuck
 # https://github.com/oh-my-fish/oh-my-fish#installation
-sudo apt install git -y && \
+yes | sudo apt install git && \
 # =======================================================
 # Install OH-MY-FISH (instructions): ====================
 # git clone https://github.com/oh-my-fish/oh-my-fish && \
@@ -498,7 +511,7 @@ sudo apt install git -y && \
 
 # Or, (OMF)
 # https://github.com/oh-my-fish/oh-my-fish
-sudo apt install curl git fish -y && \
+yes | sudo apt install curl git fish && \
 #curl -L https://get.oh-my.fish | fish && \
 # fish
 # Theming:
@@ -513,10 +526,10 @@ sudo apt install curl git fish -y && \
 # ---------
 
 # Googler: Power tool to Google (Web & News) and Google Site Search from the terminal
-sudo apt install googler -y && \
+yes | sudo apt install googler && \
 # googler disable swap in Ubuntu
 # ddgr: DuckDuckGo from the terminal
-sudo apt install ddgr -y && \
+yes | sudo apt install ddgr && \
 # ddgr disable swap in ubuntu
 
 # ------------------------------------------------------------------------------
@@ -553,12 +566,14 @@ yes | sudo apt install gnome-software && \
 
 # AppImage support
 
-sudo apt install libfuse2 -y && \
+yes | sudo apt install libfuse2 && \
 
-#sudo apt install gkrellm -y && \
-sudo apt install psensor -y && \
-#sudo apt install torbrowser-launcher -y && \ # Use Flatpak
-# sudo apt install epiphany-browser -y && \
+# yes | sudo apt install gkrellm && \
+
+yes | sudo apt install psensor && \
+
+# yes | sudo apt install torbrowser-launcher && \ # Use Flatpak
+# yes | sudo apt install epiphany-browser && \
 
 # # # # # # # # # # # # # # # # # # # # #
 # Surf browser
@@ -577,104 +592,104 @@ sudo apt install psensor -y && \
 # surf google.com
 # Ctrl+H is Back <-
 # Ctrl+L is Forward ->
-sudo apt install surf -y && \
+yes | sudo apt install surf && \
 
 # BitTorrent client
-sudo apt install transmission -y && \
+yes | sudo apt install transmission && \
 
 # # # # # # # # # # # # # # # # # # # # #
 # sudo snap install goldendictionary && \
 
-sudo apt install stardict -y && \
+yes | sudo apt install stardict && \
 # See shell/stardict.txt for details.
-sudo apt install artha -y && \
-sudo apt install okular -y && \
-#sudo apt install ghostwriter -y && \
+yes | sudo apt install artha && \
+yes | sudo apt install okular && \
+# yes | sudo apt install ghostwriter && \ # Markdown Editor
 
-sudo apt install bzip2 -y && \
-sudo apt install tar -y && \
-sudo apt install xchm -y && \
+yes | sudo apt install bzip2 && \
+yes | sudo apt install tar && \
+yes | sudo apt install xchm && \
 
-sudo apt install unrar -y && \
-sudo apt install rar -y && \
-sudo apt install p7zip-full -y && \
-sudo apt install p7zip-rar -y && \
-sudo apt install xz-utils -y && \
-sudo apt install lrzip -y && \
-sudo apt install pixz -y && \
-sudo apt install wmctrl -y && \
-sudo apt install nscd -y && \
-sudo apt install xclip -y && \
-sudo apt install uget -y && \
-sudo apt install aria2 -y && \
-#sudo apt install xpdf -y && \
+yes | sudo apt install unrar && \
+yes | sudo apt install rar && \
+yes | sudo apt install p7zip-full && \
+yes | sudo apt install p7zip-rar && \
+yes | sudo apt install xz-utils && \
+yes | sudo apt install lrzip && \
+yes | sudo apt install pixz && \
+yes | sudo apt install wmctrl && \
+yes | sudo apt install nscd && \
+yes | sudo apt install xclip && \
+yes | sudo apt install uget && \
+yes | sudo apt install aria2 && \
+# yes | sudo apt install xpdf && \
 # GUI Archive manager.
-sudo apt install xarchiver -y && \
-sudo apt install thunar-archive-plugin -y && \
+yes | sudo apt install xarchiver && \
+yes | sudo apt install thunar-archive-plugin && \
 # GUI Wallpaper Selector.
-#sudo apt install nitrogen -y && \
+# yes | sudo apt install nitrogen && \
 # Text Editor.
-sudo apt install geany -y && \
+yes | sudo apt install geany && \
 # File Manager.
-#sudo apt install pcmanfm -y && \
+# yes | sudo apt install pcmanfm && \
 # Wireless Device Monitoring Application.
-sudo apt install wavemon -y && \
+yes | sudo apt install wavemon && \
 # Monitor the status of an 802.11 wireless ethernet link.
-sudo apt install wmwave -y && \
+yes | sudo apt install wmwave && \
 # Description: WiFi Share and Connect with QR.
-sudo apt install wifi-qr -y && \
+yes | sudo apt install wifi-qr && \
 # Launcher.
-sudo apt install rofi -y && \
-#sudo apt install vlc -y && \
+yes | sudo apt install rofi && \
+# yes | sudo apt install vlc && \
 # Description: graphical wireless scanner.
-sudo apt install linssid -y && \
+yes | sudo apt install linssid && \
 # Image Viewer & Wallpaper Changer.
-#sudo apt install feh -y && \
+# yes | sudo apt install feh && \
 # Screenshot Utility.
-sudo apt install flameshot -y && \
+yes | sudo apt install flameshot && \
 # Image Viewer.
-sudo apt install ristretto -y && \
+yes | sudo apt install ristretto && \
 
 # Find duplicate files
 # https://www.makeuseof.com/best-tools-find-and-remove-duplicate-files-linux/
 
-sudo apt install fdupes -y && \
+yes | sudo apt install fdupes && \
 
 # fdupes -r ~/Pictures/MaterialDesign/
 # Or,
 # fdupes -r -d ~/Pictures/MaterialDesign/
 # To delete
 
-sudo apt install rdfind -y && \
+yes | sudo apt install rdfind && \
 
 # rdfind ~/Pictures/MaterialDesign/
 
-sudo apt install dupeguru -y && \
+yes | sudo apt install dupeguru && \
 
 # Python3 PiP
 
-sudo apt install python3-pip -y && \
+yes | sudo apt install python3-pip && \
 
 # Defrag NTFS Volumes.
 # https://askubuntu.com/questions/59007/defragging-ntfs-partitions-from-linux
 # https://github.com/tuxera/ntfs-3g
-sudo apt install ntfs-3g -y && \
+yes | sudo apt install ntfs-3g && \
 
 # Data Recovery
 # https://www.ubuntupit.com/top-15-linux-data-recovery-tools-the-professionals-choice
 
-sudo apt install testdisk -y && \
-sudo apt install safecopy -y && \
-sudo apt install foremost -y && \
-sudo apt install gddrescue -y && \
-sudo apt install ddrescueview -y && \
-sudo apt install recoverjpeg -y && \
+yes | sudo apt install testdisk && \
+yes | sudo apt install safecopy && \
+yes | sudo apt install foremost && \
+yes | sudo apt install gddrescue && \
+yes | sudo apt install ddrescueview && \
+yes | sudo apt install recoverjpeg && \
 
-sudo apt install ffmpeg -y && \
+yes | sudo apt install ffmpeg && \
 
-sudo apt install youtube-dl -y && \
+yes | sudo apt install youtube-dl && \
 
-sudo apt install gtkhash -y && \
+yes | sudo apt install gtkhash && \
 
 # Download QuickHash-GUI-Linux-v3.2.0 from: https://www.quickhash-gui.org
 
@@ -683,11 +698,11 @@ sudo apt install gtkhash -y && \
 # input and mouse activity, move and resize windows, etc. It does this
 # using X11's XTEST extension and other Xlib functions.
 
-sudo apt install xdotool -y && \
+yes | sudo apt install xdotool && \
 # CCAL is a drop-in replacement for the standard unix calendar program.
-sudo apt install ccal -y && \
+yes | sudo apt install ccal && \
 # manager and address book modules.
-#sudo apt install osmo && \ (segmentation fault)
+# yes | sudo apt install osmo && \ (segmentation fault)
 
 # sudo snap install chromium && \
 
@@ -695,19 +710,19 @@ sudo apt install ccal -y && \
 # XDM - Xtreme Download Manager
 # https://github.com/subhra74/xdm
 
-sudo apt install uget -y && \
+yes | sudo apt install uget && \
 
 # Screen recorder
-sudo apt install peek -y && \
+yes | sudo apt install peek && \
 # Screencast tool to display your keystrokes
-sudo apt install screenkey -y && \
+yes | sudo apt install screenkey && \
 # Capture selected screen area # queries for a selection from the user and prints the region to stdout
-sudo apt install slop -y && \
+yes | sudo apt install slop && \
 
 # install gifski from https://gif.ski/
 # Open a terminal emulator, then select a region to display keystrokes by issuing the command:
 # screenkey -p fixed -g $(slop -n -f '%g') --persist -s small --font-size small
-sudo apt install default-jre -y && \
+yes | sudo apt install default-jre && \
 
 
 # GIMP Essentials:
@@ -722,11 +737,11 @@ yes | sudo apt install gimp-plugin-registry && \
 yes | sudo apt install gimp-texturize && \
 yes | sudo apt install gtkam-gimp && \
 yes | sudo apt install icc-profiles-free && \
-yes | sudo apt install icc-profiles \
+yes | sudo apt install icc-profiles && \
 
-sudo apt install gimp-plugin-registry -y && \
-sudo apt install gmic -y && \
-sudo apt install gimp-gmic -y && \
+yes | sudo apt install gimp-plugin-registry && \
+yes | sudo apt install gmic && \
+yes | sudo apt install gimp-gmic && \
 
 # figlet: Make large character ASCII banners out of ordinary text
 # https://kerneltalks.com/tips-tricks/create-beautiful-ascii-text-banners-linux/
@@ -736,7 +751,7 @@ sudo apt install gimp-gmic -y && \
 # Usage: figlet -f Slant Tulu-C-IDE > ascii-banner-output.txt
 # figlet My Text Banner
 
-sudo apt install figlet -y && \
+yes | sudo apt install figlet && \
 
 # Inkscape
 
@@ -770,17 +785,17 @@ yes | sudo fc-cache && \
 # sudo apt install kleopatra \
 # Optional (Warning: kleopatra Requires KDE dependencies and 117MB extra space on the drive)
 
-sudo apt install gpa -y && \
+yes | sudo apt install gpa && \
 
-sudo apt install libccid -y && \
-sudo apt install opensc-pkcs11 -y && \
-sudo apt install pcsc-tools -y && \
-sudo apt install pcscd -y && \
-sudo apt install opensc -y && \
+yes | sudo apt install libccid && \
+yes | sudo apt install opensc-pkcs11 && \
+yes | sudo apt install pcsc-tools && \
+yes | sudo apt install pcscd && \
+yes | sudo apt install opensc && \
 
-sudo apt install gnupg -y && \
+yes | sudo apt install gnupg && \
 
-sudo apt install scdaemon -y && \
+yes | sudo apt install scdaemon && \
 
 # =================================================================
 # GnuPG (END)
@@ -802,13 +817,14 @@ sudo apt install scdaemon -y && \
 # video-n-vfx (media file converters - CLI)
 # =================================================================
 
-sudo apt install ffmpeg -y && \
+yes | sudo apt install ffmpeg && \
 # sudo apt install mediainfo -y && \ # Install Snap
 # VidCutter # Install Snap
 # Create DVDs easily
-#sudo apt install devede -y && \
-sudo apt install winff -y && \
-sudo apt install winff-doc -y && \
+# yes | sudo apt install devede && \
+
+yes | sudo apt install winff && \
+yes | sudo apt install winff-doc && \
 
 # =================================================================
 # video-n-vfx (media file converters - CLI) (END)
@@ -821,7 +837,7 @@ sudo apt install winff-doc -y && \
 
 # https://www.osradar.com/install-bpytop-on-ubuntu-debian-a-terminal-monitoring-tool/
 
-pipx install bpytop && \
+yes | pipx install bpytop && \
 
 # =================================================================
 # 'bpytop' System Monitoring Tool (END)
@@ -835,63 +851,63 @@ pipx install bpytop && \
 # safec: https://rurban.github.io/safeclib/doc/safec-3.6.0/index.html
 # This library implements the secure C11 Annex K functions on top of most libc implementations, which are missing from them.
 
-sudo apt install libsafec-dev -y && \
+yes | sudo apt install libsafec-dev && \
 
 # Boost C++ libraries
 
-#sudo apt install libboost-all-dev -y && \
+# yes | sudo apt install libboost-all-dev && \
 
 # OpenGL libraries
 
-# sudo apt install libglu1-mesa-dev -y && \
-# sudo apt install freeglut3-dev -y && \
-# sudo apt install mesa-common-dev -y && \
-# sudo apt install libglew-dev -y && \
-# sudo apt-get install binutils -y && \
-# sudo apt install libglm-dev -y && \
-# sudo apt install libgl-dev -y && \
-# sudo apt install libglew-dev -y && \
-# sudo apt install libglfw3-dev -y && \
-# sudo apt install libglm-dev -y && \
-# sudo apt install libglm-doc -y && \
+# yes | sudo apt install libglu1-mesa-dev && \
+# yes | sudo apt install freeglut3-dev && \
+# yes | sudo apt install mesa-common-dev && \
+# yes | sudo apt install libglew-dev && \
+# yes | sudo apt-get install binutils && \
+# yes | sudo apt install libglm-dev && \
+# yes | sudo apt install libgl-dev && \
+# yes | sudo apt install libglew-dev && \
+# yes | sudo apt install libglfw3-dev && \
+# yes | sudo apt install libglm-dev && \
+# yes | sudo apt install libglm-doc && \
 
 # Some useful libraries
 
-sudo apt install libbsd-dev -y && \
+yes | sudo apt install libbsd-dev && \
 #    #include <bsd/string.h>
 # pass -lbsd flag to the linker, like
 # gcc -g -Wall -Wextra -pedantic -fstack-protector-all prog.c -o prog -lbsd
 
-# sudo apt install zlibc && \
-# sudo apt install libxml2-utils && \
-# sudo apt install libtinyxml2-dev && \
-# sudo apt install zlib1g-dev && \
-# sudo apt install libxml2-dev && \
-# sudo apt install libtinyxml2-dev && \
-# sudo apt install libsigc++-2.0-dev && \
-# sudo apt install libsigc++-2.0-doc && \
-# sudo apt install libssl-dev && \
-# sudo apt install libssl-doc && \
-# sudo apt install libsdl2-dev && \
-# sudo apt install libasound2-doc && \
-# sudo apt install libsfml-dev && \
-# sudo apt install libsfml-doc && \
+# yes | sudo apt install zlibc && \
+# yes | sudo apt install libxml2-utils && \
+# yes | sudo apt install libtinyxml2-dev && \
+# yes | sudo apt install zlib1g-dev && \
+# yes | sudo apt install libxml2-dev && \
+# yes | sudo apt install libtinyxml2-dev && \
+# yes | sudo apt install libsigc++-2.0-dev && \
+# yes | sudo apt install libsigc++-2.0-doc && \
+# yes | sudo apt install libssl-dev && \
+# yes | sudo apt install libssl-doc && \
+# yes | sudo apt install libsdl2-dev && \
+# yes | sudo apt install libasound2-doc && \
+# yes | sudo apt install libsfml-dev && \
+# yes | sudo apt install libsfml-doc && \
 
 # Development Library and Toolkit for FLTK 1.3 GUI Library
 
-# sudo apt install libfltk1.3-dev -y && \
-# sudo apt install libfltk1.3-compat-headers -y && \
-# sudo apt install pinentry-fltk -y && \
+# yes | sudo apt install libfltk1.3-dev && \
+# yes | sudo apt install libfltk1.3-compat-headers && \
+# yes | sudo apt install pinentry-fltk && \
 
 # Tk C programming GUI Library (Development Library)
 # Tcl & Tk are components of the base distribution
 
-sudo apt install tk-dev -y && \
+yes | sudo apt install tk-dev && \
 
 # AI and Machine Learning
 
 # Dlib
-# sudo apt install libdlib-dev && \
+# yes | sudo apt install libdlib-dev && \
 # OpenCV
 # https://docs.opencv.org/master/d7/d9f/tutorial_linux_install.html
 # https://opencv.org
@@ -903,12 +919,12 @@ sudo apt install tk-dev -y && \
 # https://github.com/kthohr/stats
 # https://www.thefreecountry.com/sourcecode/mathematics.shtml
 
-# sudo apt install libgsl-dev && \
-# sudo apt install gsl-ref-psdoc && \
-# sudo apt install gsl-doc-pdf && \
-# sudo apt install gsl-doc-info && \
-# sudo apt install gsl-ref-html && \
-# sudo apt install libarmadillo-dev \
+# yes | sudo apt install libgsl-dev && \
+# yes | sudo apt install gsl-ref-psdoc && \
+# yes | sudo apt install gsl-doc-pdf && \
+# yes | sudo apt install gsl-doc-info && \
+# yes | sudo apt install gsl-ref-html && \
+# yes | sudo apt install libarmadillo-dev \
 
 # Other libraries to consider:
 
@@ -961,7 +977,7 @@ cd ~/  && \
 # Conky-Resource-Monitor-Gadget
 # =================================================================
 
-sudo apt install conky-all -y && \
+yes | sudo apt install conky-all && \
 
 # =================================================================
 # Conky-Resource-Monitor-Gadget (END)
@@ -976,7 +992,7 @@ sudo apt install conky-all -y && \
 # Simply run 'deborphan' (without quotes) to get an overview of the
 # leftover packages, then uninstall them manually.
 
-sudo apt install deborphan -y && \
+yes | sudo apt install deborphan && \
 
 # =================================================================
 # orphaned-package-cleaners (END)
@@ -993,20 +1009,20 @@ sudo apt install deborphan -y && \
 # https://equalx.sourceforge.io/
 # https://www.thrysoee.dk/laeqed/
 
-sudo apt install texlive-base -y && \
-sudo apt install texlive-latex-base -y && \
-sudo apt install dvipng -y && \
-sudo apt install dvisvgm -y && \
-sudo apt install ghostscript -y && \
+yes | sudo apt install texlive-base && \
+yes | sudo apt install texlive-latex-base && \
+yes | sudo apt install dvipng && \
+yes | sudo apt install dvisvgm && \
+yes | sudo apt install ghostscript && \
 
 # Pandoc:
-sudo apt install pandoc -y && \
+yes | sudo apt install pandoc && \
 
-sudo apt install equalx -y && \
+yes | sudo apt install equalx && \
 
-#sudo apt install klatexformula -y && \
+# yes | sudo apt install klatexformula && \
 # JVM Runtime is required by Laeqed
-sudo apt install default-jre -y && \
+yes | sudo apt install default-jre && \
 
 # On MS Windows, use MiKTeX (https://miktex.org/),
 # Ghostscript (https://www.ghostscript.com/),
@@ -1027,8 +1043,8 @@ sudo apt install default-jre -y && \
 
 # installation:
 
-sudo apt install tesseract-ocr -y && \
-sudo apt install imagemagick -y && \
+yes | sudo apt install tesseract-ocr && \
+yes | sudo apt install imagemagick && \
 
 # language pack installation:
 
@@ -1049,22 +1065,22 @@ sudo apt install imagemagick -y && \
 # for i in *; do tesseract "$i" "output-$i" -l eng; done;
 
 # Tesseract GUI frontend: gImageReader
-sudo apt install tesseract-ocr-eng -y && \
-sudo apt install tesseract-ocr-enm -y && \
-sudo apt install tesseract-ocr-osd -y && \
+yes | sudo apt install tesseract-ocr-eng && \
+yes | sudo apt install tesseract-ocr-enm && \
+yes | sudo apt install tesseract-ocr-osd && \
 
 # install support for additional languages
-# sudo apt install tesseract-ocr-ben -y && \
-# sudo apt install tesseract-ocr-script-beng -y && \
-# sudo apt install tesseract-ocr-hin -y && \
-# sudo apt install tesseract-ocr-script-deva -y && \
+# yes | sudo apt install tesseract-ocr-ben && \
+# yes | sudo apt install tesseract-ocr-script-beng && \
+# yes | sudo apt install tesseract-ocr-hin && \
+# yes | sudo apt install tesseract-ocr-script-deva && \
 
 # install gImageReader
-# sudo apt search gimagereader
+# apt search gimagereader
 
-sudo apt install gimagereader -y && \
+yes | sudo apt install gimagereader && \
 
-# See 'shell/ocr-tesseract-frontend-gimagereader.sh' for details
+# See 'shell/ocr-tesseract-frontend-gimagereader.sh.txt' for details
 
 # =================================================================
 # ocr-tesseract-install (END)
@@ -1075,11 +1091,11 @@ sudo apt install gimagereader -y && \
 # smartcardsupport
 # =================================================================
 
-sudo apt install libccid -y && \
-sudo apt install opensc-pkcs11 -y && \
-sudo apt install pcsc-tools -y && \
-sudo apt install pcscd -y && \
-sudo apt install opensc -y && \
+yes | sudo apt install libccid && \
+yes | sudo apt install opensc-pkcs11 && \
+yes | sudo apt install pcsc-tools && \
+yes | sudo apt install pcscd && \
+yes | sudo apt install opensc && \
 
 # systemctl start pcscd && \
 # systemctl enable pcscd && \
@@ -1097,7 +1113,7 @@ sudo apt install opensc -y && \
 # site blocker
 # =================================================================
 
-sudo apt install nscd -y && \
+yes | sudo apt install nscd && \
 
 # =================================================================
 # site blocker (END)
@@ -1119,14 +1135,11 @@ sudo apt install nscd -y && \
 # instead of a flash player, this allows better performance,
 # particularly with HD content."
 
-# yes | echo 'deb http://download.opensuse.org/repositories/home:/smplayerdev/xUbuntu_20.04/ /' | sudo tee /etc/apt/sources.list.d/home:smplayerdev.list && \
-# yes | curl -fsSL https://download.opensuse.org/repositories/home:smplayerdev/xUbuntu_20.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_smplayerdev.gpg > /dev/null && \
-# sudo apt update -y && \
-# sudo apt install youtube-dl -y && \
-# sudo apt install smtube -y \
+yes | sudo apt update && \
+yes | sudo apt install youtube-dl && \
 
 # https://www.smtube.org/
-sudo apt install smtube smplayer -y && \
+yes | sudo apt install smtube smplayer && \
 
 
 # ------------------------------------------------------------------------------
@@ -1148,7 +1161,7 @@ sudo apt install smtube smplayer -y && \
 
 # VeraCrypt
 # https://www.veracrypt.fr/en/Downloads.html
-yes | sudo apt install libwxgtk3.2-1 && \
+yes | sudo apt install libwxgtk3.2-1 \
 # sudo apt --fix-broken install
 # sudo dpkg -i  veracrypt-x.xx.x-Debian-xx-amd64.deb \
 

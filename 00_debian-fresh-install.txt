@@ -136,6 +136,8 @@ Install GVim+Vim:
 
 apt search vim-gtk
 sudo apt install vim-gtk3
+Or, if you do not want the GUI Vim,
+sudo apt install vim
 
 If you're on a VM, see the text file 'virtualbox-ms-win.txt'.
 
@@ -784,6 +786,8 @@ flatpak install flathub com.github.tchx84.Flatseal
 
 The Suckless ST Terminal Emulator basic package:
 sudo apt install stterm
+Or, Build it from the source
+https://github.com/bakkeby/st-flexipatch.git
 
 Terminal Fonts (MUST):
 * Without these fonts, you'll miss the proper console characters and see boxes everywhere.

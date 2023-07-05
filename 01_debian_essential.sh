@@ -72,7 +72,9 @@ yes | sudo apt install python3-pip && \
 #python -m pip install --upgrade pip && \
 # ------------------------------------------------------------------------------
 # Install GVim+Vim:
-yes | sudo apt install vim vim-gtk3 && \
+# yes | sudo apt install vim vim-gtk3 && \
+#
+yes | sudo apt install vim && \
 # ------------------------------------------------------------------------------
 # tldr
 # https://github.com/tldr-pages/tldr.git
@@ -102,7 +104,7 @@ yes | sudo apt install bzip2 && \
 yes | sudo apt install tar && \
 yes | sudo apt install xz-utils && \
 yes | sudo apt install lrzip && \
-sudo apt install unrar -y && \
+yes | sudo apt install unrar && \
 yes | sudo apt install xarchiver && \
 yes | sudo apt install thunar-archive-plugin && \
 yes | sudo apt install pixz && \
@@ -220,8 +222,8 @@ yes | sudo apt install gnome-software && \
 yes | sudo apt install gufw && \
 # ------------------------------------------------------------------------------
 # HDD tools
-sudo apt install smartmontools && \
-sudo apt install gsmartcontrol && \
+yes | sudo apt install smartmontools && \
+yes | sudo apt install gsmartcontrol && \
 # Install an Antivirus:
 yes | sudo apt install chkrootkit && \
 # sudo nano /etc/chkrootkit.conf
@@ -237,30 +239,30 @@ sudo rkhunter --propupd && \
 # ------------------------------------------------------------------------------
 # Install System Restore/Maintenance Tools:
 # Network Time Protocol daemon/utilities
-sudo apt install ntp && \
+yes | sudo apt install ntp && \
 # tool for selecting tasks
-sudo apt install tasksel && \
+yes | sudo apt install tasksel && \
 # Partition Manager
-sudo apt install gparted && \
-sudo apt install gnome-disk-utility && \
+yes | sudo apt install gparted && \
+yes | sudo apt install gnome-disk-utility && \
 # File Sync
-sudo apt install rsync && \
-sudo apt install grsync && \
+yes | sudo apt install rsync && \
+yes | sudo apt install grsync && \
 # System Restore
-sudo apt install timeshift && \
+yes | sudo apt install timeshift && \
 # Load Program Faster while launching for the second time
-sudo apt install preload && \
+yes | sudo apt install preload && \
 # seahorse: GUI Keyring Manager
 # https://mexpolk.wordpress.com/2008/02/06/ubuntu-change-default-keyring-password/
-sudo apt install seahorse && \
+yes | sudo apt install seahorse && \
 # Reduce Eyestrain # Yellow filter for the screen
-sudo apt install redshift-gtk && \
+yes | sudo apt install redshift-gtk && \
 # Preven Screen from falling asleep # Keep the screen from turning off
-sudo apt install caffeine && \
+yes | sudo apt install caffeine && \
 # Command-line system info tool # Hardware info from the console
-sudo apt install hardinfo && \
+yes | sudo apt install hardinfo && \
 # The Fish Shell
-sudo apt install fish && \
+yes | sudo apt install fish && \
 # ------------------------------------------------------------------------------
 # Other utilities:
 #
@@ -274,14 +276,16 @@ yes | sudo apt install stardict && \
 # A cross-platform dictionary similar to Wordweb
 yes | sudo apt install artha && \
 # Screenshot Utility.
-sudo apt install flameshot && \
+yes | sudo apt install flameshot && \
 # Defrag NTFS Volumes.
 yes | sudo apt install ntfs-3g && \
 # Terminal Emulator
 yes | sudo apt install kitty && \
 yes | sudo apt install sakura && \
 # The Suckless ST Terminal Emulator basic package:
-# sudo apt install stterm
+# yes | sudo apt install stterm && \
+# Build it from the source
+# https://github.com/bakkeby/st-flexipatch.git
 #
 yes | sudo apt install tree && \
 # Midnight commander command-line file manager
@@ -320,19 +324,19 @@ yes | sudo apt install meld && \
 
 # Terminal Fonts (MUST):
 # * Without these fonts, you'll miss the proper console characters and see boxes everywhere.
-sudo apt install fonts-terminus fonts-terminus-otb xfonts-terminus
-sudo apt install xfonts-terminus-dos xfonts-terminus-oblique
-sudo apt install xfonts-mona fonts-firacode fonts-league-mono fonts-agave
-sudo apt install fonts-inconsolata fonts-ricty-diminished
-sudo apt install fonts-jetbrains-mono fonts-anonymous-pro
-sudo apt install fonts-monoid fonts-monoid-halfloose
-sudo apt install fonts-monoid-halftight fonts-monoid-loose fonts-monoid-tight
-sudo apt install fonts-fantasque-sans fonts-hermit fonts-powerline
+yes | sudo apt install fonts-terminus fonts-terminus-otb xfonts-terminus && \
+yes | sudo apt install xfonts-terminus-dos xfonts-terminus-oblique && \
+yes | sudo apt install xfonts-mona fonts-firacode fonts-league-mono fonts-agave && \
+yes | sudo apt install fonts-inconsolata fonts-ricty-diminished && \
+yes | sudo apt install fonts-jetbrains-mono fonts-anonymous-pro && \
+yes | sudo apt install fonts-monoid fonts-monoid-halfloose && \
+yes | sudo apt install fonts-monoid-halftight fonts-monoid-loose fonts-monoid-tight && \
+yes | sudo apt install fonts-fantasque-sans fonts-hermit fonts-powerline && \
 # https://github.com/ryanoasis/nerd-fonts
 
 # Install Fonts in Debian:
 # https://vitux.com/how-to-install-custom-fonts-in-debian/
-sudo apt update && sudo apt -y install font-manager
+yes | sudo apt update && sudo apt install font-manager && \
 
 # ------------------------------------------------------------------------------
 # Markdown to HTML etc.
@@ -354,13 +358,13 @@ yes | sudo apt purge --auto-remove brltty && \
 
 yes | sudo apt update && \
 # https://www.pragmaticlinux.com/2021/11/how-to-monitor-the-serial-port-in-linux/
-yes | sudo apt install -y cutecom && \
+yes | sudo apt install cutecom && \
 # https://askubuntu.com/questions/786367/setting-up-arduino-uno-ide-on-ubuntu
 # https://askubuntu.com/questions/781571/how-to-identify-devices-connected-to-serial-port
 # https://unix.stackexchange.com/questions/390184/dmesg-read-kernel-buffer-failed-permission-denied
 # https://0xsuk.github.io/posts/2022-07-19-how-to-install-ch340-on-ubuntu-22.04/
-yes | sudo apt install -y hwinfo && \
-yes | sudo apt install -y setserial && \
+yes | sudo apt install hwinfo && \
+yes | sudo apt install setserial && \
 
 # GIMP Essentials:
 yes | sudo apt install abr2gbr && \
@@ -376,7 +380,7 @@ yes | sudo apt install gtkam-gimp && \
 yes | sudo apt install icc-profiles-free && \
 yes | sudo apt install icc-profiles \
 
-sudo apt install gimp-plugin-registry -y && \
-sudo apt install gmic -y && \
-sudo apt install gimp-gmic -y && \
+yes | sudo apt install gimp-plugin-registry && \
+yes | sudo apt install gmic && \
+yes | sudo apt install gimp-gmic \
 
