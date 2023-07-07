@@ -231,3 +231,15 @@ https://switching.software/
 - Suggestions for truly cross-platform alternative software in practical terms.
 
 - Most applications are curated to work on MS Windows for an uncompromising cross-platform experience.
+
+### How Does It Look Like?
+
+![](attachments/5e519b6dc459cca367638f9c4a29ebb1d0e43486.png)
+
+![](attachments/fd52ef796425b4b6643f069f4cd8799a74f2e977.png)
+
+![](attachments/2023-07-07-18-45-41-Screenshot_2023-07-07_18-43-08.png)
+
+![](attachments/2023-07-07-18-45-57-Screenshot_2023-07-07_18-44-58.png)
+
+![](attachments/7117ae649c6deb327125824736617e446937bdf3.png)
