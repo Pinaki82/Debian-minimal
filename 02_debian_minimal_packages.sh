@@ -598,11 +598,22 @@ yes | sudo apt install surf && \
 yes | sudo apt install transmission && \
 
 # # # # # # # # # # # # # # # # # # # # #
-# sudo snap install goldendictionary && \
-
-yes | sudo apt install stardict && \
+# GoldenDict Dictionary DB Reader
+# Solve GoldenDict's High CPU usage problem.
+# http://goldendict.org/forum/viewtopic.php?f=4&t=2830
+# Edit -> Preferences > Full-text search tab ->
+# -> "Allow full-text search for:" option is enabled (default option) ->
+# -> Disable.
+# yes | sudo apt install goldendict # Install Flatpak
+# flatpak install flathub org.goldendict.GoldenDict
+#
+# Goldendict alternative
+# yes | sudo apt install stardict && \
 # See shell/stardict.txt for details.
+#
+# A cross-platform dictionary similar to Wordweb
 yes | sudo apt install artha && \
+# PDF Reader
 yes | sudo apt install okular && \
 # yes | sudo apt install ghostwriter && \ # Markdown Editor
 

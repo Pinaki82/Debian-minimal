@@ -55,8 +55,13 @@ Windows:
 
 ipconfig /flushdns
 
-Linux:
+Linux Ubuntu:
 service nscd restart
+
+Linux Debian:
+sudo su root
+service nscd restart
+exit
 
 5. Reboot your system if required (usually a redundant step in Linux)
 

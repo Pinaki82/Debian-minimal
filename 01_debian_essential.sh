@@ -270,11 +270,22 @@ yes | sudo apt install fish && \
 yes | sudo apt install transmission && \
 # simple browser #ex: firejail surf google.com
 yes | sudo apt install surf && \
+# GoldenDict Dictionary DB Reader
+# Solve GoldenDict's High CPU usage problem.
+# http://goldendict.org/forum/viewtopic.php?f=4&t=2830
+# Edit -> Preferences > Full-text search tab ->
+# -> "Allow full-text search for:" option is enabled (default option) ->
+# -> Disable.
+# yes | sudo apt install goldendict # Install Flatpak
+# flatpak install flathub org.goldendict.GoldenDict
+#
 # Goldendict alternative
-yes | sudo apt install stardict && \
+# yes | sudo apt install stardict && \
 # See shell/stardict.txt for details.
+#
 # A cross-platform dictionary similar to Wordweb
 yes | sudo apt install artha && \
+
 # Screenshot Utility.
 yes | sudo apt install flameshot && \
 # Defrag NTFS Volumes.
