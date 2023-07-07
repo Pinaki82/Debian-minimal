@@ -61,6 +61,14 @@ yes | sudo apt install yarn && \
 # https://pnpm.io/installation
 curl -fsSL https://get.pnpm.io/install.sh | sh -  && \
 # ------------------------------------------------------------------------------
+# Install 'c': Use C as a shell scripting language:
+# https://github.com/ryanmjacobs/c
+cd ~/ && \
+yes | sudo apt install build-essential trash-cli && \
+wget https://raw.githubusercontent.com/ryanmjacobs/c/master/c && \
+sudo install -m 755 c /usr/bin/c && \
+trash c && \
+# ------------------------------------------------------------------------------
 # tool for selecting tasks
 yes | sudo apt install tasksel && \
 # ------------------------------------------------------------------------------

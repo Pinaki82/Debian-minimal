@@ -262,6 +262,17 @@ yes | sudo apt install make && \
 yes | sudo apt install ninja-build && \
 yes | sudo apt install meld && \
 
+# ------------------------------------------------------------------------------
+# Install 'c': Use C as a shell scripting language:
+# Refer to '01_debian_essential.sh'.
+# https://github.com/ryanmjacobs/c
+# cd ~/ && \
+# yes | sudo apt install build-essential trash-cli && \
+# wget https://raw.githubusercontent.com/ryanmjacobs/c/master/c && \
+# sudo install -m 755 c /usr/bin/c && \
+# trash c && \
+# ------------------------------------------------------------------------------
+
 # Terminal Fonts (MUST):
 # * Without these fonts, you'll miss the proper console characters and see boxes everywhere.
 yes | sudo apt install fonts-terminus fonts-terminus-otb xfonts-terminus && \

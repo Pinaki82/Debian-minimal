@@ -107,6 +107,17 @@ Install the common properties package (will be needed later):
 
 yes | sudo apt install software-properties-common
 
+
+Install 'c': Use C as a shell scripting language:
+https://github.com/ryanmjacobs/c
+
+cd ~/
+sudo apt install build-essential trash-cli
+wget https://raw.githubusercontent.com/ryanmjacobs/c/master/c
+sudo install -m 755 c /usr/bin/c
+trash c
+
+
 Enable Backports (not recommended):
 https://backports.debian.org/Instructions/
 https://linuxconfig.org/how-to-install-and-use-debian-backports
