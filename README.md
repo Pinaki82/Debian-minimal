@@ -28,7 +28,7 @@ Desktop Computer Users.
 
 This repository was started as a backup to the config files I use on my Debian-XFCE system. Then, I decided to split the core parts from basic to minimal. Basic means, you'll need those packages and configurations as a starting point. Here, Minimal stands for, you'll find packages most people use. Now it is your responsibility to include/discard sections of the 'minimal' unit and keep a backup of your final version that you will use forever. Feel free to clone this repository as a starting point for your own desktop configuration.
 
-# Thou Shalt Never:
+# Thou Shalt Not:
 
 - Ever try to install Ubuntu PPAs. Debian does not have a mechanism to recognise PPAs, and doing so may corrupt your system.
 
@@ -217,6 +217,12 @@ chmod +x 02_debian_minimal_packages.sh
 - Read the files in the folder 'shell' to get an overview of more packages.
 
 - Look at other folders given here for desktop/app/system configurations.
+
+### Alternative Software Search:
+
+https://switching.software/
+
+(Git repository link to _switching.software_: https://codeberg.org/swiso/website)
 
 ## As a Mega-Bonus Offer for FREE, you'll find:
 
