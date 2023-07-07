@@ -8,6 +8,23 @@ https://github.com/Pinaki82/Debian-minimal
 
 ---
 
+[This repository](https://github.com/Pinaki82/Debian-minimal) draws inspiration from [Pinaki82](https://github.com/Pinaki82)'s [Xubuntu-minimum-shell-config](https://github.com/Pinaki82/Xubuntu-minimum-shell-config.git) repository on [GitHub](https://github.com).
+
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Debian-minimal](#debian-minimal)
+  - [What this repository is for?](#what-this-repository-is-for)
+    - [Guides to:](#guides-to)
+    - [Serves:](#serves)
+  - [What this repository is not?](#what-this-repository-is-not)
+- [Thou Shalt Not:](#thou-shalt-not)
+  - [What you're allowed to do:](#what-youre-allowed-to-do)
+- [How to Use instructions and scripts provided here:](#how-to-use-instructions-and-scripts-provided-here)
+- [Alternative Software Search:](#alternative-software-search)
+- [As a Mega-Bonus Offer for FREE, you'll find:](#as-a-mega-bonus-offer-for-free-youll-find)
+- [How Does It Look Like?](#how-does-it-look-like)
+
 ## What this repository is for?
 
 ### Guides to:
@@ -46,7 +63,7 @@ This repository was started as a backup to the config files I use on my Debian-X
 
 - Avoid reading the documentation found here, online, discussions found in online forums, doing a web search, asking an AI engine when in doubt, RTFM - Read The Friendly Man Page before taking any steps no matter how trivial the step is when you do not know the deal.
 
-## What you're allowed to do:
+## What you're allowed to do: <a name="what-youre-allowed-to-do"></a>
 
 You can do an `apt search` for a package from the command line. There's no harm in trying to install packages in Debian as `sudo apt install package-gtk` when that particular package is `package-gtk3` in Debian. The command will not find the package in Debian's repository and return an error message without installing anything. However, adding PPAs or installing packages meant exclusively for Ubuntu will certainly damage your installation.
 
@@ -129,15 +146,11 @@ root  ALL=(ALL:ALL) ALL
 
 Then, add your username there as described below (`yourusername ALL=(ALL: ALL) ALL`).
 
--------------------------------------
-
 ```bash
 #User privilege specification
 root  ALL=(ALL:ALL) ALL
 yourusername ALL=(ALL: ALL) ALL
 ```
-
--------------------------------------
 
 Reboot the system.
 
@@ -220,11 +233,13 @@ chmod +x 02_debian_minimal_packages.sh
 
 ### Alternative Software Search:
 
-https://switching.software/
+1. [switching.software](https://switching.software/)
+   
+   > (Git repository link to _switching.software_: https://codeberg.org/swiso/website)
 
-(Git repository link to _switching.software_: https://codeberg.org/swiso/website)
+2. [AlternativeTo](https://alternativeto.net/)
 
-## As a Mega-Bonus Offer for FREE, you'll find:
+## As a Mega-Bonus Offer for FREE, you'll find: <a name="as-a-mega-bonus-offer-for-free-youll-find"></a>
 
 - Some essential MS Windows configurations.
 
