@@ -16,7 +16,7 @@ https://github.com/Pinaki82/Debian-minimal
 
 - Install programs commonly used by most people.
 
-- Modify and back up only one install script that serves you forever. You'll get a workable installation.
+- _Modify_ and _back up_ 'only one install script' that serves you forever. You'll get a workable installation.
 
 ### Serves:
 
@@ -26,7 +26,7 @@ Desktop Computer Users.
 
 - This repository doesn't aim to be a Debian-descendant distribution.
 
-This repository was started as a backup to the config files I use on my Debian-XFCE system. Then, I decided to split the core parts from basic to minimal. Basic means, you'll need those packages and configurations as a starting point. Here, Minimal stands for, you'll find packages most people use. Now it is your responsibility to include/discard sections of the 'minimal' unit and keep a backup of your final version that will use forever. Feel free to clone this repository as a starting point for your own desktop configuration.
+This repository was started as a backup to the config files I use on my Debian-XFCE system. Then, I decided to split the core parts from basic to minimal. Basic means, you'll need those packages and configurations as a starting point. Here, Minimal stands for, you'll find packages most people use. Now it is your responsibility to include/discard sections of the 'minimal' unit and keep a backup of your final version that you will use forever. Feel free to clone this repository as a starting point for your own desktop configuration.
 
 # Thou Shalt Never:
 
