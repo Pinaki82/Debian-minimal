@@ -75,7 +75,9 @@ You'll get an overall view and find the right direction.
 
 Remember that Debian and Ubuntu have different package repositories. One doesn't pull anything directly from another's repository. Especially, Debian pulls nothing from Ubuntu's repository. Do not try to mix them.
 
-## How to Use instructions and scripts provided here:
+# How to Use instructions and scripts provided here:
+
+**NOTE:** Please keep this GitHub page open in your phone's browser to look at commands until your system is ready to display TXT/PDF files.
 
 ======
 
@@ -231,7 +233,7 @@ chmod +x 02_debian_minimal_packages.sh
 
 - Look at other folders given here for desktop/app/system configurations.
 
-### Alternative Software Search:
+# Alternative Software Search:
 
 1. [switching.software](https://switching.software/)
    
@@ -239,7 +241,7 @@ chmod +x 02_debian_minimal_packages.sh
 
 2. [AlternativeTo](https://alternativeto.net/)
 
-## As a Mega-Bonus Offer for FREE, you'll find: <a name="as-a-mega-bonus-offer-for-free-youll-find"></a>
+# As a Mega-Bonus Offer for FREE, you'll find: <a name="as-a-mega-bonus-offer-for-free-youll-find"></a>
 
 - Some essential MS Windows configurations.
 
@@ -247,7 +249,7 @@ chmod +x 02_debian_minimal_packages.sh
 
 - Most applications are curated to work on MS Windows for an uncompromising cross-platform experience.
 
-### How Does It Look Like?
+# How Does It Look Like?
 
 ![](attachments/5e519b6dc459cca367638f9c4a29ebb1d0e43486.png)
 
