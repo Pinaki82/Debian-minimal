@@ -106,6 +106,19 @@ yes | sudo apt install libfuse2 && \
 # Sensor backend:
 yes | sudo apt install psensor && \
 # ------------------------------------------------------------------------------
+# Command-line system info tool # Hardware info from the console
+yes | sudo apt install hardinfo && \
+# New hardware (firmware)
+# sudo update-initramfs -u
+yes | sudo apt-get install apt-file && \
+yes | sudo apt-file update && \
+# Hardware changes
+# dmesg | grep firmware
+# apt-file search <firmware-file-name>
+#
+# Power management utility for laptops.
+yes | sudo apt install tlp && \
+yes | sudo apt install tlp-rdw && \
 # File Compression:
 yes | sudo apt install unzip && \
 yes | sudo apt install bzip2 && \
@@ -113,6 +126,9 @@ yes | sudo apt install tar && \
 yes | sudo apt install xz-utils && \
 yes | sudo apt install lrzip && \
 yes | sudo apt install unrar && \
+# MATE archive manager. Works in XFCE
+yes | sudo apt install engrampa engrampa-common && \
+# Generic archive manager. Works in XFCE
 yes | sudo apt install xarchiver && \
 yes | sudo apt install thunar-archive-plugin && \
 yes | sudo apt install pixz && \

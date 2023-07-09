@@ -583,6 +583,20 @@ yes | sudo apt install libfuse2 && \
 
 yes | sudo apt install psensor && \
 
+# Command-line system info tool # Hardware info from the console
+yes | sudo apt install hardinfo && \
+
+# New hardware (firmware)
+# yes | sudo update-initramfs -u && \
+#
+yes | sudo apt-get install apt-file && \
+yes | sudo apt-file update && \
+#
+# Hardware changes
+# dmesg | grep firmware
+# apt-file search <firmware-file-name>
+#
+
 # yes | sudo apt install torbrowser-launcher && \ # Use Flatpak
 # yes | sudo apt install epiphany-browser && \
 
@@ -645,6 +659,8 @@ yes | sudo apt install xclip && \
 yes | sudo apt install uget && \
 yes | sudo apt install aria2 && \
 # yes | sudo apt install xpdf && \
+# MATE archive manager. Works in XFCE
+yes | sudo apt install engrampa engrampa-common && \
 # GUI Archive manager.
 yes | sudo apt install xarchiver && \
 yes | sudo apt install thunar-archive-plugin && \

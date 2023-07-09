@@ -373,8 +373,18 @@ sudo apt install redshift-gtk
 sudo apt install caffeine
 # Command-line system info tool
 sudo apt install hardinfo
+# New hardware (firmware)
+sudo update-initramfs -u
+sudo apt-get install apt-file
+sudo apt-file update
+# Hardware changes
+dmesg | grep firmware
+apt-file search <firmware-file-name>
 # The Fish Shell
 sudo apt install fish
+# Power management utility for laptops.
+sudo apt install tlp
+yes | sudo apt install tlp-rdw
 
 You might be interested in the following:
 (You'll install these utilities for convenience anyway)
@@ -506,6 +516,11 @@ sudo apt install pipx
 
 sudo apt install git git-lfs gitk git-gui
 sudo apt install unzip
+# MATE archive manager. Works in XFCE
+sudo apt install engrampa engrampa-common
+# Generic archive manager. Works in XFCE
+sudo apt install xarchiver
+sudo apt install thunar-archive-plugin
 sudo apt install wget curl
 
 sudo apt install notepadqq
