@@ -58,16 +58,7 @@ yes | sudo apt install npm && \
 # the script, and checks the output is as expected.
 yes | sudo apt install cmdtest && \
 yes | sudo apt install yarn && \
-# https://pnpm.io/installation
-curl -fsSL https://get.pnpm.io/install.sh | sh -  && \
-# ------------------------------------------------------------------------------
-# Install 'c': Use C as a shell scripting language:
-# https://github.com/ryanmjacobs/c
-cd ~/ && \
-yes | sudo apt install build-essential trash-cli && \
-wget https://raw.githubusercontent.com/ryanmjacobs/c/master/c && \
-sudo install -m 755 c /usr/bin/c && \
-trash c && \
+
 # ------------------------------------------------------------------------------
 # tool for selecting tasks
 yes | sudo apt install tasksel && \
@@ -421,4 +412,38 @@ yes | sudo apt install icc-profiles \
 yes | sudo apt install gimp-plugin-registry && \
 yes | sudo apt install gmic && \
 yes | sudo apt install gimp-gmic \
+
+# pnpm package manager:
+echo "If you've executed the first install script 01_debian_essential.sh already, you have pnpm installed on your system. (yes I did = 1. No, I did not = 0)"
+read choice
+if [ "${choice}" != '1' ]; then
+  echo "Ok!"
+   sleep 1
+   # https://pnpm.io/installation
+   curl -fsSL https://get.pnpm.io/install.sh | sh -
+
+fi
+
+# Install 'c': Use C as a shell scripting language:
+echo "If you've installed the 'c' scripting language support already, type 0 to skip installing it again. Type any other numbers to proceed with the installation."
+echo "https://github.com/ryanmjacobs/c"
+read choice
+if [ "${choice}" != '0' ]; then
+  echo "Ok! You'll install the 'c' scripting language support."
+   sleep 1
+   # ------------------------------------------------------------------------------
+   # Install 'c': Use C as a shell scripting language:
+   # Refer to '01_debian_essential.sh'.
+   # https://github.com/ryanmjacobs/c
+   cd ~/
+   yes | sudo apt install build-essential trash-cli
+   wget https://raw.githubusercontent.com/ryanmjacobs/c/master/c
+   sudo install -m 755 c /usr/bin/c
+   trash c
+   # ------------------------------------------------------------------------------
+else
+  echo "Skipping..."
+  sleep 1
+
+fi
 
