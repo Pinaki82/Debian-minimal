@@ -195,16 +195,6 @@ yes | sudo apt install npm && \
 yes | sudo apt install cmdtest && \
 yes | sudo apt install yarn && \
 
-echo "If you've executed the first install script 01_debian_essential.sh already, you have pnpm installed on your system. (yes I did = 1. No, I did not = 0)"
-read choice
-if [ "${choice}" != '1' ]; then
-  echo "Ok!"
-   sleep 1
-   # https://pnpm.io/installation
-   curl -fsSL https://get.pnpm.io/install.sh | sh -
-
-fi
-
 yes | sudo apt install cdecl && \
 yes | sudo apt install cutils && \
 yes | sudo apt install kitty && \
@@ -270,28 +260,6 @@ yes | sudo apt install m4 && \
 yes | sudo apt install make && \
 yes | sudo apt install ninja-build && \
 yes | sudo apt install meld && \
-
-echo "If you've installed the 'c' scripting language support already, type 0 to skip installing it again. Type any other numbers to proceed with the installation."
-echo "https://github.com/ryanmjacobs/c"
-read choice
-if [ "${choice}" != '0' ]; then
-  echo "Ok! You'll install the 'c' scripting language support."
-   sleep 1
-   # ------------------------------------------------------------------------------
-   # Install 'c': Use C as a shell scripting language:
-   # Refer to '01_debian_essential.sh'.
-   # https://github.com/ryanmjacobs/c
-   cd ~/
-   yes | sudo apt install build-essential trash-cli
-   wget https://raw.githubusercontent.com/ryanmjacobs/c/master/c
-   sudo install -m 755 c /usr/bin/c
-   trash c
-   # ------------------------------------------------------------------------------
-else
-  echo "Skipping..."
-  sleep 1
-
-fi
 
 # Terminal Fonts (MUST):
 # * Without these fonts, you'll miss the proper console characters and see boxes everywhere.
@@ -999,60 +967,6 @@ yes | sudo apt install tk-dev && \
 # c-c-plus-plus-common-libraries (END)
 # =================================================================
 
-
-# =================================================================
-# cpplint
-# =================================================================
-# https://pypi.org/project/cpplint/
-
-pipx install cpplint && \
-
-echo "Install Flint++? (Yes, do it = 1. No = anything else.)."
-read choice
-if [ "${choice}" != '0' ]; then
-  echo "Ok! Installing Flint++."
-   sleep 1
-   # Flint++
-   # https://github.com/JossWhittle/FlintPlusPlus
-   # Create a symbolic link:
-   cd ~/
-   rm -rf ~/FlintPlusPlus
-   git clone https://github.com/JossWhittle/FlintPlusPlus.git
-
-   rm -rf ~/FlintPlusPlus/.git
-   rm -rf ~/FlintPlusPlus/bin/deb32
-   rm -rf ~/FlintPlusPlus/bin/raspberry\ pi/
-   rm -rf ~/FlintPlusPlus/bin/Win32
-   rm -rf ~/FlintPlusPlus/bin/x64
-   rm -rf ~/FlintPlusPlus/debian
-   rm -rf ~/FlintPlusPlus/flint
-   rm ~/FlintPlusPlus/.gitattributes ~/FlintPlusPlus/.gitignore ~/FlintPlusPlus/flint++.1
-
-
-   echo "Type 1 (numeric one) if you already have Flint++ on your system."
-   read choice
-   if [ "${choice}" != '0' ]; then
-     # Performing checks before running this automated installation script for the second time.
-
-     sudo rm /usr/bin/flint++
-
-    fi
-
-   sudo ln -s ~/FlintPlusPlus/bin/deb64/flint++ /usr/bin/flint++
-   chmod +x ~/FlintPlusPlus/bin/deb64/flint++
-
-   # Ref: https://github.com/mcandre/linters
-else
-  echo "Ok, skipping..."
-  sleep 1
-
-fi
-
-# =================================================================
-# cpplint (END)
-# =================================================================
-
-
 # =================================================================
 # Conky-Resource-Monitor-Gadget
 # =================================================================
@@ -1245,6 +1159,91 @@ yes | sudo apt install libwxgtk3.2-1 \
 # sudo apt --fix-broken install
 # sudo dpkg -i  veracrypt-x.xx.x-Debian-xx-amd64.deb \
 
+# pnpm package manager:
+echo "If you've executed the first install script 01_debian_essential.sh already, you have pnpm installed on your system. (yes I did = 1. No, I did not = 0)"
+read choice
+if [ "${choice}" != '1' ]; then
+  echo "Ok!"
+   sleep 1
+   # https://pnpm.io/installation
+   curl -fsSL https://get.pnpm.io/install.sh | sh -
+
+fi
+
+# Install 'c': Use C as a shell scripting language:
+echo "If you've installed the 'c' scripting language support already, type 0 to skip installing it again. Type any other numbers to proceed with the installation."
+echo "https://github.com/ryanmjacobs/c"
+read choice
+if [ "${choice}" != '0' ]; then
+  echo "Ok! You'll install the 'c' scripting language support."
+   sleep 1
+   # ------------------------------------------------------------------------------
+   # Install 'c': Use C as a shell scripting language:
+   # Refer to '01_debian_essential.sh'.
+   # https://github.com/ryanmjacobs/c
+   cd ~/
+   yes | sudo apt install build-essential trash-cli
+   wget https://raw.githubusercontent.com/ryanmjacobs/c/master/c
+   sudo install -m 755 c /usr/bin/c
+   trash c
+   # ------------------------------------------------------------------------------
+else
+  echo "Skipping..."
+  sleep 1
+
+fi
+
+# =================================================================
+# cpplint
+# =================================================================
+# https://pypi.org/project/cpplint/
+
+pipx install cpplint && \
+
+echo "Install Flint++? (Yes, do it = 1. No = anything else.)."
+read choice
+if [ "${choice}" != '0' ]; then
+  echo "Ok! Installing Flint++."
+   sleep 1
+   # Flint++
+   # https://github.com/JossWhittle/FlintPlusPlus
+   # Create a symbolic link:
+   cd ~/
+   rm -rf ~/FlintPlusPlus
+   git clone https://github.com/JossWhittle/FlintPlusPlus.git
+
+   rm -rf ~/FlintPlusPlus/.git
+   rm -rf ~/FlintPlusPlus/bin/deb32
+   rm -rf ~/FlintPlusPlus/bin/raspberry\ pi/
+   rm -rf ~/FlintPlusPlus/bin/Win32
+   rm -rf ~/FlintPlusPlus/bin/x64
+   rm -rf ~/FlintPlusPlus/debian
+   rm -rf ~/FlintPlusPlus/flint
+   rm ~/FlintPlusPlus/.gitattributes ~/FlintPlusPlus/.gitignore ~/FlintPlusPlus/flint++.1
+
+
+   echo "Type 1 (numeric one) if you already have Flint++ on your system."
+   read choice
+   if [ "${choice}" != '0' ]; then
+     # Performing checks before running this automated installation script for the second time.
+
+     sudo rm /usr/bin/flint++
+
+    fi
+
+   sudo ln -s ~/FlintPlusPlus/bin/deb64/flint++ /usr/bin/flint++
+   chmod +x ~/FlintPlusPlus/bin/deb64/flint++
+
+   # Ref: https://github.com/mcandre/linters
+else
+  echo "Ok, skipping..."
+  sleep 1
+
+fi
+
+# =================================================================
+# cpplint (END)
+# =================================================================
 
 echo "--------------------------------------"
 echo "Done!"
