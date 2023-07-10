@@ -1,0 +1,10 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+[Desktop Entry]
+Type=Application
+Name=KoReader
+Comment=E-Book Reader
+Icon=appimagekit_a530dc73365ca8abc6a3c76bc4024dc3_koreader
+Exec=/home/YOURUSERNAME/PortablePrograms/koreader-appimage-x86_64-linux-gnu-v2022.11.AppImage
+Terminal=false
+Categories=;

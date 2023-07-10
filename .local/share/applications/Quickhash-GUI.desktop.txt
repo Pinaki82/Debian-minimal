@@ -21,7 +21,7 @@ Comment=HASH Verification
 Exec=/home/YOURUSERNAME/PortablePrograms/QuickHash-GUI-Linux-v3.2.0/Quickhash-GUI
 
 # The name of the icon that will be used to display this entry
-Icon=crosshairs
+Icon=quickhash
 
 # Describes whether this application needs to be run in a terminal or not
 Terminal=false

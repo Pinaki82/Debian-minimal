@@ -2,9 +2,9 @@
 
 [Desktop Entry]
 Type=Application
-Name=Marktext
-Comment=Markdown Editor
-Icon=marktext
-Exec=/home/YOURUSERNAME/PortablePrograms/marktext-x86_64.AppImage
+Name=Balena Etcher
+Comment=Bootable USB
+Icon=Etcher
+Exec=/home/YOURUSERNAME/PortablePrograms/balenaEtcher-1.10.2-x64.AppImage
 Terminal=false
-Categories=Office;
+Categories=;

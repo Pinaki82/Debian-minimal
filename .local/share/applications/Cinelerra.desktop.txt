@@ -2,9 +2,9 @@
 
 [Desktop Entry]
 Type=Application
-Name=Marktext
-Comment=Markdown Editor
-Icon=marktext
-Exec=/home/YOURUSERNAME/PortablePrograms/marktext-x86_64.AppImage
+Name=Cinelerra
+Comment=Video Editor
+Icon=cinelerra
+Exec=/home/YOURUSERNAME/PortablePrograms/CinGG-20230630-x86_64.AppImage
 Terminal=false
-Categories=Office;
+Categories=;

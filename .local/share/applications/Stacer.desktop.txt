@@ -1,0 +1,10 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+[Desktop Entry]
+Type=Application
+Name=Stacer
+Comment=System Optimizer and Monitoring
+Icon=stacer
+Exec=/home/YOURUSERNAME/PortablePrograms/Stacer-1.1.0-x64.AppImage
+Terminal=false
+Categories=;

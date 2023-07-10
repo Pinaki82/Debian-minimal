@@ -1,0 +1,10 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+[Desktop Entry]
+Type=Application
+Name=Audacity
+Comment=Programmer's Text Editor
+Icon=kate
+Exec=/home/YOURUSERNAME/PortablePrograms/kate-master-880-linux-gcc-x86_64_8dd27de9523325d0070946a3335a5418.AppImage
+Terminal=false
+Categories=;

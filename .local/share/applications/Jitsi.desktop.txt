@@ -2,9 +2,9 @@
 
 [Desktop Entry]
 Type=Application
-Name=Marktext
-Comment=Markdown Editor
-Icon=marktext
-Exec=/home/YOURUSERNAME/PortablePrograms/marktext-x86_64.AppImage
+Name=Jitsi
+Comment=Teleconference
+Icon=jitsi
+Exec=/home/YOURUSERNAME/PortablePrograms/jitsi-meet-x86_64.AppImage
 Terminal=false
-Categories=Office;
+Categories=;

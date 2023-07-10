@@ -2,9 +2,9 @@
 
 [Desktop Entry]
 Type=Application
-Name=Marktext
-Comment=Markdown Editor
-Icon=marktext
-Exec=/home/YOURUSERNAME/PortablePrograms/marktext-x86_64.AppImage
+Name=Krita
+Comment=Image Painter
+Icon=krita
+Exec=/home/YOURUSERNAME/PortablePrograms/krita-5.0.6-x86_64.appimage
 Terminal=false
-Categories=Office;
+Categories=;

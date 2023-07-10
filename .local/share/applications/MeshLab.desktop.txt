@@ -2,9 +2,9 @@
 
 [Desktop Entry]
 Type=Application
-Name=Marktext
-Comment=Markdown Editor
-Icon=marktext
-Exec=/home/YOURUSERNAME/PortablePrograms/marktext-x86_64.AppImage
+Name=MeshLab
+Comment=3D Model Viewer
+Icon=meshlab
+Exec=/home/YOURUSERNAME/PortablePrograms/MeshLab2021.10-linux.AppImage
 Terminal=false
-Categories=Office;
+Categories=;

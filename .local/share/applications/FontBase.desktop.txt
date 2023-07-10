@@ -2,9 +2,9 @@
 
 [Desktop Entry]
 Type=Application
-Name=Marktext
-Comment=Markdown Editor
-Icon=marktext
-Exec=/home/YOURUSERNAME/PortablePrograms/marktext-x86_64.AppImage
+Name=FontBase
+Comment=Font Viewer
+Icon=fontbase
+Exec=/home/YOURUSERNAME/PortablePrograms/FontBase-2.18.1.AppImage
 Terminal=false
-Categories=Office;
+Categories=;
