@@ -143,6 +143,9 @@ yes | sudo aptitude install <package>/trixie-backports
 
 However, Debian Trixie has not been released yet.
 
+Debian-XFCE Net-Install ISO didn't install any calculator app.
+sudo apt install gnome-calculator
+
 Install GVim+Vim:
 
 apt search vim-gtk

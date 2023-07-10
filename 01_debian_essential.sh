@@ -79,6 +79,9 @@ yes | sudo apt install ntp && \
 yes | sudo apt install python3-pip && \
 #python -m pip install --upgrade pip && \
 # ------------------------------------------------------------------------------
+# Debian-XFCE Net-Install ISO didn't install any calculator app.
+yes | sudo apt install gnome-calculator && \
+#
 # Install GVim+Vim:
 # yes | sudo apt install vim vim-gtk3 && \
 #

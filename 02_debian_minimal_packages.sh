@@ -194,8 +194,17 @@ yes | sudo apt install npm && \
 
 yes | sudo apt install cmdtest && \
 yes | sudo apt install yarn && \
-# https://pnpm.io/installation
-curl -fsSL https://get.pnpm.io/install.sh | sh -  && \
+
+echo "If you've executed the first install script 01_debian_essential.sh already, you have pnpm installed on your system. (yes I did = 1. No, I did not = 0)"
+read choice
+if [ "${choice}" != '1' ]; then
+  echo "Ok!"
+   sleep 1
+   # https://pnpm.io/installation
+   curl -fsSL https://get.pnpm.io/install.sh | sh -
+
+fi
+
 yes | sudo apt install cdecl && \
 yes | sudo apt install cutils && \
 yes | sudo apt install kitty && \
@@ -262,16 +271,27 @@ yes | sudo apt install make && \
 yes | sudo apt install ninja-build && \
 yes | sudo apt install meld && \
 
-# ------------------------------------------------------------------------------
-# Install 'c': Use C as a shell scripting language:
-# Refer to '01_debian_essential.sh'.
-# https://github.com/ryanmjacobs/c
-# cd ~/ && \
-# yes | sudo apt install build-essential trash-cli && \
-# wget https://raw.githubusercontent.com/ryanmjacobs/c/master/c && \
-# sudo install -m 755 c /usr/bin/c && \
-# trash c && \
-# ------------------------------------------------------------------------------
+echo "If you've installed the 'c' scripting language support already, type 0 to skip installing it again. Type any other numbers to proceed with the installation."
+echo "https://github.com/ryanmjacobs/c"
+read choice
+if [ "${choice}" != '0' ]; then
+  echo "Ok! You'll install the 'c' scripting language support."
+   sleep 1
+   # ------------------------------------------------------------------------------
+   # Install 'c': Use C as a shell scripting language:
+   # Refer to '01_debian_essential.sh'.
+   # https://github.com/ryanmjacobs/c
+   cd ~/
+   yes | sudo apt install build-essential trash-cli
+   wget https://raw.githubusercontent.com/ryanmjacobs/c/master/c
+   sudo install -m 755 c /usr/bin/c
+   trash c
+   # ------------------------------------------------------------------------------
+else
+  echo "Skipping..."
+  sleep 1
+
+fi
 
 # Terminal Fonts (MUST):
 # * Without these fonts, you'll miss the proper console characters and see boxes everywhere.
@@ -384,6 +404,10 @@ yes | sudo apt install smartmontools && \
 yes | sudo apt install gsmartcontrol && \
 # X display manager
 yes | sudo apt install xdm && \
+# ------------------------------------------------------------------------------
+# Debian-XFCE Net-Install ISO didn't install any calculator app.
+yes | sudo apt install gnome-calculator && \
+#
 # Description: a tool for selecting tasks for installation on Debian systems
 # This package provides 'tasksel', a simple interface for users who
 # want to configure their system to perform a specific task.
@@ -724,6 +748,8 @@ yes | sudo apt install ddrescueview && \
 yes | sudo apt install recoverjpeg && \
 
 yes | sudo apt install ffmpeg && \
+yes | sudo apt install mediainfo && \
+# Install the GUI from Snap: sudo snap install mediainfo-gui
 
 yes | sudo apt install youtube-dl && \
 
@@ -981,30 +1007,46 @@ yes | sudo apt install tk-dev && \
 
 pipx install cpplint && \
 
-# https://github.com/JossWhittle/FlintPlusPlus
-# Create a symbolic link:
-cd ~/  && \
-rm -rf ~/FlintPlusPlus && \
-git clone https://github.com/JossWhittle/FlintPlusPlus.git  && \
+echo "Install Flint++? (Yes, do it = 1. No = anything else.)."
+read choice
+if [ "${choice}" != '0' ]; then
+  echo "Ok! Installing Flint++."
+   sleep 1
+   # Flint++
+   # https://github.com/JossWhittle/FlintPlusPlus
+   # Create a symbolic link:
+   cd ~/
+   rm -rf ~/FlintPlusPlus
+   git clone https://github.com/JossWhittle/FlintPlusPlus.git
 
-rm -rf ~/FlintPlusPlus/.git  && \
-rm -rf ~/FlintPlusPlus/bin/deb32  && \
-rm -rf ~/FlintPlusPlus/bin/raspberry\ pi/  && \
-rm -rf ~/FlintPlusPlus/bin/Win32  && \
-rm -rf ~/FlintPlusPlus/bin/x64  && \
-rm -rf ~/FlintPlusPlus/debian  && \
-rm -rf ~/FlintPlusPlus/flint  && \
-rm ~/FlintPlusPlus/.gitattributes ~/FlintPlusPlus/.gitignore ~/FlintPlusPlus/flint++.1 && \
+   rm -rf ~/FlintPlusPlus/.git
+   rm -rf ~/FlintPlusPlus/bin/deb32
+   rm -rf ~/FlintPlusPlus/bin/raspberry\ pi/
+   rm -rf ~/FlintPlusPlus/bin/Win32
+   rm -rf ~/FlintPlusPlus/bin/x64
+   rm -rf ~/FlintPlusPlus/debian
+   rm -rf ~/FlintPlusPlus/flint
+   rm ~/FlintPlusPlus/.gitattributes ~/FlintPlusPlus/.gitignore ~/FlintPlusPlus/flint++.1
 
-# uncomment the line below before running this automated installation script for the second time
 
-# sudo rm /usr/bin/flint++ && \
+   echo "Type 1 (numeric one) if you already have Flint++ on your system."
+   read choice
+   if [ "${choice}" != '0' ]; then
+     # Performing checks before running this automated installation script for the second time.
 
-sudo ln -s ~/FlintPlusPlus/bin/deb64/flint++ /usr/bin/flint++ && \
-chmod +x ~/FlintPlusPlus/bin/deb64/flint++ && \
-cd ~/  && \
+     sudo rm /usr/bin/flint++
 
-# Ref: https://github.com/mcandre/linters
+    fi
+
+   sudo ln -s ~/FlintPlusPlus/bin/deb64/flint++ /usr/bin/flint++
+   chmod +x ~/FlintPlusPlus/bin/deb64/flint++
+
+   # Ref: https://github.com/mcandre/linters
+else
+  echo "Ok, skipping..."
+  sleep 1
+
+fi
 
 # =================================================================
 # cpplint (END)
