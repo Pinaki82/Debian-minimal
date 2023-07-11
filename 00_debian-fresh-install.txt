@@ -830,6 +830,11 @@ flatpak install flathub org.libreoffice.LibreOffice
 # A GUI Flatpak App Permission Manager
 # https://www.makeuseof.com/manage-flatpak-permissions-with-flatseal-linux/
 flatpak install flathub com.github.tchx84.Flatseal
+# KDE Non-Linear Video Editor: Kdenlive
+Dependencies: sudo apt install frei0r-plugins
+flatpak install flathub org.kde.kdenlive
+Run: flatpak run org.kde.kdenlive
+
 
 The Suckless ST Terminal Emulator basic package:
 sudo apt install stterm

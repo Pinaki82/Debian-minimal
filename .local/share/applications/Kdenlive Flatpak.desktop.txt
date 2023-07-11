@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Kdenlive
+Comment=KDE Non-Linear Video Editor
+Icon=kdenlive
+Exec=flatpak run org.kde.kdenlive
+Terminal=false
+Categories=Multimedia;
