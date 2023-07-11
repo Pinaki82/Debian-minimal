@@ -290,6 +290,12 @@ yes | sudo apt install rofi
 # Settings -> Keyboard -> Application Shortcut -> Add
 # rofi -combi-modi window,drun,ssh -theme solarized -font "hack 10" -show combi -icon -theme "papyrus" -show-icons
 # SUPER (WINDOWS) + SPACE
+# Additional 'rofi' themes:
+# rofi -combi-modi window,drun,ssh -theme Arc-Dark -font "hack 10" -show combi -icon -show-icons
+# rofi -combi-modi window,drun,ssh -theme arthur -font "hack 25" -show combi -icon -show-icons -icon-size 35
+# rofi -combi-modi window,drun,ssh -theme docu -font "hack 10" -show combi -icon -show-icons
+# rofi -combi-modi window,drun,ssh -theme solarized -font "hack 12" -show combi -icon-theme "papyrus" -show-icons -icon-size 16
+# rofi-theme-selector
 
 Your desktop should get an exquisite look at this point.
 

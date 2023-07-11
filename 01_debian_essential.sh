@@ -201,6 +201,10 @@ yes | sudo apt install rofi && \
 # Settings -> Keyboard -> Application Shortcut -> Add
 # rofi -combi-modi window,drun,ssh -theme solarized -font "hack 10" -show combi -icon -theme "papyrus" -show-icons
 # SUPER (WINDOWS) + SPACE
+# Another theme:
+# rofi -combi-modi window,drun,ssh -theme arthur -font "hack 25" -show combi -icon -show-icons -icon-size 35
+# rofi-theme-selector
+#
 # Install some Command-line tools.
 yes | sudo apt install neofetch && \
 yes | sudo apt install htop && \
