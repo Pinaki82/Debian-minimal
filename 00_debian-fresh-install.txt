@@ -798,7 +798,7 @@ echo $XDG_DATA_DIRS
 ls -l /var/lib/snapd/desktop/applications
 mkdir ~/.local/share/applications/
 cp /var/lib/snapd/desktop/applications/inkscape_inkscape.desktop ~/.local/share/applications/
-chmod 755 ~/.local/share/applications/inkscape_inkscape.desktop 
+chmod 755 ~/.local/share/applications/inkscape_inkscape.desktop
 
 # Snap Packages:
 sudo snap install gimp
@@ -834,6 +834,9 @@ flatpak install flathub com.github.tchx84.Flatseal
 Dependencies: sudo apt install frei0r-plugins
 flatpak install flathub org.kde.kdenlive
 Run: flatpak run org.kde.kdenlive
+# Flowblade: A multitrack non-linear video editor
+flatpak install flathub io.github.jliljebl.Flowblade
+Run: flatpak run io.github.jliljebl.Flowblade
 
 
 The Suckless ST Terminal Emulator basic package:
