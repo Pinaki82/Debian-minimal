@@ -65,6 +65,68 @@ fi
 # virtualbox-shared-folder-permission (END)
 # =================================================================
 
+# =================================================================
+# # https://askubuntu.com/questions/800155/service-command-not-found
+# service: command not found
+# Solve the problem by adding
+# export PATH="$PATH:/usr/sbin"
+# to your .bashrc, .bash_aliases, .bash_profile, .profile
+# =================================================================
+
+# export PATH="$PATH:/usr/sbin"
+
+touch .bash_profile  && \
+
+printf "Add the following entry,\n  then write changes & exit.\n"
+echo "    export PATH="'"$PATH:/usr/sbin"'"    "
+echo "file:  .bash_profile"
+
+echo "export PATH="'"$PATH:/usr/sbin"'"" >> ~/.bash_profile
+
+sleep 3
+######################mousepad .bash_profile  && \
+# https://askubuntu.com/questions/108258/what-is-the-bash-equivalent-of-doss-pause-command
+read -p ""  && \
+# https://stackoverflow.com/questions/8467424/echo-newline-in-bash-prints-literal-n?rq=1
+printf "Add the following entry,\n  then write changes & exit.\n"
+echo "    export PATH="'"$PATH:/usr/sbin"'"    "
+echo "file:  .bashrc"
+
+echo "export PATH="'"$PATH:/usr/sbin"'"" >> ~/.bashrc
+
+sleep 3
+######################mousepad .bashrc  && \
+read -p ""  && \
+# https://stackoverflow.com/questions/8467424/echo-newline-in-bash-prints-literal-n?rq=1
+printf "Add the following entry,\n  then write changes & exit.\n"
+echo "    export PATH="'"$PATH:/usr/sbin"'"    "
+echo "file:  .bash_aliases"
+
+echo "export PATH="'"$PATH:/usr/sbin"'"" >> ~/.bash_aliases
+
+sleep 3
+######################mousepad .bash_aliases  && \
+read -p ""  && \
+# https://stackoverflow.com/questions/8467424/echo-newline-in-bash-prints-literal-n?rq=1
+printf "Add the following entry,\n  then write changes & exit.\n"
+echo "    export PATH="'"$PATH:/usr/sbin"'"    "
+echo "file:  .profile"
+
+echo "export PATH="'"$PATH:/usr/sbin"'"" >> ~/.profile
+
+sleep 3
+######################mousepad .profile  && \
+# https://askubuntu.com/questions/108258/what-is-the-bash-equivalent-of-doss-pause-command
+read -p " "  && \
+sleep 1
+source "/home/$(whoami)/.bashrc"  && \
+source "/home/$(whoami)/.bash_aliases"  && \
+source "/home/$(whoami)/.bash_profile"  && \
+source "/home/$(whoami)/.profile"  && \
+
+# =================================================================
+# pip3 packages - path setup (END)
+# =================================================================
 
 # =================================================================
 # pip3 packages - path setup
@@ -77,6 +139,10 @@ touch .bash_profile  && \
 printf "Add the following entry,\n  then write changes & exit.\n"
 echo "    export PATH="'"$HOME/.local/bin/:$PATH"'"    "
 echo "file:  .bash_profile"
+
+echo "export PATH="'"$HOME/.local/bin/:$PATH"'"" >> ~/.bash_profile
+
+
 sleep 3
 ######################mousepad .bash_profile  && \
 # https://askubuntu.com/questions/108258/what-is-the-bash-equivalent-of-doss-pause-command
@@ -85,6 +151,19 @@ read -p ""  && \
 printf "Add the following entry,\n  then write changes & exit.\n"
 echo "    export PATH="'"$HOME/.local/bin/:$PATH"'"    "
 echo "file:  .bashrc"
+
+echo "export PATH="'"$HOME/.local/bin/:$PATH"'"" >> ~/.bashrc
+
+sleep 3
+######################mousepad .bashrc  && \
+read -p ""  && \
+# https://stackoverflow.com/questions/8467424/echo-newline-in-bash-prints-literal-n?rq=1
+printf "Add the following entry,\n  then write changes & exit.\n"
+echo "    export PATH="'"$HOME/.local/bin/:$PATH"'"    "
+echo "file:  .bash_aliases"
+
+echo "export PATH="'"$HOME/.local/bin/:$PATH"'"" >> ~/.bash_aliases
+
 sleep 3
 ######################mousepad .bashrc  && \
 # https://askubuntu.com/questions/108258/what-is-the-bash-equivalent-of-doss-pause-command

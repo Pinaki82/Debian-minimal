@@ -1,4 +1,6 @@
 # custom entry
+# https://askubuntu.com/questions/800155/service-command-not-found
+export PATH="$PATH:/usr/sbin"
 export PATH="$HOME/.local/bin/:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 

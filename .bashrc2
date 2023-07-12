@@ -165,6 +165,8 @@ eval "$(thefuck --alias luck)"
 . "$HOME/.cargo/env"
 
 # Custom Entries:
+# https://askubuntu.com/questions/800155/service-command-not-found
+export PATH="$PATH:/usr/sbin"
 export PATH="$HOME/.local/bin/:$PATH"
 eval "$(thefuck --alias luck)"
 . /usr/share/autojump/autojump.sh

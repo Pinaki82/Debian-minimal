@@ -82,6 +82,31 @@ Update the system:
 
 yes | sudo apt update && sudo apt upgrade
 
+
+Do the following:
+# =================================================================
+# # https://askubuntu.com/questions/800155/service-command-not-found
+# service: command not found
+# Solve the problem by adding
+# export PATH="$PATH:/usr/sbin"
+# to your .bashrc, .bash_aliases, .bash_profile, .profile
+# =================================================================
+
+echo "export PATH="'"$PATH:/usr/sbin"'"" >> ~/.bash_profile
+echo "export PATH="'"$PATH:/usr/sbin"'"" >> ~/.bashrc
+echo "export PATH="'"$PATH:/usr/sbin"'"" >> ~/.bash_aliases
+echo "export PATH="'"$PATH:/usr/sbin"'"" >> ~/.profile
+
+Add $HOME/.local/bin/ to the PATH for pip/cargo/pipx etc.:
+
+echo "export PATH="'"$HOME/.local/bin/:$PATH"'"" >> ~/.bash_profile
+echo "export PATH="'"$HOME/.local/bin/:$PATH"'"" >> ~/.bashrc
+echo "export PATH="'"$HOME/.local/bin/:$PATH"'"" >> ~/.bash_aliases
+
+
+
+
+
 ================================================================================
 ===================================== IMPORTANT ================================
 Install basic packages:
