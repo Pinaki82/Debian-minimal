@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=GNOME Terminal
+Comment=GTK+ Terminal Emulator for GNOME
+Icon=utilities-terminal
+Exec=/usr/bin/gnome-terminal
+Terminal=false
+Categories=System;
