@@ -171,7 +171,7 @@ yes | sudo apt-add-repository non-free && \
 yes | sudo apt-add-repository contrib && \
 yes | sudo apt update && sudo apt upgrade && \
 yes | sudo apt install libavcodec-extra && \
-sudo apt install libdvdcss2 && \
+yes | sudo apt install libdvdcss2 && \
 # Run
 sudo dpkg-reconfigure libdvd-pkg && \
 #   later.
