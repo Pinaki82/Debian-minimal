@@ -941,8 +941,8 @@ yes | sudo apt install scdaemon && \
 yes | sudo apt install ffmpeg && \
 # sudo apt install mediainfo -y && \ # Install Snap
 # VidCutter # Install Snap
-# Create DVDs easily
-# yes | sudo apt install devede && \
+# Create Video DVDs and VCDs easily
+yes | sudo apt install devede && \
 
 yes | sudo apt install winff && \
 yes | sudo apt install winff-doc && \
