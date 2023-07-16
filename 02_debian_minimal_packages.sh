@@ -709,6 +709,10 @@ yes | sudo apt install transmission && \
 #
 # A cross-platform dictionary similar to Wordweb
 yes | sudo apt install artha && \
+
+# CD/DVD:
+yes | sudo apt install brasero && \
+
 # PDF Reader
 yes | sudo apt install okular && \
 # yes | sudo apt install ghostwriter && \ # Markdown Editor

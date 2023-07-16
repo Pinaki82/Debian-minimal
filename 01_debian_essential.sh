@@ -308,6 +308,9 @@ yes | sudo apt install surf && \
 # A cross-platform dictionary similar to Wordweb
 yes | sudo apt install artha && \
 
+# CD/DVD:
+yes | sudo apt install brasero && \
+
 # Screenshot Utility.
 yes | sudo apt install flameshot && \
 # Defrag NTFS Volumes.
