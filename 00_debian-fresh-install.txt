@@ -340,6 +340,9 @@ yes | sudo apt update && sudo apt upgrade
 yes | sudo apt install snapd
 yes | sudo snap install core
 yes | sudo snap install snap-store
+Update Snaps:
+snap refresh --list
+sudo snap refresh
 
 Flatpak:
 *** Install Flatpak as root: ***
@@ -350,6 +353,8 @@ yes | flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathu
 Exit su:
 exit
 sudo reboot now
+Update Flatpak Apps:
+flatpak update
 
 Flatpak Example:
 Install MS Windows layer translator, Bottle from Flatpak:

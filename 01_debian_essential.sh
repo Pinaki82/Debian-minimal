@@ -221,6 +221,9 @@ yes | sudo apt install gnome-software && \
 #   yes | sudo apt install snapd && \
 #   yes | sudo snap install core && \
 #   yes | sudo snap install snap-store && \
+# Update Snaps:
+# snap refresh --list
+# sudo snap refresh
 # ------------------------------------------------------------------------------
 # Flatpak:
 # *** Install Flatpak as root: ***
@@ -233,6 +236,9 @@ yes | sudo apt install gnome-software && \
 # Exit su:
 #   exit
 #   sudo reboot now
+#
+# Update Flatpak Apps:
+# flatpak update
 #
 # Flatpak Example:
 # Install MS Windows layer translator, Bottle from Flatpak:
