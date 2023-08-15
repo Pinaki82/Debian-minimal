@@ -93,3 +93,7 @@ unset env
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
+export PATH="$PATH:/usr/sbin"
+HELIX_RUNTIME=/home/appu/helix/runtime/
+
+
