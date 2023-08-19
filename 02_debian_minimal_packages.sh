@@ -468,6 +468,8 @@ yes | sudo apt install gnome-disk-utility && \
 yes | sudo apt install rsync && \
 yes | sudo apt install timeshift && \
 yes | sudo apt install grsync && \
+#      SyncThing GTK+ File synchronisation app
+# flatpak install me.kozec.syncthingtk && \
 yes | sudo apt install synaptic && \
 yes | sudo apt install preload && \
 # seahorse: GUI Keyring Manager
