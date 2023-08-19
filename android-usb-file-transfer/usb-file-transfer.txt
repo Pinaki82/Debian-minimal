@@ -1,0 +1,9 @@
+https://mattoppenheim.com/2021/12/28/mounting-an-android-phone-on-debian-linux-to-synchronise-files/
+
+sudo apt install gmtp jmtpfs
+
+mkdir ~/tmp/phone
+Mount:
+jmtpfs ~/tmp/phone
+Unmount:
+fusermount -u ~/tmp/phone
