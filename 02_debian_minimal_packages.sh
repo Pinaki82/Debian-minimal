@@ -812,6 +812,11 @@ yes | sudo apt install mediainfo && \
 
 yes | sudo apt install youtube-dl && \
 
+#      HandBrake Video Converter
+# flatpak install fr.handbrake.ghb
+# HandBrake Intel QSV plugin
+# flatpak install fr.handbrake.ghb.Plugin.IntelMediaSDK
+
 yes | sudo apt install gtkhash && \
 
 # Download QuickHash-GUI-Linux-v3.2.0 from: https://www.quickhash-gui.org
