@@ -162,6 +162,9 @@ yes | sudo apt install wifi-qr && \
 # Description: graphical wireless scanner.
 yes | sudo apt install linssid && \
 # ------------------------------------------------------------------------------
+# USB file transfer from Android phones
+yes | sudo apt install gmtp jmtpfs && \
+# ------------------------------------------------------------------------------
 # Launcher.
 yes | sudo apt install rofi && \
 # Codecs:
