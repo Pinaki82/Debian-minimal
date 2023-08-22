@@ -1,4 +1,4 @@
-// Last Change: 2023-08-22  Tuesday: 04:20:31 PM
+// Last Change: 2023-08-22  Tuesday: 08:16:54 PM
 
 // sudo apt install libgtk-3-dev
 // dpkg --status libgtk-3-dev
@@ -24,6 +24,11 @@
   Delete the file from the current working dir: rm phonemnt
 */
 
+// Restrict to UNIX-like systems only
+#if !( defined( __unix__ ) || defined(_POSIX_VERSION) || defined(__debian__) )
+  #error "For UNIX-like Operating Systems Only"
+#endif
+
 #include <gtk/gtk.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -32,13 +37,16 @@
 #include <unistd.h>
 #include <errno.h>
 
+#define  MAXPATH  1024 // Maximum path length
+
 void create_tmp_phone_dir(void);
 void button_clicked(GtkWidget *widget, gpointer data);
 
 void create_tmp_phone_dir(void) {
+  /*printf("create_tmp_phone_dir\n");*/
   char dirname0[] = "/tmp";
   char dirname1[] = "/phone";
-  char target[1024] = "";
+  char target[MAXPATH] = "";
   // https://www.demo2s.com/c/c-username-getenv-user.html
   char *username = NULL;
   username = getenv("USER");
@@ -47,12 +55,13 @@ void create_tmp_phone_dir(void) {
     printf("username '%s'\n", username);
   }
 
-  strncat(target, "/home/", 1024 - 1);
-  strncat(target, username, 1024 - 1);
-  strncat(target, dirname0, 1024 - 1);
+  strncat(target, "/home/", MAXPATH - 1);
+  strncat(target, username, MAXPATH - 1);
+  strncat(target, dirname0, MAXPATH - 1);
   printf("target dir = %s\n", target);
 
   // Create the directory using mkdir()
+  // First, the program creates a directory ~/tmp
   if(mkdir(target, 0755) == -1 && errno != EEXIST) {
     perror("Failed to create directory\n");
   }
@@ -61,10 +70,11 @@ void create_tmp_phone_dir(void) {
     printf("Directory created successfully\n");
   }
 
-  strncat(target, dirname1, 1024 - 1);
+  strncat(target, dirname1, MAXPATH - 1);
   printf("target dir = %s\n", target);
 
   // Create the directory using mkdir()
+  // The program creates a directory ~/tmp/phone
   if(mkdir(target, 0755) == -1 && errno != EEXIST) {
     perror("Failed to create directory\n");
   }
@@ -80,44 +90,66 @@ void button_clicked(GtkWidget *widget, gpointer data) {
 
   if(strcmp(button_label, "Button 1") == 0) {
     g_print("Button 1 clicked\n");
-    // Create the directory ~/tmp/phone
-    create_tmp_phone_dir();
+    system("jmtpfs ~/tmp/phone"); // Mount the filesystem from the phone.
   }
 
   // Add similar logic for other buttons...
   if(strcmp(button_label, "Button 2") == 0) {
     g_print("Button 2 clicked\n");
-    system("jmtpfs ~/tmp/phone"); // Mount the filesystem from the phone.
-  }
-
-  if(strcmp(button_label, "Button 3") == 0) {
-    g_print("Button 3 clicked\n");
     system("fusermount -u ~/tmp/phone"); // Unount the filesystem from the phone.
   }
 }
 
 int main(int argc, char *argv[]) {
+  /* Directory creation part. ~/tmp/phone */
+  /*printf("main\n");*/
+  char dirname0[] = "/tmp";
+  char dirname1[] = "/phone";
+  char target[MAXPATH] = "";
+  // https://www.demo2s.com/c/c-username-getenv-user.html
+  char *username = NULL;
+  username = getenv("USER");
+
+  if(NULL == username) {
+    printf("Cannot get username\n");
+  }
+
+  else {
+    strncat(target, "/home/", MAXPATH - 1);
+    strncat(target, username, MAXPATH - 1);
+    strncat(target, dirname0, MAXPATH - 1);
+    strncat(target, dirname1, MAXPATH - 1);
+    /*printf("target dir = %s\n", target);*/
+  }
+
+  // check whether the directory ~/tmp/phone exists or not
+  if(access(target, F_OK) == -1) { // Check whether the directory exists
+    // if not, create it
+    create_tmp_phone_dir();
+  }
+
+  else {
+    printf("Directory already exists\n");
+  } /* (END) Directory creation part. ~/tmp/phone */
+
   gtk_init(&argc, &argv); // Initialize GTK
-  GtkWidget *window, *button1, *button2, *button3;
+  GtkWidget *window, *button1, *button2;
   // Create the main window
   window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
   gtk_window_set_title(GTK_WINDOW(window), "GTK Buttons Example");
   gtk_container_set_border_width(GTK_CONTAINER(window), 10);
-  gtk_widget_set_size_request(window, 300, 200);
+  gtk_widget_set_size_request(window, 150, 100);
   g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
   // Create the buttons
-  button1 = gtk_button_new_with_label("Create $HOME/tmp/phone");
-  button2 = gtk_button_new_with_label("Mount the phone filesystem."); // Mount the filesystem from the phone.
-  button3 = gtk_button_new_with_label("Unmount the phone filesystem."); // Unount the filesystem from the phone.
+  button1 = gtk_button_new_with_label("Mount the phone filesystem."); // Mount the filesystem from the phone.
+  button2 = gtk_button_new_with_label("Unmount the phone filesystem."); // Unount the filesystem from the phone.
   // Connect the "clicked" signal to the button_clicked function
-  g_signal_connect(button1, "clicked", G_CALLBACK(button_clicked), "Create $HOME/tmp/phone");
+  g_signal_connect(button1, "clicked", G_CALLBACK(button_clicked), "Button 1");
   g_signal_connect(button2, "clicked", G_CALLBACK(button_clicked), "Button 2");
-  g_signal_connect(button3, "clicked", G_CALLBACK(button_clicked), "Button 3");
   // Create a vertical box layout and add buttons to it
   GtkWidget *vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 5);
   gtk_box_pack_start(GTK_BOX(vbox), button1, TRUE, TRUE, 0);
   gtk_box_pack_start(GTK_BOX(vbox), button2, TRUE, TRUE, 0);
-  gtk_box_pack_start(GTK_BOX(vbox), button3, TRUE, TRUE, 0);
   // Add the layout to the main window
   gtk_container_add(GTK_CONTAINER(window), vbox);
   // Show all widgets
