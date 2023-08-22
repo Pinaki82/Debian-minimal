@@ -1,8 +1,14 @@
-// Last Change: 2023-08-22  Tuesday: 08:16:54 PM
+// Last Change: 2023-08-22  Tuesday: 09:12:08 PM
 
+// Install GTK+ 3.0 development libraries
 // sudo apt install libgtk-3-dev
+// Install additional executable files to transfer files over the MTP protocol.
+// The program will require these executable files.
+// sudo apt install gmtp jmtpfs
+// Dependency tracking:
 // dpkg --status libgtk-3-dev
 // dpkg --listfiles libgtk-3-dev
+// Compile the program:
 // gcc -O2 -Wall -Wextra -pedantic -o phonemnt phonemnt.c `pkg-config --cflags --libs gtk+-3.0` -Wl,-Bstatic -Wl,-Bdynamic -lpthread -lm -s
 /*
   Installation:
