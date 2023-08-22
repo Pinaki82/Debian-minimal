@@ -136,7 +136,7 @@ int main(int argc, char *argv[]) {
   GtkWidget *window, *button1, *button2;
   // Create the main window
   window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-  gtk_window_set_title(GTK_WINDOW(window), "GTK Buttons Example");
+  gtk_window_set_title(GTK_WINDOW(window), "Mount/Unmount phone storage");
   gtk_container_set_border_width(GTK_CONTAINER(window), 10);
   gtk_widget_set_size_request(window, 150, 100);
   g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
