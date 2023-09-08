@@ -227,6 +227,11 @@ yes | sudo apt install gnome-software && \
 # Update Snaps:
 # snap refresh --list
 # sudo snap refresh
+# snap
+# add '/snap/bin' to '$PATH'
+# https://askubuntu.com/questions/965599/where-is-the-install-location-for-the-snap-download-tool
+# .bashrc or .bash_aliases
+# export PATH="$PATH:/snap/bin/"
 # ------------------------------------------------------------------------------
 # Flatpak:
 # *** Install Flatpak as root: ***

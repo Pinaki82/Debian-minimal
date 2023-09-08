@@ -829,7 +829,11 @@ ls -l /var/lib/snapd/desktop/applications
 mkdir ~/.local/share/applications/
 cp /var/lib/snapd/desktop/applications/inkscape_inkscape.desktop ~/.local/share/applications/
 chmod 755 ~/.local/share/applications/inkscape_inkscape.desktop
-
+# snap
+# add '/snap/bin' to '$PATH'
+# https://askubuntu.com/questions/965599/where-is-the-install-location-for-the-snap-download-tool
+# .bashrc or .bash_aliases
+export PATH="$PATH:/snap/bin/"
 # Snap Packages:
 sudo snap install gimp
 sudo snap install inkscape
@@ -867,7 +871,9 @@ Run: flatpak run org.kde.kdenlive
 # Flowblade: A multitrack non-linear video editor
 flatpak install flathub io.github.jliljebl.Flowblade
 Run: flatpak run io.github.jliljebl.Flowblade
-
+# Natron - Open-source video compositing software
+flatpak install flathub fr.natron.Natron
+Run: flatpak run fr.natron.Natron
 
 The Suckless ST Terminal Emulator basic package:
 sudo apt install stterm
