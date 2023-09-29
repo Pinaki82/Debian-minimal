@@ -1,0 +1,16 @@
+lsblk
+sudo parted -l
+sudo parted -a optimal /dev/sdb mkpart primary 32MB 2000GB
+Or,
+sudo parted -a optimal /dev/sdb mkpart primary 2MB 2000GB
+[GNOME Disks]
+[Name/Label: hdd (Or anything, aeroplane/boat/car/motorbike/tram)]
+sudo mkdir /mnt/hdd
+[Device path: "/dev/sdb1"]
+sudo mount /dev/sdb1 //mnt/hdd
+df -hT
+sudo nano /etc/fstab
+/dev/sdb1   /mnt/hdd  ext4   noatime,errors=remount-ro    0   2
+Or,
+/dev/sdb1   /mnt/hdd  ext4   noatime,errors=remount-ro    0   1
+sudo reboot now
