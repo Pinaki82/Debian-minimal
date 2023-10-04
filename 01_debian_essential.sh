@@ -183,6 +183,8 @@ sudo dpkg-reconfigure libdvd-pkg && \
 yes | sudo apt update && sudo apt upgrade && \
 yes | sudo apt-add-repository contrib non-free && \
 yes | sudo apt install ttf-mscorefonts-installer && \
+# https://averagelinuxuser.com/microsoft-fonts-linux/#:~:text=Calibri%20and%20Cambria%20fonts,-Unfortunately%2C%20this%20package&text=These%20Google%20fonts%20are%20metric,package%20manager%20and%20install%20them
+yes | sudo apt install fonts-crosextra-carlito fonts-crosextra-caladea && \
 sudo fc-cache && \
 # Themes and Icons:
 # Search the web version of the Debian repository for the package.

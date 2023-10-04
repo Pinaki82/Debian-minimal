@@ -36,6 +36,12 @@ clean_residual(){ # clean residual packages
   yes | sudo apt autoclean
 }
 
+refresh_snap(){ # update snap
+  echo "Next: sudo snap refresh"
+  sleep 2
+  yes | sudo snap refresh
+}
+
 # Body of code
 echo "Please add an alias to .bashrc to simplify the update task. Read the instructions written under comments inside the shell script."
 echo "Type 0 [zero in number] to cancel"
@@ -54,6 +60,9 @@ if [ "${choice}" != '0' ]; then
   # clean
   clean_residual
   clean_residual
+
+  # update snap
+  refresh_snap
 
 else
   echo "Update cancelled by the user"

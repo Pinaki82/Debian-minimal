@@ -891,6 +891,8 @@ yes | sudo apt install figlet && \
 # Inkscape latest STABLE version # Install Snap
 
 yes | sudo apt install ttf-mscorefonts-installer && \
+# https://averagelinuxuser.com/microsoft-fonts-linux/#:~:text=Calibri%20and%20Cambria%20fonts,-Unfortunately%2C%20this%20package&text=These%20Google%20fonts%20are%20metric,package%20manager%20and%20install%20them
+yes | sudo apt install fonts-crosextra-carlito fonts-crosextra-caladea && \
 yes | sudo fc-cache && \
 
 # =================================================================
