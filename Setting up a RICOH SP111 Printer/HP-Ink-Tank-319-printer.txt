@@ -1,0 +1,29 @@
+Ecosia: set up hp ink tank 319 printer on ubuntu
+
+https://www.cyberciti.biz/faq/how-to-install-networked-hp-printer-and-scanner-on-ubuntu-linux/
+https://ubuntu-mate.community/t/how-to-set-up-a-hp-printer-in-ubuntu/879
+
+sudo apt update
+sudo apt upgrade
+apt-cache search hplip
+sudo apt install hplip hplip-gui
+
+Ecosia: ubuntu default scanner app
+
+https://askubuntu.com/questions/1207558/how-do-i-scan-documents-on-ubuntu-linux
+https://opensource.com/article/18/9/linux-scanner-tools
+https://www.ubuntupit.com/best-scanning-tools-for-linux/
+
+sudo apt install simple-scan
+sudo apt install sane
+sudo apt install xsane
+
+Additional software packages:
+Scanner apps:
+
+gscan2pdf
+quiteinsane
+
+Vector Graphics:
+https://www.ubuntupit.com/best-vector-graphics-software-for-linux/
+
