@@ -172,6 +172,9 @@ yes | sudo apt install rofi && \
 yes | sudo apt install software-properties-common && \
 yes | sudo apt-add-repository non-free && \
 yes | sudo apt-add-repository contrib && \
+# https://serverfault.com/questions/240920/how-do-i-enable-non-free-packages-on-debian
+yes | sudo apt-add-repository --component non-free && \
+yes | sudo apt install firmware-linux-nonfree && \
 yes | sudo apt update && sudo apt upgrade && \
 yes | sudo apt install libavcodec-extra && \
 yes | sudo apt install libdvdcss2 && \

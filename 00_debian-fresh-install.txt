@@ -190,11 +190,33 @@ https://phoenixnap.com/kb/add-apt-repository-command-not-found-ubuntu
 yes | sudo apt install software-properties-common
 yes | sudo apt-add-repository non-free
 yes | sudo apt-add-repository contrib
+# https://serverfault.com/questions/240920/how-do-i-enable-non-free-packages-on-debian
+yes | sudo apt-add-repository --component non-free
+
+# Edit /etc/apt/sources.list with sudo privileges
+# sudo nano /etc/apt/sources.list
+# Add the following lines if these lines are not present.
+# If the lines are found commented, uncomment the lines.
+---
+deb http://deb.debian.org/debian/ bookworm non-free main contrib non-free-firmware
+deb-src http://deb.debian.org/debian/ bookworm non-free main contrib non-free-firmware
+
+deb http://security.debian.org/debian-security bookworm-security non-free main contrib non-free-firmware
+deb-src http://security.debian.org/debian-security bookworm-security non-free main contrib non-free-firmware
+
+deb http://deb.debian.org/debian/ bookworm-updates non-free main contrib non-free-firmware
+deb-src http://deb.debian.org/debian/ bookworm-updates non-free main contrib non-free-firmware
+---
+
 yes | sudo apt update && sudo apt upgrade
+yes | sudo apt install firmware-linux-nonfree
+
 # yes | sudo apt install vlc (Choose the Flatpak version. Do it later.)
 yes | sudo apt install libavcodec-extra
 yes | sudo apt install libdvdread4 libdvdcss2
 yes | sudo dpkg-reconfigure libdvd-pkg
+
+
 
 MS Core Fonts:
 https://www.linuxcapable.com/how-to-install-microsoft-fonts-on-debian-linux/
@@ -208,8 +230,11 @@ yes | sudo apt install software-properties-common
 
 Install MS Fonts,
 
+yes | sudo apt update && sudo apt upgrade
+yes | sudo apt-add-repository contrib non-free
 yes | sudo apt install ttf-mscorefonts-installer
-
+# https://averagelinuxuser.com/microsoft-fonts-linux/#:~:text=Calibri%20and%20Cambria%20fonts,-Unfortunately%2C%20this%20package&text=These%20Google%20fonts%20are%20metric,package%20manager%20and%20install%20them
+yes | sudo apt install fonts-crosextra-carlito fonts-crosextra-caladea && \
 sudo fc-cache
 
 Themes and Icons:
