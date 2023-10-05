@@ -468,6 +468,11 @@ yes | sudo apt install gnome-disk-utility && \
 yes | sudo apt install rsync && \
 yes | sudo apt install timeshift && \
 yes | sudo apt install grsync && \
+
+# how to clone a drive in linux
+# https://www.makeuseof.com/tag/2-methods-to-clone-your-linux-hard-drive/
+yes | sudo apt install clonezilla && \
+
 #      SyncThing GTK+ File synchronisation app
 # flatpak install me.kozec.syncthingtk && \
 yes | sudo apt install synaptic && \

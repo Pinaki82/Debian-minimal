@@ -286,6 +286,10 @@ yes | sudo apt install gnome-disk-utility && \
 # File Sync
 yes | sudo apt install rsync && \
 yes | sudo apt install grsync && \
+# Drive Cloning
+# how to clone a drive in linux
+# https://www.makeuseof.com/tag/2-methods-to-clone-your-linux-hard-drive/
+yes | sudo apt install clonezilla && \
 # System Restore
 yes | sudo apt install timeshift && \
 # Load Program Faster while launching for the second time
