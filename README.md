@@ -464,12 +464,12 @@ Here are some common directories where Linux places include files:
    - These subdirectories of `/usr/include` contain kernel-specific header files.
    - They are used for low-level programming and kernel development, and they include header files related to interacting with the Linux kernel.
 
-4. **/usr/include/<library-name>:**
+4. **`/usr/include/<library-name>`:**
    
    - Some libraries may have their own subdirectories under `/usr/include` where they store their header files.
    - For example, header files for the OpenGL graphics library may be found in `/usr/include/GL`.
 
-5. **/usr/include/<package-name>:**
+5. **`/usr/include/<package-name>`:**
    
    - Header files for specific packages or software libraries may also be placed in subdirectories named after the package or library.
    - For instance, header files for the OpenSSL library may be found in `/usr/include/openssl`.
