@@ -24,6 +24,10 @@ https://github.com/Pinaki82/Debian-minimal
 - [Alternative Software Search:](#alternative-software-search)
 - [As a Mega-Bonus Offer for FREE, you'll find:](#as-a-mega-bonus-offer-for-free-youll-find)
 - [How Does It Look Like?](#how-does-it-look-like)
+- [Library PATHs in Linux](#library-paths-in-linux)
+- [Installation and Configuration of "libsafec" Library](#installation-and-configuration-of-libsafec-Library)
+- [Library PATH](#library-path)
+- [Include (Header) files' PATH ](#include-Header-files-path)
 
 ## What this repository is for?
 
@@ -260,3 +264,238 @@ chmod +x 02_debian_minimal_packages.sh
 ![](attachments/2023-07-07-18-45-57-Screenshot_2023-07-07_18-44-58.png)
 
 ![](attachments/7117ae649c6deb327125824736617e446937bdf3.png)
+
+# Library PATHs in Linux
+
+# Installation and Configuration of "libsafec" Library <a name="installation-and-configuration-of-libsafec-Library"></a>
+
+[GitHub - rurban/safeclib: safec libc extension with all C11 Annex K functions](https://github.com/rurban/safeclib.git)
+
+## Step 1: Remove the Previous Installation
+
+```bash
+sudo apt purge --auto-remove libsafec-dev
+```
+
+## Step 2: Clone the "safeclib" Repository
+
+```bash
+cd ~/
+git clone https://github.com/rurban/safeclib.git
+cd safeclib/
+```
+
+## Step 3: Build and Configure the Library
+
+```bash
+./build-aux/autogen.sh
+./configure
+```
+
+## Step 4: Compile the Library
+
+```bash
+make
+```
+
+## Step 5: Install the Library
+
+```bash
+sudo make install
+```
+
+## Step 6: Update Library Cache
+
+```bash
+sudo ldconfig
+```
+
+## Step 7: Set Library Path (Temporary)
+
+```bash
+export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
+```
+
+```bash
+vim .bash_aliases
+```
+
+Add:
+
+```bash
+export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
+```
+
+## Step 8: Source Configuration Files
+
+```bash
+source .bash_aliases
+source .bashrc
+```
+
+## Step 9: Compile & Run the Program
+
+```bash
+gcc -o safeclib_example safeclib_example.c -L/usr/local/lib -lsafec
+```
+
+Or,
+
+```bash
+gcc -Wall -Wextra -pedantic safeclib_example.c -o safeclib_example -L/usr/local/lib -lsafec
+```
+
+```bash
+chmod +x safeclib_example
+```
+
+```bash
+./safeclib_example
+```
+
+After following these steps, you should have successfully installed and configured the "libsafec" library and run your program using it.
+
+Please note that these steps assume that you have the necessary permissions to run `sudo` commands and make system-wide changes. Additionally, make sure that you replace any paths or filenames with the actual values specific to your system.
+
+Code:
+
+```c
+#include <stdio.h>
+#include <safeclib/safe_str_lib.h>
+
+int main() {
+    char dest[20]; // Destination buffer
+    const char *src = "Test libsafec prog.!"; // Source string
+
+    // Using safeclib function to copy the source string to the destination
+    rsize_t dest_size = sizeof(dest); // Size of the destination buffer
+    errno_t err = strcpy_s(dest, dest_size, src);
+
+    if (err == EOK) {
+        printf("Destination: %s\n", dest);
+    } else {
+        printf("Error copying string: %d\n", err);
+    }
+
+    return 0;
+}
+```
+
+On Debian-based Linux distributions like Debian, static libraries are typically stored in the `/usr/lib` directory. However, Debian uses a specific directory structure, and static libraries are usually stored in subdirectories based on the library's architecture. You can find static libraries in a directory structure like `/usr/lib/<architecture>/`.
+
+In the case of the "libsafec-dev" package that we installed, we can usually find the static library files under `/usr/lib/<architecture>/`. To locate the "safeclib" static library, you can use the dpkg-query command, which is a Debian package manager tool.
+
+```bash
+dpkg-query -L libsafec-dev | grep libsafe
+```
+
+This command will list the files and directories installed by the "libsafec-dev" package, including the path to the static library file.
+
+Once you've identified the correct path, you can use it in your `gcc` command to link against the static library:
+
+```bash
+gcc -o safeclib_example safeclib_example.c -L/path/to/libsafec-dev/static/library/directory -lsafec
+```
+
+However, in our case, the linker error shown below implies that the linker (`ld`) couldn't find the "safeclib" library while trying to compile our program. This issue typically arises if the library is not installed in a location where the linker can locate it.
+
+```
+cannot find -lsafeclib: No such file or directory
+collect2: error: ld returned 1 exit status
+```
+
+Consequently, we had to build the library from the source.
+
+---
+
+# Library PATH
+
+In Linux, both static and dynamic libraries are typically stored in specific standard directories. Here's an overview of where Linux generally keeps these library files:
+
+1. **Dynamic Libraries (Shared Libraries):**
+   
+   Dynamic libraries, also known as shared libraries, are typically stored in the following directories:
+   
+   - `/lib`: This directory contains essential system libraries that are needed for the basic operation of the system. These libraries are typically required during the early stages of the boot process.
+   - `/usr/lib`: This directory holds system-wide shared libraries that are not essential for the initial boot process but are necessary for most applications.
+   - `/usr/local/lib`: This directory is used for shared libraries that are installed manually by the system administrator or by software packages not managed by the system's package manager. It's often used for libraries built and installed from source code.
+   
+   Additionally, these directories may have architecture-specific subdirectories, such as `/lib/x86_64-linux-gnu` or `/usr/lib/i386-linux-gnu`, to accommodate libraries for specific processor architectures.
+
+2. **Static Libraries:**
+   
+   Static libraries are usually stored in directories similar to their dynamic counterparts, with the primary difference being the use of the `.a` file extension. Common locations include:
+   
+   - `/usr/lib`: Static libraries that come from packages installed via the system's package manager are often placed here.
+   - `/usr/local/lib`: Similar to dynamic libraries, manually installed or locally built static libraries are typically placed in this directory.
+
+3. **Compiled Libraries (from Source Code):**
+   
+   Libraries that you compile from source code using tools like `make` generally end up in the following directories:
+   
+   - `/usr/local/lib`: If you configure the build to install libraries locally (e.g., using `./configure --prefix=/usr/local`), the compiled libraries will be placed here by default.
+   - A custom location: You can specify a different installation directory when configuring the build using the `--prefix` option. This allows you to choose where the compiled libraries are installed.
+
+It's important to note that these are general conventions and specific Linux distributions may have variations in their library directory structures. Additionally, the `LD_LIBRARY_PATH` environment variable can be used to temporarily modify the search path for shared libraries. However, it's typically not recommended to use `LD_LIBRARY_PATH` for system-wide library management, as it can lead to compatibility and security issues. Instead, libraries should be installed in standard locations like those mentioned above.
+
+When you install libraries using your system's package manager (e.g., `apt`, `yum`, `dnf`), the package manager takes care of placing the libraries in the appropriate directories based on the distribution's conventions. When you compile libraries from source code, you have more control over the installation location, as we demonstrated in our previous installation steps.
+
+---
+
+# Include (Header) files' PATH <a name="include-Header-files-path"></a>
+
+In Linux, header files, also known as include files, are typically placed in specific standard directories. These header files are essential for compiling programs, as they provide declarations and definitions for functions, data structures, and other elements used by the code.
+
+Here are some common directories where Linux places include files:
+
+1. **/usr/include:**
+   
+   - This directory is the primary location for system-wide header files on most Linux distributions.
+   - It contains header files that are part of the standard C library (libc) and other system libraries.
+   - Header files for system-level programming, such as those related to system calls and system-specific features, are often found here.
+
+2. **/usr/local/include:**
+   
+   - Similar to `/usr/include`, this directory is used for header files that are not part of the base system but are installed manually or by software packages not managed by the system's package manager.
+   - When you compile and install software from source code using the `./configure --prefix=/usr/local` option, the associated header files are typically placed here.
+
+3. **/usr/include/linux and /usr/include/asm:**
+   
+   - These subdirectories of `/usr/include` contain kernel-specific header files.
+   - They are used for low-level programming and kernel development, and they include header files related to interacting with the Linux kernel.
+
+4. **/usr/include/<library-name>:**
+   
+   - Some libraries may have their own subdirectories under `/usr/include` where they store their header files.
+   - For example, header files for the OpenGL graphics library may be found in `/usr/include/GL`.
+
+5. **/usr/include/<package-name>:**
+   
+   - Header files for specific packages or software libraries may also be placed in subdirectories named after the package or library.
+   - For instance, header files for the OpenSSL library may be found in `/usr/include/openssl`.
+
+6. **/usr/include/X11:**
+   
+   - This directory contains header files related to the X Window System, which is responsible for graphical user interfaces in many Linux desktop environments.
+
+7. **/usr/include/pythonX.Y:**
+   
+   - If you have multiple versions of Python installed, header files for each version may be placed in separate subdirectories under `/usr/include`.
+   - Replace `X.Y` with the specific Python version you're interested in (e.g., `/usr/include/python3.8`).
+
+C and C++ programs use angle brackets (`#include <header.h>`) to incorporate functionalities of implementations. These are referenced from header files located in these directories and are typically included by the compiler when the compiler searches system-wide include paths in those known places. You can also specify additional include directories using the `-I` compiler flag to include header files from custom or non-standard locations.
+
+In the context of the Wayland display server protocol and the Wayland window system, the Wayland-specific header files are typically located in a directory specific to Wayland. The precise location may vary depending on your Linux distribution and how Wayland is installed.
+
+However, a common location for Wayland-related header files is under the `/usr/include/wayland` directory. You may find various subdirectories and header files related to different aspects of Wayland, such as the core Wayland protocol, extensions, and various Wayland libraries.
+
+Here's an example of what you might find under `/usr/include/wayland`:
+
+- `/usr/include/wayland-client/`: This directory contains header files related to Wayland client libraries, which are used by applications that connect to a Wayland server.
+- `/usr/include/wayland-server/`: This directory contains header files for Wayland server-side libraries, which are used by compositors and Wayland server implementations.
+- `/usr/include/wayland-util/`: This directory contains utility header files that are common to both clients and servers, providing macros and functions for working with Wayland objects.
+- `/usr/include/wayland-protocols/`: This directory contains header files for Wayland protocol extensions, which define additional functionality beyond the core Wayland protocol.
+
+For developing applications or compositors for Wayland, header files from these directories will likely need to be included in the code for interacting with the Wayland protocol and libraries.
+
+Keep in mind that the actual location of Wayland header files may vary between different Linux distributions and package versions, so it's a good practice to consult the documentation specific to the distribution or check the installation paths of Wayland-related packages using the system's package manager or package manager's tools like `dpkg -L <package-name>` or `rpm -ql <package-name>` to locate the Wayland header files on the system.
