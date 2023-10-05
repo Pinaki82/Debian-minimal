@@ -6,7 +6,7 @@
 
 [Desktop Entry]
 Type=Application
-Name=llama-chat
+Name=Gorilla-7B
 Comment=AI Chat Gorilla-7B
 Icon=/home/YOUR_USERNAME/.local/share/icons/LLaMA.CPP.svg
 Exec=sakura -e /home/YOUR_USERNAME/PortablePrograms/llama.cpp/interactive-Gorilla-7B.sh

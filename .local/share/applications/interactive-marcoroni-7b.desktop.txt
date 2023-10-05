@@ -6,7 +6,7 @@
 
 [Desktop Entry]
 Type=Application
-Name=llama-chat
+Name=marcoroni-7b
 Comment=AI Chat marcoroni-7b
 Icon=/home/YOUR_USERNAME/.local/share/icons/LLaMA.CPP.svg
 Exec=sakura -e /home/YOUR_USERNAME/PortablePrograms/llama.cpp/interactive-marcoroni-7b.sh

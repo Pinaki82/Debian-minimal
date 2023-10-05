@@ -6,7 +6,7 @@
 
 [Desktop Entry]
 Type=Application
-Name=llama-chat
+Name=wizardcoder-python-13b
 Comment=AI Chat wizardcoder-python
 Icon=/home/YOUR_USERNAME/.local/share/icons/LLaMA.CPP.svg
 Exec=sakura -e /home/YOUR_USERNAME/PortablePrograms/llama.cpp/interactive-wizardcoder-python.sh

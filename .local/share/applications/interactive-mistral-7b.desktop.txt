@@ -6,7 +6,7 @@
 
 [Desktop Entry]
 Type=Application
-Name=llama-chat
+Name=mistral-7b
 Comment=AI Chat mistral-7b
 Icon=/home/YOUR_USERNAME/.local/share/icons/LLaMA.CPP.svg
 Exec=sakura -e /home/YOUR_USERNAME/PortablePrograms/llama.cpp/interactive-mistral-7b.sh
