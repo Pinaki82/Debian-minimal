@@ -42,6 +42,12 @@ refresh_snap(){ # update snap
   yes | sudo snap refresh
 }
 
+update_flatpak(){ # update flatpak
+  echo "Next: flatpak update"
+  sleep 2
+  flatpak update
+}
+
 # Body of code
 echo "Please add an alias to .bashrc to simplify the update task. Read the instructions written under comments inside the shell script."
 echo "Type 0 [zero in number] to cancel"
@@ -63,6 +69,9 @@ if [ "${choice}" != '0' ]; then
 
   # update snap
   refresh_snap
+
+  # update flatpak
+  update_flatpak
 
 else
   echo "Update cancelled by the user"
