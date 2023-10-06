@@ -389,6 +389,8 @@ flatpak run com.usebottles.bottles
 Uninstall a flatpak app:
 https://ubuntuhandbook.org/index.php/2021/06/manage-flatpak-apps-ubuntu/
 flatpak list --app
+Or,
+flatpak list --columns=application --app
 flatpak uninstall --delete-data app-id
 Ex: flatpak uninstall --delete-data com.github.dail8859.NotepadNext
 
@@ -635,7 +637,7 @@ pipx install cmake-init
 sudo apt install cmdtest
 # pnpm package manager
 # https://pnpm.io/installation
-curl -fsSL https://get.pnpm.io/install.sh | sh -  
+curl -fsSL https://get.pnpm.io/install.sh | sh -
 # other essential development utilities
 sudo apt install cdecl
 sudo apt install cutils
@@ -974,6 +976,36 @@ https://flathub.org/apps/com.github.IsmaelMartinez.teams_for_linux
 flatpak install flathub com.github.IsmaelMartinez.teams_for_linux
 #                                                    # Zoom and MS-Teams
 
+
+--------------------------------------------------------------------------------
+All flatpack and snap apps:
+
+flatpak list --columns=application --app
+
+Application ID:
+com.github.Eloston.UngoogledChromium
+com.github.micahflee.torbrowser-launcher
+com.github.tchx84.Flatseal
+fr.handbrake.ghb
+io.github.jliljebl.Flowblade
+me.kozec.syncthingtk
+org.goldendict.GoldenDict
+org.kde.kdenlive
+org.kde.kdiff3
+org.libreoffice.LibreOffice
+
+snap list
+
+Name:
+gimp
+inkscape
+keepassxc
+mediainfo
+mediainfo-gui
+teams-for-linux
+vidcutter
+vlc
+--------------------------------------------------------------------------------
 
 ================================================================================
 ===================================== IMPORTANT ================================
