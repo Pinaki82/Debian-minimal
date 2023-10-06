@@ -327,7 +327,7 @@ Configure Window Buttons -> Appearance -> UNCHECK 'Show button labels'
 
 Settings -> Appearance -> Style -> PRO-dark-XFCE-4.14
                           Turn on 'Set matching Xfwm4 theme if there is one'
-                       -> Icons -> Papirus-Dark
+                       -> Icons -> ePapirus/Vimix/Flat-Remix-Green-Light-darkPanel
 
 Window Manager -> Style - > PRO-dark-XFCE-4.14
 
