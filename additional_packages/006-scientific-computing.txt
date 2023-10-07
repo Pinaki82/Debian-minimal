@@ -1,0 +1,12 @@
+sudo apt install xmaxima
+
+# Also look at:
+# sudo apt/snap install cantor
+sudo apt install cantor-backend-kalgebra
+sudo apt install cantor-backend-maxima
+sudo apt install cantor-backend-octave
+sudo apt install cantor-backend-sage
+sudo apt install cantor-backend-scilab
+
+sudo apt install geogebra
+sudo apt install avogadro
