@@ -1,0 +1,57 @@
+# Install darktable if you work with Nikon/Canon DSLR RAW Images
+flatpak install flathub org.darktable.Darktable
+# Read metadata from Camera RAW
+sudo apt install libimage-exiftool-perl
+# Another RAW processing program. Intuitive GUI controls, easy to use.
+# Download the latest AppImage package:
+# firefox https://www.rawtherapee.com/
+
+# Luminance HDR is a high-dynamic-range image creation and manipulation program
+sudo apt install luminance-hdr
+# Hugin is a panorama photo stitching and HDR merging program
+sudo apt install hugin
+
+sudo apt install ffmpeg
+sudo apt install mediainfo
+sudo apt install mediainfo-gui
+sudo apt install devede
+sudo apt install winff
+sudo apt install winff-doc
+sudo snap install vidcutter
+sudo snap install vlc
+# Handbrake Video Converter
+flatpak install fr.handbrake.ghb fr.handbrake.ghb.Plugin.IntelMediaSDK
+
+# Only download what you need
+
+# Kdenlive and Shotcut Video Editors can be installed as snap apps,
+# or these packages can be downloaded as portable AppImage binaries
+# Kdenlive
+flatpak install flathub org.kde.kdenlive
+# shotcut
+flatpak install flathub org.shotcut.Shotcut
+
+# Or, go for Cinelerra-GG Infinity
+# https://www.cinelerra-gg.org
+# Download a static Single-user build
+# https://www.cinelerra-gg.org/downloads
+# Source Code: https://github.com/cinelerra-gg
+
+# Online Graphic Design (Software As A Service)
+# https://videobolt.net/welcome
+# https://biteable.com
+
+# 2D Animation
+# sudo snap install --candidate synfigstudio
+
+# Slideshow maker
+sudo snap install ffdiaporama-c18
+# =================================
+
+# Blender 3D Animation package can be installed as a snap app
+# https://www.blender.org/download/
+# Download the TAR archive
+
+# Natron: Node-based compositing application, influenced by
+# digital compositing software such as Avid Media Illusion, Apple Shake, Blackmagic Fusion, Autodesk Flame and Nuke
+flatpak install flathub fr.natron.Natron
