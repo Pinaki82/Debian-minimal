@@ -1,0 +1,3 @@
+sudo apt install fontforge
+# Or, fontforge non-X version
+sudo apt install fontforge-nox
