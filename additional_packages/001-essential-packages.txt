@@ -287,12 +287,15 @@ sudo apt install wmwave
 # Description: WiFi Share and Connect with QR.
 sudo apt install wifi-qr
 # Launcher.
-sudo apt install rofi && \
-sudo apt install vlc && \
+sudo apt install rofi
+sudo snap install vlc
+# Winamp alternative
+# https://www.reddit.com/r/Ubuntu/comments/tno11g/looking_for_a_winamp_equivalent_for_ubuntu/
+sudo apt install audacious
 # Description: graphical wireless scanner.
 sudo apt install linssid && \
 # Image Viewer & Wallpaper Changer.
-sudo apt install feh && \
+sudo apt install feh
 # Screenshot Utility.
 sudo apt install flameshot
 # Image Viewer.

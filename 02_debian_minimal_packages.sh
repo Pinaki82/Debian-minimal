@@ -963,6 +963,10 @@ yes | sudo apt install ffmpeg && \
 # Create Video DVDs and VCDs easily
 yes | sudo apt install devede && \
 
+# Winamp alternative
+# https://www.reddit.com/r/Ubuntu/comments/tno11g/looking_for_a_winamp_equivalent_for_ubuntu/
+yes | sudo apt install audacious && \
+
 yes | sudo apt install winff && \
 yes | sudo apt install winff-doc && \
 

@@ -216,6 +216,9 @@ yes | sudo apt install libavcodec-extra
 yes | sudo apt install libdvdread4 libdvdcss2
 yes | sudo dpkg-reconfigure libdvd-pkg
 
+# Winamp alternative
+# https://www.reddit.com/r/Ubuntu/comments/tno11g/looking_for_a_winamp_equivalent_for_ubuntu/
+sudo apt install audacious
 
 
 MS Core Fonts:
@@ -869,6 +872,8 @@ sudo snap install vlc
 sudo snap install mediainfo-gui
 sudo snap install vidcutter
 # sudo snap install kompare
+# Slideshow maker
+sudo snap install ffdiaporama-c18
 # usage snap run kompare .bashrc .bashrc2
 
 Uninstall a snap package:
@@ -901,6 +906,7 @@ Run: flatpak run io.github.jliljebl.Flowblade
 # Natron - Open-source video compositing software
 flatpak install flathub fr.natron.Natron
 Run: flatpak run fr.natron.Natron
+
 
 The Suckless ST Terminal Emulator basic package:
 sudo apt install stterm
