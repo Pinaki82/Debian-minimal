@@ -2,6 +2,9 @@
 # https://askubuntu.com/questions/800155/service-command-not-found
 export PATH="$PATH:/usr/sbin"
 export PATH="$HOME/.local/bin/:$PATH"
+export PATH="$PATH:/usr/sbin"
+export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
+export C_INCLUDE_PATH="/usr/local/include:$C_INCLUDE_PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # #

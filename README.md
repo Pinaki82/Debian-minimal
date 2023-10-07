@@ -499,3 +499,43 @@ Here's an example of what you might find under `/usr/include/wayland`:
 For developing applications or compositors for Wayland, header files from these directories will likely need to be included in the code for interacting with the Wayland protocol and libraries.
 
 Keep in mind that the actual location of Wayland header files may vary between different Linux distributions and package versions, so it's a good practice to consult the documentation specific to the distribution or check the installation paths of Wayland-related packages using the system's package manager or package manager's tools like `dpkg -L <package-name>` or `rpm -ql <package-name>` to locate the Wayland header files on the system.
+
+You can add the `/usr/local/include` directory to the compiler's search path by modifying the `C_INCLUDE_PATH` environment variable in your `.bashrc` or `.bash_aliases`file. The `C_INCLUDE_PATH` variable is used by some compilers to specify additional directories where header files can be found.
+
+Here's how you can add `/usr/local/include` to the `C_INCLUDE_PATH` variable in your `.bashrc`:
+
+1. Open your `.bashrc` or `.bash_aliases` file for editing using a text editor like `nano` or `vim`. You can use your preferred text editor.
+   
+   ```bash
+   nano ~/.bashrc
+   ```
+   
+   Or,
+   
+   ```bash
+   nano ~/.bash_aliases
+   ```
+
+2. Add the following line at the end of the `.bashrc` or `.bash_aliases` file to append `/usr/local/include` to the `C_INCLUDE_PATH`:
+   
+   ```bash
+   export C_INCLUDE_PATH="/usr/local/include:$C_INCLUDE_PATH"
+   ```
+   
+   This line adds `/usr/local/include` to the `C_INCLUDE_PATH` while preserving any existing directories in the path.
+
+3. Save the `.bashrc` or `.bash_aliases` file and exit the text editor.
+
+4. To apply the changes, either close and reopen your terminal or run the following command:
+   
+   ```bash
+   source ~/.bashrc
+   ```
+   
+   ```bash
+   source ~/.bash_aliases
+   ```
+
+Now, the compiler should include the `/usr/local/include` directory in its search path for header files, allowing you to use header files from that directory in your C and C++ programs without specifying the full path each time.
+
+Keep in mind that not all compilers use the `C_INCLUDE_PATH` variable, and some may rely on other environment variables like `CFLAGS` or `CPPFLAGS`. Depending on the specific compiler you're using, you may need to adjust the appropriate environment variable accordingly.
