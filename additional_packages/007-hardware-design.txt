@@ -1,0 +1,12 @@
+# KiCAD EDA
+flatpak install --from https://flathub.org/repo/appstream/org.kicad.KiCad.flatpakref
+
+# FreeCAD (Parametric 3D CAD Modeler) AppImage package
+https://www.freecad.org/downloads.php
+
+# Script file based graphical CAD environment
+# sudo snap install openscad
+# Also available in AppImage package: https://openscad.org/downloads.html
+
+# https://www.sweethome3d.com/download.jsp
+sudo apt install sweethome3d
