@@ -46,6 +46,12 @@ flatpak install flathub org.shotcut.Shotcut
 
 # Slideshow maker
 sudo snap install ffdiaporama-c18
+
+# https://alternativeto.net/category/phots-and-graphics/slideshow-creator/?platform=linux
+# 4kslideshowmaker:
+# https://www.4kdownload.com/products/slideshowmaker/3
+sudo apt install imagination imagination-common
+
 # =================================
 
 # Blender 3D Animation package can be installed as a snap app

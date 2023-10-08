@@ -1,0 +1,13 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+#
+# https://alternativeto.net/category/phots-and-graphics/slideshow-creator/?platform=linux
+# https://www.4kdownload.com/products/slideshowmaker/3
+
+[Desktop Entry]
+Type=Application
+Name=4kslideshowmaker
+Comment=Slideshow Maker
+Icon=4kslideshowmaker
+Exec=/home/YOURUSERNAME/PortablePrograms/4kslideshowmaker/4kslideshowmaker.sh
+Terminal=false
+Categories=;
