@@ -1,0 +1,29 @@
+sudo apt install texlive-base
+sudo apt install texlive-latex-base
+sudo apt install dvipng
+sudo apt install dvisvgm
+sudo apt install ghostscript
+sudo apt install pandoc
+sudo apt install gimp
+sudo apt install gimp-plugin-registry
+
+# figlet: Make large character ASCII banners out of ordinary text
+# https://kerneltalks.com/tips-tricks/create-beautiful-ascii-text-banners-linux/
+# Brave: figlet windows
+# https://superuser.com/questions/1361312/figlets-installation-on-windows-10
+# npm install -g figlet-cli
+# Usage: figlet -f Slant Tulu-C-IDE > ascii-banner-output.txt
+# figlet My Text Banner
+
+sudo apt install figlet
+
+# Inkscape [Install the snap version]
+
+sudo apt install lyx
+sudo apt install scribus
+
+##############################
+# Sigil:
+# sudo apt install sigil
+##############################
+
