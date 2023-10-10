@@ -869,7 +869,6 @@ sudo snap install gimp
 sudo snap install inkscape
 sudo snap install keepassxc
 sudo snap install vlc
-sudo snap install mediainfo-gui
 sudo snap install vidcutter
 # sudo snap install kompare
 # Slideshow maker
@@ -1006,8 +1005,6 @@ Name:
 gimp
 inkscape
 keepassxc
-mediainfo
-mediainfo-gui
 teams-for-linux
 vidcutter
 vlc

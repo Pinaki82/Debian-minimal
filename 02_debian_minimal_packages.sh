@@ -818,7 +818,7 @@ yes | sudo apt install recoverjpeg && \
 
 yes | sudo apt install ffmpeg && \
 yes | sudo apt install mediainfo && \
-# Install the GUI from Snap: sudo snap install mediainfo-gui
+yes | sudo apt install mediainfo-gui && \
 
 yes | sudo apt install youtube-dl && \
 
@@ -958,7 +958,7 @@ yes | sudo apt install scdaemon && \
 # =================================================================
 
 yes | sudo apt install ffmpeg && \
-# sudo apt install mediainfo -y && \ # Install Snap
+# sudo apt install mediainfo -y && \
 # VidCutter # Install Snap
 # Create Video DVDs and VCDs easily
 yes | sudo apt install devede && \
