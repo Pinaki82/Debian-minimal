@@ -458,8 +458,8 @@ sudo apt install preload
 sudo apt install seahorse
 # Reduce Eyestrain
 sudo apt install redshift-gtk
-# Preven Screen from falling asleep
-sudo apt install caffeine
+# Prevent Screen from falling asleep
+#sudo apt install caffeine
 # Command-line system info tool
 sudo apt install hardinfo
 # New hardware (firmware)

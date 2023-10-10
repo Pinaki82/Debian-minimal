@@ -495,7 +495,7 @@ yes | sudo apt install dvtm && \
 
 # #################################################
 yes | sudo apt install redshift-gtk && \
-yes | sudo apt install caffeine && \
+#yes | sudo apt install caffeine && \
 yes | sudo apt install hardinfo && \
 yes | sudo apt install htop && \
 # btop++: Modern and colourful command-line resource monitor that shows

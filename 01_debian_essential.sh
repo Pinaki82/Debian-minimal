@@ -302,8 +302,8 @@ yes | sudo apt install preload && \
 yes | sudo apt install seahorse && \
 # Reduce Eyestrain # Yellow filter for the screen
 yes | sudo apt install redshift-gtk && \
-# Preven Screen from falling asleep # Keep the screen from turning off
-yes | sudo apt install caffeine && \
+# Prevent Screen from falling asleep # Keep the screen from turning off
+#yes | sudo apt install caffeine && \
 # Command-line system info tool # Hardware info from the console
 yes | sudo apt install hardinfo && \
 # The Fish Shell
