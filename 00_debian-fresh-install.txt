@@ -357,6 +357,26 @@ Install some Command-line tools.
 yes | sudo apt install neofetch
 yes | sudo apt install htop
 
+
+Audio Output (Line-out):
+Whisker Menu -> Settings -> Settings Manager ->
+-> [Hardware [Category]] ->
+-> PulseAudio Volume Control ->
+-> Port: [Drop down menu] Line Out (plugged in)
+
+Disable Sleep:
+Disabling sleep is important because you might not get access to running applications once the screen gets locked after a certain duration of inactivity in Debian XFCE.
+Caffeine Indicator did not solve the problem.
+
+Whisker Menu -> Settings -> Settings Manager ->
+-> [Hardware [Category]] ->
+-> Power Management ->
+-> General [TAB] When the power button is pressed: Ask. The rest should be set to "Do nothing".
+-> System [TAB] System sleep mode: Suspend. When inactive for: Never. {Remember, Suspend + Never}.
+-> Display [TAB] -> Display Power Management -> Off.
+-> Security [TAB] -> Automatically lock the session: Never. Lock screen when the system is going to sleep [checked].
+
+
 Snap and Flatpak:
 Synaptic Package Manager:
 yes | sudo apt install synaptic
