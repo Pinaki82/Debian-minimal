@@ -1,0 +1,46 @@
+# SMTube
+# YouTube video playback without Flash Player.
+# Helps to play YouTube videos on low-end machines.
+
+# http://www.smtube.org/
+# "SMTube - YouTube browser for SMPlayer.
+# SMTube is an application that allows to browse, search and play YouTube videos.
+# Videos are played back with a media player (by default SMPlayer)
+# instead of a flash player, this allows better performance, 
+# particularly with HD content."
+
+# https://www.smtube.org/
+
+sudo apt-get update
+sudo apt install smtube smplayer
+
+# youtube-dl
+# https://github.com/ytdl-org/youtube-dl
+pipx install youtube-dl
+pipx ensurepath
+source ~/.bashrc
+source ~/.bash_aliases
+youtube-dl --help
+
+# yt-dlp
+# https://github.com/yt-dlp/yt-dlp
+pipx install yt-dlp
+pipx ensurepath
+source ~/.bashrc
+source ~/.bash_aliases
+yt-dlp --help
+
+Usage: https://www.wikihow.com/Use-Youtube%E2%80%90dl
+
+# ------------------------------------------------------------------------------
+# I tested SMTube on a VM. SMTube behaved unexpectedly when installed inside the guest VM.
+# It changed the cursor/'mouse pointer' to a
+# black cross-mark. As a quick fix around the system without needing to install
+# any extraneous package, I restarted the lightdm service and everything went
+# back to normal again.
+# -----------------------Jot the following lines down to a piece of paper------
+# CTRL+ALT+F3
+# sudo systemctl restart lightdm.service
+# ALT+F7
+# ------------------------------------------------------------------------------
+

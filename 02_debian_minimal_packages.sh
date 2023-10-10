@@ -820,7 +820,7 @@ yes | sudo apt install ffmpeg && \
 yes | sudo apt install mediainfo && \
 yes | sudo apt install mediainfo-gui && \
 
-yes | sudo apt install youtube-dl && \
+# yes | sudo apt install youtube-dl && \
 
 #      HandBrake Video Converter
 # flatpak install fr.handbrake.ghb
@@ -1241,8 +1241,8 @@ yes | sudo apt install nscd && \
 # instead of a flash player, this allows better performance,
 # particularly with HD content."
 
-yes | sudo apt update && \
-yes | sudo apt install youtube-dl && \
+# yes | sudo apt update && \
+# yes | sudo apt install youtube-dl && \
 
 # https://www.smtube.org/
 yes | sudo apt install smtube smplayer && \
