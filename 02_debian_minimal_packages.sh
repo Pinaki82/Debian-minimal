@@ -1229,6 +1229,42 @@ yes | sudo apt install nscd && \
 # =================================================================
 # YouTube-SMTube
 # =================================================================
+# NOTE: Do not use SMTube. Use pystardust/ytfzf instead.
+# The MPV Player can already be used for watching YouTube videos.
+# mpv https://youtu.be/ciio80nkjB8?si=v-tRAHYG5gqTwecI
+# However, getting the link from YouTube defeats the purpose of watching videos from the command-line interface.
+# pystardust/ytfzf solves that problem.
+# https://www.makeuseof.com/watch-youtube-videos-in-linux-terminal/
+# https://github.com/pystardust/ytfzf.git
+# Install dependencies:
+# sudo apt install jq curl mpv fzf ueberzug kitty
+# Install yt-dlp & youtube-dl
+# ---
+# youtube-dl
+# https://github.com/ytdl-org/youtube-dl
+# pipx install youtube-dl
+# pipx ensurepath
+# source ~/.bashrc
+# source ~/.bash_aliases
+# youtube-dl --help
+# ---
+# yt-dlp
+# https://github.com/yt-dlp/yt-dlp
+# pipx install yt-dlp
+# pipx ensurepath
+# source ~/.bashrc
+# source ~/.bash_aliases
+# yt-dlp --help
+# ---
+# git clone https://github.com/pystardust/ytfzf
+# cd ytfzf
+# sudo make install doc addons
+# cd ~/
+# ytfzf "Jacob Sorber"
+# ytfzf "Another way to check pointers at runtime in C"
+#
+# I couldn't figure out a way to set the resolution to 480p, let me know if you have.
+#
 
 # SMTube
 # YouTube video playback without Flash Player.
@@ -1245,7 +1281,8 @@ yes | sudo apt install nscd && \
 # yes | sudo apt install youtube-dl && \
 
 # https://www.smtube.org/
-yes | sudo apt install smtube smplayer && \
+# yes | sudo apt install smtube && \
+yes | sudo apt install smplayer && \
 
 
 # ------------------------------------------------------------------------------
