@@ -474,6 +474,12 @@ sudo apt install fish
 # Power management utility for laptops.
 sudo apt install tlp
 yes | sudo apt install tlp-rdw
+# Set Up Bluetooth
+# https://www.howtogeek.com/829360/how-to-set-up-bluetooth-on-linux/
+sudo apt install bluetooth bluemon bluez blueman
+sudo systemctl enable bluetooth.service
+sudo systemctl start bluetooth.service
+rfkill unblock bluetooth
 
 You might be interested in the following:
 (You'll install these utilities for convenience anyway)

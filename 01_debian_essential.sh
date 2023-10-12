@@ -113,6 +113,14 @@ yes | sudo apt-file update && \
 # Power management utility for laptops.
 yes | sudo apt install tlp && \
 yes | sudo apt install tlp-rdw && \
+
+# Set Up Bluetooth
+# https://www.howtogeek.com/829360/how-to-set-up-bluetooth-on-linux/
+yes | sudo apt install bluetooth bluemon bluez blueman && \
+sudo systemctl enable bluetooth.service && \
+sudo systemctl start bluetooth.service && \
+rfkill unblock bluetooth && \
+
 # File Compression:
 yes | sudo apt install unzip && \
 yes | sudo apt install bzip2 && \
