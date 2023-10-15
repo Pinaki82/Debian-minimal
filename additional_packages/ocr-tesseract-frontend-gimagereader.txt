@@ -7,6 +7,7 @@
 
 # install dependencies
 sudo apt install tesseract-ocr -y
+sudo apt install imagemagick
 # get a hint of all supported languages
 apt-cache search tesseract-
 sudo apt install tesseract-ocr-eng -y
@@ -15,8 +16,11 @@ sudo apt install tesseract-ocr-osd -y
 
 # install support for additional languages
 
+# For Bengali
 # sudo apt install tesseract-ocr-ben -y
 # sudo apt install tesseract-ocr-script-beng -y
+
+# For Hindi
 # sudo apt install tesseract-ocr-hin -y
 # sudo apt install tesseract-ocr-script-deva -y
 
@@ -24,6 +28,14 @@ sudo apt install tesseract-ocr-osd -y
 # sudo apt search gimagereader
 
 sudo apt install gimagereader
+
+
+# usage:
+# tesseract image_name.jpg image_name output -l eng
+# tesseract dcr240.jpg dcr240 output -l eng
+
+# extract texts from all image files in a directory
+# for i in *; do tesseract "$i" "output-$i" -l eng; done;
 
 # MS Windows:
 # Chocolatey: choco install -y gimagereader
