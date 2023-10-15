@@ -385,9 +385,21 @@ sudo apt install slop
 # open terminal, then select region to display keystrokes by issuing the command:
 # screenkey -p fixed -g $(slop -n -f '%g') --persist -s small --font-size small
 sudo apt install default-jre
-sudo apt install gimp-plugin-registry
-sudo apt install gmic
-sudo apt install gimp-gmic
+
+# GIMP Essentials:
+yes | sudo apt install abr2gbr
+yes | sudo apt install gimp-data-extras
+yes | sudo apt install gmic
+yes | sudo apt install gimp-gmic
+yes | sudo apt install gimp-gutenprint
+yes | sudo apt install gimp-help-common
+yes | sudo apt install gimp-help-en-gb
+yes | sudo apt install gimp-lensfun
+yes | sudo apt install gimp-plugin-registry
+yes | sudo apt install gimp-texturize
+yes | sudo apt install gtkam-gimp
+yes | sudo apt install icc-profiles-free
+yes | sudo apt install icc-profiles
 
 # Inkscape #Install from Snap Store
 
