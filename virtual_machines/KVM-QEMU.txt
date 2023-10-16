@@ -1,0 +1,69 @@
+https://raphtlw.medium.com/how-to-set-up-a-kvm-qemu-windows-10-vm-ca1789411760
+https://itsfoss.com/share-files-gnome-boxes/
+https://www.linuxandubuntu.com/home/walkthrough-on-how-to-use-gnome-boxes
+https://wiki.debian.org/QEMU
+https://www.qemu.org/download/#linux
+https://askubuntu.com/questions/1089753/e-package-libvirt-bin-has-no-installation-candidate
+https://www.ctrl.blog/entry/how-to-win10-in-gnome-boxes.html
+
+Update the system:
+
+yes | sudo apt update
+yes | sudo apt list --upgradable
+yes | sudo apt upgrade
+yes | sudo apt update
+yes | sudo apt install -f
+yes | sudo apt update
+
+
+
+sudo apt install <the following>
+qemu-kvm
+libvirt-daemon-system
+libvirt-clients
+libvirt-clients-qemu
+bridge-utils
+virt-manager
+qemu-system
+qemu-utils
+qemu-system-x86
+qemu-system-gui
+virt-viewer
+spice-vdagent
+spice-webdavd
+spice-client-gtk
+
+
+sudo apt install gnome-boxes
+
+sudo apt install qemu-utils qemu-system-x86 qemu-system-gui
+sudo apt install qemu-system
+
+sudo apt install libvirt-daemon-system libvirt-clients libvirt-clients-qemu
+
+
+
+sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients libvirt-clients-qemu bridge-utils qemu-system qemu-utils qemu-system-x86 qemu-system-gui virt-manager virt-viewer spice-vdagent spice-webdavd spice-client-gtk gnome-boxes
+
+
+
+
+sudo nano /etc/modprobe.d/qemu-system-x86.conf
+# Check <your account name>/username: echo $(whoami)
+# sudo usermod -a -G kvm <your account name>
+# or,
+#    sudo usermod -aG kvm <your account name>
+
+
+
+sudo reboot now
+
+https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.229-1/
+https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.229-1/virtio-win-gt-x64.msi
+
+
+/var/lib/libvirt/images/pool
+
+
+
+sudo apt install gnome-calculator

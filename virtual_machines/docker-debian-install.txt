@@ -1,0 +1,182 @@
+Ecosia: install docker on debian
+https://docs.docker.com/engine/install/debian/
+https://stackoverflow.com/questions/61401626/docker-installation-failed-on-ubuntu-20-04-ltsvmware
+
+
+Distro maintainers provide an unofficial distribution of Docker packages in their repositories. 
+Run the following command to uninstall all conflicting packages:
+
+for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
+
+
+Set up KVM device user permissions
+
+To check ownership of /dev/kvm, run:
+
+ls -al /dev/kvm
+
+Add your user to the kvm group in order to access the kvm device:
+
+sudo usermod -aG kvm $USER
+
+Uninstall the tech preview or beta version of Docker Desktop for Linux. Run:
+
+sudo apt remove docker-desktop
+
+For a complete cleanup, remove configuration and data files at $HOME/.docker/desktop, the symlink at /usr/local/bin/com.docker.cli, and purge the remaining systemd service files.
+
+rm -r $HOME/.docker/desktop
+sudo rm /usr/local/bin/com.docker.cli
+sudo apt purge --auto-remove docker-desktop
+sudo apt purge --auto-remove docker.io
+sudo rm /var/lib/docker
+sudo rm /etc/docker
+sudo thunar /var/lib/docker
+sudo thunar /etc/docker
+
+sudo apt update
+sudo apt install ca-certificates curl gnupg
+
+
+
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+
+
+$(. /etc/os-release && echo "$VERSION_CODENAME")
+
+
+echo \
+  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+
+https://stackoverflow.com/questions/48957195/how-to-fix-docker-got-permission-denied-issue
+
+sudo groupadd docker
+sudo usermod -aG docker $USER
+
+# https://stackoverflow.com/questions/61401626/docker-installation-failed-on-ubuntu-20-04-ltsvmware
+sudo apt install docker.io
+docker -v
+
+https://stackoverflow.com/questions/48957195/how-to-fix-docker-got-permission-denied-issue
+newgrp docker
+docker run hello-world
+
+WARNING:
+The docker group grants privileges equivalent to the root user. For details on how this impacts security in your system, see Docker Daemon Attack Surface..
+
+
+Error: Invalid value for '[INPUT]': '/home/
+No such file or directory
+
+
+
+sudo docker run -i -v /data1/Downloads:/Downloads ubuntu bash
+sudo docker run -i -v /data1/Downloads:/Downloads:z ubuntu bash
+sudo docker run danielgatis/rembg i '/home/appu/Pictures/adorable-dogs-8.jpg':z '/home/appu/Downloads/adorable-dogs-8.jpg':z
+
+
+
+You can give Docker permission to access your home directory by assigning group read and write permissions with the `chmod` command². You can also create the docker group on the system and add the active user to the docker group². 
+
+Here's an example command to assign group read and write permissions with the `chmod` command: `sudo chmod -R g+rw \"$HOME/.docker\"`². 
+
+I hope that helps! Let me know if you have any other questions.
+
+Source: Conversation with Bing, 12/7/2023
+(1) How to Fix Docker Permission Denied? - phoenixNAP. https://phoenixnap.com/kb/docker-permission-denied.
+(2) Change folder permissions in docker - Stack Overflow. https://stackoverflow.com/questions/57248473/change-folder-permissions-in-docker.
+(3) How to give folder permissions inside a docker container Folder. https://stackoverflow.com/questions/45972608/how-to-give-folder-permissions-inside-a-docker-container-folder.
+(4) How to give non-root user in Docker container access to a volume .... https://stackoverflow.com/questions/39397548/how-to-give-non-root-user-in-docker-container-access-to-a-volume-mounted-on-the.
+
+https://phoenixnap.com/kb/docker-permission-denied
+
+sudo service docker restart
+
+service docker status
+
+sudo docker run hello-world
+
+sudo groupadd -f docker
+
+sudo usermod -aG docker $USER
+
+newgrp docker
+
+groups
+
+docker cdrom floppy sudo audio dip video plugdev users kvm netdev lpadmin scanner systemd-journal appu
+
+sudo reboot now
+
+sudo chown root:docker /var/run/docker.sock
+
+mkdir ~/.docker
+
+sudo chown -R "$USER":"$USER" $HOME/.docker
+
+sudo chmod -R g+rw "$HOME/.docker"
+
+sudo nano /usr/lib/systemd/system/docker.service
+
+
+[Service]
+#
+#
+#
+...
+...
+#
+#
+# At the end of [Service]
+#
+# Docker
+# https://phoenixnap.com/kb/docker-permission-denied
+SupplementaryGroups=docker
+ExecStartPost=/bin/chmod 666 /var/run/docker.sock
+
+
+
+
+sudo docker ps -a
+
+
+
+
+
+
+
+
+
+sudo docker inspect --format='{{.HostConfig.Privileged}}' [container-id]
+
+sudo docker inspect --format='{{.HostConfig.Privileged}}' 3a5e24a304b7
+
+
+sudo docker run -d --privileged danielgatis/rembg
+
+ce2c25162e1020aaa88fff3e5a4d640554555cf6d50d878682d31f2c66548907
+
+sudo docker inspect --format='{{.HostConfig.Privileged}}' ce2c25162e1020aaa88fff3e5a4d640554555cf6d50d878682d31f2c66548907
+true
+
+sudo docker run -d --privileged ce2c25162e1020aaa88fff3e5a4d640554555cf6d50d878682d31f2c66548907 i /home/appu/Pictures/adorable-dogs-8.jpg /home/appu/Downloads/adorable-dogs-8.jpg
+
+docker rm $(docker ps -a -q --filter ancestor=danielgatis/rembg --format="{{.ID}}")
+
+sudo docker ps -a
+
+sudo thunar /var/lib/docker
+
+sudo docker run -i -t 07d8f530482f i /home/appu/Pictures/adorable-dogs-8.jpg /home/appu/Downloads/adorable-dogs-8.jpg
+
+
+

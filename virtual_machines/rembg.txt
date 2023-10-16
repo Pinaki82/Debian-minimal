@@ -1,0 +1,61 @@
+Google: image background remover in linux
+https://opensource.com/article/23/4/image-editing-linux-python
+https://github.com/danielgatis/rembg
+
+pipx install rembg[cli]
+If it's already installed and you cannot install it:
+pipx install --force rembg[cli]
+rembg --help
+rembg --version
+Usage:
+rembg i /home/USERNAME/Pictures/adorable-dogs-8.jpg /home/USERNAME/Downloads/adorable-dogs-8.jpg
+docker run danielgatis/rembg i "/home/appu/Pictures/adorable-dogs-8.jpg" "/home/appu/Downloads/adorable-dogs-8.png"
+
+
+
+
+TODO: -- DOCKER --
+Requirements:python: >3.7, <3.12
+On Debian Bookworm (2023.07.12):
+python3 --version
+Python 3.11.2
+
+Someday Debian will update Python. Then, nothing will work.
+That happened to me before,
+with another background remover Python application.
+
+So, I'll have to create a docker container for preserving dependencies.
+
+https://docs.docker.com/engine/reference/commandline/pull/
+
+https://hub.docker.com/r/danielgatis/rembg
+
+docker pull danielgatis/rembg
+
+
+https://www.freecodecamp.org/news/where-are-docker-images-stored-docker-container-paths-explained/
+
+docker info
+
+Debian: /var/lib/docker/
+
+
+https://linuxize.com/post/how-to-remove-docker-images-containers-volumes-and-networks/
+https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
+
+https://stackoverflow.com/questions/56413414/how-to-run-a-pulled-images-docker
+
+docker images
+
+docker container ls -a
+docker container rm c0762b540c70
+docker rm $(docker ps -a -q --filter ancestor=danielgatis/rembg --format="{{.ID}}")
+docker container ls -a
+sudo thunar /var/lib/docker
+
+
+
+Usage as a docker:
+Just replace the rembg command for docker run danielgatis/rembg.
+Try this:
+docker run danielgatis/rembg i path/to/input.png path/to/output.png

@@ -1,0 +1,9 @@
+The instructions provided in this directory
+are not arranged/formatted properly, but
+the directory contains crucial information.
+The instructions to install Debian on a VM
+documented here should be organised into
+a more logical sequence of steps.
+The documentation given here is for storing
+the instructions temporarily and is planned
+to be revised.

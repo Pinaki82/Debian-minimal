@@ -1,0 +1,597 @@
+https://realtechreviews.com/how-to-install-headless-debian-10-linux-image/
+https://forums.debian.net/viewtopic.php?t=5450
+https://linuxconfig.org/how-to-mount-cdrom-in-linux
+    sudo mkdir /mnt/cdrom
+    sudo mount /dev/sr0 /mnt/cdrom
+https://linuxside.com/post/installing-icewm-on-debian-netinstall
+################################################################################
+
+sudo su root
+
+lsb_release -a
+
+apt update && apt upgrade
+apt install build-essential dkms module-assistant
+apt install git
+
+Exit su:
+exit
+
+Install the necessary Linux header files:
+Do not panic if you cannot install apps as 'sudo apt install package-name' at
+the moment. You'll make that work later.
+
+sudo apt install linux-headers-$(uname -r)
+
+Be root again:
+sudo su root
+
+Install two Terminal Emulators which will be required later.
+apt install kitty alacritty
+
+Install a GUI Text Editor which will be required later.
+apt install geany
+
+Install a GUI  file manager which will be required later.
+apt install thunar
+
+Install a Browser.
+sudo apt install firefox-esr
+If needed, install Firefox language packs (Bengali & Hindi):
+sudo apt install firefox-esr-l10n-en-gb firefox-esr-l10n-bn firefox-esr-l10n-hi-in 
+
+The folloing will be needed by VirtualBOX Guest Addition.
+
+mkdir -p /lib/modules/$(uname -r)/build/include/drm
+touch /lib/modules/$(uname -r)/build/include/drm/drm_rect.h
+
+Install the GUI:
+
+apt install xorg xinit icewm
+
+Or (for sound), w/ Alsa):
+apt install xorg xinit icewm alsa-utils alsamixergui
+
+(W/ PulseAudio):
+apt install xorg xinit icewm pulseaudio pavucontrol
+pulseaudio --start
+pulseaudio --kill && pulseaudio --start
+
+Exit su:
+exit
+
+nano ~/.bashrc
+
+if [[ -z $DISPLAY ]] && [[ "$(tty)" = "/dev/tty1" ]]; then
+  exec startx
+fi
+
+sudo su root
+reboot now
+
+Once you enter the desktop:
+Add the current user to sudoers:
+
+Start Menu -> System -> Terminal Emulator -> Sakura
+
+In Sakura, the <TAB> key will work from now.
+
+sudo su root
+sudo nano /etc/sudoers
+
+Find the section:
+#User privilege specification
+root  ALL=(ALL:ALL) ALL
+Then, add your username there as described below.
+
+-------------------------------------
+#User privilege specification
+root  ALL=(ALL:ALL) ALL
+yourusername ALL=(ALL: ALL) ALL
+-------------------------------------
+
+Prepare the system to be able to mount CD-ROM drives:
+
+mkdir /mnt/cdrom
+
+lsblk
+
+mount /dev/sr0 /mnt/cdrom
+
+Add the current user to sudoers again by doing:
+
+sudo usermod -aG sudo $(whoami)
+
+Hint: You are currently not seeing messages from other users and the system.
+      Users in groups 'adm', 'systemd-journal' can see all messages.
+      Pass -q to turn off this notice.
+https://serverfault.com/questions/717725/journalctl-access-for-non-root-users
+
+sudo usermod -a -G systemd-journal $(whoami)
+sudo reboot now
+
+Insert the VBox Guest Addition CD.
+
+Update the system:
+
+yes | sudo apt update && sudo apt upgrade
+
+Install the necessary Linux header files:
+
+sudo apt install linux-headers-$(uname -r)
+
+Virtualbox Guest Addition:
+
+lsblk
+sudo mount /dev/sr0 /mnt/cdrom/
+cd /mnt/cdrom/
+ls -al
+
+sudo ./VBoxLinuxAdditions.run --nox11
+
+Virtualbox Shared Folder Permission:
+sudo usermod -aG vboxsf $(whoami)
+
+sudo reboot now
+Or,
+sudo shutdown -r now
+
+After the reboot, the bidirectional copy-paste should work as expected.
+
+---- Again:
+
+nano ~/.bashrc
+
+if [[ -z $DISPLAY ]] && [[ "$(tty)" = "/dev/tty1" ]]; then
+  exec startx
+fi
+
+----
+
+New:
+
+nano ~/.bash_aliases
+
+if [[ -z $DISPLAY ]] && [[ "$(tty)" = "/dev/tty1" ]]; then
+  exec startx
+fi
+
+nano ~/.profile
+
+if [[ -z $DISPLAY ]] && [[ "$(tty)" = "/dev/tty1" ]]; then
+  exec startx
+fi
+
+nano ~/.bash_profile
+
+if [[ -z $DISPLAY ]] && [[ "$(tty)" = "/dev/tty1" ]]; then
+  exec startx
+fi
+
+Do the following:
+# =================================================================
+# # https://askubuntu.com/questions/800155/service-command-not-found
+# service: command not found
+# Solve the problem by adding
+# export PATH="$PATH:/usr/sbin"
+# to your .bashrc, .bash_aliases, .bash_profile, .profile
+# =================================================================
+
+echo "export PATH="'"$PATH:/usr/sbin"'"" >> ~/.bash_profile
+echo "export PATH="'"$PATH:/usr/sbin"'"" >> ~/.bashrc
+echo "export PATH="'"$PATH:/usr/sbin"'"" >> ~/.bash_aliases
+echo "export PATH="'"$PATH:/usr/sbin"'"" >> ~/.profile
+
+Add $HOME/.local/bin/ to the PATH for pip/cargo/pipx etc.:
+
+echo "export PATH="'"$HOME/.local/bin/:$PATH"'"" >> ~/.bash_profile
+echo "export PATH="'"$HOME/.local/bin/:$PATH"'"" >> ~/.bashrc
+echo "export PATH="'"$HOME/.local/bin/:$PATH"'"" >> ~/.bash_aliases
+
+Reboot the system.
+
+sudo reboot now
+
+
+Change password:
+passwd
+
+Install a login manager:
+sudo apt install lightdm
+
+Make some folders:
+mkdir Desktop Documents Pictures Videos Music AppImages Code
+
+GUI Wi-Fi management etc.:
+
+sudo apt install network-manager
+sudo apt install network-manager-gnome
+sudo apt install network-manager-applet
+nmtui
+nm-applet
+
+sudo apt install bluetooth blueman
+sudo systemctl enable bluetooth.service
+sudo systemctl start bluetooth.service
+
+blueman-adapters
+blueman-manager
+blueman-services
+blueman-sendto
+
+Clipboard Manager:
+sudo apt install xfce4-clipman
+
+Enable/Disable screensaver with a button:
+sudo apt install caffeine
+
+Image Viewers:
+sudo apt install feh && viewnoir
+
+Audio/Video Player:
+sudo apt install mpv
+
+Changing the wallpaper:
+#sudo apt install nitrogen
+
+mkdir ~/Pictures
+
+Copy some pictures there.
+Select a picture and press CTRL+c.
+
+sudo geany /usr/share/icewm/preferences
+
+Search
+
+DesktopBackgroundImage
+
+Uncomment 'DesktopBackgroundImage'
+
+DesktopBackgroundImage="/home/appuraja/Pictures/OsfFKJ0.jpg"
+
+Shift the Taskbar at the Top:
+
+Search
+
+TaskBarAtTop
+
+Uncomment 'TaskBarAtTop'
+
+TaskBarAtTop=1 # 0/1
+
+Search
+
+TaskBarShowWindowIcons
+
+TaskBarShowWindowIcons=1 # 0/1
+
+
+
+https://wiki.archlinux.org/title/IceWM
+
+yes | cp -r /usr/share/icewm/ ~/.config/icewm/
+yes | cp -r /usr/share/icewm/preferences ~/.config/icewm/
+geany ~/.config/icewm/startup
+
+--------------------------------------------------------------------------------
+
+#!/bin/sh
+
+# start network manager
+    sleep 1 &&
+    nm-applet &
+
+# enable bluetooth applet
+    sleep 1 &&
+    blueman-applet &
+
+# enable screensaver
+    xscreensaver -nosplash &
+
+# start caffeine indicator applet
+    caffeine-indicator &
+
+# allow notifications
+    /usr/lib/notification-daemon-1.0/notification-daemon &
+
+# Puts a flag on the taskbar to show which keyboard is being used if more than 1 keyboard layout is detected
+#   fbxkb-start &
+
+# Uncomment for easy search from the taskbar
+#   search-bar-icon &
+
+# Uncomment the following line to mount Samba and/or NFS shares
+#   connectshares &
+
+# Uncomment to use clipboard manager
+    xfce4-clipman &
+
+# Nitrogen Restore
+#    nitrogen --restore &
+
+
+--------------------------------------------------------------------------------
+
+sudo chmod 755 ~/.config/icewm/startup
+sudo cp ~/.config/icewm/startup /usr/share/icewm/
+sudo chmod 755 /usr/share/icewm/startup
+
+Log out/log back in
+Or,
+icewm --replace
+
+Install the standard Vim Command-Line Text Editor:
+
+sudo apt install vim
+
+sudo apt install geoclue-2-demo
+systemctl start geoclue.service
+systemctl enable geoclue.service
+systemctl start geoclue.service
+
+
+mkdir -p ~/.config/systemd/user/
+geany ~/.config/systemd/user/geoclue-agent.service
+
+systemctl --user enable --now geoclue-agent.service
+
+
+sudo systemctl edit --full geoclue.service
+sudo systemctl restart geoclue.service
+
+/usr/libexec/geoclue-2.0/demos/agent &
+
+/usr/libexec/geoclue-2.0/demos/where-am-i
+
+OH_MY_BASH:
+
+sudo apt install wget curl git
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+
+Add again:
+
+echo "export PATH="'"$PATH:/usr/sbin"'"" >> ~/.bashrc
+echo "export PATH="'"$HOME/.local/bin/:$PATH"'"" >> ~/.bashrc
+
+nano ~/.bashrc
+
+Add again:
+
+if [[ -z $DISPLAY ]] && [[ "$(tty)" = "/dev/tty1" ]]; then
+  exec startx
+fi
+
+
+# Change the theme: .bashrc -> Uncomment:
+
+nano ~/.bashrc
+
+# OSH_THEME="powerline-plain"
+# OSH_THEME="powerline"
+## OSH_THEME="brunton"
+## OSH_THEME="kitsune"
+# OSH_THEME="mairan"
+# OSH_THEME="rr"
+
+source ~/.bashrc
+
+
+
+
+mkdir ~/.local/share/applications
+
+
+
+touch ~/.local/share/applications/nmtui-network-manager.desktop
+geany ~/.local/share/applications/nmtui-network-manager.desktop
+
+[Desktop Entry]
+Type=Application
+Name=nmtui
+Comment=CLI Network Management
+Icon=network-wireless
+Exec=uxterm /usr/bin/nmtui
+Terminal=false
+Categories=Network;
+
+chmod 755 ~/.local/share/applications/nmtui-network-manager.desktop
+
+
+touch ~/.local/share/applications/nm-applet-network-manager.desktop
+geany ~/.local/share/applications/nm-applet-network-manager.desktop
+
+[Desktop Entry]
+Type=Application
+Name=nm-applet
+Comment=Network Management
+Icon=network-wireless
+Exec=uxterm /usr/bin/nm-applet
+Terminal=false
+Categories=Network;
+
+
+chmod 755 ~/.local/share/applications/nm-applet-network-manager.desktop
+
+
+touch ~/.local/share/applications/Audio-Volume.desktop
+geany ~/.local/share/applications/Audio-Volume.desktop
+
+[Desktop Entry]
+Type=Application
+Name=Audio Volume
+Comment=Audio Management
+Icon=audio-speakers
+Exec=/usr/bin/alsamixergui
+Terminal=false
+Categories=AudioVideo;
+
+chmod 755 ~/.local/share/applications/Audio-Volume.desktop
+
+
+[Desktop Entry]
+Type=Application
+Name=Audio Volume
+Comment=Audio Management
+Icon=audio-speakers
+Exec=/usr/bin/alsamixergui
+Terminal=false
+Categories=AudioVideo;
+
+blueman-adapters
+blueman-manager
+blueman-services
+blueman-sendto
+
+
+touch ~/.local/share/applications/blueman-adapters.desktop
+touch ~/.local/share/applications/blueman-manager.desktop
+touch ~/.local/share/applications/blueman-services.desktop
+touch ~/.local/share/applications/blueman-sendto.desktop
+touch ~/.local/share/applications/blueman-applet.desktop
+
+geany ~/.local/share/applications/blueman-adapters.desktop
+
+[Desktop Entry]
+Type=Application
+Name=blueman-adapters
+Comment=Bluetooth Management
+Icon=blueman
+Exec=/usr/bin/blueman-adapters
+Terminal=false
+Categories=Network;
+
+
+geany ~/.local/share/applications/blueman-manager.desktop
+
+[Desktop Entry]
+Type=Application
+Name=blueman-manager
+Comment=Bluetooth Management
+Icon=blueman
+Exec=/usr/bin/blueman-manager
+Terminal=false
+Categories=Network;
+
+geany ~/.local/share/applications/blueman-services.desktop
+
+[Desktop Entry]
+Type=Application
+Name=blueman-services
+Comment=Bluetooth Management
+Icon=blueman
+Exec=/usr/bin/blueman-services
+Terminal=false
+Categories=Network;
+
+
+geany ~/.local/share/applications/blueman-sendto.desktop
+
+[Desktop Entry]
+Type=Application
+Name=blueman-sendto
+Comment=Bluetooth Management
+Icon=blueman
+Exec=/usr/bin/blueman-sendto
+Terminal=false
+Categories=Network;
+
+geany ~/.local/share/applications/blueman-applet.desktop
+
+[Desktop Entry]
+Type=Application
+Name=blueman-applet
+Comment=Bluetooth Management
+Icon=blueman
+Exec=/usr/bin/blueman-applet
+Terminal=false
+Categories=Network;
+
+chmod 755 ~/.local/share/applications/blueman-adapters.desktop
+chmod 755 ~/.local/share/applications/blueman-manager.desktop
+chmod 755 ~/.local/share/applications/blueman-services.desktop
+chmod 755 ~/.local/share/applications/blueman-sendto.desktop
+chmod 755 ~/.local/share/applications/blueman-applet.desktop
+
+
+touch ~/.local/share/applications/Firefox-Incognito.desktop
+geany ~/.local/share/applications/Firefox-Incognito.desktop
+
+[Desktop Entry]
+Type=Application
+Name=Firefox Incognito
+Comment=web-browser
+Icon=web-browser
+Exec=/usr/bin/firefox --private-window
+Terminal=false
+Categories=;
+
+chmod 755 ~/.local/share/applications/Firefox-Incognito.desktop
+
+touch ~/.local/share/applications/File-Manager.desktop
+geany ~/.local/share/applications/File-Managers.desktop
+
+[Desktop Entry]
+Type=Application
+Name=Thunar File Manager
+Comment=File Manager
+Icon=system-file-manager
+Exec=/usr/bin/thunar
+Terminal=false
+Categories=;
+
+chmod 755 ~/.local/share/applications/File-Managers.desktop
+
+
+chmod +x helix-*.AppImage
+ln -s /home/appuraja/AppImages/helix-*.AppImage $HOME/.local/bin/hx
+cp $PWD/config.toml ~/.config/helix/
+
+
+sudo apt install lxappearance
+
+https://askubuntu.com/questions/161652/how-to-change-the-default-font-size-of-xterm
+nano ~/.Xresources
+! Use a truetype font and size.
+xterm*faceName: Monospace
+xterm*faceSize: 14
+
+xrdb -merge ~/.Xresources
+
+nano ~/.bashrc
+
+[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
