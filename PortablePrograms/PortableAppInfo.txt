@@ -127,7 +127,11 @@ app) (AppImage available) -> https://www.onlyoffice.com/
 GoldenDict -> https://appimage.github.io/GoldenDict/
 Bitwarden Password Manager -> https://bitwarden.com/download/
 Cerebro - App Search & Launcher -> https://github.com/cerebroapp/cerebro.git
-
+-----------------------------
+Fotowall: Create Photo Collage. -> https://www.enricoros.com/opensource/fotowall/
+https://github.com/enricoros/fotowall/releases
+Fotowall-1.0-RETRO-Linux_static-x86_64.x86_64
+-----------------------------
 
 
 
