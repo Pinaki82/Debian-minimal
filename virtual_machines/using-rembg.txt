@@ -1,0 +1,78 @@
+Rembg is a tool to remove images background
+https://github.com/danielgatis/rembg
+
+The rembg command has 4 subcommands, one for each input type:
+
+    i for files
+    p for folders
+    s for http server
+    b for RGB24 pixel binary stream
+
+You can get help about the main command using:
+
+rembg --help
+
+rembg i
+
+Used when input and output are files.
+
+Remove the background from a remote image
+
+curl -s http://input.png | rembg i > output.png
+
+Remove the background from a local file
+
+rembg i path/to/input.png path/to/output.png
+
+Remove the background specifying a model
+
+rembg i -m u2netp path/to/input.png path/to/output.png
+
+Remove the background returning only the mask
+
+rembg i -om path/to/input.png path/to/output.png
+
+
+rembg i -m sam -x '{"input_labels": [1], "input_points": [[100,100]]}' path/to/input.png path/to/output.png
+
+rembg p
+
+Used when input and output are folders.
+
+Remove the background from all images in a folder
+
+rembg p path/to/input path/to/output
+
+Same as before, but watching for new/changed files to process
+
+rembg p -w path/to/input path/to/output
+
+
+Models
+
+All models are downloaded and saved in the user home folder in the .u2net directory.
+
+The available models are:
+
+    u2net (download, source): A pre-trained model for general use cases.
+    u2netp (download, source): A lightweight version of u2net model.
+    u2net_human_seg (download, source): A pre-trained model for human segmentation.
+    u2net_cloth_seg (download, source): A pre-trained model for Cloths Parsing from human portrait. Here clothes are parsed into 3 category: Upper body, Lower body and Full body.
+    silueta (download, source): Same as u2net but the size is reduced to 43Mb.
+    isnet-general-use (download, source): A new pre-trained model for general use cases.
+    isnet-anime (download, source): A high-accuracy segmentation for anime character.
+    sam (download encoder, download decoder, source): A pre-trained model for any use cases.
+
+
+
+rembg i /media/sf_XubuntuVM_shared/imagefile.jpg /media/sf_XubuntuVM_shared/imagefile.png
+
+rembg i -m u2netp /media/sf_XubuntuVM_shared/imagefile.jpg /media/sf_XubuntuVM_shared/imagefile.png
+
+rembg p -w /media/sf_XubuntuVM_shared /media/sf_XubuntuVM_shared/Output
+
+rembg -m u2netp p -w /media/sf_XubuntuVM_shared /media/sf_XubuntuVM_shared/Output
+
+rembg i -om DSC_1722.NEF DSC_1722.png
+
+rembg i -om -m u2netp DSC_1722.NEF DSC_1722-2.png
