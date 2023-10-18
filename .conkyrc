@@ -41,10 +41,10 @@ uppercase no
 
 TEXT
 # https://lightlinux.blogspot.com/2014/03/minimalist-config-file-for-conky-with.html
-${font Open Sans Light:pixelsize=34}${time %A}${font}
+${font Open Sans Light:pixelsize=30}${time %A}${font}
 ${font Open Sans Light:pixelsize=14}${time %d/%m(%B)/%Y}${font}
                           ${hr 3}
-${font Open Sans Light:pixelsize=38}${time %l:%M %p}${font}
+${font Open Sans Light:pixelsize=37}${time %l:%M %p}${font}
 ${hr 5}
 
 $color

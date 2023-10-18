@@ -1,0 +1,10 @@
+[Desktop Entry]
+
+Type=Application
+Name=PPP Passport Photo ID Creator
+Comment=Online Passport Photo ID Creator
+# Web App: https://github.com/dpar39/ppp
+Exec=firefox https://myphotoidapp.firebaseapp.com/start
+Icon=emblem-photos
+Terminal=false
+Categories=Internet;
