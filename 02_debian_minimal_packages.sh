@@ -1159,6 +1159,7 @@ yes | sudo apt install default-jre && \
 
 yes | sudo apt install tesseract-ocr && \
 yes | sudo apt install imagemagick && \
+yes | sudo apt install graphicsmagick-imagemagick-compat && \
 
 # language pack installation:
 

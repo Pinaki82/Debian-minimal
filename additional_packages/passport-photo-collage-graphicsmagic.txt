@@ -1,0 +1,25 @@
+https://superuser.com/questions/1635868/how-can-i-with-linux-easily-create-a-collage-of-passport-photos
+https://ostechnix.com/how-to-create-a-montage-from-images-in-linux/
+https://opensource.com/article/21/9/photo-montage-imagemagick
+https://imagemagick.org/script/command-line-options.php
+https://github.com/dpar39/ppp
+
+montage IMG_20211008_132718.jpg IMG_20211008_132718.jpg IMG_20211008_132718.jpg IMG_20211008_132718.jpg IMG_20211008_132718.jpg IMG_20211008_132718.jpg -geometry +2+3 out.jpg
+
+montage \
+IMG_20211008_132718.jpg \
+IMG_20211008_132718.jpg \
+IMG_20211008_132718.jpg \
+IMG_20211008_132718.jpg \
+IMG_20211008_132718.jpg \
+IMG_20211008_132718.jpg \
+IMG_20211008_132718.jpg \
+IMG_20211008_132718.jpg \
+IMG_20211008_132718.jpg \
+IMG_20211008_132718.jpg \
+IMG_20211008_132718.jpg \
+IMG_20211008_132718.jpg \
+-tile 3x4 \
+-resize 1200x1800 \
+-geometry +2+3 out.jpg
+
