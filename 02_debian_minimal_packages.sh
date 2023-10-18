@@ -628,6 +628,13 @@ yes | sudo apt install googler && \
 # ddgr: DuckDuckGo from the terminal
 yes | sudo apt install ddgr && \
 # ddgr disable swap in ubuntu
+# 3 Command Line Apps To Search The Web | DistroTube. https://youtu.be/RvzY3gQsLLk?si=FaLlxRwxtkiwu53O
+# http://surfraw.org/
+yes | sudo apt install surfraw surfraw-extra && \
+# surfraw -elvi
+# surfraw bing disable swap in debian
+# sr google debian ports
+# sr google -l debian ports
 
 # ------------------------------------------------------------------------------
 # Snap and Flatpak:
