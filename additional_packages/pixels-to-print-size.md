@@ -215,7 +215,7 @@ $(3+1) \times 2 = 8$ (1 extra space for adjustments [the first +2 pixels gap])
 
 $(4+1) \times 2 = 10$ (1 extra space for adjustments [the first +2 pixels gap])
 
-So the calculated output dimension of our montage is:
+So the calculated dimension of our output montage is:
 
 $(885+8)$ x $(1653+10)$ $=$ 893x1663 pixels
 
