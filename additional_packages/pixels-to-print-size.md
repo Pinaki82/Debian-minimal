@@ -131,11 +131,117 @@ IMG_20211008_132718.jpg \
 
 `-resize 893x1663` means produce a 893x1663 pixel output montage.
 
-The option `-geometry` helps you to set the thumbnail size and the space between each image. The default `-geometry` setting in Montage is `'120x120>+4+3'`. Geometry can be expressed either as `'120x120>+4+3'` or `'+4+3'`. The first instruction `'120x120>+4+3'` means it will produce 120×120 pixel thumbnails with 4 pixels on the left/right of each image and 3 pixels below, where `>` denotes the resize option. The second instruction `'+4+3'` specifies the gap between images that are going to be placed on the output montage, without being specific about scaling the input. The first option is useful for shrinking the size of the input images that are of higher dimensions, although the option is completely unnecessary. It is only useful when the user does not want to set the dimension of the final output. Even then, using this option may affect the output files undesirably. If you have to get an output of a specific dimension, use the `-resize` option instead.
+The option `-geometry` helps you to set the thumbnail size and the space between each image. The default `-geometry` setting in Montage is `'120x120>+4+3'`. Geometry can be expressed either as `'120x120>+4+3'` or `'+4+3'`. The first instruction `'120x120>+4+3'` means it will produce 120×120 pixel thumbnails with 4 pixels on the left/right of each image and 3 pixels below/above, where `>` denotes the resize option. The second instruction `'+4+3'` specifies the gap between images that are going to be placed on the output montage, without being specific about scaling the input. The first option is useful for shrinking the size of the input images that are of higher dimensions, although the option is completely unnecessary. It is only useful when the user does not want to set the dimension of the final output. Even then, using this option may affect the output files undesirably. If you have to get an output of a specific dimension, use the `-resize` option instead.
 
-`'width x height > +4 px spacing on the left/right +3 px spacing below'`
+`'width x height > +4 px spacing on the left/right +3 px spacing below/above'`
 
 Take note of the first command that specifies the dimension along with the gaps, since it can produce undesirable output. The `-resize` option will accurately determine the dimension of the final output montage. Thus, we will not specify the dimension in the `-geometry` option. We will restrict our use of the `-geometry` option to specify the gaps.
+
+---
+
+Command line arguments accepted by Montage:
+
+```
+GraphicsMagick 1.3.40 2023-01-14 Q16 http://www.GraphicsMagick.org/
+Copyright (C) 2002-2023 GraphicsMagick Group.
+Additional copyrights and licenses apply to this software.
+See http://www.GraphicsMagick.org/www/Copyright.html for details.
+Usage: montage montage [options ...] file [ [options ...] file ...]
+
+Where options include:
+  -adjoin              join images into a single multi-image file
+  -affine matrix       affine transform matrix
+  -authenticate value  decrypt image with this password
+  -background color    background color
+  -blue-primary point  chomaticity blue primary point
+  -blur factor         apply a filter to blur the image
+  -bordercolor color   border color
+  -borderwidth geometry
+                       border width
+  -colors value        preferred number of colors in the image
+  -colorspace type     alternate image colorsapce
+  -comment string      annotate image with comment
+  -compose operator    composite operator
+  -compress type       image compression type
+  -crop geometry       preferred size and location of the cropped image
+  -debug events        display copious debugging information
+  -define values       Coder/decoder specific options
+  -density geometry    horizontal and vertical density of the image
+  -depth value         image depth
+  -display server      query font from this X server
+  -dispose method      Undefined, None, Background, Previous
+  -dither              apply Floyd/Steinberg error diffusion to image
+  -draw string         annotate the image with a graphic primitive
+  -encoding type       text encoding type
+  -endian type         multibyte word order (LSB, MSB, or Native)
+  -fill color          color to use when filling a graphic primitive
+  -filter type         use this filter when resizing an image
+  -flip                flip image in the vertical direction
+  -flop                flop image in the horizontal direction
+  -font name           font to use when annotating with text
+  -format string       output formatted image characteristics
+  -frame geometry      surround image with an ornamental border
+  -gamma value         level of gamma correction
+  -geometry geometry   preferred tile and border sizes
+  -gravity direction   which direction to gravitate towards
+  -green-primary point chomaticity green primary point
+  -help                print program options
+  -interlace type      None, Line, Plane, or Partition
+  -label name          assign a label to an image
+  -limit type value    Disk, File, Map, Memory, Pixels, Width, Height or
+                       Threads resource limit
+  -log format          format of debugging information
+  -matte               store matte channel if the image has one
+  -mattecolor color    color to be used with the -frame option
+  -mode type           Frame, Unframe, or Concatenate
+  -monitor             show progress indication
+  -monochrome          transform image to black and white
+  -noop                do not apply options to image
+  +page                reset current page offsets to default
+  -page geometry       size and location of an image canvas
+  -pointsize value     font point size
+  -quality value       JPEG/MIFF/PNG compression level
+  -red-primary point   chomaticity red primary point
+  +repage              reset current page offsets to default
+  -repage geometry     adjust current page offsets by geometry
+  -resize geometry     resize the image
+  -rotate degrees      apply Paeth rotation to the image
+  -sampling-factor HxV[,...]
+                       horizontal and vertical sampling factors
+  -scenes range        image scene range
+  -set attribute value set image attribute
+  +set attribute       unset image attribute
+  -shadow              add a shadow beneath a tile to simulate depth
+  -sharpen geometry    sharpen the image
+  -size geometry       width and height of image
+  -strip               strip all profiles and text attributes from image
+  -stroke color        color to use when stroking a graphic primitive
+  -strokewidth value   stroke (line) width
+  -texture filename    name of texture to tile onto the image background
+  -thumbnail geometry  resize the image (optimized for thumbnails)
+  -tile geometry       number of tiles per row and column
+  -title string        thumbnail title
+  -transform           affine transform image
+  -transparent color   make this color transparent within the image
+  -treedepth value     color tree depth
+  -trim                trim image edges
+  -type type           image type
+  -verbose             print detailed information about the image
+  -version             print version information
+  -virtual-pixel method
+                       Constant, Edge, Mirror, or Tile
+  -white-point point   chomaticity white point
+
+In addition to those listed above, you can specify these standard X
+resources as command line options:  -background, -bordercolor,
+-borderwidth, -font, -mattecolor, or -title
+
+By default, the image format of `file' is determined by its magic
+number.  To specify a particular image format, precede the filename
+with an image format name and a colon (i.e. ps:image) or specify the
+image type as the filename suffix (i.e. image.ps).  Specify 'file' as
+'-' for standard input or output.
+```
 
 ---
 
@@ -163,7 +269,7 @@ That means, the pixel dimension of a 4"x6" photo at 300 DPI is:
 
 No unit conversion was required since the lengths were measured in inches here.
 
-We want +2 pix spacing on the left/right sides and +2 pix spacing between the rows (at the bottom of each row).
+We want +2 pix spacing on the left/right sides and +2 pix spacing between the rows (at the bottom of each row to use the gaps as white markings for the paper cutter machine).
 
 The dimension of each Photo ID is 104.25x145.95 millimetres (at 72 DPI). But in our case, it is not needed. We won't even have to calculate the pixel dimension at 300 DPI resolution, which is 295.3x413.4 pixels. The dimension of the photo in its print size in inches at 300 DPI is all we need. You may ask me the reason behind going through the troubles of calculating all sorts of dimensions at various resolutions in the earlier steps. Yes, we need it somehow. Montage cannot crop/rotate/centre our photo. We will have to use an Image Editing Application to do that. Knowing the dimensions will give us an overview of the final arrangement.
 
@@ -320,3 +426,17 @@ Or simply,
 ```
 
 Press **TAB** to autocomplete names.
+
+The dimension of our output montage is 893x1663 pixels. The size of a 4"x6" photo is 1200x1800 pixels. That means, we cannot directly print an 893x1663 pixels image onto a 4"x6" photo paper.
+
+1. Open GIMP.
+
+2. Create a new 4"x6" canvas.
+
+3. Drag the 893x1663 pix image from your file manager onto the 4"x6" canvas.
+
+4. Press **CTRL+M** to merge the layers.
+
+5. Export the image to a JPEG file. Give the output file a name of your choice.
+
+Now you are ready to print the Photo ID montage on a 210 GSM 4"x6" photo paper.
