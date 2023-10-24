@@ -1,0 +1,31 @@
+Archivy
+
+Archivy is a self-hosted knowledge repository
+that allows you to safely preserve useful
+content that contributes to
+your own personal, searchable and
+extensible wiki.
+
+sudo apt install ripgrep ugrep
+
+ugrep --help
+
+pipx install archivy
+archivy create-admin <username>
+archivy run
+Configure directory settings.
+
+Stop archivy: CTRL + C
+
+Leave the following files in their original location.
+
+~/.local/share/archivy/
+                      config.yml, db.json
+
+
+Move the following folders to somewhere else you prefer.
+
+/mnt/hdd/Documents/archivy/
+                          data/
+                          images/
+

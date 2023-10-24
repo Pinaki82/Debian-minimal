@@ -793,6 +793,9 @@ sudo apt install regexxer
 # sudo apt install vizigrep
 sudo apt install searchmonkey
 
+sudo apt install ripgrep ugrep
+# ugrep --help
+
 # PlatformIO ===========================================================
 # CuteCOM: GUI Serial Monitor
 # https://www.pragmaticlinux.com/2021/11/how-to-monitor-the-serial-port-in-linux/

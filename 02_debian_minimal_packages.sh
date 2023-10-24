@@ -364,6 +364,9 @@ yes | sudo apt install markdown && \
 
 yes | sudo apt install regexxer && \
 yes | sudo apt install searchmonkey && \
+yes | sudo apt install ripgrep ugrep && \
+# ugrep --help
+
 # CuteCOM: GUI Serial Monitor
 # https://www.pragmaticlinux.com/2021/11/how-to-monitor-the-serial-port-in-linux/
 yes | sudo apt install cutecom && \

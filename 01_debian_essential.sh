@@ -413,6 +413,9 @@ yes | sudo apt install markdown && \
 # Text search utilities
 yes | sudo apt install regexxer && \
 yes | sudo apt install searchmonkey && \
+yes | sudo apt install ripgrep ugrep && \
+# ugrep --help
+
 # ------------------------------------------------------------------------------
 # Req. by PlatformIO Embedded Systems Development Platform
 # CuteCOM: GUI Serial Monitor
