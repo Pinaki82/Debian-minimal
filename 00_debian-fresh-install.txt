@@ -898,7 +898,6 @@ sudo snap install gimp
 sudo snap install inkscape
 sudo snap install keepassxc
 sudo snap install vlc
-sudo snap install vidcutter
 # sudo snap install kompare
 # Slideshow maker
 sudo snap install ffdiaporama-c18
@@ -924,6 +923,8 @@ flatpak install flathub org.libreoffice.LibreOffice
 # A GUI Flatpak App Permission Manager
 # https://www.makeuseof.com/manage-flatpak-permissions-with-flatseal-linux/
 flatpak install flathub com.github.tchx84.Flatseal
+# VidCutter - Media Cutter + Joiner
+flatpak install com.ozmartians.VidCutter
 # KDE Non-Linear Video Editor: Kdenlive
 Dependencies: sudo apt install frei0r-plugins
 flatpak install flathub org.kde.kdenlive
@@ -1035,7 +1036,6 @@ gimp
 inkscape
 keepassxc
 teams-for-linux
-vidcutter
 vlc
 --------------------------------------------------------------------------------
 

@@ -977,7 +977,7 @@ yes | sudo apt install scdaemon && \
 
 yes | sudo apt install ffmpeg && \
 # sudo apt install mediainfo -y && \
-# VidCutter # Install Snap
+# VidCutter # Install Flatpak # VidCutter - Media Cutter + Joiner # flatpak install com.ozmartians.VidCutter
 # Create Video DVDs and VCDs easily
 yes | sudo apt install devede && \
 
