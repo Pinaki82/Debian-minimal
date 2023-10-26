@@ -94,6 +94,11 @@ yes | sudo apt install fzf && \
 # OH-MY-BASH:
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 # ------------------------------------------------------------------------------
+# Bash Language Server
+# https://github.com/bash-lsp/bash-language-server.git
+yes | sudo npm i -g bash-language-server && \
+# bash-language-server --help
+# ------------------------------------------------------------------------------
 # AppImage support:
 yes | sudo apt install libfuse2 && \
 # ------------------------------------------------------------------------------

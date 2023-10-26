@@ -274,6 +274,11 @@ yes | sudo apt install npm && \
 yes | sudo apt install cmdtest && \
 yes | sudo apt install yarn && \
 
+# Bash Language Server
+# https://github.com/bash-lsp/bash-language-server.git
+# yes | sudo npm i -g bash-language-server && \
+# bash-language-server --help
+
 yes | sudo apt install cdecl && \
 yes | sudo apt install cutils && \
 yes | sudo apt install kitty && \

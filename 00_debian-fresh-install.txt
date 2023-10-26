@@ -659,6 +659,11 @@ pipx install flawfinder
 # https://github.com/friendlyanon/cmake-init
 pipx install cmake-init
 
+# Bash Language Server
+# https://github.com/bash-lsp/bash-language-server.git
+sudo npm i -g bash-language-server
+bash-language-server --help
+
 # Description: blackbox testing of Unix command line programs
 # cmdtest black box tests Unix command line tools. Roughly, it is given a
 # script, its input files, and its expected output files. cmdtest runs
