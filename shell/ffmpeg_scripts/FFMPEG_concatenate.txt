@@ -22,3 +22,12 @@ file '/path/to/file2'
 file '/path/to/file3'
 
 ffmpeg -safe 0 -f concat -i list.txt -c copy output.mp4
+
+
+
+The following one-liner works in bash (Mac, Linux) and does not require an intermediate file:
+ffmpeg -f concat -safe 0 -i <(for f in ./*.mp4; do echo "file '$PWD/$f'"; done) -c copy output.mp4
+
+
+
+
