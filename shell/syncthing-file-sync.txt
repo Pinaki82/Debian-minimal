@@ -25,15 +25,8 @@ Syncthing Community
 
 F-Droid: https://f-droid.org/en/packages/com.nutomic.syncthingandroid/
 
-*-Ubuntu:
-https://apt.syncthing.net/
-
-sudo apt update
-sudo curl -o /usr/share/keyrings/syncthing-archive-keyring.gpg https://syncthing.net/release-key.gpg
-echo "deb [signed-by=/usr/share/keyrings/syncthing-archive-keyring.gpg] https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list
-echo "deb [signed-by=/usr/share/keyrings/syncthing-archive-keyring.gpg] https://apt.syncthing.net/ syncthing candidate" | sudo tee /etc/apt/sources.list.d/syncthing.list
-sudo apt-get update
-sudo apt-get install syncthing
+Debian:
+flatpak install flathub com.github.zocker_160.SyncThingy
 
 Start Syncthing:
 CTRL+ALT+T (to open the default terminal emulator). Type:

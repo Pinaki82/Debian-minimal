@@ -481,8 +481,8 @@ yes | sudo apt install grsync && \
 # https://www.makeuseof.com/tag/2-methods-to-clone-your-linux-hard-drive/
 yes | sudo apt install clonezilla && \
 
-#      SyncThing GTK+ File synchronisation app
-# flatpak install me.kozec.syncthingtk && \
+#      SyncThing File synchronisation app
+# flatpak install flathub com.github.zocker_160.SyncThingy && \
 yes | sudo apt install synaptic && \
 yes | sudo apt install preload && \
 # seahorse: GUI Keyring Manager

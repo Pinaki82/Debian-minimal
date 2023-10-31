@@ -417,6 +417,9 @@ flatpak list --columns=application --app
 flatpak uninstall --delete-data app-id
 Ex: flatpak uninstall --delete-data com.github.dail8859.NotepadNext
 
+Remove Unused Flatpak Runtimes: https://www.linuxuprising.com/2019/02/how-to-remove-unused-flatpak-runtimes.html
+flatpak uninstall --unused
+
 Install a Firewall:
 yes | sudo apt install gufw
 
@@ -1026,13 +1029,15 @@ Application ID:
 com.github.Eloston.UngoogledChromium
 com.github.micahflee.torbrowser-launcher
 com.github.tchx84.Flatseal
+com.github.zocker_160.SyncThingy
+com.ozmartians.VidCutter
 fr.handbrake.ghb
 io.github.jliljebl.Flowblade
-me.kozec.syncthingtk
 org.goldendict.GoldenDict
 org.kde.kdenlive
 org.kde.kdiff3
 org.libreoffice.LibreOffice
+
 
 snap list
 
