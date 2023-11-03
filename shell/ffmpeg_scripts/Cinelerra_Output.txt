@@ -1,0 +1,28 @@
+--------------
+Ref:
+http://hamelot.io/visualization/using-ffmpeg-to-convert-a-set-of-images-into-a-video/
+https://superuser.com/questions/277642/how-to-merge-audio-and-video-file-in-ffmpeg
+https://stackoverflow.com/questions/11779490/how-to-add-a-new-audio-not-mixing-into-a-video-using-ffmpeg
+--------------
+
+Render video to a JPEG Sequence + audio to an AC3-encoded file
+
+Look at the name of the last file in the seq (without the extension).
+--------------
+IMG15583.jpg
+IMG 15583
+IMG%05d.bmp
+Up to 5 decimal places after 'IMG'.
+rndr000659.jpg
+rndr 000659
+rndr%06.jpg
+Up to 6 decimal places after 'rndr'.
+--------------
+
+ffmpeg -r 25 -f image2 -i rndr%06d.jpg -c:v mjpeg -q:v 0 -crf 0 -preset ultrafast -pix_fmt yuvj420p -s hd1080 -aspect 16:9 movie.AVI
+
+ffmpeg -i movie.AVI -i rndr.ac3 -c:v copy -c:a aac output.AVI
+
+Or, (preferred choice for MJPEG)
+
+ffmpeg -i movie.AVI -i rndr.ac3 -c:v copy -c:a pcm_s16le -ar 48000 -ac 2 -ab 384k -shortest output.AVI
