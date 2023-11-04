@@ -780,6 +780,10 @@ yes | sudo apt install engrampa engrampa-common && \
 # GUI Archive manager.
 yes | sudo apt install xarchiver && \
 yes | sudo apt install thunar-archive-plugin && \
+yes | sudo apt install pixz && \
+yes | sudo apt install thunar-gtkhash thunar-font-manager thunar-archive-plugin && \
+# https://docs.xfce.org/xfce/thunar/thunar-vcs-plugin
+yes | sudo apt install thunar-vcs-plugin && \
 # GUI Wallpaper Selector.
 # yes | sudo apt install nitrogen && \
 # Text Editor.
@@ -842,6 +846,32 @@ yes | sudo apt install recoverjpeg && \
 yes | sudo apt install ffmpeg && \
 yes | sudo apt install mediainfo && \
 yes | sudo apt install mediainfo-gui && \
+
+# FFMPEG-Thumbnailer
+# https://askubuntu.com/questions/457317/mpeg2-transport-stream-mts-thumbnails
+# https://bugs.launchpad.net/shotwell/+bug/1406546/comments/1
+# https://askubuntu.com/questions/1043976/fix-thunar-doesnt-show-image-video-thumbnails-in-xubuntu-18-04
+
+yes | sudo apt install ffmpegthumbnailer && \
+yes | sudo apt install tumbler tumbler-plugins-extra ffmpegthumbnailer && \
+
+# killall thunar
+# thunar -q
+
+# https://unix.stackexchange.com/questions/653974/how-to-generate-thumbnails-previews-for-files
+# https://docs.xfce.org/xfce/tumbler/start
+# D-Bus/ systemd:
+# create a file below ~/.config/environment.d and inside set XDG_CACHE_HOME.
+# E.g:
+# XDG_CACHE_HOME=$HOME/.my_new_cache
+#
+# touch ~/.config/environment.d
+# geany ~/.config/environment.d
+#
+# Add:
+#
+# XDG_CACHE_HOME=$HOME/.my_new_cache
+
 
 # yes | sudo apt install youtube-dl && \
 

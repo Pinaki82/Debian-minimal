@@ -139,6 +139,9 @@ yes | sudo apt install engrampa engrampa-common && \
 yes | sudo apt install xarchiver && \
 yes | sudo apt install thunar-archive-plugin && \
 yes | sudo apt install pixz && \
+yes | sudo apt install thunar-gtkhash thunar-font-manager thunar-archive-plugin && \
+# https://docs.xfce.org/xfce/thunar/thunar-vcs-plugin
+yes | sudo apt install thunar-vcs-plugin && \
 # ------------------------------------------------------------------------------
 # Other utilities:
 # Wmctrl is a Command line tool to interact with an
