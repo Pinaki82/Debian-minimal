@@ -1,0 +1,28 @@
+https://askubuntu.com/questions/457317/mpeg2-transport-stream-mts-thumbnails
+https://bugs.launchpad.net/shotwell/+bug/1406546/comments/1
+https://askubuntu.com/questions/1043976/fix-thunar-doesnt-show-image-video-thumbnails-in-xubuntu-18-04
+
+sudo apt install ffmpegthumbnailer
+
+sudo apt install tumbler tumbler-plugins-extra ffmpegthumbnailer
+
+killall thunar
+thunar -q
+
+https://unix.stackexchange.com/questions/653974/how-to-generate-thumbnails-previews-for-files
+https://docs.xfce.org/xfce/tumbler/start
+
+D-Bus/ systemd
+create a file below ~/.config/environment.d and inside set XDG_CACHE_HOME.
+E.g:
+XDG_CACHE_HOME=$HOME/.my_new_cache
+
+touch ~/.config/environment.d
+geany ~/.config/environment.d
+Add:
+XDG_CACHE_HOME=$HOME/.my_new_cache
+
+sudo apt install thunar-gtkhash thunar-font-manager thunar-archive-plugin
+
+https://docs.xfce.org/xfce/thunar/thunar-vcs-plugin
+sudo apt install thunar-vcs-plugin
