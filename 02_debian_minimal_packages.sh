@@ -846,6 +846,7 @@ yes | sudo apt install recoverjpeg && \
 yes | sudo apt install ffmpeg && \
 yes | sudo apt install mediainfo && \
 yes | sudo apt install mediainfo-gui && \
+yes | sudo apt install libimage-exiftool-perl && \
 
 # FFMPEG-Thumbnailer
 # https://askubuntu.com/questions/457317/mpeg2-transport-stream-mts-thumbnails
@@ -856,6 +857,7 @@ yes | sudo apt install ffmpegthumbnailer && \
 yes | sudo apt install tumbler tumbler-plugins-extra ffmpegthumbnailer && \
 
 # killall thunar
+# pkill thunar
 # thunar -q
 
 # https://unix.stackexchange.com/questions/653974/how-to-generate-thumbnails-previews-for-files
