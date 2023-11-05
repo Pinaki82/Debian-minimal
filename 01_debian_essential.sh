@@ -211,6 +211,8 @@ sudo fc-cache && \
 # Grey Bird:
 # apt search greybird-gtk-theme
 yes | sudo apt install greybird-gtk-theme && \
+# XFCE Calendar
+yes | sudo apt install orage && \
 # Papyrus:
 # apt search papirus-icon-theme
 yes | sudo apt install papirus-icon-theme && \
@@ -278,6 +280,12 @@ yes | sudo apt install gnome-software && \
 # Install a Firewall:
 yes | sudo apt install gufw && \
 # ------------------------------------------------------------------------------
+# File and directory monitoring system
+# Gamin is a file and directory monitoring system which allows
+# applications to detect when a file or a directory has been added,
+# removed or modified by somebody else.
+yes | sudo apt install gamin && \
+# ------------------------------------------------------------------------------
 # HDD tools
 yes | sudo apt install smartmontools && \
 yes | sudo apt install gsmartcontrol && \
@@ -318,6 +326,12 @@ yes | sudo apt install preload && \
 yes | sudo apt install seahorse && \
 # Reduce Eyestrain # Yellow filter for the screen
 yes | sudo apt install redshift-gtk && \
+# Very simple screen magnifier
+yes | sudo apt install magnus && \
+# Advanced FreeDesktop.org compliant menu editor
+yes | sudo apt install menulibre && \
+# plugin to display information from applications in the Xfce4 panel
+yes | xfce4-indicator-plugin && \
 # Prevent Screen from falling asleep # Keep the screen from turning off
 #yes | sudo apt install caffeine && \
 # Command-line system info tool # Hardware info from the console
