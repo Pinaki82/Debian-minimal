@@ -1042,11 +1042,13 @@ org.libreoffice.LibreOffice
 snap list
 
 Name:
+ffdiaporama-c18
 gimp
 inkscape
 keepassxc
 teams-for-linux
 vlc
+
 --------------------------------------------------------------------------------
 
 ================================================================================
