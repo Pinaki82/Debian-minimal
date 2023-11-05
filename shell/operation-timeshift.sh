@@ -31,8 +31,10 @@
 
 # sudo timeshift --restore
 
+# sudo timeshift --restore --snapshot '2023-10-26_14-34-12' --target /dev/sda1
 
-sudo timeshift --rsync --create --comments "2020-11-27-02-30-pm"
+
+sudo timeshift --rsync --create --comments "2023-10-26-02-35-pm"
 
 # Delete snapshots:
 # sudo timeshift --list

@@ -184,7 +184,7 @@ Partitioning Drives:
 https://techencyclopedia.wordpress.com/2020/04/21/debian-10-manual-partition-for-boot-swap-root-home-tmp-srv-var-var-mail-var-log/
 
 # LSB support: https://unix.stackexchange.com/questions/545540/debian-unable-to-install-lsb-package
-# sudo apt install lsb-base lsb-release
+# sudo apt install lsb-release
 
 Codecs:
 https://www.sys-hint.com/1075-Installing-Multimedia-Codecs-on-Debian-10
