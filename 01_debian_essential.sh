@@ -330,8 +330,6 @@ yes | sudo apt install redshift-gtk && \
 yes | sudo apt install magnus && \
 # Advanced FreeDesktop.org compliant menu editor
 yes | sudo apt install menulibre && \
-# plugin to display information from applications in the Xfce4 panel
-yes | xfce4-indicator-plugin && \
 # Prevent Screen from falling asleep # Keep the screen from turning off
 #yes | sudo apt install caffeine && \
 # Command-line system info tool # Hardware info from the console
