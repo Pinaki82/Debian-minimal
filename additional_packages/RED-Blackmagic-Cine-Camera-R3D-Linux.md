@@ -2,6 +2,10 @@
 
 ## RED R3D
 
+**WARNING:**
+
+> WARNING: Try the installer in a VM or backup everything before running the installer script. If it works in the test environment, install the program in the production environment. PulseAudio System Tray Plugin stopped working and was automatically removed from the panel after installing REDline. MP3 and other audio files could not be played with any player application after installing REDline.
+
 https://video.stackexchange.com/questions/12830/how-to-work-with-r3d-and-rmd-files-ffmpeg
 
 Ans. 1:
@@ -41,6 +45,14 @@ Ans. 2:
 > filename.000003.jpg
 
 Download REDline: https://www.red.com/download/redline-linux-beta
+
+Dependencies:
+
+LSB support: https://unix.stackexchange.com/questions/545540/debian-unable-to-install-lsb-package
+
+```bash
+sudo apt install lsb-base lsb-release
+```
 
 ```bash
 chmod +x REDline_Build_60.52530_Installer.sh
