@@ -5,6 +5,6 @@ Type=Application
 Name=Only Office
 Comment=Open Source Office Suit
 Icon=onlyoffice-main
-Exec=/home/Audacity/PortablePrograms/DesktopEditors-x86_64.AppImage
+Exec=/home/YOURUSERNAME/PortablePrograms/DesktopEditors-x86_64.AppImage
 Terminal=false
 Categories=;

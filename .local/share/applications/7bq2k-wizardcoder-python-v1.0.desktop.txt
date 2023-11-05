@@ -4,11 +4,14 @@
 # https://huggingface.co/TheBloke/Llama-2-7b-Chat-GGUF/tree/main
 # https://huggingface.co/TheBloke/CodeLlama-7B-Instruct-GGUF/tree/main
 
+# https://huggingface.co/TheBloke/WizardCoder-Python-7B-V1.0-GGUF
+# wget https://huggingface.co/TheBloke/WizardCoder-Python-7B-V1.0-GGUF/resolve/main/wizardcoder-python-7b-v1.0.Q2_K.gguf
+
 [Desktop Entry]
 Type=Application
-Name=codellama
-Comment=AI Chat LLaMA Code Instruct
+Name=7bq2k-wizardcoder-python-v1.0
+Comment=AI Chat 7bq2k-wizardcoder-python-v1.0
 Icon=/home/YOURUSERNAME/.local/share/icons/LLaMA.CPP.svg
-Exec=sakura -e /home/YOURUSERNAME/HOME/llama.cpp/interactive-codellama-instruct.sh
+Exec=sakura -e /home/YOURUSERNAME/HOME/llama.cpp/7bq2k-wizardcoder-python-v1.0.sh
 Terminal=false
 Categories=;

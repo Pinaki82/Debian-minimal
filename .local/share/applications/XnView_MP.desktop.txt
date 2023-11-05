@@ -2,9 +2,9 @@
 
 [Desktop Entry]
 Type=Application
-Name=Balena Etcher
-Comment=Bootable USB
-Icon=etcher
-Exec=/home/YOURUSERNAME/PortablePrograms/balenaEtcher-1.18.11-x64.AppImage
+Name=XnView_MP
+Comment=Image Viewer
+Icon=xnview
+Exec=/YOURUSERNAME/appu/PortablePrograms/XnView_MP.glibc2.17-x86_64.AppImage
 Terminal=false
 Categories=;

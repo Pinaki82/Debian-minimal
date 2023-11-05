@@ -4,11 +4,14 @@
 # https://huggingface.co/TheBloke/Llama-2-7b-Chat-GGUF/tree/main
 # https://huggingface.co/TheBloke/CodeLlama-7B-Instruct-GGUF/tree/main
 
+# https://huggingface.co/Aryanne/TinyLlama-1.1B-Chat-v0.3-gguf
+# wget https://huggingface.co/Aryanne/TinyLlama-1.1B-Chat-v0.3-gguf/resolve/main/q4_0-tinyllama-1.1b-chat-v0.3.gguf
+
 [Desktop Entry]
 Type=Application
-Name=codellama
-Comment=AI Chat LLaMA Code Instruct
+Name=q4_0-tinyllama-1.1b-chat-v0.3-Aryanne
+Comment=AI Chat q4_0-tinyllama-1.1b-chat-v0.3-Aryanne
 Icon=/home/YOURUSERNAME/.local/share/icons/LLaMA.CPP.svg
-Exec=sakura -e /home/YOURUSERNAME/HOME/llama.cpp/interactive-codellama-instruct.sh
+Exec=sakura -e /home/YOURUSERNAME/HOME/llama.cpp/q4_0-tinyllama-1.1b-chat-v0.3-Aryanne.sh
 Terminal=false
 Categories=;

@@ -4,11 +4,14 @@
 # https://huggingface.co/TheBloke/Llama-2-7b-Chat-GGUF/tree/main
 # https://huggingface.co/TheBloke/CodeLlama-7B-Instruct-GGUF/tree/main
 
+# https://huggingface.co/Aryanne/Wizard-Orca-3B-gguf
+# https://huggingface.co/Aryanne/Wizard-Orca-3B-gguf/tree/main
+
 [Desktop Entry]
 Type=Application
-Name=codellama
-Comment=AI Chat LLaMA Code Instruct
+Name=q4_0-wizard-orca-3b
+Comment=AI Chat q4_0-wizard-orca-3b
 Icon=/home/YOURUSERNAME/.local/share/icons/LLaMA.CPP.svg
-Exec=sakura -e /home/YOURUSERNAME/HOME/llama.cpp/interactive-codellama-instruct.sh
+Exec=sakura -e /home/YOURUSERNAME/HOME/llama.cpp/q4_0-wizard-orca-3b.sh
 Terminal=false
 Categories=;
