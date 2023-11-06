@@ -445,7 +445,7 @@ Now you are ready to print the Photo ID montage on a 210 GSM 4"x6" photo paper.
 
 Another approach:
 
-Write a C program and run it as a script instead of a bash script.
+Write a C program and run it as a script instead of running a bash script.
 
 Refer to: https://github.com/ryanmjacobs/c
 

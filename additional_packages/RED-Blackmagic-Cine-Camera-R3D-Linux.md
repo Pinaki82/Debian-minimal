@@ -4,13 +4,27 @@
 
 **WARNING:**
 
-> WARNING: Try the installer in a VM or backup everything before running the installer script. If it works in the test environment, install the program in the production environment. PulseAudio System Tray Plugin stopped working and was automatically removed from the panel after installing REDline. MP3 and other audio files could not be played with any player application after installing REDline.
+---
+
+Before executing the REDline installer script, it is recommended to run it within a virtual machine (VM) or take a backup of all data and the system using 'TimeShift'. Please note that it is advised to create a snapshot of the VM prior to running the script if you are testing the script within a VM. If the program works as expected without causing any issues with the OS in the test environment, the program can then be safely installed in the production environment. Unfortunately, upon installing REDline, the PulseAudio System Tray Plugin ceased to function and was automatically removed from the XFCE panel. As a result, MP3 and other audio files could not be played with any player application. Video editors typically anticipate an AppImage binary blob when working with proprietary software; however, this does not apply to RED Red Digital Cinema Camera Systems.
+
+---
 
 https://video.stackexchange.com/questions/12830/how-to-work-with-r3d-and-rmd-files-ffmpeg
 
 Ans. 1:
 
 > R3D files are essentially just a custom container that holds video encoded in JPEG2000 and PCM audio. Though ffmpeg only supports the RED container until version 3, not the newer version 4 (see this).
+> 
+> You can convert RED version **3** files the same way you 
+> would convert any other video with ffmpeg.
+> F.e. to h264 use the command below. Doesn't make much sense though to 
+> use h264 for further editing, you will have to use an intermediate codec
+>  and or container that your software supports:
+> 
+> ```bash
+> ffmpeg -i input.r3d -vcodec libx264 -preset slow output.mp4
+> ```
 
 Ans. 2:
 
@@ -44,6 +58,8 @@ Ans. 2:
 > filename.000002.jpg
 > filename.000003.jpg
 
+**NOTE:** Give FFMPEG a try before installing any software provided by camera manufacturers.
+
 Download REDline: https://www.red.com/download/redline-linux-beta
 
 Dependencies:
@@ -51,7 +67,7 @@ Dependencies:
 LSB support: https://unix.stackexchange.com/questions/545540/debian-unable-to-install-lsb-package
 
 ```bash
-sudo apt install lsb-base lsb-release
+sudo apt install lsb-release
 ```
 
 ```bash

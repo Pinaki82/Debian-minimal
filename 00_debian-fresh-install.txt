@@ -183,7 +183,7 @@ If you're on a VM, see the text file 'virtualbox-ms-win.txt'.
 Partitioning Drives:
 https://techencyclopedia.wordpress.com/2020/04/21/debian-10-manual-partition-for-boot-swap-root-home-tmp-srv-var-var-mail-var-log/
 
-# LSB support: https://unix.stackexchange.com/questions/545540/debian-unable-to-install-lsb-package
+# LSB support:
 # sudo apt install lsb-release
 
 Codecs:
