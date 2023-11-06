@@ -85,3 +85,25 @@ REDline -i <filelocation/file.R3D> --format 3 -o filename
 ## Blackmagic RAW:
 
 https://www.blackmagicdesign.com/event/blackmagicrawinstaller
+
+---
+
+For more information, please visit the following links.
+
+https://www.red.com/
+
+https://www.red.com/download/sample-r3d-file-v-raptor-8k-s35-geese
+
+https://www.arri.com/en/learn-help/learn-help-camera-system/tools/arriraw-hde-transcoder?type=ARRI+Software+Tools+%28standalone%29
+
+https://www.arri.com/en/learn-help/learn-help-camera-system/camera-sample-footage-reference-image
+
+FTP Access
+For ALEXA clips:
+Server: ftp2.arri.de
+User: ALEXA
+Password: samplefootage
+
+https://www.fastcompression.com/blog/jpeg-j2k-png-review.htm
+
+https://www.lapseoftheshutter.com/jpeg-vs-jpeg2000/
