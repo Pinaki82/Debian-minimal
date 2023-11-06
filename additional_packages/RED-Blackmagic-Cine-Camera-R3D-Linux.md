@@ -64,7 +64,7 @@ Download REDline: https://www.red.com/download/redline-linux-beta
 
 Dependencies:
 
-LSB support: https://unix.stackexchange.com/questions/545540/debian-unable-to-install-lsb-package
+LSB support:
 
 ```bash
 sudo apt install lsb-release
