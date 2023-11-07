@@ -12,6 +12,6 @@ rem Converted to MJPEG using the command: ffmpeg -i 00005.MTS  -c:v mjpeg -q:v 0
 
 @ECHO ON
 
-for %%A in ("*.*") DO ffmpeg -hwaccel dxva2 -i "%%A" -q:v 0 -crf 0 -preset ultrafast -c:v libopenjpeg -strict experimental -c:a pcm_s16le "%%A.JP2K.AVI"
+for %%A in ("*.*") DO ffmpeg -hwaccel dxva2 -i "%%A" -q:v 0 -crf 0 -preset ultrafast -c:v libopenjpeg -strict experimental -c:a pcm_s16le "%%A.JP2K.MOV"
 cmd
 

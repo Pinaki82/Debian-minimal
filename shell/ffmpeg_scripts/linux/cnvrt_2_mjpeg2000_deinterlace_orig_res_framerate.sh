@@ -21,7 +21,7 @@ codecoption=libopenjpeg
 audiocodec=pcm_s16le
 
 for inputfile in "$inputfolder"/*.* ; do
-    outputfile="$outputfolder/$(basename "${inputfile%}").JP2K.AVI"
+    outputfile="$outputfolder/$(basename "${inputfile%}").JP2K.MOV"
     ffmpeg -i "$inputfile" -filter:v "yadif=0:-1:1, scale=trunc(iw/2)*2:trunc(ih/2)*2" \
     -q:v $videoquality -crf $constantratefactor -preset $SPEED \
     -c:v $codecoption -strict experimental \
