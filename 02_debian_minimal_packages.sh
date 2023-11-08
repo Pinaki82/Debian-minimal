@@ -477,6 +477,18 @@ yes | sudo apt install rsync && \
 yes | sudo apt install timeshift && \
 yes | sudo apt install grsync && \
 
+# OpenCL support:
+# https://www.arri.com/en/learn-help/learn-help-camera-system/tools/legacy-software/arriraw-converter
+# https://superuser.com/questions/1281454/error-while-loading-shared-libraries-libopencl-so-1-cannot-open-shared-objectsudo apt install ocl-icd-opencl-dev
+yes | sudo apt install ocl-icd-opencl-dev && \
+
+# RPM to DEB and DEB to RPM:
+# [How to Convert .rpm package to .deb using alien Package Converter? - GeeksforGeeks](https://www.geeksforgeeks.org/how-to-convert-rpm-package-to-deb-using-alien-package-converter/)
+# https://ostechnix.com/convert-linux-packages-alien/
+# sudo alien --to-tgz/--to-deb/--to-rpm --scripts package.deb/rpm
+# sudo alien --to-tgz --scripts blackmagic-raw-3.4.x86_64.rpm
+yes | sudo apt install alien && \
+
 # how to clone a drive in linux
 # https://www.makeuseof.com/tag/2-methods-to-clone-your-linux-hard-drive/
 yes | sudo apt install clonezilla && \
