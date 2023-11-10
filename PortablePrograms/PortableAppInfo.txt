@@ -137,7 +137,12 @@ Fotowall: Create Photo Collage. -> https://www.enricoros.com/opensource/fotowall
 https://github.com/enricoros/fotowall/releases
 Fotowall-1.0-RETRO-Linux_static-x86_64.x86_64
 -----------------------------
-
+YouTube Video Downloader:
+https://github.com/aandrew-me/ytDownloader
+Other YouTube Video Download apps:
+https://github.com/ytdl-org/youtube-dl
+https://github.com/Tyrrrz/YoutubeDownloader
+-----------------------------
 
 
 Find extra AppImage Download Links:

@@ -1,0 +1,15 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+[Desktop Entry]
+Type=Application
+Name=YTDownloader
+Comment=YouTube Video Downloader
+Icon=youtube-dl
+Exec=/home/YOURUSERNAME/PortablePrograms/YTDownloader_Linux.AppImage
+# https://github.com/aandrew-me/ytDownloader
+Terminal=false
+Categories=;
+
+# Others:
+# https://github.com/ytdl-org/youtube-dl
+# https://github.com/Tyrrrz/YoutubeDownloader
