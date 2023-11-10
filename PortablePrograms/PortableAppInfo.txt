@@ -143,6 +143,11 @@ Other YouTube Video Download apps:
 https://github.com/ytdl-org/youtube-dl
 https://github.com/Tyrrrz/YoutubeDownloader
 -----------------------------
+Natron ("Open Source Compositing Software For VFX and Motion Graphics."):
+https://natrongithub.github.io/
+https://github.com/NatronGitHub/natron-plugins
+https://github.com/NatronGitHub/natron-python-scripting
+-----------------------------
 
 
 Find extra AppImage Download Links:
