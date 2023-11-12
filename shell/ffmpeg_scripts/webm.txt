@@ -1,0 +1,10 @@
+https://video.stackexchange.com/questions/19590/convert-mp4-to-webm-without-quality-loss-with-ffmpeg
+
+ffmpeg  -i input.mp4  -b:v 0  -crf 30  -pass 1  -an -f webm -y /dev/null
+ffmpeg  -i input.mp4  -b:v 0  -crf 30  -pass 2  output.webm
+
+If you're using Microsoft Windows™ instead of UNIX, change /dev/null to NUL.
+
+(Not tested on Windows)
+ffmpeg  -i input.mp4  -b:v 0  -crf 30  -pass 1  -an -f webm -f null -
+ffmpeg  -i input.mp4  -b:v 0  -crf 30  -pass 2  output.webm
