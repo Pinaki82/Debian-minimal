@@ -148,6 +148,18 @@ https://natrongithub.github.io/
 https://github.com/NatronGitHub/natron-plugins
 https://github.com/NatronGitHub/natron-python-scripting
 -----------------------------
+Glaxnimate
+https://glaxnimate.mattbas.org/
+Vector Graphics Animation Program
+-----------------------------
+Pencil2D Animation
+https://www.pencil2d.org/
+Make 2D hand-drawn animations
+-----------------------------
+Synfig Studio
+https://www.synfig.org/
+Open-source 2D Animation Software
+-----------------------------
 
 
 Find extra AppImage Download Links:
