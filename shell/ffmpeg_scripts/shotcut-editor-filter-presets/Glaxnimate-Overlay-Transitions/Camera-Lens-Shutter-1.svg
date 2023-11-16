@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg:svg
+   id="svg2"
+   viewBox="0 0 604.63 604.63"
+   version="1.1"
+   sodipodi:docname="Camera-Lens-Shutter-1.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview173"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.85010668"
+     inkscape:cx="302.315"
+     inkscape:cy="302.315"
+     inkscape:window-width="1368"
+     inkscape:window-height="716"
+     inkscape:window-x="0"
+     inkscape:window-y="26"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <svg:defs
+     id="defs4">
+    <svg:radialGradient
+       id="radialGradient4003"
+       gradientUnits="userSpaceOnUse"
+       cy="115.8"
+       cx="375.18"
+       gradientTransform="matrix(2.1967 3.6384 -3.002 1.8125 -104.44 -1048.8)"
+       r="15.924">
+      <svg:stop
+         id="stop3889"
+         stop-color="red"
+         offset="0" />
+      <svg:stop
+         id="stop3891"
+         stop-color="red"
+         stop-opacity="0"
+         offset="1" />
+    </svg:radialGradient>
+  </svg:defs>
+  <svg:g
+     id="layer1"
+     transform="translate(-69.727 -223.92)">
+    <svg:g
+       id="g3985"
+       inkscape:label="blades">
+      <svg:path
+         id="path3923"
+         d="m439.12 516.7c-0.37821-1.8097-5.9606-12.353-12.405-23.429-13.689-23.528-24.888-37.614-42.904-53.965-48.906-44.389-115.89-63.591-177.91-50.999-34.798 7.0655-64.975 21.429-93.909 44.698-8.7112 7.0057-21.684 18.996-25.999 24.032-3.9574 4.6171 6.5905-28.739 15.959-50.467 27.476-63.727 81.853-119.09 145.91-148.55 22.332-10.271 26.754-11.425 36.834-9.6169 22.026 3.9512 57.88 18.79 79.119 32.745 11.313 7.4334 30.755 24.341 40.05 34.829 40.101 45.248 56.641 107.7 45.208 170.7-3.1639 17.434-8.9432 34.859-9.9553 30.016z"
+         fill="#b3b3b3" />
+      <svg:path
+         id="path3925"
+         d="m160.33 732.27c-5.58-5.82-13.73-14.91-18.11-20.19-10.88-13.14-32.54-48.6-40-65.47-22.714-51.41-30.551-109.59-22.219-164.95 1.8104-12.031 2.182-12.904 8.1921-19.246 23.878-25.197 46.484-42.07 71.842-53.622 44.871-20.44 88.553-24.209 135.35-11.677 31.476 8.4284 55.878 21.218 80.147 42.009 8.5162 7.2956 24.103 22.842 23.817 23.755-0.0642 0.20525-6.3988-0.0228-14.077-0.50679-90.784-5.7226-175.81 44.513-209.92 124.03-14.502 33.804-19.59 70.315-15.242 109.38 1.3999 12.577 6.4249 36.241 9.4711 44.603 0.49487 1.3584-3.6681-2.2915-9.251-8.1109z"
+         fill="#b3b3b3" />
+      <svg:path
+         id="path3927"
+         d="m438.17 814.16c-87.52 19.52-177.47-0.46-247.86-55.08l-12.676-9.8346-4.1002-14.11c-17.035-58.621-11.47-115.85 16.057-165.13 21.433-38.37 57.658-70.061 99.166-86.756 13.096-5.2673 16.947-6.4894 32.747-10.393l9.5258-2.3532-9.3423 14.727c-5.1383 8.0998-11.199 18.564-13.468 23.254-26.738 55.261-29.541 117.65-7.7754 173.06 4.4264 11.267 20.397 38.933 28.42 49.233 26.761 34.354 64.727 59.539 109.68 72.76 12.11 3.5614 17.074 5.583 15.634 6.3677-1.1605 0.6325-8.3664 2.5455-16.013 4.2512z"
+         fill="#b3b3b3" />
+      <svg:path
+         id="path3929"
+         d="m502.24 791.81c-2.608 1.1782-11.258 4.8352-19.223 8.1266l-14.481 5.9844-18.18-4.6988c-64.43-16.66-111.15-53.01-138.57-107.83-18.332-36.648-24.896-80.648-18.067-121.1 2.0158-11.941 8.1951-36.119 9.4102-36.821 0.52416-0.30262 4.1763 5.8282 8.1159 13.624 8.6345 17.086 21.33 35.214 35.592 50.821 57.004 62.383 144.78 84.042 223.14 55.06 27.683-10.24 59.834-31.202 81.672-53.251 3.8343-3.8714 7.2814-6.9558 7.6602-6.8544 0.91914 0.24629-8.0784 28.389-13.401 41.914-18.036 45.836-51.522 90.427-91.683 122.09-11.412 8.9964-42.262 28.54-51.983 32.932z"
+         fill="#b3b3b3" />
+      <svg:path
+         id="path3931"
+         d="m577 646.88c-1.9835 0.8361-9.2529 3.3898-16.154 5.6748-75.436 24.977-159.11 1.5478-213.96-59.911l-2.948-3.3032 11.828 0.82939c69.211 4.8533 135.1-21.228 179.58-71.087 29.332-32.874 47.89-78.768 50.182-124.1 1.1483-22.708-2.4229-53.831-8.5677-74.668l-2.8903-9.8009 4.1099 3.8655c8.1047 7.6228 24.584 26.727 33.069 38.336 12.441 17.023 30.876 51.51 38.006 71.102 17.094 46.967 22.3 98.534 14.853 147.13-1.4085 9.1915-2.4738 11.889-6.6658 16.882-7.103 8.4587-19.284 19.997-30.836 29.21-9.0488 7.2163-39.757 25.687-49.612 29.841z"
+         fill="#b3b3b3" />
+      <svg:path
+         id="path3933"
+         d="m 453.64,570.36 c -11.393,4.327 -26.491,8.7756 -35.745,10.532 l -5.3304,1.0117 10.201,-15.876 c 16.266,-25.314 27.246,-52.942 32.1,-80.764 6.1469,-35.237 3.6681,-69.714 -7.5334,-104.78 -2.7402,-8.5782 -6.2133,-15.553 -17.341,-34.828 -12.19,-21.114 -15.067,-25.353 -23.206,-34.198 -29.212,-31.743 -63.436,-52.415 -108.05,-65.268 -7.0962,-2.0442 -9.3608,-3.1899 -7.9338,-4.0138 3.8192,-2.205 41.421,-9.1862 56.26,-10.445 74.342,-6.308 150.18,16.66 209.19,63.359 l 10.309,8.1573 4.1138,14.156 c 23.939,82.38 2.6989,162.78 -57.152,216.32 -13.215,11.823 -43.757,30.507 -59.881,36.631 z"
+         fill="#b3b3b3"
+         style="display:inline" />
+    </svg:g>
+  </svg:g>
+  <svg:metadata
+     id="metadata170">
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/publicdomain/" />
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>Camera Lens Shutter</dc:title>
+        <dc:date>2013-06-24T04:58:25</dc:date>
+        <dc:description>A Camera Lens Shutter</dc:description>
+        <dc:source>https://openclipart.org/detail/179468/camera-lens-shutter-by-startright-179468</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Startright</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>Aperture</rdf:li>
+            <rdf:li>Camera</rdf:li>
+            <rdf:li>Exposure</rdf:li>
+            <rdf:li>Hexagon</rdf:li>
+            <rdf:li>Lens</rdf:li>
+            <rdf:li>Shutter</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </svg:metadata>
+  <script />
+</svg:svg>
