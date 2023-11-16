@@ -1,0 +1,7 @@
+https://graphicdesign.stackexchange.com/questions/38353/how-to-correctly-using-potrace-cli-to-trace-bitmap
+
+potrace --eps input.bmp -o output.eps
+
+For BluffTitler:
+
+potrace --eps input.bmp -c -q -a 0.1 -O 0.2 -o output.eps
