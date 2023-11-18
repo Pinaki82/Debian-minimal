@@ -75,7 +75,7 @@
   comment out the line ` #!/usr/bin/c -Wall -Wextra -pedantic -- ` and
   compile with gcc:
    
-   gcc -Wall -Wextra -pedantic -o2 ff_alpha_extract.c -o ff_alpha_extract.c -s
+   gcc -Wall -Wextra -pedantic -o2 ff_alpha_extract.c -o ff_alpha_extract.exe -s
    --------------------------------------------------------------------------------
 */
 

@@ -935,11 +935,12 @@ flatpak install flathub org.libreoffice.LibreOffice
 # https://www.makeuseof.com/manage-flatpak-permissions-with-flatseal-linux/
 flatpak install flathub com.github.tchx84.Flatseal
 # VidCutter - Media Cutter + Joiner
-flatpak install com.ozmartians.VidCutter
+flatpak install com.ozmartians.VidCutter # Doesn't work with large video files
 # KDE Non-Linear Video Editor: Kdenlive
 Dependencies: sudo apt install frei0r-plugins
 flatpak install flathub org.kde.kdenlive
 Run: flatpak run org.kde.kdenlive
+Or, download Kdenlive AppImage
 # Flowblade: A multitrack non-linear video editor
 flatpak install flathub io.github.jliljebl.Flowblade
 Run: flatpak run io.github.jliljebl.Flowblade
