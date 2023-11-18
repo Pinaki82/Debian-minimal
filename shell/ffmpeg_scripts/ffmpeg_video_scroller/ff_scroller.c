@@ -206,7 +206,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define FFMPEG_STATIC_BUILD_LATEST_PATH "/home/appu/PortablePrograms/ffmpeg-git-amd64-static/ffmpeg"
+#define FFMPEG_STATIC_BUILD_LATEST_PATH "/home/YOURUSERNAME/PortablePrograms/ffmpeg-git-amd64-static/ffmpeg"
 // Download FFMPEG from https://ffmpeg.org/download.html or https://johnvansickle.com/ffmpeg/
 
 #define MAXPATHLEN 512
