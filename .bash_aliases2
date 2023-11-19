@@ -4,6 +4,7 @@ export PATH="$PATH:/usr/sbin"
 export PATH="$HOME/.local/bin/:$PATH"
 export PATH="$PATH:/usr/sbin"
 export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="/usr/lib64/:$LD_LIBRARY_PATH"
 export C_INCLUDE_PATH="/usr/local/include:$C_INCLUDE_PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
@@ -41,6 +42,9 @@ alias appimg='pkill appimagelaunche'
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
+
+# Add alias rm=trash to your .zshrc/.bashrc to reduce typing & safely trash files: $ rm movie.mov
+alias rm=trash
 
 # Bitwarden Password Manager to the search path
 # mkdir $HOME/.bw
@@ -106,3 +110,11 @@ HELIX_RUNTIME=/home/YOUR_USERNAME/helix/runtime/
 export PATH="$PATH:/snap/bin/"
 
 export PATH="$PATH:/home/YOUR_USERNAME/PortablePrograms/blender-3.6.2-linux-x64/"
+# FFmpeg Static Build
+# https://ffmpeg.org/download.html#build-linux
+# https://johnvansickle.com/ffmpeg/
+export PATH="$PATH:/home/YOUR_USERNAME/PortablePrograms/ffmpeg-git-amd64-static/"
+alias ffmpeg=/home/YOUR_USERNAME/PortablePrograms/ffmpeg-git-amd64-static/ffmpeg
+alias ffprobe=/home/YOUR_USERNAME/PortablePrograms/ffmpeg-git-amd64-static/ffprobe
+alias qt-faststart=/home/YOUR_USERNAME/PortablePrograms/ffmpeg-git-amd64-static/qt-faststart
+

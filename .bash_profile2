@@ -4,3 +4,4 @@ export GPG_TTY=$(tty)
 ~/shell/ssd_trim.sh
 
 export GPG_TTY=$(tty)
+export PATH="$PATH:/usr/sbin"

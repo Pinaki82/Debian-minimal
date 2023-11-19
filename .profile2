@@ -2,31 +2,12 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+. "$HOME/.cargo/env"
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+export GPG_TTY=$(tty)
 
 # ====================================================
 # Auto-launching ssh-agent. Type the passphrase once.
@@ -52,3 +33,4 @@ fi
 
 unset env
 # ====================================================
+export PATH="$PATH:/usr/sbin"
