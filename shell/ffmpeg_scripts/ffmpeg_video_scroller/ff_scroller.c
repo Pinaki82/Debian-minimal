@@ -1,6 +1,6 @@
 #!/usr/bin/c -Wall -Wextra -pedantic --
 
-// Last Change: 2023-11-19  Sunday: 11:30:09 AM
+// Last Change: 2023-11-19  Sunday: 02:40:43 PM
 
 /*
   --------------------------------------------------------------------------------
@@ -392,17 +392,23 @@ int main(int argc, char *argv[]) {
     exit(1);
   }
 
-  result = -1;
-  result = checkAvailability(programTRASH_CLIToCheck);
+  // https://github.com/andreafrancia/trash-cli
+  char platform[10] = "";
+  strcpy(platform, PLATFORM_NAME);
 
-  if(result == 0) {
-    printf("%s is available in the PATH!\n", programTRASH_CLIToCheck);
-  }
+  if(strcmp(platform, "nix") == 0) {
+    result = -1;
+    result = checkAvailability(programTRASH_CLIToCheck);
 
-  else {
-    printf("%s is NOT available in the PATH.\n", programTRASH_CLIToCheck);
-    printf("Please install 'trash-cli' on your system.\n");
-    exit(1);
+    if(result == 0) {
+      printf("%s is available in the PATH!\n", programTRASH_CLIToCheck);
+    }
+
+    else {
+      printf("%s is NOT available in the PATH.\n", programTRASH_CLIToCheck);
+      printf("Please install 'trash-cli' on your system. https://github.com/andreafrancia/trash-cli\n");
+      exit(1);
+    }
   }
 
   // Ask the users whether they want to merge the videos and produce the final video with an alpha channel.
