@@ -1,6 +1,6 @@
 #!/usr/bin/c -Wall -Wextra -pedantic --
 
-// Last Change: 2023-11-18  Saturday: 10:51:26 PM
+// Last Change: 2023-11-19  Sunday: 11:30:09 AM
 
 /*
   --------------------------------------------------------------------------------
@@ -229,6 +229,7 @@ void scroller(char *input_png, char *output_video, int frame_rate, long double s
 void merge(char *input_video, char *input_mask, char *output_png_video_w_real_alpha_channel);
 void intermediate_file_cleanup_w_trash_cli(char *temp_file);
 void dumpXMLToFile(const char *filename, const char *xmlContent);
+int checkAvailability(const char *programName);
 
 void scroller_mask(char *input_mask, char *output_mask_video, int frame_rate, long double speed_of_scrolling, int choose_tblend) {
   char command[MAXBUFFSIZE];
@@ -332,6 +333,33 @@ void dumpXMLToFile(const char *filename, const char *xmlContent) {
   fclose(file);
 }
 
+/*
+  Returns -1 on failure and 0 on success.
+  Use the function as follows:
+  const char *programToCheck = "ffmpeg --help";
+  int result = checkAvailability(programToCheck);
+
+  if(result == 0) {
+  printf("%s is available in the PATH!\n", programToCheck);
+  }
+
+  else {
+  printf("%s is NOT available in the PATH.\n", programToCheck);
+  }
+*/
+int checkAvailability(const char *programName) {
+  char command[100];
+  sprintf(command, "%s", programName);
+
+  if(system(command) == 0) {
+    return 0;
+  }
+
+  else {
+    return -1;
+  }
+}
+
 int main(int argc, char *argv[]) {
   if(argc != 3) {
     fprintf(stderr, "Usage: %s <input_png> <input_mask>\n", argv[0]);
@@ -342,6 +370,39 @@ int main(int argc, char *argv[]) {
     printf("XML dumped to %s\n", template_svg_fileName);
     printf("\nWARNING: The auto-generated SVG template will be overwritten in the next run.\nRename the file before editing it with Inkscape.\n");
     return 1;
+  }
+
+  const char *latestFFMPEGstaticBuildToCheck = "--help";
+  const char *programTRASH_CLIToCheck = "trash --help";
+  char command[MAXBUFFSIZE];
+  char ffmpeg_exec[MAXPATHLEN] = "\0"; // https://stackoverflow.com/questions/18838933/why-do-i-first-have-to-strcpy-before-strcat
+  strcat(ffmpeg_exec, FFMPEG_STATIC_BUILD_LATEST_PATH);
+  sprintf(command, "%s %s", ffmpeg_exec, latestFFMPEGstaticBuildToCheck);
+  printf("%s\n\n", command); // debug printf
+  int result = -1;
+  result = checkAvailability(command);
+
+  if(result == 0) {
+    printf("%s is available in the PATH!\n", command);
+  }
+
+  else {
+    printf("%s is NOT available in the PATH.\n", command);
+    printf("Please download and extract the FFMPEG Static Build archive from https://ffmpeg.org/download.html and set the FFMPEG_STATIC_BUILD_LATEST_PATH variable in the script.\n");
+    exit(1);
+  }
+
+  result = -1;
+  result = checkAvailability(programTRASH_CLIToCheck);
+
+  if(result == 0) {
+    printf("%s is available in the PATH!\n", programTRASH_CLIToCheck);
+  }
+
+  else {
+    printf("%s is NOT available in the PATH.\n", programTRASH_CLIToCheck);
+    printf("Please install 'trash-cli' on your system.\n");
+    exit(1);
   }
 
   // Ask the users whether they want to merge the videos and produce the final video with an alpha channel.
