@@ -58,12 +58,19 @@ CPU: ${alignr}${freq} MHz
 Total CPU: ${cpu cpu0}%
 ${cpubar cpu0 10 2}
 
+# For 2 cores on a small screen/8 cores on a large screen:
 Core 1 ${alignr}${cpu cpu1}%
 ${cpubar 2 cpu1}
 Core 2 ${alignr}${cpu cpu2}%
 ${cpubar 2 cpu2}
 ${top name 1}$alignr${top cpu 1}
 ${top name 2}$alignr${top cpu 2}
+
+# For 6 to 8 cores on a small screen:
+# Core 1 ${cpu cpu1}% ${cpubar 2 cpu1}
+# Core 2 ${cpu cpu2}% ${cpubar 2 cpu2}
+# ${top name 1}${top cpu 1}
+# ${top name 2}${top cpu 2}
 
 # https://forum.mxlinux.org/viewtopic.php?t=43937
 #CPU Total: ${exec sensors | grep 'Core 0' | cut -b 16-19} deg C 
