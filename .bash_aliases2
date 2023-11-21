@@ -46,6 +46,9 @@ export QT_IM_MODULE=ibus
 # Add alias rm=trash to your .zshrc/.bashrc to reduce typing & safely trash files: $ rm movie.mov
 alias rm=trash
 
+# Add alias cln=clear to your .zshrc/.bashrc/.bash_aliases to save your typing efforts.
+alias cln=clear
+
 # Bitwarden Password Manager to the search path
 # mkdir $HOME/.bw
 # Put 'bw' in that folder
@@ -117,4 +120,10 @@ export PATH="$PATH:/home/YOUR_USERNAME/PortablePrograms/ffmpeg-git-amd64-static/
 alias ffmpeg=/home/YOUR_USERNAME/PortablePrograms/ffmpeg-git-amd64-static/ffmpeg
 alias ffprobe=/home/YOUR_USERNAME/PortablePrograms/ffmpeg-git-amd64-static/ffprobe
 alias qt-faststart=/home/YOUR_USERNAME/PortablePrograms/ffmpeg-git-amd64-static/qt-faststart
+
+# Command Line Internet Radio:
+# https://github.com/deep5050/radio-active.git
+# Type radio instead of typing radioactive to aid your memory and save typing efforts.
+# radio --search 'mirchi', radio --search 'bbc', radio --help
+alias radio='radioactive'
 
