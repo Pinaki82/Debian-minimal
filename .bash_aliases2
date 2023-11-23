@@ -127,3 +127,12 @@ alias qt-faststart=/home/YOUR_USERNAME/PortablePrograms/ffmpeg-git-amd64-static/
 # radio --search 'mirchi', radio --search 'bbc', radio --help
 alias radio='radioactive'
 
+# GIT Shortcuts
+alias gstatus='git status'
+alias gdift='git difftool'
+alias gpull='git pull'
+alias gadd='git add .'
+alias gcommit='git commit -a'
+alias gpush='git push -u origin main'
+alias grm='git rm -rf'
+
