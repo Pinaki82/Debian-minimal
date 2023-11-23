@@ -1,5 +1,5 @@
 #!/usr/bin/c -Wall -Wextra -pedantic -std=gnu99 -lrt --
-// Last Change: 2023-11-22  Wednesday: 11:23:18 PM
+// Last Change: 2023-11-23  Thursday: 06:18:25 AM
 
 /*
   Create simple and elegant video titles from text files, Lower-Third
@@ -19,16 +19,26 @@
   - Utilise the Centre-Justify option in your Word Processor.
   - Copy the Centre-Justified text from your Word Processor and paste the same back to the text file.
   - Run the script.
+
+  Crawling (Horizontally Moving Lower-Third) Titles should be created from text files containing only one line.
+  Use the Text Wrap option in the text editor to edit crawl titles.
 */
 
 /*
   Compile the program if you want to install it (for example, MS Windows where you cannot run C codes as scripts):
   Comment out the line containing: #!/usr/bin/c -Wall -Wextra -pedantic -std=gnu99 -lrt --
+  GNU+Linux:
   gcc -Wall -Wextra -pedantic -std=gnu99 -o2 lower_third_roller.c -o lower_third_roller -lrt -s
   Debug version:
   gcc -Wall -Wextra -pedantic -std=gnu99 -g lower_third_roller.c -o lower_third_roller -lrt
   GDB:
   gdb --args /mnt/hdd/Capture_Edit/Shotcut/ChromaTest/ffmpeg_video_scroller/lower_third_roller names.txt
+  MS Windows:
+  gcc -Wall -Wextra -pedantic -std=gnu99 -o2 lower_third_roller.c -o lower_third_roller.exe -lrt -s
+  Debug version:
+  gcc -Wall -Wextra -pedantic -std=gnu99 -g lower_third_roller.c -o lower_third_roller.exe -lrt
+  GDB:
+  gdb --args \path\to\lower_third_roller.exe names.txt
 
   The FFMPEG command part:
   Inspired by the web article:
@@ -245,6 +255,11 @@ void playback(const char *inputTextFile, int crawlVsCcroll, char *resolution, in
 
   fontsize = (float)((int)fontsize * (int)proxywidth / (int)width);  // Scaling down the font size to maintain proportions in the proxy preview.
   char framerate_str[3] = ""; // 3 digits. frame rate usually does not exceed 999
+
+  if(atoi(framerate_str) >= (999 / 2)) { // Frame rate should not exceed 999 in the output.
+    exit(EXIT_FAILURE);
+  }
+
   sprintf(framerate_str, "%d", (2 * frameRate)); // doubling down the frame rate to make room for time remapping later in the NLE
 
   /*
@@ -300,6 +315,11 @@ void render(const char *inputTextFile, int crawlVsCcroll, char *endtimecode, cha
   sprintf(ffplay_exec, "%s", FFPLAY_STATIC_BUILD_LATEST_PATH);
   printf("endtimecode received: %s\n", endtimecode);
   char framerate_str[3] = ""; // 3 digits. frame rate usually does not exceed 999
+
+  if(atoi(framerate_str) >= (999 / 2)) { // Frame rate should not exceed 999 in the output.
+    exit(EXIT_FAILURE);
+  }
+
   sprintf(framerate_str, "%d", (2 * frameRate)); // doubling down the frame rate to make room for time remapping later in the NLE
 
   /*
@@ -378,6 +398,12 @@ int main(int argc, char *argv[]) {
   printf("Enter the frame rate (Film: 24, PAL: 25, NTSC: 30, or custom. example: 25): ");
   scanf("%d", &frameRate);
   printf("NOTE: The frame rate will be doubled to make room for adjusting the time-remap parameter later in the NLE.\n");
+
+  if(frameRate >= (999 / 2)) { // Frame rate should not exceed 999 in the output.
+    printf("The frame rate should not exceed 999 in the output, considering that the input value will be doubled.\n");
+    exit(EXIT_FAILURE);
+  }
+
   char fontdir_explore[MAXPATHLEN] = "";
 
   if(strcmp(PLATFORM_NAME, "linux") == 0) {
