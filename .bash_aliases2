@@ -47,7 +47,7 @@ export QT_IM_MODULE=ibus
 alias rm=trash
 
 # Add alias cln=clear to your .zshrc/.bashrc/.bash_aliases to save your typing efforts.
-alias cln=clear
+alias clr=clear
 
 # Bitwarden Password Manager to the search path
 # mkdir $HOME/.bw
