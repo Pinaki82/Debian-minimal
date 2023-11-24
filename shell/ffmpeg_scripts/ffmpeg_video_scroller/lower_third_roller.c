@@ -12,14 +12,6 @@
 
   Follow instructions.
 
-  For vertical, bottom-to-top moving Scrolling titles, you can use a word processing application such as AbiWord or LibreOffice Writer, ONLYOFFICE, FreeOffice.com, or Microsoft Office 365 Online for creating a 'Centre-Justified' list of names after initially writing the names in a text file.
-  - Configure text editor to convert TABs to Spaces. Conversion should be done as follows: 1 TAB = 4 Spaces.
-  - Create a plain-text file and write the names.
-  - Copy the content of the text file to a Word processor.
-  - Utilise the Centre-Justify option in your Word Processor.
-  - Copy the Centre-Justified text from your Word Processor and paste the same back to the text file.
-  - Run the script.
-
   Crawling (Horizontally Moving Lower-Third) Titles should be created from text files containing only one line.
   Use the Text Wrap option in the text editor to edit crawl titles.
 */
