@@ -1,5 +1,5 @@
 #!/usr/bin/c -Wall -Wextra -pedantic -std=gnu99 -lrt --
-// Last Change: 2023-11-23  Thursday: 06:18:25 AM
+// Last Change: 2023-11-24  Friday: 08:14:04 PM
 
 /*
   Create simple and elegant video titles from text files, Lower-Third
@@ -128,6 +128,7 @@
 
 #define MAXPATHLEN 512
 #define MAXBUFFSIZE 8092
+#define MAX_ALLOWED_LEN_OF_A_LINE 500
 #define MAX_LEN_DIMENSION_STR 15
 #define OFFSCREEN_OFFSET "1.052" // Default: "1.052"
 #define SPEED_OF_CRAWLING_STR_LEN 3
@@ -156,6 +157,7 @@ void write_dimensions_string(char *output, int *w, int *h);
 void proxy_downscale(int *origWidth, int *origHeight, int *proxWidth, int *proxHeight);
 void playback(const char *inputTextFile, int crawlVsCcroll, char *resolution, int frameRate, char *fontFileWithPath, float fontsize, char *txtplacement, int lineSpacing, char *CrawlingSpeed);
 void render(const char *inputTextFile, int crawlVsCcroll, char *endtimecode, char *resolution, int frameRate, char *fontFileWithPath, float fontsize, char *txtplacement, int lineSpacing, char *CrawlingSpeed, char *outputfile);
+void centerJustifyTextFile(const char *filename, const char *outputFilename);
 
 // Function to convert seconds to hours, minutes, and seconds (hh:mm:ss), termed as timecode.
 void convertTime(int seconds, struct Time *time) { // HuggingChat Mistral-7b
@@ -364,7 +366,89 @@ void render(const char *inputTextFile, int crawlVsCcroll, char *endtimecode, cha
   printf("%d:%d:%d\n", time.hour, time.minute, time.second);
 }
 
+/* NOTE: The following function `void centerJustifyTextFile(const char *filename, const char *outputFilename);` has been written by ChatGPT. */
+
+// Function to centre justify text from an input file and write to an output file. Use the function as: centerJustifyTextFile("input.txt", "output.txt");
+void centerJustifyTextFile(const char *filename, const char *outputFilename) {
+  // Open the input file for reading
+  FILE *inputFile = fopen(filename, "r");
+
+  // Check if input file opened successfully
+  if(inputFile == NULL) {
+    printf("Failed to open input file: %s\n", filename);
+    return;
+  }
+
+  // Open the output file for writing
+  FILE *outputFile = fopen(outputFilename, "w");
+
+  if(outputFile == NULL) {
+    printf("Failed to open/create output file: %s\n", outputFilename);
+    fclose(inputFile);
+    return;
+  }
+
+  char buffer[MAX_ALLOWED_LEN_OF_A_LINE]; // Buffer to store lines read from the file
+  int maxWidth = 0; // Variable to hold the maximum line width
+
+  // Calculate the maximum line width in the input file
+  while(fgets(buffer, sizeof(buffer), inputFile) != NULL) {
+    int len = strlen(buffer);
+
+    if(buffer[len - 1] == '\n') {
+      buffer[len - 1] = '\0'; // Remove newline character
+      len--;
+    }
+
+    if(len > maxWidth) {
+      maxWidth = len; // Update maximum width if a longer line is found
+    }
+  }
+
+  // Reset file position indicator to the beginning
+  rewind(inputFile);
+
+  // Process each line in the input file for centre justification
+  while(fgets(buffer, sizeof(buffer), inputFile) != NULL) {
+    int len = strlen(buffer);
+
+    if(buffer[len - 1] == '\n') {
+      buffer[len - 1] = '\0'; // Remove newline character
+      len--;
+    }
+
+    int spacesToAdd = maxWidth - len; // Calculate spaces needed for justification
+    spacesToAdd += 1; // Minor adjustments without which the text is being shifted slightly to the left.
+    int spacesBefore = spacesToAdd / 2; // Spaces to add before the line
+    spacesBefore = spacesBefore + 1; // Minor adjustments without which the text is being shifted slightly to the left.
+    int spacesAfter = spacesToAdd - spacesBefore; // Spaces to add after the line
+
+    // Add spaces before the line
+    for(int i = 0; i < spacesBefore; i++) {
+      fprintf(outputFile, " ");
+    }
+
+    // Write the line to the output file
+    fprintf(outputFile, "%s", buffer);
+
+    // Add spaces after the line
+    for(int i = 0; i < spacesAfter; i++) {
+      fprintf(outputFile, " ");
+    }
+
+    // Add a newline to move to the next line
+    fprintf(outputFile, "\n");
+  }
+
+  // Close both input and output files
+  fclose(inputFile);
+  fclose(outputFile);
+}
+
 int main(int argc, char *argv[]) {
+  // Delete the file 'centered_text.txt' if it exists
+  remove("centered_text.txt");
+
   if(argc != 2) {
     fprintf(stderr, "Usage: %s <input_text_file>\n", argv[0]);
     return 1;
@@ -381,10 +465,21 @@ int main(int argc, char *argv[]) {
 
   else if(crawlVsCroll == 2) {
     printf("You chose to Scroll the text vertically from the top to bottom.\n");
+    printf("Would you like to Centre-Justify the text? (y/n): ");
+    char yesno[2] = "";
+    scanf("%1s", yesno);
+
+    if(strcmp(yesno, "y") == 0) {
+      centerJustifyTextFile(argv[1], "centered_text.txt");
+      argv[1] = "centered_text.txt";
+      printf("The text has been centred and written to a temporary file named 'centered_text.txt'.\n");
+    }
   }
 
   else {
     printf("You chose an invalid option. Closing the program.\n");
+    // Delete the file 'centered_text.txt' if it exists
+    remove("centered_text.txt");
   }
 
   // Ask the user to enter the resolution
@@ -401,6 +496,8 @@ int main(int argc, char *argv[]) {
 
   if(frameRate >= (999 / 2)) { // Frame rate should not exceed 999 in the output.
     printf("The frame rate should not exceed 999 in the output, considering that the input value will be doubled.\n");
+    // Delete the file 'centered_text.txt' if it exists
+    remove("centered_text.txt");
     exit(EXIT_FAILURE);
   }
 
@@ -491,7 +588,7 @@ int main(int argc, char *argv[]) {
       default:
         printf("Invalid choice. Setting default text placement to \'choice 2\'.\n");
         sprintf(txtplacementstr, "%s", TXT_PLACEMENT_NATURAL_ABOVE_SF_MARGIN);
-        return 1;
+        /*return 1;*/
         break;
     }
   }
@@ -547,9 +644,13 @@ int main(int argc, char *argv[]) {
 
   else {
     printf("Exiting...\n");
+    // Delete the file 'centered_text.txt' if it exists
+    remove("centered_text.txt");
     return 0;
   }
 
+  // Delete the file 'centered_text.txt' if it exists
+  remove("centered_text.txt");
   return 0;
 }
 
