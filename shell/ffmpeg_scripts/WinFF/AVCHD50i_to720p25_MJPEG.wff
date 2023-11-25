@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presets>
+  <AVCHD50i_to720p25_MJPEG>
+    <label>AVCHD50i_to720p25_MJPEG</label>
+    <params>-c:v mjpeg -c:a pcm_s16le -ar 48000 -ac 2 -ab 384k -q:v 0 -crf 0 -preset ultrafast -filter:v "yadif=0:-1:0, scale=trunc(iw/2)*2:trunc(ih/2)*2" -pix_fmt yuvj420p -aspect 16:9 -s hd720 -r 50000/2000</params>
+    <extension>AVI</extension>
+    <category>Video Editing-Intermediate</category>
+  </AVCHD50i_to720p25_MJPEG>
+</presets>

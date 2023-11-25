@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presets>
+  <mjpeg_from_non_interlaced>
+    <label>MJPEG-from-non-interlaced</label>
+    <params>-c:v mjpeg -q:v 0 -crf 0 -preset ultrafast -c:a pcm_s16le</params>
+    <extension>AVI</extension>
+    <category>Video Editing-Intermediate</category>
+  </mjpeg_from_non_interlaced>
+</presets>

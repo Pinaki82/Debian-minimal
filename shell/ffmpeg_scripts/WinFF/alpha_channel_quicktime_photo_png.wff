@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presets>
+  <quicktime_photo_png_w_alpha_channel>
+    <label>quicktime_photo_png_w_alpha_channel</label>
+    <params>-c:v png -q:v 0 -filter_complex "format=rgba[v]" -map "[v]"</params>
+    <extension>MOV</extension>
+    <category>Video Editing-Intermediate</category>
+  </quicktime_photo_png_w_alpha_channel>
+</presets>

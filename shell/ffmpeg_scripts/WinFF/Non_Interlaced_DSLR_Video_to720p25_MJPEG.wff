@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presets>
+  <Non_Interlaced_DSLR_Video_to720p25_MJPEG>
+    <label>Non_Interlaced_DSLR_Video_to720p25_MJPEG</label>
+    <params>-c:v mjpeg -c:a pcm_s16le -ar 48000 -ac 2 -ab 384k -q:v 0 -crf 0 -preset ultrafast -pix_fmt yuvj420p -aspect 16:9 -s hd720 -r 50000/2000</params>
+    <extension>AVI</extension>
+    <category>Video Editing-Intermediate</category>
+  </Non_Interlaced_DSLR_Video_to720p25_MJPEG>
+</presets>

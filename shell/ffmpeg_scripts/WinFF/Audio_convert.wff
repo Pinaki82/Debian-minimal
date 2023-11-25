@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presets>
+  <Extract_MP3_Audio>
+    <label>Convert-to-MP3</label>
+    <params>-vn -ar 48000 -ac 2 -ab 320k -f mp3</params>
+    <extension>mp3</extension>
+    <category>Audio</category>
+  </Extract_MP3_Audio>
+</presets>
