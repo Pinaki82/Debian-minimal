@@ -4,7 +4,7 @@
 Type=Application
 Name=FontBase
 Comment=Font Viewer
-Icon=fontbase
-Exec=/home/YOURUSERNAME/PortablePrograms/FontBase-2.18.1.AppImage
+Icon=/home/YOURUSERNAME/.local/share/icons/fontbase-app.png
+Exec=/home/YOURUSERNAME/PortablePrograms/FontBase-2.19.4.AppImage
 Terminal=false
 Categories=;

@@ -4,7 +4,7 @@
 Type=Application
 Name=Papercraft
 Comment=Papercraft is a tool to unwrap paper 3D models, so that you can cut and glue them together and get a real world paper model.
-Icon=
+Icon=/home/YOURUSERNAME/.local/share/icons/papercraft.png
 Exec=/home/YOURUSERNAME/PortablePrograms/Papercraft-v2.4-x86_64.AppImage
 Terminal=false
 Categories=;

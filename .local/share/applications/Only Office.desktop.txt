@@ -4,7 +4,7 @@
 Type=Application
 Name=Only Office
 Comment=Open Source Office Suit
-Icon=onlyoffice-main
+Icon=/home/YOURUSERNAME/.local/share/icons/appimagekit_8b3add969a55827f48fc2828023c558b_asc-de.png
 Exec=/home/YOURUSERNAME/PortablePrograms/DesktopEditors-x86_64.AppImage
 Terminal=false
 Categories=;
