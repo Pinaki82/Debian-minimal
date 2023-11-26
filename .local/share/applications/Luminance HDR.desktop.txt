@@ -4,7 +4,7 @@
 Type=Application
 Name=Luminance HDR
 Comment=HDR photography
-Icon=/home/YOURUSERNAME/.local/share/icons/Vimix/scalable/apps/luminance-hdr.svg
+Icon=/home/YOURUSERNAME/.local/share/icons/luminance-hdr.svg
 Exec=/home/YOURUSERNAME/PortablePrograms/luminance-hdr-git-20200421_1638.glibc2.17-x86_64.AppImage
 Terminal=false
 Categories=;
