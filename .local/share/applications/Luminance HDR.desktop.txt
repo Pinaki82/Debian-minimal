@@ -1,0 +1,10 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+[Desktop Entry]
+Type=Application
+Name=Luminance HDR
+Comment=HDR photography
+Icon=
+Exec=/home/YOURUSERNAME/PortablePrograms/luminance-hdr-git-20200421_1638.glibc2.17-x86_64.AppImage
+Terminal=false
+Categories=;

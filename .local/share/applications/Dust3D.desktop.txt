@@ -1,0 +1,10 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+[Desktop Entry]
+Type=Application
+Name=Dust3D
+Comment=Create low poly 3D models
+Icon=
+Exec=/home/YOURUSERNAME/PortablePrograms/dust3d-1.0.0-rc.9.AppImage
+Terminal=false
+Categories=;
