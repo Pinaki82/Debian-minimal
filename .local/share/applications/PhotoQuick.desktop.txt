@@ -4,7 +4,7 @@
 Type=Application
 Name=PhotoQuick
 Comment=A simple handy image viewer and editor
-Icon=
+Icon=/home/YOURUSERNAME/.local/share/icons/photoquick.png
 Exec=/home/YOURUSERNAME/PortablePrograms/PhotoQuick-x86_64.AppImage
 Terminal=false
 Categories=;
