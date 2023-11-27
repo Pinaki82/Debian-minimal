@@ -1,0 +1,21 @@
+ccls --index /home/appu/HOME/code/ff_lut3d_cube/
+
+Ecosia: mediainfo detect interlaced video
+https://video.stackexchange.com/questions/12980/how-to-see-if-a-video-file-is-progressive-or-interlaced
+
+mediainfo --Inform='Video;%ScanType%,%ScanOrder%,%ScanType_StoreMethod%' "$Your_File"
+
+mediainfo --Inform='Video;%ScanType%,%ScanOrder%,%ScanType_StoreMethod%' "00070.MTS"
+Interlaced,TFF,SeparatedFields
+
+mediainfo --Inform='Video;%ScanType%' "00070.MTS"
+Interlaced
+
+
+ffmpeg -i 00070.MTS  -c:v mjpeg -q:v 0 -crf 0 -preset ultrafast -filter:v "yadif=0:-1:1, scale=trunc(iw/2)*2:trunc(ih/2)*2,lut3d='vlcsnap-2023-11-26-00h41m50s633.cube'" -c:a pcm_s16le -r 25 00070.MOV
+ffplay -i 00070.MTS  -vf lut3d='vlcsnap-2023-11-26-00h41m50s633.cube'
+
+mediainfo --Inform='Video;%FrameRate%' "00070.MTS"
+
+
+
