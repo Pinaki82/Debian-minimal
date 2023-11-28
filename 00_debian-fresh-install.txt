@@ -876,6 +876,7 @@ pipx install esptool
 
 # GIMP Essentials:
 yes | sudo apt install abr2gbr
+yes | sudo apt install gimp-data
 yes | sudo apt install gimp-data-extras
 yes | sudo apt install gimp-gmic
 yes | sudo apt install gimp-gutenprint
@@ -884,14 +885,20 @@ yes | sudo apt install gimp-help-en-gb
 yes | sudo apt install gimp-lensfun
 yes | sudo apt install gimp-plugin-registry
 yes | sudo apt install gimp-texturize
+yes | sudo apt install gimp-lensfun
 yes | sudo apt install gtkam-gimp
 yes | sudo apt install icc-profiles
 yes | sudo apt install icc-profiles-free
+yes | sudo apt install gegl
+yes | sudo apt install xzgv
+
+# GIMP:
+sudo apt install gimp gimp-data gimp-data-extras gimp-gmic gimp-gutenprint gimp-help-common gimp-help-en-gb gimp-lensfun gimp-plugin-registry gimp-texturize icc-profiles icc-profiles-free gegl gtkam-gimp xzgv
 
 Fix Snap-installed packages if you find the launchers missing:
 (Snap app icon doesn't appear in menu)
 https://forums.linuxmint.com/viewtopic.php?t=319827
-sudo snap install inkscape
+#sudo snap install inkscape # Install the AppImage package from the official channel https://inkscape.org/
 snap list
 snap run inkscape
 echo $XDG_DATA_DIRS
@@ -905,8 +912,7 @@ chmod 755 ~/.local/share/applications/inkscape_inkscape.desktop
 # .bashrc or .bash_aliases
 export PATH="$PATH:/snap/bin/"
 # Snap Packages:
-sudo snap install gimp
-sudo snap install inkscape
+#sudo snap install inkscape # Install the AppImage package from the official channel https://inkscape.org/
 sudo snap install keepassxc
 sudo snap install vlc
 # sudo snap install kompare
@@ -1034,24 +1040,22 @@ com.github.Eloston.UngoogledChromium
 com.github.micahflee.torbrowser-launcher
 com.github.tchx84.Flatseal
 com.github.zocker_160.SyncThingy
-com.ozmartians.VidCutter
 fr.handbrake.ghb
 io.github.jliljebl.Flowblade
 org.goldendict.GoldenDict
-org.kde.kdenlive
 org.kde.kdiff3
 org.libreoffice.LibreOffice
+
 
 
 snap list
 
 Name:
 ffdiaporama-c18
-gimp
-inkscape
 keepassxc
 teams-for-linux
 vlc
+
 
 --------------------------------------------------------------------------------
 

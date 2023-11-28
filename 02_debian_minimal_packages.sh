@@ -932,6 +932,7 @@ yes | sudo apt install default-jre && \
 
 # GIMP Essentials:
 yes | sudo apt install abr2gbr && \
+yes | sudo apt install gimp-data && \
 yes | sudo apt install gimp-data-extras && \
 yes | sudo apt install gimp-gmic && \
 yes | sudo apt install gimp-gutenprint && \
@@ -948,6 +949,13 @@ yes | sudo apt install gimp-plugin-registry && \
 yes | sudo apt install gmic && \
 yes | sudo apt install gimp-gmic && \
 
+yes | sudo apt install gegl && \
+yes | sudo apt install xzgv && \
+
+# GIMP:
+
+yes | sudo apt install gimp gimp-data gimp-data-extras gimp-gmic gimp-gutenprint gimp-help-common gimp-help-en-gb gimp-lensfun gimp-plugin-registry gimp-texturize icc-profiles icc-profiles-free gegl gtkam-gimp xzgv && \
+
 # figlet: Make large character ASCII banners out of ordinary text
 # https://kerneltalks.com/tips-tricks/create-beautiful-ascii-text-banners-linux/
 # Brave: figlet windows
@@ -960,7 +968,7 @@ yes | sudo apt install figlet && \
 
 # Inkscape
 
-# Inkscape latest STABLE version # Install Snap
+# Inkscape latest STABLE version # Install the AppImage package from the official channel https://inkscape.org/
 
 # Vector Graphics Editor
 yes | sudo apt install xfig && \

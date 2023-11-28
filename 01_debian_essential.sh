@@ -458,6 +458,7 @@ yes | sudo apt install setserial && \
 
 # GIMP Essentials:
 yes | sudo apt install abr2gbr && \
+yes | sudo apt install gimp-data && \
 yes | sudo apt install gimp-data-extras && \
 yes | sudo apt install gimp-gmic && \
 yes | sudo apt install gimp-gutenprint && \
@@ -472,7 +473,14 @@ yes | sudo apt install icc-profiles \
 
 yes | sudo apt install gimp-plugin-registry && \
 yes | sudo apt install gmic && \
-yes | sudo apt install gimp-gmic \
+yes | sudo apt install gimp-gmic && \
+
+yes | sudo apt install gegl && \
+yes | sudo apt install xzgv && \
+
+# GIMP:
+
+yes | sudo apt install gimp gimp-data gimp-data-extras gimp-gmic gimp-gutenprint gimp-help-common gimp-help-en-gb gimp-lensfun gimp-plugin-registry gimp-texturize icc-profiles icc-profiles-free gegl gtkam-gimp xzgv \
 
 # pnpm package manager:
 echo "If you've executed the first install script 01_debian_essential.sh already, you have pnpm installed on your system. (yes I did = 1. No, I did not = 0)"
