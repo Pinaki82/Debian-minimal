@@ -1,13 +1,20 @@
 LibreWolf/Firefox:
 ----------------
-Ecosia
-Facebook Container
-uBlock Origin
-Privacy Badger
+Avast
 Bitwarden
+Ecosia
+Free Download Manager
 Grammarly
 Krypton Authenticator
+Facebook Container
 Cookie Quick Manager
+uBlock Origin
+Dark Reader
+Privacy Badger
+Regrets Reporter Mozilla
+
+
+
 Floccus Bookmark Manager: https://floccus.org/
 Google Play: https://play.google.com/store/apps/details?id=org.handmadeideas.floccus
 F-Droid: https://f-droid.org/en/packages/org.handmadeideas.floccus/
