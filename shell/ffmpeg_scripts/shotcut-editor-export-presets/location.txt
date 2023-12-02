@@ -1,0 +1,1 @@
+~/.local/share/Meltytech/Shotcut/presets/encode

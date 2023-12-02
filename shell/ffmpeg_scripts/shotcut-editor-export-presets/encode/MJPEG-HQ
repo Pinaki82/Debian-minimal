@@ -1,0 +1,14 @@
+f=avi
+acodec=pcm_s16le
+ar=96000
+ab=512k
+vcodec=mjpeg
+qscale=2
+g=1
+bf=0
+progressive=1
+top_field_first=0
+deinterlace_method=linearblend
+rescale=hyper
+r=25
+threads=0
