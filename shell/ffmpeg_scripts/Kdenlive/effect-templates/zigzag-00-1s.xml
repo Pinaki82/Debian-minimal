@@ -1,0 +1,28 @@
+<effectgroup id="zigzag-00-1s" description="Twist, rotate &amp; smudge the clip indiscriminately." parentIn="0">
+ <description>Twist, rotate &amp; smudge the clip indiscriminately.</description>
+ <effect id="affinerotate">
+  <property name="transition.keyed">1</property>
+  <property name="producer.resource">0x00000000</property>
+  <property name="transition.mirror_off">1</property>
+  <property name="transition.oy">0=0;5=0;13=0;21=0;25=0</property>
+  <property name="transition.ox">0=0;5=0;13=0;21=0;25=0</property>
+  <property name="transition.repeat_off">1</property>
+  <property name="transition.rotate_z">0=0;5=177;13=91.1;21=177;25=0</property>
+  <property name="kdenlive:collapsed">1</property>
+  <property name="transition.rotate_y">0=0;5=0;13=0;21=0;25=0</property>
+  <property name="transition.rotate_x">0=0;5=30;13=-180;21=0;25=0</property>
+ </effect>
+ <effect id="qtblend">
+  <property name="rotate_center">1</property>
+  <property name="kdenlive:collapsed">1</property>
+  <property name="distort">1</property>
+  <property name="compositing">0</property>
+  <property name="rotation">0=0;5=90;13=0;18=90;25=0</property>
+  <property name="rect">0=0 0 1920 1080 1.000000;5=121 75 1973 1080 0.750000;13=121 75 1973 1080 0.958333;18=121 75 1973 1080 0.958333;25=5 3 1922 1080 0.916667</property>
+ </effect>
+ <effect id="frei0r.distort0r">
+  <property name="kdenlive:collapsed">1</property>
+  <property name="Frequency">0=0;7=0.599;17=0.599;25=0</property>
+  <property name="Amplitude">0=0;7=-0.173;17=-0.173;25=0</property>
+ </effect>
+</effectgroup>
