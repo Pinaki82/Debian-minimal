@@ -1,0 +1,6 @@
+https://github.com/mikeboers/LUT-Convert
+Ref: https://forum.blackmagicdesign.com/viewtopic.php?f=21&t=77553
+
+python3 hald_to_cube.py input.png output.cube
+
+python3 hald_to_cube.py 'Apple Spectacular.png' 'Apple Spectacular.cube'
