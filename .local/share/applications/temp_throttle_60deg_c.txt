@@ -1,0 +1,7 @@
+https://unix.stackexchange.com/questions/19203/is-there-a-way-to-limit-overall-cpu-consumption
+https://seperohacker.blogspot.com/2012/10/linux-keep-your-cpu-cool-with-frequency.html
+https://github.com/Sepero/temp-throttle/
+wget https://raw.githubusercontent.com/Sepero/temp-throttle/stable/temp_throttle.sh
+https://www.thinkwiki.org/wiki/How_to_use_cpufrequtils
+sudo apt install cpufrequtils
+sudo apt install cpulimit

@@ -1,0 +1,10 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+[Desktop Entry]
+Type=Application
+Name=Limit CPU Usage
+Comment=Limit CPU Usage if the package temperature exceeds 60 degrees Celcius.
+Icon=thermal-monitor
+Exec=sudo sh '/home/YOURUSERNAME/.local/share/applications/temp_throttle.sh' 60
+Terminal=true
+Categories=;
