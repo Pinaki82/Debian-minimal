@@ -63,9 +63,14 @@ Core 1 ${alignr}${cpu cpu1}%
 ${cpubar 2 cpu1}
 Core 2 ${alignr}${cpu cpu2}%
 ${cpubar 2 cpu2}
+Core 3 ${alignr}${cpu cpu3}%
+${cpubar 2 cpu3}
+Core 4 ${alignr}${cpu cpu3}%
+${cpubar 2 cpu4}
 ${top name 1}$alignr${top cpu 1}
 ${top name 2}$alignr${top cpu 2}
-
+${top name 3}$alignr${top cpu 3}
+${top name 4}$alignr${top cpu 4}
 # For 6 to 8 cores on a small screen:
 # Core 1 ${cpu cpu1}% ${cpubar 2 cpu1}
 # Core 2 ${cpu cpu2}% ${cpubar 2 cpu2}
@@ -73,8 +78,7 @@ ${top name 2}$alignr${top cpu 2}
 # ${top name 2}${top cpu 2}
 
 # https://forum.mxlinux.org/viewtopic.php?t=43937
-#CPU Total: ${exec sensors | grep 'Core 0' | cut -b 16-19} deg C 
-
+#CPU Total: ${exec sensors | grep 'Core 0' | cut -b 16-19} deg C
 CPU Total: ${execi 30 sensors | grep "Package id 0" | cut -d "+" -f2 | cut -c1-7}
 #Core 0 Temp: ${execi 31 sensors | grep "Core 0" | cut -d "+" -f2 | cut -c1-7}
 #Core 1 Temp: ${execi 32 sensors | grep "Core 1" | cut -d "+" -f2 | cut -c1-7}
