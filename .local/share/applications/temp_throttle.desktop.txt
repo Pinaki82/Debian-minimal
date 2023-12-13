@@ -8,3 +8,13 @@ Icon=thermal-monitor
 Exec=sudo sh '/home/YOURUSERNAME/.local/share/applications/temp_throttle.sh' 60
 Terminal=true
 Categories=;
+
+# https://stackoverflow.com/questions/12973777/how-to-run-a-shell-script-at-startup
+# https://operavps.com/docs/run-command-after-boot-in-linux/
+# crontab -e
+# Add:
+# @reboot sudo sh '/home/YOURUSERNAME/.local/share/applications/temp_throttle.sh' 60
+#
+# sudo crontab -e
+# Add:
+# @reboot sudo sh '/home/YOURUSERNAME/.local/share/applications/temp_throttle.sh' 60
