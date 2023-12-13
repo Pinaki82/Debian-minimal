@@ -18,3 +18,4 @@ Categories=;
 # sudo crontab -e
 # Add:
 # @reboot sudo sh '/home/YOURUSERNAME/.local/share/applications/temp_throttle.sh' 60
+# ps -ef
