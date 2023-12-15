@@ -1,0 +1,12 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+[Desktop Entry]
+Type=Application
+Name=LosslessCut
+Comment=The swiss army knife of lossless video/audio editing
+Icon=/home/YOURUSERNAME/PortablePrograms/LosslessCut.svg
+# https://mifi.no/losslesscut/
+# https://github.com/mifi/lossless-cut/
+Exec=/home/YOURUSERNAME/PortablePrograms/LosslessCut-linux-x86_64.AppImage
+Terminal=false
+Categories=;
