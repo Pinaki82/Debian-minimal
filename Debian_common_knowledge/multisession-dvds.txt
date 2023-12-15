@@ -1,0 +1,13 @@
+https://documentation.suse.com/sles/15-SP2/html/SLES-all/cha-gnome-burn.html
+https://forums.gentoo.org/viewtopic-t-176603-start-0.html
+https://www.linuxquestions.org/questions/linux-software-2/how-to-check-if-a-cd-is-multisession-607344/
+
+sudo mkdir /mnt/cdrom
+cdrdao disk-info --device /dev/sr0
+sudo mount -t iso9660 -oro,session=0 /dev/sr0 /mnt/cdrom
+sudo umount /mnt/cdrom
+sudo mount -t iso9660 -oro,session=2 /dev/sr0 /mnt/cdrom
+sudo umount /mnt/cdrom
+
+Thunar:
+/mnt/cdrom/
