@@ -36,6 +36,18 @@ clean_residual(){ # clean residual packages
   yes | sudo apt autoclean
 }
 
+upgrade_pipx_packages(){ # Upgrade pipx packages
+  echo "Next: pipx upgrade-all"
+  sleep 2
+  pipx upgrade-all
+}
+
+update_rust(){ # Update Rust
+  echo "Next: rustup update"
+  sleep 2
+  rustup update
+}
+
 refresh_snap(){ # update snap
   echo "Next: sudo snap refresh"
   sleep 2
@@ -66,6 +78,12 @@ if [ "${choice}" != '0' ]; then
   # clean
   clean_residual
   clean_residual
+
+  # Upgrade pipx packages
+  upgrade_pipx_packages
+
+  # Update Rust
+  update_rust
 
   # update snap
   refresh_snap
