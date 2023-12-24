@@ -1,0 +1,45 @@
+https://unix.stackexchange.com/questions/658/linux-how-can-i-view-all-uuids-for-all-available-disks-on-my-system
+GNOME Disk Utility
+Or,
+lsblk -f
+
+sda                                                                         
+├─sda1
+│    ext4   1.0         6xxxxxx1-bxxa-4xx0-8xx6-axxxxxxxxxx8   74.3G    61% /
+├─sda2
+│                                                                           
+└─sda5
+     swap   1           9xxxxxxd-0xx5-4xx8-bxxf-exxxxxxxxxx5                [SWAP]
+sdb                                                                         
+├─sdb1
+│    ext4   1.0   hdd   4xxxxxx4-dxx5-4xxe-bxx1-cxxxxxxxxxx7  549.3G    65% /mnt/hdd
+├─sdb2
+│                                                                           
+└─sdb3
+
+
+
+sudo nano /etc/fstab
+
+# / was on /dev/sda1 during installation
+UUID=6xxxxxx1-bxxa-4xx0-8xx6-axxxxxxxxxx8 /               ext4    noatime,errors=remount-ro 0       1
+# swap was on /dev/sda5 during installation
+#UUID=9xxxxxxd-0xx5-4xx8-bxxf-exxxxxxxxxx5 none            swap    sw              0       0
+
+# Instead of this one:
+#/dev/sda1   /mnt/hdd  ext4   noatime,errors=remount-ro    0   2
+# Write:
+UUID=4xxxxxx4-dxx5-4xxe-bxx1-cxxxxxxxxxx7   /mnt/hdd  ext4   noatime,errors=remount-ro    0   2
+
+
+sudo reboot now
+
+
+
+
+
+
+
+
+
+
