@@ -197,6 +197,49 @@ yes | sudo apt install libdvdcss2 && \
 # Run
 sudo dpkg-reconfigure libdvd-pkg && \
 #   later.
+#
+# ----------------------------------------------------------------------
+# Codecs:
+# https://www.sys-hint.com/1075-Installing-Multimedia-Codecs-on-Debian-10
+# https://phoenixnap.com/kb/add-apt-repository-command-not-found-ubuntu
+
+yes | sudo apt install software-properties-common && \
+yes | sudo apt-add-repository non-free && \
+yes | sudo apt-add-repository contrib && \
+# https://serverfault.com/questions/240920/how-do-i-enable-non-free-packages-on-debian
+yes | sudo apt-add-repository --component non-free && \
+
+# Edit /etc/apt/sources.list with sudo privileges
+# sudo nano /etc/apt/sources.list
+# Add the following lines if these lines are not present.
+# If the lines are found commented, uncomment the lines.
+# ---
+## deb http://deb.debian.org/debian/ bookworm non-free main contrib non-free-firmware
+## deb-src http://deb.debian.org/debian/ bookworm non-free main contrib non-free-firmware
+
+## deb http://security.debian.org/debian-security bookworm-security non-free main contrib non-free-firmware
+## deb-src http://security.debian.org/debian-security bookworm-security non-free main contrib non-free-firmware
+
+## deb http://deb.debian.org/debian/ bookworm-updates non-free main contrib non-free-firmware
+## deb-src http://deb.debian.org/debian/ bookworm-updates non-free main contrib non-free-firmware
+# ---
+
+yes | sudo apt update && sudo apt upgrade && \
+yes | sudo apt install firmware-linux-nonfree && \
+
+
+# Intel CPU support:
+yes | sudo apt install software-properties-common apt-transport-https ca-certificates curl -y && \
+yes | sudo apt install i965-va-driver-shaders && \
+yes | sudo apt install intel-media-va-driver-non-free && \
+yes | sudo apt install xserver-xorg-video-intel && \
+yes | sudo apt install mesa-utils && \
+yes | sudo apt install intel-opencl-icd intel-media-va-driver-non-free libmfx1 && \
+# Intel HW-Acceleration (didn't work. You might need the following packages later).
+# sudo apt install jellyfin jellyfin-ffmpeg5 jellyfin-server jellyfin-web
+# See jellyfin.txt for details.
+# ----------------------------------------------------------------------
+#
 # MS Core Fonts:
 # https://www.linuxcapable.com/how-to-install-microsoft-fonts-on-debian-linux/
 yes | sudo apt update && sudo apt upgrade && \

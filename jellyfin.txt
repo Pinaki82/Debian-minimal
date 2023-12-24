@@ -1,0 +1,165 @@
+sudo mousepad /etc/default/grub
+https://askubuntu.com/questions/1383040/no-dev-dri-directory-in-ubuntu-server-20-04
+https://askubuntu.com/questions/1153746/intel-graphics-card-not-bound-to-driver-after-nvidia-driver-installed-ubuntu-18/1154067#1154067
+
+#GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nomodeset"
+#https://askubuntu.com/questions/1383040/no-dev-dri-directory-in-ubuntu-server-20-04
+#https://askubuntu.com/questions/1153746/intel-graphics-card-not-bound-to-driver-after-nvidia-driver-installed-ubuntu-18/1154067#1154067
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash i915.alpha_support=1"
+
+
+https://itsfoss.com/update-grub/
+
+sudo update-grub
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+
+
+
+https://wiki.debian.org/HardwareVideoAcceleration
+sudo apt install i965-va-driver-shaders
+lsmod | grep 'i915'
+
+https://www.linuxcapable.com/how-to-install-jellyfin-media-server-on-debian-linux/
+https://www.howtoforge.com/how-to-install-jellyfin-media-server-on-debian-12/
+https://repo.jellyfin.org/releases/server/
+
+sudo apt install software-properties-common apt-transport-https ca-certificates curl -y
+
+
+
+diff <( curl -s https://repo.jellyfin.org/install-debuntu.sh -o install-debuntu.sh; sha256sum install-debuntu.sh ) <( curl -s https://repo.jellyfin.org/install-debuntu.sh.sha256sum )
+
+less install-debuntu.sh
+
+sudo bash install-debuntu.sh
+
+sudo apt install jellyfin
+
+sudo apt install jellyfin jellyfin-ffmpeg5 jellyfin-server jellyfin-web
+
+
+systemctl status jellyfin
+
+sudo systemctl start jellyfin
+
+
+sudo mkdir /usr/lib/jellyfin/bin/jellyfin-web
+sudo mkdir /opt/jellyfin
+
+
+sudo nano /opt/jellyfin/jellyfin.sh
+
+
+
+#!/bin/bash
+JELLYFINDIR="/opt/jellyfin"
+FFMPEGDIR="/usr/share/jellyfin-ffmpeg"
+
+$JELLYFINDIR/jellyfin/jellyfin \
+ -d $JELLYFINDIR/data \
+ -C $JELLYFINDIR/cache \
+ -c $JELLYFINDIR/config \
+ -l $JELLYFINDIR/log \
+ --ffmpeg $FFMPEGDIR/ffmpeg
+
+
+
+
+
+
+
+
+sudo chown -R "$USER":"$USER" /opt/jellyfin/jellyfin.sh
+sudo chmod u+x /opt/jellyfin/jellyfin.sh
+sudo sh /opt/jellyfin/jellyfin.sh
+
+
+
+
+cd /etc/systemd/system
+sudo nano jellyfin.service
+
+
+http://
+
+
+/etc/apt/sources.list.d/jellyfin.list
+
+[Unit]
+Description=Jellyfin
+After=network.target
+
+[Service]
+Type=simple
+User=appu
+Restart=always
+ExecStart=/opt/jellyfin/jellyfin.sh
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+
+
+
+sudo chmod 644 jellyfin.service
+sudo systemctl daemon-reload
+sudo systemctl enable jellyfin.service
+sudo systemctl start jellyfin.service
+
+
+
+
+ps aux | grep jellyfin
+sudo usermod -a -G video,render jellyfin
+sudo apt install intel-media-va-driver-non-free
+
+
+sudo nano /etc/environment
+
+
+LIBVA_DRIVERS_PATH=/usr/lib/x86_64-linux-gnu/dri
+LIBVA_DRIVER_NAME=iHD
+
+
+
+
+
+
+
+
+jellyfin --nowebclient
+
+
+https://github.com/jellyfin/jellyfin/issues/3638
+
+sudo thunar
+copy
+/home/appu/Downloads/Downloads/jellyfin_10.8.13/
+to
+/usr/lib/jellyfin/bin
+
+
+
+
+https://wiki.debian.org/HardwareVideoAcceleration
+https://packages.debian.org/search?keywords=intel-media-va-driver
+https://www.intel.com/content/www/us/en/support/articles/000005520/graphics.html
+
+lspci -k | grep -EA3 'VGA|3D|Display'
+sudo apt install xserver-xorg-video-intel
+sudo apt install mesa-utils
+
+
+https://www.linuxfordevices.com/tutorials/ubuntu/install-intel-graphic-drivers
+
+sudo apt install \
+  intel-opencl-icd \
+  intel-media-va-driver-non-free libmfx1
+
+
+
+
+

@@ -1,0 +1,6 @@
+https://linuxhandbook.com/symbolic-link-linux/
+ln -s target_dir link_name
+ln -s '/mnt/hdd/Videos/stock_footage/' '/home/appu/Videos/stock_footage'
+
+`ln -s` will create a soft-link. `ln` will create a hard-link.
+However, hard-links for directories are not allowed.

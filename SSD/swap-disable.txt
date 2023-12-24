@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# https://www.tecmint.com/disable-swap-partition/
+
+lsblk && \
+sudo swapoff /dev/sdb5 && \
+sudo swapoff -a && \
+free -h && \
+lsblk \
+
+
+https://linuxize.com/post/how-to-change-the-swappiness-value-in-linux/
+
+
+Disable swap:
+
+sudo nano /etc/fstab
+
+
+# swap was on /dev/sda5 during installation
+UUID=9xxxxxxd-0xx5-4xx8-bxxf-exxxxxxxxxx5 none            swap    sw              0       0
+
+Comment out the line above as follows:
+# swap was on /dev/sda5 during installation
+#UUID=9xxxxxxd-0xx5-4xx8-bxxf-exxxxxxxxxx5 none            swap    sw              0       0
+
+sudo nano /etc/sysctl.conf
+
+# Reduce the inclination to swap
+vm.swappiness=10
+
+or
+
+# Reduce the inclination to swap
+vm.swappiness=5
+
+or
+
+# Reduce the inclination to swap
+vm.swappiness=0
+
+
+

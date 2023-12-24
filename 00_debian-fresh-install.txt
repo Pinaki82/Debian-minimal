@@ -214,6 +214,18 @@ deb-src http://deb.debian.org/debian/ bookworm-updates non-free main contrib non
 yes | sudo apt update && sudo apt upgrade
 yes | sudo apt install firmware-linux-nonfree
 
+
+# Intel CPU support:
+sudo apt install software-properties-common apt-transport-https ca-certificates curl -y
+sudo apt install i965-va-driver-shaders
+sudo apt install intel-media-va-driver-non-free
+sudo apt install xserver-xorg-video-intel
+sudo apt install mesa-utils
+sudo apt install intel-opencl-icd intel-media-va-driver-non-free libmfx1
+# Intel HW-Acceleration (didn't work. You might need the following packages later).
+# sudo apt install jellyfin jellyfin-ffmpeg5 jellyfin-server jellyfin-web
+# See jellyfin.txt for details.
+
 # yes | sudo apt install vlc (Choose the Flatpak version. Do it later.)
 yes | sudo apt install libavcodec-extra
 yes | sudo apt install libdvdread4 libdvdcss2
@@ -873,6 +885,16 @@ pipx install esptool
 # echo "dmesg | grep tty ..."
 # dmesg | grep tty
 ######################################################## For PlaltformIO
+
+######################################################## TicTacSync
+# https://sr.ht/~proflutz/TicTacSync/
+# https://tictacsync.org/
+
+sudo apt install sox
+pipx install tictacsync
+pipx upgrade-all
+# tictacsync -v sampleFiles
+########################################################
 
 # GIMP Essentials:
 yes | sudo apt install abr2gbr

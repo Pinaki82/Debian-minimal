@@ -203,6 +203,113 @@ Add the following lines, at the very end of the existing text in that file:
 vm.swappiness=10
 ```
 
+Schedule a Cron Job:
+
+> Ref:
+> 
+> https://stackoverflow.com/questions/12973777/how-to-run-a-shell-script-at-startup
+> 
+> https://operavps.com/docs/run-command-after-boot-in-linux/
+
+```bash
+crontab -e
+```
+
+Or,
+
+```bash
+EDITOR=geany crontab -e
+```
+
+Add:
+
+```
+@reboot sudo sh '/home/YOURUSERNAME/shell/ssd_trim.sh'
+@reboot sudo fstrim -av && sudo fstrim -v /
+```
+
+Then,
+
+```bash
+sudo crontab -e
+```
+
+Or,
+
+```bash
+sudo EDITOR=geany crontab -e
+```
+
+Add:
+
+```
+@reboot sudo sh '/home/YOURUSERNAME/shell/ssd_trim.sh'
+@reboot sudo fstrim -av && sudo fstrim -v /
+```
+
+## Disable Swap:
+
+> Ref:
+> 
+> [How to Permanently Disable Swap in Linux](https://www.tecmint.com/disable-swap-partition/)
+> [How to Change the Swappiness Value in Linux | Linuxize](https://linuxize.com/post/how-to-change-the-swappiness-value-in-linux/)
+
+Get the device map of the swap partition using GNOME Disks.
+
+Temporary solution:
+
+```bash
+lsblk
+sudo swapoff /dev/sda5
+sudo swapoff -a
+free -h
+lsblk
+```
+
+Make the changes persistent across boot:
+
+```bash
+sudo nano /etc/fstab
+```
+
+```
+# swap was on /dev/sda5 during installation
+
+UUID=9xxxxxxd-0xx5-4xx8-bxxf-exxxxxxxxxx5 none            swap    sw
+```
+
+Comment out the line above as follows:
+
+```
+# swap was on /dev/sda5 during installation
+#UUID=9xxxxxxd-0xx5-4xx8-bxxf-exxxxxxxxxx5 none            swap    sw 
+```
+
+```bash
+sudo nano /etc/sysctl.conf
+```
+
+Then,
+
+```
+# Reduce the inclination to swap
+vm.swappiness=10
+```
+
+or,
+
+```
+# Reduce the inclination to swap
+vm.swappiness=5
+```
+
+or,
+
+```
+# Reduce the inclination to swap
+vm.swappiness=0
+```
+
 **Reboot** the system.
 
 ===

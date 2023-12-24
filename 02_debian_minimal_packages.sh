@@ -929,6 +929,15 @@ yes | sudo apt install slop && \
 # screenkey -p fixed -g $(slop -n -f '%g') --persist -s small --font-size small
 yes | sudo apt install default-jre && \
 
+######################################################## TicTacSync
+# https://sr.ht/~proflutz/TicTacSync/
+# https://tictacsync.org/
+
+yes | sudo apt install sox && \
+pipx install tictacsync && \
+pipx upgrade-all && \
+# tictacsync -v sampleFiles
+########################################################
 
 # GIMP Essentials:
 yes | sudo apt install abr2gbr && \
@@ -1036,6 +1045,7 @@ yes | sudo apt install scdaemon && \
 # =================================================================
 
 yes | sudo apt install ffmpeg && \
+yes | sudo apt install sox && \
 # sudo apt install mediainfo -y && \
 # VidCutter # Install Flatpak # VidCutter - Media Cutter + Joiner # flatpak install com.ozmartians.VidCutter
 # Create Video DVDs and VCDs easily

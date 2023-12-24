@@ -169,14 +169,94 @@ Add the following entry.
 > > 
 > > Ref: https://askubuntu.com/questions/707118/what-do-the-fstab-mount-options-errors-remount-ro-mean
 
+> ChatGPT:
+> 
+> You can change the `"errors=remount-ro"` option to `"errors=continue"` to instruct the system to continue mounting the filesystem even if errors are encountered during the check.
+> 
+> If you want to maintain the above configuration and simply ensure that the drive mounts without waiting for manual intervention in case of errors during the boot process, you can just change the `"errors=remount-ro"` option to `"errors=continue"` as mentioned before:
+> `/dev/sda1   /mnt/hdd  ext4   noatime,errors=continue    0   2`
+> This modification will retain your existing setup while allowing the system to proceed with mounting the drive even if errors are encountered during the check. This change should allow the system to mount the drive without waiting for manual intervention in case of errors during the boot process. However, it's essential to note that skipping error checks might lead to potential data loss or filesystem corruption if there are underlying issues with the drive. Always ensure your data is backed up regularly and consider investigating any recurring errors on the drive.
+> Nevertheless, keep the above configuration `/dev/sda1   /mnt/hdd  ext4   noatime,errors=remount-ro    0   2`. It's better.
+
+# UUID
+
+Loading the storage device at startup using the drive-by-device-map (/dev/sda, /dev/sdb etc.) can be unpredictable and not entirely reliable. The GRUB Bootloader is responsible for setting this device map, which may deviate from standard practices. Each storage medium has its own unique identifier or UUID (similar to a serial number), which remains consistent across systems and constant throughout the device's lifespan. Utilising the drive-by-UUID method ensures predictable booting and avoids potential issues (mount failures etc.) that could arise with unreliable device mapping.
+
+> A true UUID is a unique identifier that's generated and represented by a standardized format. Valid UUIDs are defined by [RFC 4122](https://datatracker.ietf.org/doc/html/rfc4122); this specification describes the algorithms that can be used to generate UUIDs that preserve uniqueness across implementations, without a central issuing authority.
+> 
+> Ref: https://www.howtogeek.com/devops/what-are-uuids-and-why-are-they-useful/
+> 
+> https://unix.stackexchange.com/questions/658/linux-how-can-i-view-all-uuids-for-all-available-disks-on-my-system
+
+Use the GNOME-Disk-Utility (GNOME Disks) to get the UUID of the drive partition to mount at boot.
+
+![](attachments/UUID.png)
+
+Other methods are described in the section below:
+
 ```bash
-/dev/sdb1   /mnt/hdd  ext4   noatime,errors=remount-ro    0   2
+lsblk -f
+```
+
+The output should be quite similar to what is shown here:
+
+```
+sda                                                                         
+├─sda1
+│    ext4   1.0         6xxxxxx1-bxxa-4xx0-8xx6-axxxxxxxxxx8   74.3G    61% /
+├─sda2
+│                                                                           
+└─sda5
+     swap   1           9xxxxxxd-0xx5-4xx8-bxxf-exxxxxxxxxx5                [SWAP]
+sdb                                                                         
+├─sdb1
+│    ext4   1.0   hdd   4xxxxxx4-dxx5-4xxe-bxx1-cxxxxxxxxxx7  549.3G    65% /mnt/hdd
+├─sdb2
+│                                                                           
+└─sdb3
+```
+
+Edit the /etc/fstab file:
+
+```bash
+sudo nano /etc/fstab
+```
+
+```bash
+UUID=4xxxxxx4-dxx5-4xxe-bxx1-cxxxxxxxxxx7   /mnt/hdd  ext4   noatime,errors=remount-ro    0   2
 ```
 
 Or (for system drives),
 
 ```bash
-/dev/sdb1   /mnt/hdd  ext4   noatime,errors=remount-ro    0   1
+UUID=4xxxxxx4-dxx5-4xxe-bxx1-cxxxxxxxxxx7   /mnt/hdd  ext4   noatime,errors=remount-ro    0   1
+```
+
+You'll see similar line entries while editing the fstab file as shown here:
+
+```
+# / was on /dev/sda1 during installation
+UUID=6xxxxxx1-bxxa-4xx0-8xx6-axxxxxxxxxx8 /               ext4    noatime,errors=remount-ro 0       1
+# swap was on /dev/sda5 during installation
+# UUID=9xxxxxxd-0xx5-4xx8-bxxf-exxxxxxxxxx5 none            swap    sw              0       0
+```
+
+Instead of writing this one:
+
+```
+#/dev/sdb1   /mnt/hdd  ext4   noatime,errors=remount-ro    0   2
+```
+
+Write:
+
+```
+UUID=4xxxxxx4-dxx5-4xxe-bxx1-cxxxxxxxxxx7   /mnt/hdd  ext4   noatime,errors=remount-ro    0   2
+```
+
+Reboot the system if needed.
+
+```bash
+sudo reboot now
 ```
 
 **Unmount the new partition if needed.** This is not necessary in general. Still, if you want to unmount the drive for any unforeseeable reason, use the `umount` command. For example, to unmount the partition mounted at `/mnt/hdd`, you would use the following command:
