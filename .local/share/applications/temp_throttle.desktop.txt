@@ -6,6 +6,9 @@ Name=Limit CPU Usage
 Comment=Limit CPU Usage if the package temperature exceeds 60 degrees Celcius.
 Icon=thermal-monitor
 Exec=sudo sh '/home/YOURUSERNAME/.local/share/applications/temp_throttle.sh' 60
+
+# The temperature range should be restricted to 49, 50 or 60 degrees Celcius (between 49-60).
+
 Terminal=true
 Categories=;
 

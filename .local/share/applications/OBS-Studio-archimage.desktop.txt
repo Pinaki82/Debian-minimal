@@ -1,0 +1,11 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+[Desktop Entry]
+Type=Application
+Name=OBS-Studio
+Comment=Free and open-source app for screencasting and live streaming.
+Icon=obs
+# https://github.com/ivan-hc/OBS-Studio-appimage.git
+Exec=/home/YOURUSERNAME/PortablePrograms/OBS-Studio_30.0.2-1-archimage2.1-4-x86_64.AppImage
+Terminal=false
+Categories=;

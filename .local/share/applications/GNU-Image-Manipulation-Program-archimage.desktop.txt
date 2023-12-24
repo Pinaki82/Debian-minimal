@@ -1,0 +1,11 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+[Desktop Entry]
+Type=Application
+Name=GIMP-archimage
+Comment=Photo Editor
+Icon=gimp
+# https://github.com/ivan-hc/GIMP-appimage.git
+Exec=/home/YOURUSERNAME/PortablePrograms/GNU-Image-Manipulation-Program_2.10.36-1-archimage2.1-3-x86_64.AppImage
+Terminal=false
+Categories=;
