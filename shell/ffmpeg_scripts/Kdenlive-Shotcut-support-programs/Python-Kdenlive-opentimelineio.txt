@@ -1,0 +1,74 @@
+Ecosia: import edl in kdenlive
+
+https://www.reddit.com/r/kdenlive/comments/xsbjod/is_there_any_way_to_export_an_edl_to_open_in/
+
+> You can try using OpenTimelineIO, ...
+
+> When I tried it, I got a message saying that I needed to install pip3 but I didn’t see anything about pip3 on the website or in the help files, so I didn’t know what to install. 
+
+
+
+
+> Usually you ned to do a:
+
+> python -m pip install otio-kdenlive-adapter
+
+> Depending os distros it is pip3. Using the Appimage it works out of the box. Also there has been some improvements but they still haven't landed yet. Kdenlive team has just started porting the adapter to be hosted at KDE for faster development. https://invent.kde.org/multimedia/kdenlive-opentimelineio
+
+
+---
+pipx install otio-kdenlive-adapter
+
+pipx install otio-kdenlive-adapter Fatal error from pip prevented installation. Full pip output in file:     /home/appu/.local/pipx/logs/cmd_2023-12-20_20.42.14_pip_errors.log  Some possibly relevant errors from pip install:     ERROR: Could not find a version that satisfies the requirement otio-kdenlive-adapter (from versions: none)     ERROR: No matching distribution found for otio-kdenlive-adapter  Error installing otio-kdenlive-adapter. 
+---
+
+https://stackoverflow.com/questions/75608323/how-do-i-solve-error-externally-managed-environment-every-time-i-use-pip-3
+
+
+> How do I solve "error: externally-managed-environment" every time I use pip 3?
+
+
+edited Sep 7 at 11:04
+Peter Mortensen's user avatar
+Peter Mortensen
+30.8k2222 gold badges106106 silver badges131131 bronze badges
+asked Mar 1 at 19:52 
+Apoliticalboy's user avatar
+Apoliticalboy
+
+
+> I've got this error since Python 3.11+ and I've passed this error using this:
+
+> sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED
+
+
+> Even better: sudo mv /usr/lib/python3.11/EXTERNALLY-MANAGED /usr/lib/python3.11/EXTERNALLY-MANAGED.old
+JackLeEmmerdeur
+Jul 16 at 19:12
+
+
+
+
+
+
+
+
+
+
+
+---
+https://github.com/KDE/kdenlive-opentimelineio
+
+
+sudo mv /usr/lib/python3.11/EXTERNALLY-MANAGED /usr/lib/python3.11/EXTERNALLY-MANAGED.old
+
+git clone https://github.com/KDE/kdenlive-opentimelineio.git
+cd kdenlive-opentimelineio/
+pip install -e .
+
+sudo mv /usr/lib/python3.11/EXTERNALLY-MANAGED.old /usr/lib/python3.11/EXTERNALLY-MANAGED
+
+cd ../
+trash kdenlive-opentimelineio
+
+---
