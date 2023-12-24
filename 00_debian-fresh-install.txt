@@ -1058,7 +1058,6 @@ All flatpack and snap apps:
 flatpak list --columns=application --app
 
 Application ID:
-com.github.Eloston.UngoogledChromium
 com.github.micahflee.torbrowser-launcher
 com.github.tchx84.Flatseal
 com.github.zocker_160.SyncThingy
