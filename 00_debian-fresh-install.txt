@@ -222,9 +222,40 @@ sudo apt install intel-media-va-driver-non-free
 sudo apt install xserver-xorg-video-intel
 sudo apt install mesa-utils
 sudo apt install intel-opencl-icd intel-media-va-driver-non-free libmfx1
+#
+# ==============================================================================
+# Edit the GRUB Bootloader Menu after installing drivers from Intel:
+#
+# sudo mousepad /etc/default/grub
+# https://askubuntu.com/questions/1383040/no-dev-dri-directory-in-ubuntu-server-20-04
+# https://askubuntu.com/questions/1153746/intel-graphics-card-not-bound-to-driver-after-nvidia-driver-installed-ubuntu-18/1154067#1154067
+#
+#GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nomodeset"
+#https://askubuntu.com/questions/1383040/no-dev-dri-directory-in-ubuntu-server-20-04
+#https://askubuntu.com/questions/1153746/intel-graphics-card-not-bound-to-driver-after-nvidia-driver-installed-ubuntu-18/1154067#1154067
+#GRUB_CMDLINE_LINUX_DEFAULT="quiet splash i915.alpha_support=1"
+
+# Change this line
+
+# GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nomodeset"
+
+# to
+
+# GRUB_CMDLINE_LINUX_DEFAULT="quiet splash i915.alpha_support=1"
+
+# (*** uncommented).
+
+# Update GRUB:
+# https://itsfoss.com/update-grub/
+#
+# sudo update-grub
+# sudo grub-mkconfig -o /boot/grub/grub.cfg
+# ==============================================================================
+#
 # Intel HW-Acceleration (didn't work. You might need the following packages later).
 # sudo apt install jellyfin jellyfin-ffmpeg5 jellyfin-server jellyfin-web
 # See jellyfin.txt for details.
+
 
 # yes | sudo apt install vlc (Choose the Flatpak version. Do it later.)
 yes | sudo apt install libavcodec-extra
