@@ -4,6 +4,8 @@ numberedfolder='1701440443408'
 
 rm -rf /home/$(whoami)/.cache/Meltytech/Shotcut/qmlcache && \
 mkdir /home/$(whoami)/.cache/Meltytech/Shotcut/qmlcache && \
+rm -rf /home/$(whoami)/.local/share/Meltytech/Shotcut/thumbnails && \
+mkdir /home/$(whoami)/.local/share/Meltytech/Shotcut/thumbnails && \
 rm -rf /home/$(whoami)/.cache/kdenlive/qmlcache && \
 mkdir /home/$(whoami)/.cache/kdenlive/qmlcache && \
 rm -rf /home/$(whoami)/.cache/kdenlive/proxy && \
