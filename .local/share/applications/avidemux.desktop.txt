@@ -1,0 +1,11 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+[Desktop Entry]
+Type=Application
+Name=Avidemux
+Comment=Video editor designed for simple cutting, filtering and encoding tasks.
+Icon=/home/YOURUSERNAME/.local/share/icons/logo-avidemux.png
+# http://fixounet.free.fr/avidemux/
+Exec=/home/YOURUSERNAME/PortablePrograms/avidemux_2.8.1.appImage
+Terminal=false
+Categories=;

@@ -1,0 +1,12 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+[Desktop Entry]
+Type=Application
+Name=Talos
+Comment=Node based, open source VFX Editor with powerfull interface and a ready to use libGDX runtime.
+Icon=/home/YOURUSERNAME/.local/share/icons/talos.png
+# https://github.com/rockbite/talos
+# https://talosvfx.com/
+Exec=java -jar '/home/YOURUSERNAME/PortablePrograms/editor-desktop-2.0.0-SNAPSHOT.jar'
+Terminal=false
+Categories=;

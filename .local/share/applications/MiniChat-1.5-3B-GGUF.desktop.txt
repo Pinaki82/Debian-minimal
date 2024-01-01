@@ -1,0 +1,17 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+# https://github.com/garyexplains/examples/blob/master/how-to-run-llama-cpp-on-raspberry-pi.md
+# https://huggingface.co/TheBloke/Llama-2-7b-Chat-GGUF/tree/main
+# https://huggingface.co/TheBloke/CodeLlama-7B-Instruct-GGUF/tree/main
+
+# https://huggingface.co/tsunemoto/MiniChat-1.5-3B-GGUF
+# https://huggingface.co/tsunemoto/MiniChat-1.5-3B-GGUF/resolve/main/minichat-1.5-3b.Q2_K.gguf
+
+[Desktop Entry]
+Type=Application
+Name=MiniChat-1.5-3B-GGUF
+Comment=AI Chat MiniChat-1.5-3B-GGUF
+Icon=/home/YOURUSERNAME/.local/share/icons/LLaMA.CPP.svg
+Exec=sakura -e /home/YOURUSERNAME/HOME/llama.cpp/MiniChat-1.5-3B-GGUF.sh
+Terminal=false
+Categories=;
