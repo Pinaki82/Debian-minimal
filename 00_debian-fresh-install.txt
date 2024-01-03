@@ -1088,14 +1088,12 @@ All flatpack and snap apps:
 
 flatpak list --columns=application --app
 
-Application ID:
+Application ID
 com.github.micahflee.torbrowser-launcher
 com.github.tchx84.Flatseal
 com.github.zocker_160.SyncThingy
 fr.handbrake.ghb
 io.github.jliljebl.Flowblade
-org.goldendict.GoldenDict
-org.kde.kdiff3
 org.libreoffice.LibreOffice
 
 

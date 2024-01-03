@@ -124,7 +124,12 @@ KOReader (ebook reader for EPUB, FB2, PDF, azw3 etc.) -> https://github.com/kore
 ONLYOFFICE (MS Office compatible alternative
 office productivity
 app) (AppImage available) -> https://www.onlyoffice.com/
+---
 GoldenDict -> https://appimage.github.io/GoldenDict/
+https://github.com/Abs62/goldendict
+https://discourse.appimage.org/t/goldendict-appimagehub/1548
+---
+
 -----------------------------
 Thorium Reader:
 https://thorium.edrlab.org/
