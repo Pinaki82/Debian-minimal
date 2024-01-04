@@ -1,0 +1,7 @@
+Group: Speedy_Encode_for_Video_Editing
+Preset Name: FHD-x264-AVC-Speedy-INTRA
+Extension: mov
+
+f=mov vcodec=libx264 progressive=1 preset=ultrafast crf=%quality vminrate=25M vmaxrate=%bitrate+'k' vbufsize=0 g=1 bf=0 acodec=aac channels=2 ar=48000 ab=%audiobitrate+'k' movflags=+faststart pix_fmt=yuv420p real_time=-1 threads=0 properties=x264-ultrafast
+
+Status: Working. ~ 64GB/Hour.
