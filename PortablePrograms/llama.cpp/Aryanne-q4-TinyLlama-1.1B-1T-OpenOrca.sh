@@ -7,12 +7,11 @@
 # https://huggingface.co/Aryanne/TinyLlama-1.1B-1T-OpenOrca-gguf
 # wget https://huggingface.co/Aryanne/TinyLlama-1.1B-1T-OpenOrca-gguf/resolve/main/q4_0-tinyllama-1.1b-1t-openorca.gguf
 
-cd /home/YOUR_USERNAME/PortablePrograms/llama.cpp \
+cd /mnt/hdd/HOME/llama.cpp \
 
 # Add the following line before the line containing `--ctx_size 2048 \`.
 #        -i -r "User:" -f prompts/custom_prompt_template.txt \
-./main  -m models/q4_0-tinyllama-1.1b-1t-openorca.gguf --color \
-
+./main  -m models/Aryanne/TinyLlama-1.1B-1T-OpenOrca-gguf/q4_0-tinyllama-1.1b-1t-openorca.gguf --color \
        --ctx_size 2048 \
        -n -1 \
        -ins -b 256 \

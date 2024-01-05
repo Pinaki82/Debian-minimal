@@ -12,6 +12,6 @@ Type=Application
 Name=7bq2k-wizardcoder-python-v1.0
 Comment=AI Chat 7bq2k-wizardcoder-python-v1.0
 Icon=/home/YOUR_USERNAME/.local/share/icons/LLaMA.CPP.svg
-Exec=sakura -e /home/YOUR_USERNAME/PortablePrograms/llama.cpp/7bq2k-wizardcoder-python-v1.0.sh
+Exec=sakura -e /home/YOUR_USERNAME/HOME/llama.cpp/7bq2k-wizardcoder-python-v1.0.sh
 Terminal=false
 Categories=;

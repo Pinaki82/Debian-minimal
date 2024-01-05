@@ -8,12 +8,11 @@
 # wget https://huggingface.co/Aryanne/TinyLlama-1.1B-Chat-v0.3-gguf/resolve/main/q4_0-tinyllama-1.1b-chat-v0.3.gguf
 
 
-cd /home/YOUR_USERNAME/PortablePrograms/llama.cpp \
+cd /mnt/hdd/HOME/llama.cpp \
 
 # Add the following line before the line containing `--ctx_size 2048 \`.
 #        -i -r "User:" -f prompts/custom_prompt_template.txt \
-./main  -m models/q4_0-tinyllama-1.1b-chat-v0.3.gguf --color \
-
+./main  -m models/Aryanne/TinyLlama-1.1B-Chat-v0.3-gguf/q4_0-tinyllama-1.1b-chat-v0.3.gguf --color \
        --ctx_size 2048 \
        -n -1 \
        -ins -b 256 \

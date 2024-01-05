@@ -7,12 +7,11 @@
 # https://huggingface.co/Aryanne/Wizard-Orca-3B-gguf
 # https://huggingface.co/Aryanne/Wizard-Orca-3B-gguf/tree/main
 
-cd /home/YOUR_USERNAME/PortablePrograms/llama.cpp \
+cd /mnt/hdd/HOME/llama.cpp \
 
 # Add the following line before the line containing `--ctx_size 2048 \`.
 #        -i -r "User:" -f prompts/custom_prompt_template.txt \
-./main  -m models/q4_0-wizard-orca-3b.gguf --color \
-
+./main  -m models/TheBloke/Wizard-Orca-3B-Q4_0-gguf/q4_0-wizard-orca-3b.gguf --color \
        --ctx_size 2048 \
        -n -1 \
        -ins -b 256 \

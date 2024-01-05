@@ -12,6 +12,6 @@ Type=Application
 Name=q4_0-wizard-orca-3b
 Comment=AI Chat q4_0-wizard-orca-3b
 Icon=/home/YOUR_USERNAME/.local/share/icons/LLaMA.CPP.svg
-Exec=sakura -e /home/YOUR_USERNAME/PortablePrograms/llama.cpp/q4_0-wizard-orca-3b.sh
+Exec=sakura -e /home/YOUR_USERNAME/HOME/llama.cpp/q4_0-wizard-orca-3b.sh
 Terminal=false
 Categories=;

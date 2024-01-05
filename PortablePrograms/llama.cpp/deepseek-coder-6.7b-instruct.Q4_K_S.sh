@@ -4,14 +4,12 @@
 # https://huggingface.co/TheBloke/Llama-2-7b-Chat-GGUF/tree/main
 # https://huggingface.co/TheBloke/CodeLlama-7B-Instruct-GGUF/tree/main
 
-# https://huggingface.co/alexedelsburg/Puma-3b-GGUF
-# https://huggingface.co/alexedelsburg/Puma-3b-GGUF/tree/main
+# https://lmstudio.ai/
+# https://github.com/deepseek-ai/deepseek-coder
 
 cd /mnt/hdd/HOME/llama.cpp \
 
-# Add the following line before the line containing `--ctx_size 2048 \`.
-#        -i -r "User:" -f prompts/custom_prompt_template.txt \
-./main  -m models/TheBloke/Puma-3b-Q4_1-GGUF/puma-3b.q4_1.gguf --color \
+./main  -m models/TheBloke/deepseek-coder-6.7B-instruct-GGUF/deepseek-coder-6.7b-instruct.Q4_K_S.gguf --color \
        --ctx_size 2048 \
        -n -1 \
        -ins -b 256 \

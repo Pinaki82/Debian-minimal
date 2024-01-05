@@ -10,7 +10,7 @@
 cd /mnt/hdd/HOME/llama.cpp \
 
 #        -i -r "User:" -f prompts/custom_prompt_template.txt \
-./main  -m models/dolphin-2.1-mistral-7b.Q2_K.gguf --color \
+./main  -m models/TheBloke/dolphin-2.1-mistral-7B-GGUF/dolphin-2.1-mistral-7b.Q2_K.gguf --color \
 
        --ctx_size 2048 \
        -n -1 \

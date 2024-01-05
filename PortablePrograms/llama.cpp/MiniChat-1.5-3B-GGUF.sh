@@ -9,7 +9,7 @@
 
 cd /mnt/hdd/HOME/llama.cpp \
 
-./main  -m models/minichat-1.5-3b.Q2_K.gguf --color \
+./main  -m models/tsunemoto/MiniChat-1.5-3B-GGUF/minichat-1.5-3b.Q2_K.gguf --color \
        --ctx_size 2048 \
        -n -1 \
        -ins -b 256 \

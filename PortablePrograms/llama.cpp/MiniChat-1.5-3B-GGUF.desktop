@@ -4,15 +4,14 @@
 # https://huggingface.co/TheBloke/Llama-2-7b-Chat-GGUF/tree/main
 # https://huggingface.co/TheBloke/CodeLlama-7B-Instruct-GGUF/tree/main
 
-# https://huggingface.co/TheBloke/dolphin-2.1-mistral-7B-GGUF/tree/main
-# wget https://huggingface.co/TheBloke/dolphin-2.1-mistral-7B-GGUF/resolve/main/dolphin-2.1-mistral-7b.Q2_K.gguf
+# https://huggingface.co/tsunemoto/MiniChat-1.5-3B-GGUF
+# https://huggingface.co/tsunemoto/MiniChat-1.5-3B-GGUF/resolve/main/minichat-1.5-3b.Q2_K.gguf
 
 [Desktop Entry]
 Type=Application
-Name=dolphin-2.1-mistral-7b.Q2_K
-Comment=AI Chat dolphin-2.1-mistral-7b.Q2_K
+Name=MiniChat-1.5-3B-GGUF
+Comment=AI Chat MiniChat-1.5-3B-GGUF
 Icon=/home/appu/.local/share/icons/LLaMA.CPP.svg
-# Exec=sakura -e /home/YOUR_USERNAME/HOME/dolphin-2.1-mistral-7b.Q2_K.sh
-Exec=sakura -e /home/YOUR_USERNAME/HOME/llama.cpp/dolphin-2.1-mistral-7b.Q2_K.sh
+Exec=sakura -e /home/appu/HOME/llama.cpp/MiniChat-1.5-3B-GGUF.sh
 Terminal=false
 Categories=;

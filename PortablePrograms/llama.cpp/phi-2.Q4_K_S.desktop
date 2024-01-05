@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+# https://lmstudio.ai/
+# https://huggingface.co/microsoft/phi-2
+Name=phi-2.Q4_K_S
+Comment=AI Chat phi-2.Q4_K_S
+Icon=/home/appu/.local/share/icons/LLaMA.CPP.svg
+Exec=sakura -e /home/appu/HOME/llama.cpp/phi-2.Q4_K_S.sh
+Terminal=false
+Categories=;
