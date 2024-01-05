@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+# https://lmstudio.ai/
+# https://ai.meta.com/blog/code-llama-large-language-model-coding/
+Name=codellama 7b-instruct.Q4
+Comment=AI Chat LLaMA Code Instruct 7b Q4
+Icon=/home/YOUR_USERNAME/.local/share/icons/LLaMA.CPP.svg
+Exec=sakura -e /home/YOUR_USERNAME/HOME/llama.cpp/codellama-7b-instruct.Q4_K_S.sh
+Terminal=false
+Categories=;
