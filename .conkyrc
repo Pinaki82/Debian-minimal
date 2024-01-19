@@ -107,6 +107,8 @@ Swap: $swapperc% ${swapbar 6}
 HDD
 ${fs_bar 4 /mnt/hdd}
 ${alignr}${fs_used /mnt/hdd} / ${fs_size /mnt/hdd}
+${fs_bar 4 /mnt/hdd2}
+${alignr}${fs_used /mnt/hdd2} / ${fs_size /mnt/hdd2}
 # https://lonelymachines.org/2012/08/16/simple-conky-config/
 # https://lonelymachines.org/uploads/conkyrc
 # https://askubuntu.com/questions/1013924/how-to-make-conky-true-transparent
