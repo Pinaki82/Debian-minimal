@@ -112,14 +112,14 @@ HELIX_RUNTIME=/home/YOUR_USERNAME/helix/runtime/
 # https://askubuntu.com/questions/965599/where-is-the-install-location-for-the-snap-download-tool
 export PATH="$PATH:/snap/bin/"
 
-export PATH="$PATH:/home/YOUR_USERNAME/PortablePrograms/blender-3.6.2-linux-x64/"
+export PATH="$PATH:/mnt/hdd2/PortablePrograms/blender-3.6.2-linux-x64/"
 # FFmpeg Static Build
 # https://ffmpeg.org/download.html#build-linux
 # https://johnvansickle.com/ffmpeg/
-export PATH="$PATH:/home/YOUR_USERNAME/PortablePrograms/ffmpeg-git-amd64-static/"
-alias ffmpeg=/home/YOUR_USERNAME/PortablePrograms/ffmpeg-git-amd64-static/ffmpeg
-alias ffprobe=/home/YOUR_USERNAME/PortablePrograms/ffmpeg-git-amd64-static/ffprobe
-alias qt-faststart=/home/YOUR_USERNAME/PortablePrograms/ffmpeg-git-amd64-static/qt-faststart
+export PATH="$PATH:/mnt/hdd2/PortablePrograms/ffmpeg-git-amd64-static/"
+alias ffmpeg=/mnt/hdd2/PortablePrograms/ffmpeg-git-amd64-static/ffmpeg
+alias ffprobe=/mnt/hdd2/PortablePrograms/ffmpeg-git-amd64-static/ffprobe
+alias qt-faststart=/mnt/hdd2/PortablePrograms/ffmpeg-git-amd64-static/qt-faststart
 
 # Command Line Internet Radio:
 # https://github.com/deep5050/radio-active.git
