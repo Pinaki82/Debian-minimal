@@ -1,0 +1,12 @@
+https://stackoverflow.com/questions/34856236/convert-mov-with-alpha-to-vp9-webm-with-alpha-using-ffmpeg
+
+ffmpeg -i input.mov -f webm -q:v 0 -crf 0 -preset ultrafast -c:v libvpx-vp9 -b:v 3M -acodec libvorbis -auto-alt-ref 0 -hide_banner -aspect 16:9 -s hd1080 output.webm
+
+
+VP8:
+
+ffmpeg -i input.mov -preset ultrafast -c:v libvpx -pix_fmt yuva420p -b:v 3M -an -auto-alt-ref 0 -hide_banner -map 0:v:0 -aspect 16:9 -s hd1080 output.webm
+
+with audio:
+
+ffmpeg -i input.mov -preset ultrafast -c:v libvpx -pix_fmt yuva420p -b:v 3M -acodec libvorbis -auto-alt-ref 0 -hide_banner -map 0:v:0 -map 1:a:0 -aspect 16:9 -s hd1080 output.webm
