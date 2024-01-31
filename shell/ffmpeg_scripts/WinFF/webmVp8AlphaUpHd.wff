@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- https://stackoverflow.com/questions/34856236/convert-mov-with-alpha-to-vp9-webm-with-alpha-using-ffmpeg -->
+<presets>
+  <webmVp8AlphaUpHd>
+    <label>upscale+/convert to 1080/25p 16:9 WEBM VP8 video format with alpha channel enabled, audio disabled</label>
+    <params>-preset ultrafast -c:v libvpx -pix_fmt yuva420p -b:v 3M -an -auto-alt-ref 0 -hide_banner -map 0:v:0 -aspect 16:9 -s hd1080</params>
+    <extension>webm</extension>
+    <category>WEBM</category>
+  </webmVp8AlphaUpHd>
+</presets>
