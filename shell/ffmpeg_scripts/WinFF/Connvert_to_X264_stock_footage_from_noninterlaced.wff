@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<presets>
-  <Convert_to_X264_stock_footage>
-    <label>Convert-to-X264-stock-footage-from-nonInterlaced-input</label>
-    <params>-c:v libx264 -q:v 0 -preset fast -crf 16</params>
-    <extension>mp4</extension>
-    <category>Video Editing-Intermediate</category>
-  </Convert_to_X264_stock_footage>
-</presets>

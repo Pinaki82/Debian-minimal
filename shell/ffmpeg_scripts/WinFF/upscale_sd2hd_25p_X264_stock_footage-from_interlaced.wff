@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<presets>
-  <Upscale_sd2fhd_25p_X264_stock_footage_from_interlaced>
-    <label>Upscale_sd2fhd_25p_X264_for_stock_footage_from_interlaced_input</label>
-    <params>-c:v libx264 -q:v 0 -preset fast -crf 16 -filter:v "yadif=0:-1:0, scale=trunc(iw/2)*2:trunc(ih/2)*2" -aspect 16:9 -s hd1080 -r 50000/2000</params>
-    <extension>mp4</extension>
-    <category>Video Editing-Intermediate</category>
-  </Upscale_sd2fhd_25p_X264_stock_footage_from_interlaced>
-</presets>

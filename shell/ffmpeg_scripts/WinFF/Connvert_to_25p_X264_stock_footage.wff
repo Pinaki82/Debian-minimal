@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<presets>
-  <Convert_to_25p_X264_stock_footage>
-    <label>Convert-to-25p-X264-stock-footage-from-interlaced-input</label>
-    <params>-c:v libx264 -q:v 0 -preset fast -crf 16 -filter:v "yadif=0:-1:0, scale=trunc(iw/2)*2:trunc(ih/2)*2" -r 50000/2000</params>
-    <extension>mp4</extension>
-    <category>Video Editing-Intermediate</category>
-  </Convert_to_25p_X264_stock_footage>
-</presets>

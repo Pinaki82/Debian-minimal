@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<presets>
-  <mjpeg>
-    <label>MJPEG-FHD-50i-to-25p</label>
-    <params>-c:v mjpeg -q:v 0 -crf 0 -preset ultrafast -filter:v "yadif=0:-1:1, scale=trunc(iw/2)*2:trunc(ih/2)*2" -c:a pcm_s16le -r 25</params>
-    <extension>AVI</extension>
-    <category>Video Editing-Intermediate</category>
-  </mjpeg>
-</presets>
