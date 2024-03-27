@@ -1,0 +1,70 @@
+10/8-bit-422/420-DNxHD-Avid
+
+https://askubuntu.com/questions/907398/how-to-convert-a-video-with-ffmpeg-into-the-dnxhd-dnxhr-format
+https://macilatthefront.blogspot.com/2018/12/tutorial-using-ffmpeg-for-dnxhddnxhr.html
+
+------------------------------------------------------------------------
+1080p:
+Frame size: 1920x1080p; bitrate: 365Mbps; pixel format: yuv422p10
+Frame size: 1920x1080p; bitrate: 240Mbps; pixel format: yuv422p
+------------------------------------------------------------------------
+Generic command (UHD/FHD/720P/SD):
+ffmpeg -i input -c:v dnxhd -filter:v "format=yuv422p10le" -profile:v dnxhr_hqx -b:v 746M -c:a pcm_s16le output.mov
+
+FHD: 10-bit YUV 4:2:2 progressive 25 fps:
+ffmpeg -i MOVI0002.avi -c:v dnxhd -filter:v "scale=1920:1080,fps=50000/2000,format=yuv422p10le" -profile:v dnxhr_hqx -b:v 240M -c:a pcm_s16le output.mov
+
+FHD: 8-bit YUV 4:2:0 progressive 25 fps:
+ffmpeg -i MOVI0002.avi -c:v dnxhd -filter:v "scale=1920:1080,fps=50000/2000,format=yuv420p" -profile:v dnxhr_hq -b:v 180M -c:a pcm_s16le output.mov
+
+UHD: 10-bit YUV 4:2:2 progressive 25 fps:
+ffmpeg -i MOVI0002.avi -c:v dnxhd -filter:v "scale=4096:2160,fps=50000/2000,format=yuv422p10le" -profile:v dnxhr_hqx -b:v 746M -c:a pcm_s16le output.mov
+
+UHD: 8-bit YUV 4:2:0 progressive 25 fps:
+ffmpeg -i MOVI0002.avi -c:v dnxhd -filter:v "scale=4096:2160,fps=50000/2000,format=yuv420p" -profile:v dnxhr_hq -b:v 512M -c:a pcm_s16le output.mov
+
+Resolution and Framerate from the source video:
+10-bit YUV 4:2:2 progressive:
+ffmpeg -i MOVI0002.avi -c:v dnxhd -filter:v "format=yuv422p10le" -profile:v dnxhr_hqx -b:v 746M -c:a pcm_s16le output.mov
+8-bit YUV 4:2:0 progressive:
+ffmpeg -i MOVI0002.avi -c:v dnxhd -filter:v "format=yuv420p" -profile:v dnxhr_hq -b:v 512M -c:a pcm_s16le output.mov
+
+From source recoded in a variable framerate (convert to 24p):
+10-bit YUV 4:2:2 progressive:
+ffmpeg -i MOVI0002.avi -c:v dnxhd -filter:v "fps=48000/2000,format=yuv422p10le" -profile:v dnxhr_hqx -b:v 746M -c:a pcm_s16le output.mov
+ffmpeg -i MOVI0002.avi -c:v dnxhd -filter:v "fps=48000/2000,format=yuv420p" -profile:v dnxhr_hq -b:v 512M -c:a pcm_s16le output.mov
+
+
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+
+Here's a detailed overview of using the DNxHD/DNxHR codec
+in FFmpeg to work with 10-bit video files which provides an
+excellent solution that balances quality, file size, and
+editing performance.
+
+Some key takeaways:
+
+- DNxHD/DNxHR is a family of codecs developed by Avid that
+  supports multiple bit depths (8-bit and 10-bit) and
+  chroma subsampling (4:2:2 and 4:2:0).
+- Using the DNxHR HQX profile allows encoding 10-bit 4:2:2 video
+  at reasonably high bitrates (e.g. 240Mbps for 1080p 4:2:2 10-bit)
+  while preserving quality.
+- The DNxHR HQ profile can be used for 8-bit 4:2:0 video
+  at lower bitrates (e.g. 180Mbps for 1080p 4:2:0 8-bit).
+- Various resolutions (1080p, 4K) and
+  framerates are supported, allowing flexibility.
+- The file sizes, while not as small as more compressed codecs,
+  are manageable and editing these DNx files seems smooth on
+  low-end systems (tested on
+  my Linux Video Editing Rig,
+  4-th Gen Intel(R) Core(TM) i5-4670 CPU @ 3.40GHz,
+  Total Memory: GDDR3 11689552 KiB).
+
+Working with camera codecs or fully
+uncompressed 10-bit video (e.g., the FFV1 codec) can be very taxing
+on the computer, so having an intermediate codec like DNxHD
+that preserves quality while being edit-friendly
+is extremely useful for anyone looking to work with higher bit depths
+on systems with limited processing power.
