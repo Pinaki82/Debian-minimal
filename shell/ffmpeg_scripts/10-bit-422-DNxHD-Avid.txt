@@ -29,7 +29,7 @@ ffmpeg -i MOVI0002.avi -c:v dnxhd -filter:v "format=yuv422p10le" -profile:v dnxh
 8-bit YUV 4:2:0 progressive:
 ffmpeg -i MOVI0002.avi -c:v dnxhd -filter:v "format=yuv420p" -profile:v dnxhr_hq -b:v 512M -c:a pcm_s16le output.mov
 
-From source recoded in a variable framerate (convert to 24p):
+From sources recorded at a variable framerate (convert to 24p):
 10-bit YUV 4:2:2 progressive:
 ffmpeg -i MOVI0002.avi -c:v dnxhd -filter:v "fps=48000/2000,format=yuv422p10le" -profile:v dnxhr_hqx -b:v 746M -c:a pcm_s16le output.mov
 ffmpeg -i MOVI0002.avi -c:v dnxhd -filter:v "fps=48000/2000,format=yuv420p" -profile:v dnxhr_hq -b:v 512M -c:a pcm_s16le output.mov
