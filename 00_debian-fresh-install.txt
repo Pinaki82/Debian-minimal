@@ -973,6 +973,19 @@ sudo snap install vlc
 sudo snap install ffdiaporama-c18
 # usage snap run kompare .bashrc .bashrc2
 
+# HDMI-2-USB
+# https://snapcraft.io/hdmi-usb-dongle
+sudo snap install hdmi-usb-dongle
+# Usage:
+# sudo snap connect hdmi-usb-dongle:camera
+# sudo snap connect hdmi-usb-dongle:hardware-observe
+# sudo snap connect hdmi-usb-dongle:audio-record
+
+# Webcam
+# https://www.makeuseof.com/best-camera-apps-linux/
+# https://www.linuxlinks.com/webcam/
+sudo apt install cheese
+
 Uninstall a snap package:
 https://askubuntu.com/questions/1130791/how-to-uninstall-a-package-installed-from-snapcraft
 sudo snap remove --purge snapname
