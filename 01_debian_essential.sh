@@ -555,6 +555,10 @@ yes | sudo apt install xzgv && \
 
 yes | sudo apt install gimp gimp-data gimp-data-extras gimp-gmic gimp-gutenprint gimp-help-common gimp-help-en-gb gimp-lensfun gimp-plugin-registry gimp-texturize icc-profiles icc-profiles-free gegl gtkam-gimp xzgv \
 
+# Converseen: A free cross-platform batch image processor. https://converseen.fasterland.net/
+
+yes | sudo apt install converseen && \
+
 # pnpm package manager:
 echo "If you've executed the first install script 01_debian_essential.sh already, you have pnpm installed on your system. (yes I did = 1. No, I did not = 0)"
 read choice
