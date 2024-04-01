@@ -1391,6 +1391,18 @@ yes | sudo apt install smplayer && \
 # YouTube-SMTube (END)
 # =================================================================
 
+# zuluCrypt (*Linux only*) - A simple, feature rich and powerful solution for hard drives encryption.
+#
+# https://mhogomchungu.github.io/zuluCrypt/
+# https://github.com/mhogomchungu/zuluCrypt
+# zuluCrypt is currently Linux only and it does hard drives encryption and it can manage PLAIN dm-crypt volumes,
+#   LUKS encrypted volumes, TrueCrypt encrypted volumes,
+#   VeraCrypt encrypted volumes and Microsoft’s BitLocker volumes.
+# zuluCrypt can manage encrypted volumes that are hosted in image files, lvm, mdraid, hard drives, usb sticks or any other block device.
+# zuluCrypt can also encrypt stand alone files (zuluCrypt menu -> zC -> encrypt a file).
+
+yes | sudo apt install zulucrypt-gui zulucrypt-cli zulumount-gui libzulucrypt-plugins && \
+
 # VeraCrypt
 # https://www.veracrypt.fr/en/Downloads.html
 yes | sudo apt install libwxgtk3.2-1 \

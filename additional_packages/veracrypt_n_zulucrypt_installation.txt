@@ -51,8 +51,7 @@ yes | sudo apt install -f
 # Use what you absolutely need.
 # =================================================================
 
-#sudo apt install zulucrypt-gui
-#sudo apt install zulucrypt-cli
+#sudo apt install zulucrypt-gui zulucrypt-cli zulumount-gui libzulucrypt-plugins
 
 # =================================================================
 # (END) zuluCrypt
