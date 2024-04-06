@@ -1,0 +1,19 @@
+See disk details like manufacturer info in Linux.
+https://unix.stackexchange.com/questions/5085/how-to-see-disk-details-like-manufacturer-in-linux
+
+hwinfo --disk | grep usb
+
+      Device Files: /dev/sdd,
+
+hwinfo --disk | grep 'Device Files'
+
+      Device Files: /dev/sdd, /dev/disk/by-path/pci-0xxxxx, /dev/disk/by-diskseq/xx, /dev/disk/by-id/usb-JetFlash_Transcend_8GB_
+
+
+Disk drive serial number command:
+https://unix.stackexchange.com/questions/121757/harddisk-serial-number-from-terminal
+
+/dev/sdd
+
+udevadm info --query=all --name=/dev/sdd | grep ID_SERIAL
+
