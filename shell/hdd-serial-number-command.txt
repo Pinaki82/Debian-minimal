@@ -17,3 +17,23 @@ https://unix.stackexchange.com/questions/121757/harddisk-serial-number-from-term
 
 udevadm info --query=all --name=/dev/sdd | grep ID_SERIAL
 
+
+NOTE: CID from SD Cards cannot be obtained with improper hardware
+such as internal memory card slots in low-end PCs
+that are connected via the USB Data BUS and external
+memory card readers designed to be connected
+through USB ports.
+The CID of the SD card will likely
+be intercepted by the reader.
+Internal Card Reader Slots that are connected
+directly through the PCI bus (or IDE bus) (expected
+to be found in high-end prebuilt PCs
+from reputed manufacturers) should work.
+
+> Source:
+>
+> This will not work through a USB card reader because the command to retrieve the card information is intercepted and not understood by card readers. Not all computers with built-in card slots will work, some internal card readers are connected through a USB bus.
+>
+> https://askubuntu.com/questions/794690/how-to-get-sd-card-serial-in-ubuntu-16-04
+>
+> https://www.cameramemoryspeed.com/sd-memory-card-faq/reading-sd-card-cid-serial-psn-internal-numbers/
