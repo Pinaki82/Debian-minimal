@@ -174,3 +174,16 @@ sudo systemctl restart ntpd
 sudo systemctl status ntpd
 ntpq -p
 date
+
+https://stackoverflow.com/questions/12973777/how-to-run-a-shell-script-at-startup
+https://operavps.com/docs/run-command-after-boot-in-linux/
+
+crontab -e
+
+Add:
+
+@reboot sudo systemctl restart ntpd
+
+Reboot, then verify:
+
+ps -ef
