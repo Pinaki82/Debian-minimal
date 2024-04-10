@@ -1008,6 +1008,8 @@ flatpak install flathub org.libreoffice.LibreOffice
 flatpak install flathub com.github.tchx84.Flatseal
 # nomacs - a free, open source image viewer https://github.com/nomacs/nomacs
 flatpak install flathub org.nomacs.ImageLounge
+# Blanket - Listen to ambient sounds (White Noise Generator) https://github.com/rafaelmardojai/blanket
+flatpak install flathub com.rafaelmardojai.Blanket
 # VidCutter - Media Cutter + Joiner
 flatpak install com.ozmartians.VidCutter # Doesn't work with large video files
 # KDE Non-Linear Video Editor: Kdenlive
