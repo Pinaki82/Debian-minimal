@@ -1,0 +1,16 @@
+Anki: Powerful, intelligent flash cards.
+
+https://apps.ankiweb.net/
+https://docs.ankiweb.net/platform/linux/installing.html
+
+sudo apt install libxcb-xinerama0 libxcb-cursor0 libnss3
+sudo apt install zstd
+cd Downloads/
+tar xaf anki-24.04.1-linux-qt6.tar.zst
+cd anki-24.04.1-linux-qt6/
+sudo ./install.sh
+
+(`trash` must be installed on the system. `sudo apt install trash-cli`)
+
+trash anki-24.04.1-linux-qt6/
+trash anki-24.04.1-linux-qt6.tar.zst
