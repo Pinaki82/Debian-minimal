@@ -14,3 +14,19 @@ sudo ./install.sh
 
 trash anki-24.04.1-linux-qt6/
 trash anki-24.04.1-linux-qt6.tar.zst
+
+
+---
+
+AI resources to generate flashcards:
+
+PDF Summeriser:
+https://app.textcortex.com/user/dashboard
+https://www.chatpdf.com/
+
+Wikipedia Article Summeriser:
+https://www.wikiwand.com/
+
+Flashcards Makers:
+https://www.pdf2-anki.com/
+https://ankigpt.help/
