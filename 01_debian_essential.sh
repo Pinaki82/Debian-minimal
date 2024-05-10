@@ -99,6 +99,24 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/mast
 yes | sudo npm i -g bash-language-server && \
 # bash-language-server --help
 # ------------------------------------------------------------------------------
+# Fish-shell-like autocompletion in Bash-shell
+# Ecosia: fish shell like autocomplete in bash
+# https://unix.stackexchange.com/questions/109366/does-bash-have-similar-features-such-as-fishs-autosuggestions-and-highlighting
+# https://github.com/akinomyoga/ble.sh
+# https://github.com/dvorka/hstr
+
+# akinomyoga/ble.sh
+# requirement: trash-cli
+
+yes | sudo apt install trash-cli && \
+
+git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyoga/ble.sh.git && \
+make -C ble.sh install PREFIX=~/.local && \
+echo 'source ~/.local/share/blesh/ble.sh' >> ~/.bashrc && \
+source ~/.bashrc && \
+source ~/.bash_aliases && \
+trash ble.sh && \
+# ------------------------------------------------------------------------------
 # AppImage support:
 yes | sudo apt install libfuse2 && \
 # ------------------------------------------------------------------------------
