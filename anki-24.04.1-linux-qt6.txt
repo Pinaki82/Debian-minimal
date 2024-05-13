@@ -18,6 +18,32 @@ trash anki-24.04.1-linux-qt6.tar.zst
 
 ---
 
+Add-ons:
+
+Add Hyperlink
+https://ankiweb.net/shared/info/318752047
+318752047
+
+Button Colours (Good, Again)
+https://ankiweb.net/shared/info/2494384865
+2494384865
+
+Image Occlusion Enhanced
+https://ankiweb.net/shared/info/1374772155
+1374772155
+
+Markdown input
+https://ankiweb.net/shared/info/904999275
+904999275
+
+Multiple Choice for Anki
+https://ankiweb.net/shared/info/1566095810
+1566095810
+
+
+---
+
+
 AI resources to generate flashcards:
 
 PDF Summeriser:
