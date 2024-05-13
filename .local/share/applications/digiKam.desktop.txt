@@ -1,0 +1,12 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+[Desktop Entry]
+Type=Application
+Name=digiKam
+Comment=Professional Photo Management with the Power of Open Source
+Icon=/home/YOURUSERNAME/.local/share/icons/digikam_oxygen.svg
+# https://www.digikam.org/
+# https://www.digikam.org/download/
+Exec=/mnt/hdd2/PortablePrograms/digiKam-8.3.0-x86-64.appimage
+Terminal=false
+Categories=;
