@@ -40,6 +40,11 @@ Multiple Choice for Anki
 https://ankiweb.net/shared/info/1566095810
 1566095810
 
+extended editor for field (for tables, search&replace, ...)
+This add-on loads the content of a field from the editor
+into a new dialog with a wysiwyg html editor named tinymce.
+https://ankiweb.net/shared/info/805891399
+805891399
 
 ---
 
