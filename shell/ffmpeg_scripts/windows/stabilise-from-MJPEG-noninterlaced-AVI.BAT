@@ -7,7 +7,7 @@ REM # https://www.paulirish.com/2021/video-stabilization-with-ffmpeg-and-vidstab
 REM # https://www.marache.net/post/shake-reduction-ffmpeg.html
 REM # The first pass ('detect') generates stabilization data and saves to `transforms.trf`
 REM # The `-f null -` tells ffmpeg there's no output video file
-del $transform_file
+del transform_file
 
 REM ===================================================================
 REM Variable Name/File Name: 00000.MTS (Example)
@@ -28,7 +28,7 @@ set /p filename="Type the filename with extension: "
 echo filename: %filename%
 set newfilename=%filename%.AVI
 echo newfilename: %newfilename%
-ffmpeg -i %filename% -filter:v "yadif=0:-1:0, scale=trunc(iw/2)*2:trunc(ih/2)*2" -c:a copy -c:v ffv1 -level 3 -threads 8 -coder 1 -context 1 -g 1 -slices 24 -slicecrc 1 -q:v 0 -crf 0 -preset ultrafast %newfilename%
+copy %filename% %newfilename%
 
 @ECHO OFF
 REM ===================================================================
@@ -55,7 +55,7 @@ ffmpeg -i %newfilename% -i %newfilename%-stabilised.AVI -c:v mjpeg -pix_fmt yuvj
 REM =========OPTIONAL======================
 @ECHO ON
 
-del $transform_file
+del transform_file
 del %newfilename%
 
 PAUSE

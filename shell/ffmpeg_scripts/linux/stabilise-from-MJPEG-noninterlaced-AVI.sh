@@ -28,7 +28,7 @@ convrtd_file_s_extnsn='.AVI'
 newfilename="${filename}${convrtd_file_s_extnsn}"
 echo newfilename: $newfilename
 
-ffmpeg -i $filename -filter:v "yadif=0:-1:0, scale=trunc(iw/2)*2:trunc(ih/2)*2" -c:a copy -c:v ffv1 -level 3 -threads 8 -coder 1 -context 1 -g 1 -slices 24 -slicecrc 1 -q:v 0 -crf 0 -preset ultrafast $newfilename
+cp $filename $newfilename
 
 # ===================================================================
 
