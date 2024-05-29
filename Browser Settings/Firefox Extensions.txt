@@ -1,17 +1,17 @@
 LibreWolf/Firefox:
 ----------------
-Avast
+Web Archives - Armin Sebastian
 Bitwarden
-Ecosia
-Free Download Manager
+Free Download Manager - freedownloadmanager.org
 Grammarly
-Krypton Authenticator
-Facebook Container
-Cookie Quick Manager
-uBlock Origin
-Dark Reader
-Privacy Badger
-Regrets Reporter Mozilla
+Krypton Authenticator - krypt.co
+Facebook Container - Mozilla Firefox
+Cookie Quick Manager - Ysard
+uBlock Origin - Raymond Hill
+Dark Reader - Dark Reader Ltd
+Privacy Badger - EFF Technologists
+Regrets Reporter Mozilla - Mozilla Firefox
+Wikiwand: Wikipedia Modernized - Wikiwand
 
 
 

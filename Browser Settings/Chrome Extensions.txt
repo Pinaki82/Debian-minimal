@@ -2,7 +2,6 @@ Brave:
 ----------------
 Avast
 Bitwarden
-Ecosia
 Grammarly
 Privacy Badger
 uBlock Origin

@@ -7,17 +7,26 @@ https://addons.mozilla.org/en-US/firefox/
 Recommended by Pocket
 https://getpocket.com/explore
 
-VPN_IP
-VPN_IP.html
+---
+Win/Lin (depends on the location of the files)
+  VPN_IP
+  VPN_IP.html
 
-Check
-Check.html
+  Check
+  Check.html
 
-Search
-Search.html
+  Search
+  Search.html
 
-VirusTotal
-https://www.virustotal.com
+  Text Input with Auto-Adding Backslash
+  Debian-minimal/PortablePrograms/llama.cpp/formatted-copy.html
+---
+
+Brave
+https://search.brave.com/
+
+Google
+https://www.google.com/
 
 Papaly
 https://papaly.com
@@ -25,14 +34,14 @@ https://papaly.com
 Atavi
 https://m.atavi.com
 
-Google
-https://www.google.com/
+VirusTotal
+https://www.virustotal.com
+
+MS Office Home
+https://www.office.com/?auth=1
+
+OneDrive
+https://onedrive.live.com/
 
 Google Calendar
 https://calendar.google.com/calendar/
-
-Microsoft Office Home
-https://www.office.com/?auth=1
-
-OpenAI ChatGPT
-https://chat.openai.com/chat

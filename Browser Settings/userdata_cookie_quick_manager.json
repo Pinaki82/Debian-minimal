@@ -1,5 +1,383 @@
 {
   "auto_actualize_checkbox": true,
+  "default": [
+    {
+      "expression": "*.accounts.google.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "8QZ4Rzb-t"
+    },
+    {
+      "expression": "*.amazon.in",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "8HXfNzMQoB"
+    },
+    {
+      "expression": "*.app.grammarly.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "pVmh8KA_oJ"
+    },
+    {
+      "expression": "*.atavi.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "jbOCKenBw"
+    },
+    {
+      "expression": "*.dropbox.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "6-CB2jvMU"
+    },
+    {
+      "expression": "*.ecosia.org",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "S-zgGax4L"
+    },
+    {
+      "expression": "*.facebook.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "9uVaiQs5N"
+    },
+    {
+      "expression": "*.flipkart.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "C87IsSxGk"
+    },
+    {
+      "expression": "*.getpocket.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "qlk31p6z_"
+    },
+    {
+      "expression": "*.gingersoftware.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "6oLzoQysn"
+    },
+    {
+      "expression": "*.github.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "PgpfrmpMQJ"
+    },
+    {
+      "expression": "*.google.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "Cog_97JGO"
+    },
+    {
+      "expression": "*.grammarly.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "iymKM4UDU"
+    },
+    {
+      "expression": "*.languagetool.org",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "SKSdWXrm5"
+    },
+    {
+      "expression": "*.linguix.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "UNH1bYo_0O"
+    },
+    {
+      "expression": "*.live.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "R5H2--xd0"
+    },
+    {
+      "expression": "*.login.live.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "rg5tHU1D1"
+    },
+    {
+      "expression": "*.microsoft.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "U7XKXAOxt"
+    },
+    {
+      "expression": "*.office.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "66gyQl0Qv"
+    },
+    {
+      "expression": "*.open.spotify.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "5xKy-APK_"
+    },
+    {
+      "expression": "*.outlook.live.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "_POGGDDyK"
+    },
+    {
+      "expression": "*.papaly.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "Zhn6JRBg8"
+    },
+    {
+      "expression": "*.spotify.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "2QoZQyaRB"
+    },
+    {
+      "expression": "*.virustotal.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "73zTD7CXlE"
+    },
+    {
+      "expression": "*.youtube.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "iL-pyAvAHq"
+    },
+    {
+      "expression": "accounts.google.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "P_RswIk65"
+    },
+    {
+      "expression": "amazon.in",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "pSuohhEs7"
+    },
+    {
+      "expression": "app.grammarly.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "DTbO5RJvn"
+    },
+    {
+      "expression": "atavi.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "GDZ-N2obh"
+    },
+    {
+      "expression": "dropbox.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "CZ6o7hb3K"
+    },
+    {
+      "expression": "ecosia.org",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "dBx2NbmqX"
+    },
+    {
+      "expression": "facebook.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "WzJa1p2YA"
+    },
+    {
+      "expression": "flipkart.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "3j5r75O9I"
+    },
+    {
+      "expression": "getpocket.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "1swT81YNs"
+    },
+    {
+      "expression": "gingersoftware.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "c31UVleOt"
+    },
+    {
+      "expression": "github.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "ZGdelIfOy"
+    },
+    {
+      "expression": "google.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "vn46UOwjK"
+    },
+    {
+      "expression": "languagetool.org",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "cNdsMutoi"
+    },
+    {
+      "expression": "linguix.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "Y3XuhtOcO"
+    },
+    {
+      "expression": "login.live.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "C7Ci8j-df"
+    },
+    {
+      "expression": "microsoft.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "oMRIh9mCO"
+    },
+    {
+      "expression": "office.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "MLq_TtydO"
+    },
+    {
+      "expression": "open.spotify.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "YmSbXoAqu9"
+    },
+    {
+      "expression": "outlook.live.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "k0CAMdasT"
+    },
+    {
+      "expression": "papaly.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "EbtvBT1KD"
+    },
+    {
+      "expression": "virustotal.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "yQjM5N5hG"
+    },
+    {
+      "expression": "youtube.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "lJDUwB60c"
+    }
+  ],
   "delete_all_on_restart": true,
   "protected_cookies": {
     ".account.microsoft.com": [
@@ -57,7 +435,9 @@
       "1P_JAR",
       "SIDCC",
       "__Secure-1PSIDCC",
-      "__Secure-3PSIDCC"
+      "__Secure-3PSIDCC",
+      "__Secure-1PSIDTS",
+      "__Secure-3PSIDTS"
     ],
     ".docs.google.com": [
       "S",
@@ -181,7 +561,8 @@
       "redirect_location",
       "funnelType",
       "browser_info",
-      "experiment_groups"
+      "experiment_groups",
+      "profileToken"
     ],
     "capi.grammarly.com": [
       "sticky",
@@ -268,7 +649,8 @@
     ],
     "accounts.spotify.com": [
       "__Host-device_id",
-      "__Host-sp_csrf_sid"
+      "__Host-sp_csrf_sid",
+      "remember"
     ],
     "support.mozilla.org": [
       "csrftoken",
@@ -342,7 +724,11 @@
       "ST-1b",
       "SIDCC",
       "__Secure-1PSIDCC",
-      "__Secure-3PSIDCC"
+      "__Secure-3PSIDCC",
+      "YSC",
+      "VISITOR_PRIVACY_METADATA",
+      "__Secure-1PSIDTS",
+      "__Secure-3PSIDTS"
     ],
     ".microsoft.github.io": [
       "MSCC"
@@ -369,7 +755,10 @@
       "ECCC",
       "ECFG",
       "lastReadNotificationTimestamp",
-      "ECSAI"
+      "ECSAI",
+      "cf_clearance",
+      "ECUNL",
+      "_cfuvid"
     ],
     "c.happycodings.com": [
       "ezds",
@@ -395,7 +784,9 @@
       "userid",
       "p.DisplayCulture",
       "OH.DCAffinity",
-      "PersonalizationCookie"
+      "PersonalizationCookie",
+      "OH.SID",
+      "ShCLSessionID"
     ],
     ".office.com": [
       "MUID"
@@ -467,7 +858,9 @@
       "experiment_ginger_132H2W59d",
       "_ramjsShID",
       "authToken",
-      "dbTable"
+      "dbTable",
+      "gingerdata",
+      "rumjs.geoloc.c"
     ],
     ".www.ecosia.org": [
       "ECHA",
@@ -498,6 +891,147 @@
       "toppage-locale",
       "toppage-locale-tmp",
       "referrer-real"
+    ],
+    ".accounts.shutterfly.com": [
+      "CognitoIdentityServiceProvider.t8oiif52mece6bleeas2pof0n.appugupta007%40gmail.com.refreshToken",
+      "CognitoIdentityServiceProvider.t8oiif52mece6bleeas2pof0n.appugupta007%40gmail.com.clockDrift",
+      "CognitoIdentityServiceProvider.t8oiif52mece6bleeas2pof0n.LastAuthUser",
+      "CognitoIdentityServiceProvider.t8oiif52mece6bleeas2pof0n.appugupta007%40gmail.com.accessToken",
+      "CognitoIdentityServiceProvider.t8oiif52mece6bleeas2pof0n.appugupta007%40gmail.com.idToken"
+    ],
+    ".accounts.spotify.com": [
+      "__Secure-TPASESSION",
+      "sp_tr",
+      "sp_sso_csrf_token"
+    ],
+    "www.zee5.com": [
+      "country",
+      "display-language",
+      "zee5",
+      "content-language",
+      "state",
+      "user-type",
+      "refreshToken",
+      "xaccesstoken"
+    ],
+    ".www.zee5.com": [
+      "G_ENABLED_IDPS"
+    ],
+    ".zee5.com": [
+      "_iidt",
+      "_vid_t",
+      "ssoToken"
+    ],
+    ".arduino.cc": [
+      "__cf_bm",
+      "_iub_cs-11225532"
+    ],
+    ".cursor.so": [
+      "ph_phc_Rbh7SDD9nCGKRBOqjoiijTSAW8WMAJpVQEs6hGEPqZp_posthog"
+    ],
+    "www.cursor.so": [
+      "appSession"
+    ],
+    "open-assistant.io": [
+      "__Host-next-auth.csrf-token",
+      "NEXT_LOCALE",
+      "__Secure-next-auth.callback-url",
+      "chakra-ui-color-mode",
+      "__Secure-next-auth.session-token"
+    ],
+    "auth0.openai.com": [
+      "did",
+      "did_compat",
+      "auth0",
+      "auth0_compat"
+    ],
+    ".huggingface.co": [
+      "token",
+      "aws-waf-token"
+    ],
+    "huggingface.co": [
+      "hf-chat"
+    ],
+    ".poe.com": [
+      "__cf_bm",
+      "cf_clearance"
+    ],
+    "poe.com": [
+      "p-b",
+      "p-lat"
+    ],
+    ".minds.com": [
+      "__cf_bm",
+      "socket_jwt",
+      "minds_sp",
+      "ph_phc_GBvowRy7KExnom0MfTPgibtCdP4ZRlRb0szn1fLSCeU_posthog"
+    ],
+    "cdn.minds.com": [
+      "experiments_id",
+      "XSRF-TOKEN"
+    ],
+    "www.minds.com": [
+      "experiments_id",
+      "mwa",
+      "seen-entities",
+      "cw_conversation",
+      "hl",
+      "minds_sess",
+      "XSRF-TOKEN",
+      "canary",
+      "minds_pseudoid",
+      "cw_user_hTsptQ5idnWS11PVaq1EbT1n",
+      "_sp_id.e00e",
+      "_sp_ses.e00e"
+    ],
+    ".claude.ai": [
+      "__cf_bm",
+      "cf_clearance",
+      "__ssid",
+      "intercom-session-lupk8zyo",
+      "intercom-device-id-lupk8zyo"
+    ],
+    "claude.ai": [
+      "sessionKey",
+      "lastActiveOrg",
+      "activitySessionId"
+    ],
+    ".quillbot.com": [
+      "__cf_bm",
+      "AMP_MKTG_6e403e775d",
+      "AMP_6e403e775d"
+    ],
+    "quillbot.com": [
+      "qdid",
+      "g_state",
+      "connect.sid",
+      "authenticated",
+      "premium",
+      "acceptedPremiumModesTnc",
+      "abID",
+      "abIDV2",
+      "useridtoken",
+      "anonID"
+    ],
+    ".twitter.com": [
+      "guest_id",
+      "gt",
+      "_twitter_sess",
+      "kdt",
+      "auth_token",
+      "ct0",
+      "guest_id_ads",
+      "guest_id_marketing",
+      "personalization_id",
+      "twid",
+      "att"
+    ],
+    "twitter.com": [
+      "g_state",
+      "lang"
+    ],
+    ".odysee.com": [
+      "auth_token"
     ]
   },
   "skin": "default"
