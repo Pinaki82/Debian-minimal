@@ -21,6 +21,56 @@ Win/Lin (depends on the location of the files)
   Text Input with Auto-Adding Backslash
   Debian-minimal/PortablePrograms/llama.cpp/formatted-copy.html
 ---
+AI
+  ChatGPT
+  https://chat.openai.com/chat
+
+  Claude.ai
+  https://claude.ai/chats
+
+  Gemini
+  https://gemini.google.com/
+
+  HuggingChat
+  https://huggingface.co/chat/
+
+  Chat with Open Large Language Models
+  https://chat.lmsys.org/
+
+  INFERMATIC
+  https://infermatic.ai/
+
+  Poe
+  https://poe.com/
+
+  Language
+          Paraphrasing Tool - QuillBot AI
+          https://quillbot.com/
+
+  Summeriser
+          TextCortex AI - Generate Blog Posts, Product Descriptions, Ad Copies and more
+          https://app.textcortex.com/user/dashboard
+
+          ChatPDF - Chat with any PDF!
+          https://www.chatpdf.com/
+
+          PDF2Anki | Save Hours Making Flashcards Manually Everyday
+          https://www.pdf2-anki.com/
+
+          AnkiGPT - Turn lecture slides into flashcards
+          https://ankigpt.help/
+
+  Image-Upscale
+          iLoveIMG - Free AI Image Upscaling Tool - Increase resolution of your images
+          https://www.iloveimg.com/upscale-image
+
+          PixelBin-upscale.media - AI Image Upscaler - Enlarge & Enhance Your Photos for Free - Upscale.media
+          https://www.upscale.media/
+
+  Image-Generation
+          Discover and Generate AI Art | OpenArt
+          https://openart.ai/discovery
+---
 
 Brave
 https://search.brave.com/
