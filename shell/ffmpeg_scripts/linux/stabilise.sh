@@ -59,3 +59,9 @@ ffmpeg -i $newfilename -i $newfilename-stabilised.AVI -c:v mjpeg -pix_fmt yuvj42
 rm transform_file
 rm $newfilename
 
+# =========(OPTIONAL) AUTO-RENAME STABILISED VIDEO======================
+# =========Required: 'trash-cli'. yes | sudo apt install trash-cli =====
+
+# trash $filename
+# mv $stabilised_vdo $filename
+
