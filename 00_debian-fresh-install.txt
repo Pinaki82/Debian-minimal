@@ -433,6 +433,41 @@ Whisker Menu -> Settings -> Settings Manager ->
 -> Security [TAB] -> Automatically lock the session: Never. Lock screen when the system is going to sleep [checked].
 
 
+------Keyboard shortcuts to increase or decrease volume.-------------------------------------------------
+https://unix.stackexchange.com/questions/342554/how-to-enable-my-keyboards-volume-keys-in-xfce/412926#412926
+https://unix.stackexchange.com/questions/355665/how-to-increase-or-decrease-volume-in-xfce-with-keyboard-shortcuts
+
+Settings->Keyboard->Application Shortcuts and bind
+the volume up and volume down keys
+
+For PulseAudio:
+
+edited Jul 27, 2022 at 1:03
+ZiyadCodes
+
+answered Dec 25, 2017 at 9:58
+Sebastian
+
+req: xfce4-pulseaudio-plugin
+req: You'll need a keyboard with a Numeric Key Panel (Number Dial Keys).
+
+# raise volume by each 5%
+pactl -- set-sink-volume @DEFAULT_SINK@ +5%
+# WINDOWS s +
+# Will show: Super+KP +
+
+# reduce volume by each 5%
+pactl set-sink-volume @DEFAULT_SINK@ -5%
+# WINDOWS s -
+# Will show: Super+KP -
+
+# mute/unmute audio
+pactl set-sink-mute @DEFAULT_SINK@ toggle
+# WINDOWS s .
+# Will show: Super+KP .
+-------------------------------------------------------------------------
+
+
 Snap and Flatpak:
 Synaptic Package Manager:
 yes | sudo apt install synaptic
