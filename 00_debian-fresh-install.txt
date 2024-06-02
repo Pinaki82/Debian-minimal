@@ -368,6 +368,16 @@ Range (min-max):
 Appears if selection contains:
 Directories ** (CHECK)
 
+Name: Mediainfo-GUI
+Description: technical and tag information about a video or audio file
+Submenu:
+Command: mediainfo-gui
+Appearance Conditions TAB:
+File Pattern: *
+Range (min-max): *
+Appears if selection contains:
+Directories ** (CHECK)
+
 Find the XFCE Dock at the bottom of the screen.
 Display TAB -> Measurements -> Automatically increase the length (CHECK)
 Items TAB -> Add (+) -> Window Buttons
