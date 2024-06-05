@@ -42,6 +42,13 @@ REM # The second pass ('transform') uses the .trf and creates the new stabilised
 ffmpeg -i %newfilename% -filter:v vidstabtransform=zoom=3.5:relative=1:smoothing=55:input="transform_file":interpol=bicubic -c:v mjpeg -pix_fmt yuvj420p -q:v 0 -crf 0 -preset ultrafast -c:a pcm_s16le -ar 48000 -ac 2 -ab 384k -preset fast %newfilename%-stabilised.AVI
 
 @ECHO OFF
+REM Ultra/Extra/Normal/Mild
+REM stepsize=15/20/25/30
+REM zoom=3.5/2/1/0.7 smoothing=55/35/25/20
+@ECHO ON
+
+
+@ECHO OFF
 REM =========OPTIONAL======================
 @ECHO ON
 

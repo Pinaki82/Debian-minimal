@@ -41,6 +41,10 @@ echo stabilised_vdo: $stabilised_vdo
 
 ffmpeg -i $newfilename -filter:v vidstabtransform=zoom=3.5:relative=1:smoothing=55:input="transform_file":interpol=bicubic -c:v mjpeg -pix_fmt yuvj420p -q:v 0 -crf 0 -c:a pcm_s16le -ar 48000 -ac 2 -ab 384k -preset ultrafast $stabilised_vdo
 
+# Ultra/Extra/Normal/Mild
+# stepsize=15/20/25/30
+# zoom=3.5/2/1/0.7 smoothing=55/35/25/20
+
 # =========OPTIONAL======================
 vstacked_vid_extnsn='-stacked.avi'
 hstacked_vid_extnsn='-sxs.avi'
