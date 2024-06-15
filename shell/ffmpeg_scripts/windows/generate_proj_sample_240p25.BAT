@@ -43,7 +43,7 @@ set path="C:\Program Files\ffmpeg-20160522-git-566be4f-win64-shared\bin"; %path%
 
 set /p filename="Type the filename with extension: "
 echo filename: %filename%
-set newfilename=%filename%.-480p.mp4
+set newfilename=%filename%.-240p.mp4
 echo newfilename: %newfilename%
 
 ffmpeg -hwaccel dxva2 -i %filename% -c:v libx264 -q:v 0 -preset slower -crf 22 -profile:v main -level:v 3.1 -s 428x240 -r 25 %newfilename%
