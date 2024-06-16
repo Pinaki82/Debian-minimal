@@ -19,7 +19,57 @@ rm transform_file
 
 echo "Type the filename with extension: (Press TAB to autocomplete.) $1"
 filename=$1
-echo filename: $filename
+echo "filename: $filename"
+
+if [ -z "$filename" ]; then
+  echo "No filename. The program will Exit!"
+  sleep 1
+  exit
+fi
+
+echo "Four stabilisation modes are available."
+echo "1. Mild"
+echo "2. Normal (recommended)"
+echo "3. Extra"
+echo "4. Ultra"
+echo "Choose one option from above:"
+
+read -p "Enter mode (1-4): " mode
+
+case "$mode" in
+  1)
+    echo "stepsize=30, zoom=0.7, smoothing=20"
+    stepsize=30
+    zoom=0.7
+    smoothing=20
+    ;;
+  2)
+    echo "stepsize=25, zoom=1, smoothing=25"
+    stepsize=25
+    zoom=1
+    smoothing=25
+    ;;
+  3)
+    echo "stepsize=20, zoom=2, smoothing=35"
+    stepsize=20
+    zoom=2
+    smoothing=35
+    ;;
+  4)
+    echo "stepsize=15, zoom=3.5, smoothing=55"
+    stepsize=15
+    zoom=3.5
+    smoothing=55
+    ;;
+  *)
+    echo "Invalid mode. Exiting..."
+    exit 1
+    ;;
+esac
+
+sleep 1
+
+
 # ----------------------------------------------------------------
 # Concatenate Stings in Shell Scripts
 # https://stackoverflow.com/questions/4181703/how-to-concatenate-string-variables-in-bash#4181721
@@ -33,13 +83,13 @@ ffmpeg -i $filename -filter:v "yadif=0:-1:0, scale=trunc(iw/2)*2:trunc(ih/2)*2" 
 # ===================================================================
 
 # DEFAULT OPTION: ffmpeg -i $newfilename -vf vidstabdetect -f null -
-ffmpeg -i $newfilename -vf "vidstabdetect=stepsize=15:shakiness=10:accuracy=15:show=2:result=transform_file" -f null -
+ffmpeg -i $newfilename -vf "vidstabdetect=$stepsize:shakiness=10:accuracy=15:show=2:result=transform_file" -f null -
 stabilised_vdo_extnsn='-stabilised.AVI'
 stabilised_vdo="${newfilename}${stabilised_vdo_extnsn}"
 echo stabilised_vdo: $stabilised_vdo
 # The second pass ('transform') uses the .trf and creates the new stabilised video.
 
-ffmpeg -i $newfilename -filter:v vidstabtransform=zoom=3.5:relative=1:smoothing=55:input="transform_file":interpol=bicubic -c:v mjpeg -pix_fmt yuvj420p -q:v 0 -crf 0 -c:a pcm_s16le -ar 48000 -ac 2 -ab 384k -preset ultrafast $stabilised_vdo
+ffmpeg -i $newfilename -filter:v vidstabtransform=$zoom:relative=1:$smoothing:input="transform_file":interpol=bicubic -c:v mjpeg -pix_fmt yuvj420p -q:v 0 -crf 0 -c:a pcm_s16le -ar 48000 -ac 2 -ab 384k -preset ultrafast $stabilised_vdo
 
 # Ultra/Extra/Normal/Mild
 # stepsize=15/20/25/30
