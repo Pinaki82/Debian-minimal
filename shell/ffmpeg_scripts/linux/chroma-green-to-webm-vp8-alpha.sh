@@ -91,9 +91,6 @@ case "$choice" in # The Case statement is used, which is a more concise way to h
   3)
     echo "3. Blue  0X0000FF #0000ff"
     colour=0X0000FF
-    stepsize=20
-    zoom=2
-    smoothing=35
     ;;
   4)
     echo "4. Submit a custom colour value in HTML Colour format:"
@@ -107,13 +104,17 @@ case "$choice" in # The Case statement is used, which is a more concise way to h
     ;;
 esac
 
-sleep 1
-
-read -p "Enter the similarity factor (Recommended: 0.1 or 0.15 (preferably 0.15), can go up to 0.4): " similarity # The `read -p` command is employed to prompt the user to enter the value, instead of just `read`.
+echo "colour: $colour"
 
 sleep 1
+
+read -p "Enter the similarity factor (Recommended: 0.1 or 0.15 (preferably 0.15 if there are no sharp edges around), can go up to 0.4)/ ** Pitch-black: 0.01: " similarity # The `read -p` command is employed to prompt the user to enter the value, instead of just `read`.
+
+sleep 1
+
+read -p "Adjust the opacity factor/blend threshold (Recommended values: Pitch-black: 0.001, Green-screen: 0.2): " opacity # The `read -p` command is employed to prompt the user to enter the value, instead of just `read`.
 
 convrtd_file_s_extnsn='.webm'
 newfilename="${filename}${convrtd_file_s_extnsn}"
 
-ffmpeg -i $filename -filter_complex "[0:v]chromakey=0x00FF00:$similarity:0.2[ckout];[ckout]format=yuva420p" -preset ultrafast -c:v libvpx -auto-alt-ref 0 -b:v 15M $newfilename
+ffmpeg -i $filename -filter_complex "[0:v]chromakey=$colour:$similarity:$opacity[ckout];[ckout]format=yuva420p" -preset ultrafast -c:v libvpx -auto-alt-ref 0 -b:v 15M $newfilename
