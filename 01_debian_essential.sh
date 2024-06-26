@@ -516,10 +516,19 @@ yes | sudo apt install fonts-fantasque-sans fonts-hermit fonts-powerline && \
 # https://vitux.com/how-to-install-custom-fonts-in-debian/
 yes | sudo apt update && sudo apt install font-manager && \
 
+# Powerful screen color picker based on Qt
+yes | sudo apt install color-picker && \
+
 # ------------------------------------------------------------------------------
 # Markdown to HTML etc.
 
 yes | sudo apt install markdown && \
+
+# https://www.howtogeek.com/devops/how-to-create-qr-codes-from-the-linux-command-line/
+# https://linuxconfig.org/list-of-qr-code-generators-on-linux
+# qrencode -s 6 -l H -o "text.png" "This type of QR holds plain text. This text is shown to the user when they scan the QR code. No other action is automatically triggered."
+
+yes | sudo apt install qrencode && \
 
 # Text search utilities
 yes | sudo apt install regexxer && \
