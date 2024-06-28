@@ -14,6 +14,9 @@
 # If necessary, you can use the LUT colour profile "selective-color-lut-keep-only-red.cube," which is included with this bash script.
 # As an alternative, you can run this bash file on the generated movie clip several times to get the desired outcome.
 
+# Colour value to hold: Around #898180
+# Filter strength: In Shotcut, 11 to 15.
+
 # https://hhsprings.bitbucket.io/docs/programming/examples/ffmpeg/manipulating_video_colors/selectivecolor.html
 # https://superuser.com/questions/1703076/how-to-use-ffmpeg-to-selectively-replace-a-specific-color-with-another-color-in
 # https://ffmpeg.org/ffmpeg-filters.html#selectivecolor-1
