@@ -95,9 +95,21 @@ case "$choice" in # The Case statement is used, which is a more concise way to h
   4)
     echo "4. Submit a custom colour value in HTML Colour format:"
     echo "Use the Color-Picker app if required: sudo apt install color-picker"
-    read -p colour_custom
+    read -p "Enter custom color: " colour_custom
     colour=$colour_custom
     ;;
+    # The changes made are:
+
+    # Added a prompt string "Enter custom colour: " to the read -p command.
+    # Properly specified the variable name colour_custom after the prompt.
+    # Assigned the value of colour_custom to colour in a separate line.
+
+    # With these changes, option 4 should now correctly read and store the custom colour value entered by the user.
+    # Remember, when using the read command:
+
+    # The -p option is for providing a prompt.
+    # Always put the variable name without $ when reading into it.
+    # If you want to use the entered value, then use $ before the variable name.
   *)
     echo "Invalid choice. Exiting..."
     exit 1
