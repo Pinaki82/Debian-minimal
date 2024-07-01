@@ -1068,6 +1068,9 @@ Run: flatpak run io.github.jliljebl.Flowblade
 # Natron - Open-source video compositing software
 flatpak install flathub fr.natron.Natron
 Run: flatpak run fr.natron.Natron
+# Wings 3D - An advanced subdivision modeler
+flatpak install flathub com.wings3d.WINGS
+Run: flatpak run com.wings3d.WINGS
 
 
 The Suckless ST Terminal Emulator basic package:
@@ -1151,13 +1154,16 @@ All flatpack and snap apps:
 flatpak list --columns=application --app
 
 Application ID
-com.github.micahflee.torbrowser-launcher
 com.github.tchx84.Flatseal
 com.github.zocker_160.SyncThingy
+com.rafaelmardojai.Blanket
+com.wings3d.WINGS
 fr.handbrake.ghb
 io.github.jliljebl.Flowblade
+org.kde.kdenlive
 org.libreoffice.LibreOffice
-
+org.nomacs.ImageLounge
+org.torproject.torbrowser-launcher
 
 
 snap list
