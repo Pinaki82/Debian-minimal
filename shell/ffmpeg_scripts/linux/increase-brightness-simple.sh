@@ -60,18 +60,16 @@ if [[ "$choice" =~ ^[Yy]$ ]]; then
     output_filename="${filename%.*}-bright.AVI"
     ffmpeg -i "$filename" -vf "curves=all='0/0 $numerator/$denominator 1/1'" -c:v mjpeg -q:v 0 -crf 0 -preset ultrafast -c:a pcm_s16le "$output_filename"
     echo "Processed video saved as: $output_filename"
+    # =========Required: 'trash-cli'. yes | sudo apt install trash-cli =====
+    read -p "Would you like the processed video to replace the original one? (y/n): " choice
+    if [[ "$choice" =~ ^[Yy]$ ]]; then
+        trash $filename
+        mv $output_filename $filename
+    else
+        echo "The original video has been retained."
+    fi
+    echo "Script execution completed."
 else
     echo "Video processing cancelled."
 fi
-
-# =========Required: 'trash-cli'. yes | sudo apt install trash-cli =====
-read -p "Would you like the processed video to replace the original one? (y/n): " choice
-if [[ "$choice" =~ ^[Yy]$ ]]; then
-    trash $filename
-    mv $output_filename $filename
-else
-    echo "The original video has been retained."
-fi
-
-echo "Script execution completed."
 
