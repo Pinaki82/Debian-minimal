@@ -64,5 +64,14 @@ else
     echo "Video processing cancelled."
 fi
 
+# =========Required: 'trash-cli'. yes | sudo apt install trash-cli =====
+read -p "Would you like the processed video to replace the original one? (y/n): " choice
+if [[ "$choice" =~ ^[Yy]$ ]]; then
+    trash $filename
+    mv $output_filename $filename
+else
+    echo "The original video has been retained."
+fi
+
 echo "Script execution completed."
 
