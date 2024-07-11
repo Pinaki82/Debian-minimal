@@ -2,8 +2,8 @@
 
 [Desktop Entry]
 Type=Application
-Name=Audacity
-Comment=Audio Editor
+Name=Noi
+Comment=🚀 Power Your World with AI - Explore, Extend, Empower.
 Icon=/home/YOURUSERNAME/.local/share/icons/noi.png
 # https://github.com/lencx/Noi.git
 Exec=/mnt/hdd2/PortablePrograms/Noi_linux_0.4.0.AppImage
