@@ -1,0 +1,4 @@
+https://stackoverflow.com/questions/1861382/how-to-convert-a-png-image-to-a-svg
+
+convert file.png file.bmp        # PNG to PNM
+potrace file.bmp -s -o file.svg  # PNM to SVG
