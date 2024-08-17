@@ -8,10 +8,11 @@ Krypton Authenticator - krypt.co
 Facebook Container - Mozilla Firefox
 Cookie Quick Manager - Ysard
 uBlock Origin - Raymond Hill
+FoxyProxy Standard - by Eric Jung, erosman - https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/
 Dark Reader - Dark Reader Ltd
 Privacy Badger - EFF Technologists
 Regrets Reporter Mozilla - Mozilla Firefox
-Wikiwand: Wikipedia Modernized - Wikiwand
+Wikiwand: Wikipedia Modernized - Wikiwand - https://addons.mozilla.org/en-US/firefox/addon/wikiwand-wikipedia-modernized/
 
 
 

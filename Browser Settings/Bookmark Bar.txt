@@ -93,5 +93,5 @@ https://www.office.com/?auth=1
 OneDrive
 https://onedrive.live.com/
 
-Google Calendar
-https://calendar.google.com/calendar/
+Proton Calendar
+https://calendar.proton.me/u/0/
