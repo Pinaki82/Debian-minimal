@@ -1,0 +1,37 @@
+https://askubuntu.com/questions/493584/convert-images-to-pdf
+https://stackoverflow.com/questions/74059289/convert-images-to-pdf
+
+convert 'docu-1.jpg' 'docu-2.jpg' 'docu-3.jpg' -compress jpeg -quality 100 final-document.pdf
+
+convert "*.jpg" -compress jpeg -quality 100 final-document.pdf
+
+---
+ImageMagick security policy 'PDF' blocking conversion
+ attempt to perform an operation not allowed by the security policy `PDF' @ error/constitute.c/IsCoderAuthorized/408.
+ 
+https://stackoverflow.com/questions/52998331/imagemagick-security-policy-pdf-blocking-conversion
+
+Make sure you have Ghostscript ≥9.24:
+
+gs --version
+
+sudo mousepad /etc/ImageMagick-6/policy.xml
+<!-- disable ghostscript format types -->
+  <!-- <policy domain="coder" rights="none" pattern="PS" /> -->
+  <!-- <policy domain="coder" rights="none" pattern="PS2" /> -->
+  <!-- <policy domain="coder" rights="none" pattern="PS3" /> -->
+  <!-- <policy domain="coder" rights="none" pattern="EPS" /> -->
+  <!-- <policy domain="coder" rights="none" pattern="PDF" /> -->
+  <!-- <policy domain="coder" rights="none" pattern="XPS" /> -->
+
+From
+
+<!-- disable ghostscript format types -->
+  <policy domain="coder" rights="none" pattern="PS" />
+  <policy domain="coder" rights="none" pattern="PS2" />
+  <policy domain="coder" rights="none" pattern="PS3" />
+  <policy domain="coder" rights="none" pattern="EPS" />
+  <policy domain="coder" rights="none" pattern="PDF" />
+  <policy domain="coder" rights="none" pattern="XPS" />
+
+ 
