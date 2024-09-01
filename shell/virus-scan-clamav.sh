@@ -4,6 +4,8 @@
 
 # Update the AV database
 # ------------------------------------------------------------------------------
+# https://askubuntu.com/questions/909273/clamav-error-var-log-clamav-freshclam-log-is-locked-by-another-process
+# sudo systemctl stop clamav-freshclam.service
 # sudo freshclam && \
 # ------------------------------------------------------------------------------
 # clamscan OPTIONS File/Folder
