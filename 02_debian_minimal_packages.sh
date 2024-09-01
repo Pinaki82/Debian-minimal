@@ -863,6 +863,8 @@ yes | sudo apt install foremost && \
 yes | sudo apt install gddrescue && \
 yes | sudo apt install ddrescueview && \
 yes | sudo apt install recoverjpeg && \
+yes | sudo apt install dvdisaster && \
+# Ref: https://askubuntu.com/questions/15827/recovering-files-from-a-corrupt-cd-dvd
 
 yes | sudo apt install ffmpeg && \
 yes | sudo apt install mediainfo && \
