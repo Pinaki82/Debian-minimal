@@ -1,0 +1,10 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+[Desktop Entry]
+Type=Application
+Name=TIME.IS
+Comment=Online Atomic Clock
+Icon=/home/YOURUSERNAME/.local/share/icons/TIME.IS.svg
+Exec=surf https://time.is/
+Terminal=false
+Categories=;
