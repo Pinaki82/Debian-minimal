@@ -34,4 +34,19 @@ From
   <policy domain="coder" rights="none" pattern="PDF" />
   <policy domain="coder" rights="none" pattern="XPS" />
 
- 
+---
+cache resources exhausted `notary-003-1.jpg' @ error/cache.c/OpenPixelCache/4095.
+
+https://stackoverflow.com/questions/31407010/cache-resources-exhausted-imagemagick
+
+Find the policy.xml with find / -name "policy.xml"
+
+something like /etc/ImageMagick-6/policy.xml
+
+and change
+
+<policy domain="resource" name="disk" value="1GiB"/>
+
+to
+
+<policy domain="resource" name="disk" value="8GiB"/>
