@@ -187,3 +187,7 @@ Add:
 Reboot, then verify:
 
 ps -ef
+
+
+crontab -e
+@reboot sudo chronyc makestep

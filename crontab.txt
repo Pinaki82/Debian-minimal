@@ -4,14 +4,18 @@
 
 @reboot sudo sh '/home/YOUR_USERNAME/.local/share/applications/temp_throttle.sh' 49
 @reboot sudo systemctl restart ntpd
+@reboot sudo chronyc makestep
 @reboot sudo sh '/home/YOUR_USERNAME/shell/ssd_trim.sh'
 @reboot sudo fstrim -av && sudo fstrim -v /
 @reboot sudo systemctl restart ntpd
+@reboot sudo chronyc makestep
 
 # EDITOR=geany crontab -e
 
 @reboot sudo sh '/home/YOUR_USERNAME/.local/share/applications/temp_throttle.sh' 49
 @reboot sudo systemctl restart ntpd
+@reboot sudo chronyc makestep
 @reboot sudo sh '/home/YOUR_USERNAME/shell/ssd_trim.sh'
 @reboot sudo fstrim -av && sudo fstrim -v /
 @reboot sudo systemctl restart ntpd
+@reboot sudo chronyc makestep
