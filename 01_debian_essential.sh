@@ -65,6 +65,10 @@ yes | sudo apt install tasksel && \
 # ------------------------------------------------------------------------------
 # Network Time Protocol daemon/utilities
 yes | sudo apt install ntp && \
+yes | sudo apt install chrony && \
+yes | sudo systemctl start chronyd && \
+yes | sudo systemctl enable chronyd && \
+yes | sudo chronyc makestep && \
 # ------------------------------------------------------------------------------
 # Install PiP:
 yes | sudo apt install python3-pip && \
