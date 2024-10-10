@@ -8,3 +8,13 @@ Icon=/home/YOURUSERNAME/.local/share/icons/inkscape.svg
 Exec=/home/YOURUSERNAME/PortablePrograms/Inkscape-091e20e-x86_64.AppImage
 Terminal=false
 Categories=;
+
+# Extensions:
+# Extensions' page: https://inkscape.org/gallery/%3Dextension/
+# Path on the system:
+# ~/.config/inkscape/extensions/
+# chmod +x *.py
+# chmod +x *.inx
+# Knob Scale Generator: https://inkscape.org/~sincoon/%E2%98%85knob-scale-generator
+# or
+# https://github.com/leechwort/knob-scale-generator
