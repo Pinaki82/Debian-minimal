@@ -148,6 +148,10 @@ sudo systemctl enable bluetooth.service && \
 sudo systemctl start bluetooth.service && \
 rfkill unblock bluetooth && \
 
+# HDMI Display support:
+yes | sudo apt install autorandr && \
+yes | sudo apt install arandr && \
+
 # File Compression:
 yes | sudo apt install unzip && \
 yes | sudo apt install bzip2 && \

@@ -266,6 +266,9 @@ yes | sudo dpkg-reconfigure libdvd-pkg
 # https://www.reddit.com/r/Ubuntu/comments/tno11g/looking_for_a_winamp_equivalent_for_ubuntu/
 sudo apt install audacious
 
+# HDMI Display support:
+yes | sudo apt install autorandr
+yes | sudo apt install arandr
 
 MS Core Fonts:
 https://www.linuxcapable.com/how-to-install-microsoft-fonts-on-debian-linux/
