@@ -1,0 +1,12 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+[Desktop Entry]
+Type=Application
+Name=Seamly2D
+# https://github.com/FashionFreedom/Seamly2D.git
+# Size: 48 MB
+Comment=Pattern design software. Fashion CAD.
+Icon=/home/YOURUSERNAME/.local/share/icons/Seamly-Purple-Icon.png
+Exec=/mnt/hdd2/PortablePrograms/Seamly2D-x86_64.AppImage
+Terminal=false
+Categories=;
