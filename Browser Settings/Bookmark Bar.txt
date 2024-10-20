@@ -70,6 +70,7 @@ AI
   Image-Generation
           Discover and Generate AI Art | OpenArt
           https://openart.ai/discovery
+  chatGPT Bookmark: Download ChatGPT conversations as HTML files. https://github.com/jcubic/chat-gpt.git
 ---
 
 Brave
