@@ -1,0 +1,18 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+[Desktop Entry]
+Type=Application
+Name=Time Update
+Comment=Update the system time from the internet.
+Icon=clock
+
+# Required:
+## Network Time Protocol daemon/utilities
+# yes | sudo apt install ntp
+# yes | sudo apt install chrony
+# yes | sudo systemctl start chronyd
+# yes | sudo systemctl enable chronyd
+
+Exec=sudo chronyc makestep
+Terminal=true
+Categories=;
