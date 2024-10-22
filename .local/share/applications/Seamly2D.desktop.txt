@@ -10,3 +10,4 @@ Icon=/home/YOURUSERNAME/.local/share/icons/Seamly-Purple-Icon.png
 Exec=/mnt/hdd2/PortablePrograms/Seamly2D-x86_64.AppImage
 Terminal=false
 Categories=;
+# Recommended book: Metric Pattern Cutting for Menswear by Winifred Aldrich (ISBN: ISBN 9781405182935).
