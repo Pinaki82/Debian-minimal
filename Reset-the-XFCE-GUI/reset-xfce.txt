@@ -1,0 +1,2 @@
+Reset the XFCE GUI in case of an urgency. More about the process in delail will be furnished later with illustrations.
+https://askubuntu.com/questions/224006/resetting-xfce-panels-to-default-settings
