@@ -1,0 +1,9 @@
+Clear and disable the recent folder in Thunar.
+Save disc space. Stop clicking old files while navigating the file manager.
+
+https://forum.mxlinux.org/viewtopic.php?t=78037
+
+Right-click on somewhere empty on left pane in Thunar: "Places" and uncheck that.
+rm ~/.local/share/recently-used.xbel
+touch ~/.local/share/recently-used.xbel
+sudo chattr +i ~/.local/share/recently-used.xbel
