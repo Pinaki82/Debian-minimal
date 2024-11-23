@@ -543,6 +543,14 @@ sudo apt install tasksel
 # Partition Manager
 sudo apt install gparted
 sudo apt install gnome-disk-utility
+# Volume/Drive Encryption
+## https://www.cyberciti.biz/security/howto-linux-hard-disk-encryption-with-luks-cryptsetup-command/
+## http://security.stackexchange.com/questions/4590/ddg#4592
+sudo apt install gnome-disk-utility
+sudo apt install zulucrypt-gui zulucrypt-cli zulumount-gui libzulucrypt-plugins
+sudo apt install pmount
+sudo apt install luckyluks
+sudo apt install cryptsetup cryptmount cryptsetup-bin cryptsetup-initramfs cryptsetup-nuke-password
 # File Sync
 sudo apt install rsync
 sudo apt install grsync

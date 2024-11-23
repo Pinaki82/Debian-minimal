@@ -1407,6 +1407,15 @@ yes | sudo apt install smplayer && \
 # YouTube-SMTube (END)
 # =================================================================
 
+# Volume/Drive Encryption
+#    https://www.cyberciti.biz/security/howto-linux-hard-disk-encryption-with-luks-cryptsetup-command/
+#    http://security.stackexchange.com/questions/4590/ddg#4592
+yes | sudo apt install gnome-disk-utility && \
+yes | sudo apt install zulucrypt-gui zulucrypt-cli zulumount-gui libzulucrypt-plugins && \
+yes | sudo apt install pmount && \
+yes | sudo apt install luckyluks && \
+yes | sudo apt install cryptsetup cryptmount cryptsetup-bin cryptsetup-initramfs cryptsetup-nuke-password && \
+
 # zuluCrypt (*Linux only*) - A simple, feature rich and powerful solution for hard drives encryption.
 #
 # https://mhogomchungu.github.io/zuluCrypt/
