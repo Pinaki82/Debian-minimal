@@ -289,6 +289,9 @@ yes | sudo apt install ttf-mscorefonts-installer
 yes | sudo apt install fonts-crosextra-carlito fonts-crosextra-caladea && \
 sudo fc-cache
 
+# Display dialog boxes
+yes | sudo apt install zenity
+
 Themes and Icons:
 Search the web version of the Debian repository for the package.
 search the apt repo from the command line.

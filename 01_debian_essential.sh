@@ -168,6 +168,11 @@ yes | sudo apt install pixz && \
 yes | sudo apt install thunar-gtkhash thunar-font-manager thunar-archive-plugin && \
 # https://docs.xfce.org/xfce/thunar/thunar-vcs-plugin
 yes | sudo apt install thunar-vcs-plugin && \
+#
+# Display dialog boxes
+yes | sudo apt install zenity && \
+# Zenity: The GNOME port of the venerable 'dialog' program, which allows you to display dialog boxes from the command-line and shell scripts.
+#
 # ------------------------------------------------------------------------------
 # Other utilities:
 # Wmctrl is a Command line tool to interact with an
