@@ -190,7 +190,7 @@ yes | sudo apt install tasksel && \
 # Disk Utility
 yes | sudo apt install gparted && \
 yes | sudo apt install gnome-disk-utility && \
-# Volume/Drive Encryption
+# Volume/Drive/Container Encryption
 #    https://www.cyberciti.biz/security/howto-linux-hard-disk-encryption-with-luks-cryptsetup-command/
 #    http://security.stackexchange.com/questions/4590/ddg#4592
 yes | sudo apt install gnome-disk-utility && \

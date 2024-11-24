@@ -1407,7 +1407,7 @@ yes | sudo apt install smplayer && \
 # YouTube-SMTube (END)
 # =================================================================
 
-# Volume/Drive Encryption
+# Volume/Drive/Container Encryption
 #    https://www.cyberciti.biz/security/howto-linux-hard-disk-encryption-with-luks-cryptsetup-command/
 #    http://security.stackexchange.com/questions/4590/ddg#4592
 yes | sudo apt install gnome-disk-utility && \
