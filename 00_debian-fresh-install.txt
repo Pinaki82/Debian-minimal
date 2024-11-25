@@ -384,6 +384,47 @@ Range (min-max): *
 Appears if selection contains:
 Directories ** (CHECK)
 
+Name: Create symlink
+Command: ln -Ts %f %n" (symlink)"
+File pattern: *
+Appears if selection contains: Directories, other files (or, tick all the boxes)
+
+Name: Convert to ODT
+Command: unoconv -f odt %F
+File pattern: *.doc;*.docx
+Appears if selection contains: Other files
+Icon: google-docs
+
+Name: Export to PDF
+Command: unoconv -f pdf %F
+File pattern: *.doc;*.docx;*.odt;*.odp;*.pps;*.ppt;*.xls;*.xlsx;*.ods;*.pptx
+Appears if selection contains: Other files
+Icon: application-pdf
+
+Note: You will need unoconv package for all following actions.
+sudo apt install unoconv (360MB)
+Type man unoconv for details.
+
+Name: Download subtitles
+Command: ~/.local/bin/OpenSubtitlesDownload.py --gui=gnome %F
+File pattern: *
+Appears if selection contains: Video Files
+Icon: gnome-subtitles
+
+Note: You will need to follow the instructions on OpenSubtitlesDownload which requires python and zenity.
+
+https://github.com/emericg/OpenSubtitlesDownload.git
+
+mkdir -p ~/.local/share/nautilus/scripts/
+cd ~/.local/share/nautilus/scripts/
+wget https://raw.githubusercontent.com/emericg/OpenSubtitlesDownload/master/OpenSubtitlesDownload.py
+chmod u+x OpenSubtitlesDownload.py
+
+Thunar - Custom Actions:
+https://docs.xfce.org/xfce/thunar/custom-actions#create_a_symbolic_link
+https://help.ubuntu.com/community/ThunarCustomActions
+
+
 Find the XFCE Dock at the bottom of the screen.
 Display TAB -> Measurements -> Automatically increase the length (CHECK)
 Items TAB -> Add (+) -> Window Buttons
