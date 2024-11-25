@@ -471,6 +471,13 @@ yes | sudo apt install surf && \
 # A cross-platform dictionary similar to Wordweb
 yes | sudo apt install artha && \
 
+# converter between LibreOffice document formats
+# This package provides a commandline utility which can convert from
+# any document format that LibreOffice can import to any document format
+# it can export. It uses LibreOffice's UNO bindings for non-interactive
+# conversion of documents.
+yes | sudo apt install unoconv && \
+
 # CD/DVD:
 yes | sudo apt install brasero && \
 

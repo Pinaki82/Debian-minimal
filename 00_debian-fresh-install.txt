@@ -395,6 +395,12 @@ File pattern: *.doc;*.docx
 Appears if selection contains: Other files
 Icon: google-docs
 
+Name: Convert to DOCX
+Command: unoconv -f docx %F
+File pattern: *.odt;*.odp;*.ods
+Appears if selection contains: Other files
+Icon: google-docs
+
 Name: Export to PDF
 Command: unoconv -f pdf %F
 File pattern: *.doc;*.docx;*.odt;*.odp;*.pps;*.ppt;*.xls;*.xlsx;*.ods;*.pptx
@@ -1047,6 +1053,14 @@ yes | sudo apt install xzgv
 
 # GIMP:
 sudo apt install gimp gimp-data gimp-data-extras gimp-gmic gimp-gutenprint gimp-help-common gimp-help-en-gb gimp-lensfun gimp-plugin-registry gimp-texturize icc-profiles icc-profiles-free gegl gtkam-gimp xzgv
+
+# converter between LibreOffice document formats
+# This package provides a commandline utility which can convert from
+# any document format that LibreOffice can import to any document format
+# it can export. It uses LibreOffice's UNO bindings for non-interactive
+# conversion of documents.
+
+sudo apt install unoconv
 
 Fix Snap-installed packages if you find the launchers missing:
 (Snap app icon doesn't appear in menu)
