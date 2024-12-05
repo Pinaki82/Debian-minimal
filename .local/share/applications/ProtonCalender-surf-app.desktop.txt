@@ -8,3 +8,44 @@ Icon=/home/YOURUSERNAME/.local/share/icons/Proton Calendar.png
 Exec=surf https://calendar.proton.me/
 Terminal=false
 Categories=;
+
+# Build Surf Browser:
+# https://surf.suckless.org/
+
+# Development
+# surf is actively developed. You can browse its source code repository or get a copy with the following command:
+
+# git clone https://git.suckless.org/surf
+# cd surf
+# make
+
+# Failed. Missing packages.
+
+# apt search webkit2gtk-4.0
+# sudo apt install libwebkit2gtk-4.0-dev
+
+# make
+
+# Failed again. Missing packages.
+
+# apt search gcr-3
+# sudo apt install libgcr-3-dev
+# make
+
+# Success!
+
+# ls
+
+# Can you locate the executable binary "surf"?
+
+# chmod +x surf
+# ./surf
+
+# No segfault.
+
+# sudo make install
+# make clean
+
+# Maintenance:
+
+# git pull
