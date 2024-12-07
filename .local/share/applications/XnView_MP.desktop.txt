@@ -4,8 +4,8 @@
 Type=Application
 Name=XnView_MP
 Comment=Image Viewer
-Icon=xnview
+Icon=/home/YOURUSERNAME/.local/share/icons/xnviewmp.png
 # https://www.xnview.com/en/xnviewmp/#downloads
-Exec=/YOURUSERNAME/appu/PortablePrograms/XnView_MP.glibc2.17-x86_64.AppImage
+Exec=/mnt/hdd2/PortablePrograms/XnView_MP.glibc2.17-x86_64.AppImage
 Terminal=false
 Categories=;

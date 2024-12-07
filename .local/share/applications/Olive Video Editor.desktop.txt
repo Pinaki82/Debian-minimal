@@ -6,6 +6,6 @@ Name=Olive
 Comment=Non-Linear Video Editor
 Icon=/home/YOURUSERNAME/.local/share/icons/Olive_Video_Editor_Logo.png
 # https://www.olivevideoeditor.org/
-Exec=/home/YOURUSERNAME/PortablePrograms/Olive-55eedbfc-Linux-x86_64.AppImage
+Exec=/mnt/hdd2/PortablePrograms/Olive-8ac191ce-Linux-x86_64.AppImage
 Terminal=false
 Categories=;

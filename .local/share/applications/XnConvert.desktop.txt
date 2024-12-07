@@ -2,8 +2,8 @@
 Encoding=UTF-8
 Terminal=0
 # https://www.xnview.com/en/xnconvert/#downloads
-Exec=/home/YOURUSERNAME/PortablePrograms/XnConvert/xnconvert.sh
-Icon=/home/YOURUSERNAME/PortablePrograms/XnConvert/xnconvert.png
+Exec=/mnt/hdd2/PortablePrograms/XnConvert/xnconvert.sh
+Icon=/mnt/hdd2/PortablePrograms/XnConvert/xnconvert.png
 Type=Application
 Categories=Graphics;
 StartupNotify=true

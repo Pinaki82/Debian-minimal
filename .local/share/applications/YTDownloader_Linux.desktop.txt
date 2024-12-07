@@ -5,7 +5,7 @@ Type=Application
 Name=YTDownloader
 Comment=YouTube Video Downloader
 Icon=youtube-dl
-Exec=/home/YOURUSERNAME/PortablePrograms/YTDownloader_Linux.AppImage
+Exec=/mnt/hdd2/PortablePrograms/YTDownloader_Linux.AppImage
 # https://github.com/aandrew-me/ytDownloader
 Terminal=false
 Categories=;

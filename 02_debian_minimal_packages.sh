@@ -998,6 +998,13 @@ yes | sudo apt install ttf-mscorefonts-installer && \
 yes | sudo apt install fonts-crosextra-carlito fonts-crosextra-caladea && \
 yes | sudo fc-cache && \
 
+# Slideshow:
+
+# https://imagination.sourceforge.net/
+# https://github.com/colossus73/imagination
+yes | sudo apt install imagination && \
+
+
 # =================================================================
 # essential packages (END)
 # =================================================================

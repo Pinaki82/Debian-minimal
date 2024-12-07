@@ -6,7 +6,7 @@ Name=sigrok-PulseView
 Comment=Portable, cross-platform, Free/Libre/Open-Source signal analysis software suite. Logic Analyzer.
 Icon=/home/YOURUSERNAME/.local/share/icons/Sigrok_logo.svg
 # https://sigrok.org/wiki/Downloads
-Exec=/mnt/hdd2/PortablePrograms/pulseview-NIGHTLY-x86_64-debug.appimage
+Exec=/mnt/hdd2/PortablePrograms/pulseview-NIGHTLY-x86_64-debug.AppImage
 # ~ 87 MB
 # Download sigrok-cli-NIGHTLY-x86_64-debug.appimage
 # ~ 59 MB
