@@ -2,9 +2,10 @@
 
 [Desktop Entry]
 Type=Application
-Name=Audacity
-Comment=Audio Editor
+Name=pCloud
+Comment=Cloud Storage
 Icon=appimagekit_c2874a7c04ec54337abffe6bdec54b5e_pcloud
-Exec=/home/YOURUSERNAME/PortablePrograms/pcloud
+Exec=/mnt/hdd2/PortablePrograms/pcloud
 Terminal=false
 Categories=;
+Hidden=true

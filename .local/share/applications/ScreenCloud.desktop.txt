@@ -6,6 +6,6 @@ Name=ScreenCloud
 Comment=Screenshot Utility
 Icon=screencloud
 # https://github.com/olav-st/screencloud/releases
-Exec=/home/YOURUSERNAME/PortablePrograms/ScreenCloud-v1.5.3-x86_64.AppImage
+Exec=/mnt/hdd2/PortablePrograms/ScreenCloud-v1.5.3-x86_64.AppImage
 Terminal=false
 Categories=;

@@ -5,6 +5,6 @@ Type=Application
 Name=Shotcut
 Comment=Video Editor
 Icon=/home/YOURUSERNAME/.local/share/icons/Shotcut.png
-Exec=/home/YOURUSERNAME/PortablePrograms/shotcut-linux-x86_64-230929.AppImage
+Exec=/mnt/hdd2/PortablePrograms/shotcut-linux-x86_64-241117.AppImage
 Terminal=false
 Categories=Multimedia;

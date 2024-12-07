@@ -6,6 +6,6 @@ Name=OpenSCAD
 Comment=Programmatic 3D CAD
 Icon=/home/YOURUSERNAME/.local/share/icons/openscad.png
 # https://openscad.org/downloads.html
-Exec=/home/YOURUSERNAME/PortablePrograms/OpenSCAD-2021.01-x86_64.AppImage
+Exec=/mnt/hdd2/PortablePrograms/OpenSCAD-2021.01-x86_64.AppImage
 Terminal=false
 Categories=;

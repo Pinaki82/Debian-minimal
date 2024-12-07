@@ -6,6 +6,6 @@ Name=Pencil2D Animation
 # https://www.pencil2d.org/
 Comment=Make 2D hand-drawn animations
 Icon=/home/YOURUSERNAME/.local/share/icons/pencil_icon.png
-Exec=/home/YOURUSERNAME/PortablePrograms/pencil2d-linux-amd64-0.6.6.AppImage
+Exec=/mnt/hdd2/PortablePrograms/pencil2d-linux-amd64-0.7.0.AppImage
 Terminal=false
 Categories=;

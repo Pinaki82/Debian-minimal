@@ -6,6 +6,6 @@ Name=PhotoQuick
 Comment=A simple handy image viewer and editor
 Icon=/home/YOURUSERNAME/.local/share/icons/photoquick.png
 # https://github.com/ksharindam/photoquick/
-Exec=/home/YOURUSERNAME/PortablePrograms/PhotoQuick-x86_64.AppImage
+Exec=/mnt/hdd2/PortablePrograms/PhotoQuick-x86_64.AppImage
 Terminal=false
 Categories=;

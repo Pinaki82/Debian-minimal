@@ -6,6 +6,6 @@ Name=RawTherapee
 Comment=Colour Grading Software
 Icon=rawtherapee
 # https://www.rawtherapee.com/
-Exec=/home/YOURUSERNAME/PortablePrograms/RawTherapee_5.9.AppImage
+Exec=/mnt/hdd2/PortablePrograms/RawTherapee_5.11_release.AppImage
 Terminal=false
 Categories=Graphics;
