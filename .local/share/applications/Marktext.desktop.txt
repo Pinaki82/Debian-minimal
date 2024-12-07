@@ -5,6 +5,7 @@ Type=Application
 Name=Marktext
 Comment=Markdown Editor
 Icon=/home/YOURUSERNAME/.local/share/icons/appimagekit_bda995617ffc1faf7fa1736394a8a444_marktext.png
-Exec=/home/YOURUSERNAME/PortablePrograms/marktext-x86_64.AppImage
+# https://github.com/marktext/marktext.git
+Exec=/mnt/hdd2/PortablePrograms/marktext-x86_64.AppImage
 Terminal=false
 Categories=Office;

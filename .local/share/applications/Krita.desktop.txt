@@ -5,6 +5,7 @@ Type=Application
 Name=Krita
 Comment=Image Painter
 Icon=krita
-Exec=/home/YOURUSERNAME/PortablePrograms/krita-5.0.6-x86_64.appimage
+# https://krita.org/en/
+Exec=/mnt/hdd2/PortablePrograms/krita-5.2.6-x86_64.appimage
 Terminal=false
 Categories=;

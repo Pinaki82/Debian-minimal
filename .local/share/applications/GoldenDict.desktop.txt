@@ -6,6 +6,6 @@ Name=GoldenDict
 Comment=Dictionary lookup program that supports multiple dictionary formats.
 Icon=/home/YOURUSERNAME/.local/share/icons/GoldenDict.png
 # https://github.com/Abs62/goldendict.git
-Exec=/home/YOURUSERNAME/PortablePrograms/GoldenDict-661dd4d-x86_64.AppImage
+Exec=/mnt/hdd2/PortablePrograms/GoldenDict-661dd4d-x86_64.AppImage
 Terminal=false
 Categories=;

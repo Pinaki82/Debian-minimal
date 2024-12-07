@@ -2,6 +2,7 @@
 
 [Desktop Entry]
 X-AppInstall-Package=DocFetcher
+# https://docfetcher.sourceforge.io/en/download.html
 X-AppInstall-Popcon=1054
 X-AppInstall-Section=main
 

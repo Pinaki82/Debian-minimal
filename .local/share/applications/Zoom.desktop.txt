@@ -5,6 +5,7 @@ Type=Application
 Name=Zoom
 Comment=Teleconference
 Icon=Zoom
+# # https://github.com/probonopd/Zoom.AppImage
 Exec=/home/YOURUSERNAME/PortablePrograms/Zoom-5.15.2.4260.glibc2.17-x86_64.AppImage
 Terminal=false
 Categories=Internet;

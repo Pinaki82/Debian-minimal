@@ -2,9 +2,10 @@
 
 [Desktop Entry]
 Type=Application
-Name=Audacity
+Name=Kate
 Comment=Programmer's Text Editor
 Icon=kate
-Exec=/home/YOURUSERNAME/PortablePrograms/kate-master-880-linux-gcc-x86_64_8dd27de9523325d0070946a3335a5418.AppImage
+# https://kate-editor.org/get-it/
+Exec=/mnt/hdd2/PortablePrograms/kate-master-8573-linux-gcc-x86_64.AppImage
 Terminal=false
 Categories=;

@@ -5,6 +5,7 @@ Type=Application
 Name=LMMS
 Comment=Audio Creation
 Icon=lmms
-Exec=/home/YOURUSERNAME/PortablePrograms/lmms-1.2.2-linux-x86_64.AppImage
+# https://lmms.io/
+Exec=/mnt/hdd2/PortablePrograms/lmms-1.2.2-linux-x86_64.AppImage
 Terminal=false
 Categories=;

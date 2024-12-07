@@ -5,6 +5,7 @@ Type=Application
 Name=Stacer
 Comment=System Optimizer and Monitoring
 Icon=stacer
+# https://github.com/oguzhaninan/Stacer.git
 Exec=/home/YOURUSERNAME/PortablePrograms/Stacer-1.1.0-x64.AppImage
 Terminal=false
 Categories=;

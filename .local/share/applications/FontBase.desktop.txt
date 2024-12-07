@@ -5,6 +5,7 @@ Type=Application
 Name=FontBase
 Comment=Font Viewer
 Icon=/home/YOURUSERNAME/.local/share/icons/fontbase-app.png
-Exec=/home/YOURUSERNAME/PortablePrograms/FontBase-2.19.4.AppImage
+# https://fontba.se/downloads/linux
+Exec=/mnt/hdd2/PortablePrograms/FontBase-2.21.0.AppImage
 Terminal=false
 Categories=;

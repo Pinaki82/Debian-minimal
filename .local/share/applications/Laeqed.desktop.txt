@@ -22,8 +22,8 @@ Comment=WYSIWYG LATEX Equation Editor written in JAVA
 
 # TryExec=/bin/bash -c 'cd "$(dirname "$0")"; ./laeqed.sh -windowed' %k
 # Exec=/bin/bash -c 'cd "$(dirname "$0")"; ./laeqed.sh -windowed' %k
-TryExec=/bin/bash -c 'cd "$(dirname "$0")"; /home/YOURUSERNAME/PortablePrograms/laeqed.sh -windowed' %k
-Exec=/bin/bash -c 'cd "$(dirname "$0")"; /home/YOURUSERNAME/PortablePrograms/laeqed.sh -windowed' %k
+TryExec=/bin/bash -c 'cd "$(dirname "$0")"; /mnt/hdd2/PortablePrograms/laeqed.sh -windowed' %k
+Exec=/bin/bash -c 'cd "$(dirname "$0")"; /mnt/hdd2/PortablePrograms/laeqed.sh -windowed' %k
 Terminal=false
 Type=Application
 # Icon=/bin/bash -c 'cd "$(dirname "$0")"; laeqed.png %k

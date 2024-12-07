@@ -5,6 +5,7 @@ Type=Application
 Name=PhotoFlow
 Comment=A fully non-destructive photo retouching program
 Icon=/home/YOURUSERNAME/.local/share/icons/photoflow.png
+# https://github.com/aferrero2707/PhotoFlow
 Exec=/home/YOURUSERNAME/PortablePrograms/photoflow-0.2.8.glibc2.14-x86_64.AppImage
 Terminal=false
 Categories=;

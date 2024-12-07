@@ -5,6 +5,7 @@ Type=Application
 Name=MeshLab
 Comment=3D Model Viewer
 Icon=meshlab
-Exec=/home/YOURUSERNAME/PortablePrograms/MeshLab2021.10-linux.AppImage
+# https://www.meshlab.net/#description
+Exec=/mnt/hdd2/PortablePrograms/MeshLab2023.12-linux.AppImage
 Terminal=false
 Categories=;

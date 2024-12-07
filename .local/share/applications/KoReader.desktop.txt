@@ -5,6 +5,7 @@ Type=Application
 Name=KoReader
 Comment=E-Book Reader
 Icon=appimagekit_a530dc73365ca8abc6a3c76bc4024dc3_koreader
-Exec=/home/YOURUSERNAME/PortablePrograms/koreader-appimage-x86_64-linux-gnu-v2022.11.AppImage
+# https://github.com/koreader/koreader
+Exec=/mnt/hdd2/PortablePrograms/koreader-appimage-x86_64-linux-gnu-v2024.11.AppImage
 Terminal=false
 Categories=;

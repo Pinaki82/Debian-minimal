@@ -5,6 +5,7 @@ Type=Application
 Name=Obsidian
 Comment=Rrivate and flexible writing app
 Icon=/home/YOURUSERNAME/.local/share/icons/Obsidian.png
+# https://obsidian.md/
 Exec=/home/YOURUSERNAME/PortablePrograms/Obsidian-1.4.13.AppImage
 Terminal=false
 Categories=;

@@ -5,6 +5,8 @@ Type=Application
 Name=Thorium-Reader
 Comment=Ebook Reader
 Icon=thorium
+# https://www.edrlab.org/software/thorium-reader/
+# https://github.com/edrlab/thorium-reader/releases
 Exec=/home/YOURUSERNAME/PortablePrograms/Thorium-2.2.0.AppImage
 Terminal=false
 Categories=Office;

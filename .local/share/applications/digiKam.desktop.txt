@@ -7,6 +7,6 @@ Comment=Professional Photo Management with the Power of Open Source
 Icon=/home/YOURUSERNAME/.local/share/icons/digikam_oxygen.svg
 # https://www.digikam.org/
 # https://www.digikam.org/download/
-Exec=/mnt/hdd2/PortablePrograms/digiKam-8.3.0-x86-64.appimage
+Exec=/mnt/hdd2/PortablePrograms/digiKam-8.5.0-Qt6-x86-64.appimage
 Terminal=false
 Categories=;

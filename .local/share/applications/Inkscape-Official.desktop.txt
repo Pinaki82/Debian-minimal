@@ -5,7 +5,7 @@ Type=Application
 Name=Inkscape Official AppImage package
 Comment=Inkscape Vector Graphics Editor (Official)
 Icon=/home/YOURUSERNAME/.local/share/icons/inkscape.svg
-Exec=/home/YOURUSERNAME/PortablePrograms/Inkscape-091e20e-x86_64.AppImage
+Exec=/mnt/hdd2/PortablePrograms/Inkscape-e7c3feb-x86_64.AppImage
 Terminal=false
 Categories=;
 

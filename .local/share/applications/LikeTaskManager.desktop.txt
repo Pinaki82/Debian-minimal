@@ -5,6 +5,7 @@ Type=Application
 Name=LikeTaskManager
 Comment=System Resource Viewer
 Icon=utilities-system-monitor
-Exec=/home/YOURUSERNAME/PortablePrograms/LikeTaskManager-x86_64.AppImage
+# https://github.com/rejuce/LikeTaskManager.git
+Exec=/mnt/hdd2/PortablePrograms/LikeTaskManager-x86_64.AppImage
 Terminal=false
 Categories=;

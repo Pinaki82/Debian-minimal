@@ -5,6 +5,7 @@ Type=Application
 Name=Session Private Messenger
 Comment=Messaging Application
 Icon=session-desktop
+# https://getsession.org/
 Exec=/home/YOURUSERNAME/PortablePrograms/session-desktop-linux-x86_64-1.7.3.AppImage
 Terminal=false
 Categories=;

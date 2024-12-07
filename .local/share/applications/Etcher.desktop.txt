@@ -4,7 +4,8 @@
 Type=Application
 Name=Balena Etcher
 Comment=Bootable USB
-Icon=etcher
-Exec=/home/YOURUSERNAME/PortablePrograms/balenaEtcher-1.18.11-x64.AppImage
+Icon=balena-etcher
+# https://etcher.balena.io/
+Exec=/mnt/hdd2/PortablePrograms/balenaEtcher-linux-x64/balena-etcher
 Terminal=false
 Categories=;

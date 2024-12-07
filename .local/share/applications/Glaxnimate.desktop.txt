@@ -6,6 +6,6 @@ Name=Glaxnimate
 # https://glaxnimate.mattbas.org/
 Comment=Vector Graphics Animation Program
 Icon=/home/YOURUSERNAME/.local/share/icons/Glaxnimate.svg
-Exec=/home/YOURUSERNAME/PortablePrograms/glaxnimate-x86_64.AppImage
+Exec=/mnt/hdd2/PortablePrograms/glaxnimate-x86_64.AppImage
 Terminal=false
 Categories=;

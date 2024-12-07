@@ -5,6 +5,8 @@ Type=Application
 Name=Jitsi
 Comment=Teleconference
 Icon=jitsi
-Exec=/home/YOURUSERNAME/PortablePrograms/jitsi-meet-x86_64.AppImage
+# https://jitsi.org/
+# https://github.com/jitsi/jitsi-meet-electron
+Exec=/mnt/hdd2/PortablePrograms/jitsi-meet-x86_64.AppImage
 Terminal=false
 Categories=;

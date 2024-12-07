@@ -1,6 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Terminal=0
+# https://www.xnview.com/en/xnconvert/#downloads
 Exec=/home/YOURUSERNAME/PortablePrograms/XnConvert/xnconvert.sh
 Icon=/home/YOURUSERNAME/PortablePrograms/XnConvert/xnconvert.png
 Type=Application

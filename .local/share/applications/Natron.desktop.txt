@@ -5,8 +5,8 @@ Type=Application
 Name=Natron
 Comment=Video Compositor
 Icon=/home/YOURUSERNAME/.local/share/icons/Natron.png
-TryExec='/home/YOURUSERNAME/PortablePrograms/Natron-2.5.0-Linux-x86_64-no-installer/Natron'
-Exec='/home/YOURUSERNAME/PortablePrograms/Natron-2.5.0-Linux-x86_64-no-installer/Natron'
+TryExec='/mnt/hdd2/PortablePrograms/Natron-2.5.0-Linux-x86_64-no-installer/Natron'
+Exec='/mnt/hdd2/PortablePrograms/Natron-2.5.0-Linux-x86_64-no-installer/Natron'
 # https://natrongithub.github.io/
 # https://github.com/NatronGitHub/natron-plugins
 # https://github.com/NatronGitHub/natron-python-scripting

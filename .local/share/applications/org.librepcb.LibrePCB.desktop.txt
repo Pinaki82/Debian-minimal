@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=LibrePCB
+Comment=Design Schematics and PCBs
+GenericName=PCB Designer
+Categories=Development;Engineering;Electronics;
+Type=Application
+Terminal=false
+Icon=appimagekit_94d02d9739afb42c76631f4df6d97fc2_org.librepcb.LibrePCB
+# https://librepcb.org/
+Exec=/mnt/hdd2/PortablePrograms/librepcb-1.2.0-linux-x86_64.AppImage %U
+MimeType=application/x-librepcb-project;application/x-librepcb-project-archive;
+Comment[de]=Entwerfen eines Schaltplans oder einer Platine
+Comment[sk]=Návrh schém a dosiek s plošnými spojmi
+Comment[uk_UA]=Проектування схем та плат
+
+Path=
+StartupNotify=false

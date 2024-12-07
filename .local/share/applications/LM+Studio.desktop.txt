@@ -1,0 +1,11 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+[Desktop Entry]
+Type=Application
+Name=LM Studio
+Comment=Discover, download, and run local LLMs
+Icon=/home/YOURUSERNAME/.local/share/icons/LM+Studio.png
+# https://lmstudio.ai/
+Exec=/mnt/hdd2/PortablePrograms/LM_Studio-0.3.5.AppImage
+Terminal=false
+Categories=;

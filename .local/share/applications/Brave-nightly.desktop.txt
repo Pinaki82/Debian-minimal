@@ -5,6 +5,7 @@ Type=Application
 Name=Brave
 Comment=Web Browser
 Icon=/home/YOURUSERNAME/.local/share/icons/Brave.png
-Exec=/home/YOURUSERNAME/PortablePrograms/Brave-nightly-v1.63.57-x86_64.AppImage
+# https://github.com/srevinsaju/Brave-AppImage/releases/
+Exec=/mnt/hdd2/PortablePrograms/Brave-nightly-v1.75.76-x86_64.AppImage
 Terminal=false
 Categories=;

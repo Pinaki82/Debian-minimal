@@ -5,6 +5,7 @@ Type=Application
 Name=Cinelerra
 Comment=Video Editor
 Icon=/home/YOURUSERNAME/.local/share/icons/cin-logo-long.png
-Exec=/home/YOURUSERNAME/PortablePrograms/CinGG-20230930-x86_64.AppImage
+# https://www.cinelerra-gg.org/
+Exec=/mnt/hdd2/PortablePrograms/CinGG-20241031-x86_64.AppImage
 Terminal=false
 Categories=;
