@@ -117,7 +117,7 @@
 
 
 
-# sudo timeshift --restore --snapshot '2023-10-26_14-34-12' --target /dev/sdx [The **target partition or disk** where the snapshot will be restored. It is the place where your Linux installation is located. According to what was shown in the output, this is currently `/dev/sda1`.]
+# sudo timeshift --restore --snapshot '2023-10-26_14-34-12' --target /dev/sdx [Your Linux system installation partition. The **target partition or disk** where the snapshot will be 'restored'. It is the place where your Linux installation is located. According to what was shown in the output, this is currently `/dev/sda1`.]
 
 
 sudo timeshift --rsync --create --comments "2024-12-06-01-25-am"
