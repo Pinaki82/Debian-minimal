@@ -374,6 +374,12 @@ Range (min-max):
 Appears if selection contains:
 Directories ** (CHECK)
 
+Name: Duration of all video files
+Command: xfce4-terminal -e "bash -c '$HOME/shell/ffmpeg_scripts/linux/duration-total.sh';read"
+File pattern: *
+Appears if selection contains: Directories
+Icon: alarm-clock-triggered
+
 Name: Mediainfo-GUI
 Description: technical and tag information about a video or audio file
 Submenu:
