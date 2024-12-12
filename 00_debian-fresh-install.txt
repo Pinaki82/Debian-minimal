@@ -377,12 +377,12 @@ Directories ** (CHECK)
 Name: Mediainfo-GUI
 Description: technical and tag information about a video or audio file
 Submenu:
-Command: mediainfo-gui
+Command: mediainfo-gui %f
 Appearance Conditions TAB:
 File Pattern: *
 Range (min-max): *
-Appears if selection contains:
-Directories ** (CHECK)
+Appears if selection contains: Video Files
+Icon: camera-video
 
 Name: Create symlink
 Command: ln -Ts %f %n" (symlink)"
@@ -425,6 +425,25 @@ mkdir -p ~/.local/share/nautilus/scripts/
 cd ~/.local/share/nautilus/scripts/
 wget https://raw.githubusercontent.com/emericg/OpenSubtitlesDownload/master/OpenSubtitlesDownload.py
 chmod u+x OpenSubtitlesDownload.py
+
+Name: Convert to JPEG
+Command: convert %f -quality 75 %f.jpg
+File pattern: *.png
+Appears if selection contains: Image Files
+
+Name: Open with Exiftool
+Command: xfce4-terminal -e "bash -c 'exiftool %f; read'"
+File pattern: *
+Appears if selection contains: Image Files
+Icon: emblem-information
+
+The bash -c with the read command ensures that the terminal window stays open after displaying the metadata, giving you time to review the information before the window closes.
+
+Name: MediaInfo-CLI
+Command: xfce4-terminal -e "bash -c 'mediainfo %f; read'"
+File pattern: *
+Appears if selection contains: Video Files
+Icon: camera-video
 
 Thunar - Custom Actions:
 https://docs.xfce.org/xfce/thunar/custom-actions#create_a_symbolic_link
