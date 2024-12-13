@@ -865,6 +865,8 @@ yes | sudo apt install ddrescueview && \
 yes | sudo apt install extundelete && \
 yes | sudo apt install ext4magic && \
 yes | sudo apt install scalpel && \
+# https://www.r-studio.com/free-linux-recovery/Download.shtml
+# sudo dpkg -i RLinux6_x64.deb  (~ 68 MB)
 yes | sudo apt install recoverjpeg && \
 yes | sudo apt install dvdisaster && \
 # Ref: https://askubuntu.com/questions/15827/recovering-files-from-a-corrupt-cd-dvd
