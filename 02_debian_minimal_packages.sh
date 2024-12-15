@@ -875,7 +875,8 @@ yes | sudo apt install ffmpeg && \
 yes | sudo apt install mediainfo && \
 yes | sudo apt install mediainfo-gui && \
 yes | sudo apt install libimage-exiftool-perl && \
-
+# 'forensics-extra' requires 1.3 GB drive space.
+yes | sudo apt install forensics-extra && \
 # FFMPEG-Thumbnailer
 # https://askubuntu.com/questions/457317/mpeg2-transport-stream-mts-thumbnails
 # https://bugs.launchpad.net/shotwell/+bug/1406546/comments/1
