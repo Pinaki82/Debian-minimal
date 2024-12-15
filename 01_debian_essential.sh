@@ -171,6 +171,7 @@ yes | sudo apt install thunar-vcs-plugin && \
 #
 # Display dialog boxes
 yes | sudo apt install zenity && \
+yes | sudo apt install ffmpeg zenity bc && \
 # Zenity: The GNOME port of the venerable 'dialog' program, which allows you to display dialog boxes from the command-line and shell scripts.
 #
 # ------------------------------------------------------------------------------

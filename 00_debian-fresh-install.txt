@@ -380,6 +380,17 @@ File pattern: *
 Appears if selection contains: Directories
 Icon: alarm-clock-triggered
 
+# * Written by Anthropic Claude 3.5 Haiku
+Name: Duration of Selected Video Files
+Command: $HOME/.local/share/applications/thunar-video-duration-action.sh %F
+File pattern: *.mp4;*.avi;*.mkv;*.mov;*.wmv;*.webm;*.MP4;*.AVI;*.MKV;*.MOV;*.WMV;*.WEBM
+Appears if selection contains: Video Files
+Icon: alarm-clock-triggered
+
+# Prerequisites:
+# sudo apt install ffmpeg zenity bc
+# chmod +x $HOME/.local/share/applications/thunar-video-duration-action.sh
+
 Name: Mediainfo-GUI
 Description: technical and tag information about a video or audio file
 Submenu:
