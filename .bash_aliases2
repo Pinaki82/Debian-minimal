@@ -112,7 +112,7 @@ HELIX_RUNTIME=/home/YOUR_USERNAME/helix/runtime/
 # https://askubuntu.com/questions/965599/where-is-the-install-location-for-the-snap-download-tool
 export PATH="$PATH:/snap/bin/"
 
-export PATH="$PATH:/mnt/hdd2/PortablePrograms/blender-3.6.2-linux-x64/"
+export PATH="$PATH:/mnt/hdd2/PortablePrograms/blender-3.3.12-linux-x64/"
 # FFmpeg Static Build
 # https://ffmpeg.org/download.html#build-linux
 # https://johnvansickle.com/ffmpeg/
