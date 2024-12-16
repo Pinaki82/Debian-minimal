@@ -79,6 +79,9 @@ https://search.brave.com/
 Google
 https://www.google.com/
 
+BeaGo
+https://www.beago.ai/
+
 Papaly
 https://papaly.com
 
