@@ -1237,6 +1237,10 @@ yes | sudo apt install texlive-latex-base && \
 yes | sudo apt install dvipng && \
 yes | sudo apt install dvisvgm && \
 yes | sudo apt install ghostscript && \
+# pdfjam
+# https://askubuntu.com/questions/246647/convert-a-directory-of-jpeg-files-to-a-single-pdf-document
+yes | sudo apt install texlive-extra-utils && \
+# pdfjam --nup 2x4 --papersize '{4in,6in}'  *.jpg
 
 # Pandoc:
 yes | sudo apt install pandoc && \
