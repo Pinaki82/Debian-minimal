@@ -448,6 +448,12 @@ Command: convert %f -quality 75 %f.jpg
 File pattern: *.png
 Appears if selection contains: Image Files
 
+Name: ProRes to MP4 8 bits
+Command: xfce4-terminal -e "bash -c 'ffmpeg -i %f -c:v mjpeg -q:v 0 -crf 0 -preset ultrafast -an %f-2.mov && ffmpeg -i %f-2.mov -c:v libx264 -q:v 0 -preset fast -crf 16 -aspect 16:9 -an %f-3.mov && trash %f-2.mov; read'"
+File pattern: *
+Appears if selection contains: Video files
+Icon: application-video
+
 Name: Open with Exiftool
 Command: xfce4-terminal -e "bash -c 'exiftool %f; read'"
 File pattern: *
