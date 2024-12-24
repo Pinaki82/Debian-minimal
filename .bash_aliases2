@@ -49,6 +49,9 @@ alias rm=trash
 # Add alias cln=clear to your .zshrc/.bashrc/.bash_aliases to save your typing efforts.
 alias clr=clear
 
+# Add alias xx=exit to your .zshrc/.bashrc/.bash_aliases to exit without typing the complete 'exit' command.
+alias xx=exit
+
 # Bitwarden Password Manager to the search path
 # mkdir $HOME/.bw
 # Put 'bw' in that folder
