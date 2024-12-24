@@ -401,6 +401,20 @@ Range (min-max): *
 Appears if selection contains: Video Files
 Icon: camera-video
 
+# https://www.howtogeek.com/strip-photo-metadata-with-linux-exiftool/
+Name: Strip Metadata
+Command: exiftool -all= %F
+File pattern: *
+Appears if selection contains: Image Files
+Icon: view-list-images
+
+https://www.baeldung.com/linux/files-remove-metadata
+Name: MAT2: Clean Metadata
+Command: mat2 %F
+File pattern: *
+Appears if selection contains: Text+Audio+Video+Image+Other Files (except for Directories)
+Icon: application-pdf
+
 Name: Create symlink
 Command: ln -Ts %f %n" (symlink)"
 File pattern: *
