@@ -1272,6 +1272,11 @@ https://flathub.org/apps/com.github.IsmaelMartinez.teams_for_linux
 flatpak install flathub com.github.IsmaelMartinez.teams_for_linux
 #                                                    # Zoom and MS-Teams
 
+# Duplicate File Finder
+sudo snap install fslint-unofficial
+# snap list
+# cp /var/lib/snapd/desktop/applications/fslint-unofficial_fslint-unofficial.desktop ~/.local/share/applications/
+# chmod 755 ~/.local/share/applications/fslint-unofficial_fslint-unofficial.desktop
 
 --------------------------------------------------------------------------------
 All flatpack and snap apps:
