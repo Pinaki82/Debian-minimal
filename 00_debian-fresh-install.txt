@@ -1299,10 +1299,12 @@ org.torproject.torbrowser-launcher
 snap list
 
 Name:
-ffdiaporama-c18
-keepassxc
-teams-for-linux
-vlc
+ffdiaporama-c18                        0.5                         4      latest/stable  frank.fh        -
+fslint-unofficial                      v0.1.14                     73     latest/stable  tgagor          -
+hdmi-usb-dongle                        0.1                         33     latest/stable  ogra            -
+keepassxc                              2.7.8                       1785   latest/stable  keepassxreboot  -
+teams-for-linux                        1.12.5                      730    latest/stable  ismaelmartinez  -
+vlc                                    3.0.20-1-g2617de71b6        3777   latest/stable  videolan**      -
 
 
 --------------------------------------------------------------------------------
