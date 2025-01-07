@@ -983,6 +983,9 @@ yes | sudo apt install gimp-gmic && \
 yes | sudo apt install gegl && \
 yes | sudo apt install xzgv && \
 
+# To open RAW files with GIMP.
+yes | sudo apt install darktable && \
+
 # GIMP:
 
 yes | sudo apt install gimp gimp-data gimp-data-extras gimp-gmic gimp-gutenprint gimp-help-common gimp-help-en-gb gimp-lensfun gimp-plugin-registry gimp-texturize icc-profiles icc-profiles-free gegl gtkam-gimp xzgv && \
