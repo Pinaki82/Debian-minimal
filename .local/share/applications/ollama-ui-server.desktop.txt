@@ -84,6 +84,7 @@ Categories=;
 # Use "ollama [command] --help" for more information about a command.
 
 # Other useful models:
+# deepseek-coder:6.7b
 # llama2-uncensored
 # mistral
 # starling-lm
