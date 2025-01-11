@@ -350,6 +350,16 @@ Range (min-max):
 Appears if selection contains:
 Directories ** (CHECK)
 
+https://github.com/clayrisser/debian-ghostty
+Edit -> Configure custom actions...-> Add (+)
+Name: Ghostty
+Description: Ghostty Terminal in this Directory Tree
+Command: ghostty
+Icon: utilities-terminal
+File Pattern: *
+Range (min-max): <blank>
+Appear if: Directories
+
 Edit -> Configure custom actions...-> Add (+)
 
 Name: GITK

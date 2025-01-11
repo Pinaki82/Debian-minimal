@@ -494,6 +494,21 @@ yes | sudo apt install sakura && \
 # Build it from the source
 # https://github.com/bakkeby/st-flexipatch.git
 #
+# Ghostty Terminal Emulator
+# https://github.com/clayrisser/debian-ghostty
+echo 'deb http://download.opensuse.org/repositories/home:/clayrisser:/bookworm/Debian_12/ /' | sudo tee /etc/apt/sources.list.d/home:clayrisser:bookworm.list && \
+curl -fsSL https://download.opensuse.org/repositories/home:clayrisser:bookworm/Debian_12/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_clayrisser_bookworm.gpg > /dev/null && \
+sudo apt update && \
+sudo apt install ghostty && \
+# Thunar File Manager Custom Actions:
+# Name: Ghostty
+# Description: Ghostty Terminal in this Directory Tree
+# Command: ghostty
+# Icon: utilities-terminal
+# File Pattern: *
+# Range (min-max): <blank>
+# Appear if: Directories
+#
 yes | sudo apt install tree && \
 # Midnight commander command-line file manager
 # sudo apt install mc && \
