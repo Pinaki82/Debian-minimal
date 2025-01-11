@@ -6,7 +6,7 @@ Name=Ollama-UI Server
 Comment=A simple HTML UI for Ollama
 Icon=xfce4-sample-plugin
 # https://github.com/ollama-ui/ollama-ui
-Exec=/mnt/hdd2/PortablePrograms/ollama-ui/run-locally.sh
+Exec=/home/YOURUSERNAME/.local/share/applications/ollama-start-server.sh
 Terminal=true
 Categories=;
 
