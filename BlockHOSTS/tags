@@ -1,0 +1,70 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/appu/debian/Debian-minimal/BlockHOSTS/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+CONFIG_DIR_NAME	hosts_manager.c	/^#define CONFIG_DIR_NAME /;"	d	file:
+CONFIG_FILE	hosts_manager.c	/^#define CONFIG_FILE /;"	d	file:
+CURL_TIMEOUT	hosts_manager.c	/^#define CURL_TIMEOUT /;"	d	file:
+MAX_CMD_LENGTH	hosts_manager.c	/^#define MAX_CMD_LENGTH /;"	d	file:
+MAX_FILENAME_LENGTH	hosts_manager.c	/^#define MAX_FILENAME_LENGTH /;"	d	file:
+MAX_LINE_LENGTH	hosts_manager.c	/^#define MAX_LINE_LENGTH /;"	d	file:
+MAX_PATH_LENGTH	hosts_manager.c	/^#define MAX_PATH_LENGTH /;"	d	file:
+_POSIX_C_SOURCE	hosts_manager.c	/^#define  _POSIX_C_SOURCE /;"	d	file:
+_XOPEN_SOURCE	hosts_manager.c	/^#define  _XOPEN_SOURCE /;"	d	file:
+backup_filename	hosts_manager.c	/^  char backup_filename[MAX_FILENAME_LENGTH];$/;"	l	function:main	typeref:typename:char[]	file:
+cmd	hosts_manager.c	/^  char cmd[MAX_CMD_LENGTH];$/;"	l	function:main	typeref:typename:char[]	file:
+concatenate_files	hosts_manager.c	/^int concatenate_files(const char *output_file, const char *files[], int file_count) {$/;"	f	typeref:typename:int	signature:(const char * output_file,const char * files[],int file_count)
+concatenate_files	hosts_manager.c	/^int concatenate_files(const char *output_file, const char *files[], int file_count);$/;"	p	typeref:typename:int	file:	signature:(const char * output_file,const char * files[],int file_count)
+config_base	hosts_manager.c	/^    char config_base[MAX_PATH_LENGTH];$/;"	l	function:get_config_dir	typeref:typename:char[]	file:
+config_dir	hosts_manager.c	/^  char *config_dir = get_config_dir();$/;"	l	function:find_file	typeref:typename:char *	file:
+config_path	hosts_manager.c	/^  char *config_path = find_file(CONFIG_FILE);$/;"	l	function:read_url_from_config	typeref:typename:char *	file:
+config_path	hosts_manager.c	/^  static char config_path[MAX_PATH_LENGTH];$/;"	l	function:get_config_dir	typeref:typename:char[]	file:
+downloaded_hosts	hosts_manager.c	/^  char downloaded_hosts[MAX_PATH_LENGTH];$/;"	l	function:main	typeref:typename:char[]	file:
+execute_command	hosts_manager.c	/^int execute_command(const char *cmd) {$/;"	f	typeref:typename:int	signature:(const char * cmd)
+execute_command	hosts_manager.c	/^int execute_command(const char *cmd);$/;"	p	typeref:typename:int	file:	signature:(const char * cmd)
+file_count	hosts_manager.c	/^  const int file_count = sizeof(input_files_names) \/ sizeof(input_files_names[0]);$/;"	l	function:main	typeref:typename:const int	file:
+file_exists	hosts_manager.c	/^int file_exists(const char *filename) {$/;"	f	typeref:typename:int	signature:(const char * filename)
+file_exists	hosts_manager.c	/^int file_exists(const char *filename);$/;"	p	typeref:typename:int	file:	signature:(const char * filename)
+file_lines	hosts_manager.c	/^    int file_lines = 0;$/;"	l	function:concatenate_files	typeref:typename:int	file:
+file_path	hosts_manager.c	/^  static char file_path[MAX_PATH_LENGTH];$/;"	l	function:find_file	typeref:typename:char[]	file:
+find_file	hosts_manager.c	/^char *find_file(const char *filename) {$/;"	f	typeref:typename:char *	signature:(const char * filename)
+find_file	hosts_manager.c	/^char *find_file(const char *filename);$/;"	p	typeref:typename:char *	file:	signature:(const char * filename)
+fp	hosts_manager.c	/^    FILE *fp = fopen(files[i], "r");$/;"	l	function:concatenate_files	typeref:typename:FILE *	file:
+fp	hosts_manager.c	/^  FILE *fp = fopen(config_path, "r");$/;"	l	function:read_url_from_config	typeref:typename:FILE *	file:
+fp	hosts_manager.c	/^  FILE *fp = fopen(filename, "r");$/;"	l	function:file_exists	typeref:typename:FILE *	file:
+get_config_dir	hosts_manager.c	/^char *get_config_dir(void) {$/;"	f	typeref:typename:char *	signature:(void)
+get_config_dir	hosts_manager.c	/^char *get_config_dir(void);$/;"	p	typeref:typename:char *	file:	signature:(void)
+get_timestamp	hosts_manager.c	/^void get_timestamp(char *timestamp, size_t size) {$/;"	f	typeref:typename:void	signature:(char * timestamp,size_t size)
+get_timestamp	hosts_manager.c	/^void get_timestamp(char *timestamp, size_t size);$/;"	p	typeref:typename:void	file:	signature:(char * timestamp,size_t size)
+home	hosts_manager.c	/^  const char *home = getenv("HOME");$/;"	l	function:get_config_dir	typeref:typename:const char *	file:
+hosts_manager.c	hosts_manager.c	1;"	F	epoch:1737211182
+i	hosts_manager.c	/^  for(int i = 0; i < 4; i++) {$/;"	l	function:main	typeref:typename:int	file:
+i	hosts_manager.c	/^  for(int i = 0; i < file_count - 1; i++) {   \/\/ Exclude downloaded file from check$/;"	l	function:main	typeref:typename:int	file:
+i	hosts_manager.c	/^  for(int i = 0; i < file_count; i++) {$/;"	l	function:concatenate_files	typeref:typename:int	file:
+i	hosts_manager.c	/^  for(int i = 0; i < file_count; i++) {$/;"	l	function:main	typeref:typename:int	file:
+input_files	hosts_manager.c	/^  const char *input_files[4];  \/\/ Final array for concatenate_files$/;"	l	function:main	typeref:typename:const char * [4]	file:
+input_files_names	hosts_manager.c	/^  const char *input_files_names[] = {$/;"	l	function:main	typeref:typename:const char * []	file:
+input_files_w_path	hosts_manager.c	/^  const char *input_files_w_path[4];$/;"	l	function:main	typeref:typename:const char * [4]	file:
+line	hosts_manager.c	/^  char line[MAX_LINE_LENGTH];$/;"	l	function:concatenate_files	typeref:typename:char[]	file:
+main	hosts_manager.c	/^int main(void) {$/;"	f	typeref:typename:int	signature:(void)
+now	hosts_manager.c	/^  time_t now;$/;"	l	function:get_timestamp	typeref:typename:time_t	file:
+outfp	hosts_manager.c	/^  FILE *outfp = fopen(output_file, "w");$/;"	l	function:concatenate_files	typeref:typename:FILE *	file:
+read_url_from_config	hosts_manager.c	/^char *read_url_from_config(void) {$/;"	f	typeref:typename:char *	signature:(void)
+read_url_from_config	hosts_manager.c	/^char *read_url_from_config(void);$/;"	p	typeref:typename:char *	file:	signature:(void)
+resolved_paths	hosts_manager.c	/^  char *resolved_paths[4];  \/\/ To store the actual paths$/;"	l	function:main	typeref:typename:char * [4]	file:
+result	hosts_manager.c	/^  int result = system(cmd);$/;"	l	function:execute_command	typeref:typename:int	file:
+st	hosts_manager.c	/^  struct stat st = {0};$/;"	l	function:get_config_dir	typeref:struct:stat	file:
+st	hosts_manager.c	/^  struct stat st;$/;"	l	function:main	typeref:struct:stat	file:
+temp_dir	hosts_manager.c	/^  char temp_dir[MAX_PATH_LENGTH];$/;"	l	function:main	typeref:typename:char[]	file:
+timestamp	hosts_manager.c	/^  char timestamp[MAX_FILENAME_LENGTH];$/;"	l	function:main	typeref:typename:char[]	file:
+tm_info	hosts_manager.c	/^  struct tm *tm_info;$/;"	l	function:get_timestamp	typeref:struct:tm *	file:
+total_lines	hosts_manager.c	/^  int total_lines = 0;$/;"	l	function:concatenate_files	typeref:typename:int	file:
+url	hosts_manager.c	/^  char *url = read_url_from_config();$/;"	l	function:main	typeref:typename:char *	file:
+url	hosts_manager.c	/^  static char url[MAX_LINE_LENGTH];$/;"	l	function:read_url_from_config	typeref:typename:char[]	file:
