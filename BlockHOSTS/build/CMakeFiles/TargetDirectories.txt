@@ -1,0 +1,7 @@
+/mnt/hdd/HOME/BlockHOSTS/build/CMakeFiles/hosts_manager.dir
+/mnt/hdd/HOME/BlockHOSTS/build/CMakeFiles/edit_cache.dir
+/mnt/hdd/HOME/BlockHOSTS/build/CMakeFiles/rebuild_cache.dir
+/mnt/hdd/HOME/BlockHOSTS/build/CMakeFiles/list_install_components.dir
+/mnt/hdd/HOME/BlockHOSTS/build/CMakeFiles/install.dir
+/mnt/hdd/HOME/BlockHOSTS/build/CMakeFiles/install/local.dir
+/mnt/hdd/HOME/BlockHOSTS/build/CMakeFiles/install/strip.dir

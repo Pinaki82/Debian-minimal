@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG -O2  -s CMakeFiles/hosts_manager.dir/hosts_manager.c.o -o hosts_manager
