@@ -2,16 +2,17 @@
 # P. S. Gupta's blocklist (START)
 #**********************************************************#
 
-0.0.0.0 tiktok.com
-0.0.0.0 www.bbc.com
-0.0.0.0 www.aljazeera.com
-0.0.0.0 www.indiatoday.in
-0.0.0.0 www.thenationalherald.com
-0.0.0.0 www.newslaundry.com
-0.0.0.0 www.boomlive.in
-0.0.0.0 www.olx.in
-0.0.0.0 www.quikr.com
-0.0.0.0 twitter.com
+0.0.0.0 website.com
+0.0.0.0 www.thenewsmedia0.com
+0.0.0.0 www.thenewsmedia1.com
+0.0.0.0 www.thenewsmedia2.com
+0.0.0.0 www.thenewsmedia3.in
+0.0.0.0 www.thenewsmedia4.com
+0.0.0.0 www.thenewsmedia5.com
+0.0.0.0 www.website1.in
+0.0.0.0 www.website2.in
+0.0.0.0 www.website3.com
+0.0.0.0 socialmedia0.com
 
 #**********************************************************#
 # P. S. Gupta's blocklist (END)
