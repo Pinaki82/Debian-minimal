@@ -7,6 +7,9 @@ export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
 export LD_LIBRARY_PATH="/usr/lib64/:$LD_LIBRARY_PATH"
 export C_INCLUDE_PATH="/usr/local/include:$C_INCLUDE_PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/emsdk:$PATH"
+export PATH="$HOME/emsdk/upstream/emscripten:$PATH"
+
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # https://linuxize.com/post/how-to-create-bash-aliases/
@@ -107,7 +110,7 @@ export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 export PATH="$PATH:/usr/sbin"
-HELIX_RUNTIME=/home/YOUR_USERNAME/helix/runtime/
+HELIX_RUNTIME=$HOME/helix/runtime/
 
 # snap
 # add '/snap/bin' to '$PATH'
