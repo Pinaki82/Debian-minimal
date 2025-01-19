@@ -1,0 +1,23 @@
+https://askubuntu.com/questions/738557/how-do-i-manually-set-location-for-redshift-using-the-conf-files
+https://wiki.archlinux.org/title/Redshift#Manual_setup
+
+
+pkill -USR1 redshift
+killall -USR1 redshift
+killall redshift
+mkdir ~/.config/redshift
+touch ~/.config/redshift/redshift.conf
+Open a browser on your desktop machine and copy your location information from Google Maps: https://www.google.com/maps
+xx.yyyyyyyyyyyyyyy, zz.rrrrrrrrrrrrrr
+
+File content of: ~/.config/redshift/redshift.conf
+
+
+[redshift]
+...
+location-provider=manual
+...
+[manual]
+lat=xx.yyyyyyyyyyyyyyy
+lon=zz.rrrrrrrrrrrrrr
+
