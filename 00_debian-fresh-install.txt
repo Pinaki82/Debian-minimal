@@ -863,9 +863,15 @@ sudo n stable
 
 How To Compare Two Directories on Linux:
 https://www.baeldung.com/linux/compare-two-directories
+https://askubuntu.com/questions/651166/best-alternative-for-winmerge#661055
 
 sudo apt install meld
-flatpak install org.kde.kdiff3
+sudo apt install diffuse
+sudo apt install kdiff3-qt or flatpak install org.kde.kdiff3 (cumbersome)
+# sudo apt install xxdiff (not easy to use or feature-rich)
+# sudo apt install fldiff (not easy to use or feature-rich)
+
+Command-line file manager:
 sudo apt install mc
 
 You might be interested in the following also:

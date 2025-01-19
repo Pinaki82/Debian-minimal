@@ -39,6 +39,18 @@ yes | sudo apt update && \
 yes | sudo apt install nodejs && \
 yes | sudo apt install jq && \
 
+# How To Compare Two Directories on Linux:
+# https://www.baeldung.com/linux/compare-two-directories
+# https://askubuntu.com/questions/651166/best-alternative-for-winmerge#661055
+
+yes | sudo apt install meld && \
+yes | sudo apt install diffuse && \
+# KDiff3 (cumbersome)
+yes | sudo apt install kdiff3-qt && \
+# or flatpak install org.kde.kdiff3
+# sudo apt install xxdiff (not easy to use or feature-rich)
+# sudo apt install fldiff (not easy to use or feature-rich)
+
 # Description: package manager for Node.js
 # (npm: Unmet dependencies)
 
