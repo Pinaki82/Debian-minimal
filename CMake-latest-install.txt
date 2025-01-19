@@ -1,0 +1,78 @@
+Installing the Latest CMake from a Source Tarball
+=====================================================
+
+Step 1: Check the Existing Version
+
+To verify the currently installed version of CMake, run the following command:
+
+
+cmake --version
+
+
+The output will display the version number, similar to:
+
+
+cmake version 3.25.1
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+
+
+Step 2: Download the Latest CMake Source
+
+Download the latest CMake source from the "Kitware CMake GitHub repository",
+https://github.com/Kitware/CMake/releases.
+Select the "Source code" option in `(tar.gz)` format, and download the
+`CMake-{version number}.tar.gz` file.
+
+Step 3: Extract the Source Tarball
+
+Navigate to the `~/Downloads` directory (_for example_) and extract
+the source tarball:
+
+
+cd ~/Downloads/
+
+tar -zxvf 'CMake-{version number}.tar.gz'
+
+
+Step 4: Bootstrap and Build CMake
+
+Enter the extracted source directory and bootstrap the build process:
+
+
+cd CMake-{version number}/
+
+
+
+./bootstrap
+
+
+Use `gmake` to run the build process:
+
+
+gmake
+
+
+Step 5: Install CMake
+
+If the build process completes successfully, install the built binary
+using `sudo` privileges:
+
+
+sudo gmake install
+
+
+Step 6: Verify the Installation
+
+To confirm the installation, check the CMake version number:
+
+
+cmake --version
+
+
+The output should display the newly installed version, similar to:
+
+
+cmake version 3.31.3
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
