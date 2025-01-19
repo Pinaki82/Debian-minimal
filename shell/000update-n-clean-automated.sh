@@ -54,6 +54,12 @@ refresh_snap(){ # update snap
   yes | sudo snap refresh
 }
 
+hosts_update(){ # update snap
+  echo "Next: Update hosts"
+  sleep 2
+  hosts_manager
+}
+
 update_flatpak(){ # update flatpak
   echo "Next: flatpak update"
   sleep 2
@@ -87,6 +93,9 @@ if [ "${choice}" != '0' ]; then
 
   # update snap
   refresh_snap
+
+  # Update hosts
+  hosts_update
 
   # update flatpak
   update_flatpak
