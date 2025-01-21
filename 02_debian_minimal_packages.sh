@@ -1018,6 +1018,9 @@ yes | sudo fc-cache && \
 # https://github.com/colossus73/imagination
 yes | sudo apt install imagination && \
 
+# Dependencies for some markdown editors.
+yes | sudo apt install python3-gtkspellcheck wkhtmltopdf && \
+
 
 # =================================================================
 # essential packages (END)
