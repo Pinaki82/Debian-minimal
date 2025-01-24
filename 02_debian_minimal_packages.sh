@@ -391,6 +391,9 @@ yes | sudo apt autoremove brltty && \
 # or,
 # sudo apt purge --auto-remove brltty && \
 
+# Req. by SimulIDE, https://pcotret.github.io/simulide/
+yes | sudo apt install libqt5core5a libqt5gui5 libqt5xml5 libqt5svg5 libqt5widgets5 libqt5concurrent5 libqt5multimedia5 libqt5multimedia5-plugins libqt5serialport5 libqt5script5 libelf1 && \
+
 yes | sudo apt update && \
 # https://www.pragmaticlinux.com/2021/11/how-to-monitor-the-serial-port-in-linux/
 yes | sudo apt install cutecom && \
