@@ -1059,6 +1059,8 @@ yes | sudo apt install gnupg && \
 
 yes | sudo apt install scdaemon && \
 
+yes | sudo apt install debian-keyring && \
+
 # =================================================================
 # GnuPG (END)
 # =================================================================
