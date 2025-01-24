@@ -8,7 +8,7 @@
 #0.0.0.0 www.@lljaljeera.com
 #0.0.0.0 www.paralyticimpics.com
 #0.0.0.0 www.formulaunethicalespionagespice.com
-#0.0.0.0 www.TheFédérationInternationaleDeGallbladderBballChasingAssociation.com
+#0.0.0.0 www.TheFédérationInternationaleDeGallbladderBallChasingAssociation.com
 #0.0.0.0 www.nationalhatetoday.in
 #0.0.0.0 www.thereligiouspious.com
 #0.0.0.0 www.theantinationalherald.com
