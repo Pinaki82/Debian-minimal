@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=SimulIDE
+Comment=A simple real time electronic circuit simulator
+Icon=/home/YOURUSERNAME/.local/share/icons/simulide_385.png
+Exec=/mnt/hdd2/PortablePrograms/SimulIDE_1.1.0-SR1_Lin64/simulide
+Terminal=false
+Categories=;
