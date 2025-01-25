@@ -1,6 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=SimulIDE
+# Refer to https://github.com/Pinaki82/Tulu-C-IDE/blob/main/SimulIDE-Circuit-Simulator.md
 Comment=A simple real time electronic circuit simulator
 Icon=/home/YOURUSERNAME/.local/share/icons/simulide_385.png
 Exec=/mnt/hdd2/PortablePrograms/SimulIDE_1.1.0-SR1_Lin64/simulide
