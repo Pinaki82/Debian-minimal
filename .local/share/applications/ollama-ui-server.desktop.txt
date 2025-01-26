@@ -85,6 +85,8 @@ Categories=;
 
 # Other useful models:
 # deepseek-coder:6.7b
+# deepseek-r1:1.5b
+# llama3.2:1b (not good at coding in C)
 # llama2-uncensored
 # mistral
 # starling-lm
