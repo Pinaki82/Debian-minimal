@@ -88,6 +88,7 @@ Categories=;
 # deepseek-r1:1.5b
 # llama3.2:1b (not good at coding in C)
 # qwen2.5:0.5b (reasonably good)
+# hhao/qwen2.5-coder-tools:0.5b
 # llama2-uncensored
 # mistral
 # starling-lm
