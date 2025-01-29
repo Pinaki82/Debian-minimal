@@ -509,4 +509,18 @@ int main() {
 }
 ```
 
+### ollama_runner.desktop
+
+```desktop
+[Desktop Entry]
+Type=Application
+Name=Ollama-UI-wrapper (Firefox Browser)
+Comment=A simple wrapper for Ollama and Ollama-UI. Also opens an intuitive webpage in Firefox.
+Icon=xfce4-sample-plugin
+Exec=sh -c "exec $HOME/.local/bin/ollama_runner"
+#  The `sh -c "exec $HOME/..."` trick is a common and effective way to handle environment variables and path issues in .desktop files. (Google Gemini)
+Terminal=false
+Categories=;
+```
+
 The code can be found in the `ollama_runner.zip` archive.
