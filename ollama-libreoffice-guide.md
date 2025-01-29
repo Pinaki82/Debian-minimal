@@ -184,6 +184,23 @@ If you encounter issues:
 
 ## A better approach.
 
+### config.ini
+
+```ini
+[Paths]
+ollama-ui-path = /mnt/hdd2/PortablePrograms/ollama-ui/
+make-command = make
+
+[Browser]
+browser-command = firefox
+# Alternatives (not tested with):
+# browser-command = brave-browser
+# browser-command = microsoft-edge
+url = http://127.0.0.1:8000/
+```
+
+### ollama_runner.c
+
 ```c
 // Last Change: 2025-01-29  Wednesday: 05:51:57 PM
 
