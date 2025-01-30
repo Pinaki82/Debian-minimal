@@ -1156,7 +1156,6 @@ sudo snap install keepassxc
 sudo snap install vlc
 # sudo snap install kompare
 # Slideshow maker
-sudo snap install ffdiaporama-c18
 # usage snap run kompare .bashrc .bashrc2
 
 # HDMI-2-USB
@@ -1315,7 +1314,6 @@ org.torproject.torbrowser-launcher
 snap list
 
 Name:
-ffdiaporama-c18                        0.5                         4      latest/stable  frank.fh        -
 fslint-unofficial                      v0.1.14                     73     latest/stable  tgagor          -
 hdmi-usb-dongle                        0.1                         33     latest/stable  ogra            -
 keepassxc                              2.7.8                       1785   latest/stable  keepassxreboot  -
