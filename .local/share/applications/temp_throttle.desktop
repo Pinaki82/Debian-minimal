@@ -1,0 +1,24 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+[Desktop Entry]
+Type=Application
+Name=Limit CPU Usage
+Comment=Limit CPU Usage if the package temperature exceeds 49 degrees Celcius.
+Icon=thermal-monitor
+Exec=sudo sh '/home/appu/.local/share/applications/temp_throttle.sh' 49
+Terminal=true
+Categories=;
+
+# https://stackoverflow.com/questions/12973777/how-to-run-a-shell-script-at-startup
+# https://operavps.com/docs/run-command-after-boot-in-linux/
+# crontab -e
+# Add:
+# @reboot sudo sh '/home/appu/.local/share/applications/temp_throttle.sh' 49
+#
+# sudo crontab -e
+# Add:
+# @reboot sudo sh '/home/appu/.local/share/applications/temp_throttle.sh' 49
+#
+# Reboot, then verify:
+# ps -ef
+

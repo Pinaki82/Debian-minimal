@@ -1,0 +1,11 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+[Desktop Entry]
+Type=Application
+Name=Res
+Comment=Get the current Monitor Resolution.
+Icon=tvtime
+# https://askubuntu.com/questions/584688/how-can-i-get-the-monitor-resolution-using-the-command-line
+Exec=/home/appu/.local/share/applications/res.sh
+Terminal=true
+Categories=;

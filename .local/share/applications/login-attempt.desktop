@@ -1,0 +1,10 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+[Desktop Entry]
+Type=Application
+Name=Login Attempts
+Comment=Last five login information.
+Icon=flag-red
+Exec=/home/appu/shell/login-attempts.sh
+Terminal=true
+Categories=;

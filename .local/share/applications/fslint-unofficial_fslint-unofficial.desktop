@@ -1,0 +1,10 @@
+[Desktop Entry]
+X-SnapInstanceName=fslint-unofficial
+Name=FSlint Janitor
+Comment=File System Lint cleaner
+Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/fslint-unofficial_fslint-unofficial.desktop /snap/bin/fslint-unofficial
+Terminal=false
+Type=Application
+Icon=/snap/fslint-unofficial/73/meta/gui/icon.png
+Categories=System;Filesystem;GTK;Utility;
+

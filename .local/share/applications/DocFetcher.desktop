@@ -1,0 +1,35 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+X-AppInstall-Package=DocFetcher
+# https://docfetcher.sourceforge.io/en/download.html
+X-AppInstall-Popcon=1054
+X-AppInstall-Section=main
+
+Name=DocFetcher
+GenericName=Document Search Utility
+Comment=A cross-platform Document Search Utility which is used to search texts inside documents.
+
+
+# To launch DocFetcher from the system launcher, place a copy of
+# the desktop entry 'DocFetcher.desktop' in
+# ~/.local/share/applications
+# and 'DocFetcher.ico'
+# in
+# ~/.local/share/icons
+
+TryExec=/mnt/hdd2/PortablePrograms/DocFetcher-1.1.25/DocFetcher-GTK3.sh
+Exec=/mnt/hdd2/PortablePrograms/DocFetcher-1.1.25/DocFetcher-GTK3.sh
+Terminal=false
+Type=Application
+Icon=DocFetcher.png
+Categories=Office;
+StartupNotify=false
+
+
+X-Ubuntu-Gettext-Domain=app-install-data
+Path=bash -c 'cd $(dirname %0)';
+GenericName=DocFetcher
+Name[en_IN]=DocFetcher
+
+# https://docfetcher.sourceforge.net/en/index.html

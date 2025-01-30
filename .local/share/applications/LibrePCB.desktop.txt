@@ -4,7 +4,7 @@
 Type=Application
 Name=LibrePCB
 Comment=PCB Designing Software
-Icon=/home/YOURUSERNAME/.local/share/icons/appimagekit_94d02d9739afb42c76631f4df6d97fc2_org.librepcb.LibrePCB.png
-Exec=/home/YOURUSERNAME/PortablePrograms/librepcb-0.1.5-linux-x86_64.AppImage
+Icon=appimagekit_94d02d9739afb42c76631f4df6d97fc2_org.librepcb.LibrePCB.png
+Exec=sh -c "$HOME/PortablePrograms/librepcb-0.1.5-linux-x86_64.AppImage"
 Terminal=false
 Categories=;

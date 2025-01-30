@@ -2,6 +2,6 @@
 
 # https://github.com/Mozilla-Ocho/llamafile.git
 
-cd /home/YOURUSERNAME/PortablePrograms/ \
+cd /mnt/hdd2/llava/ \
 
 ./llava-v1.5-7b-q4-server.llamafile

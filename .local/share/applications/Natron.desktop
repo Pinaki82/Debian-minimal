@@ -1,0 +1,14 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+[Desktop Entry]
+Type=Application
+Name=Natron
+Comment=Video Compositor
+Icon=Natron.png
+TryExec='/mnt/hdd2/PortablePrograms/Natron-2.5.0-Linux-x86_64-no-installer/Natron'
+Exec='/mnt/hdd2/PortablePrograms/Natron-2.5.0-Linux-x86_64-no-installer/Natron'
+# https://natrongithub.github.io/
+# https://github.com/NatronGitHub/natron-plugins
+# https://github.com/NatronGitHub/natron-python-scripting
+Terminal=false
+Categories=;

@@ -1,0 +1,11 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+[Desktop Entry]
+Type=Application
+Name=Czkawka Duplicate File Finder
+Comment=Duplicate File Finder
+Icon=Czkawka.png
+# https://github.com/qarmin/czkawka/releases/
+Exec=/mnt/hdd2/PortablePrograms/linux_czkawka_gui.AppImage
+Terminal=false
+Categories=;

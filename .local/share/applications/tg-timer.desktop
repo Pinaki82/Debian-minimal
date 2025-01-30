@@ -1,0 +1,55 @@
+# Tg – the open source timegrapher
+
+# First, install dependencies:
+
+# sudo apt install libportaudiocpp0 libfftw3-dev libgtk-3-dev portaudio19-dev
+
+# Ref:
+
+# https://youtu.be/_Ltq4D0W_1c?si=tdXF72wCoHK70m25
+# DIY Timegrapher #diy #timegrapher #watchcollector #watchaccessories | Timeloupe
+
+# Using a Timegrapher:
+# Timegrapher Tutorial: Explaining Amplitude, Beat Error, And Lift Angle (Weishi No. 1000) | The 1010 Watch Club | @the1010watchclub
+# https://youtu.be/5id_Usqe1Ls?si=V1wLTnd1uzqDalfG
+
+# Application website and documentation download links:
+
+# https://tg.ciovil.li/
+# https://github.com/vacaboja/tg
+# https://reparacionderelojes.weebly.com/uploads/1/2/2/1/12213567/manual_for_tg_timming_machine_2.3.pdf
+# https://www.iaeng.org/publication/WCE2007/WCE2007_pp624-629.pdf
+
+
+# The installation process is:
+
+# git clone https://github.com/vacaboja/tg.git
+# cd tg
+# ./autogen.sh
+# ./configure
+# make/make -j4
+# chmod +x tg-timer
+# ./tg-timer
+
+# Transfer the complete 'tg' directory to the location where you store your portable programs, such as '/mnt/hdd2/PortablePrograms/'.
+# In the Desktop Entry file, modify the application path.
+
+# ---
+# Alternatively, the .deb file from the official website
+# can be extracted and the
+# application can be started from the extracted binary file
+# 'tg-timer_0.5.0-1_amd64/usr/bin/tg-timer'.
+# However, the dependencies must be found in the system.
+# ---
+
+
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+[Desktop Entry]
+Type=Application
+Name=tg-timer
+Comment=Tg – the open source timegrapher
+Icon=tg-timer.png
+Exec=/mnt/hdd2/PortablePrograms/tg/tg-timer
+Terminal=false
+Categories=;

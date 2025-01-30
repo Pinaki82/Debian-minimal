@@ -1,0 +1,21 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+[Desktop Entry]
+Type=Application
+Name=sigrok-PulseView
+Comment=Portable, cross-platform, Free/Libre/Open-Source signal analysis software suite. Logic Analyzer.
+Icon=Sigrok_logo.svg
+# https://sigrok.org/wiki/Downloads
+Exec=/mnt/hdd2/PortablePrograms/pulseview-NIGHTLY-x86_64-debug.AppImage
+# ~ 87 MB
+# Download sigrok-cli-NIGHTLY-x86_64-debug.appimage
+# ~ 59 MB
+# Move the AppImage file to ~/.local/bin/
+# chmod +x sigrok-cli-NIGHTLY-x86_64-debug.appimage
+# Add the following entry to .bash_aliases
+# export PATH="$HOME/.local/bin/:$PATH"
+# Reload the config
+# source ~/.bash_aliases
+# source ~/.bashrc
+Terminal=false
+Categories=;

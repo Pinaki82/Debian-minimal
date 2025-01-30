@@ -8,7 +8,7 @@
 Type=Application
 Name=codellama
 Comment=AI Chat LLaMA Code Instruct
-Icon=/home/YOURUSERNAME/.local/share/icons/LLaMA.CPP.svg
-Exec=sakura -e /home/YOURUSERNAME/HOME/llama.cpp/interactive-codellama-instruct.sh
+Icon=LLaMA.CPP.svg
+Exec=sakura -e /mnt/hdd2/llama.cpp/interactive-codellama-instruct.sh
 Terminal=false
 Categories=;

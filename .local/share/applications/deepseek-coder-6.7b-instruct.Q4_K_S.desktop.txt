@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+# https://lmstudio.ai/
+# https://github.com/deepseek-ai/deepseek-coder
+Name=deepseek-coder-6.7b-instruct.Q4_K_S
+Comment=AI Chat deepseek-coder-6.7b-instruct.Q4_K_S
+Icon=LLaMA.CPP.svg
+Exec=sakura -e /mnt/hdd2/llama.cpp/deepseek-coder-6.7b-instruct.Q4_K_S.sh
+Terminal=false
+Categories=;

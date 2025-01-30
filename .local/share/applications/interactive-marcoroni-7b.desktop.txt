@@ -8,7 +8,7 @@
 Type=Application
 Name=marcoroni-7b
 Comment=AI Chat marcoroni-7b
-Icon=/home/YOUR_USERNAME/.local/share/icons/LLaMA.CPP.svg
-Exec=sakura -e /home/YOUR_USERNAME/PortablePrograms/llama.cpp/interactive-marcoroni-7b.sh
+Icon=LLaMA.CPP.svg
+Exec=sakura -e /mnt/hdd2/llama.cpp/interactive-marcoroni-7b.sh
 Terminal=false
 Categories=;

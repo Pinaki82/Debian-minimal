@@ -11,8 +11,8 @@
 Type=Application
 Name=dolphin-2.1-mistral-7b.Q2_K
 Comment=AI Chat dolphin-2.1-mistral-7b.Q2_K
-Icon=/home/appu/.local/share/icons/LLaMA.CPP.svg
-# Exec=sakura -e /home/YOURUSERNAME/HOME/dolphin-2.1-mistral-7b.Q2_K.sh
-Exec=sakura -e /home/YOURUSERNAME/HOME/llama.cpp/dolphin-2.1-mistral-7b.Q2_K.sh
+Icon=LLaMA.CPP.svg
+# Exec=sakura -e /home/appu/HOME/dolphin-2.1-mistral-7b.Q2_K.sh
+Exec=sakura -e /mnt/hdd2/llama.cpp/dolphin-2.1-mistral-7b.Q2_K.sh
 Terminal=false
 Categories=;

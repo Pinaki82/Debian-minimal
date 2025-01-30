@@ -11,7 +11,7 @@
 Type=Application
 Name=MiniChat-1.5-3B-GGUF
 Comment=AI Chat MiniChat-1.5-3B-GGUF
-Icon=/home/YOURUSERNAME/.local/share/icons/LLaMA.CPP.svg
-Exec=sakura -e /home/YOURUSERNAME/HOME/llama.cpp/MiniChat-1.5-3B-GGUF.sh
+Icon=LLaMA.CPP.svg
+Exec=sakura -e /mnt/hdd2/llama.cpp/MiniChat-1.5-3B-GGUF.sh
 Terminal=false
 Categories=;

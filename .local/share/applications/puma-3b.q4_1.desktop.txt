@@ -11,7 +11,7 @@
 Type=Application
 Name=puma-3b.q4_1
 Comment=AI Chat puma-3b.q4_1
-Icon=/home/YOURUSERNAME/.local/share/icons/LLaMA.CPP.svg
-Exec=sakura -e /home/YOURUSERNAME/HOME/llama.cpp/puma-3b.q4_1.sh
+Icon=LLaMA.CPP.svg
+Exec=sakura -e /mnt/hdd2/llama.cpp/puma-3b.q4_1.sh
 Terminal=false
 Categories=;

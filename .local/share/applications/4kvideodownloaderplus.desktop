@@ -1,0 +1,13 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+#
+# https://www.4kdownload.com/products/slideshowmaker/3
+# https://alternativeto.net/category/phots-and-graphics/slideshow-creator/?platform=linux
+
+[Desktop Entry]
+Type=Application
+Name=4kvideodownloaderplus
+Comment=Video Downloader
+Icon=4kvideodownloader
+Exec=/mnt/hdd2/PortablePrograms/4kvideodownloaderplus/4kvideodownloaderplus.sh
+Terminal=false
+Categories=;

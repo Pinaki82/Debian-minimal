@@ -1,0 +1,21 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+# https://github.com/garyexplains/examples/blob/master/how-to-run-llama-cpp-on-raspberry-pi.md
+# https://huggingface.co/TheBloke/Llama-2-7b-Chat-GGUF/tree/main
+# https://huggingface.co/TheBloke/CodeLlama-7B-Instruct-GGUF/tree/main
+
+# https://huggingface.co/TheBloke/law-chat-GGUF
+# wget https://huggingface.co/TheBloke/law-chat-GGUF/resolve/main/law-chat.Q2_K.gguf
+
+# Others:
+# https://huggingface.co/TheBloke/law-LLM-GGUF
+# https://huggingface.co/law-ai/InLegalBERT (RAW)
+
+[Desktop Entry]
+Type=Application
+Name=law-chat-Q2_K
+Comment=AI Chat law-chat-Q2_K
+Icon=LLaMA.CPP.svg
+Exec=sakura -e /mnt/hdd2/llama.cpp/law-chat-Q2_K.sh
+Terminal=false
+Categories=;

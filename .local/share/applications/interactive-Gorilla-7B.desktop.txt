@@ -8,7 +8,7 @@
 Type=Application
 Name=Gorilla-7B
 Comment=AI Chat Gorilla-7B
-Icon=/home/YOUR_USERNAME/.local/share/icons/LLaMA.CPP.svg
-Exec=sakura -e /home/YOUR_USERNAME/PortablePrograms/llama.cpp/interactive-Gorilla-7B.sh
+Icon=LLaMA.CPP.svg
+Exec=sakura -e /mnt/hdd2/llama.cpp/interactive-Gorilla-7B.sh
 Terminal=false
 Categories=;

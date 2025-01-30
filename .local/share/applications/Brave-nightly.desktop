@@ -1,0 +1,11 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+[Desktop Entry]
+Type=Application
+Name=Brave
+Comment=Web Browser
+Icon=Brave.png
+# https://github.com/srevinsaju/Brave-AppImage/releases/
+Exec=/mnt/hdd2/PortablePrograms/Brave-nightly-v1.75.76-x86_64.AppImage
+Terminal=false
+Categories=;

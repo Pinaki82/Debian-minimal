@@ -11,7 +11,7 @@
 Type=Application
 Name=Aryanne-q4-TinyLlama-1.1B-1T-OpenOrca
 Comment=AI Chat Aryanne-q4-TinyLlama-1.1B-1T-OpenOrca
-Icon=/home/YOURUSERNAME/.local/share/icons/LLaMA.CPP.svg
-Exec=sakura -e /home/YOURUSERNAME/HOME/llama.cpp/Aryanne-q4-TinyLlama-1.1B-1T-OpenOrca.sh
+Icon=LLaMA.CPP.svg
+Exec=sakura -e /mnt/hdd2/llama.cpp/Aryanne-q4-TinyLlama-1.1B-1T-OpenOrca.sh
 Terminal=false
 Categories=;

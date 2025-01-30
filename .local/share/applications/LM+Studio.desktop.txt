@@ -4,8 +4,8 @@
 Type=Application
 Name=LM Studio
 Comment=Discover, download, and run local LLMs
-Icon=/home/YOURUSERNAME/.local/share/icons/LM+Studio.png
+Icon=LM+Studio.png
 # https://lmstudio.ai/
-Exec=/mnt/hdd2/PortablePrograms/LM_Studio-0.3.5.AppImage
+Exec=/mnt/hdd2/PortablePrograms/LM-Studio-0.3.8-4-x64.AppImage
 Terminal=false
 Categories=;

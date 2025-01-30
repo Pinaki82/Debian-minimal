@@ -11,7 +11,7 @@
 Type=Application
 Name=q4_0-tinyllama-1.1b-chat-v0.3-Aryanne
 Comment=AI Chat q4_0-tinyllama-1.1b-chat-v0.3-Aryanne
-Icon=/home/YOURUSERNAME/.local/share/icons/LLaMA.CPP.svg
-Exec=sakura -e /home/YOURUSERNAME/HOME/llama.cpp/q4_0-tinyllama-1.1b-chat-v0.3-Aryanne.sh
+Icon=LLaMA.CPP.svg
+Exec=sakura -e /mnt/hdd2/llama.cpp/q4_0-tinyllama-1.1b-chat-v0.3-Aryanne.sh
 Terminal=false
 Categories=;
