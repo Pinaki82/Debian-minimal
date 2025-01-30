@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="174.59219mm"
+   height="58.378918mm"
+   viewBox="0 0 174.59219 58.378918"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   sodipodi:docname="TI.IS.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.0001879"
+     inkscape:cx="329.938"
+     inkscape:cy="109.97933"
+     inkscape:window-width="1366"
+     inkscape:window-height="715"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-5.1378407,-86.729424)">
+    <path
+       id="rect1"
+       style="fill:#d40000;stroke-width:3.31906;stroke-linecap:round;paint-order:stroke fill markers"
+       d="M 5.1378407,86.729424 H 179.73003 V 145.10834 H 5.1378407 Z" />
+    <path
+       style="-inkscape-font-specification:'Arial Black, ';fill:#f9f9f9;stroke-width:3.613;stroke-linecap:round;paint-order:stroke fill markers"
+       d="m 39.6975,106.1351 h 17.078027 v 4.48965 h -5.729883 v 13.69218 H 45.427383 V 110.62475 H 39.6975 Z m 19.843749,0 h 5.630664 v 18.18183 h -5.630664 z m 9.599414,0 h 7.391797 l 2.852539,11.06289 2.840137,-11.06289 h 7.366992 v 18.18183 h -4.588867 v -13.86582 l -3.559473,13.86582 h -4.154785 l -3.54707,-13.86582 v 13.86582 h -4.60127 z m 24.023338,0 h 15.056449 v 3.88193 h -9.425785 v 2.88975 h 8.743655 v 3.7083 h -8.743655 v 3.58427 h 9.698635 v 4.11758 H 93.164001 Z m 18.033009,13.12168 h 5.39501 v 5.06015 h -5.39501 z m 9.0041,-13.12168 h 5.63067 v 18.18183 h -5.63067 z m 8.68164,12.1667 5.34541,-0.33487 q 0.17364,1.30225 0.70694,1.98438 0.86816,1.10381 2.48046,1.10381 1.20303,0 1.84795,-0.55811 0.65733,-0.57051 0.65733,-1.31465 0,-0.70693 -0.62012,-1.26504 -0.62012,-0.5581 -2.87734,-1.0542 -3.6959,-0.83095 -5.271,-2.20761 -1.5875,-1.37666 -1.5875,-3.50987 0,-1.40146 0.80615,-2.6417 0.81856,-1.25263 2.44327,-1.95957 1.6371,-0.71933 4.47724,-0.71933 3.48506,0 5.3082,1.30224 1.83555,1.28985 2.18282,4.11758 l -5.2958,0.31006 q -0.21084,-1.22783 -0.89297,-1.78594 -0.66973,-0.5581 -1.86035,-0.5581 -0.97979,0 -1.47588,0.42168 -0.4961,0.40928 -0.4961,1.00459 0,0.43408 0.40928,0.78135 0.39688,0.35966 1.88516,0.66972 3.68349,0.79375 5.27099,1.61231 1.5999,0.80615 2.31924,2.00918 0.73174,1.20302 0.73174,2.6913 0,1.74874 -0.96738,3.22461 -0.96739,1.47588 -2.70371,2.24483 -1.73633,0.75654 -4.37803,0.75654 -4.63848,0 -6.42442,-1.78594 -1.78593,-1.78593 -2.02158,-4.53925 z"
+       id="text1"
+       aria-label="TIME.IS" />
+  </g>
+</svg>

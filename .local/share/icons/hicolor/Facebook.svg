@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="147.53093mm"
+   height="147.53093mm"
+   viewBox="0 0 147.53093 147.53093"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (1:1.1+202105261517+ce6663b3b7)"
+   sodipodi:docname="Facebook.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.96664758"
+     inkscape:cx="278.79861"
+     inkscape:cy="278.79861"
+     inkscape:window-width="1366"
+     inkscape:window-height="713"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-43.079494,-32.034279)">
+    <g
+       id="g25838">
+      <rect
+         style="fill:#000000;stroke-width:0.264583"
+         id="rect846"
+         width="147.53093"
+         height="147.53093"
+         x="43.079494"
+         y="32.034279"
+         ry="28.715031" />
+      <g
+         aria-label="f"
+         id="text2404"
+         style="font-size:255.698px;line-height:1.25;font-family:'Noto Sans Sinhala';-inkscape-font-specification:'Noto Sans Sinhala';fill:#ffffff;stroke-width:0.767094"
+         transform="translate(-8.434278,-0.97728493)">
+        <path
+           d="m 176.39012,49.720128 v 19.102438 h -21.97405 c -8.24027,0 -13.98348,1.6647 -17.22965,4.994101 -3.16293,3.329401 -4.74439,9.322323 -4.74439,17.978766 v 12.360397 h 37.83031 l -6.45847,17.85392 h -31.37184 v 58.48093 H 109.34431 V 122.00975 H 87.370259 v -17.85392 h 21.974051 v -9.738494 c 0,-15.564949 3.62072,-26.884913 10.86217,-33.95989 7.24145,-7.158212 18.72788,-10.737318 34.4593,-10.737318 z"
+           style="font-weight:500;font-family:KacstOffice;-inkscape-font-specification:'KacstOffice Medium';fill:#ffffff"
+           id="path25448"
+           sodipodi:nodetypes="ccscsccccccccccscsc" />
+      </g>
+    </g>
+  </g>
+</svg>
