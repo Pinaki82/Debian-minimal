@@ -1,0 +1,11 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+[Desktop Entry]
+Type=Application
+Name=LanguageTool 6
+Comment=A free and open-source grammar checker
+Icon=LanguageTool.png
+Exec=java -jar "/mnt/hdd2/PortablePrograms/LanguageTool-6.5/languagetool.jar"
+# https://languagetool.org/download/
+Terminal=false
+Categories=;
