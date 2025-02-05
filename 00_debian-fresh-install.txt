@@ -821,6 +821,7 @@ Basic build tools you'll need:
 sudo apt install build-essential
 sudo apt install patch
 sudo apt install make
+sudo apt install bear
 sudo apt install cmake
 sudo apt install diffutils
 

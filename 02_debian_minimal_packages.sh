@@ -226,6 +226,7 @@ yes | sudo apt install build-essential && \
 
 yes | sudo apt install patch && \
 yes | sudo apt install make && \
+yes | sudo apt install bear && \
 yes | sudo apt install diffutils && \
 yes | sudo apt install llvm && \
 yes | sudo apt install clang && \

@@ -553,6 +553,7 @@ yes | sudo apt install autotools-dev && \
 yes | sudo apt install automake && \
 yes | sudo apt install m4 && \
 yes | sudo apt install make && \
+yes | sudo apt install bear && \
 yes | sudo apt install ninja-build && \
 yes | sudo apt install meld && \
 
