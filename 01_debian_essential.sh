@@ -342,11 +342,19 @@ yes | sudo apt install orage && \
 # Papyrus:
 # apt search papirus-icon-theme
 yes | sudo apt install papirus-icon-theme && \
+# Numix:
+yes | sudo apt install numix-* && \
+# Paper:
+yes | sudo apt install paper-icon-theme && \
+# Obsidian:
+yes | sudo apt install obsidian-icon-theme && \
 # PRO-dark-XFCE-4.14
 # https://www.xfce-look.org/p/1207818/
 # Extract to: /usr/share/themes
 # sudo thunar /usr/share/themes
 # sudo chmod -R 755 /usr/share/themes
+# arc-them
+yes | sudo apt install arc-theme && \
 yes | sudo apt install neofetch && \
 yes | sudo apt install htop && \
 yes | sudo apt install rofi && \

@@ -301,11 +301,18 @@ yes | sudo apt install greybird-gtk-theme
 Papyrus:
 apt search papirus-icon-theme
 yes | sudo apt install papirus-icon-theme
+Numix:
+yes | sudo apt install numix-*
+Paper:
+yes | sudo apt install paper-icon-theme
+Obsidian:
+yes | sudo apt install obsidian-icon-theme
 PRO-dark-XFCE-4.14
 https://www.xfce-look.org/p/1207818/
 Extract to: /usr/share/themes
 sudo thunar /usr/share/themes
-
+# arc-theme
+yes | sudo apt install arc-theme
 tar -xvf PRO-dark-XFCE-4.14.tar.xz
 sudo cp -r PRO-dark-XFCE-4.14/ /usr/share/themes/PRO-dark-XFCE-4.14
 sudo thunar /usr/share/themes
