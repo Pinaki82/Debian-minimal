@@ -18,7 +18,7 @@ Name=conky
 Comment=Desktop Gadget
 
 # The executable of the application, possibly with arguments.
-Exec=conky & -b ~/.conkyrc 
+Exec=sh -c "conky -d -c ~/.conkyrc"
 
 # The name of the icon that will be used to display this entry
 Icon=desktop-effects
