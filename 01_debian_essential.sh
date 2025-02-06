@@ -235,6 +235,12 @@ yes | sudo apt install gmtp jmtpfs && \
 # ------------------------------------------------------------------------------
 # Launcher.
 yes | sudo apt install rofi && \
+# ------------------------------------------------------------------------------
+# Application Dock.
+yes | sudo apt install cairo-dock cairo-dock-plug-ins && \
+yes | sudo apt install cairo-dock-xfce-integration-plug-in cairo-dock-gnome-integration-plug-in && \
+# https://itsfoss.com/best-linux-docks/
+# ------------------------------------------------------------------------------
 # Codecs:
 # https://www.sys-hint.com/1075-Installing-Multimedia-Codecs-on-Debian-10
 yes | sudo apt install software-properties-common && \
