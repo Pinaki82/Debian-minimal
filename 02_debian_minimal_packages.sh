@@ -1134,6 +1134,9 @@ yes | sudo apt install libgcr-3-dev && \
 # Required by https://nappgui.com/
 yes | sudo apt install libgtk-3-dev libcurl4-openssl-dev libwebkit2gtk-4.1-dev mesa-common-dev libgl1-mesa-dev && \
 
+# Required by ggerganov/llama.cpp
+yes | sudo apt install libopenblas-dev && \
+
 # Boost C++ libraries
 
 # yes | sudo apt install libboost-all-dev && \
