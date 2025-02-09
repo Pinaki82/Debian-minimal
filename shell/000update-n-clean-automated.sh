@@ -61,9 +61,10 @@ hosts_update(){ # update snap
 }
 
 update_flatpak(){ # update flatpak
-  echo "Next: flatpak update"
+  echo "Next: flatpak --assumeyes update"
   sleep 2
-  flatpak update
+  # flatpak update
+  sh -c 'flatpak --assumeyes update'
 }
 
 # Body of code
