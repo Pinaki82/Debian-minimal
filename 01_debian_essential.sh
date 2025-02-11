@@ -611,6 +611,7 @@ yes | sudo apt install cutecom && \
 # minicom: Friendly menu driven serial communication program.
 # sympathy: serial port concentrator system - server/client program.
 # https://stackoverflow.com/questions/5347962/how-do-i-connect-to-a-terminal-to-a-serial-to-usb-device-on-ubuntu-10-10-maveri
+# https://www.makeuseof.com/connect-to-serial-consoles-on-linux/
 yes | sudo apt install minicom sympathy && \
 
 # Req. by PlatformIO CORE CLI
