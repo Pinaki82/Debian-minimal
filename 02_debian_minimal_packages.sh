@@ -383,8 +383,13 @@ yes | sudo apt install ripgrep ugrep && \
 # ugrep --help
 
 # CuteCOM: GUI Serial Monitor
+# cutecom: Graphical serial terminal, like minicom.
 # https://www.pragmaticlinux.com/2021/11/how-to-monitor-the-serial-port-in-linux/
 yes | sudo apt install cutecom && \
+# minicom: Friendly menu driven serial communication program.
+# sympathy: serial port concentrator system - server/client program.
+# https://stackoverflow.com/questions/5347962/how-do-i-connect-to-a-terminal-to-a-serial-to-usb-device-on-ubuntu-10-10-maveri
+yes | sudo apt install minicom sympathy && \
 
 # Req. by PlatformIO CORE CLI
 
