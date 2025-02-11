@@ -613,6 +613,8 @@ yes | sudo apt install cutecom && \
 # https://stackoverflow.com/questions/5347962/how-do-i-connect-to-a-terminal-to-a-serial-to-usb-device-on-ubuntu-10-10-maveri
 # https://www.makeuseof.com/connect-to-serial-consoles-on-linux/
 yes | sudo apt install minicom sympathy && \
+# gtkterm: simple GTK+ serial port terminal.
+yes | sudo apt install gtkterm && \
 
 # Req. by PlatformIO CORE CLI
 
