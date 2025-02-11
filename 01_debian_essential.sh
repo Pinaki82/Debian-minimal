@@ -615,6 +615,8 @@ yes | sudo apt install cutecom && \
 yes | sudo apt install minicom sympathy && \
 # gtkterm: simple GTK+ serial port terminal.
 yes | sudo apt install gtkterm && \
+# screen: Terminal multiplexer with VT100/ANSI terminal emulation.
+yes | sudo apt install screen && \
 
 # Req. by PlatformIO CORE CLI
 
