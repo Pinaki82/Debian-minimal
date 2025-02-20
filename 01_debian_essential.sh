@@ -87,7 +87,11 @@ yes | sudo apt install python3-pip && \
 #python -m pip install --upgrade pip && \
 # ------------------------------------------------------------------------------
 # Debian-XFCE Net-Install ISO didn't install any calculator app.
-yes | sudo apt install gnome-calculator && \
+# yes | sudo apt install gnome-calculator && \ (Feb. 21, 2025: 'gnome-calculator' is crashing.)
+# Install Qalculate
+# https://www.linuxlinks.com/calculators/
+# https://qalculate.github.io/index.html
+sh -c 'flatpak --assumeyes install flathub io.github.Qalculate' && \
 #
 # Install GVim+Vim:
 # yes | sudo apt install vim vim-gtk3 && \

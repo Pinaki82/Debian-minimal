@@ -169,7 +169,11 @@ yes | sudo aptitude install <package>/trixie-backports
 However, Debian Trixie has not been released yet.
 
 Debian-XFCE Net-Install ISO didn't install any calculator app.
-sudo apt install gnome-calculator
+# sudo apt install gnome-calculator (Feb. 21, 2025: 'gnome-calculator' is crashing.)
+# Install Qalculate
+# https://www.linuxlinks.com/calculators/
+# https://qalculate.github.io/index.html
+flatpak install flathub io.github.Qalculate
 
 Install GVim+Vim:
 

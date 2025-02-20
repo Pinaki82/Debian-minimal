@@ -484,7 +484,11 @@ yes | sudo apt install gsmartcontrol && \
 yes | sudo apt install xdm && \
 # ------------------------------------------------------------------------------
 # Debian-XFCE Net-Install ISO didn't install any calculator app.
-yes | sudo apt install gnome-calculator && \
+# yes | sudo apt install gnome-calculator && \ (Feb. 21, 2025: 'gnome-calculator' is crashing.)
+# Install Qalculate
+# https://www.linuxlinks.com/calculators/
+# https://qalculate.github.io/index.html
+sh -c 'flatpak --assumeyes install flathub io.github.Qalculate' && \
 #
 # Description: a tool for selecting tasks for installation on Debian systems
 # This package provides 'tasksel', a simple interface for users who
