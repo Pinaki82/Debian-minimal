@@ -242,6 +242,7 @@ yes | sudo apt install python3-pip && \
 # https://stackoverflow.com/questions/75608323/how-do-i-solve-error-externally-managed-environment-everytime-i-use-pip3
 yes | sudo apt install pipx && \
 pipx install flawfinder && \
+pipx install lizard && \
 # https://github.com/friendlyanon/cmake-init
 pipx install cmake-init && \
 yes | sudo apt update && \

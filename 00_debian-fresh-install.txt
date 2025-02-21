@@ -895,6 +895,7 @@ sudo apt install clang-tidy
 sudo apt install clang-tools
 sudo apt install lld
 pipx install flawfinder
+pipx install lizard
 # https://github.com/friendlyanon/cmake-init
 pipx install cmake-init
 
