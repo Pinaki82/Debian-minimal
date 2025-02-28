@@ -1312,17 +1312,18 @@ All flatpack and snap apps:
 flatpak list --columns=application --app
 
 Application ID
+app.zen_browser.zen
 com.github.tchx84.Flatseal
 com.github.zocker_160.SyncThingy
 com.rafaelmardojai.Blanket
 com.wings3d.WINGS
 fr.handbrake.ghb
+io.github.Qalculate
 io.github.jliljebl.Flowblade
 org.kde.kdenlive
 org.libreoffice.LibreOffice
 org.nomacs.ImageLounge
 org.torproject.torbrowser-launcher
-
 
 snap list
 
