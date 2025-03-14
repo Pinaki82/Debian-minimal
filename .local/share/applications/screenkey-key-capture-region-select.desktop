@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Screenkey key capture region select
+Comment=Keystroke capture utility
+Icon=kazam
+# Qwen2.5-Max 3:38 pm - 2025.03.14 - https://chat.qwen.ai/
+Exec=xterm -e ~/.local/share/applications/screenkey_capture.sh
+Terminal=false
+Categories=Utility;
