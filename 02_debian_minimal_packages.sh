@@ -964,6 +964,8 @@ yes | sudo apt install peek && \
 yes | sudo apt install screenkey && \
 # Capture selected screen area # queries for a selection from the user and prints the region to stdout
 yes | sudo apt install slop && \
+# https://itsfoss.com/best-linux-screen-recorders/
+yes | sudo apt install kazam && \
 
 # install gifski from https://gif.ski/
 # Open a terminal emulator, then select a region to display keystrokes by issuing the command:
