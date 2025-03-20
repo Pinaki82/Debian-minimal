@@ -1,0 +1,34 @@
+How do you download only subtitles from YouTube videos?
+
+DDG: download youtube subtitles linux
+https://superuser.com/questions/927523/how-to-download-only-subtitles-of-videos-using-youtube-dl
+
+app --list-subs URL
+app --write-auto-sub --convert-subs=srt --skip-download URL
+
+Edit the filename in srt_cleaner.py.
+
+python3 srt_cleaner.py
+
+---
+Practical Example:
+
+app --write-auto-sub --convert-subs=srt --skip-download https://youtu.be/237r-yWTSSg?si=Qvezq-Rt_bVxShIq
+
+line 6, srt_cleaner.py.
+
+```python
+with open('example.en.vtt') as oldfile, open('newfile.txt', 'w') as newfile:
+```
+
+To
+
+```python
+with open('How to reverse execution when debugging in GDB. [237r-yWTSSg].en.srt') as oldfile, open('How to reverse execution when debugging in GDB. [237r-yWTSSg].en.srt.txt', 'w') as newfile:
+```
+
+python3 srt_cleaner.py
+
+Final Document:
+
+How to reverse execution when debugging in GDB. [237r-yWTSSg].en.txt
