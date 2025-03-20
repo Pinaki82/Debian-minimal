@@ -13,7 +13,7 @@ Dark Reader - Dark Reader Ltd
 Privacy Badger - EFF Technologists
 Regrets Reporter Mozilla - Mozilla Firefox
 Wikiwand: Wikipedia Modernized - Wikiwand - https://addons.mozilla.org/en-US/firefox/addon/wikiwand-wikipedia-modernized/
-
+SingleFile: Save a complete page into a single HTML file - https://addons.mozilla.org/en-US/firefox/addon/single-file/
 
 
 Floccus Bookmark Manager: https://floccus.org/

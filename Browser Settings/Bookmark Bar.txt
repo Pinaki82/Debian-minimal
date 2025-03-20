@@ -25,6 +25,9 @@ AI
   ChatGPT
   https://chat.openai.com/chat
 
+  Kimi.ai - AI Assistant by Moonshot AI
+  https://kimi.moonshot.cn/
+
   Claude.ai
   https://claude.ai/chats
 
@@ -39,6 +42,15 @@ AI
 
   Chatbot Arena (formerly LMSYS): Free AI Chat to Compare & Test Best AI Chatbots
   https://lmarena.ai/
+
+  Grok
+  https://grok.com/
+
+  Qwen
+  https://chat.qwen.ai/
+
+  DeepSeek - Into the Unknown
+  https://chat.deepseek.com/
 
   INFERMATIC
   https://infermatic.ai/
@@ -105,3 +117,6 @@ https://onedrive.live.com/
 
 Proton Calendar
 https://calendar.proton.me/u/0/
+
+AirDroid
+http://192.168.0.155:8888/
