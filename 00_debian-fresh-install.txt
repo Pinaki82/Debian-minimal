@@ -372,6 +372,33 @@ Range (min-max): <blank>
 Appear if: Directories
 
 Edit -> Configure custom actions...-> Add (+)
+Name: WezTerm
+Description: WezTerm Terminal in this Directory Tree
+Command: wezterm start --cwd %f
+Icon: org.wezfurlong.wezterm
+File Pattern: *
+Range (min-max): *
+Appear if: Directories
+
+-----------------
+chatgpt-4o-latest-20250326
+✅ Working Command for Thunar Custom Action with WezTerm
+Try this command:
+wezterm start --cwd %f
+Explanation:
+    wezterm start is the correct subcommand to spawn a new terminal window.
+    --cwd <path> tells WezTerm to start the shell in that directory.
+    %f in Thunar custom actions is replaced by the selected file/folder path.
+
+    If you're selecting a folder, %f will be the folder path directly.
+    If you're selecting a file, you might want to use %d (the directory containing the file) instead.
+
+✔️ Bonus: Using %d for Files
+If you want to support launching WezTerm in the directory containing a selected file, you can use:
+wezterm start --cwd %d
+-----------------
+
+Edit -> Configure custom actions...-> Add (+)
 
 Name: GITK
 Description: Open GITK in this folder
