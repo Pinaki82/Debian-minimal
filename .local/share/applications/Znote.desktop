@@ -1,0 +1,11 @@
+# https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app?rq=1
+
+[Desktop Entry]
+Type=Application
+Name=Znote
+# https://znote.io/
+Comment=Markdown Editor with local AI support. Your Private AI Workspace for Notes, Meetings, and Reports.
+Icon=znote-new-logo-dark-rounded.svg
+Exec=/mnt/hdd2/PortablePrograms/znote-3.1.0.AppImage
+Terminal=false
+Categories=Development;

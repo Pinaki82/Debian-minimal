@@ -1,0 +1,108 @@
+<svg
+        width="500px"
+        height="500px"
+        style="transform: scale(1) rotate(0deg)"
+        viewBox="0 0 200 200"  xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="gradient">
+                <stop stop-color="#f9d126" stop-opacity="1" offset="0" />
+                <stop stop-color="#fb9936" stop-opacity="1" offset="100%" />
+            </linearGradient>
+            <linearGradient id="gradient1">
+                <stop stop-color="#f5881b" stop-opacity="1" offset="0" />
+                <stop stop-color="#f6d444" stop-opacity="1" offset="100%" />
+            </linearGradient>
+            <linearGradient id="gradient2">
+                <stop stop-color="#FF4D4D" stop-opacity="1" offset="0" />
+                <stop stop-color="#00DFD8" stop-opacity="1" offset="100%" />
+            </linearGradient>
+            <linearGradient id="gradient3">
+                <stop stop-color="#7928CA" stop-opacity="1" offset="0" />
+                <stop stop-color="#FF0080" stop-opacity="1" offset="100%" />
+            </linearGradient>
+            <linearGradient id="gradient4">
+                <stop stop-color="#007CF0" stop-opacity="1" offset="0" />
+                <stop stop-color="#00DFD8" stop-opacity="1" offset="100%" />
+            </linearGradient>
+
+            <mask maskUnits="userSpaceOnUse" id="fade">
+                <!-- Here's that slight gradient -->
+                <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="100%">
+                    <stop offset="0" style="stop-color: #f5881b"></stop>
+                    <stop offset="1" style="stop-color: #f6d444"></stop>
+                </linearGradient>
+                <!-- The canvas for our mask -->
+                <rect fill="url(#gradient)" width="100%" height="100%"></rect>
+            </mask>
+
+            <pattern id="lines" height="5" width="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                <!--<rect width="3" height="10" fill="url(#gradient)"></rect>-->
+                <line x1="0" y1="3" x2="3" y2="3" stroke-width="10" stroke="orange" />
+            </pattern>
+
+            <filter id="blur">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+            </filter>
+        </defs>
+
+
+<!--
+        <rect x="5" y="5" width="190" height="190" rx="10" ry="10" fill="white" />
+-->
+<rect x="5" y="5" width="190" height="190" rx="150" ry="150" fill="black" stroke-width="10" stroke="orange" />
+
+
+        <g id="pen" transform="rotate(45 95 100)">
+            <!--
+            <rect x="85" y="35" width="25" height="10" rx="5" ry="5" />
+            <rect x="85" y="40" width="25" height="5" rx="0" ry="0" />
+            <rect x="85" y="50" width="25" height="90" rx="0" ry="0" />
+            <rect x="85" y="145" width="25" height="5" rx="0" ry="0" fill="white" />
+            <polygon points="88,150 107,150 97.5,163" 
+               stroke-linejoin="round" stroke-width="5" stroke="white" />
+               -->
+               <!--
+             <polygon points="100,45 53,130 100,45 147,130" style="fill:none;stroke:white;stroke-width:20;stroke-linejoin:round" />
+             -->
+             
+              <!--
+              <circle cx="100" cy="100" r="70" stroke="white" stroke-width="10" fill="none" />
+              -->
+              <!--
+             <polygon points="50,50 150,50 150,150 50,150" style="fill:none;stroke:white;stroke-width:10" />
+             -->
+
+
+            <!-- Large -->
+            <path d="M65,55 h75 a5,5 0 0 1 5,5 v75 a5,5 0 0 1 -5,5 h-5 a5,5 0 0 1 -5,-5 v-60 a5,5 0 0 0 -5,-5 h-60 a5,5 0 0 1 -5,-5 v-5 a5,5 0 0 1 5,-5" fill="url(#gradient1)" stroke="url(#gradient1)" stroke-width="5" />
+
+
+            <!-- Middle -->
+            <path d="M50,80 h65 a5,5 0 0 1 5,5 v65 a5,5 0 0 1 -5,5 h-5 a5,5 0 0 1 -5,-5 v-50 a5,5 0 0 0 -5,-5 h-50 a5,5 0 0 1 -5,-5 v-5 a5,5 0 0 1 5,-5" fill="url(#lines)" stroke="white" stroke-width="0" />
+
+
+            <!-- Mini -->
+            <path d="M45,105 h45 a5,5 0 0 1 5,5 v45 a5,5 0 0 1 -5,5 h-5 a5,5 0 0 1 -5,-5 v-30 a5,5 0 0 0 -5,-5 h-30 a5,5 0 0 1 -5,-5 v-5 a5,5 0 0 1 5,-5" fill="none" stroke="url(#gradient1)" stroke-width="4" />
+ 
+
+
+<!--
+            <path d="M45,75 a5,5 0 0 1 5,-5 h5 a5,5 0 0 1 5,5 v60 a5,5 0 0 0 5,5 h60 a5,5 0 0 1 5,5 v5 a5,5 0 0 1 -5,5 h-75 a5,5 0 0 1 -5,-5 v-75" fill="none" stroke="white" stroke-width="5" filter="url(#blur)" />
+-->
+
+            <!--
+            <path d="M45,65 h80 a10,10 0 0 1 10,10 v80 a5,5 0 0 1 -5,5 h-5 a5,5 0 0 1 -5,-5 v-65 a10,10 0 0 0 -10,-10 h-65 a5,5 0 0 1 -5,-5 v-5 a5,5 0 0 1 5,-5" fill="none" stroke="white" stroke-width="5" />
+-->
+<!--
+         <path d="M110,150 v-55 a5,5 0 0 0 -5,-5 h-3 a5,5 0 0 0 -5,5 v55 a5,5 0 0 0 5,5 h3 a5,5 0 0 0 5,-5" fill="white" stroke="white" stroke-width="3" />
+-->
+<!--             
+             <polygon points="100,45 53,100 100,45 147,100" style="stroke:white;stroke-width:20;stroke-linejoin:round" />
+-->
+            <!--
+            <polygon points="45,130 155,130" style="stroke:white;stroke-width:20;" />
+            -->
+
+
+        </g>
+    </svg>
