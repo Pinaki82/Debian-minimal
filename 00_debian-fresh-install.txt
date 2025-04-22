@@ -928,6 +928,9 @@ Render local readme files before sending off to GitHub.
 pipx install grip
 # https://github.com/friendlyanon/cmake-init
 pipx install cmake-init
+# https://github.com/gni/offvsix
+# offvsix: Offline Visual Studio Code Extension Downloader
+pipx install offvsix
 
 # Bash Language Server
 # https://github.com/bash-lsp/bash-language-server.git

@@ -33,6 +33,9 @@ pipx install lizard && \
 pipx install grip && \
 # https://github.com/friendlyanon/cmake-init
 pipx install cmake-init && \
+# https://github.com/gni/offvsix
+# offvsix: Offline Visual Studio Code Extension Downloader
+pipx install offvsix && \
 yes | sudo apt update && \
 yes | sudo apt list --upgradable && \
 yes | sudo apt upgrade && \
