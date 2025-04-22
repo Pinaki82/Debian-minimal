@@ -1306,6 +1306,28 @@ yes | sudo apt install default-jre && \
 # LATeX-Equation-Editor-Base (END)
 # =================================================================
 
+# =================================================================
+# Pandoc EPUB/PDF Export Dependencies.
+# =================================================================
+
+# https://pandoc.org/epub.html
+# https://www.thepolyglotdeveloper.com/2019/10/creating-ebook-pandoc-markdown/
+# https://cmichel.io/how-to-create-beautiful-epub-programming-ebooks/
+
+sudo apt install texlive-xetex && \
+sudo apt-get install python3-pygments latexmk && \
+sudo apt-get install texlive-extra-utils texlive-latex-extra && \
+sudo apt install fonts-firacode && \
+sudo apt install fonts-dejavu fonts-liberation && \
+sudo apt-get install wkhtmltopdf && \
+# wkhtmltopdf  # The HTML-to-PDF engine
+# https://stackoverflow.com/questions/37208051/pandoc-xelatex-not-found-xelatex-is-needed-for-pdf-output
+# DeepSeek R1
+# https://github.com/jgm/pandoc/issues/4871
+
+# =================================================================
+# Pandoc EPUB/PDF Export Dependencies. (END)
+# =================================================================
 
 # =================================================================
 # ocr-tesseract-install
