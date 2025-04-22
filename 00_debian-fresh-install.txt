@@ -923,6 +923,9 @@ sudo apt install clang-tools
 sudo apt install lld
 pipx install flawfinder
 pipx install lizard
+https://github.com/joeyespo/grip
+Render local readme files before sending off to GitHub.
+pipx install grip
 # https://github.com/friendlyanon/cmake-init
 pipx install cmake-init
 

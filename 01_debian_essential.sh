@@ -28,6 +28,9 @@ yes | sudo apt install python3-pip && \
 yes | sudo apt install pipx && \
 pipx install flawfinder && \
 pipx install lizard && \
+# https://github.com/joeyespo/grip
+# Render local readme files before sending off to GitHub.
+pipx install grip && \
 # https://github.com/friendlyanon/cmake-init
 pipx install cmake-init && \
 yes | sudo apt update && \
