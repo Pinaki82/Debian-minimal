@@ -2,8 +2,8 @@
 Version=1.0
 Name=FreeCAD Weekly (AppImage)
 # https://www.freecad.org/index.php
-Exec=/mnt/hdd2/PortablePrograms/FreeCAD_1.0.0-conda-Linux-x86_64-py311.AppImage %U
-Icon=freecad
+Exec=/mnt/hdd2/PortablePrograms/FreeCAD_1.0.1-conda-Linux-x86_64-py311.AppImage %U
+Icon=appimagekit_00d098e642a548e6288ba10b5686fa47_freecad_conda.png
 Type=Application
 Categories=Engineering;
 Comment=Feature based Parametric Modeler
@@ -13,5 +13,5 @@ NoDisplay=false
 MimeType=application/x-extension-fcstd;
 X-AppImage-Integrate=
 X-Zap-Id=FreeCAD
-TryExec=/mnt/hdd2/PortablePrograms/FreeCAD_1.0.0-conda-Linux-x86_64-py311.AppImage
+TryExec=/mnt/hdd2/PortablePrograms/FreeCAD_1.0.1-conda-Linux-x86_64-py311.AppImage
 
