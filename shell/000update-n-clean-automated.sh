@@ -11,58 +11,58 @@
 # Function declarations
 UpdateNUpgrade() { # Update & Upgrade
   echo "Next: sudo apt update"
-  sleep 2
+  # sleep 0
   yes | sudo apt update
   echo "Next: sudo apt list --upgradable"
-  sleep 2
+  sleep 1
   yes | sudo apt list --upgradable
   echo "Next: sudo apt upgrade"
-  sleep 2
+  sleep 1
   yes | sudo apt upgrade
   echo "Next: sudo apt update"
-  sleep 2
+  sleep 1
   yes | sudo apt update
   echo "Next: sudo apt install -f"
-  sleep 2
+  sleep 1
   yes | sudo apt install -f
 }
 
 clean_residual(){ # clean residual packages
   echo "Next: sudo apt autoremove"
-  sleep 2
+  sleep 1
   yes | sudo apt autoremove
   echo "Next: sudo apt autoclean"
-  sleep 2
+  sleep 1
   yes | sudo apt autoclean
 }
 
 upgrade_pipx_packages(){ # Upgrade pipx packages
   echo "Next: pipx upgrade-all"
-  sleep 2
+  sleep 1
   pipx upgrade-all
 }
 
 update_rust(){ # Update Rust
   echo "Next: rustup update"
-  sleep 2
+  sleep 1
   rustup update
 }
 
 refresh_snap(){ # update snap
   echo "Next: sudo snap refresh"
-  sleep 2
+  sleep 1
   yes | sudo snap refresh
 }
 
 hosts_update(){ # update snap
   echo "Next: Update hosts"
-  sleep 2
+  sleep 1
   hosts_manager
 }
 
 update_flatpak(){ # update flatpak
   echo "Next: flatpak --assumeyes update"
-  sleep 2
+  sleep 1
   # flatpak update
   sh -c 'flatpak --assumeyes update'
 }
@@ -76,7 +76,7 @@ echo "Your input was $choice"
 if [ "${choice}" != '0' ]; then
   echo "Wait till the update process is complete..."
 
-  sleep 2 # https://stackoverflow.com/questions/21620406/how-do-i-pause-my-shell-script-for-a-second-before-continuing
+  sleep 1 # https://stackoverflow.com/questions/21620406/how-do-i-pause-my-shell-script-for-a-second-before-continuing
 
   # Update & Upgrade
   UpdateNUpgrade
