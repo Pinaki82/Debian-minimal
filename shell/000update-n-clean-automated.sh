@@ -67,6 +67,14 @@ update_flatpak(){ # update flatpak
   sh -c 'flatpak --assumeyes update'
 }
 
+update_vim_plug(){ # Update Vim plugins using Vim-Plug
+  echo "Next: vim -c 'autocmd VimEnter * PlugUpdate --sync | qa'"
+  sleep 1
+  # Update Vim plugins using Vim-Plug
+  # https://github.com/junegunn/vim-plug/issues/929
+  vim -c 'autocmd VimEnter * PlugUpdate --sync | qa'
+}
+
 # Body of code
 echo "Please add an alias to .bashrc to simplify the update task. Read the instructions written under comments inside the shell script."
 echo "Type 0 [zero in number] to cancel"
@@ -100,6 +108,11 @@ if [ "${choice}" != '0' ]; then
 
   # update flatpak
   update_flatpak
+
+  # Update Vim plugins using Vim-Plug
+  update_vim_plug
+
+  echo "The update has been completed."
 
 else
   echo "Update cancelled by the user"
