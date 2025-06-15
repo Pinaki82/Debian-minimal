@@ -1333,6 +1333,11 @@ yes | sudo apt-get install wkhtmltopdf && \
 # Img2PDF: Lossless conversion of raster images to PDF
 # =================================================================
 yes | sudo apt install img2pdf && \
+#
+# Usage examples;
+# convert -density 600 input.pdf output.jpg
+# img2pdf --pagesize A4 -s 600dpi output-0.jpg output-1.jpg > page001.pdf
+# WARNING: Time-consuming process involved.
 # ==================================Img2PDF========================
 
 # =================================================================
