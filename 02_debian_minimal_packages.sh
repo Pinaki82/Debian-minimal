@@ -1287,6 +1287,9 @@ yes | sudo apt install ghostscript && \
 # https://askubuntu.com/questions/246647/convert-a-directory-of-jpeg-files-to-a-single-pdf-document
 yes | sudo apt install texlive-extra-utils && \
 # pdfjam --nup 2x4 --papersize '{4in,6in}'  *.jpg
+# https://www.tomshardware.com/how-to/manipulate-pdf-files-with-pdftk
+# pdftk 1.pdf another.pdf 3.pdf yet-another.pdf fifth.pdf output combined.pdf
+yes | sudo apt install pdftk && \
 
 # Pandoc:
 yes | sudo apt install pandoc && \
