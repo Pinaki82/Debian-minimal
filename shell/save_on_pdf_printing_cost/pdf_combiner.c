@@ -21,11 +21,22 @@
   ./pdf_combiner.c input.pdf
 */
 
+// Restrict to UNIX-like systems only
+#if !( defined( __unix__ ) || defined(_POSIX_VERSION) )
+  #error "For UNIX-like Operating Systems Only"
+#endif
+
+#define  _POSIX_C_SOURCE 200809L
+#define  _XOPEN_SOURCE 500L
+// https://stackoverflow.com/questions/18792489/how-to-create-a-temporary-directory-in-c-in-linux
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <sys/stat.h> // For mkdir
 #include <dirent.h>   // For iterating directory contents (cleanup)
+#include <ftw.h>
+#include <unistd.h>
 
 #define MAX_CMD_LEN 2048
 #define MAX_FILENAME_LEN 256
