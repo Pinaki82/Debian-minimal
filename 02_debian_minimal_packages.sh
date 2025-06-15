@@ -1314,12 +1314,12 @@ yes | sudo apt install default-jre && \
 # https://www.thepolyglotdeveloper.com/2019/10/creating-ebook-pandoc-markdown/
 # https://cmichel.io/how-to-create-beautiful-epub-programming-ebooks/
 
-sudo apt install texlive-xetex && \
-sudo apt-get install python3-pygments latexmk && \
-sudo apt-get install texlive-extra-utils texlive-latex-extra && \
-sudo apt install fonts-firacode && \
-sudo apt install fonts-dejavu fonts-liberation && \
-sudo apt-get install wkhtmltopdf && \
+yes | sudo apt install texlive-xetex && \
+yes | sudo apt-get install python3-pygments latexmk && \
+yes | sudo apt-get install texlive-extra-utils texlive-latex-extra && \
+yes | sudo apt install fonts-firacode && \
+yes | sudo apt install fonts-dejavu fonts-liberation && \
+yes | sudo apt-get install wkhtmltopdf && \
 # wkhtmltopdf  # The HTML-to-PDF engine
 # https://stackoverflow.com/questions/37208051/pandoc-xelatex-not-found-xelatex-is-needed-for-pdf-output
 # DeepSeek R1
@@ -1328,6 +1328,12 @@ sudo apt-get install wkhtmltopdf && \
 # =================================================================
 # Pandoc EPUB/PDF Export Dependencies. (END)
 # =================================================================
+
+# =================================================================
+# Img2PDF: Lossless conversion of raster images to PDF
+# =================================================================
+yes | sudo apt install img2pdf && \
+# ==================================Img2PDF========================
 
 # =================================================================
 # ocr-tesseract-install
