@@ -182,10 +182,11 @@ int main(int argc, char *argv[]) {
   int ret;
   printf("Welcome to the PDF Combiner!\n");
   printf("\n*------------------*\n");
-  printf("\n1. Please open the code file if you encounter problems regarding ImageMagick Resource Limits.\n2. Delete the temporary directory if it exists.\n");
+  printf("\n1. Please open the code file to see instructions if you encounter problems regarding ImageMagick Resource Limits.\n2. Delete the temporary directory if it exists.\n3. The pages will not be arranged according to the guidelines for book binding structure. The final print should be spiral-bound for convenience.\n");
   printf("\n*------------------*\n");
   // 1. Get pages per final page from user
-  printf("\nHow many original pages do you want to fit on one final PDF page? ");
+  printf("\nHow many original pages do you want to fit on one final PDF page? \n");
+  printf("\n(Typically, two (2), allowing you to print two pages of the original PDF on each side of a sheet of paper, for a total of four pages combining both sides.)\n\n");
   ret = scanf("%d", &pages_per_final_page);
 
   if(ret != 1 || pages_per_final_page <= 0) {
