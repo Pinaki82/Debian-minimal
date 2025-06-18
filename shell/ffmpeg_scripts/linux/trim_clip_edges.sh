@@ -38,8 +38,8 @@ is_number() {
 }
 
 # Define input and output directories
-input_dir="/mnt/hdd/Capture_Edit/Shotcut/2025.06.18-Rainbow_Colour/AVI"
-output_dir="/mnt/hdd/Capture_Edit/Shotcut/2025.06.18-Rainbow_Colour/Trimmed"
+input_dir="/mnt/hdd/Capture_Edit/Shotcut/2025.06.18-Folder/AVI"
+output_dir="/mnt/hdd/Capture_Edit/Shotcut/2025.06.18-Folder/Trimmed"
 
 # Create output directory if it doesn't exist
 mkdir -p "$output_dir"
