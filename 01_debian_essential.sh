@@ -546,6 +546,10 @@ yes | sudo apt install tree && \
 # sudo apt install mc && \
 # KDE Advanced Text Editor (supports LSP)
 yes | sudo apt install kate && \
+#
+#
+# Weather Forecast:
+yes | sudo apt install gnome-weather && \
 # ------------------------------------------------------------------------------
 # Developer Utilities:
 yes | sudo apt install cdecl && \

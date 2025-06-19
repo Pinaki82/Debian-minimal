@@ -336,6 +336,31 @@ Settings -> Keyboard -> Application Shortcuts - Add
 
 Right-click on the Clock -> Properties -> Select a Clock/Date Format
 
+Weather Forecast:
+
+Right-click on the Panel (found on the top of the screen),
+Panel Preferences -> Items -> Add -> Launcher
+                                  -> Add a new empty item
+                                  -> Name: wttr.in
+                                     Comment: Weather
+                                     Command: xfce4-terminal --maximize --hold --command="curl wttr.in/kolkata"
+                                  -> Icon: indicator-weather
+                                  -> Options: Run in terminal
+
+https://forum.xfce.org/viewtopic.php?id=17600
+
+sudo apt install gnome-weather 
+
+Right-click on the Panel (found on the top of the screen),
+Panel Preferences -> Items -> Add -> Launcher
+                                  -> Add a new empty item
+                                  -> Name: gnome-weather
+                                     Comment: gnome-weather
+                                     Command: gnome-weather
+                                  -> Icon: gnome-weather
+
+
+
 Open Thunar File Manager.
 Edit -> Configure custom actions...-> Add (+)
 
