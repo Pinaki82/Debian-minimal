@@ -51,6 +51,9 @@ AI
 
   DeepSeek - Into the Unknown
   https://chat.deepseek.com/
+  
+  Kruti AI Assistant
+  https://www.kruti.ai/
 
   INFERMATIC
   https://infermatic.ai/
@@ -99,6 +102,10 @@ https://www.google.com/
 
 BeaGo
 https://www.beago.ai/
+[UPDATE (2025/June/25): Regrettably, the BeaGo search engine has been down for a while, with the domain not found on desktop browsers and the Android app missing from the Play Store. We are closely monitoring its return status and hope it will be back online soon. Once the search engine is operational again, we will promptly re-add it to our list.]
+
+Perplexity
+https://www.perplexity.ai/
 
 Papaly
 https://papaly.com
