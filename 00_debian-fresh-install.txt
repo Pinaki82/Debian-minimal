@@ -559,6 +559,19 @@ Thunar - Custom Actions:
 https://docs.xfce.org/xfce/thunar/custom-actions#create_a_symbolic_link
 https://help.ubuntu.com/community/ThunarCustomActions
 
+# * Written by Gemini 2.5 Flash
+Name: Calculate MD5 Checksum
+Command: xfce4-terminal --hold -e "md5sum %f"
+Icon: org.xfce4.terminal.emulator
+Selection -> Pattern: * Range: * Appears if: All checked except for the Directories.
+
+# * Written by Gemini 2.5 Flash
+Name: Create MD5 Report
+Description: Creates a checksums.md5 report for all files in this directory.
+Command:
+xfce4-terminal --hold -e 'bash -c "md5sum * > checksums.md5; echo; echo Creates a checksums.md5 report for all files in this directory. Report saved to checksums.md5; echo; echo Press ENTER to close the terminal; read"'
+Icon: document-edit-sign
+
 
 Find the XFCE Dock at the bottom of the screen.
 Display TAB -> Measurements -> Automatically increase the length (CHECK)
