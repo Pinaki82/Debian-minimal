@@ -13,7 +13,7 @@
 # 2. Save this script as 'trim_clip_edges.sh' and make it executable:
 #    chmod +x trim_clip_edges.sh
 # 3. Run the script with input and output folder paths as arguments:
-#    ./trim_clip_edges.sh /path/to/input/folder /path/to/output/folder
+#    ./trim_clip_edges.sh '/path/to/input/folder' '/path/to/output/folder'
 # 4. The script processes all AVI files in the input folder.
 # 5. Output files are saved with 'trimmed_' prepended to the original filename.
 
@@ -41,7 +41,7 @@ is_number() {
 
 # Check if two arguments are provided
 if [ "$#" -ne 2 ]; then
-    echo "Usage: $0 /path/to/input/folder /path/to/output/folder"
+    echo "Usage: $0 '/path/to/input/folder' '/path/to/output/folder'"
     exit 1
 fi
 
