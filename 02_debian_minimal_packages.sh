@@ -1038,7 +1038,15 @@ yes | sudo apt install ttf-mscorefonts-installer && \
 # https://averagelinuxuser.com/microsoft-fonts-linux/#:~:text=Calibri%20and%20Cambria%20fonts,-Unfortunately%2C%20this%20package&text=These%20Google%20fonts%20are%20metric,package%20manager%20and%20install%20them
 yes | sudo apt install fonts-crosextra-carlito fonts-crosextra-caladea && \
 yes | sudo fc-cache && \
-
+#
+yes | sudo apt install fonts-texgyre fonts-texgyre-math fonts-urw-base35 && \
+yes | sudo apt install fonts-apropal fonts-beteckna fonts-breip fonts-cabin && \
+yes | sudo apt install fonts-liberation fonts-liberation2 fonts-lindenhill fonts-oxygen && \
+yes | sudo apt install fonts-play fonts-ubuntu fonts-ubuntu-console fonts-tiresias && \
+yes | sudo apt install texlive-fonts-extra && \
+yes | sudo apt install fonts-croscore && \
+sudo fc-cache && \
+#
 # Slideshow:
 
 # https://imagination.sourceforge.net/

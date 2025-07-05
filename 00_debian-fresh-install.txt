@@ -293,6 +293,15 @@ yes | sudo apt install ttf-mscorefonts-installer
 yes | sudo apt install fonts-crosextra-carlito fonts-crosextra-caladea && \
 sudo fc-cache
 
+yes | sudo apt install fonts-texgyre fonts-texgyre-math fonts-urw-base35
+yes | sudo apt install fonts-apropal fonts-beteckna fonts-breip fonts-cabin
+yes | sudo apt install fonts-liberation fonts-liberation2 fonts-lindenhill fonts-oxygen
+yes | sudo apt install fonts-play fonts-ubuntu fonts-ubuntu-console fonts-tiresias
+yes | sudo apt install texlive-fonts-extra
+yes | sudo apt install fonts-croscore
+sudo fc-cache
+
+
 # Display dialog boxes
 yes | sudo apt install zenity
 
