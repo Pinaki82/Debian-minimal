@@ -596,8 +596,14 @@ xfce4-terminal --hold -e 'bash -c "sha256sum * > checksums.sha256; echo; echo Cr
 Icon: document-edit-sign
 Selection -> Pattern: * Range: * Appears if: 'Directories' is checked.
 
+Name: Check md5 checksums
+Description: Examine a file that includes md5 checksums paired with their respective filenames and validate the report. Right-click on such a file and select this option.
+Command: xfce4-terminal --hold -e "md5sum --check %f"
+Icon: document-edit-sign
+Selection -> Pattern: * Range: * Appears if: All checked except for the Directories.
+
 Name: Check SHA256 checksums
-Description: Examine a file that includes SHA256 checksums paired with their respective filenames and validate the report. Right-click on such a file.
+Description: Examine a file that includes SHA256 checksums paired with their respective filenames and validate the report. Right-click on such a file and select this option.
 Command: xfce4-terminal --hold -e "sha256sum --check %f"
 Icon: document-edit-sign
 Selection -> Pattern: * Range: * Appears if: All checked except for the Directories.
