@@ -578,7 +578,7 @@ Selection -> Pattern: * Range: * Appears if: All checked except for the Director
 Name: Create MD5 Report
 Description: Creates a checksums.md5 report for all files in this directory.
 Command:
-xfce4-terminal --hold -e 'bash -c "md5sum * > checksums.md5; echo; echo Creates a checksums.md5 report for all files in this directory. Report saved to checksums.md5; echo; echo Press ENTER to close the terminal; read"'
+xfce4-terminal --hold -e 'bash -c "md5sum * > checksums.md5; echo; echo Creates a checksums.md5 report for all files in this directory. Report saved to checksums.md5; echo; echo Close the terminal. Usually, SHIFT+CTRL+q; read"'
 Icon: document-edit-sign
 Selection -> Pattern: * Range: * Appears if: 'Directories' is checked.
 
@@ -592,7 +592,7 @@ Selection -> Pattern: * Range: * Appears if: All checked except for the Director
 Name: Create SHA256 Report
 Description: Creates a checksums.sha256 report for all files in this directory.
 Command:
-xfce4-terminal --hold -e 'bash -c "sha256sum * > checksums.sha256; echo; echo Creates a checksums.sha256 report for all files in this directory. Report saved to checksums.sha256; echo; echo Press ENTER to close the terminal; read"'
+xfce4-terminal --hold -e 'bash -c "sha256sum * > checksums.sha256; echo; echo Creates a checksums.sha256 report for all files in this directory. Report saved to checksums.sha256; echo; echo Close the terminal. Usually, SHIFT+CTRL+q; read"'
 Icon: document-edit-sign
 Selection -> Pattern: * Range: * Appears if: 'Directories' is checked.
 
