@@ -10,7 +10,19 @@ http://support.epson.net/linux/Printer/LSB_less_distribution_pages/en/utility.ph
 sudo dpkg -i epson-printer-utility_1.2.2-1_amd64.deb
 ```
 
-The PPD File FOR CUPS: GitHub: [eunlocker](https://github.com/eunlocker) / [epson-lq310ppd](https://github.com/eunlocker/epson-lq310ppd): [epson-lq310ppd/EPSON-LQ-310.ppd at main · eunlocker/epson-lq310ppd · GitHub](https://github.com/eunlocker/epson-lq310ppd/blob/main/EPSON-LQ-310.ppd) [From DDG]
+The PPD File FOR CUPS: GitHub: [eunlocker](https://github.com/eunlocker) / [epson-lq310ppd](https://github.com/eunlocker/epson-lq310ppd): [epson-lq310ppd/EPSON-LQ-310.ppd at main · eunlocker/epson-lq310ppd · GitHub](https://github.com/eunlocker/epson-lq310ppd/blob/main/EPSON-LQ-310.ppd) [From DuckDuckGo]
+
+Download the file to:
+
+```textile
+~/EPSOn_LQ_310_DT_MAT/EPSON-LQ-310.ppd
+```
+
+Change the permission Parameters:
+
+```bash
+chmod +x ~/EPSOn_LQ_310_DT_MAT/EPSON-LQ-310.ppd
+```
 
 To connect an Epson inkjet printer to Linux, you'll need to install the appropriate driver and then configure it using CUPS (Common Unix Printing System). You can download the driver from the Epson website. After downloading, you may need to use `gdebi` or a similar tool to install the driver, or extract it and run the install script. Then, use CUPS (usually accessible via a web browser at `http://localhost:631`) to add your printer and select the correct driver. [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7]
 
