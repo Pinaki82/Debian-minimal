@@ -24,6 +24,15 @@ Change the permission Parameters:
 chmod +x ~/EPSOn_LQ_310_DT_MAT/EPSON-LQ-310.ppd
 ```
 
+Or,
+
+```bash
+cd ~/
+mkdir -p 'EPSOn_LQ_310_DT_MAT' && cd 'EPSOn_LQ_310_DT_MAT'
+wget 'https://raw.githubusercontent.com/eunlocker/epson-lq310ppd/refs/heads/main/EPSON-LQ-310.ppd'
+chmod +x EPSON-LQ-310.ppd
+```
+
 To connect an Epson inkjet printer to Linux, you'll need to install the appropriate driver and then configure it using CUPS (Common Unix Printing System). You can download the driver from the Epson website. After downloading, you may need to use `gdebi` or a similar tool to install the driver, or extract it and run the install script. Then, use CUPS (usually accessible via a web browser at `http://localhost:631`) to add your printer and select the correct driver. [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7]
 
 Top Bar:
