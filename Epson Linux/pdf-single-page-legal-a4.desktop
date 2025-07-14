@@ -1,0 +1,19 @@
+# LMArena - 2025.07.14 - gpt-4.1-2025-04-14
+[Desktop Entry]
+Type=Application
+Name=PDF Single Page Legal A4 2
+Comment=Run the PDF script
+Icon=printer
+Exec=sh -c 'DIR="$(dirname "%k")"; "$DIR/pdf-single-page-legal-a4.sh"'
+Terminal=true
+Categories=Utility;
+
+# Explanation:
+
+# %k is replaced by the path to the .desktop file.
+# DIR="$(dirname "%k")" gets the directory of the .desktop file.
+# "$DIR/pdf-single-page-legal-a4-2.sh" runs the script in the same directory.
+# Use the sh -c trick with %k for flexibility.
+
+# This way, you can move both files anywhere, and the .desktop file will always find the script in the same folder!
+
