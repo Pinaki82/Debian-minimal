@@ -20,7 +20,7 @@
 
 # (Applicable to A4 paper filings in Indian courts)
 
-# | Setting | Requirement |
+# | Setting           | Requirement                                                           |
 # | ---               | ---                                                                   |
 # | **Paper Size**    | **A4 (29.7 cm × 21 cm)**                                              |
 # | **Paper Quality** | **≥75 GSM** (90–110 GSM bond paper is acceptable but not mandatory)   |
