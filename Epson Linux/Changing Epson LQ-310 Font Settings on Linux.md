@@ -257,6 +257,8 @@ Atril PDF Viewer (https://github.com/mate-desktop/atril) can also be used to pri
 
 **Header and Footer:** A font size of **6 to 9** is appropriate for text in the header and footer sections, with **7** being the most common option. Text styles such as bold, italic, and underline are not recommended for use.
 
+_IMP:_ Also, include a **footer** text like '**Cont'd...**' or '**Cont...**'; if not, the printer will assume there is sufficient space at the bottom, and the top header should be positioned 2 cm below the top (instead of the actual content). As a consequence, you will have less room than the recommended 2 cm at the bottom of the page.
+
 **One piece of advice:** Use papers from the same bunch. The photocopy will reflect any discrepancies in colour and texture.
 
 Use the script `pdf-single-page-legal-a4.sh` along with the desktop entry `pdf-single-page-legal-a4.desktop` to print the remaining pages.
