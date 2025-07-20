@@ -37,9 +37,6 @@ AI
   Gemini
   https://gemini.google.com/
 
-  HuggingChat
-  https://huggingface.co/chat/
-
   Chatbot Arena (formerly LMSYS): Free AI Chat to Compare & Test Best AI Chatbots
   https://lmarena.ai/
 
@@ -55,6 +52,9 @@ AI
   Kruti AI Assistant
   https://www.kruti.ai/
 
+  Le Chat
+  https://chat.mistral.ai/chat
+
   INFERMATIC
   https://infermatic.ai/
 
@@ -64,6 +64,9 @@ AI
   Language
           Paraphrasing Tool - QuillBot AI
           https://quillbot.com/
+
+          Free Paraphrasing Tool | Paraphrase Instantly (No Sign-up)
+          https://www.grammarly.com/paraphrasing-tool
 
   Summeriser
           TextCortex AI - Generate Blog Posts, Product Descriptions, Ad Copies and more
