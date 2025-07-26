@@ -38,6 +38,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#include <sys/stat.h> // Include for stat() to check file existence
+
 #define FFMPEG_STATIC_BUILD_LATEST_PATH "/mnt/hdd2/PortablePrograms/ffmpeg-git-amd64-static/ffmpeg"
 #define FFPLAY_STATIC_BUILD_LATEST_PATH "/usr/bin/ffplay"
 // Download FFMPEG from https://ffmpeg.org/download.html or https://johnvansickle.com/ffmpeg/
@@ -50,26 +52,75 @@
 #define OUTPUT_VID_NAME_PLUS_EXT_LEN  512 // Increased significantly to handle full paths + .mxf
 #define STORE_TH_WORD_INTERLACED_OR_NONINTERLACED 11
 
-// Helper function to generate output filename
+// Helper function to generate a unique output filename
+// Attempts to create a name like base_lut_corrected.mxf, base_lut_corrected_1.mxf, etc.
 void generate_output_filename(const char *inputVido, char *outputVideo, size_t outputVideoSize) {
-    // Create output filename with .mxf extension (improved)
+    char base_name[OUTPUT_VID_NAME_PLUS_EXT_LEN] = "";
     char *dot = strrchr(inputVido, '.'); // Find the last dot
+
+    // Extract the base name (without extension)
     if (dot != NULL) {
         size_t prefix_len = dot - inputVido;
-        if (prefix_len >= outputVideoSize - 5) { // -5 for ".mxf\0"
-            fprintf(stderr, "Error: Input filename too long.\n");
-            strncpy(outputVideo, "output.mxf", outputVideoSize - 1);
+        if (prefix_len >= sizeof(base_name) - 1) { // Check for buffer overflow risk
+            fprintf(stderr, "Error: Input filename too long for processing.\n");
+            // Fallback name if input name is too long
+            strncpy(outputVideo, "output_lut_corrected.mxf", outputVideoSize - 1);
             outputVideo[outputVideoSize - 1] = '\0';
             return;
         }
-        strncpy(outputVideo, inputVido, prefix_len);
-        outputVideo[prefix_len] = '\0'; // Null-terminate the prefix
+        strncpy(base_name, inputVido, prefix_len);
+        base_name[prefix_len] = '\0';
     } else {
-        // If no dot, copy the whole name (ensure space for .mxf)
-        strncpy(outputVideo, inputVido, outputVideoSize - 5);
-        outputVideo[outputVideoSize - 5] = '\0'; // Ensure null termination
+        // If no dot, use the whole name as base (ensure space)
+        strncpy(base_name, inputVido, sizeof(base_name) - 1);
+        base_name[sizeof(base_name) - 1] = '\0'; // Ensure null termination
     }
-    strcat(outputVideo, ".mxf"); // Append .mxf extension
+
+    // Variable for checking file existence - MUST be declared outside the loop
+    struct stat buffer;
+    int counter = 0;
+    int result_stat;
+
+    // Use a do-while to ensure the loop runs at least once to check the initial name
+    do {
+        if (counter == 0) {
+            snprintf(outputVideo, outputVideoSize, "%s_lut_corrected.mxf", base_name);
+        } else {
+            snprintf(outputVideo, outputVideoSize, "%s_lut_corrected_%d.mxf", base_name, counter);
+        }
+        counter++;
+
+        // Safety check to prevent (almost) infinite loop (highly unlikely, but good practice)
+        if (counter > 10000) {
+             fprintf(stderr, "Error: Could not generate a unique filename after many attempts.\n");
+             // Final fallback
+             snprintf(outputVideo, outputVideoSize, "output_lut_corrected_final.mxf");
+             // Check this last resort name, but don't loop again
+             result_stat = stat(outputVideo, &buffer);
+             if (result_stat == 0) {
+                // Even the final fallback exists, append timestamp or similar might be needed,
+                // but for now, just overwrite the check result to exit loop.
+                // A real robust solution might involve tmpnam or similar, but this covers common cases.
+                // Let's assume it's okay to overwrite the check result to break.
+                // Or, just accept it might fail if this file also exists, which is very unlikely.
+                // For simplicity here, we'll break.
+             }
+             break; // Exit the loop regardless
+        }
+
+        // Check if the file exists using stat
+        // The variable 'buffer' must be declared before this line
+        result_stat = stat(outputVideo, &buffer);
+        // If stat returns 0, the file exists.
+        // If stat returns -1 (and errno is typically ENOENT), the file does not exist.
+    } while (result_stat == 0); // Loop while the file exists
+
+    // At this point, outputVideo holds a name that should not exist.
+    // If it existed originally, a _1, _2, ... suffix would have been added.
+    // If the initial _lut_corrected name was free, it's used.
+    // Note: There's a tiny race condition here: if another process creates the file
+    // between our check and ffmpeg's creation, ffmpeg might still fail.
+    // For most single-user scenarios, this is negligible.
 }
 
 // Structure for playback/conversion - Updated for DNxHR MXF
