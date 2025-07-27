@@ -121,11 +121,12 @@ export PATH="$PATH:/snap/bin/"
 export PATH="$PATH:/mnt/hdd2/PortablePrograms/blender-3.3.12-linux-x64/"
 # FFmpeg Static Build
 # https://ffmpeg.org/download.html#build-linux
-# https://johnvansickle.com/ffmpeg/
-export PATH="$PATH:/mnt/hdd2/PortablePrograms/ffmpeg-git-amd64-static/"
-alias ffmpeg=/mnt/hdd2/PortablePrograms/ffmpeg-git-amd64-static/ffmpeg
-alias ffprobe=/mnt/hdd2/PortablePrograms/ffmpeg-git-amd64-static/ffprobe
-alias qt-faststart=/mnt/hdd2/PortablePrograms/ffmpeg-git-amd64-static/qt-faststart
+# https://github.com/BtbN/FFmpeg-Builds/releases
+export PATH="$PATH:/mnt/hdd2/PortablePrograms/ffmpeg-master-latest-linux64-lgpl/bin/"
+alias ffmpeg=/mnt/hdd2/PortablePrograms/ffmpeg-master-latest-linux64-lgpl/bin/ffmpeg
+alias ffplay=/mnt/hdd2/PortablePrograms/ffmpeg-master-latest-linux64-lgpl/bin/ffplay
+alias ffprobe=/mnt/hdd2/PortablePrograms/ffmpeg-master-latest-linux64-lgpl/bin/ffprobe
+# alias qt-faststart=
 
 # Command Line Internet Radio:
 # https://github.com/deep5050/radio-active.git
