@@ -331,6 +331,134 @@ sudo cp -r PRO-dark-XFCE-4.14/ /usr/share/themes/PRO-dark-XFCE-4.14
 sudo thunar /usr/share/themes
 sudo chmod -R 755 /usr/share/themes/PRO-dark-XFCE-4.14
 
+================================================================================
+        PYTHON, PIP3, PIPX, CONDA (MINI), AND PYTORCH (CPU)
+================================================================================
+sudo apt install python3-pip
+python -m pip install --upgrade pip
+sudo apt install pipx
+================================================================================
+
+
+================================================================================
+Inject a dependency module directly into the PIPX Environment:
+pipx runpip <your_actual_package> install <dependency_module_to_inject>
+================================================================================
+
+
+================================================================================
+MINICONDA:
+https://www.anaconda.com/download/success
+https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html
+
+--------------------------------------------------------------------------------
+bash
+cd Downloads/
+bash Anaconda3-202x.0x-x-Linux-x86_64.sh
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+geany .bash_aliases or .bashrc
+--------------------------------------------------------------------------------
+
+Add:
+--------------------------------------------------------------------------------
+export PATH="$HOME/anaconda3/condabin:$PATH"
+export PATH="$HOME/anaconda3/bin:$PATH"
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+fish
+fish_add_path $HOME/anaconda3/condabin
+fish_add_path $HOME/anaconda3/bin
+conda list
+exit
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+conda update conda
+conda init
+source ~/.bash_aliases
+source ~/.bashrc
+--------------------------------------------------------------------------------
+
+~ 11 GB
+================================================================================
+Delete Environments:
+
+--------------------------------------------------------------------------------
+conda env remove --name project
+conda list | grep nvidia
+conda list | grep cuda
+conda activate latexocr
+pip uninstall -y dependencies/packages
+--------------------------------------------------------------------------------
+================================================================================
+
+
+================================================================================
+PyTorch:
+https://pytorch.org/get-started/locally/
+CPU-Only version:
+
+--------------------------------------------------------------------------------
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+--------------------------------------------------------------------------------
+================================================================================
+
+
+================================================================================
+List of PIPX packages:
+
+pipx list
+venvs are in /home/YOUR_USERNAME/.local/pipx/venvs
+apps are exposed on your $PATH at /home/YOUR_USERNAME/.local/bin
+   package archivy 1.7.7, installed using Python 3.11.2
+    - archivy
+   package bpytop 1.0.68, installed using Python 3.11.2
+    - bpytop
+   package cmake-init 0.41.1, installed using Python 3.11.2
+    - cmake-init
+   package cpplint 2.0.2, installed using Python 3.11.2
+    - cpplint
+   package esptool 5.0.2, installed using Python 3.11.2
+    - esp_rfc2217_server
+    - esp_rfc2217_server.py
+    - espefuse
+    - espefuse.py
+    - espsecure
+    - espsecure.py
+    - esptool
+    - esptool.py
+   package flawfinder 2.0.19, installed using Python 3.11.2
+    - flawfinder
+   package grip 4.6.2, installed using Python 3.11.2
+    - grip
+   package lizard 1.17.31, installed using Python 3.11.2
+    - lizard
+   package offvsix 0.1.3, installed using Python 3.11.2
+    - offvsix
+   package radio-active 2.9.1, installed using Python 3.11.2
+    - radio
+    - radioactive
+   package rapid-latex-ocr 0.0.9, installed using Python 3.11.2
+    - rapid_latex_ocr
+   package tictacsync 0.96a0, installed using Python 3.11.2
+    - LTCcheck
+    - multi2polywav
+    - remergemix
+    - synciso
+    - tictacsync
+   package tldr 3.4.1, installed using Python 3.11.2
+    - tldr
+   package youtube-dl 2021.12.17, installed using Python 3.11.2
+    - youtube-dl
+   package yt-dlp 2025.7.21, installed using Python 3.11.2
+    - yt-dlp
+================================================================================
+
+
+
 Add Wisker Menu and delete 'Applications Menu' (from the extreme left):
 
 Right-click on the Panel (found on the top of the screen),
