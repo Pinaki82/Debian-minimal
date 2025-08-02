@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Surya LaTeX OCR
+# https://github.com/datalab-to/surya.git
+Comment=An application for optical character recognition (OCR) that scans handwritten mathematical expressions and transforms them into LaTeX format.
+Exec=sh -c ". $HOME/anaconda3/etc/profile.d/conda.sh && conda activate base && $HOME/anaconda3/bin/surya_gui"
+Terminal=true
+Categories=Utility;
+# Written by gpt-4.1-2025-04-14 on 2025.08.02
+Icon=applications-accessories
