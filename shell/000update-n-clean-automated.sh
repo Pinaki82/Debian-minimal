@@ -42,6 +42,12 @@ upgrade_pipx_packages(){ # Upgrade pipx packages
   pipx upgrade-all
 }
 
+update_miniconda(){ # Update miniconda
+  echo "Next: conda update conda"
+  sleep 1
+  conda update conda
+}
+
 update_rust(){ # Update Rust
   echo "Next: rustup update"
   sleep 1
@@ -96,6 +102,9 @@ if [ "${choice}" != '0' ]; then
 
   # Upgrade pipx packages
   upgrade_pipx_packages
+
+  # Update miniconda
+  update_miniconda
 
   # Update Rust
   update_rust
