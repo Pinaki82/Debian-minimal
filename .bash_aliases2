@@ -9,6 +9,8 @@ export C_INCLUDE_PATH="/usr/local/include:$C_INCLUDE_PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/emsdk:$PATH"
 export PATH="$HOME/emsdk/upstream/emscripten:$PATH"
+export PATH="$HOME/anaconda3/condabin:$PATH"
+export PATH="$HOME/anaconda3/bin:$PATH"
 
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # #
