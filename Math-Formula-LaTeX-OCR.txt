@@ -1,0 +1,77 @@
+Rapid ⚡︎ LaTeX OCR
+
+https://github.com/RapidAI/RapidLaTeXOCR.git
+
+pipx install rapid_latex_ocr
+
+Model Path:
+
+~/.local/pipx/venvs/rapid-latex-ocr/lib/python3.11/site-packages/rapid_latex_ocr/models (171 MB)
+
+Pipx packages are typically installed in a directory under your home folder,
+specifically in ~/.local/pipx/venvs/, where each package gets its own isolated
+virtual environment.
+The executable scripts for these packages are linked to your PATH,
+allowing you to run them from the command line.
+
+rapid_latex_ocr eq.png
+
+This works only with printed formulas. Handwritten formulas require special treatment.
+
+
+================================================================================
+MINICONDA:
+https://www.anaconda.com/download/success
+https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html
+
+bash
+bash Anaconda3-202x.0x-x-Linux-x86_64.sh
+
+geany .bash_aliases or .bashrc
+
+Add:
+export PATH="$HOME/anaconda3/condabin:$PATH"
+export PATH="$HOME/anaconda3/bin:$PATH"
+
+fish
+fish_add_path $HOME/anaconda3/condabin
+fish_add_path $HOME/anaconda3/bin
+conda list
+exit
+
+conda update conda
+conda init
+source ~/.bash_aliases
+source ~/.bashrc
+~ 11 GB
+================================================================================
+Delete Environments:
+conda env remove --name project
+conda list | grep nvidia
+conda list | grep cuda
+conda activate latexocr
+pip uninstall -y dependencies/packages
+================================================================================
+
+
+================================================================================
+PyTorch:
+https://pytorch.org/get-started/locally/
+CPU-Only version:
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+================================================================================
+
+
+Surya:
+
+https://github.com/datalab-to/surya.git
+
+pip install surya-ocr streamlit pdftext
+
+surya_gui
+
+Model Path:
+~/.cache/datalab/ (2.5 GB)
+
+Handwritten formulas were also converted to LaTeX when the right options were
+selected from the GUI/CLI.
