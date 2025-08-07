@@ -12,6 +12,11 @@ export PATH="$HOME/emsdk/upstream/emscripten:$PATH"
 export PATH="$HOME/anaconda3/condabin:$PATH"
 export PATH="$HOME/anaconda3/bin:$PATH"
 
+# Older Intel iGPUs, the 4th generation of Intel Core processors
+# Product code: 80646 (desktop LGA 1150), 80647 (mobile Socket G3), 80648 (desktop LGA 2011-3), 80644 (server LGA 2011-3)
+# Socket(s): LGA 1150, rPGA 947, BGA 1364, BGA 1168, LGA 2011-v3
+# Force VAAPI to Use i965 for FFMPEG on older Haswell Bridge Intel CPUs:
+export LIBVA_DRIVER_NAME=i965
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # https://linuxize.com/post/how-to-create-bash-aliases/
