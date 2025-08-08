@@ -299,6 +299,10 @@ yes | sudo apt install intel-media-va-driver-non-free && \
 yes | sudo apt install xserver-xorg-video-intel && \
 yes | sudo apt install mesa-utils && \
 yes | sudo apt install intel-opencl-icd intel-media-va-driver-non-free libmfx1 && \
+yes | sudo apt install vainfo intel-media-va-driver-non-free libva-drm2 libva-x11-2 && \
+yes | sudo apt install libmfx1 intel-media-va-driver-non-free && \
+yes | sudo apt install i965-va-driver && \
+# To use Debian Bookworm with 4th-gen (Haswell Bridge/LGA1150) Intel CPUs: sudo apt purge --auto-remove intel-media-va-driver*
 #
 # ==============================================================================
 # Edit the GRUB Bootloader Menu after installing drivers from Intel:
