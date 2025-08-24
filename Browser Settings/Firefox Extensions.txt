@@ -16,6 +16,13 @@ Wikiwand: Wikipedia Modernized - Wikiwand - https://addons.mozilla.org/en-US/fir
 MarkDownload - Markdown Web Clipper - https://addons.mozilla.org/en-US/firefox/addon/markdownload/
 SingleFile: Save a complete page into a single HTML file - https://addons.mozilla.org/en-US/firefox/addon/single-file/
 
+ChatGPT Export - Markdown & HTML - Export ChatGPT conversations in Markdown format : copy and paste result in your favorite Markdown software (obsidian, joplin...). You can also create a HTML file. Perfect to export or backup your curent ChatGPT. Made with love by Greg SEO, enjoy! - https://addons.mozilla.org/en-US/firefox/addon/chatgpt-export-markdown-html/
+ChatGPT Markdown Copier - Adds a copy button next to each ChatGPT output to copy markdown text. - https://addons.mozilla.org/en-US/firefox/addon/chatgpt-markdown-copier/
+ChatGPT to Markdown - Convert ChatGPT, Claude.ai, Mistral conversations to Markdown files - https://addons.mozilla.org/en-US/firefox/addon/chatgpt-to-markdown/
+Save my Chatbot - AI Conversation Exporter - 🚀 Download Claude, Perplexity, Phind, ChatGPT and MaxAI-Google knowledge into markdown files! - https://addons.mozilla.org/en-US/firefox/addon/ai-chat-downloader/
+Docify – Export Your AI Chats - https://addons.mozilla.org/en-US/firefox/addon/docify-export-your-ai-chats/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search
+
+
 
 Floccus Bookmark Manager: https://floccus.org/
 Google Play: https://play.google.com/store/apps/details?id=org.handmadeideas.floccus

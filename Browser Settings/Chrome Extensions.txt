@@ -5,6 +5,7 @@ Bitwarden
 Grammarly
 Privacy Badger
 uBlock Origin
+ChatGPT search
 MarkDownload - Markdown Web Clipper - https://chromewebstore.google.com/detail/markdownload-markdown-web/pcmpcfapbekmbjjkdalcgopdkipoggdi?pli=1
 
 Privacy Pass
