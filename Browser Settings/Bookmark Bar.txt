@@ -122,3 +122,13 @@ https://calendar.proton.me/u/0/
 
 AirDroid
 http://192.168.0.155:8888/
+
+---
+Other Bookmarks:
+
+OpenStreetMap - https://www.openstreetmap.org/
+Time.is - https://time.is/
+Cirkit Designer IDE - Circuit Design IDE Online - https://app.cirkitdesigner.com/
+DigiKey | Electronic Parts and Components – Fast Shipping, Global Support - https://www.digikey.com/
+Kolkata, WB Weather Forecast | MSN Weather - https://www.msn.com/en-in/weather?boldpwa=ORA-l2-m-0EB439449E576C421D742A059FFA6DFA
+
