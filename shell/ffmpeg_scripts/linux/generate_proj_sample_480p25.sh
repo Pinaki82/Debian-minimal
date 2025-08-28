@@ -24,7 +24,7 @@
 # Slow results in high compression. Similarly, '-crf 0' means lossless,
 # hence, it produces bigger files. '-crf 26' means high compression, so the
 # converted files take less disc space, and the quality of the highly
-# compressed files are generally a little worse. The reasonable range is
+# compressed files is generally a little worse. The reasonable range is
 # -crf 16 to 18, -preset superfast to fast.
 
 # Initially, I chose -crf 0 (lossless) and -preset fast (visually near-lossless). The resulting
@@ -32,7 +32,7 @@
 # stock footage. The good thing is, the produced files are not too big to keep.
 # However, in my current settings, I set '-crf' to '16' and '-preset' to
 # 'fast' because stock footage files are something you would like to store
-# permanently. And those files eats away chunks of storage space.
+# permanently. And those files eat away chunks of storage space.
 # A good balance between file size and no noticeable loss in quality
 # is '-crf 16 -preset fast'. It's acceptable in case you want to keep a
 # file for later use as stock footage. Save your drive space, put less stress
@@ -42,7 +42,7 @@ echo "Type the filename with extension: (Press TAB to autocomplete.) $1"
 filename=$1
 echo filename: $filename
 # ----------------------------------------------------------------
-# Concatenate Stings in Shell Scripts
+# Concatenate Strings in Shell Scripts
 # https://stackoverflow.com/questions/4181703/how-to-concatenate-string-variables-in-bash#4181721
 # ----------------------------------------------------------------
 convrtd_file_s_extnsn='-480p.mp4'
@@ -52,7 +52,7 @@ echo newfilename: $newfilename
 # Change the quality level (lower=better):
 codecoption=libx264
 videoquality=0
-constantratefactor=22 #The range of the CRF scale is 0–51, where 0 is lossless, 23 is the default, and 51 is worst quality possible. A lower value generally leads to higher quality, and a subjectively sane range is 17–28.
+constantratefactor=22 #The range of the CRF scale is 0–51, where 0 is lossless, 23 is the default, and 51 is the worst quality possible. A lower value generally leads to higher quality, and a subjectively sane range is 17–28.
 SPEED=medium #ultrafast, #superfast, veryfast, faster, fast, medium, slow, slower, veryslow
 # https://superuser.com/questions/714804/converting-video-from-1080p-to-720p-with-smallest-quality-loss-using-ffmpeg
 # https://www.macxdvd.com/mac-dvd-video-converter-how-to/ffmpeg-avi-to-mp4-free.htm
@@ -60,7 +60,7 @@ SPEED=medium #ultrafast, #superfast, veryfast, faster, fast, medium, slow, slowe
 framerateconversionratio_at_output=25 # 50000/2000
 # Profile & Level: https://superuser.com/questions/563997/how-can-i-set-a-h-264-profile-level-with-ffmpeg
 # -profile:v – one of high, main, or baseline
-# -level:v – as defined in Annex A of the H.264 standard, e.g., 4.0.
+# -level:v – as defined in Annexe A of the H.264 standard, e.g., 4.0.
 
 ffmpeg -i $filename -c:v $codecoption -profile:v main -level:v 3.1 \
     -q:v $videoquality -preset $SPEED -crf $constantratefactor -s 854x480 \
