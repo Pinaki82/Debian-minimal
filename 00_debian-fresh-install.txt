@@ -687,7 +687,8 @@ Icon: emblem-information
 The bash -c with the read command ensures that the terminal window stays open after displaying the metadata, giving you time to review the information before the window closes.
 
 Name: MediaInfo-CLI
-Command: xfce4-terminal -e "bash -c 'mediainfo %f; read'"
+Command: xfce4-terminal --hold -e "mediainfo %f"
+(from xfce4-terminal --hold -e "bash -c 'mediainfo %f; read'" (old))
 File pattern: *
 Appears if selection contains: Video Files
 Icon: camera-video
