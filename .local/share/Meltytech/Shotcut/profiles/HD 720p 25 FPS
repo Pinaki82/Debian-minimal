@@ -1,0 +1,10 @@
+width=1280
+height=720
+sample_aspect_num=1
+sample_aspect_den=1
+display_aspect_num=16
+display_aspect_den=9
+progressive=1
+colorspace=709
+frame_rate_num=25
+frame_rate_den=1
