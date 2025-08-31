@@ -1,0 +1,7 @@
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend.
+https://itsfoss.com/could-not-get-lock-error/
+ps aux | grep -i apt
+sudo kill <process_id>
+Or,
+sudo kill -9 <process_id>
+
