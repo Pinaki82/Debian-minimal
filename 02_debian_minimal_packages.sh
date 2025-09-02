@@ -1361,8 +1361,12 @@ yes | sudo apt install img2pdf && \
 # installation:
 
 yes | sudo apt install tesseract-ocr && \
+yes | sudo apt install tesseract-ocr-eng tesseract-ocr-enm && \
 yes | sudo apt install imagemagick && \
 yes | sudo apt install graphicsmagick-imagemagick-compat && \
+yes | sudo apt install ocrmypdf && \
+# https://github.com/ocrmypdf/OCRmyPDF?tab=readme-ov-file#feature-demo
+
 
 # language pack installation:
 
