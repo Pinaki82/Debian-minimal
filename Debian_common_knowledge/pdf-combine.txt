@@ -1,0 +1,23 @@
+Merge / convert multiple PDF files into one PDF
+http://stackoverflow.com/questions/2507766/ddg#11280219
+
+Considering that `pdfunite` is part of poppler it has a higher chance to be installed,
+usage is also simpler than `pdftk`:
+
+⚠ IMPORTANT: Just make sure you remember to provide `out.pdf`, or else
+it will overwrite the last input file in your command ⚠
+
+```
+pdfunite in-1.pdf in-2.pdf in-n.pdf out.pdf
+```
+
+A safer solution may include a test of non-existence
+targeting the output file
+
+```
+export output_file=out.pdf && \
+! test -e $output_file && \
+pdfunite in-1.pdf in-2.pdf in-n.pdf $output_file
+```
+
+--Hubert Kario
