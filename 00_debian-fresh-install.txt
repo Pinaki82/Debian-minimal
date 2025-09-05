@@ -679,7 +679,8 @@ Appears if selection contains: Video files
 Icon: application-video
 
 Name: Open with Exiftool
-Command: xfce4-terminal -e "bash -c 'exiftool %f; read'"
+Command: xfce4-terminal --hold -e "exiftool %f"
+(Old: xfce4-terminal -e "bash -c 'exiftool %f; read'" or, xfce4-terminal --hold -e "bash -c 'exiftool %f; read'")
 File pattern: *
 Appears if selection contains: Image Files
 Icon: emblem-information
