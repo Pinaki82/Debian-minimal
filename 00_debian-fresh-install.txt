@@ -1427,7 +1427,6 @@ sudo snap remove --purge snapname
 Ex: sudo snap remove --purge kompare
 
 # Flatpak packages
-flatpak install flathub com.github.micahflee.torbrowser-launcher
 flatpak install flathub com.github.Eloston.UngoogledChromium
 Choose a search engine from the setting in Chromium.
 Bookmark:
@@ -1560,7 +1559,6 @@ io.github.jliljebl.Flowblade
 org.kde.kdenlive
 org.libreoffice.LibreOffice
 org.nomacs.ImageLounge
-org.torproject.torbrowser-launcher
 
 snap list
 
