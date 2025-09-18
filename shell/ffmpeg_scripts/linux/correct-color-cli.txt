@@ -1,0 +1,227 @@
+Qwen qwen3-max-preview
+2025.09.19
+LMArena
+
+Here's the pure command-line version of your script, stripped of all Zenity GUI elements. It uses positional arguments or prompts via `read` if arguments are missing, and provides progress feedback via `echo`.
+
+```bash
+#!/bin/bash
+
+# Automatic colour correction - CLI version
+
+set -euo pipefail
+
+# Check for required tools
+command -v autowhite.sh >/dev/null 2>&1 || { echo "Error: autowhite.sh not found in PATH" >&2; exit 1; }
+command -v convert >/dev/null 2>&1 || { echo "Error: ImageMagick 'convert' not found" >&2; exit 1; }
+
+# Get input file
+input=""
+if [[ $# -ge 1 ]]; then
+    input="$1"
+else
+    read -rp "Enter path to input image: " input
+fi
+
+[[ ! -f "$input" ]] && { echo "Error: Input file '$input' not found." >&2; exit 1; }
+
+# Derive default output filename
+base=$(basename "${input%.*}")
+ext="${input##*.}"
+default="${base}-corrected.${ext}"
+
+# Get output filename
+outfile=""
+if [[ $# -ge 2 ]]; then
+    outfile="$2"
+else
+    read -rp "Enter output filename (saved in same folder) [$default]: " user_outfile
+    outfile=${user_outfile:-$default}
+fi
+
+dir=$(dirname "$input")
+tmp="$(mktemp --suffix=".$ext")"
+
+# Cleanup on exit
+trap 'rm -f "$tmp"' EXIT
+
+echo "[10%] Applying white balance..."
+autowhite.sh "$input" "$tmp"
+
+echo "[50%] Applying auto levels and normalization..."
+convert "$tmp" -auto-gamma -auto-level -normalize "$tmp"
+
+echo "[90%] Saving result..."
+mv "$tmp" "$dir/$outfile"
+
+echo "[DONE] Corrected image saved as: $dir/$outfile"
+
+# `correct-color.sh`. OpenAI ChatGPT. 2025.07.28
+
+# https://superuser.com/questions/370920/auto-image-enhance-for-ubuntu
+# convert -auto-gamma -auto-level -normalize original.jpg improved.jpg
+# https://github.com/ImageMagick/ImageMagick/discussions/5197
+# -white-balance
+# https://stackoverflow.com/questions/5250409/imagemagick-auto-adjust-the-colours-of-an-image-a-la-other-photo-management-ap
+# ./autowhite.sh input.jpg output.jpg
+
+# https://stackoverflow.com/questions/5250409/imagemagick-auto-adjust-the-colours-of-an-image-a-la-other-photo-management-ap
+# http://www.fmwconcepts.com/imagemagick/autowhite/index.php
+# Place the `autowhite.sh` file into ~/.local/bin
+# Change the permission parameter: chmod +x autowhite.sh
+```
+
+### Usage:
+
+**With arguments:**
+```bash
+./correct-color-cli.sh input.jpg output.jpg
+```
+
+**Interactive (no arguments):**
+```bash
+./correct-color-cli.sh
+# Prompts for input and output filenames
+```
+
+### Features:
+- Uses command-line arguments if provided.
+- Falls back to interactive `read` prompts if arguments are missing.
+- Validates existence of input file.
+- Shows progress via percentage-style echo messages.
+- Uses `trap` to clean up temporary files on exit.
+- Checks for required dependencies (`autowhite.sh`, `convert`).
+
+This version is suitable for automation, scripting, or headless environments.
+
+Absolutely! Here’s the updated script with a clear usage note at the top, including instructions for placing scripts in `~/.local/bin` for easy access from anywhere in your terminal.
+
+---
+
+```bash
+#!/bin/bash
+
+# Automatic colour correction - CLI version
+#
+# USAGE:
+#   correct-color-cli.sh [INPUT_IMAGE] [OUTPUT_IMAGE]
+#
+# If arguments are omitted, you will be prompted interactively.
+#
+# INSTALLATION TIP:
+# Place this script along with 'autowhite.sh' and any related tools
+# into ~/.local/bin and make them executable:
+#
+#   cp correct-color-cli.sh ~/.local/bin/
+#   cp autowhite.sh ~/.local/bin/          # if not already there
+#   chmod +x ~/.local/bin/correct-color-cli.sh
+#   chmod +x ~/.local/bin/autowhite.sh
+#
+# Ensure ~/.local/bin is in your PATH (usually it is by default on modern Linux).
+# Then you can run from anywhere:
+#
+#   correct-color-cli.sh photo.jpg photo-corrected.jpg
+
+set -euo pipefail
+
+# Check for required tools
+command -v autowhite.sh >/dev/null 2>&1 || { echo "Error: autowhite.sh not found in PATH" >&2; exit 1; }
+command -v convert >/dev/null 2>&1 || { echo "Error: ImageMagick 'convert' not found" >&2; exit 1; }
+
+# Get input file
+input=""
+if [[ $# -ge 1 ]]; then
+    input="$1"
+else
+    read -rp "Enter path to input image: " input
+fi
+
+[[ ! -f "$input" ]] && { echo "Error: Input file '$input' not found." >&2; exit 1; }
+
+# Derive default output filename
+base=$(basename "${input%.*}")
+ext="${input##*.}"
+default="${base}-corrected.${ext}"
+
+# Get output filename
+outfile=""
+if [[ $# -ge 2 ]]; then
+    outfile="$2"
+else
+    read -rp "Enter output filename (saved in same folder) [$default]: " user_outfile
+    outfile=${user_outfile:-$default}
+fi
+
+dir=$(dirname "$input")
+tmp="$(mktemp --suffix=".$ext")"
+
+# Cleanup on exit
+trap 'rm -f "$tmp"' EXIT
+
+echo "[10%] Applying white balance..."
+autowhite.sh "$input" "$tmp"
+
+echo "[50%] Applying auto levels and normalization..."
+convert "$tmp" -auto-gamma -auto-level -normalize "$tmp"
+
+echo "[90%] Saving result..."
+mv "$tmp" "$dir/$outfile"
+
+echo "[DONE] Corrected image saved as: $dir/$outfile"
+
+# `correct-color.sh`. OpenAI ChatGPT. 2025.07.28
+
+# https://superuser.com/questions/370920/auto-image-enhance-for-ubuntu
+# convert -auto-gamma -auto-level -normalize original.jpg improved.jpg
+# https://github.com/ImageMagick/ImageMagick/discussions/5197
+# -white-balance
+# https://stackoverflow.com/questions/5250409/imagemagick-auto-adjust-the-colours-of-an-image-a-la-other-photo-management-ap
+# ./autowhite.sh input.jpg output.jpg
+
+# https://stackoverflow.com/questions/5250409/imagemagick-auto-adjust-the-colours-of-an-image-a-la-other-photo-management-ap
+# http://www.fmwconcepts.com/imagemagick/autowhite/index.php
+```
+
+---
+
+### ✅ Pro Tip Recap:
+
+To make these tools globally accessible:
+
+```bash
+mkdir -p ~/.local/bin
+
+cp correct-color-cli.sh ~/.local/bin/
+cp autowhite.sh ~/.local/bin/
+
+chmod +x ~/.local/bin/correct-color-cli.sh
+chmod +x ~/.local/bin/autowhite.sh
+
+# Verify ~/.local/bin is in your PATH
+echo $PATH | grep -q ".local/bin" || echo 'Add export PATH="$HOME/.local/bin:$PATH" to your ~/.bashrc or ~/.profile'
+```
+
+After that, reload your shell or run:
+
+```bash
+source ~/.bashrc
+```
+
+Then use anywhere:
+
+```bash
+correct-color-cli.sh myphoto.jpg myphoto-fixed.jpg
+```
+
+Perfect for automation, batch processing, or remote/headless servers! 🖼️⚙️
+
+
+
+
+
+
+
+
+
+
+
