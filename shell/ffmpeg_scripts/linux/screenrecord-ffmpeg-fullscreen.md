@@ -10,6 +10,10 @@ ffmpeg -y -rtbufsize 100M -f x11grab -framerate 25 -probesize 10M -draw_mouse 1 
 
 ---
 
+**Gemini-2.5-pro. LMArena. 2025.10.04**
+
+---
+
 `ffmpeg -y -rtbufsize 100M -f x11grab -framerate 25 -probesize 10M -draw_mouse 1 -s $(xdpyinfo | grep dimensions | awk '{print $2}') -i :0.0 -c:v mjpeg -q:v 0 -crf 0 -preset ultrafast -r 25 -c:a pcm_s16le -tune zerolatency -pix_fmt yuv420p output.mov`
 
 How to capture audio along with it?
