@@ -1173,6 +1173,7 @@ yes | sudo apt install libopenblas-dev && \
 # yes | sudo apt install libboost-all-dev && \
 
 # OpenGL libraries
+# See GLAD-install-note.txt
 
 # yes | sudo apt install libglu1-mesa-dev && \
 # yes | sudo apt install freeglut3-dev && \

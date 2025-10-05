@@ -1,0 +1,279 @@
+Install the GLAD OpenGL library for C/C++ on your Debian system.
+
+https://www.programmersought.com/article/29264344754/
+
+Download the ZIP file from: https://glad.dav1d.de/
+
+glad.zip
+
+unzip glad.zip -d glad/
+
+(Ref: https://linuxize.com/post/how-to-unzip-files-in-linux/)
+
+
+cd glad
+ls
+
+output: include  src
+
+cd include
+
+ls
+output: glad  KHR
+
+sudo cp -r glad /usr/local/include/
+sudo cp -r KHR /usr/local/include/
+sudo chown -R $USER:$USER /usr/local/include/glad /usr/local/include/KHR
+
+sudo mkdir -p /usr/local/src
+sudo cp -r glad.c /usr/local/src
+sudo chown -R $USER:$USER /usr/local/src
+
+cp /usr/local/src/glad.c /to/your/working_dir/
+
+Example:
+
+cp /usr/local/src/glad.c /home/myusername/code/basic_opengl_codes/
+
+Output:
+
+'/usr/local/src/glad.c' -> '/home/myusername/code/basic_opengl_codes/glad.c'
+
+Test:
+
+opengl_tutorial_basic_deepseek.c
+
+```c
+// gcc -o opengl_tutorial_basic_deepseek opengl_tutorial_basic_deepseek.c glad.c -lglfw -lGL -lm -lXrandr -lXi -lX11 -lpthread -ldl -lXinerama -lXcursor
+
+#include <glad/glad.h>
+#include <GLFW/glfw3.h>
+#include <stdio.h>
+
+// Vertex shader source code
+const char* vertexShaderSource = "#version 330 core\n"
+    "layout (location = 0) in vec3 aPos;\n"
+    "void main()\n"
+    "{\n"
+    "   gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
+    "}\0";
+
+// Fragment shader source code
+const char* fragmentShaderSource = "#version 330 core\n"
+    "out vec4 FragColor;\n"
+    "void main()\n"
+    "{\n"
+    "   FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
+    "}\0";
+
+// Window resize callback
+void framebuffer_size_callback(GLFWwindow* window, int width, int height)
+{
+    glViewport(0, 0, width, height);
+}
+
+// Process input
+void processInput(GLFWwindow* window)
+{
+    if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+        glfwSetWindowShouldClose(window, 1);
+}
+
+// Compile shader function
+unsigned int compileShader(unsigned int type, const char* source)
+{
+    unsigned int shader = glCreateShader(type);
+    glShaderSource(shader, 1, &source, NULL);
+    glCompileShader(shader);
+    
+    // Check for compilation errors
+    int success;
+    char infoLog[512];
+    glGetShaderiv(shader, GL_COMPILE_STATUS, &success);
+    if(!success)
+    {
+        glGetShaderInfoLog(shader, 512, NULL, infoLog);
+        printf("Shader compilation error: %s\n", infoLog);
+    }
+    
+    return shader;
+}
+
+// Create shader program
+unsigned int createShaderProgram(const char* vertexSource, const char* fragmentSource)
+{
+    unsigned int vertexShader = compileShader(GL_VERTEX_SHADER, vertexSource);
+    unsigned int fragmentShader = compileShader(GL_FRAGMENT_SHADER, fragmentSource);
+    
+    unsigned int shaderProgram = glCreateProgram();
+    glAttachShader(shaderProgram, vertexShader);
+    glAttachShader(shaderProgram, fragmentShader);
+    glLinkProgram(shaderProgram);
+    
+    // Check linking errors
+    int success;
+    char infoLog[512];
+    glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
+    if(!success)
+    {
+        glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
+        printf("Shader program linking error: %s\n", infoLog);
+    }
+    
+    glDeleteShader(vertexShader);
+    glDeleteShader(fragmentShader);
+    
+    return shaderProgram;
+}
+
+int main()
+{
+    // Initialize GLFW
+    if(!glfwInit())
+    {
+        printf("Failed to initialize GLFW\n");
+        return -1;
+    }
+    
+    // Configure GLFW
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    
+    // Create window
+    GLFWwindow* window = glfwCreateWindow(800, 600, "Basic OpenGL Tutorial by DeepSeek", NULL, NULL);
+    if(window == NULL)
+    {
+        printf("Failed to create GLFW window\n");
+        glfwTerminate();
+        return -1;
+    }
+    glfwMakeContextCurrent(window);
+    
+    // Initialize GLAD
+    if(!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+    {
+        printf("Failed to initialize GLAD\n");
+        return -1;
+    }
+    
+    // Set viewport and resize callback
+    glViewport(0, 0, 800, 600);
+    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+    
+    // Define triangle vertices
+    float vertices[] = {
+        -0.5f, -0.5f, 0.0f,  // left
+         0.5f, -0.5f, 0.0f,  // right
+         0.0f,  0.5f, 0.0f   // top
+    };
+    
+    // Create Vertex Buffer Object (VBO) and Vertex Array Object (VAO)
+    unsigned int VBO, VAO;
+    glGenVertexArrays(1, &VAO);
+    glGenBuffers(1, &VBO);
+    
+    // Bind VAO first
+    glBindVertexArray(VAO);
+    
+    // Bind and configure VBO
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    
+    // Configure vertex attributes
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
+    
+    // Create shader program
+    unsigned int shaderProgram = createShaderProgram(vertexShaderSource, fragmentShaderSource);
+    
+    // Main render loop
+    while(!glfwWindowShouldClose(window))
+    {
+        // Input
+        processInput(window);
+        
+        // Rendering commands
+        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT);
+        
+        // Use shader program and draw triangle
+        glUseProgram(shaderProgram);
+        glBindVertexArray(VAO);
+        glDrawArrays(GL_TRIANGLES, 0, 3);
+        
+        // Check events and swap buffers
+        glfwSwapBuffers(window);
+        glfwPollEvents();
+    }
+    
+    // Cleanup
+    glDeleteVertexArrays(1, &VAO);
+    glDeleteBuffers(1, &VBO);
+    glDeleteProgram(shaderProgram);
+    
+    glfwTerminate();
+    return 0;
+}
+```
+
+---
+
+Recommended book:
+
+Anton's OpenGL 4 Tutorials
+
+https://antongerdelan.net/opengl/
+https://www.amazon.in/Antons-OpenGL-Tutorials-Anton-Gerdelan-ebook/dp/B00LAMQYF2
+
+---
+
+Gemini 2.5 Flash:
+
+I want to install the GLAD library on my Debian box.
+I'm following this guide: https://www.programmersought.com/article/29264344754/
+
+```
+sudo cp -r glad /usr/local/include/
+sudo cp -r KHR /usr/local/include/
+```
+
+The commands executed successfully; however, I cannot access these folders. In the XFCE GUI, they only contain a cross-mark folder emblem, indicating that the folders are inaccessible. "Permission denied".
+
+That's a very common issue when using `sudo` to copy files\!
+
+### The Reason for the Error 🔒
+
+When you use `sudo cp`, the files are copied by the **root user**. This means the new `glad` and `KHR` directories (and all their contents) are now **owned by `root`**.
+
+Your graphical file manager, running as your regular user, is correctly telling you **"Permission denied"** because only the `root` user has the necessary write and full access permissions to those folders.
+
+### The Fix: Change Ownership
+
+To fix this, you need to change the ownership of those folders from `root` back to your regular user account.
+
+1.  Open your terminal.
+2.  Run the following command. It will use the environment variable `$USER` to automatically insert your current username and change the ownership **recursively** (`-R`).
+
+<!-- end list -->
+
+```bash
+sudo chown -R $USER:$USER /usr/local/include/glad /usr/local/include/KHR
+```
+
+-----
+
+### Explanation of the Command
+
+  * **`sudo`**: Executes the command with root privileges, as only root can change the ownership of files owned by root.
+  * **`chown`**: The command for **ch**ange **own**ership.
+  * **`-R`**: The **R**ecursive flag, ensuring the ownership is changed for every file and folder *inside* `glad` and `KHR` as well.
+  * **`$USER:$USER`**: Sets the new owner to your current username (`$USER`) and the new group to your current primary group (also typically `$USER`).
+
+After running this command, the "Permission denied" error will be resolved, and you will be able to access the folders in your file manager normally.
+
+Worked.
+
+That's great news! I'm glad the **`chown`** command resolved your file permission issue. Happy coding with GLAD! 👍
+
+
