@@ -41,6 +41,14 @@ Output:
 
 Test:
 
+File Structure Verification:
+
+/your/project/directory/
+├── opengl_tutorial_basic_deepseek.c
+├── glad.c                    # Copied from /usr/local/src/
+└── (executable will be created here)
+
+
 opengl_tutorial_basic_deepseek.c
 
 ```c
@@ -215,6 +223,344 @@ int main()
     glfwTerminate();
     return 0;
 }
+```
+
+Or:
+
+opengl_tutorial_basic_deepseek2.c
+
+```c
+// gcc -o opengl_tutorial_basic_deepseek2 opengl_tutorial_basic_deepseek2.c glad.c -lglfw -lGL -lm -lXrandr -lXi -lX11 -lpthread -ldl -lXinerama -lXcursor
+
+#include <glad/glad.h>
+#include <GLFW/glfw3.h>
+#include <stdio.h>
+#include <math.h>
+
+/* ========================================================================== */
+/*                            SHADER PROGRAM DEFINITIONS                      */
+/* ========================================================================== */
+
+/**
+ * VERTEX SHADER: Processes each vertex in the graphics pipeline
+ * 
+ * Responsibilities:
+ * - Transform vertex positions using matrices
+ * - Pass data to fragment shader (like colors, texture coordinates)
+ * - Output final position in clip coordinates
+ * 
+ * Key concepts:
+ * - layout(location = X): Links to vertex attribute pointers in C code
+ * - in/out variables: Data flow between shader stages
+ * - uniforms: Global variables set from C code (like transformation matrices)
+ */
+const char* vertexShaderSource = "#version 330 core\n"
+    "layout (location = 0) in vec3 aPos;\n"     // Vertex position attribute (links to attribute 0)
+    "layout (location = 1) in vec3 aColor;\n"   // Vertex color attribute (links to attribute 1)
+    "out vec3 ourColor;\n"                      // Output color to fragment shader
+    "uniform mat4 rotationMatrix;\n"            // Rotation matrix set from C code each frame
+    "void main()\n"
+    "{\n"
+    "   gl_Position = rotationMatrix * vec4(aPos, 1.0);\n"  // Transform vertex position
+    "   ourColor = aColor;\n"                   // Pass color to fragment shader
+    "}\0";
+
+/**
+ * FRAGMENT SHADER: Processes each pixel (fragment) in the graphics pipeline
+ * 
+ * Responsibilities:
+ * - Determine final color of each pixel
+ * - Apply lighting, textures, and color calculations
+ * - Output RGBA color to the framebuffer
+ * 
+ * Key concepts:
+ * - in variables: Receive interpolated data from vertex shader
+ * - out variables: Output final color to the screen
+ * - Interpolation: Colors are smoothly blended between vertices
+ */
+const char* fragmentShaderSource = "#version 330 core\n"
+    "out vec4 FragColor;\n"                     // Final color output
+    "in vec3 ourColor;\n"                       // Input color from vertex shader (interpolated)
+    "void main()\n"
+    "{\n"
+    "   FragColor = vec4(ourColor, 1.0);\n"     // Set fragment color with full opacity
+    "}\0";
+
+/* ========================================================================== */
+/*                              CALLBACK FUNCTIONS                            */
+/* ========================================================================== */
+
+/**
+ * Window resize callback - handles window size changes
+ * 
+ * OpenGL Concept: Viewport
+ * - The viewport defines the area of the window where OpenGL can draw
+ * - Must be updated when window size changes to maintain proper aspect ratio
+ */
+void framebuffer_size_callback(GLFWwindow* window, int width, int height)
+{
+    glViewport(0, 0, width, height);  // Reset drawing area to new window size
+}
+
+/**
+ * Input processing function
+ * 
+ * OpenGL Concept: Event Handling
+ * - GLFW provides cross-platform input handling
+ * - This function checks for key presses each frame
+ */
+void processInput(GLFWwindow* window)
+{
+    if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+        glfwSetWindowShouldClose(window, 1);  // Close window when ESC is pressed
+}
+
+/* ========================================================================== */
+/*                          SHADER MANAGEMENT FUNCTIONS                       */
+/* ========================================================================== */
+
+/**
+ * Compiles a shader from source code
+ * 
+ * OpenGL Concept: Shader Compilation
+ * - Shaders are compiled separately before being linked into a program
+ * - Compilation errors are common - always check for success
+ */
+unsigned int compileShader(unsigned int type, const char* source)
+{
+    unsigned int shader = glCreateShader(type);  // Create shader object
+    glShaderSource(shader, 1, &source, NULL);    // Attach source code to shader
+    glCompileShader(shader);                     // Compile shader on GPU
+    
+    // Error checking - crucial for shader development
+    int success;
+    char infoLog[512];
+    glGetShaderiv(shader, GL_COMPILE_STATUS, &success);
+    if(!success)
+    {
+        glGetShaderInfoLog(shader, 512, NULL, infoLog);
+        printf("Shader compilation error: %s\n", infoLog);
+    }
+    
+    return shader;
+}
+
+/**
+ * Creates a complete shader program by linking vertex and fragment shaders
+ * 
+ * OpenGL Concept: Shader Program
+ * - A shader program is the complete pipeline of linked shaders
+ * - Must link successfully before use
+ */
+unsigned int createShaderProgram(const char* vertexSource, const char* fragmentSource)
+{
+    // Compile individual shaders
+    unsigned int vertexShader = compileShader(GL_VERTEX_SHADER, vertexSource);
+    unsigned int fragmentShader = compileShader(GL_FRAGMENT_SHADER, fragmentSource);
+    
+    // Create and link shader program
+    unsigned int shaderProgram = glCreateProgram();
+    glAttachShader(shaderProgram, vertexShader);
+    glAttachShader(shaderProgram, fragmentShader);
+    glLinkProgram(shaderProgram);
+    
+    // Error checking for linking
+    int success;
+    char infoLog[512];
+    glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
+    if(!success)
+    {
+        glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
+        printf("Shader program linking error: %s\n", infoLog);
+    }
+    
+    // Clean up individual shaders (they're linked into the program now)
+    glDeleteShader(vertexShader);
+    glDeleteShader(fragmentShader);
+    
+    return shaderProgram;
+}
+
+/* ========================================================================== */
+/*                                    MAIN PROGRAM                            */
+/* ========================================================================== */
+
+int main()
+{
+    /* ====================================================================== */
+    /* STEP 1: INITIALIZE WINDOW AND OPENGL CONTEXT                           */
+    /* ====================================================================== */
+    
+    // Initialize GLFW - window creation and input library
+    if(!glfwInit())
+    {
+        printf("Failed to initialize GLFW\n");
+        return -1;
+    }
+    
+    // Configure GLFW for OpenGL 3.3 Core Profile
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    
+    // Create window with specified dimensions and title
+    GLFWwindow* window = glfwCreateWindow(800, 600, "OpenGL Tutorial: Rotating Triangle", NULL, NULL);
+    if(window == NULL)
+    {
+        printf("Failed to create GLFW window\n");
+        glfwTerminate();
+        return -1;
+    }
+    glfwMakeContextCurrent(window);  // Make this window's context current
+    
+    // Initialize GLAD - loads all OpenGL function pointers
+    if(!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+    {
+        printf("Failed to initialize GLAD\n");
+        return -1;
+    }
+    
+    // Set up viewport and resize callback
+    glViewport(0, 0, 800, 600);  // Define drawing area within window
+    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+    
+    /* ====================================================================== */
+    /* STEP 2: DEFINE GEOMETRY DATA                                           */
+    /* ====================================================================== */
+    
+    /**
+     * Vertex Data Structure:
+     * - Each vertex has position (x,y,z) and color (r,g,b)
+     * - Interleaved format: [position, color, position, color...]
+     * - Stride: 6 floats between consecutive position attributes
+     */
+    float vertices[] = {
+        // positions          // colors
+        -0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f,  // left vertex - red
+         0.5f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f,  // right vertex - green  
+         0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f   // top vertex - blue
+    };
+    
+    /* ====================================================================== */
+    /* STEP 3: SET UP VERTEX BUFFERS AND ATTRIBUTES                           */
+    /* ====================================================================== */
+    
+    // Generate Vertex Array Object and Vertex Buffer Object
+    unsigned int VBO, VAO;
+    glGenVertexArrays(1, &VAO);  // Create VAO to store vertex attribute configuration
+    glGenBuffers(1, &VBO);       // Create VBO to store vertex data on GPU
+    
+    // Configure the VAO (Vertex Array Object)
+    glBindVertexArray(VAO);      // Bind VAO - all subsequent vertex operations affect this VAO
+    
+    // Configure the VBO (Vertex Buffer Object)
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);                     // Bind VBO as current vertex buffer
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);  // Copy data to GPU
+    
+    // Set up vertex attribute pointers - tell OpenGL how to interpret vertex data
+    
+    // Position attribute (attribute location 0)
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);  // Enable vertex attribute at location 0
+    
+    // Color attribute (attribute location 1)  
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
+    glEnableVertexAttribArray(1);  // Enable vertex attribute at location 1
+    
+    /* ====================================================================== */
+    /* STEP 4: CREATE SHADER PROGRAM                                          */
+    /* ====================================================================== */
+    
+    unsigned int shaderProgram = createShaderProgram(vertexShaderSource, fragmentShaderSource);
+    
+    /* ====================================================================== */
+    /* STEP 5: MAIN RENDER LOOP                                               */
+    /* ====================================================================== */
+    
+    while(!glfwWindowShouldClose(window))
+    {
+        // --- STEP 5.1: PROCESS INPUT ---
+        processInput(window);
+        
+        // --- STEP 5.2: CLEAR SCREEN ---
+        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);  // Set clear color (dark blue-green)
+        glClear(GL_COLOR_BUFFER_BIT);           // Clear color buffer
+        
+        // --- STEP 5.3: CALCULATE TRANSFORMATIONS ---
+        float time = glfwGetTime();              // Get time since program start
+        float rotationSpeed = 0.5f;              // Control rotation speed (radians/second)
+        float angle = fmod(time * rotationSpeed, 2 * 3.14159f);  // Calculate current angle
+        
+        // Create 2D rotation matrix (rotates around Z-axis)
+        float c = cos(angle);
+        float s = sin(angle);
+        float rotationMatrix[] = {
+            c, -s, 0.0f, 0.0f,  // First column
+            s,  c, 0.0f, 0.0f,  // Second column  
+            0.0f, 0.0f, 1.0f, 0.0f,  // Third column
+            0.0f, 0.0f, 0.0f, 1.0f   // Fourth column
+        };
+        
+        // --- STEP 5.4: RENDER THE TRIANGLE ---
+        glUseProgram(shaderProgram);                    // Activate shader program
+        
+        // Upload rotation matrix to shader
+        int matrixLocation = glGetUniformLocation(shaderProgram, "rotationMatrix");
+        glUniformMatrix4fv(matrixLocation, 1, GL_FALSE, rotationMatrix);
+        
+        glBindVertexArray(VAO);                        // Bind VAO (contains all vertex config)
+        glDrawArrays(GL_TRIANGLES, 0, 3);              // Draw triangle using first 3 vertices
+        
+        // --- STEP 5.5: FINALIZE FRAME ---
+        glfwSwapBuffers(window);  // Swap front and back buffers (double buffering)
+        glfwPollEvents();         // Check for events (input, window changes)
+    }
+    
+    /* ====================================================================== */
+    /* STEP 6: CLEANUP - FREE RESOURCES                                       */
+    /* ====================================================================== */
+    
+    glDeleteVertexArrays(1, &VAO);
+    glDeleteBuffers(1, &VBO);
+    glDeleteProgram(shaderProgram);
+    
+    glfwTerminate();  // Clean up GLFW
+    return 0;
+}
+
+/*
+## Key Learning Points Organised by Step:
+
+### **Step 1: Initialisation**
+- **GLFW**: Creates a window and handles OS-specific context creation
+- **GLAD**: Loads OpenGL function pointers (required for modern OpenGL)
+- **Context**: The OpenGL environment tied to a specific window
+
+### **Step 2: Geometry Definition**
+- **Vertex Data**: Raw geometric data defining shapes
+- **Interleaved Attributes**: Positions and colours stored together for cache efficiency
+- **Normalised Coordinates**: OpenGL uses the -1.0 to 1.0 coordinate system by default
+
+### **Step 3: Buffer Management**
+- **VAO (Vertex Array Object)**: Remembers vertex attribute configurations
+- **VBO (Vertex Buffer Object)**: Stores vertex data in GPU memory
+- **Vertex Attributes**: Tell OpenGL how to interpret the buffer data structure
+
+### **Step 4: Shader Program**
+- **Vertex Shader**: Transforms vertices and passes data to the fragment shader
+- **Fragment Shader**: Determines final pixel colors
+- **Shader Linking**: Combines shaders into an executable GPU program
+
+### **Step 5: Render Loop**
+1. **Input Processing**: Handle user input
+2. **Clear Screen**: Prepare for new frame
+3. **Transformations**: Calculate animations and camera movements
+4. **Drawing**: Execute shaders and render geometry
+5. **Buffer Swap**: Display the completed frame
+
+This organised structure shows how all the OpenGL concepts fit together in a
+logical pipeline from initialisation to rendering!
+*/
 ```
 
 ---
