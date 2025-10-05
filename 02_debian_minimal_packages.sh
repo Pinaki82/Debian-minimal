@@ -1186,6 +1186,16 @@ yes | sudo apt install libopenblas-dev && \
 # yes | sudo apt install libglfw3-dev && \
 # yes | sudo apt install libglm-dev && \
 # yes | sudo apt install libglm-doc && \
+# yes | libgl1-mesa-dev && \
+
+## Related:
+## X11:
+
+# yes | libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev && \
+
+## FFMPEG, AVUtils, & AVCodec:
+
+# yes | libavformat-dev libavcodec-dev libavutil-dev libswscale-dev && \
 
 # Some useful libraries
 
