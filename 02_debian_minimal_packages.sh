@@ -1377,6 +1377,8 @@ yes | sudo apt install imagemagick && \
 yes | sudo apt install graphicsmagick-imagemagick-compat && \
 yes | sudo apt install ocrmypdf && \
 # https://github.com/ocrmypdf/OCRmyPDF?tab=readme-ov-file#feature-demo
+# Add an OCR layer and convert to PDF/A
+# ocrmypdf input.pdf output.pdf
 yes | sudo apt-get install gnome-common && \
 # https://www.openpaper.work/en/
 yes | sudo apt install paperwork-gtk paperwork-gtk-l10n-en paperwork-shell && \
