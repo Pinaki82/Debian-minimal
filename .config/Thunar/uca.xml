@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ~/.config/Thunar/uca.xml -->
+<!--
+  DDG Assist:
+  Yes, you can back up your XFCE custom actions by saving the file
+  located at `~/.config/Thunar/uca.xml`.
+  This file contains all your custom actions, and you can copy it
+  to another machine or keep it as a backup.
+-->
+
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<submenu></submenu>
+	<unique-id>1688190787561796-1</unique-id>
+	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<description>Example for a custom action</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>kitty</icon>
+	<name>kitty Here</name>
+	<submenu></submenu>
+	<unique-id>1688286781209593-3</unique-id>
+	<command>kitty --directory %f</command>
+	<description>kitty Terminal in this Directory Tree</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Sakura TE</name>
+	<submenu></submenu>
+	<unique-id>1688287000921701-4</unique-id>
+	<command>sakura %f</command>
+	<description>Open Sakura Terminal Emulator Here</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>GNOME Terminal</name>
+	<submenu></submenu>
+	<unique-id>1689141619434787-1</unique-id>
+	<command>gnome-terminal %f</command>
+	<description></description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Ghostty</name>
+	<submenu></submenu>
+	<unique-id>1736575557641979-1</unique-id>
+	<command>ghostty</command>
+	<description>Ghostty Terminal in this Directory Tree</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>org.wezfurlong.wezterm</icon>
+	<name>Wezterm</name>
+	<submenu></submenu>
+	<unique-id>1743147866043374-1</unique-id>
+	<command>wezterm start --cwd %f</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>git</icon>
+	<name>GITK</name>
+	<submenu></submenu>
+	<unique-id>1688287479317574-5</unique-id>
+	<command>gitk %f</command>
+	<description>GITK</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>giggle</icon>
+	<name>Giggle</name>
+	<submenu></submenu>
+	<unique-id>1688453949036261-1</unique-id>
+	<command>giggle %f</command>
+	<description>GUI GIT Client</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>camera-video</icon>
+	<name>Mediainfo-GUI</name>
+	<submenu></submenu>
+	<unique-id>1717334545721601-1</unique-id>
+	<command>mediainfo-gui %f</command>
+	<description>Mediainfo-GUI</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<video-files/>
+</action>
+<action>
+	<icon>poi-bus-stop</icon>
+	<name>secure_remove</name>
+	<submenu></submenu>
+	<unique-id>1732375419131092-2</unique-id>
+	<command>zenity --question;if [ $? = 0 ];then srm -rvf %F;fi</command>
+	<description>Send data to China. :D</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>network-server-database</icon>
+	<name>Strip Metadata</name>
+	<submenu></submenu>
+	<unique-id>1734277585588620-1</unique-id>
+	<command>exiftool -all= %F</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>application-pdf</icon>
+	<name>MAT2: Clean Metadata</name>
+	<submenu></submenu>
+	<unique-id>1734279129080320-2</unique-id>
+	<command>mat2 %F</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>emblem-symbolic-link</icon>
+	<name>Create symlink</name>
+	<submenu></submenu>
+	<unique-id>1732530234853525-1</unique-id>
+	<command>ln -Ts %f %n&quot; (symlink)&quot;</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>libreoffice-main</icon>
+	<name>Convert to ODT</name>
+	<submenu></submenu>
+	<unique-id>1732530988604401-6</unique-id>
+	<command>unoconv -f odt %F</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*.doc;*.docx</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>application-pdf</icon>
+	<name>Export to PDF</name>
+	<submenu></submenu>
+	<unique-id>1732531208321951-7</unique-id>
+	<command>unoconv -f pdf %F</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*.doc;*.docx;*.odt;*.odp;*.pps;*.ppt;*.xls;*.xlsx;*.ods;*.pptx</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>gnome-subtitles</icon>
+	<name>Download subtitles</name>
+	<submenu></submenu>
+	<unique-id>1732531458606279-8</unique-id>
+	<command>~/.local/bin/OpenSubtitlesDownload.py --gui=gnome %F</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<video-files/>
+</action>
+<action>
+	<icon>ms-word</icon>
+	<name>Convert to DOCX</name>
+	<submenu></submenu>
+	<unique-id>1732534130173687-10</unique-id>
+	<command>unoconv -f docx %F</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*.odt;*.odp;*.ods</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>multimedia-photo-viewer</icon>
+	<name>Convert to JPEG</name>
+	<submenu></submenu>
+	<unique-id>1734011753285227-1</unique-id>
+	<command>convert %f -quality 75 %f.jpg</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*.png;*.webp</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>emblem-videos</icon>
+	<name>ProRes to MP4 8 bits</name>
+	<submenu></submenu>
+	<unique-id>1734971659625361-1</unique-id>
+	<command>xfce4-terminal -e &quot;bash -c &apos;ffmpeg -i %f -c:v mjpeg -q:v 0 -crf 0 -preset ultrafast -an %f-2.mov &amp;&amp; ffmpeg -i %f-2.mov -c:v libx264 -q:v 0 -preset fast -crf 16 -aspect 16:9 -an %f-3.mov &amp;&amp; trash %f-2.mov; read&apos;&quot;</command>
+	<description>ProRes to MP4 8 bits</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<video-files/>
+</action>
+<action>
+	<icon>emblem-videos</icon>
+	<name>ProRes to 10-bit 4:2:2 x265 MKV</name>
+	<submenu></submenu>
+	<unique-id>1760117265304367-1</unique-id>
+	<command>xfce4-terminal -e &quot;bash -c &apos;ffmpeg -i %f -c:v dnxhd -filter:v &quot;format=yuv422p10le&quot; -profile:v dnxhr_hqx -b:v 746M -an %f-2.mov &amp;&amp; ffmpeg -i %f-2.mov -pix_fmt yuv422p10le -c:v libx265 -crf 28 -x265-params profile=main10 %f-3.mkv &amp;&amp; trash %f-2.mov; read&apos;&quot;</command>
+	<description>ProRes to 10-bit 4:2:2 x265 MKV</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<video-files/>
+</action>
+<action>
+	<icon>info</icon>
+	<name>Open with Exiftool</name>
+	<submenu></submenu>
+	<unique-id>1734012306950737-2</unique-id>
+	<command>xfce4-terminal --hold -e &quot;exiftool %f&quot;</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>camera-video</icon>
+	<name>MediaInfo-CLI</name>
+	<submenu></submenu>
+	<unique-id>1734013110356745-3</unique-id>
+	<command>xfce4-terminal --hold -e &quot;mediainfo %f&quot;</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<video-files/>
+</action>
+<action>
+	<icon>clock</icon>
+	<name>Duration of all video files</name>
+	<submenu></submenu>
+	<unique-id>1734014795320958-5</unique-id>
+	<command>xfce4-terminal -e &quot;bash -c &apos;$HOME/shell/ffmpeg_scripts/linux/duration-total.sh&apos;;read&quot;</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>clock</icon>
+	<name>Duration of selected video files</name>
+	<submenu></submenu>
+	<unique-id>1734267432784571-1</unique-id>
+	<command>$HOME/.local/share/applications/thunar-video-duration-action.sh %F</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*.mp4;*.avi;*.mkv;*.mov;*.wmv;*.webm;*.MP4;*.AVI;*.MKV;*.MOV;*.WMV;*.WEBM;*.mxf</patterns>
+	<video-files/>
+</action>
+<action>
+	<icon>org.xfce.terminalemulator</icon>
+	<name>Calculate MD5 Checksum</name>
+	<submenu></submenu>
+	<unique-id>1751121111129604-1</unique-id>
+	<command>xfce4-terminal --hold -e &quot;md5sum %f&quot;</command>
+	<description>Calculate MD5 Checksum</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>document-edit-sign</icon>
+	<name>Create MD5 Report</name>
+	<submenu></submenu>
+	<unique-id>1751122085405998-2</unique-id>
+	<command>xfce4-terminal --hold -e &apos;bash -c &quot;md5sum * &gt; checksums.md5; echo; echo Creates a checksums.md5 report for all files in this directory. Report saved to checksums.md5; echo; echo Close the terminal. Usually, SHIFT+CTRL+q; read&quot;&apos;</command>
+	<description>Creates a checksums.md5 report for all files in this directory.</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>org.xfce.terminal</icon>
+	<name>Calculate SHA256 Checksum</name>
+	<submenu></submenu>
+	<unique-id>1751725518420178-1</unique-id>
+	<command>xfce4-terminal --hold -e &quot;sha256sum %f&quot;</command>
+	<description>Calculate SHA256 Checksum</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>document-edit-sign</icon>
+	<name>Create SHA256 Report</name>
+	<submenu></submenu>
+	<unique-id>1751725780503400-2</unique-id>
+	<command>xfce4-terminal --hold -e &apos;bash -c &quot;sha256sum * &gt; checksums.sha256; echo; echo Creates a checksums.sha256 report for all files in this directory. Report saved to checksums.sha256; echo; echo Press ENTER to close the terminal; read&quot;&apos;</command>
+	<description>Creates a checksums.sha256 report for all files in this directory.</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>document-edit-sign</icon>
+	<name>Check md5 checksums</name>
+	<submenu></submenu>
+	<unique-id>1751905382198991-1</unique-id>
+	<command>xfce4-terminal --hold -e &quot;md5sum --check %f&quot;</command>
+	<description>Examine a file that includes md5 checksums paired with their respective filenames and validate the report. Right-click on such a file and select this option.</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>document-edit-sign</icon>
+	<name>Check SHA256 checksums</name>
+	<submenu></submenu>
+	<unique-id>1751726762396223-3</unique-id>
+	<command>xfce4-terminal --hold -e &quot;sha256sum --check %f&quot;</command>
+	<description>Examine a file that includes SHA256 checksums paired with their respective filenames and validate the report.</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>printer</icon>
+	<name>Print File</name>
+	<submenu></submenu>
+	<unique-id>1758967119090506-1</unique-id>
+	<command>xfprint4 %f</command>
+	<description>Print the selected file using xfprint</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+</actions>
