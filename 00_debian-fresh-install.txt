@@ -678,6 +678,13 @@ File pattern: *
 Appears if selection contains: Video files
 Icon: application-video
 
+Name: ProRes to 10-bit 4:2:2 x265 MKV
+# https://stackoverflow.com/questions/62642013/how-to-encode-a-video-file-to-x265-10bit-main10-profile-in-ffmpeg
+Command: xfce4-terminal -e "bash -c 'ffmpeg -i %f -c:v dnxhd -filter:v "format=yuv422p10le" -profile:v dnxhr_hqx -b:v 746M -an %f-2.mov && ffmpeg -i %f-2.mov -pix_fmt yuv422p10le -c:v libx265 -crf 28 -x265-params profile=main10 %f-3.mkv && trash %f-2.mov; read'"
+File pattern: *
+Appears if selection contains: Video files
+Icon: emblem-videos
+
 Name: Open with Exiftool
 Command: xfce4-terminal --hold -e "exiftool %f"
 (Old: xfce4-terminal -e "bash -c 'exiftool %f; read'" or, xfce4-terminal --hold -e "bash -c 'exiftool %f; read'")
