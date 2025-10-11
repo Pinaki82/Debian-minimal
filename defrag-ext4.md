@@ -1,3 +1,5 @@
+## 😄 :D 😝
+
 # Do Ext4 (journaling file system) drives need defragmentation?
 
 ---
