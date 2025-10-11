@@ -6,6 +6,8 @@
 
 **TL;DR:** _NO_, **unless** there's **less than 20% space** left. In such cases, fragmentation levels may sometimes exceed 20%.
 
+**NOTE:** Also, SSDs (3.5" SSDs, NVMe drives, Pen Drives, etc.) never require defragmentation. Attempting to defragment them can actually shorten their lifespan. Please avoid doing that.
+
 ---
 
 DDG Search: do ext4 drives need defragmentation
