@@ -1,0 +1,9 @@
+Check Available Disk Space:
+
+df -h | grep '/dev/sd' 
+
+df -H /dev/sdXN
+X -> a,b,c
+N -> 1,2
+
+https://www.geeksforgeeks.org/linux-unix/checking-disk-space-in-linux/
