@@ -1,0 +1,6 @@
+Delete/Remove pages from a PDF file:
+
+https://unix.stackexchange.com/questions/580305/how-to-remove-pages-from-a-pdf-while-leaving-the-document-otherwise-unchanged#703503
+
+Range: Page 2 to the rest (here, 4).
+pdfjam 'infile.pdf' 2-4 -o 'outfile.pdf'
