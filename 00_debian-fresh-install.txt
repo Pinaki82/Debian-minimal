@@ -175,6 +175,11 @@ Debian-XFCE Net-Install ISO didn't install any calculator app.
 # https://qalculate.github.io/index.html
 flatpak install flathub io.github.Qalculate
 
+# Install hdparm (to run commands like: sudo hdparm -I /dev/sdX | grep "Security"):
+# https://installati.one/install-hdparm-debian-11/
+sudo apt -y install hdparm
+
+
 Install GVim+Vim:
 
 apt search vim-gtk

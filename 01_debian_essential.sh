@@ -16,6 +16,10 @@ yes | sudo apt install -f && \
 # Install the common properties package (will be needed later):
 yes | sudo apt install software-properties-common && \
 # ------------------------------------------------------------------------------
+# Install hdparm (to run commands like: sudo hdparm -I /dev/sdX | grep "Security"):
+# https://installati.one/install-hdparm-debian-11/
+yes | sudo apt install hdparm && \
+# ------------------------------------------------------------------------------
 # Install the most essential core build tool:
 yes | sudo apt install build-essential dkms module-assistant linux-headers-$(uname -r) && \
 yes | sudo apt install curl git git-lfs gitk git-gui patch make cmake diffutils git-extras git-flow diffstat bash fish && \
