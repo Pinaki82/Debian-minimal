@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Paraphrasing Tool - QuillBot AI
+Exec=/opt/microsoft/msedge/microsoft-edge --profile-directory=Default --app-id=cjmaccfnbcnhcbningcmcjmbbgkhjbjg --app-url=https://quillbot.com/
+Icon=msedge-cjmaccfnbcnhcbningcmcjmbbgkhjbjg-Default
+StartupWMClass=crx__cjmaccfnbcnhcbningcmcjmbbgkhjbjg

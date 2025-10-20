@@ -2,7 +2,7 @@
 
 [Desktop Entry]
 Type=Application
-Name=Grammarly App
+Name=Surf Grammarly Desktop App
 Comment=Responsible AI that ensures your writing and reputation shine
 Icon=icon-grammarly
 Exec=surf https://app.grammarly.com/

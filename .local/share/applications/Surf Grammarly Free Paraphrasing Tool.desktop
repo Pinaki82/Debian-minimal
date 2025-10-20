@@ -3,7 +3,7 @@
 [Desktop Entry]
 Type=Application
 Name=Surf Grammarly Free Paraphrasing Tool. Quickly reword sentences for essays, emails, articles, and more.
-Comment=Free Grammar Checker. Write with confidence using Grammarly’s AI-powered grammar checker.
+Comment=Quickly reword sentences for essays, emails, articles, and more.
 Icon=icon-grammarly
 Exec=surf https://www.grammarly.com/paraphrasing-tool
 Terminal=false

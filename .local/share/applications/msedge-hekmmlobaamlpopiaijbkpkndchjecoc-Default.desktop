@@ -5,9 +5,6 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=A Tiny Grammarly Hack
-Exec=/opt/microsoft/msedge-dev/microsoft-edge-dev --profile-directory=Default --app-id=hekmmlobaamlpopiaijbkpkndchjecoc --app-url=https://eli4d.github.io/tiny-grammarly-hack.html
+Exec=/opt/microsoft/msedge/microsoft-edge --profile-directory=Default --app-id=hekmmlobaamlpopiaijbkpkndchjecoc --app-url=https://eli4d.github.io/tiny-grammarly-hack.html
 Icon=icon-grammarly
 StartupWMClass=crx__hekmmlobaamlpopiaijbkpkndchjecoc
-Comment=
-Path=
-StartupNotify=false

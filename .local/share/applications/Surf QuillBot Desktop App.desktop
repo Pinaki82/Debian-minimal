@@ -2,7 +2,7 @@
 
 [Desktop Entry]
 Type=Application
-Name=QuillBot App
+Name=Surf QuillBot Desktop App
 Comment=Your complete writing solution
 Icon=quillbot
 Exec=surf https://quillbot.com/
