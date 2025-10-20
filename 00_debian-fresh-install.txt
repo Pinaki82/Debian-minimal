@@ -1560,14 +1560,14 @@ All flatpack and snap apps:
 flatpak list --columns=application --app
 
 Application ID
-app.zen_browser.zen
+X                              app.zen_browser.zen [Nice application, but it's no longer being utilised.]
 com.github.tchx84.Flatseal
 com.github.zocker_160.SyncThingy
 com.rafaelmardojai.Blanket
 com.wings3d.WINGS
 fr.handbrake.ghb
 io.github.Qalculate
-io.github.jliljebl.Flowblade
+X                               io.github.jliljebl.Flowblade [Shotcut is the most commonly used video editing application on my computer, while Flowblade remains unused.]
 org.kde.kdenlive
 org.libreoffice.LibreOffice
 org.nomacs.ImageLounge
