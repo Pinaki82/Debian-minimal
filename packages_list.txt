@@ -1887,7 +1887,6 @@ mesa-utils-bin:amd64
 mesa-va-drivers:amd64
 mesa-vdpau-drivers:amd64
 mesa-vulkan-drivers:amd64
-microsoft-edge-dev
 mime-support
 mkdocs
 mobile-broadband-provider-info
