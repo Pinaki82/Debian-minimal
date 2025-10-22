@@ -1,0 +1,16 @@
+\usepackage{fontspec}
+\usepackage{emoji}
+
+% Use Noto Color Emoji for reliable, complete emoji coverage
+\setemojifont{Noto Color Emoji}
+
+\setmainfont{DejaVu Serif}
+\setmonofont{DejaVu Sans Mono}
+\setsansfont{DejaVu Sans}
+
+% Better chapter breaks
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+
+\newcommand{\chapterbreak}{\clearpage}
