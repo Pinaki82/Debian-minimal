@@ -6,6 +6,14 @@
 #       Please place the Markdown file you want to convert into this folder.
 #       Run ./pdf_from_markdown_deepseek.sh input.md output.pdf
 
+# Required: sudo apt -y install texlive-luatex
+# Install Noto Color Emoji font
+# sudo apt update
+# sudo apt install fonts-noto-color-emoji
+# sudo apt install fonts-symbola
+# Verify the font is available
+# fc-list | grep -i noto.*emoji
+
 pandoc "$1" \
     -f markdown \
     --include-in-header chapter_break.tex \
