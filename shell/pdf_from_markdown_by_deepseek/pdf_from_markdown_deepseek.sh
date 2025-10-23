@@ -25,6 +25,7 @@ pandoc "$1" \
     -V mainfont="DejaVu Serif" \
     -V monofont="DejaVu Sans Mono" \
     -V sansfont="DejaVu Sans" \
+    -V fontsize=12pt \
     --toc-depth=5 \
     --pdf-engine=lualatex \
     --highlight-style=tango \
