@@ -15,7 +15,7 @@
 # fc-list | grep -i noto.*emoji
 
 pandoc "$1" \
-    -f markdown \
+    -f markdown+autolink_bare_uris \
     --include-in-header chapter_break.tex \
     -H bullet_style.tex \
     -H inline_code.tex \

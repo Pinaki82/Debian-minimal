@@ -37,3 +37,7 @@ def hello():
     print("Hello World! 👋")
     return True
 ```
+
+Link 1: [DeepSeek - Into the Unknown](https://chat.deepseek.com/)
+
+Link 2: https://chat.deepseek.com/sign_in

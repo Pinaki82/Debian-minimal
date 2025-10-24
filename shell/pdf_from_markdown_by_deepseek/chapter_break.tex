@@ -1,5 +1,7 @@
 \usepackage{fontspec}
 \usepackage{emoji}
+\usepackage{hyperref}
+\usepackage{xurl} % Better URL line breaking
 
 % Use Noto Color Emoji for reliable, complete emoji coverage
 \setemojifont{Noto Color Emoji}
@@ -13,4 +15,27 @@
 \titleformat{\chapter}[display]
   {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
 
+% Page break before each chapter
 \newcommand{\chapterbreak}{\clearpage}
+
+% Hyperref configuration for better link styling
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    citecolor=blue,
+    pdftitle={Document},
+    pdfauthor={Author},
+    bookmarksopen=true
+}
+
+% Make bare URLs clickable
+\makeatletter
+\def\@url@urlstyle{\ttfamily\color{blue}}
+\makeatother
+
+% Make URLs in text clickable
+\usepackage{url}
+\urlstyle{tt}
+\def\UrlFont{\ttfamily\color{blue}}
