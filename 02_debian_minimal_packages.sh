@@ -1383,6 +1383,9 @@ yes | sudo apt-get install gnome-common && \
 # https://www.openpaper.work/en/
 yes | sudo apt install paperwork-gtk paperwork-gtk-l10n-en paperwork-shell && \
 # Usage: https://www.openpaper.work/en/download/linux#debian
+# gscan2pdf and OCRFeeder
+yes | sudo apt install gscan2pdf && \
+yes | sudo apt install ocrfeeder && \
 
 
 
