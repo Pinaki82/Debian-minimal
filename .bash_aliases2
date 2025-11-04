@@ -44,6 +44,9 @@ alias myip='curl ipinfo.io/ip'
 alias trim="sh ~/shell/ssd_trim.sh"
 # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
+# Free Space on HDDs
+alias freespace="df -h | grep '/dev/sd'"
+
 # Stop 'appimagelaunche' background service.
 alias appimg='pkill appimagelaunche'
 # # # # # # # # # # # # # # # # # # # # # # # # # # #
