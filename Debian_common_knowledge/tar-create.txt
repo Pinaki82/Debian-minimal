@@ -1,0 +1,26 @@
+tar -cf archive.tar folder_name
+tar -cf archive.home.appu.xubuntu.tar /home/appu
+tar -cf archive.home.appu.debian12.tar /home/appu
+tar -czvf name-of-archive.tar.gz /path/to/directory-or-file
+
+extract:
+tar -xf archive.tar
+tar -xzvf archive.tar.gz
+
+
+https://wiki.archlinux.org/title/Lrzip
+This will produce an LZMA compressed archive foo.tar.lrz from a directory named foo:
+lrztar foo
+This will produce an LZMA compressed archive bar.lrz from a file named bar:
+lrzip bar
+For extreme compression, add the -z switch which enables ZPAQ but takes notably longer than LZMA:
+lrztar -z foo
+For extremely fast compression and decompression, use the -l switch for LZO:
+lrzip -l bar
+By default, lrzip can use up to your available ram size to remember the file block history. If the file you compress is bigger than that, add the -U switch to enable on disk mapping. Note that it will be considerably slower but will handle file of any size:
+lrzip -U bar
+Decompression
+To completely extract an archived directory:
+lrzuntar foo.tar.lrz
+To decompress bar.lrz to bar:
+lrunzip bar.lrz
