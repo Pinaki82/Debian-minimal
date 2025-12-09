@@ -359,6 +359,9 @@ yes | sudo apt install texlive-fonts-extra && \
 yes | sudo apt install fonts-croscore && \
 sudo fc-cache && \
 #
+# Charmap
+yes | sudo apt install charmap.app && \
+#
 # Themes and Icons:
 # Search the web version of the Debian repository for the package.
 # search the apt repo from the command line.
