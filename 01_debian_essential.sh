@@ -362,6 +362,11 @@ sudo fc-cache && \
 yes | sudo apt install fonts-courier-prime && \
 sudo fc-cache && \
 #
+# https://fontlibrary.org/en/font/gnutypewriter
+# https://bneijt.nl/pr/ubuntu-fonts/fonts-gnutypewriter
+yes | sudo apt install "fonts-gnutypewriter" && \
+sudo fc-cache && \
+#
 # Charmap
 yes | sudo apt install charmap.app && \
 #
