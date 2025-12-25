@@ -2,7 +2,7 @@
   MS-Edge Copilot. 2025.12.2025.
   File: compress_jpgs.c
   gcc -Wall -Wextra -pedantic -o2 compress_jpgs.c -o compress_jpgs -s
-  install -m 755 ~/.local/bin
+  install -m 755 compress_jpgs ~/.local/bin/compress_jpgs
   compress_jpgs
 */
 
