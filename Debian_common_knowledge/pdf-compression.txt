@@ -1,0 +1,22 @@
+https://thelinuxcode.com/compress-pdf-file-in-linux-for-free/
+
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/setting -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
+
+Setting	  Resolution	Description	                            Use Case
+/screen	  72 dpi	    Extreme compression, lowest quality	    Web hosting, email attachments
+/ebook	  150 dpi	    Medium compression, good quality	      eBook distribution, reading on tablets
+/printer	300 dpi	    Moderate compression, printer quality	  Desktop printing situations
+/prepress	300+ dpi	  Light compression, highest quality	    Commercial printing or archiving
+
+https://mangohost.net/blog/reduce-pdf-file-size-in-linux/
+
+# Custom compression with specific DPI and JPEG quality
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 \
+   -dDownsampleColorImages=true -dColorImageResolution=300 \
+   -dColorImageDownsampleType=/Bicubic -dColorImageFilter=/DCTEncode \
+   -dJPEGQ=80 -dDownsampleGrayImages=true -dGrayImageResolution=300 \
+   -dGrayImageDownsampleType=/Bicubic -dGrayImageFilter=/DCTEncode \
+   -dDownsampleMonoImages=true -dMonoImageResolution=300 \
+   -dMonoImageDownsampleType=/Bicubic -dAutoFilterColorImages=false \
+   -dAutoFilterGrayImages=false -dNOPAUSE -dQUIET -dBATCH \
+   -sOutputFile=custom_compressed.pdf input.pdf
