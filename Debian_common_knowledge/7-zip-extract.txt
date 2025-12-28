@@ -1,0 +1,52 @@
+Got it — you want to extract .7z files directly from the Linux command line.
+Here’s a quick, clear guide for you.
+
+1. Install p7zip (if not already installed)
+Most Linux distros don’t have it by default.
+
+# Debian/Ubuntu
+
+```bash
+sudo apt update && sudo apt install p7zip-full
+```
+
+# Fedora
+```bash
+sudo dnf install p7zip p7zip-plugins
+```
+
+# Arch
+```bash
+sudo pacman -S p7zip
+```
+
+2. Extract a .7z file to the current directory
+
+```bash
+7z x archive.7z
+```
+
+x = extract with full paths.
+
+
+3. Extract to a specific directory
+
+```bash
+7z x archive.7z -o/path/to/destination
+```
+
+(No space after -o)
+
+4. List contents without extracting
+
+```bash
+7z l archive.7z
+```
+
+💡 Tip: If you want to overwrite files without being prompted, add -y:
+
+```bash
+7z x archive.7z -y
+```
+
+If you’d like, I can also give you a one-liner that extracts all .7z files in a folder at once. Would you like me to prepare that?
