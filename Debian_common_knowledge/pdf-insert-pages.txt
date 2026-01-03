@@ -1,0 +1,51 @@
+# Insert pages into an existing PDF file
+
+MS-Edge Copilot:
+
+Got it — you want to insert pages into an existing PDF using the Linux command line.
+Here are three practical ways to do it:
+
+1. Using `pdftk` (simple and widely available)
+
+```bash
+pdftk original.pdf cat 1-180 newpages.pdf original.pdf cat 181-end output merged.pdf
+```
+
+- 1-180 → pages before insertion point
+
+- `newpages.pdf` → the PDF containing pages you want to insert
+
+- 181-end → remaining pages after insertion
+2. Using `qpdf` (lightweight and fast)
+
+```bash
+qpdf --empty --pages original.pdf 1-180 newpages.pdf original.pdf 181-z -- merged.pdf
+```
+
+`-z` automatically means “last page” in `qpdf`.
+
+---
+
+Worked.
+
+3. Using `pdfunite` (from `poppler-utils`)
+   First, split the original PDF:
+
+```bash
+pdftk original.pdf cat 1-180 output part1.pdf
+pdftk original.pdf cat 181-end output part2.pdf
+```
+
+Then merge:
+
+```bash
+pdfunite part1.pdf newpages.pdf part2.pdf merged.pdf
+```
+
+💡 Tip: If you don’t have these tools, you can install them:
+
+```bash
+sudo apt install pdftk qpdf poppler-utils
+```
+
+Do you want me to also show you a one-liner that inserts pages without creating temporary files?
