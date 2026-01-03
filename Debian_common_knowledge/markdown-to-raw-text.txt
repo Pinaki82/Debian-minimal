@@ -1,0 +1,63 @@
+# Markdown to Plain-Text (without formatting)
+
+## Strip all Markdown formatting and keep only the raw text
+
+MS-Edge Copilot:
+
+Got it — you want to strip all Markdown formatting and keep only the raw text on Linux.
+
+Here are three simple ways to do it:
+
+---
+
+Worked.
+
+1. Using `pandoc`
+
+```bash
+pandoc file.md -t plain -o file.txt
+```
+
+Converts Markdown to plain text cleanly.
+Preserves paragraph breaks but removes all formatting.
+
+---
+
+Didn't work.
+
+2. Using `sed` & `grep` (quick & dirty)
+
+```bash
+sed 's/[*_`#>\[\]()!-]//g' file.md > file.txt
+```
+
+Removes common Markdown symbols.
+Works for simple files, but may miss complex formatting.
+
+---
+
+Couldn't be installed.
+
+```
+pipx install md2txt
+Fatal error from pip prevented installation. Full pip output in file:
+    /home/USERNAME/.local/pipx/logs/cmd_2026-01-03_14.03.29_pip_errors.log
+
+Some possibly relevant errors from pip install:
+    ERROR: Could not find a version that satisfies the requirement md2txt (from versions: none)
+    ERROR: No matching distribution found for md2txt
+
+Error installing md2txt.
+```
+
+3. Using `md2txt` (Python tool)
+
+```bash
+pip install md2txt
+md2txt file.md > file.txt
+```
+
+Handles headings, links, and code blocks well.
+Good for automation in scripts.
+
+If you want, I can also give you a one-liner that strips Markdown formatting directly from `stdin` so you can pipe it into other commands. Would you like me to prepare that?
