@@ -10,6 +10,13 @@
 @reboot sudo systemctl restart ntpd
 @reboot sudo chronyc makestep
 
+# ------------------------------------------------------------------------------
+## If you have `tripwire`:
+# @reboot sudo /usr/sbin/tripwire --check
+# @reboot sudo /usr/sbin/tripwire --check | mail -s "Tripwire Report at Boot" appugupta007@gmail.com
+# ------------------------------------------------------------------------------
+
+
 # EDITOR=geany crontab -e
 
 @reboot sudo sh '/home/YOUR_USERNAME/.local/share/applications/temp_throttle.sh' 49
