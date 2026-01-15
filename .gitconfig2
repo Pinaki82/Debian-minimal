@@ -18,9 +18,23 @@
 	prompt = false
 	trustExitCode = true
 	keepBackup = false
+[difftool "meld"]
+    # https://stackoverflow.com/questions/34119866/setting-up-and-using-meld-as-your-git-difftool-and-mergetool#34119867
+    cmd = meld "$LOCAL" "$REMOTE"
+[merge]
+    tool = meld
+[mergetool "meld"]
+    # https://stackoverflow.com/questions/34119866/setting-up-and-using-meld-as-your-git-difftool-and-mergetool#34119867
+    # Choose one of these two lines (not both!) explained below.
+    # cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+    cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
+# https://kparal.wordpress.com/2020/12/16/show-a-side-by-side-git-diff-on-any-commit-in-tig-using-meld/
+# Use as: git difftool -d file.extension
 [mergetool]
 	prompt = false
 	trustExitCode = true
 	keepBackup = false
 [init]
 	defaultBranch = main
+[pull]
+	ff = true
