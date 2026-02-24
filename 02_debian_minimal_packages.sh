@@ -376,6 +376,13 @@ yes | sudo apt install color-picker && \
 
 yes | sudo apt install markdown && \
 
+# OpenAI/ChatGPT Codex CLI (NOTE: Non-free. Experimental in this install script. May be removed in the future.)
+# Pair with Codex in your terminal
+# Codex CLI is OpenAI’s coding agent that you can run locally from your terminal. It can read, change, and run code on your machine in the selected directory. It’s open source and built in Rust for speed and efficiency.
+# Codex is included with ChatGPT Plus, Pro, Business, Edu, and Enterprise plans. Learn more about what’s included.
+
+yes | sudo npm i -g @openai/codex && \
+
 # https://www.howtogeek.com/devops/how-to-create-qr-codes-from-the-linux-command-line/
 # https://linuxconfig.org/list-of-qr-code-generators-on-linux
 # qrencode -s 6 -l H -o "text.png" "This type of QR holds plain text. This text is shown to the user when they scan the QR code. No other action is automatically triggered."
