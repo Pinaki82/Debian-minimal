@@ -349,7 +349,9 @@ sudo chmod -R 755 /usr/share/themes/PRO-dark-XFCE-4.14
         PYTHON, PIP3, PIPX, CONDA (MINI), AND PYTORCH (CPU)
 ================================================================================
 sudo apt install python3-pip
-python -m pip install --upgrade pip
+# Don't issue the command: python -m pip install --upgrade pip
+pip install pip-autoremove
+#usage: pip-autoremove -y <package_name>
 sudo apt install pipx
 ================================================================================
 

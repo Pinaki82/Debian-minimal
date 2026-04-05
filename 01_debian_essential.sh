@@ -27,6 +27,52 @@ yes | sudo apt install llvm clang clangd clang-tidy clang-tools lld && \
 yes | sudo apt install libomp-dev && \
 yes | sudo apt install wget curl git git-lfs && \
 yes | sudo apt install python3-pip && \
+#
+#
+# ------------------------------------------------------------------------------
+# Uninstalling Packages and Dependencies with `pip`:
+# When you uninstall a package using `pip`, it does not automatically remove its dependencies. To uninstall a package along with its dependencies, you can use the `pip-autoremove` tool.
+#
+# Example
+#
+# First, install `pip-autoremove`:
+#
+# ```
+# pip install pip-autoremove
+# ```
+#
+# Then, use it to uninstall a package and its dependencies:
+#
+# ```
+# pip-autoremove <package_name> -y
+# ```
+#
+# Important Considerations:
+#
+# Manual Dependency Management:
+#
+# If `pip-autoremove` is not working or you prefer manual management, follow these steps:
+#
+# List Installed Packages: `pip list`
+#
+# Check Package Dependencies: `pip show <package_name>`
+#
+# Remove Unused Dependencies: `pip uninstall <dependency_package_name>`
+#
+# Using Virtual Environments:
+#
+# To avoid dependency conflicts, use virtual environments:
+#
+# Create a Virtual Environment: `python -m venv myenv`
+#
+# Activate the Virtual Environment: `myenv\Scripts\activate` # On Windows, `source myenv/bin/activate` # On Unix or MacOS.
+#
+# Install Packages within the Virtual Environment: `pip install <package_name>`
+#
+# By following these steps, you can effectively manage and uninstall packages along with their dependencies.
+# ------------------------------------------------------------------------------
+#
+#
 #python -m pip install --upgrade pip && \
 # https://stackoverflow.com/questions/75608323/how-do-i-solve-error-externally-managed-environment-everytime-i-use-pip3
 yes | sudo apt install pipx && \
