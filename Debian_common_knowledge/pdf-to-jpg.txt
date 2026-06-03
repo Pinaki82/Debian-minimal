@@ -1,3 +1,14 @@
 https://stackoverflow.com/questions/43085889/how-to-convert-a-pdf-into-jpg-with-command-line-in-linux#61700520
 
 pdftoppm -jpeg -r 300 input.pdf output
+
+To use pdftoppm and specify passwords, you can use the following options:
+
+-opw password: Specify the owner password for the PDF file to bypass security restrictions. 
+
+-upw password: Specify the user password for the PDF file. 
+
+These options allow you to convert PDF files to PPM format while bypassing security measures.
+
+Example:
+pdftoppm -upw password -jpeg -r 300 input.pdf output
