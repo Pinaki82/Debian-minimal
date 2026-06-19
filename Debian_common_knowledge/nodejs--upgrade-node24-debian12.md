@@ -1,5 +1,7 @@
 # Upgrading Node.js on Debian 12 (Bookworm - now outdated) using NVM.
 
+> * Assisted by Google Search AI.
+
 Debian 12's official repositories restrict Node.js to older legacy versions (such as v18), which lack modern web application programming interfaces like the Web Crypto API. This documentation covers the exact environment cleanup and installation steps required to successfully deploy the latest Long-Term Support (LTS) release of Node.js using Node Version Manager (NVM).
 
 ---
