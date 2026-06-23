@@ -104,131 +104,41 @@ echo "export PATH="'"$HOME/.local/bin/:$PATH"'"" >> ~/.bashrc
 echo "export PATH="'"$HOME/.local/bin/:$PATH"'"" >> ~/.bash_aliases
 
 
+# ======================INSTALL OH-MY-BASH======================================
+# ------------------------------------------------------------------------------
+# OH-MY-BASH:
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+# ------------------------------------------------------------------------------
+# Bash Language Server
+# https://github.com/bash-lsp/bash-language-server.git
+yes | sudo npm i -g bash-language-server && \
+# bash-language-server --help
+# ------------------------------------------------------------------------------
+# Fish-shell-like autocompletion in Bash-shell
+# Ecosia: fish shell like autocomplete in bash
+# https://unix.stackexchange.com/questions/109366/does-bash-have-similar-features-such-as-fishs-autosuggestions-and-highlighting
+# https://github.com/akinomyoga/ble.sh
+# https://github.com/dvorka/hstr
 
 
+yes | sudo apt install trash-cli && \
 
-================================================================================
-===================================== IMPORTANT ================================
-Install basic packages:
-This install script contains the most essential
-packages that you'll end up installing anyway.
-
-Run the BASH Script '01_debian_essential.sh' first.
-
-chmod +x 01_debian_essential.sh
-./01_debian_essential.sh
-
-================================================================================
-
-Disable Swap if you have SSDs and more than 3GB of RAM:
-https://www.tecmint.com/disable-swap-partition-in-centos-ubuntu/
-
-
-Install the most essential core build tool:
-
-sudo apt install build-essential dkms module-assistant linux-headers-$(uname -r)
-
-Install the common properties package (will be needed later):
-
-yes | sudo apt install software-properties-common
-
-
-Install 'c': Use C as a shell scripting language:
-https://github.com/ryanmjacobs/c
-
-cd ~/
-sudo apt install build-essential trash-cli
-wget https://raw.githubusercontent.com/ryanmjacobs/c/master/c
-sudo install -m 755 c /usr/bin/c
-trash c
-
-
-Enable Backports (not recommended):
-https://backports.debian.org/Instructions/
-https://linuxconfig.org/how-to-install-and-use-debian-backports
-
-sudo nano/vim/mousepad /etc/apt/sources.list
-
-Add these two lines:
-
-deb http://ftp.debian.org/debian trixie-backports main
-deb-src http://ftp.debian.org/debian trixie-backports main
-
-*** NOTE: Always check for the appropriate VERSIONS.
-VERSIONS should not mismatch even in the future. ***
-
-bookworm(stable) < trixie(testing)
-More info: https://www.debian.org/releases/
-
-yes | sudo apt update
-
-yes | sudo apt install -t trixie-backports <package>
-Or,
-yes | sudo aptitude install <package>/trixie-backports
-
-However, Debian Trixie has not been released yet.
-
-Debian-XFCE Net-Install ISO didn't install any calculator app.
-# sudo apt install gnome-calculator (Feb. 21, 2025: 'gnome-calculator' is crashing.)
-# Install Qalculate
-# https://www.linuxlinks.com/calculators/
-# https://qalculate.github.io/index.html
-flatpak install flathub io.github.Qalculate
-
-# Install hdparm (to run commands like: sudo hdparm -I /dev/sdX | grep "Security"):
-# https://installati.one/install-hdparm-debian-11/
-sudo apt -y install hdparm
-
-
-Install GVim+Vim:
-
-apt search vim-gtk
-sudo apt install vim-gtk3
-Or, if you do not want the GUI Vim,
-sudo apt install vim
-
-If you're on a VM, see the text file 'virtualbox-ms-win.txt'.
-
-Partitioning Drives:
-https://techencyclopedia.wordpress.com/2020/04/21/debian-10-manual-partition-for-boot-swap-root-home-tmp-srv-var-var-mail-var-log/
-
-# LSB support:
-# sudo apt install lsb-release
-
-Codecs:
-https://www.sys-hint.com/1075-Installing-Multimedia-Codecs-on-Debian-10
-https://phoenixnap.com/kb/add-apt-repository-command-not-found-ubuntu
-
-yes | sudo apt install software-properties-common
-yes | sudo apt-add-repository non-free
-yes | sudo apt-add-repository contrib
-# https://serverfault.com/questions/240920/how-do-i-enable-non-free-packages-on-debian
-yes | sudo apt-add-repository --component non-free
-
-# Edit /etc/apt/sources.list with sudo privileges
-# sudo nano /etc/apt/sources.list
-# Add the following lines if these lines are not present.
-# If the lines are found commented, uncomment the lines.
----
-deb http://deb.debian.org/debian/ bookworm non-free main contrib non-free-firmware
-deb-src http://deb.debian.org/debian/ bookworm non-free main contrib non-free-firmware
-
-deb http://security.debian.org/debian-security bookworm-security non-free main contrib non-free-firmware
-deb-src http://security.debian.org/debian-security bookworm-security non-free main contrib non-free-firmware
-
-deb http://deb.debian.org/debian/ bookworm-updates non-free main contrib non-free-firmware
-deb-src http://deb.debian.org/debian/ bookworm-updates non-free main contrib non-free-firmware
----
-
-yes | sudo apt update && sudo apt upgrade
-yes | sudo apt install firmware-linux-nonfree
-
+git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyoga/ble.sh.git && \
+make -C ble.sh install PREFIX=~/.local && \
+echo 'source ~/.local/share/blesh/ble.sh' >> ~/.bashrc && \
+source ~/.bashrc && \
+source ~/.bash_aliases && \
+trash ble.sh && \
 
 # Intel CPU support:
-sudo apt install software-properties-common apt-transport-https ca-certificates curl -y
-sudo apt install xserver-xorg-video-intel
-sudo apt install mesa-utils
-sudo apt install intel-opencl-icd libmfx1
+yes | sudo apt install software-properties-common apt-transport-https ca-certificates curl -y && \
+yes | sudo apt install xserver-xorg-video-intel && \
+yes | sudo apt install mesa-utils && \
+yes | sudo apt install intel-opencl-icd libmfx1 && \
+yes | sudo apt install vainfo && \
+yes | sudo apt install libmfx1 && \
+yes | sudo apt install i965-va-driver && \
+# To use Debian Bookworm with 4th-gen (Haswell Bridge/LGA1150) Intel CPUs: sudo apt purge --auto-remove intel-media-va-driver*
 #
 # ==============================================================================
 # Edit the GRUB Bootloader Menu after installing drivers from Intel:
@@ -260,7 +170,166 @@ sudo apt install intel-opencl-icd libmfx1
 # ==============================================================================
 #
 # Intel HW-Acceleration (didn't work. You might need the following packages later).
-# sudo apt install jellyfin jellyfin-ffmpeg5 jellyfin-server jellyfin-web
+# yes | sudo apt install jellyfin jellyfin-ffmpeg5 jellyfin-server jellyfin-web
+# See jellyfin.txt for details.
+# ----------------------------------------------------------------------
+#
+
+
+================================================================================
+===================================== IMPORTANT ================================
+Install basic packages:
+This install script contains the most essential
+packages that you'll end up installing anyway.
+
+Run the BASH Script '01_debian_essential.sh' first.
+
+chmod +x 01_debian_essential.sh
+./01_debian_essential.sh
+
+================================================================================
+
+Disable Swap if you have SSDs and more than 3GB of RAM:
+https://www.tecmint.com/disable-swap-partition-in-centos-ubuntu/
+
+
+Install the most essential core build tool:
+
+yes | sudo apt install build-essential dkms module-assistant linux-headers-$(uname -r)
+
+Install the common properties package (will be needed later):
+
+yes | sudo apt install software-properties-common
+
+
+Install 'c': Use C as a shell scripting language:
+https://github.com/ryanmjacobs/c
+
+cd ~/
+yes | sudo apt install build-essential trash-cli
+wget https://raw.githubusercontent.com/ryanmjacobs/c/master/c
+sudo install -m 755 c /usr/bin/c
+trash c
+
+
+Enable Backports (not recommended):
+https://backports.debian.org/Instructions/
+https://linuxconfig.org/how-to-install-and-use-debian-backports
+
+sudo nano/vim/mousepad /etc/apt/sources.list
+
+Add these two lines:
+
+deb http://ftp.debian.org/debian trixie-backports main
+deb-src http://ftp.debian.org/debian trixie-backports main
+
+*** NOTE: Always check for the appropriate VERSIONS.
+VERSIONS should not mismatch even in the future. ***
+
+bookworm(stable) < trixie(testing)
+More info: https://www.debian.org/releases/
+
+yes | sudo apt update
+
+yes | sudo apt install -t trixie-backports <package>
+Or,
+yes | sudo aptitude install <package>/trixie-backports
+
+However, Debian Trixie has not been released yet.
+
+Debian-XFCE Net-Install ISO didn't install any calculator app.
+# yes | sudo apt install gnome-calculator (Feb. 21, 2025: 'gnome-calculator' is crashing.)
+# Install Qalculate
+# https://www.linuxlinks.com/calculators/
+# https://qalculate.github.io/index.html
+flatpak install flathub io.github.Qalculate
+
+# Install hdparm (to run commands like: sudo hdparm -I /dev/sdX | grep "Security"):
+# https://installati.one/install-hdparm-debian-11/
+sudo apt -y install hdparm
+
+
+Install GVim+Vim:
+
+apt search vim-gtk
+yes | sudo apt install vim-gtk3
+Or, if you do not want the GUI Vim,
+yes | sudo apt install vim
+
+If you're on a VM, see the text file 'virtualbox-ms-win.txt'.
+
+Partitioning Drives:
+https://techencyclopedia.wordpress.com/2020/04/21/debian-10-manual-partition-for-boot-swap-root-home-tmp-srv-var-var-mail-var-log/
+
+# LSB support:
+# yes | sudo apt install lsb-release
+
+Codecs:
+https://www.sys-hint.com/1075-Installing-Multimedia-Codecs-on-Debian-10
+https://phoenixnap.com/kb/add-apt-repository-command-not-found-ubuntu
+
+yes | sudo apt install software-properties-common
+yes | sudo apt-add-repository non-free
+yes | sudo apt-add-repository contrib
+# https://serverfault.com/questions/240920/how-do-i-enable-non-free-packages-on-debian
+yes | sudo apt-add-repository --component non-free
+
+# Edit /etc/apt/sources.list with sudo privileges
+# sudo nano /etc/apt/sources.list
+# Add the following lines if these lines are not present.
+# If the lines are found commented, uncomment the lines.
+---
+deb http://deb.debian.org/debian/ bookworm non-free main contrib non-free-firmware
+deb-src http://deb.debian.org/debian/ bookworm non-free main contrib non-free-firmware
+
+deb http://security.debian.org/debian-security bookworm-security non-free main contrib non-free-firmware
+deb-src http://security.debian.org/debian-security bookworm-security non-free main contrib non-free-firmware
+
+deb http://deb.debian.org/debian/ bookworm-updates non-free main contrib non-free-firmware
+deb-src http://deb.debian.org/debian/ bookworm-updates non-free main contrib non-free-firmware
+---
+
+yes | sudo apt update && sudo apt upgrade
+yes | sudo apt install firmware-linux-nonfree
+
+
+# Intel CPU support:
+yes | sudo apt install software-properties-common apt-transport-https ca-certificates curl -y
+yes | sudo apt install xserver-xorg-video-intel
+yes | sudo apt install mesa-utils
+yes | sudo apt install intel-opencl-icd libmfx1
+#
+# ==============================================================================
+# Edit the GRUB Bootloader Menu after installing drivers from Intel:
+#
+# sudo mousepad /etc/default/grub
+# https://askubuntu.com/questions/1383040/no-dev-dri-directory-in-ubuntu-server-20-04
+# https://askubuntu.com/questions/1153746/intel-graphics-card-not-bound-to-driver-after-nvidia-driver-installed-ubuntu-18/1154067#1154067
+#
+#GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nomodeset"
+#https://askubuntu.com/questions/1383040/no-dev-dri-directory-in-ubuntu-server-20-04
+#https://askubuntu.com/questions/1153746/intel-graphics-card-not-bound-to-driver-after-nvidia-driver-installed-ubuntu-18/1154067#1154067
+#GRUB_CMDLINE_LINUX_DEFAULT="quiet splash i915.alpha_support=1"
+
+# Change this line
+
+# GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nomodeset"
+
+# to
+
+# GRUB_CMDLINE_LINUX_DEFAULT="quiet splash i915.alpha_support=1"
+
+# (*** uncommented).
+
+# Update GRUB:
+# https://itsfoss.com/update-grub/
+#
+# sudo update-grub
+# sudo grub-mkconfig -o /boot/grub/grub.cfg
+# ==============================================================================
+#
+# Intel HW-Acceleration (didn't work. You might need the following packages later).
+# yes | sudo apt install jellyfin jellyfin-ffmpeg5 jellyfin-server jellyfin-web
 # See jellyfin.txt for details.
 
 
@@ -271,7 +340,7 @@ yes | sudo dpkg-reconfigure libdvd-pkg
 
 # Winamp alternative
 # https://www.reddit.com/r/Ubuntu/comments/tno11g/looking_for_a_winamp_equivalent_for_ubuntu/
-sudo apt install audacious
+yes | sudo apt install audacious
 
 # HDMI Display support:
 yes | sudo apt install autorandr
@@ -346,11 +415,11 @@ sudo chmod -R 755 /usr/share/themes/PRO-dark-XFCE-4.14
 ================================================================================
         PYTHON, PIP3, PIPX, CONDA (MINI), AND PYTORCH (CPU)
 ================================================================================
-sudo apt install python3-pip
+yes | sudo apt install python3-pip
 # Don't issue the command: python -m pip install --upgrade pip
 pip install pip-autoremove
 #usage: pip-autoremove -y <package_name>
-sudo apt install pipx
+yes | sudo apt install pipx
 ================================================================================
 
 
@@ -500,7 +569,7 @@ Panel Preferences -> Items -> Add -> Launcher
 
 https://forum.xfce.org/viewtopic.php?id=17600
 
-sudo apt install gnome-weather 
+yes | sudo apt install gnome-weather
 
 Right-click on the Panel (found on the top of the screen),
 Panel Preferences -> Items -> Add -> Launcher
@@ -612,7 +681,7 @@ Appears if selection contains: Video Files
 Icon: alarm-clock-triggered
 
 # Prerequisites:
-# sudo apt install ffmpeg zenity bc
+# yes | sudo apt install ffmpeg zenity bc
 # chmod +x $HOME/.local/share/applications/thunar-video-duration-action.sh
 
 Name: Mediainfo-GUI
@@ -663,7 +732,7 @@ Appears if selection contains: Other files
 Icon: application-pdf
 
 Note: You will need unoconv package for all following actions.
-sudo apt install unoconv (360MB)
+yes | sudo apt install unoconv (360MB)
 Type man unoconv for details.
 
 Name: Download subtitles
@@ -865,6 +934,11 @@ Update Snaps:
 snap refresh --list
 sudo snap refresh
 
+# add '/snap/bin' to '$PATH'
+# https://askubuntu.com/questions/965599/where-is-the-install-location-for-the-snap-download-tool
+# .bashrc or .bash_aliases
+export PATH="$PATH:/snap/bin/"
+# ------------------------------------------------------------------------------
 Flatpak:
 *** Install Flatpak as root: ***
 sudo su root
@@ -897,7 +971,7 @@ Install a Firewall:
 yes | sudo apt install gufw
 
 Install an Antivirus:
-sudo apt install chkrootkit
+yes | sudo apt install chkrootkit
 
 sudo nano /etc/chkrootkit.conf
 
@@ -908,7 +982,7 @@ Usage (you do not have to scan immediately): sudo chkrootkit >> "/home/$USERNAME
 
 Install a RootKit Buster:
 
-sudo apt install rkhunter
+yes | sudo apt install rkhunter
 sudo rkhunter --propupd
 sudo rkhunter --update
 
@@ -916,36 +990,36 @@ Usage (you do not have to scan immediately): sudo rkhunter --check --sk --report
 
 Install System Restore/Maintenance Tools:
 # Network Time Protocol daemon/utilities
-sudo apt install ntp
+yes | sudo apt install ntp
 # tool for selecting tasks
-sudo apt install tasksel
+yes | sudo apt install tasksel
 # Partition Manager
-sudo apt install gparted
-sudo apt install gnome-disk-utility
+yes | sudo apt install gparted
+yes | sudo apt install gnome-disk-utility
 # Volume/Drive/Container Encryption
 ## https://www.cyberciti.biz/security/howto-linux-hard-disk-encryption-with-luks-cryptsetup-command/
 ## http://security.stackexchange.com/questions/4590/ddg#4592
-sudo apt install gnome-disk-utility
-sudo apt install zulucrypt-gui zulucrypt-cli zulumount-gui libzulucrypt-plugins
-sudo apt install pmount
-sudo apt install luckyluks
-sudo apt install cryptsetup cryptmount cryptsetup-bin cryptsetup-initramfs cryptsetup-nuke-password
+yes | sudo apt install gnome-disk-utility
+yes | sudo apt install zulucrypt-gui zulucrypt-cli zulumount-gui libzulucrypt-plugins
+yes | sudo apt install pmount
+yes | sudo apt install luckyluks
+yes | sudo apt install cryptsetup cryptmount cryptsetup-bin cryptsetup-initramfs cryptsetup-nuke-password
 # File Sync
-sudo apt install rsync
-sudo apt install grsync
+yes | sudo apt install rsync
+yes | sudo apt install grsync
 # System Restore
-sudo apt install timeshift
+yes | sudo apt install timeshift
 # Load Program Faster while launching for the second time
-sudo apt install preload
+yes | sudo apt install preload
 # seahorse: GUI Keyring Manager
 # https://mexpolk.wordpress.com/2008/02/06/ubuntu-change-default-keyring-password/
-sudo apt install seahorse
+yes | sudo apt install seahorse
 # Reduce Eyestrain
-sudo apt install redshift-gtk
+yes | sudo apt install redshift-gtk
 # Prevent Screen from falling asleep
-#sudo apt install caffeine
+#yes | sudo apt install caffeine
 # Command-line system info tool
-sudo apt install hardinfo
+yes | sudo apt install hardinfo
 # New hardware (firmware)
 sudo update-initramfs -u
 sudo apt-get install apt-file
@@ -954,13 +1028,13 @@ sudo apt-file update
 dmesg | grep firmware
 apt-file search <firmware-file-name>
 # The Fish Shell
-sudo apt install fish
+yes | sudo apt install fish
 # Power management utility for laptops.
-sudo apt install tlp
+yes | sudo apt install tlp
 yes | sudo apt install tlp-rdw
 # Set Up Bluetooth
 # https://www.howtogeek.com/829360/how-to-set-up-bluetooth-on-linux/
-sudo apt install bluetooth bluemon bluez blueman
+yes | sudo apt install bluetooth bluemon bluez blueman
 sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
 rfkill unblock bluetooth
@@ -973,7 +1047,7 @@ You might be interested in the following:
 # https://youtu.be/kFh1acsQ8DQ
 
 # Install OH-MY-BASH:
-sudo apt install curl git git-lfs fish -y
+yes | sudo apt install curl git git-lfs fish -y
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
 # Change the theme: .bashrc -> Uncomment:
@@ -993,13 +1067,13 @@ source ~/.bashrc
 # cd ~/
 # echo "[[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh" >> ~/.bashrc
 # https://www.cyberciti.biz/faq/add-bash-auto-completion-in-ubuntu-linux/
-sudo apt install bash-completion -y
+yes | sudo apt install bash-completion -y
 echo "source /etc/profile.d/bash_completion.sh" >> ~/.bashrc
 
 # autojump
 # https://github.com/wting/autojump.git
-sudo apt install autojump
-sudo apt install fzf
+yes | sudo apt install autojump
+yes | sudo apt install fzf
 echo '. /usr/share/autojump/autojump.sh' >> ~/.bashrc
 source ~/.bashrc
 # https://www.tecmint.com/autojump-a-quickest-way-to-navigate-linux-filesystem/1/
@@ -1013,7 +1087,7 @@ source ~/.bashrc
 
 # Or, (OMF:- OH-MY-FISH)
 # https://github.com/oh-my-fish/oh-my-fish
-sudo apt install curl git fish -y
+yes | sudo apt install curl git fish -y
 curl -L https://get.oh-my.fish | fish
 # fish
 # Theming:
@@ -1026,101 +1100,101 @@ curl -L https://get.oh-my.fish | fish
 
 # tldr
 # https://github.com/tldr-pages/tldr.git
-sudo apt install python3-pip -y
+yes | sudo apt install python3-pip -y
 pipx install tldr
 # ---------
-sudo apt install libfuse2
-sudo apt install psensor
-sudo apt install transmission
-sudo apt install surf
+yes | sudo apt install libfuse2
+yes | sudo apt install psensor
+yes | sudo apt install transmission
+yes | sudo apt install surf
 # GoldenDict Dictionary DB Reader
 # Solve GoldenDict's High CPU usage problem.
 # http://goldendict.org/forum/viewtopic.php?f=4&t=2830
 # Edit -> Preferences > Full-text search tab ->
 # -> "Allow full-text search for:" option is enabled (default option) ->
 # -> Disable.
-# sudo apt install goldendict # Install Flatpak
+# yes | sudo apt install goldendict # Install Flatpak
 # flatpak install flathub org.goldendict.GoldenDict
 #
 # Goldendict alternative
-# sudo apt install stardict
+# yes | sudo apt install stardict
 # See shell/stardict.txt for details.
 #
 # A cross-platform dictionary similar to Wordweb
-sudo apt install artha
-sudo apt install bzip2
-sudo apt install tar
-sudo apt install unrar
-sudo apt install rar
-sudo apt install xz-utils
-sudo apt install lrzip
-sudo apt install pixz
-sudo apt install wmctrl
-sudo apt install nscd
-sudo apt install xclip
-sudo apt install uget
-sudo apt install aria2
-sudo apt install xarchiver
-sudo apt install thunar-archive-plugin
-sudo apt install wavemon
+yes | sudo apt install artha
+yes | sudo apt install bzip2
+yes | sudo apt install tar
+yes | sudo apt install unrar
+yes | sudo apt install rar
+yes | sudo apt install xz-utils
+yes | sudo apt install lrzip
+yes | sudo apt install pixz
+yes | sudo apt install wmctrl
+yes | sudo apt install nscd
+yes | sudo apt install xclip
+yes | sudo apt install uget
+yes | sudo apt install aria2
+yes | sudo apt install xarchiver
+yes | sudo apt install thunar-archive-plugin
+yes | sudo apt install wavemon
 # Monitor the status of an 802.11 wireless ethernet link.
-sudo apt install wmwave
+yes | sudo apt install wmwave
 # Description: WiFi Share and Connect with QR.
-sudo apt install wifi-qr
+yes | sudo apt install wifi-qr
 # Launcher.
-sudo apt install rofi
+yes | sudo apt install rofi
 # Description: graphical wireless scanner.
-sudo apt install linssid
+yes | sudo apt install linssid
 # Screenshot Utility.
-sudo apt install flameshot
+yes | sudo apt install flameshot
 # Defrag NTFS Volumes.
-sudo apt install ntfs-3g
+yes | sudo apt install ntfs-3g
 
 # Download Manager programs
-sudo apt install uget
+yes | sudo apt install uget
 
 Basic build tools you'll need:
 
-sudo apt install build-essential
-sudo apt install patch
-sudo apt install make
-sudo apt install bear
-sudo apt install cmake
-sudo apt install diffutils
+yes | sudo apt install build-essential
+yes | sudo apt install patch
+yes | sudo apt install make
+yes | sudo apt install bear
+yes | sudo apt install cmake
+yes | sudo apt install diffutils
 
-sudo apt install libomp-dev
-sudo apt install curl
-sudo apt install python3-pip
+yes | sudo apt install libomp-dev
+yes | sudo apt install curl
+yes | sudo apt install python3-pip
 python -m pip install --upgrade pip
-sudo apt install pipx
+yes | sudo apt install pipx
 
-sudo apt install git git-lfs gitk git-gui
-sudo apt install unzip
+yes | sudo apt install git git-lfs gitk git-gui
+yes | sudo apt install unzip
 # MATE archive manager. Works in XFCE
-sudo apt install engrampa engrampa-common
+yes | sudo apt install engrampa engrampa-common
 # Generic archive manager. Works in XFCE
-sudo apt install xarchiver
-sudo apt install thunar-archive-plugin
-sudo apt install wget curl
+yes | sudo apt install xarchiver
+yes | sudo apt install thunar-archive-plugin
+yes | sudo apt install wget curl
 
-sudo apt install notepadqq
+yes | sudo apt install notepadqq
 
 sudo apt update
 sudo apt list --upgradable
 sudo apt upgrade
 sudo apt update
-sudo apt install -f
-sudo apt install nodejs
-sudo apt install jq
+yes | sudo apt install -f
+yes | sudo apt install nodejs
+yes | sudo apt install jq
 # Description: package manager for Node.js
 # (npm: Unmet dependencies)
 
-sudo apt install npm
+yes | sudo apt install npm
 
 # Update Node.js with NPM (Node Package Manager)
 # https://phoenixnap.com/kb/update-node-js-version
 
-sudo apt install npm
+yes | sudo apt install npm
 npm cache clean -f
 sudo npm install -g n
 sudo n stable
@@ -1129,23 +1203,23 @@ How To Compare Two Directories on Linux:
 https://www.baeldung.com/linux/compare-two-directories
 https://askubuntu.com/questions/651166/best-alternative-for-winmerge#661055
 
-sudo apt install meld
-sudo apt install diffuse
-sudo apt install kdiff3-qt or flatpak install org.kde.kdiff3 (cumbersome)
-# sudo apt install xxdiff (not easy to use or feature-rich)
-# sudo apt install fldiff (not easy to use or feature-rich)
+yes | sudo apt install meld
+yes | sudo apt install diffuse
+yes | sudo apt install kdiff3-qt or flatpak install org.kde.kdiff3 (cumbersome)
+# yes | sudo apt install xxdiff (not easy to use or feature-rich)
+# yes | sudo apt install fldiff (not easy to use or feature-rich)
 
 Command-line file manager:
-sudo apt install mc
+yes | sudo apt install mc
 
 You might be interested in the following also:
 
-sudo apt install llvm
-sudo apt install clang
-sudo apt install clangd
-sudo apt install clang-tidy
-sudo apt install clang-tools
-sudo apt install lld
+yes | sudo apt install llvm
+yes | sudo apt install clang
+yes | sudo apt install clangd
+yes | sudo apt install clang-tidy
+yes | sudo apt install clang-tools
+yes | sudo apt install lld
 pipx install flawfinder
 pipx install lizard
 https://github.com/joeyespo/grip
@@ -1166,29 +1240,29 @@ bash-language-server --help
 # cmdtest black box tests Unix command line tools. Roughly, it is given a
 # script, its input files, and its expected output files. cmdtest runs
 # the script, and checks the output is as expected.
-sudo apt install cmdtest
+yes | sudo apt install cmdtest
 # pnpm package manager
 # https://pnpm.io/installation
 curl -fsSL https://get.pnpm.io/install.sh | sh -
 # other essential development utilities
-sudo apt install cdecl
-sudo apt install cutils
-sudo apt install kitty
-sudo apt install sakura
-# sudo apt install gnome-terminal
-sudo apt install tree
-sudo apt install mc
-sudo apt install xclip
-sudo apt install vim-gtk3
-sudo apt install kate
-sudo apt install cppcheck
-sudo apt install cppcheck-gui
-sudo apt install splint
-sudo apt install cmake cmake-gui
-sudo apt install wget
-sudo apt install unzip
-sudo apt install git
-sudo apt install git-lfs
+yes | sudo apt install cdecl
+yes | sudo apt install cutils
+yes | sudo apt install kitty
+yes | sudo apt install sakura
+# yes | sudo apt install gnome-terminal
+yes | sudo apt install tree
+yes | sudo apt install mc
+yes | sudo apt install xclip
+yes | sudo apt install vim-gtk3
+yes | sudo apt install kate
+yes | sudo apt install cppcheck
+yes | sudo apt install cppcheck-gui
+yes | sudo apt install splint
+yes | sudo apt install cmake cmake-gui
+yes | sudo apt install wget
+yes | sudo apt install unzip
+yes | sudo apt install git
+yes | sudo apt install git-lfs
 
 # https://softwarerecs.stackexchange.com/questions/30351/visualizing-git-diff-linux#30352
 # gitk & git-gui
@@ -1197,9 +1271,9 @@ sudo apt install git-lfs
 # to dealing with the command-line diff/merge/commit/stage/push tools.
 # Can be supplementary utilities even when a CUI is preferred over the GUI.
 
-sudo apt install gitk
-sudo apt install git-gui
-sudo apt install giggle
+yes | sudo apt install gitk
+yes | sudo apt install git-gui
+yes | sudo apt install giggle
 
 # GUI frontends for Git Version Control System:
 # Gitg is pretty barebone at the moment. Git Cola comes packed with all the
@@ -1223,52 +1297,52 @@ sudo apt install giggle
 # changed files at a glance.
 # Install any of the following if you are in absolute need of a GUI Git frontend.
 
-# sudo apt install gitg
-# sudo apt install qgit
-# sudo apt install git-cola
+# yes | sudo apt install gitg
+# yes | sudo apt install qgit
+# yes | sudo apt install git-cola
 
 # Flowchart diagram designing program
 # https://wiki.gnome.org/Apps/Dia
 # (Windows) http://dia-installer.de/index.html.en
-# sudo apt install dia
+# yes | sudo apt install dia
 # Dia2Code is a small utility used to generate code from a Dia diagram
 # http://dia2code.sourceforge.net/index.html
-# sudo apt install dia2code
+# yes | sudo apt install dia2code
 
 # Below are some (terminal-based) utilities for adding more
 # functionalities to the existing Git installation
 
-sudo apt install git-extras
-sudo apt install git-flow
-sudo apt install diffutils
-sudo apt install diffstat
+yes | sudo apt install git-extras
+yes | sudo apt install git-flow
+yes | sudo apt install diffutils
+yes | sudo apt install diffstat
 
 # Debuggers, code profilers, memory leak testers, build tools,
 # code formatting, code/directory compare applications and more
 
-sudo apt install ddd
-sudo apt install valgrind
-sudo apt install cgdb
-sudo apt install astyle
-sudo apt install universal-ctags
-sudo apt install autoconf
-sudo apt install pkg-config
-sudo apt install libx11-dev
-sudo apt install libglib2.0-doc
-sudo apt install libtool
-sudo apt install autoproject
-sudo apt install autogen
-sudo apt install autotools-dev
-sudo apt install automake
-sudo apt install m4
-sudo apt install make
-sudo apt install ninja-build
-sudo apt install meld
-# sudo apt install kdiff3 (use the latest flatpak version)
+yes | sudo apt install ddd
+yes | sudo apt install valgrind
+yes | sudo apt install cgdb
+yes | sudo apt install astyle
+yes | sudo apt install universal-ctags
+yes | sudo apt install autoconf
+yes | sudo apt install pkg-config
+yes | sudo apt install libx11-dev
+yes | sudo apt install libglib2.0-doc
+yes | sudo apt install libtool
+yes | sudo apt install autoproject
+yes | sudo apt install autogen
+yes | sudo apt install autotools-dev
+yes | sudo apt install automake
+yes | sudo apt install m4
+yes | sudo apt install make
+yes | sudo apt install ninja-build
+yes | sudo apt install meld
+# yes | sudo apt install kdiff3 (use the latest flatpak version)
 flatpak install org.kde.kdiff3
 
 # 'fldiff' cannot perform merge operations
-# sudo apt install fldiff
+# yes | sudo apt install fldiff
 
 # "kdiff3" and "kompare" both are efficient Diff Tools with advanced features.
 # While "meld" is way too slow and lags most of the time on larger files,
@@ -1284,25 +1358,25 @@ flatpak install org.kde.kdiff3
 # 'kompare' is slightly clumsy.
 # Only install what you need.
 
-# sudo apt install kdiff3 (use the latest flatpak version)
+# yes | sudo apt install kdiff3 (use the latest flatpak version)
 flatpak install org.kde.kdiff3
-# sudo apt install kompare
+# yes | sudo apt install kompare
 
 # Markdown to HTML etc.
-sudo apt install markdown
+yes | sudo apt install markdown
 
 # Text search utilities
-sudo apt install regexxer
-# sudo apt install vizigrep
-sudo apt install searchmonkey
+yes | sudo apt install regexxer
+# yes | sudo apt install vizigrep
+yes | sudo apt install searchmonkey
 
-sudo apt install ripgrep ugrep
+yes | sudo apt install ripgrep ugrep
 # ugrep --help
 
 # PlatformIO ===========================================================
 # CuteCOM: GUI Serial Monitor
 # https://www.pragmaticlinux.com/2021/11/how-to-monitor-the-serial-port-in-linux/
-sudo apt install cutecom
+yes | sudo apt install cutecom
 
 # Req. by PlatformIO CORE CLI
 
@@ -1312,13 +1386,13 @@ sudo apt purge --auto-remove brltty
 
 yes | sudo apt update
 # https://www.pragmaticlinux.com/2021/11/how-to-monitor-the-serial-port-in-linux/
-sudo apt install -y cutecom
+yes | sudo apt install -y cutecom
 # https://askubuntu.com/questions/786367/setting-up-arduino-uno-ide-on-ubuntu
 # https://askubuntu.com/questions/781571/how-to-identify-devices-connected-to-serial-port
 # https://unix.stackexchange.com/questions/390184/dmesg-read-kernel-buffer-failed-permission-denied
 # https://0xsuk.github.io/posts/2022-07-19-how-to-install-ch340-on-ubuntu-22.04/
-sudo apt install -y hwinfo
-sudo apt install -y setserial
+yes | sudo apt install -y hwinfo
+yes | sudo apt install -y setserial
 pipx install esptool
 
 # Be the root user if needed,
@@ -1370,7 +1444,7 @@ pipx install esptool
 # https://sr.ht/~proflutz/TicTacSync/
 # https://tictacsync.org/
 
-sudo apt install sox
+yes | sudo apt install sox
 pipx install tictacsync
 pipx upgrade-all
 # tictacsync -v sampleFiles
@@ -1395,7 +1469,7 @@ yes | sudo apt install gegl
 yes | sudo apt install xzgv
 
 # GIMP:
-sudo apt install gimp gimp-data gimp-data-extras gimp-gmic gimp-gutenprint gimp-help-common gimp-help-en-gb gimp-lensfun gimp-plugin-registry gimp-texturize icc-profiles icc-profiles-free gegl gtkam-gimp xzgv
+yes | sudo apt install gimp gimp-data gimp-data-extras gimp-gmic gimp-gutenprint gimp-help-common gimp-help-en-gb gimp-lensfun gimp-plugin-registry gimp-texturize icc-profiles icc-profiles-free gegl gtkam-gimp xzgv
 
 # converter between LibreOffice document formats
 # This package provides a commandline utility which can convert from
@@ -1403,7 +1477,7 @@ sudo apt install gimp gimp-data gimp-data-extras gimp-gmic gimp-gutenprint gimp-
 # it can export. It uses LibreOffice's UNO bindings for non-interactive
 # conversion of documents.
 
-sudo apt install unoconv
+yes | sudo apt install unoconv
 
 Fix Snap-installed packages if you find the launchers missing:
 (Snap app icon doesn't appear in menu)
@@ -1440,7 +1514,7 @@ sudo snap install hdmi-usb-dongle
 # Webcam
 # https://www.makeuseof.com/best-camera-apps-linux/
 # https://www.linuxlinks.com/webcam/
-sudo apt install cheese
+yes | sudo apt install cheese
 
 Uninstall a snap package:
 https://askubuntu.com/questions/1130791/how-to-uninstall-a-package-installed-from-snapcraft
@@ -1468,7 +1542,7 @@ flatpak install flathub com.rafaelmardojai.Blanket
 # VidCutter - Media Cutter + Joiner
 flatpak install com.ozmartians.VidCutter # Doesn't work with large video files
 # KDE Non-Linear Video Editor: Kdenlive
-Dependencies: sudo apt install frei0r-plugins
+Dependencies: yes | sudo apt install frei0r-plugins
 flatpak install flathub org.kde.kdenlive
 Run: flatpak run org.kde.kdenlive
 Or, download Kdenlive AppImage
@@ -1484,20 +1558,20 @@ Run: flatpak run com.wings3d.WINGS
 
 
 The Suckless ST Terminal Emulator basic package:
-sudo apt install stterm
+yes | sudo apt install stterm
 Or, Build it from the source
 https://github.com/bakkeby/st-flexipatch.git
 
 Terminal Fonts (MUST):
 * Without these fonts, you'll miss the proper console characters and see boxes everywhere.
-sudo apt install fonts-terminus fonts-terminus-otb xfonts-terminus
-sudo apt install xfonts-terminus-dos xfonts-terminus-oblique
-sudo apt install xfonts-mona fonts-firacode fonts-league-mono fonts-agave
-sudo apt install fonts-inconsolata fonts-ricty-diminished
-sudo apt install fonts-jetbrains-mono fonts-anonymous-pro
-sudo apt install fonts-monoid fonts-monoid-halfloose
-sudo apt install fonts-monoid-halftight fonts-monoid-loose fonts-monoid-tight
-sudo apt install fonts-fantasque-sans fonts-hermit fonts-powerline
+yes | sudo apt install fonts-terminus fonts-terminus-otb xfonts-terminus
+yes | sudo apt install xfonts-terminus-dos xfonts-terminus-oblique
+yes | sudo apt install xfonts-mona fonts-firacode fonts-league-mono fonts-agave
+yes | sudo apt install fonts-inconsolata fonts-ricty-diminished
+yes | sudo apt install fonts-jetbrains-mono fonts-anonymous-pro
+yes | sudo apt install fonts-monoid fonts-monoid-halfloose
+yes | sudo apt install fonts-monoid-halftight fonts-monoid-loose fonts-monoid-tight
+yes | sudo apt install fonts-fantasque-sans fonts-hermit fonts-powerline
 # https://github.com/ryanoasis/nerd-fonts
 
 # Bangla/Hindi Support
@@ -1509,15 +1583,15 @@ https://packages.debian.org/en/stable/fonts-indic
 https://medium.com/the-blog-of-ehsan-nazim/write-bangla-easily-on-debian-9xfce-4470019d6272
 https://askubuntu.com/questions/769391/how-to-fix-bangla-fonts-problem-in-firefox
 https://www.quora.com/How-can-I-install-Hindi-and-other-Indian-language-fonts-on-Kali-Linux
-sudo apt install fonts-indic
-sudo apt install ibus ibus-m17n m17n-db ibus-gtk
-sudo apt install fonts-beng fonts-beng-extra fonts-lohit-beng-bengali firefox-esr-l10n-bn
+yes | sudo apt install fonts-indic
+yes | sudo apt install ibus ibus-m17n m17n-db ibus-gtk
+yes | sudo apt install fonts-beng fonts-beng-extra fonts-lohit-beng-bengali firefox-esr-l10n-bn
 Hindi:
-sudo apt install fonts-indic firefox-esr-l10n-hi-in fonts-deva-extra fonts-gargi fonts-lohit-deva
+yes | sudo apt install fonts-indic firefox-esr-l10n-hi-in fonts-deva-extra fonts-gargi fonts-lohit-deva
 
 Dictionary support for gnu-aspell (if req.):
-sudo apt install aspell-bn
-sudo apt install aspell-hi
+yes | sudo apt install aspell-bn
+yes | sudo apt install aspell-hi
 
 /usr/bin/ibus-daemon -d
 Add these lines to either '.bashrc' or '.bash_aliases'
@@ -1540,7 +1614,7 @@ Install Fonts in Debian:
 https://vitux.com/how-to-install-custom-fonts-in-debian/
 sudo apt update && sudo apt -y install font-manager
 If you prefer Avro:
-sudo apt install ibus-avro
+yes | sudo apt install ibus-avro
 Restart the machine.
 
 # Zoom and MS-Teams #
@@ -1629,4 +1703,49 @@ on your new server with:
 
 sudo xargs -a packages_list.txt apt install
 ########################################################################
+
+############################ PlatformIO ################################
+# sudo usermod -a -G plugdev $USER  && \
+# sudo usermod -a -G dialout $USER && \
+# https://docs.platformio.org/en/latest/core/userguide/device/cmd_monitor.html#cmd-device-monitor
+# https://docs.platformio.org/en/latest/core/installation/udev-rules.html
+# curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/system/99-platformio-udev.rules | sudo tee /etc/udev/rules.d/99-platformio-udev.rules  && \
+# sudo service udev restart && \
+# sudo udevadm control --reload-rules && \
+# sudo udevadm trigger && \
+# sudo usermod -a -G dialout $USER && \
+# sudo usermod -a -G plugdev $USER && \
+# sudo reboot
+# sudo chmod a+rw /dev/ttyUSB0 && \
+# sudo chmod a+rw /dev/ttyS0 && \
+# setserial -g /dev/ttyS0 && \
+# setserial -g /dev/ttyS[0123] && \
+# sudo sysctl kernel.dmesg_restrict=0 && \
+# sudo reboot
+# echo "ls -l /dev/ttyUSB* /dev/ttyACM* ..." && \
+# ls -l /dev/ttyUSB* /dev/ttyACM* && \
+# ls -l /dev/ttyUSB* /dev/ttyACM*
+# ls: cannot access '/dev/ttyACM*': No such file or directory
+# crw-rw-rw- 1 root dialout 188, 0 Mar 20 01:08  /dev/ttyUSB0
+# hwinfo --short
+#
+#                        Serial controller
+#   /dev/ttyUSB0         QinHeng Electronics HL-340 USB-Serial adapter
+# echo "dmesg | egrep --color 'serial|ttyS' ..." && \
+# dmesg | egrep --color 'serial|ttyS' && \
+# echo "dmesg | grep tty ..." && \
+# dmesg | grep tty && \
+# echo "dmesg | tail -f ..." && \
+# dmesg | tail -f && \
+# echo "hwinfo --short ..." && \
+# hwinfo --short && \
+# echo "lsusb ..." && \
+# lsusb && \
+# echo "ls -l /dev/tty* ..." && \
+# ls -l /dev/tty* && \
+# echo "dmesg | grep tty ..." && \
+# dmesg | grep tty \
+#                                                  For PlaltformIO
+
+# =================================================================
 
