@@ -1,0 +1,76 @@
+## Rsync One-Way Copy
+
+[MS-Edge Copilot Search.]
+
+To copy all files from a source to a destination in one direction using rsync, follow the steps below. This ensures that files are transferred only from the source to the destination without syncing back.
+
+Basic Command
+
+The simplest way to perform a one-way copy is:
+
+```
+rsync -av --progress /path/to/source/ /path/to/destination/
+```
+
+Explanation:
+
+`-a`: Archive mode (preserves permissions, timestamps, symbolic links, etc.).
+
+`-v`: Verbose output for detailed information.
+
+`--progress`: Displays progress during the transfer.
+
+The trailing `/` in `/path/to/source/` ensures only the contents of the source directory are copied, not the directory itself.
+
+Ensure One-Way Sync
+
+To prevent files in the destination from being overwritten or deleted:
+
+```
+rsync -avu --progress /path/to/source/ /path/to/destination/
+```
+
+`-u`: Skips files that are newer in the destination.
+
+If you want to delete files in the destination that no longer exist in the source (mirroring behavior):
+
+```
+rsync -av --delete /path/to/source/ /path/to/destination/
+```
+
+`--delete`: Removes extraneous files from the destination.
+
+Remote Transfers
+
+For copying between local and remote systems:
+
+```
+rsync -av --progress /path/to/source/ user@remote_host:/path/to/destination/
+```
+
+Or, to copy from a remote source to a local destination:
+
+```
+rsync -av --progress user@remote_host:/path/to/source/ /path/to/destination/
+```
+
+Best Practices
+
+Use `--dry-run` to preview changes before executing:
+
+```
+rsync -av --dry-run /path/to/source/ /path/to/destination/
+```
+
+Exclude specific files or directories with `--exclude`:
+
+```
+rsync -av --exclude="*.log" /path/to/source/ /path/to/destination/
+```
+
+These commands ensure efficient and controlled one-way file synchronization.
+
+Learn more:
+1 - serverfault.com
+2 - linuxize.com
+3 - phoenixnap.com
