@@ -161,7 +161,7 @@ Bypass these restrictive packaging rules by utilizing an unpatched, official dir
    ./firefox/firefox &
    ```
 
-4. Navigate to your site (or a test page like [WebAuthn.io](WebAuthn.io)). The unpatched binary bypasses sandbox restrictions to look for the device node directly. The key will flash and work.
+4. Navigate to your site (or a test page like [WebAuthn.io](https://webauthn.io/)). The unpatched binary bypasses sandbox restrictions to look for the device node directly. The key will flash and work.
 
 ------------------------------
 
