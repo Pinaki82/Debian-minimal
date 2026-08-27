@@ -2,7 +2,7 @@
 
 This guide consolidates a robust, dependency-clean workflow for transforming [OpenSCAD](https://openscad.org/) models into files ready for both 3D printing (additive) and CNC milling (subtractive) manufacturing on Debian Linux. It systematically bypasses broken or legacy package dependencies (`pycam`, `camotics` binary hooks) by utilising clean alternative toolchains.
 
-**NOTE:** Do not use the `hull()` function in OpenSCAD.
+**NOTE:** Do not use the `hull()` function in OpenSCAD on large geometric variations if processing performance is constrained.
 
 ---
 
@@ -130,7 +130,7 @@ dxf2gcode LetterBlock_2D.dxf
 
 If your part features non-flat 3D topographies, utilise Debian-native industrial CAM utilities to generate paths securely without Python interpreter fragmentation (687 MB):
 
-**Do not install the LinuxCNC stack if you do not want to use it. It is heavy.**
+**Do not install the LinuxCNC stack if you do not want to use it. It is heavy. Keep it only if configuring tool tables or native conversational loops for a Lathe.**
 
 ```bash
 sudo apt install linuxcnc-uspace
