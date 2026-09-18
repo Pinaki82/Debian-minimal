@@ -883,6 +883,107 @@ Whisker Menu -> Settings -> Settings Manager ->
 -> Display [TAB] -> Display Power Management -> Off.
 -> Security [TAB] -> Automatically lock the session: Never. Lock screen when the system is going to sleep [checked].
 
+---
+Restart XFCE Desktop on startup:
+Whisker Menu -> Settings -> Session and Startup ->
+-> Application Autostart Tab -> Add ->
+Name: Restart XFCE Desktop
+Description: Restart XFCE Desktop
+Command: sh /home/YOURUSERNAME/shell/restart_XFCE_DESKTOP_GUI.sh
+Trigger: 'on login'
+---
+
+---
+Add Conky to autostart:
+Whisker Menu -> Settings -> Session and Startup ->
+-> Application Autostart Tab -> Add ->
+Name: autostart-conky
+Description: Autostart Conky Desktop Gadgets
+Command: conky &&
+Trigger: 'on login'
+---
+
+---
+Kill Conky on log out:
+Whisker Menu -> Settings -> Session and Startup ->
+-> Application Autostart Tab -> Add ->
+Name: Kill Conky on Log Out
+Description: Kill Conky on Log Out
+Command: pkill conky
+Trigger: 'on logout'
+---
+
+---
+Right-click on the top panel.
+Panel preferences -> Items Tab -> Double-click on 'Whisker Menu'
+                                  or select 'Whisker Menu'
+                                  Click on the wrench icon ('Edit
+                                  the currently selected item')
+                                 -> General Tab
+                                 -> Background Opacity: 0
+---
+
+---
+Other Panel Preferences:
+
+:: Panel 1 ::
+Display
+General
+Mode: Horizontal
+Lock panel
+Automatically hide the panel: Never
+Keep panel above windows [Unchecked]
+Measurements:
+Row size (pixels): 26
+Number of rows: 1
+Length (pixels): 1920
+Automatically increase the length [Checked]
+
+Appearance Tab:
+Dark Mode [Yes]
+Background:
+Style: None (use system style)
+Icons:
+Adjust size automatically: Yes
+Opacity:
+Enter: 100
+Leave: 100
+
+
+:: Panel 2 (Application Dock) ::
+Display
+General
+Mode: Horizontal
+Lock panel
+Automatically hide the panel: Intelligently
+Keep panel above windows [Won't appear or appear faded without options to check]
+Measurements:
+Row size (pixels): 48
+Number of rows: 1
+Length (pixels): 19
+Automatically increase the length [Checked]
+
+Appearance Tab:
+Dark Mode [Yes]
+Background:
+Style: None (use system style)
+Icons:
+Adjust size automatically: Yes
+Opacity:
+Enter: 100
+Leave: 100
+---
+
+---
+Whisker Menu -> Window Manager Tweaks
+             -> Compositor Tab
+             -> Uncheck:
+                Show shadows under popup windows
+                Show shadows under dock windows
+                Show shadows under regular windows
+             -> Opacity of window decorations:
+                Pull all sliders to the 'Opaque' side.
+---
 
 ------Keyboard shortcuts to increase or decrease volume.-------------------------------------------------
 https://unix.stackexchange.com/questions/342554/how-to-enable-my-keyboards-volume-keys-in-xfce/412926#412926
