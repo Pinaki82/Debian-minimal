@@ -1,0 +1,120 @@
+================================================================
+  Conky Configuration — Analogue Clock & System Monitor
+================================================================
+
+  AUTHOR / REQUESTOR
+  ──────────────────
+  Conceived, directed, and refined by:
+      Pinaki
+
+  AI ASSISTANT
+  ────────────
+  Code written by:
+      Max
+      AI Assistant on Arena.ai
+
+  DATE
+  ────
+  19 September 2026
+
+----------------------------------------------------------------
+
+  DESCRIPTION
+  ───────────
+  This Conky configuration was written entirely by Max (AI) at
+  the request of Pinaki, through an interactive session of
+  prompts, feedback, and iterative refinement.
+
+  The final setup includes:
+
+    • A two-handed analogue clock (Lua + Cairo)
+        – 60 tick marks (major & minor)
+        – Day window inside the dial (upper half)
+        – Date window inside the dial (lower half)
+
+    • Three circular arc gauge dials (Lua + Cairo)
+        – CPU Usage     (%) — alert threshold: > 75%
+        – RAM Usage     (%) — alert threshold: > 85%
+        – CPU Temp      (°C) — alert threshold: > 60°C
+        – All gauges turn red dynamically on threshold breach
+
+    • Full system information panel (Conky text)
+        – CPU cores, top processes
+        – RAM usage, top processes
+        – Filesystem (Root, Home, Swap)
+        – HDD mount points
+
+  ORIGIN
+  ──────
+  The base configuration was an existing Conky setup belonging
+  to Pinaki. Max analysed it, modernised it to the current
+  conky.config = {} format, and merged it with the new Lua-
+  driven clock and gauge system through a collaborative and
+  iterative conversation.
+
+  All design decisions — including clock style, in-dial window
+  placement, gauge colours, alert thresholds, and layout — were
+  made by Pinaki through direct feedback and interaction.
+
+----------------------------------------------------------------
+
+  FILES
+  ─────
+    ~/.config/conky/conky.conf   — Main Conky configuration
+    ~/.config/conky/clock.lua    — Lua/Cairo clock & gauges
+    ~/.config/conky/ATTRIBUTION.txt — This file
+
+  AUTOSTAR Conky on `log on`:
+  ───────────────────────────
+  In XFCE, Click on the Whisker Menu. In the system settings (Settings), find Session and Startup.
+  Go to the Application Autostart Tab.
+  Add an item as follows:
+  Name: autostart-conky
+  Description: Autostart Conky Desktop Gadgets
+  Command: conky -c ~/.config/conky/conky.conf &
+  Trigger: on login
+
+  Desktop Entry:
+  ──────────────
+
+```
+[Desktop Entry]
+
+# Copyright Reserved by ArchWiki
+# https://wiki.archlinux.org/title/Desktop_entries
+
+# Source: https://wiki.archlinux.org/index.php/Desktop_entries
+# An example of a desktop entry published by ArchWiki has been used here as
+# a template. Copyright goes to the respective publisher, which was originally
+# published under GNU Free Documentation License 1.3.
+# For more information, see https://www.gnu.org/copyleft/fdl.html.
+# GNU Free Documentation License mandates the inclusion of the terms of the
+# license to be visible to the end-user.
+
+Type=Application
+
+Name=conky
+
+Comment=Desktop Gadget
+
+# The executable of the application, possibly with arguments.
+Exec=sh -c "conky -d -c ~/.config/conky/conky.conf &"
+
+# The name of the icon that will be used to display this entry
+Icon=desktop-effects
+
+# Describes whether this application needs to be run in a terminal or not
+Terminal=false
+
+# Describes the categories in which this entry should be shown
+Categories=;
+
+GenericName=Desktop Gadget that reads from sensors
+```
+
+  LICENSE
+  ───────
+  Free to use, modify, and distribute for personal use.
+  Credit appreciated but not required.
+
+================================================================
