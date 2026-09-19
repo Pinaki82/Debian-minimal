@@ -71,7 +71,7 @@
   Add an item as follows:
   Name: autostart-conky
   Description: Autostart Conky Desktop Gadgets
-  Command: conky -c ~/.config/conky/conky.conf &
+  Command: sh -c "conky -d -c ~/.config/conky/conky.conf &"
   Trigger: on login
 
   Desktop Entry:
