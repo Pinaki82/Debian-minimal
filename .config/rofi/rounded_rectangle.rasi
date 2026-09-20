@@ -1,0 +1,187 @@
+/* ============================================================
+   rounded-rectangle-style Rofi Theme
+   Designed by Max (Arena.ai) for Pinaki — 19 Sep 2026
+   Inspired by macOS Spotlight / Alfred
+   ============================================================ */
+   
+/* =====================
+   sudo apt install fonts-hack
+
+   # Settings -> Keyboard -> Application Shortcut -> Add
+   # SUPER (WINDOWS) + SPACE
+
+   rofi -combi-modi window,drun,ssh -theme ~/.config/rofi/rounded_rectangle.rasi -font "Hack 14" -show combi -icon -theme "papyrus" -show-icons -icon-size 36  -p "  🔍"
+   ===================== */
+
+* {
+    /* ── Palette ── */
+    bg:              rgba(28, 28, 30,   92%);   /* macOS dark base      */
+    bg-alt:          rgba(44, 44, 46,   95%);   /* slightly lighter row  */
+    bg-hover:        rgba(58, 58, 62,   90%);   /* hover state           */
+    accent:          rgba(10, 132, 255,  90%);  /* macOS blue accent     */
+    accent-soft:     rgba(10, 132, 255,  20%);  /* subtle blue tint      */
+    fg:              rgba(255, 255, 255, 100%);  /* primary text          */
+    fg-dim:          rgba(255, 255, 255,  55%);  /* secondary / hint text */
+    border-col:      rgba(255, 255, 255,  12%);  /* subtle rim            */
+    separator-col:   rgba(255, 255, 255,   8%);  /* hairline divider      */
+
+    /* ── Reset ── */
+    background-color: transparent;
+    text-color:       @fg;
+    font:             "Hack 14";
+}
+
+/* ── Outer window ──────────────────────────────────────────── */
+window {
+    width:            660px;
+    location:         center;
+    anchor:           center;
+    x-offset:         0;
+    y-offset:         -100px;        /* slightly above-centre, Spotlight-style */
+
+    background-color: @bg;
+    border:           1px solid;
+    border-color:     @border-col;
+    border-radius:    18px;          /* large macOS-style rounding */
+
+    padding:          0px;
+    cursor:           default;
+}
+
+/* ── Main container ────────────────────────────────────────── */
+mainbox {
+    background-color: transparent;
+    padding:          0px;
+    spacing:          0px;
+    children:         [ inputbar, separator, listview, separator-bottom, message ];
+}
+
+/* ── Search bar ────────────────────────────────────────────── */
+inputbar {
+    background-color: transparent;
+    padding:          18px 20px;
+    spacing:          14px;
+    children:         [ prompt, entry ];
+    border:           0px;
+}
+
+prompt {
+    background-color: transparent;
+    text-color:       @fg-dim;
+    vertical-align:   0.5;
+    /* Acts as the  label to the left of the search box.
+       You can replace the prompt text in the launch command
+       with -p "  " to get a magnifier-like prefix glyph
+       if you have a Nerd Font installed. */
+}
+
+entry {
+    background-color:  transparent;
+    text-color:        @fg;
+    placeholder:       "Search apps, windows, commands…";
+    placeholder-color: @fg-dim;
+    vertical-align:    0.5;
+    cursor:            text;
+}
+
+/* ── Hairline separator under search bar ───────────────────── */
+separator {
+    background-color: @separator-col;
+    height:           1px;
+    margin:           0px 16px;
+}
+
+separator-bottom {
+    background-color: transparent;
+    height:           6px;
+}
+
+/* ── Results list ──────────────────────────────────────────── */
+listview {
+    background-color: transparent;
+    padding:          8px 10px;
+    spacing:          2px;
+    lines:            8;             /* max visible rows     */
+    fixed-height:     true;
+    scrollbar:        false;         /* clean, no scrollbar  */
+    layout:           vertical;
+}
+
+/* ── Individual result row ─────────────────────────────────── */
+element {
+    background-color: transparent;
+    padding:          10px 12px;
+    border-radius:    10px;
+    spacing:          14px;
+    orientation:      horizontal;
+    cursor:           pointer;
+    children:         [ element-icon, element-text ];
+}
+
+/* Hover */
+element normal.active,
+element alternate.active {
+    background-color: @bg-hover;
+}
+
+/* Selected (keyboard or mouse) */
+element selected {
+    background-color: @accent;
+    border:           1px solid;
+    border-color:     rgba(10, 132, 255, 60%);
+    border-radius:    10px;
+}
+
+element selected.active {
+    background-color: @accent;
+}
+
+/* ── Icon inside a row ─────────────────────────────────────── */
+element-icon {
+    size:             36px;
+    background-color: transparent;
+    vertical-align:   0.5;
+}
+
+/* ── Text inside a row ─────────────────────────────────────── */
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    vertical-align:   0.5;
+    highlight:        bold;
+}
+
+/* ── Mode switcher (window / drun / ssh tabs) ──────────────── */
+mode-switcher {
+    background-color: transparent;
+    padding:          6px 10px 10px 10px;
+    spacing:          6px;
+}
+
+button {
+    background-color: @bg-alt;
+    text-color:       @fg-dim;
+    border-radius:    8px;
+    padding:          5px 14px;
+    cursor:           pointer;
+}
+
+button selected {
+    background-color: @accent-soft;
+    text-color:       @accent;
+    border:           1px solid;
+    border-color:     @accent;
+    border-radius:    8px;
+}
+
+/* ── Optional message bar (errors, hints) ──────────────────── */
+message {
+    background-color: transparent;
+    padding:          6px 20px 12px 20px;
+}
+
+textbox {
+    background-color: transparent;
+    text-color:       @fg-dim;
+    font:             "Hack 11";
+}
