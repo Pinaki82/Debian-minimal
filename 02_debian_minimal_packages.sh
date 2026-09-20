@@ -1273,7 +1273,17 @@ yes | sudo apt install tk-dev && \
 # =================================================================
 
 yes | sudo apt install conky-all && \
-
+# Required by Conky/certain Conky themes.
+yes | sudo apt install libcairo2 && \
+yes | sudo apt install lua5.4  && \
+yes | sudo apt install lm-sensors  && \
+# yes | sudo apt install picom  && \ (Not req. if you're using XFWM4)
+# Fonts.
+yes | sudo apt install fonts-dejavu && \
+yes | sudo apt install fonts-ubuntu && \
+yes | sudo apt install fonts-open-sans && \
+yes | sudo apt install fonts-ubuntu && \
+yes | sudo apt install fonts-open-sans && \
 # =================================================================
 # Conky-Resource-Monitor-Gadget (END)
 # =================================================================
