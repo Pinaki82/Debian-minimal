@@ -1665,7 +1665,8 @@ Run: flatpak run com.wings3d.WINGS
 # PDF Arranger: Merge, shuffle, and crop PDFs
 #     https://github.com/pdfarranger/pdfarranger.git
 flatpak install flathub com.github.jeromerobert.pdfarranger
-
+# Mousam: Weather at a Glance | https://github.com/amit9838/mousam.git
+flatpak install flathub io.github.amit9838.mousam
 
 The Suckless ST Terminal Emulator basic package:
 yes | sudo apt install stterm
@@ -1761,6 +1762,8 @@ com.rafaelmardojai.Blanket
 com.wings3d.WINGS
 fr.handbrake.ghb
 io.github.Qalculate
+io.github.amit9838.mousam
+org.goldendict.GoldenDict
 X                               io.github.jliljebl.Flowblade [Shotcut is the most commonly used video editing application on my computer, while Flowblade remains unused.]
 org.kde.kdenlive
 org.libreoffice.LibreOffice
