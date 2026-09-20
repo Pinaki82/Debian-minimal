@@ -13,10 +13,11 @@
 
 require 'cairo'
 
--- ── Temperature cache (re-read every 30 s, not every second) ────
+-- -- ── Temperature cache (re-read every 30 s, not every second) ────
+-- ── Temperature cache (re-read every 10 s, not every second) ────
 local _temp_cache   = 0
 local _temp_last_t  = 0
-local _temp_interval = 30
+local _temp_interval = 10
 
 local function get_cpu_temp()
     local now = os.time()

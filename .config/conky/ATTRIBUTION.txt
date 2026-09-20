@@ -117,4 +117,117 @@ GenericName=Desktop Gadget that reads from sensors
   Free to use, modify, and distribute for personal use.
   Credit appreciated but not required.
 
+----------------------------------------------------------------
+
+  DEPENDENCIES & INSTALLATION (Debian)
+  ─────────────────────────────────────
+
+  The following packages are required to run this configuration:
+
+  ┌─────────────────┬────────────────────────────────────────────┐
+  │ Package         │ Purpose                                    │
+  ├─────────────────┼────────────────────────────────────────────┤
+  │ conky-all       │ Full Conky build with Lua & Cairo support  │
+  │                 │ bundled in. The minimal `conky` package    │
+  │                 │ does NOT include these — always use        │
+  │                 │ conky-all for this configuration           │
+  │ libcairo2       │ Cairo 2D graphics library — used by the   │
+  │                 │ Lua script to draw the clock face, hands,  │
+  │                 │ tick marks, and arc gauge dials.           │
+  │                 │ Pulled in automatically by conky-all, but  │
+  │                 │ listed here explicitly for clarity         │
+  │ lua5.4          │ Lua interpreter — executes clock.lua which │
+  │                 │ drives all graphical rendering. Also       │
+  │                 │ pulled in by conky-all automatically       │
+  │ lm-sensors      │ Provides the `sensors` command for CPU     │
+  │                 │ temperature readings                       │
+  │ picom           │ Compositor for window transparency         │
+  │                 │ (modern replacement for xcompmgr)          │
+  │ fonts-dejavu    │ DejaVu Sans — used in the Lua clock script │
+  │ fonts-ubuntu    │ Ubuntu font — used in the text panel       │
+  │ fonts-open-sans │ Open Sans Light — used in the text panel   │
+  └─────────────────┴────────────────────────────────────────────┘
+
+  DEPENDENCY NOTES
+  ────────────────
+  • libcairo2 and lua5.4 are automatically pulled in as
+    dependencies when you install conky-all via apt. You do
+    not need to install them manually, but your configuration
+    relies on them directly and they are listed above so you
+    understand what is doing what under the hood.
+
+  • If your Debian version defaults to an older Lua (e.g.
+    lua5.3), that is fine — conky-all will use whichever
+    version it was compiled against.
+
+  INSTALL ALL AT ONCE
+  ───────────────────
+  Run the following commands in your terminal:
+
+      sudo apt update
+
+      sudo apt install \
+          conky-all \
+          libcairo2 \
+          lua5.4 \
+          lm-sensors \
+          picom \
+          fonts-dejavu \
+          fonts-ubuntu \
+          fonts-open-sans
+
+  POST-INSTALL: CONFIGURE lm-sensors
+  ────────────────────────────────────
+  After installing lm-sensors, run the detection wizard so
+  that the `sensors` command can find your hardware:
+
+      sudo sensors-detect
+
+  Accept the defaults by pressing Enter at each prompt, then
+  confirm writing to /etc/modules when asked. After that,
+  verify it works with:
+
+      sensors
+
+  You should see output including a "Package id 0" line for
+  your CPU, which is what this config reads for temperature.
+
+  POST-INSTALL: START THE COMPOSITOR
+  ────────────────────────────────────
+  Transparency requires a compositor to be running. Start
+  picom before launching Conky:
+
+      picom --daemon
+
+  To auto-start picom at login, add the above line to your
+  ~/.xprofile or your desktop environment's startup apps.
+
+  LAUNCH CONKY
+  ────────────
+  Once all dependencies are installed and picom is running:
+
+      conky -c ~/.config/conky/conky.conf
+
+  To auto-start Conky at login, add the above line to your
+  ~/.xprofile or your desktop environment's startup apps.
+
+  ✅ `picom --daemon` — "Another composite manager is already running"
+
+  This is **completely fine** and actually **good news**.
+  It simply means you already have a compositor running on
+  your system — likely your desktop environment's
+  built-in one (e.g. KDE's KWin, GNOME's Mutter,
+  or XFCE's xfwm4).
+  Transparency and rendering will work perfectly through that.
+
+  You **do not need picom** in that case. You can safely ignore it.
+
+  ---
+
+  🚀 You are all set! Launch Conky with:
+
+  ```bash
+  conky -c ~/.config/conky/conky.conf
+  ```
+
 ================================================================
