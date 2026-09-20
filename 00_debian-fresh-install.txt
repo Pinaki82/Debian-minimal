@@ -899,7 +899,7 @@ Whisker Menu -> Settings -> Session and Startup ->
 -> Application Autostart Tab -> Add ->
 Name: autostart-conky
 Description: Autostart Conky Desktop Gadgets
-Command: conky &&
+Command: sh -c "conky -d -c ~/.config/conky/conky.conf &"
 Trigger: 'on login'
 ---
 
