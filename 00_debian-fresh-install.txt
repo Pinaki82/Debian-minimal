@@ -914,6 +914,12 @@ Trigger: 'on logout'
 ---
 
 ---
+Settings -> Keyboard -> Application Shortcut -> Add
+SUPER (WINDOWS) + SPACE
+rofi -combi-modi window,drun,ssh -theme ~/.config/rofi/rounded_rectangle.rasi -font "Hack 14" -show combi -icon -theme "papyrus" -show-icons -icon-size 36  -p "  🔍"
+---
+
+---
 Right-click on the top panel.
 Panel preferences -> Items Tab -> Double-click on 'Whisker Menu'
                                   or select 'Whisker Menu'

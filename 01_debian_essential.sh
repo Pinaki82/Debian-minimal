@@ -442,8 +442,10 @@ yes | sudo apt install neofetch && \
 yes | sudo apt install htop && \
 yes | sudo apt install rofi && \
 # Settings -> Keyboard -> Application Shortcut -> Add
-# rofi -combi-modi window,drun,ssh -theme solarized -font "hack 10" -show combi -icon -theme "papyrus" -show-icons
 # SUPER (WINDOWS) + SPACE
+# rofi -combi-modi window,drun,ssh -theme ~/.config/rofi/rounded_rectangle.rasi -font "Hack 14" -show combi -icon -theme "papyrus" -show-icons -icon-size 36  -p "  🔍"
+# Or,
+# rofi -combi-modi window,drun,ssh -theme solarized -font "hack 10" -show combi -icon -theme "papyrus" -show-icons
 # Another theme:
 # rofi -combi-modi window,drun,ssh -theme arthur -font "hack 25" -show combi -icon -show-icons -icon-size 35
 # rofi-theme-selector
