@@ -176,6 +176,14 @@ GenericName=Desktop Gadget that reads from sensors
           fonts-ubuntu \
           fonts-open-sans
 
+  COMPOSITOR (on XFCE Desktop)
+  ──────────
+  xfwm4 (XFCE's built-in compositor)
+  Comes pre-installed with XFCE on Debian Bookworm.
+  No additional compositor is needed.
+  picom is NOT required and should NOT be installed.
+
+
   POST-INSTALL: CONFIGURE lm-sensors
   ────────────────────────────────────
   After installing lm-sensors, run the detection wizard so
