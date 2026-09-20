@@ -1662,6 +1662,9 @@ Run: flatpak run fr.natron.Natron
 # Wings 3D - An advanced subdivision modeler
 flatpak install flathub com.wings3d.WINGS
 Run: flatpak run com.wings3d.WINGS
+# PDF Arranger: Merge, shuffle, and crop PDFs
+#     https://github.com/pdfarranger/pdfarranger.git
+flatpak install flathub com.github.jeromerobert.pdfarranger
 
 
 The Suckless ST Terminal Emulator basic package:
@@ -1750,6 +1753,7 @@ All flatpack and snap apps:
 flatpak list --columns=application --app
 
 Application ID
+com.github.jeromerobert.pdfarranger
 X                              app.zen_browser.zen [Nice application, but it's no longer being utilised.]
 com.github.tchx84.Flatseal
 com.github.zocker_160.SyncThingy
