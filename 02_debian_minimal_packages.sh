@@ -1395,6 +1395,7 @@ yes | sudo apt install tesseract-ocr && \
 yes | sudo apt install tesseract-ocr-eng tesseract-ocr-enm && \
 yes | sudo apt install imagemagick && \
 yes | sudo apt install graphicsmagick-imagemagick-compat && \
+yes | sudo apt install poppler-utils && \
 yes | sudo apt install ocrmypdf && \
 # https://github.com/ocrmypdf/OCRmyPDF?tab=readme-ov-file#feature-demo
 # Add an OCR layer and convert to PDF/A
