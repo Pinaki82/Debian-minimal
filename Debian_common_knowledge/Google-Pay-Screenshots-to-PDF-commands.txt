@@ -18,5 +18,5 @@ pdfjam temp.pdf --nup 2x1 --paper a4paper --outfile desired_file_2up_landscape.p
 Add Page Numbers via `pdfjam`:
 
 ```bash
-pdfjam temp.pdf --nup 2x1 --paper a4paper --pagecommand '\thispagestyle{plain}' --outfile expense_audit_numbered.pdf
+pdfjam temp.pdf --nup 2x1 --paper a4paper --pagecommand '\thispagestyle{plain}' --outfile desired_file_numbered.pdf
 ```
