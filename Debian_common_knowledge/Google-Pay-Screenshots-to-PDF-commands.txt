@@ -1,0 +1,16 @@
+PDF from a series of Google Pay Screenshots:
+
+```bash
+img2pdf *.png -o temp.pdf
+```
+Automatically arrange 2 pages of your screenshots onto each single A4 sheet:
+
+```bash
+pdfjam temp.pdf --nup 1x2 --paper a4paper --outfile desired_file_2up.pdf
+```
+
+`-nup 2x1`: Arranges 2 pages side by side horizontally on each sheet.
+
+```bash
+pdfjam temp.pdf --nup 2x1 --paper a4paper --outfile desired_file_2up_landscape.pdf
+```
