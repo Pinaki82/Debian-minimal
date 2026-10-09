@@ -875,6 +875,9 @@ yes | sudo apt install rdfind && \
 
 # rdfind ~/Pictures/MaterialDesign/
 
+yes | sudo apt install jdupes && \
+yes | sudo apt install rmlint && \
+
 yes | sudo apt install dupeguru && \
 
 # Python3 PiP
