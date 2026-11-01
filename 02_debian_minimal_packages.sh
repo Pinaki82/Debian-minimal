@@ -1329,9 +1329,16 @@ yes | sudo apt install texlive-extra-utils && \
 # https://www.tomshardware.com/how-to/manipulate-pdf-files-with-pdftk
 # pdftk 1.pdf another.pdf 3.pdf yet-another.pdf fifth.pdf output combined.pdf
 yes | sudo apt install pdftk && \
+yes | sudo apt install pdftk qpdf poppler-utils && \
+
 
 # Pandoc:
 yes | sudo apt install pandoc && \
+# Handling Encrypted PDFs
+# https://ostechnix.com/merge-pdf-files-linux-pdfunite-command/
+# Error message: Error: Couldn't open file 'encrypted.pdf': Incorrect password
+# qpdf --decrypt --password=YOUR_PASSWORD encrypted.pdf decrypted.pdf
+yes | sudo apt install qpdf && \
 
 yes | sudo apt install equalx && \
 
