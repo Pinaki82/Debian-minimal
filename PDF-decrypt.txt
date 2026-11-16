@@ -1,0 +1,5 @@
+qpdf --decrypt --password=YOUR_PASSWORD encrypted.pdf decrypted.pdf
+
+Example:
+
+qpdf --decrypt --password=14726100682 AccountStatement_16112026_222742.pdf AccountStatement_16112026_222742_decrypted.pdf
